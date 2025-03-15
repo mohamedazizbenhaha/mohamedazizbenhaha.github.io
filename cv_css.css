@@ -1,5 +1,5 @@
 :root {
-  --test-color: #009CDE ; /*009CDE*/
+  --test-color: #d4a024 ; /*009CDE*/
 }
 
 a {
@@ -301,24 +301,7 @@ border: none !important; }
         }
   
   
-  /* The actual timeline (the vertical ruler) */
- /* .timeline {
-      position: relative;
-width: 90%;
-      margin: 0 auto;
-    }*/
-    
-    /* The actual timeline (the vertical ruler) */
-  /*  .timeline::after {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background-color: black;
-      top: 0;
-      bottom: 0;
-      left: 50.1%;
-      margin-left: -3px;
-    }*/
+
     
     /* Container around content */
     .container {
@@ -759,7 +742,7 @@ margin-bottom: 10px;}
       {
         position: fixed;
         z-index: 20;
-        bottom: 5%;
+        bottom: 7%;
         right: 3.5%;
         width: 50px;
         height: 50px;
@@ -1106,31 +1089,6 @@ background-color: rgba(255,255,255,0.1);
   }
 }
 
-.dragoknight {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.7fr 0.7fr 0.7fr;
-  gap: 0px 20px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "dk1 dk2 dk3"
-    "dk1 dk4 dk5"
-    "dk7 dk8 .";
-}
-
-.dk1 { grid-area: dk1; }
-
-.dk2 { grid-area: dk2; }
-
-.dk3 { grid-area: dk3; }
-
-.dk4 { grid-area: dk4; }
-
-.dk5 { grid-area: dk5; }
-
-.dk7 { grid-area: dk7; }
-
-.dk8 { grid-area: dk8; }
 
 .carousel-showmanymoveone .cloneditem-1,
 .carousel-showmanymoveone .cloneditem-2,

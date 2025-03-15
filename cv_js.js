@@ -44,29 +44,8 @@ image();
   (function() {
     'use strict';
   
-    /*----------------------------------------
-      Detect Mobile
-    ----------------------------------------*/
-    var isMobile = {
-      Android: function() {
-        return navigator.userAgent.match(/Android/i);
-      },
-        BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-      },
-        iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      },
-        Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-      },
-        Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i);
-      },
-        any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-      }
-    };
+
+   
   
   
     // navigation
@@ -95,32 +74,12 @@ image();
     };
     
   
-    var offCanvasNav = function() {
-      // var toggleNav = $('.js-pb_nav-toggle'),
-      // 		offcanvasNav = $('.js-pb_offcanvas-nav_v1');
-      // if( toggleNav.length > 0 ) {
-      // 	toggleNav.click(function(e){
-      // 		$(this).toggleClass('active');
-      // 		offcanvasNav.addClass('active');
-      // 		e.preventDefault();
-      // 	});
-      // }
-      // offcanvasNav.click(function(e){
-      // 	if (offcanvasNav.hasClass('active')) {
-      // 		offcanvasNav.removeClass('active');
-      // 		toggleNav.removeClass('active');
-      // 	}
-      // 	e.preventDefault();
-      // })
-    };
-    
-  
   
     /*----------------------------------------
       Animate Scroll
     ----------------------------------------*/
   
-    var contentWayPoint = function() {
+    let contentWayPoint = function() {
       var i = 0;
       $('.site-animate').waypoint( function( direction ) {
   
@@ -205,48 +164,17 @@ image();
     
     
    
-
-	var portfolioMasonry = function() {
-		$('.filters ul li').click(function(){
-			   $('.filters ul li').removeClass('active');
-			   $(this).addClass('active');
-			   
-			   var data = $(this).attr('data-filter');
-			   $grid.isotope({
-				 filter: data
-			   })
-			 });
-	   
-	   
-			 if(document.getElementById("section-portfolio")){
-				   var $grid = $(".grid").isotope({
-					 itemSelector: ".all",
-					 percentPosition: true,
-					 masonry: {
-					   columnWidth: ".all"
-					 }
-				   })
-			 };
-	   
-	   
-		   };
-  
-  
-    
-    
-  
+ 
   
   
   
     $(function(){
   
       OnePageNav();
-      offCanvasNav();
   
       contentWayPoint();
       navbarState();
      
-		portfolioMasonry();
       
     });
   
@@ -532,41 +460,6 @@ image();
 
 });
 
-
-
-
-
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column2");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show2");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show2");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
 
 
 $(document).ready(function(){
