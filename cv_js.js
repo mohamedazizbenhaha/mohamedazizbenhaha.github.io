@@ -542,3 +542,29 @@ $(document).ready(function(){
 		
 		setInterval(slideCompanies, 2000); // Slide every 2 seconds
 	});
+
+	document.addEventListener("DOMContentLoaded", function () {
+		const toggleButton = document.getElementById("toggle-courses");
+		const hiddenCourses = document.querySelectorAll(".hidden-course");
+		const toggleIcon = toggleButton.querySelector("i");
+		const toggleText = toggleButton.querySelector("span");
+	  
+		toggleButton.addEventListener("click", function () {
+		  hiddenCourses.forEach((course) => {
+			if (course.style.display === "none" || course.style.display === "") {
+			  course.style.display = "block"; // Show hidden courses
+			} else {
+			  course.style.display = "none"; // Hide courses again
+			}
+		  });
+	  
+		  // Update button text and icon
+		  if (toggleText.textContent === "Show More") {
+			toggleText.textContent = "Show Less";
+			toggleIcon.className = "fa fa-angle-double-up"; // Change to up arrow
+		  } else {
+			toggleText.textContent = "Show More";
+			toggleIcon.className = "fa fa-angle-double-down"; // Change to down arrow
+		  }
+		});
+	  });
