@@ -8,7 +8,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{background:var(--bg);color:var(--txt);font:400 1.02rem/1.65 var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 svg{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
@@ -72,7 +72,7 @@ em{font-style:normal;color:var(--gold)}
 .lede b{color:var(--txt);font-weight:600}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .socials{display:flex;gap:10px;margin-top:28px}
-.socials a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid #2c2c36;color:var(--mute);transition:all .3s var(--ease)}
+.socials a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid #2c2c36;color:var(--mute);transition:color .3s,background .3s,border-color .3s,transform .3s var(--ease)}
 .socials a:hover{color:#000;background:var(--gold);border-color:var(--gold);transform:translateY(-3px)}
 .portrait{position:relative;aspect-ratio:1;max-width:480px;width:100%;justify-self:center;display:grid;place-items:center}
 .frame{width:68%;aspect-ratio:4/5;border-radius:28px;overflow:hidden;position:relative;transform:rotate(-3deg);box-shadow:0 30px 70px -25px rgba(0,0,0,.9),0 0 0 1px rgba(212,160,36,.45);transition:transform .8s var(--ease)}
@@ -111,6 +111,8 @@ em{font-style:normal;color:var(--gold)}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 
+.skip{position:fixed;top:12px;left:12px;z-index:100;padding:.7em 1.1em;border-radius:12px;background:var(--gold);color:#120d02;font-weight:700;transform:translateY(-200%);transition:transform .25s}
+.skip:focus{transform:none}
 /* bento */
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
 .bento>.cell{grid-column:span 3}
@@ -245,7 +247,7 @@ em{font-style:normal;color:var(--gold)}
 .course div{padding:18px 20px 22px}
 .course h3{font:700 1.15rem/1.25 var(--display);margin-bottom:6px}
 .course p{color:var(--mute);font-size:.86rem}
-.course>svg{position:absolute;top:12px;right:12px;width:36px;height:36px;padding:8px;border-radius:50%;background:rgba(0,0,0,.6);color:var(--gold2);opacity:0;transform:scale(.7);transition:all .35s var(--ease)}
+.course>svg{position:absolute;top:12px;right:12px;width:36px;height:36px;padding:8px;border-radius:50%;background:rgba(0,0,0,.6);color:var(--gold2);opacity:0;transform:scale(.7);transition:opacity .35s,transform .35s var(--ease)}
 .course:hover{transform:translateY(-6px);border-color:#4a3e26}
 .course:hover img{transform:scale(1.06)}
 .course:hover>svg{opacity:1;transform:none}
@@ -263,7 +265,7 @@ em{font-style:normal;color:var(--gold)}
 .modal::backdrop{background:rgba(4,4,6,.72);backdrop-filter:blur(6px)}
 .modal[open]{animation:dlg .5s var(--ease)}
 @keyframes dlg{from{opacity:0;transform:translateY(24px) scale(.97)}}
-.modal .x{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid #33333d;color:var(--mute);transition:all .3s}
+.modal .x{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid #33333d;color:var(--mute);transition:background .3s,color .3s,transform .3s}
 .modal .x:hover{color:#000;background:var(--gold);border-color:var(--gold)}
 .modal .x svg{width:18px;height:18px}
 .modal-in{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(20px,4vw,48px);padding:clamp(28px,4vw,48px)}
@@ -350,6 +352,7 @@ em{font-style:normal;color:var(--gold)}
   .seg{display:flex;width:100%;overflow-x:auto;scrollbar-width:none}.seg button{flex:none;white-space:nowrap}
 }
 @media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .reveal{opacity:1;transform:none;transition:none}
   .name .w{opacity:1;transform:none;filter:none;animation:none}
   .badge-float,.a1 span,.a2 svg{animation:none}

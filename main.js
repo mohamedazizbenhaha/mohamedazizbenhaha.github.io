@@ -48,7 +48,7 @@ const FR = {
   'ct.t1': 'Travaillons', 'ct.t2': 'ensemble.',
   'ct.p': 'Missions Cloud et DevOps, projets IA/ML, formation de vos équipes ou collaboration de recherche. Choisissez le canal qui vous convient.',
   'ct.copy': 'Copier l’e-mail', 'ct.fr': 'France', 'foot.top': 'Haut de page ↑',
-  'end.t1': 'Un projet cloud, DevOps ou IA, ou une équipe à former ?', 'end.t2': 'Parlons-en.',
+  'skip': 'Aller au contenu', 'end.t1': 'Un projet cloud, DevOps ou IA, ou une équipe à former ?', 'end.t2': 'Parlons-en.',
   'foot.where': 'Écully, France · Tunis, Tunisie', 'foot.langs': 'Arabe · Anglais · Français', 'foot.upd': 'Dernière mise à jour'
 };
 const ROLES = {
@@ -172,6 +172,7 @@ let rotTimer;
 function restartRotator() {
   clearTimeout(rotTimer);
   const el = $('#rot'), words = ROLES[lang];
+  if (reduced) { el.textContent = words[0]; return }
   let w = 0, c = words[0].length, del = false;
   (function tick() {
     const word = words[w];
@@ -300,7 +301,7 @@ $('#year').textContent = new Date().getFullYear();
   const hero = $('.hero');
   hero.addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top });
   hero.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999 });
-  new IntersectionObserver(([e]) => { cancelAnimationFrame(raf); if (e.isIntersecting) frame() }).observe(hero);
+  new IntersectionObserver(([e]) => { cancelAnimationFrame(raf); if (e.isIntersecting) { frame(); if (reduced) cancelAnimationFrame(raf) } }).observe(hero);
 })();
 
 applyLang();
