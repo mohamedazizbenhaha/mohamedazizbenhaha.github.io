@@ -48,8 +48,7 @@ const FR = {
   'ct.t1': 'Travaillons', 'ct.t2': 'ensemble.',
   'ct.p': 'Missions Cloud et DevOps, projets IA/ML, formation de vos équipes ou collaboration de recherche. Choisissez le canal qui vous convient.',
   'ct.copy': 'Copier l’e-mail', 'ct.fr': 'France', 'foot.top': 'Haut de page ↑',
-  'skip': 'Aller au contenu', 'end.t1': 'Un projet cloud, DevOps ou IA, ou une équipe à former ?', 'end.t2': 'Parlons-en.',
-  'foot.where': 'Écully, France · Tunis, Tunisie', 'foot.langs': 'Arabe · Anglais · Français', 'foot.upd': 'Dernière mise à jour'
+  'skip': 'Aller au contenu'
 };
 const ROLES = {
   en: ['build AI systems & RAG pipelines', 'train and deploy ML models', 'build cloud infrastructure', 'automate everything, CI/CD to IaC', 'teach Cloud, DevOps & AI'],

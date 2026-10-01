@@ -130,9 +130,15 @@
       <h3 data-i18n="about.mentor.h">I mentor projects</h3>
       <p data-i18n="about.mentor.p">End-of-studies (PFE) and end-of-year projects for engineering and master's students, at university or inside companies: from the subject and architecture to the defence.</p>
     </article>
-    <article class="cell stat third reveal"><b class="count" data-to="8">0</b><span data-i18n="stat.certs">certifications</span></article>
-    <article class="cell stat third reveal"><b class="count" data-to="9">0</b><span data-i18n="stat.schools">universities &amp; training centres</span></article>
-    <article class="cell langs third spot reveal">
+    <article class="cell tally spot reveal">
+      <b class="count" data-to="8">0</b><span data-i18n="stat.certs">certifications</span>
+      <ul class="tags"><li>CKA</li><li>RHCSA</li><li>AZ-104</li><li>AWS SAA</li><li>AWS SysOps</li><li>AWS CCP</li><li>LPI DevOps</li><li>CCNA</li></ul>
+    </article>
+    <article class="cell tally spot reveal">
+      <b class="count" data-to="9">0</b><span data-i18n="stat.schools">universities &amp; training centres</span>
+      <ul class="tags"><li>MUST</li><li>Sup'Com</li><li>ENSTAB</li><li>TED</li><li>ISAM</li><li>ANETI</li><li>Clevory</li><li>TTC</li><li>GoMyCode</li></ul>
+    </article>
+    <article class="cell langs spot reveal">
       <svg class="ic"><use href="#i-globe"/></svg>
       <h3 data-i18n="about.lang.h">Languages</h3>
       <ul class="lang-list">
@@ -256,47 +262,13 @@
   <div class="more-wrap"><button class="read" id="moreCourses" type="button" aria-expanded="false" aria-controls="courses-grid"><span id="moreLabel">Show more</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 6l5 5 5-5M7 13l5 5 5-5"/></svg></button></div>
 </section>
 
-<!-- CLOSING BAND -->
-<section class="section" id="contact">
-  <div class="closing reveal">
-    <h2 class="title"><span data-i18n="end.t1">A cloud, DevOps or AI project, or a team to train?</span> <em data-i18n="end.t2">Let's talk.</em></h2>
-    <div class="cta-row">
-      <button class="btn btn-gold magnetic" type="button" data-contact><svg><use href="#i-mail"/></svg><span data-i18n="nav.hire">Hire me</span></button>
-      <a class="btn btn-ghost" href="res/CV-Mohamed-Aziz-Ben-Haha.pdf" download><svg><use href="#i-down"/></svg><span data-i18n="hero.cv">Download resume</span></a>
-      <a class="btn btn-ghost" href="res/CV-Formateur-CNFCPP.pdf" download><svg><use href="#i-down"/></svg><span data-i18n="hero.cv2">Trainer resume (CNFCPP)</span></a>
-    </div>
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/mohamed-aziz-ben-haha/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
-      <a href="mailto:mohamedaziz.benhaha@gmail.com" target="_blank" rel="noopener" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
-      <a href="https://wa.me/21625713413" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-chat"/></svg></a>
-      <a href="https://bento.me/mohamed-aziz-ben-haha" target="_blank" rel="noopener" aria-label="Bento"><svg><use href="#i-link"/></svg></a>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="foot">
-  <div class="foot-in">
-    <div class="foot-id">
-      <a class="brand" href="#top" aria-label="Home"><img src="res/my_logo_w.png" alt="" width="28" height="26"><span>Mohamed Aziz Ben Haha</span></a>
-      <p><svg><use href="#i-pin"/></svg><span data-i18n="foot.where">Écully, France · Tunis, Tunisia</span></p>
-      <p><svg><use href="#i-globe"/></svg><span data-i18n="foot.langs">Arabic · English · French</span></p>
-    </div>
-    <nav class="foot-nav" aria-label="Footer">
-      <a href="#about" data-i18n="nav.about">About</a>
-      <a href="#experience" data-i18n="nav.exp">Experience</a>
-      <a href="#projects" data-i18n="nav.proj">Projects</a>
-      <a href="#certs" data-i18n="nav.certs">Certifications</a>
-      <a href="#courses" data-i18n="nav.courses">Free courses</a>
-      <button type="button" data-contact data-i18n="nav.contact">Contact</button>
-    </nav>
-    <div class="foot-end">
-      <a class="totop" href="#top"><span data-i18n="foot.top">Back to top ↑</span></a>
-      <p><span data-i18n="foot.upd">Last updated</span> <time datetime="2026-10">10/2026</time></p>
-    </div>
-  </div>
-  <p class="foot-copy">© <span id="year">2026</span> Mohamed Aziz Ben Haha</p>
+  <img src="res/my_logo_w.png" alt="" width="28" height="26">
+  <span>© <span id="year">2026</span> Mohamed Aziz Ben Haha</span>
+  <button type="button" class="foot-link" data-contact data-i18n="nav.contact">Contact</button>
+  <a href="#top" data-i18n="foot.top">Back to top ↑</a>
 </footer>
 <dialog class="modal" id="contactDlg" aria-labelledby="dlgTitle">
   <button class="x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>

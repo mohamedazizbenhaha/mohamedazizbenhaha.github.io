@@ -31,6 +31,12 @@ Use only where they earn their tokens:
 7. ANETI entry is "ISAM Formation · for ANETI" (FR "pour l'ANETI"); both logos stay in the strip; content.md updated.
 - web-design-guidelines pass: skip link, reduced motion now stops marquee/orbit/network canvas/rotator, no `transition:all`, width/height on edu and course images (`img{height:auto}` globally), rotator no longer an aria-live region.
 
+## Round 2 (2026-10-01, the user's feedback)
+- Closing band + big footer **removed** (the user hated them: "filling a blank"). Old one-line footer is back. Ideas for a real, working ending are proposed to the user; build only the one they pick.
+- About last row is now 25% · 25% · 50%: certifications box lists the 8 codes, institutions box lists the 9 names, languages show three columns (name, level, bar) on wide screens.
+- Logo strip stopped because the guidelines pass froze every animation under prefers-reduced-motion (the user's phone has it on). The strip is exempt now (90s loop) and only pauses on hover for real mouse devices. Under reduced motion the typing rotator, network canvas and orbit still stand still: ask the user if they want those back.
+- Contact QR now encodes the URL of the .vcf (version 5, was 13) so phones open the file and offer "Create new contact"; `netlify.toml` serves `.vcf` as `text/vcard`. It points at the production domain, so it works after merge; test now with the deploy-preview .vcf URL. A phone that already holds the same number (the user's own) may still offer to merge.
+
 ## Deviations from the recommendations
 - Hero status keeps availability: "Based in Écully, France · working with Tunisia · open to missions & training" (the green "available" dot would be meaningless with location only). Wraps to two lines on a 375px phone.
 - Mentor card got its own icon (`#i-team`) since it lost the counters.

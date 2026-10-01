@@ -102,5 +102,7 @@ Introduction to AI · Big Data workshop · Academic writing · Cloud infrastruct
 - Pending from the user: freelance projects (Industry), more detail per teaching role, other supervised projects.
 - "9 universities & training centres" = MUST, Sup'Com, ENSTAB, TED, ISAM, ANETI, Clevory, TTC, GoMyCode (ISAM and ANETI both count). "8 certifications" = the table above.
 - Certification years stay in the table above but are not shown on the site; the card shows the issuer only for Linux Foundation, Red Hat, Microsoft, Cisco.
-- Location is in the hero status line ("Based in Écully, France · working with Tunisia · open to missions & training") and in the footer.
-- Page ends with a closing band (Hire me, both resumes, socials) and a footer (section links, location, languages, last updated 10/2026). No testimonials or invented metrics.
+- Location is in the hero status line ("Based in Écully, France · working with Tunisia · open to missions & training").
+- Location is no longer in the footer: the closing band and big footer were removed on the user's word (2026-10-01, "filling a blank"). Page ends after Free courses with the one-line footer until the user picks a real feature.
+- About last row: certifications (with the 8 codes) 25% · institutions (the 9 names) 25% · languages 50%.
+- Contact QR encodes the URL of `res/mohamed-aziz-ben-haha.vcf` (production domain), not the vCard text.
