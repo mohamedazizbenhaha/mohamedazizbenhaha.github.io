@@ -122,19 +122,34 @@ function applyLang() {
   const [en, fr] = $$('#lang span');
   en.classList.toggle('on', lang === 'en'); fr.classList.toggle('on', lang === 'fr');
   $('#lang').setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
-  renderTabs(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
+  renderTabs(); sizeTabs(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
 }
 $('#lang').addEventListener('click', () => { lang = lang === 'en' ? 'fr' : 'en'; store.set('lang', lang); applyLang() });
 
 /* ---------- experience tabs ---------- */
 let group = 'ind', idx = 0;
+const listHTML = items => items.map((e, i) => `<button role="tab" aria-selected="${i === idx}" data-i="${i}">${pick(e[0])}<small>${pick(e[2]).split(' · ')[0]}</small></button>`).join('');
+const panelHTML = ([org, role, dates, pts, stack]) => `<h3>${pick(role)} <span>@ ${pick(org)}</span></h3><p class="meta">${pick(dates)}</p><ul class="pts">${pick(pts).map(p => `<li>${p}</li>`).join('')}</ul><ul class="chips">${stack.map(s => `<li>${s}</li>`).join('')}</ul>`;
+/* Lock the box to its tallest content (every group and entry, current language) so the next section never moves. */
+function sizeTabs() {
+  const box = $('.tabs'), list = $('#tabList'), panel = $('#tabPanel');
+  const probe = (el, w) => { const c = el.cloneNode(false); c.removeAttribute('id'); c.style.cssText = `position:absolute;left:-9999px;top:0;visibility:hidden;animation:none;width:${w}px`; box.append(c); return c };
+  const pl = probe(list, list.offsetWidth), pp = probe(panel, panel.offsetWidth);
+  const stacked = getComputedStyle(box).gridTemplateColumns.split(' ').length < 2;
+  let h = 0;
+  Object.values(EXP).forEach(items => {
+    pl.innerHTML = listHTML(items);
+    items.forEach(e => { pp.innerHTML = panelHTML(e); h = Math.max(h, stacked ? pl.offsetHeight + pp.offsetHeight : Math.max(pl.offsetHeight, pp.offsetHeight)) });
+  });
+  pl.remove(); pp.remove();
+  box.style.minHeight = (stacked ? h + parseFloat(getComputedStyle(box).rowGap) : h) + 'px';
+}
 function renderTabs() {
   const list = $('#tabList'), items = EXP[group];
   if (idx >= items.length) idx = 0;
-  list.innerHTML = items.map((e, i) => `<button role="tab" aria-selected="${i === idx}" data-i="${i}">${pick(e[0])}<small>${pick(e[2]).split(' · ')[0]}</small></button>`).join('');
-  const [org, role, dates, pts, stack] = items[idx];
+  list.innerHTML = listHTML(items);
   const panel = $('#tabPanel');
-  panel.innerHTML = `<h3>${pick(role)} <span>@ ${pick(org)}</span></h3><p class="meta">${pick(dates)}</p><ul class="pts">${pick(pts).map(p => `<li>${p}</li>`).join('')}</ul><ul class="chips">${stack.map(s => `<li>${s}</li>`).join('')}</ul>`;
+  panel.innerHTML = panelHTML(items[idx]);
   panel.style.animation = 'none'; panel.offsetHeight; panel.style.animation = '';
   const b = list.children[idx];
   if (b) { list.style.setProperty('--ty', b.offsetTop + 'px'); list.style.setProperty('--th', b.offsetHeight + 'px') }
@@ -148,7 +163,7 @@ $('#tabList').addEventListener('keydown', e => {
 $$('.seg button').forEach(b => b.addEventListener('click', () => {
   $$('.seg button').forEach(x => x.setAttribute('aria-selected', x === b)); group = b.dataset.group; idx = 0; renderTabs();
 }));
-addEventListener('resize', () => renderTabs());
+let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { renderTabs(); sizeTabs() }, 150) });
 
 /* ---------- rotating roles ---------- */
 let rotTimer;
@@ -287,3 +302,4 @@ $('#year').textContent = new Date().getFullYear();
 })();
 
 applyLang();
+document.fonts?.ready.then(sizeTabs);
