@@ -1,736 +1,302 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohamed Aziz Ben Haha · Cloud, DevOps & AI</title>
+<meta name="description" content="Mohamed Aziz Ben Haha: Cloud & DevOps engineer (CKA, AWS), trainer with 500+ hours delivered, PhD candidate in machine learning for embedded IoT (Sup'Com × École Centrale de Lyon).">
+<meta name="author" content="Mohamed Aziz Ben Haha">
+<meta name="google-site-verification" content="8FiutKUV1SALBC9ybHdaXThsFpFdi8CMd3C1FTQ10QY">
+<link rel="canonical" href="https://mohamedazizbenhaha.netlify.app/">
+<meta property="og:title" content="Mohamed Aziz Ben Haha · Cloud, DevOps & AI">
+<meta property="og:description" content="Engineer, trainer, researcher. Cloud & DevOps (CKA, AWS), 500+ training hours, PhD in ML for embedded IoT.">
+<meta property="og:url" content="https://mohamedazizbenhaha.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://mohamedazizbenhaha.netlify.app/res/thumbnail.PNG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#07070a">
+<link rel="icon" href="res/my_logo_w.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
 
-    <title>Mohamed Aziz B.Haha</title>
-    <link rel=" icon " href=" res/my_logo_w.png">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 20l1.5-4A8 8 0 1 1 8.5 19z"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a1 1 0 0 1 1-1h9"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-8 6 6 0 0 1 11.5 1.5A3.5 3.5 0 0 1 17.5 18z"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5M22 9v6"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4z"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s7 7.5 7 12a7 7 0 0 1-14 0c0-4.5 7-12 7-12z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+</svg>
 
-    <meta name="description" content="Explore the portfolio and professional journey of Mohamed Aziz Ben Haha, a Cloud & DevOps Engineer and a Professional & Academic Instructor.">
-    <meta name="keywords" content="Mohamed Aziz B.Haha, mohamed aziz ben haha, web developer, portfolio, projects, personal website, Instructor, DevOps, cloud computing, aws, azure,enstab, supcom, clevory, esprit, ooredoo, klabs ">
-    <meta name="author" content="Mohamed Aziz Ben Haha">
-    
-    <meta name="robots" content="index, follow">
-    
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="8FiutKUV1SALBC9ybHdaXThsFpFdi8CMd3C1FTQ10QY" />
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Home"><img src="res/my_logo_w.png" alt="" width="34" height="32"><span>Aziz Ben Haha</span></a>
+  <nav class="links" id="links" aria-label="Sections">
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#experience" data-i18n="nav.exp">Experience</a>
+    <a href="#projects" data-i18n="nav.proj">Projects</a>
+    <a href="#certs" data-i18n="nav.certs">Certifications</a>
+    <a href="#courses" data-i18n="nav.courses">Free courses</a>
+    <a href="#contact" data-contact data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="nav-end">
+    <button class="lang" id="lang" type="button" aria-label="Passer en français"><span class="on">EN</span><span>FR</span></button>
+    <button class="btn btn-gold btn-sm magnetic" type="button" data-contact data-i18n="nav.hire">Hire me</button>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+  </div>
+</header>
 
-    <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta property="og:title" content="Mohamed Aziz Ben Haha">
-    <meta property="og:description" content="Explore the portfolio and professional journey of Mohamed Aziz Ben Haha, a Cloud & DevOps Engineer and a Professional & Academic Instructor.">
-    <meta property="og:url" content="https://mohamedazizbenhaha.netlify.app">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://mohamedazizbenhaha.netlify.app/res/thumbnail.PNG">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mohamed Aziz Ben Haha - Portfolio">
-    <meta name="twitter:description" content="Explore the portfolio and professional journey of Mohamed Aziz Ben Haha, a Cloud & DevOps Engineer and a Professional & Academic Instructor.">
-    <meta name="twitter:image" content="https://mohamedazizbenhaha.netlify.app/res/thumbnail.PNG">
-    
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="cv_css.css">
-    <link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-
-    <script type="text/javascript" src="js/TagCloud.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.svg3dtagcloud.min.js"></script>
-  </head>
-
-  <body data-spy="scroll" data-target="#pb-navbar" data-offset="200"
-    style="overflow-x: hidden; background-color: black; color : white; ">    
-            
-      <!--Contact Line -->
-      <div class="top1" id="info">
-
-      <div class="row">
-        <div class="col-md-8 col-sm-8 col-xs-12">
-          <div class="left1">
-            <ul>
-              <li style="margin-right: 90px;"><i class="fa fa-phone"></i> 00216
-                25 713 413</li>
-              <li><i class="fa fa-envelope-o"></i>
-                mohamedaziz.benhaha@gmail.com</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="right1">
-            <ul>
-              <li style="margin-right: 20px;"><a
-                  href="https://bento.me/mohamed-aziz-ben-haha"><i
-                    class="fa fa-trello"></i></a></li>
-              <li style="margin-right: 15px;"><a
-                  href="https://www.linkedin.com/in/mohamed-aziz-ben-haha/"><i
-                    class="fa fa-linkedin"></i></a></li>
-
-            </ul>
-          </div>
-        </div>
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <div class="hero-text">
+      <p class="status"><i></i><span data-i18n="hero.status">Available for missions, training & collaborations</span></p>
+      <h1 class="name"><span class="w">Mohamed</span> <span class="w">Aziz</span> <span class="w gold">Ben&nbsp;Haha</span></h1>
+      <p class="rotator"><span data-i18n="hero.pre">I</span> <span class="rot" id="rot" aria-live="polite">build AI systems &amp; RAG pipelines</span><span class="caret"></span></p>
+      <p class="lede" data-i18n="hero.lede">Cloud &amp; DevOps engineer (CKA, AWS Solutions Architect &amp; SysOps), AI/ML practitioner, trainer with <b>1,000+ hours</b> delivered to universities and companies, and PhD student in machine learning for embedded IoT at <b>Sup'Com × École Centrale de Lyon</b>.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold magnetic" href="res/CV-Mohamed-Aziz-Ben-Haha.pdf" download><svg><use href="#i-down"/></svg><span data-i18n="hero.cv">Download resume</span></a>
+        <a class="btn btn-ghost" href="res/CV-Formateur-CNFCPP.pdf" download><svg><use href="#i-down"/></svg><span data-i18n="hero.cv2">Trainer resume (CNFCPP)</span></a>
       </div>
-      </div>
-      <!-- End Contact Line -->
-            
-            
-      <!--pulsating button-->
-      <a class="nav-item" href="#info"><button class="pulsing_button">
-        <i class="fa fa-angle-up"
-          style="color: white; font-size: 300%;margin-top: -12%;    margin-right: -4%;"></i>
-      </button> </a>
-      <!-- End pulsating button-->
-
-      
-      <!--Nav Bar -->
-      <nav
-      class="navbar navbar-expand-lg site-navbar navbar-light bg-light col-lg-12 col-md-12 col-sm-12"
-      id="pb-navbar">
-
-      <div class=" ">
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#navbarsExample09" aria-controls="navbarsExample09"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-md-center"
-          id="navbarsExample09">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link"
-              href="#section-skill">Skill Set</a></li>
-            <li class="nav-item"><a class="nav-link"
-                href="#section-edu">Professional Experience</a></li>
-            <li class="nav-item"><a class="nav-link"
-                href="#section-award">Awards & Interests</a></li>
-            <li class="nav-item"><a class="nav-link"
-                href="#section-portfolio">Free Courses</a></li>
-
-          </ul>
-        </div>
-      </div>
-      <a class="navbar-brand" href="res/Resume - Mohamed Aziz ben Haha.pdf" target="_blank" download> <i
-          class="fa fa-cloud-download" aria-hidden="true"
-          style="font-size:25px; color:#fff; margin-right:80px; margin-top:12px;"></i>
-      </a>
-      <a class="navbar-brand" href="#section-about"> <img src="res/my_logo.png"
-          alt="Logo"
-          style="height :35px; border-radius: 50%;    margin-top: 15%;"> </a>
-
-      </nav>
-      <!-- End Nav Bar -->
-
-
-      <!-- Site Hero -->
-      <section class="site-hero " style="background-image: url(res/image_1.jpg);"
-      id="section-home" data-stellar-background-ratio="0.5">
-
-      <div class="row intro-text align-items-center justify-content-center">
-        <div class="col-md-10 "
-          style="margin-left: -235px;  margin-top: -75px;">
-          <h1 class="site-heading site-animate" style="margin-left: 6%;">Hello,
-            I am<br> <strong style="color:var(--test-color);">Med Aziz Ben
-              Haha</strong></h1>
-
-          <p class="lead site-subheading mb-4 site-animate">A <strong
-              style="color:var(--test-color);">Cloud & DevOps Engineer</strong>. A <strong
-              style="color:var(--test-color);">Professional & Academic
-              Instructor</strong>.</p>
-
-        </div>
-      </div>
-
-      </section>
-      <!-- End Site Hero -->
-
-<br><br><br>
-
-      <!-- about -->
-      <section class="site-section" id="section-about">
-      <div class="row">
-        <br>
-        <!-- picture -->
-        <div class="col-3">
-          <div class="col-2"></div>
-          <div class="col-10" style="margin-left: 45px;">
-            <img src="res/image.jpg" alt
-              style="box-shadow: 5px 5px 10px; color: var(--test-color); width:210%;">
-          </div>
-        </div>
-
-        <!-- interval -->
-        <div class="col-3" style="margin-left: -40px;"></div>
-
-        <!-- information -->
-        <div class="col-6" style="margin-top: 30px;">
-
-          <!-- title -->
-          <span> <h1><p style="margin-left: 10px; margin-top:50px;">BRING
-                PASSION TO</p></h1> </span>
-          <span style="color:white; "> <h1
-              style="background-color: var(--test-color);width: 375px;"><p
-                style="margin-left: 10px;">EVERYTHING I DO</p></h1> </span>
-          <br>
-
-          <!-- bio -->
-
-          <br>
-          <br>
-
-          <!-- skills set 1 -->
-
-          <div class="row">
-
-            <div class="col-6 row">
-              <span class="col-3"> <img style="margin-left: -15px;"
-                  src="res/architect-1.png" alt> </span>
-              <span class="col-9"> <h4 style="margin-top: 6%; font-size: 75%;">
-                Cloud Architect</h4></span>
-            </div>
-            <div class="col-1 row">          </div>
-
-            <div class="col-6 row">
-              <span class="col-3"> <img src="res/devops.png" alt
-                  style="margin-left: 0px;"> </span>
-              <span class="col-9"> <h4
-                  style="margin-top: 6%; font-size: 60%;">Automation & DevOps Solutions Engineer </h4></span>
-            </div>
-
-          </div>
-          <br>
-
-          <!-- skills set 2 -->
-          <div class="row">
-
-            <div class="col-6 row">
-              <span class="col-3"> <img src="res/academic.png"
-                  style="margin-left: -15px;" alt> </span>
-              <span class="col-9"> <h4
-                  style="margin-top: 6%;font-size: 70%;">Academic Instructor</h4></span>
-            </div>
-            <div class="col-1 row">          </div>
-
-
-            <div class="col-6 row">
-              <span class="col-3"> <img src="res/pro.png" alt
-                  style="margin-left: 0px;"> </span>
-              <span class="col-9"> <h4
-                  style="margin-top: 6%; font-size: 60%;">Technical Certification Professional Instructor</h4></span>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      </section>
-      <!--End about -->
-
-      <br><br>
-
-
-      <!-- skills -->
-      <section class="site-section" id="section-skill">
-
-        <br>
-        <span style="color:white; "> <h1
-            style="background-color: var(--test-color); width : fit-content; padding: 1px 30px; margin-left: 50px;"><p
-              style="margin-top: 8px;">SKILL SET</p></h1> </span>
-        <div class="row" style="margin: 3em; margin-bottom: 0;">
-          <div class="col-6">
-            <p style="font-size: 15px;">Eager and results-oriented Cloud & DevOps engineer with a strong foundation in <strong style="color:var(--test-color);">automation</strong>, <strong style="color:var(--test-color);">infrastructure management</strong>, and <strong style="color:var(--test-color);">testing</strong>. I thrive in designing and building robust infrastructure, whether <strong style="color:var(--test-color);">on-premises</strong> or <strong style="color:var(--test-color);">in the cloud</strong>, and enjoy the challenge of finding creative solutions in complex environments. Streamlining processes through automation is a particular passion, and I find immense satisfaction in automating tasks and <strong style="color:var(--test-color);">optimizing workflows</strong>.
-<br><br>
-              I possess a strong analytical mind and enjoy debugging complex issues. My passion for continuous learning fuels my dedication to expanding my knowledge through self-study and sharing learnings by <strong style="color:var(--test-color);">sharing content on LinkedIn</strong>.
- <br> <br>            
-              I've successfully implemented <strong style="color:var(--test-color);">15+ CI/CD pipelines</strong> on freelance projects, resulting in a significant reduction in deployment time.
-  <br>  <br>          
-              Passionate about empowering others, I've successfully helped many students acquire DevOps skills, enabling them to land positions in companies. My teaching style focuses on <strong style="color:var(--test-color);">hands-on workshops</strong> and <strong style="color:var(--test-color);">real-world inspired projects</strong>, and I find it incredibly rewarding to see students succeed.
-            </p>
-          </div>
-          <div class="col-1"></div>
-          <div class="cloud col-5" style="margin-top: -9em;margin-left: -3em;"> </div>
-
-        </div>
-
-      </section>
-      <!-- End skills -->
-
-      <!-- experience -->
-      <section class="site-section" id="section-edu">
-        <br>
-        <span style="color:white; "> <h1
-            style="background-color: var(--test-color); width : fit-content; padding: 1px 30px; margin-left: 50px;"><p
-              style="margin-top: 8px;">Professional EXPERIENCE</p></h1> </span>
-  
-        <div id="content-time">
-          <ul class="timeline">
-  
- 
-<!-- SupCom -->
-<li class="event" data-date="Teaching Assistant">
-  <div class="member-infos">
-      <h1 class='member-title tit1'>Sup'Com</h1>
-      <h2 class="member-location tit2"><span class='entypo-location'></span> Mar 2025 - Present<br>
-          <ul>
-              <li>Delivered <strong style="color:var(--test-color);">Linux system administration</strong> courses.</li>
-              <li>Teached <strong style="color:var(--test-color);">CCNA networking certificate</strong> courses.</li>
-          </ul>
-      </h2>
-  </div>
-</li>
-
-<!-- ENSTAB -->
-<li class="event" data-date="Teaching Assistant">
-  <div class="member-infos">
-      <h1 class='member-title tit1'>ENSTAB</h1>
-      <h2 class="member-location tit2"><span class='entypo-location'></span> Jan 2025 - Present<br>
-          <ul>
-              <li>Teached <strong style="color:var(--test-color);">Artificial Intelligence</strong> courses, focusing on algorithms, machine learning, and practical AI applications.</li>
-              <li>Supervised and mentoring students on their PFE.</li>
-          </ul>
-      </h2>
-  </div>
-</li>
-
-<!-- PASS -->
-<li class="event" data-date="Full Stack Developer">
-  <div class="member-infos">
-      <h1 class='member-title tit1'>PASS Consulting</h1>
-      <h2 class="member-location tit2"><span class='entypo-location'></span> Jul 2024 - Feb 2025<br>
-          <ul>
-              <li>Optimized application scalability, performance for speed by <strong style="color:var(--test-color);">20%</strong>.</li>
-              <li>Documented software development phases, making it easier for future maintenance and updates.</li>
-              <li>Provided technical support and training for users unfamiliar with new software systems.</li>
-              <li>Automated repetitive tasks, increasing productivity and efficiency.</li>
-              <li>Managed deployments and automated processes, ensuring smooth, consistent software updates across environments.</li>
-          </ul>
-          <br>
-          <strong style="color:var(--test-color);">JEE · Jenkins · Docker · Grafana · SonarQube · JUnit · Git · AngularJS · SQL · SpringBoot</strong>
-      </h2>
-  </div>
-</li>
-
-<!-- TTC Training -->
-<li class="event" data-date="Full Stack Instructor">
-  <div class="member-infos">
-      <h1 class='member-title tit1'>TTC Recrutement</h1>
-      <h2 class="member-location tit2"><span class='entypo-location'></span> Mar 2024 - Present<br>
-          <ul>
-              <li>Empowered Individuals: Transformed individuals with zero or basic programming knowledge into proficient Springboot & Angular developers.</li>
-              <li>Practical Learning Approach: Delivered a unique curriculum blending concise theory with hands-on workshops, culminating in a real-world inspired project.</li>
-              <li>Scrum Development Integration: Introduced students to agile methodologies like Scrum, fostering collaboration and project management skills.</li>
-              <li>Research-Driven Learning: Encouraged independent research, fostering critical thinking and problem-solving abilities.</li>
-              <li>Comprehensive Skill Development: Equipped students with both technical and commercial validation through final project assessments.</li>
-          </ul>
-          <br>
-          <strong style="color:var(--test-color);">Spring Boot · AngularJS · Git · SQL · Team Management · Public Speaking</strong>
-      </h2>
-  </div>
-</li>
-
-<!-- TED -->
-<li class="event" data-date="Master's Level Instructor">
-  <div class="member-infos">
-      <h1 class='member-title tit1'>TED University (ispTED by Clevory)</h1>
-      <h2 class="member-location tit2"><span class='entypo-location'></span> Oct 2023 - Present<br>
-          <ul>
-              <li>Developed and Delivered Cloud Computing Curriculum: Designed and instructed comprehensive Master's level courses on cloud computing fundamentals and virtualization technologies (VMware products, Docker, Kubernetes ...).</li>
-              <li>Certification Preparation: Equipped students with the knowledge and skills necessary to succeed on AWS certifications, including AWS Certified Solutions Architect, AWS Certified Developer, and AWS Certified Cloud Practitioner.</li>
-              <li>Thesis Supervision: Guided students through their end of studies internship projects.</li>
-          </ul>
-          <br>
-          <strong style="color:var(--test-color);">DevOps · Big Data · Ansible · AWS · Cloud Computing · Public Speaking · Communication · Team management</strong>
-      </h2>
-  </div>
-</li>
-
-<!-- Clevory -->
-<li class="event" data-date="B2B Cloud Trainer">
-  <div class="member-infos">
-      <h1 class='member-title tit1'>Clevory Training</h1>
-      <h2 class="member-location tit2"><span class='entypo-location'></span> Oct 2023 - Present<br>
-          <ul>
-              <li>Upskilled Professionals: Equipped professionals from various companies with in-demand Cloud Computing and DevOps knowledge.</li>
-              <li>Exam Preparation Focus: Delivered comprehensive training programs, including labs and theoretical foundations, to prepare participants for international certification exams.</li>
-              <li>Interactive Learning Environment: Cultivated an engaging learning experience through interactive labs and clear theoretical explanations.</li>
-              <li>Practical Skill Development: Focused on practical skill development alongside theoretical knowledge, ensuring participants can apply their learnings in real-world scenarios.</li>
-              <li>Certification Readiness: Prepared participants for success on industry-recognized Cloud Computing and DevOps certifications.</li>
-          </ul>
-          <br>
-          <strong style="color:var(--test-color);">DevOps · Kubernetes · AWS Developer · AWS Practitioner · AWS Architect · VMware · Public Speaking · Communication · Team management</strong>
-      </h2>
-  </div>
-</li>
-
-<!-- TDS -->
-<li class="event" data-date="LEARNING MANAGER">
-  <div class="member-infos">
-      <h1 class='member-title tit1'>The Digital School of Africa</h1>
-      <h2 class="member-location tit2"><span class='entypo-location'></span> Oct 2023 - Present<br>
-          <ul>
-              <li>Managed marketing, planning, teacher recruitment, curriculum development.</li>
-              <li>Led the team responsible for building and implementing an LMS platform, ensuring a seamless learning experience.</li>
-              <li>Partnered with l'<strong style="color:var(--test-color);">Ecole digitale de Paris</strong> to hire qualified instructors and ensure alignment with program standards.</li>
-              <li>Cultivated and maintained high-quality course content, including syllabus development and continuous improvement processes.</li>
-          </ul>
-      </h2>
-  </div>
-</li>
-
-<!-- GoMyCode -->
-<li class="event" data-date="DevOps Instructor">
-  <div class="member-infos">
-      <h1 class='member-title tit1'>GOMYCODE</h1>
-      <h2 class="member-location tit2"><span class='entypo-location'></span> Dec 2022 - Jan 2024<br>
-          <ul>
-              <li>Empowered DevOps Professionals: Transformed individuals with no prior DevOps experience into skilled practitioners.</li>
-              <li>Interactive Learning Approach: Cultivated an engaging learning environment through project-based learning, quizzes, and hands-on activities.</li>
-              <li>Comprehensive DevOps Curriculum: Delivered a comprehensive curriculum covering CI/CD pipelines (Jenkins, Git), code repositories (Nexus), code quality tools (SonarQube), containerization (Docker), infrastructure as code (Terraform), configuration management (Ansible), and deployment strategies (Kubernetes clusters, AWS).</li>
-              <li>Project-Based Learning: Equipped students with practical skills through real-world inspired mini-projects and a culminating final project.</li>
-          </ul>
-          <br>
-          <strong style="color:var(--test-color);">DevOps · Amazon Web Services (AWS) · Network · Ansible · Terraform · Public Speaking · Team Management</strong>
-      </h2>
-  </div>
-</li>
-
-<!-- Ooredoo -->
-<li class="event" data-date="End of Studies Project">
-  <div class="member-infos">
-      <h1 class='member-title tit1'>Ooredoo</h1>
-      <h2 class="member-location tit2"><span class='entypo-location'></span> Jun 2022 - Sep 2022<br>
-          <ul>
-              <li>Architected and provisioned operational dashboards for day-to-day Datacenters' monitoring needs.</li>
-              <li>Created blueprints and models for architecture to guarantee high availability, Disaster Recovery, Failover, Backup.</li>
-              <li>Verified stability, interoperability, portability, security and scalability of system architecture.</li>
-              <li>Introduced automation into standardized operations to reduce man-hours and increase throughput.</li>
-              <li>Created best practices and standardized policies for managing infrastructure as code.</li>
-          </ul>
-          <br>
-          <strong style="color:var(--test-color);">ViPR SRM · VROPS · HAProxy · KeepAlived · NFS sharing · VirtualBox · Jenkins · Ansible · Docker · Maven · Powershell · Vagrant · Kubernetes · Grafana · Prometheus · K6 · Junit · SpringBoot · Neo4j</strong>
-      </h2>
-  </div>
-</li>
-
-<!-- Tunisie Telecom -->
-<li class="event" data-date="Internship">
-  <div class="member-infos">
-      <h1 class='member-title tit1'>Tunisie Telecom</h1>
-      <h2 class="member-location tit2"><span class='entypo-location'></span> Jun 2022 - Sep 2022<br>
-          <ul>
-              <li>Introduced automation into standardized operations to reduce man-hours and increase throughput.</li>
-              <li>Monitored on-premise and cloud-based platforms and products for required operational metrics.</li>
-              <li>Created best practices and standardized policies for managing infrastructure as code.</li>
-              <li>Developed technical handbooks to represent code and design of new applications.</li>
-              <li>Conferred with engineering team members to optimize the interface of software and hardware.</li>
-          </ul>
-          <br>
-          <strong style="color:var(--test-color);">Windows server · VMware Workstation · Windows Active Directory · Powershell · Terraform · Ansible · Vagrant · VirtualBox · Prometheus · Grafana</strong>
-      </h2>
-  </div>
-</li>
-
-
-
-            </ul>
-          </div>
-  
-        </section>
-        <!-- End Experience -->
-
-
-
-      <!-- cources potfolio -->
-      <section class="site-section" id="section-portfolio">
-              <span style="color:white; "> <h1
-                  style="background-color: var(--test-color); width : fit-content; padding: 1px 30px; margin-left: 50px;"><p
-                    style="margin-top: 8px;">Free Courses</p></h1> </span>
-                    <br>
-
-                    <div class="row course-container" style="margin:20px 30px 20px 40px; margin-top: 0;">
-  
-
-                 <!-- Curso em andamento 1 -->
-                 <a href="https://classroom.google.com/c/NzU2NjkwNTI4NDIw?cjc=qdjfjfb" class="course-card">
-                   <div class="thumbnail-container">
-                     <img src="res/intro ai.png" alt="intro AI" class="thumbnail" />
-                   </div>
-                   <div class="card-content">
-                     <p class="course-info">Search • PLA • MLP • ANN • SVM • Optimization</p>
-                     <h3 class="lesson-title">Introduction to Artificial Intelligence</h3>
-                
-         
-                     <div class="progress-bar">
-                       <div class="progress-indicator" style="width: 40%"></div>
-                     </div>
-                   </div>
-                 </a>
-                 
-
-                 
-                 <!-- Curso em andamento 1 -->
-                 <a href="https://classroom.google.com/c/NjI3NzI2ODQ1MDI5?cjc=7awlk3u" class="course-card" >
-                   <div class="thumbnail-container">
-                     <img src="res/intro BD.png" alt="Intro BigData" class="thumbnail" />
-                   </div>
-                   <div class="card-content">
-                     <p class="course-info">Hadoop • Spark • Kafka • HBase</p>
-                     <h3 class="lesson-title">Big Data Workshop </h3>
-                
-         
-                     <div class="progress-bar">
-                       <div class="progress-indicator" style="width: 95%"></div>
-                     </div>
-                   </div>
-                 </a>
-
-                  <a href="https://classroom.google.com/c/NzM2NDYyODY0MTcx?cjc=yt3a3ms" target="_blank" class="course-card" >
-                    <div class="thumbnail-container">
-                      <img src="res/academic writing.PNG" alt="academic writing" class="thumbnail" />
-                    </div>
-                    <div class="card-content">
-                      <p class="course-info">PhD • Zotero • Summaries • Data Vizualization • Rules • Ethics</p>
-                      <h3 class="lesson-title">Aacademic Writing</h3>
-                      <div class="progress-bar">
-                        <div class="progress-indicator" style="width: 100%"></div>
-                      </div>
-                    </div>
-                  </a>
-
- <!-- Add the "hidden-course" class to all cards after the first 3 -->
-
-
-
- <a href="https://classroom.google.com/c/NjQzMjE4MjAzNDcx?cjc=frtavqz" class="course-card hidden-course" >
-  <div class="thumbnail-container">
-    <img src="res/Cloud infra.png" alt="Cloud Infra Management" class="thumbnail" />
-  </div>
-  <div class="card-content">
-    <p class="course-info">Cloud Computing • IaaS • AWS • HPE • Azure</p>
-    <h3 class="lesson-title">Cloud Infrastructure Management</h3>
-    <div class="progress-bar">
-      <div class="progress-indicator" style="width: 100%"></div>
-    </div>
-  </div>
-</a>
-
-
-<a href="https://classroom.google.com/c/NjYyNzgzODg0MzI5?cjc=oeg35dl" class="course-card hidden-course" >
-  <div class="thumbnail-container">
-    <img src="res/intro virtualization.png" alt="Cloud Infra Management" class="thumbnail" />
-  </div>
-  <div class="card-content">
-    <p class="course-info">VM • Docker • Kubernetes</p>
-    <h3 class="lesson-title">Virtualization</h3>
-    <div class="progress-bar">
-      <div class="progress-indicator" style="width: 60%"></div>
-    </div>
-  </div>
-</a>
-
-
-
-
-</div>
-
-
-                <!-- Toggle Button -->
-                <div style="text-align: center; margin-top: 20px;">
-                  <p id="toggle-courses" class="read">
-                    <span>Show More</span>
-                    <i class="fa fa-angle-double-down"></i>
-                  </p>
-                </div>
-
-
-
-                
-      </section>
-      <!-- End cources potfolio -->
-<br><br> 
-
-  
-      <!-- available -->
-      <div class="row" style="position: absolute; z-index : 5; width:100%;">
-
-        <!-- Milestone -->
-        <div class="milestone text-center" style="margin-left: 8%;">
-          <div class="milestone_icon"><i class="fa fa-check-square-o"
-              aria-hidden="true" style="font-size: 60px;color: #fff"></i></div>
-          <div class="milestone_counter" data-end-value="12">0</div>
-          <div class="milestone_text">Finished Projects</div>
-        </div>
-
-        <!-- Milestone -->
-        <div class="milestone text-center" style="margin-left: 4%;">
-            <div class="milestone_icon"><i class="fa fa-coffee"
-              aria-hidden="true" style="font-size: 60px;color: #fff"></i></div>
-          <div class="milestone_counter" data-end-value="+ 999">0</div>
-          <div class="milestone_text"> Cups of Coffee</div>
-        </div>
-
-        <!-- Milestone -->
-        <div class="milestone text-center" style="margin-left: 4%;">
-          <div class="milestone_icon"><i class="fa fa-smile-o"
-              aria-hidden="true" style="font-size: 60px;color:#fff;"></i></div>
-          <div class="milestone_counter" data-end-value="61">0</div>
-          <div class="milestone_text">Satisfied clients</div>
-        </div>
-
-        <!-- Milestone -->
-        <div class="milestone text-center" style="margin-left: 4%;">
-          <div class="milestone_icon"><i class="fa fa-clock-o" aria-hidden="true"
-              style="font-size: 60px; color:#fff;"></i></div>
-          <div class="milestone_counter" data-end-value="+ 780">0</div>
-          <div class="milestone_text">Hours Teached</div>
-        </div>
-
-      </div>
-      <div class="site-hero" id="motivation"
-        style="background-image: url(res/images.jpg); height: 400px;margin-top: 80px;"
-        data-stellar-background-ratio="0.5">
-        <div class="row intro-text align-items-center justify-content-center"
-          style="height: inherit;">
-          <div class="col-md-10 " style="  margin-top: 100px;">
-            <center><h1 class="site-heading site-animate"
-                style=" font-size: 60px;">
-                  When hiring anything less than <br><strong
-                  style="color:var(--test-color);">TOP TALENT</strong>  is not an option</h1></center>
-                </div>
-        </div>
-      </div>
-      <!-- End available -->
-      <br><br>
-
-
-
-      <!-- Trusted by Slider -->
-      <span style="color:white; "> <h1 style=" width : fit-content; padding: 1px 30px; margin-left: 20px;"><p
-          style="margin-top: 8px;">Proudly Collaborating with</p></h1>
-        </span>
-          <br>
-      <div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-      <div class="company-slider">
-        <div class="company-slider-inner">
-          <!-- Items will be inserted here by JavaScript -->
-        </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/mohamed-aziz-ben-haha/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+        <a href="mailto:mohamedaziz.benhaha@gmail.com" target="_blank" rel="noopener" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+        <a href="https://wa.me/21625713413" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-chat"/></svg></a>
+        <a href="https://bento.me/mohamed-aziz-ben-haha" target="_blank" rel="noopener" aria-label="Bento"><svg><use href="#i-link"/></svg></a>
       </div>
     </div>
+    <div class="portrait">
+      <div class="orbit o1"><span>AWS</span><span>Kubernetes</span><span>Linux</span><span>Terraform</span><span>Docker</span></div>
+      <div class="orbit o2"><span>Python</span><span>LangChain</span><span>RAG · LLMs</span><span>Ollama</span><span>Machine Learning</span><span>Computer Vision</span><span>Azure</span><span>Ansible</span></div>
+      <div class="frame"><img src="res/portrait.jpg" alt="Mohamed Aziz Ben Haha" width="849" height="911"></div>
+      <div class="badge-float"><b>Cloud</b><span>AWS · Azure · Kubernetes</span></div>
+      <div class="badge-float b2"><b>AI · ML</b><span>RAG · LLMs · Embedded ML</span></div>
+    </div>
   </div>
+  <a class="scroll-cue" href="#about" aria-label="Scroll"><span></span></a>
+</section>
+
+<!-- LOGOS -->
+<section class="marquee" aria-label="Institutions and companies">
+  <p data-i18n="logos.title">Taught at, built for, studied with</p>
+  <div class="track">
+    <div class="row"><img class="lg" src="res/centrale-lyon.svg" alt="École Centrale de Lyon"><img src="res/supcom.png" alt="Sup'Com"><img src="res/must.png" alt="MUST University"><img src="res/enstab.png" alt="ENSTAB"><img src="res/esprit.png" alt="ESPRIT"><img src="res/ted.png" alt="TED University"><img src="res/clevory.png" alt="Clevory"><img src="res/aneti.png" alt="ANETI"><img src="res/gmc.png" alt="GoMyCode"><img src="res/isam.png" alt="ISAM Formation"><img src="res/ttc.png" alt="Tunisian Training Consulting"><img src="res/ooredoo.svg" alt="Ooredoo"><img src="res/pass.png" alt="PASS Consulting"><img src="res/ipact.png" alt="IPACT Consult"><img src="res/klabs.png" alt="Klabs"></div>
+    <div class="row" aria-hidden="true"><img class="lg" src="res/centrale-lyon.svg" alt=""><img src="res/supcom.png" alt=""><img src="res/must.png" alt=""><img src="res/enstab.png" alt=""><img src="res/esprit.png" alt=""><img src="res/ted.png" alt=""><img src="res/clevory.png" alt=""><img src="res/aneti.png" alt=""><img src="res/gmc.png" alt=""><img src="res/isam.png" alt=""><img src="res/ttc.png" alt=""><img src="res/ooredoo.svg" alt=""><img src="res/pass.png" alt=""><img src="res/ipact.png" alt=""><img src="res/klabs.png" alt=""></div>
+  </div>
+</section>
+
+<!-- ABOUT / BENTO -->
+<section class="section" id="about">
+  <h2 class="title reveal"><span data-i18n="about.t1">Engineer. Researcher.</span> <em data-i18n="about.t2">Trainer.</em></h2>
+  <div class="bento">
+    <article class="cell big spot reveal">
+      <svg class="ic"><use href="#i-cloud"/></svg>
+      <h3 data-i18n="about.eng.h">I build</h3>
+      <p data-i18n="about.eng.p">AI systems and the infrastructure they run on. RAG pipelines that answer from your own documents with verified citations, machine-learning models trained on real data and deployed on the cloud or on-premise, and the automation around them: CI/CD, infrastructure as code, monitoring, high availability. In production at Ooredoo, PASS and IPACT.</p>
+      <ul class="chips"><li>RAG · LLMs</li><li>Machine Learning</li><li>Python</li><li>Kubernetes</li><li>AWS</li><li>Azure</li><li>Terraform</li><li>Ansible</li><li>CI/CD</li><li>Prometheus · Grafana</li></ul>
+    </article>
+    <article class="cell spot reveal">
+      <svg class="ic"><use href="#i-cap"/></svg>
+      <h3 data-i18n="about.teach.h">I teach</h3>
+      <p data-i18n="about.teach.p">Cloud, DevOps and AI, end to end. Learners go from zero to a working AI/ML model deployed on cloud infrastructure or locally, using managed cloud AI services or models they build themselves.</p>
+    </article>
+    <article class="cell spot reveal">
+      <svg class="ic"><use href="#i-chip"/></svg>
+      <h3 data-i18n="about.res.h">I research</h3>
+      <p data-i18n="about.res.p">PhD in machine learning for embedded IoT: an autonomous platform that watches water quality in real time.</p>
+    </article>
+    <article class="cell stat reveal"><b class="count" data-to="1000" data-suffix="+">0</b><span data-i18n="stat.hours">training hours delivered</span></article>
+    <article class="cell place spot reveal">
+      <svg class="ic"><use href="#i-pin"/></svg>
+      <h3>Écully <span class="gold">↔</span> Tunis</h3>
+      <p data-i18n="about.place">Between École Centrale de Lyon and Sup'Com. Remote-friendly, on-site in France and Tunisia.</p>
+    </article>
+    <article class="cell mentor spot reveal">
+      <div class="mentor-stats">
+        <div><b class="count" data-to="8">0</b><span data-i18n="stat.certs">certifications</span></div>
+        <div><b class="count" data-to="9">0</b><span data-i18n="stat.schools">universities &amp; training centres</span></div>
       </div>
-      <!-- Trusted by Slider end -->
-      <br><br>
-     
+      <h3 data-i18n="about.mentor.h">I mentor projects</h3>
+      <p data-i18n="about.mentor.p">End-of-studies (PFE) and end-of-year projects for engineering and master's students, at university or inside companies: from the subject and architecture to the defence.</p>
+    </article>
+    <article class="cell langs spot reveal">
+      <svg class="ic"><use href="#i-globe"/></svg>
+      <h3 data-i18n="about.lang.h">Languages</h3>
+      <ul class="lang-list">
+        <li><span data-i18n="lang.ar">Arabic</span><i style="--w:100%"></i><small data-i18n="lang.native">Native</small></li>
+        <li><span data-i18n="lang.en">English</span><i style="--w:88%"></i><small>IELTS 7.5</small></li>
+        <li><span data-i18n="lang.fr">French</span><i style="--w:88%"></i><small>DALF C1</small></li>
+      </ul>
+    </article>
+  </div>
+</section>
 
-     
-      <!-- Send a Mail --> 
-      <div id="contact-section">
-        <div class="contact-form row" style="padding-top: 1%;">
-          <div></div>
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <h2 class="title reveal"><span data-i18n="exp.t1">Where I've</span> <em data-i18n="exp.t2">shipped & taught.</em></h2>
+  <div class="seg reveal" role="tablist" aria-label="Experience type">
+    <button role="tab" aria-selected="true" data-group="ind" data-i18n="exp.ind">Industry</button>
+    <button role="tab" aria-selected="false" data-group="uni" data-i18n="exp.uni">Universities</button>
+    <button role="tab" aria-selected="false" data-group="pro" data-i18n="exp.pro">Professional training</button>
+    <button role="tab" aria-selected="false" data-group="pfe" data-i18n="exp.pfe">Supervision</button>
+  </div>
+  <div class="tabs reveal">
+    <div class="tab-list" id="tabList" role="tablist" aria-orientation="vertical"></div>
+    <div class="tab-panel" id="tabPanel" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
 
-          <!-- second grid -->
-          <div>
-            <center>
-              <form method="post">
-                <input type="Email" placeholder="Email" id="inputEmail"
-                  required><br>
-                <input type="text" placeholder="Subject" id="inputSubject"
-                  required><br>
-                <textarea name="message" placeholder="Message" rows="5"
-                  id="inputMessage" required></textarea><br>
-                <input type="button" class="submit" value="Send Message"
-                  onclick="sendEmail()" />
-              </form>
-            </center>
-          </div>
-        </div>
-
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <h2 class="title reveal"><span data-i18n="proj.t1">Things I'm</span> <em data-i18n="proj.t2">building.</em></h2>
+  <div class="hl hl-2">
+    <article class="proj tilt reveal">
+      <div class="proj-art a1" aria-hidden="true"><span>[1]</span><span>[2]</span><span>p.14</span></div>
+      <div class="proj-body">
+        <h3>SIADGI</h3>
+        <p class="proj-tag" data-i18n="p1.tag">Local-first document Q&amp;A with verified citations</p>
+        <p data-i18n="p1.p">A free Windows desktop app: point it at a folder, ask questions, get answers that cite your own files, page and passage, checked sentence by sentence. Runs on your computer with local models; the cloud is optional. Includes text-to-SQL over spreadsheets with automatic charts. A simplified version is being adapted by a final-year student I supervise.</p>
+        <ul class="chips"><li>RAG</li><li>Python</li><li>FastAPI</li><li>React · TS</li><li>Ollama</li><li>LanceDB</li><li>DuckDB</li><li>MCP</li></ul>
       </div>
-      <!-- End Send a Mail --> 
-
-
-
-      <!-- Contact Line --> 
-      <div class="top1">
-
-        <div class="row">
-          <div class="col-md-8 col-sm-8 col-xs-12">
-            <div class="left1">
-              <ul>
-                <li style="margin-right: 90px;"><i class="fa fa-phone"></i>
-                  00216 25 713 413</li>
-                <li><i class="fa fa-envelope-o"></i>
-                  mohamedaziz.benhaha@gmail.com</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="right1">
-              <ul>
-                <li style="margin-right: 20px;"><a
-                    href="https://bento.me/mohamed-aziz-ben-haha"><i
-                      class="fa fa-trello"></i></a></li>
-                              <li style="margin-right: 15px;"><a
-                  href="https://www.linkedin.com/in/mohamed-aziz-ben-haha/"><i
-                    class="fa fa-linkedin"></i></a></li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
+    </article>
+    <article class="proj tilt reveal">
+      <div class="proj-art a2" aria-hidden="true"><svg><use href="#i-drop"/></svg></div>
+      <div class="proj-body">
+        <h3>GreenWaterGuard · PhD</h3>
+        <p class="proj-tag" data-i18n="p2.tag">Autonomous, intelligent water-quality biomonitoring</p>
+        <p data-i18n="p2.p">Microbial fuel cells used as living sensors, an IoT acquisition box, and machine learning that runs on the device to read water quality in real time. Franco-Tunisian project (PHC Utique 2025–2027) between Innov'COM, Sup'Com, and the Ampère lab, École Centrale de Lyon.</p>
+        <ul class="chips"><li>Embedded ML</li><li>IoT–Cloud</li><li>ESP32</li><li>3D-printed reactor</li></ul>
       </div>
-      <!-- End Contact Line --> 
+    </article>
+  </div>
+  <div class="hl hl-3">
+    <article class="proj tilt reveal">
+      <div class="proj-art a3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="proj-body">
+        <h3 data-i18n="p3.h">AI behavioural budgeting app</h3>
+        <p class="proj-tag" data-i18n="p3.tag">In progress · grown from a final-year project I supervised</p>
+        <p data-i18n="p3.p">A financial assistant agent with long-term memory, a hybrid rule-based + LLM engine for budget and savings plans, voice input with entity extraction, and detection of impulsive-spending patterns.</p>
+        <ul class="chips"><li>LLM agent</li><li>Flutter</li><li>Supabase</li><li>LangChain</li><li>NVIDIA NIM</li></ul>
+      </div>
+    </article>
+    <article class="proj tilt reveal">
+      <div class="proj-art a4" aria-hidden="true"><span data-i18n="a4.q">“Buy milk and call the bank tomorrow at 10”</span><b>+ groceries · milk</b><b>+ reminder · 10:00</b></div>
+      <div class="proj-body">
+        <h3>Life OS</h3>
+        <p class="proj-tag" data-i18n="p4.tag">Natural language in, validated actions out</p>
+        <p data-i18n="m4.p">Tasks, reminders, notes, calendar and groceries in one app. Type or speak one sentence and an AI turns it into validated actions, with one-tap undo.</p>
+        <ul class="chips"><li>LLM actions</li><li>Speech input</li><li>PWA</li><li>Serverless</li></ul>
+      </div>
+    </article>
+    <article class="proj tilt reveal">
+      <div class="proj-art a5" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="proj-body">
+        <h3 data-i18n="m1.h">Water-quality gateway firmware</h3>
+        <p class="proj-tag" data-i18n="p5.tag">Industrial probes to MQTT, configured from a phone</p>
+        <p data-i18n="m1.p">ESP32 firmware reading pH, ORP, conductivity, dissolved oxygen and temperature probes over Modbus RTU and two ADCs, publishing JSON over MQTT. Field setup through a captive Wi-Fi web app.</p>
+        <ul class="chips"><li>ESP-IDF</li><li>FreeRTOS</li><li>Modbus RS-485</li><li>MQTT</li></ul>
+      </div>
+    </article>
+  </div>
+  <h3 class="sub reveal" data-i18n="proj.more">More projects</h3>
+  <div class="minis">
+    <article class="mini spot reveal"><svg class="ic"><use href="#i-drop"/></svg><h3 data-i18n="m2.h">Floating MFC reactor</h3><p data-i18n="m2.p">Parametric, code-generated CAD for a floating microbial-fuel-cell sensor unit: three prototypes, buoyancy checks, print plates for a Bambu printer, and an automated test suite.</p><ul class="chips"><li>Python CAD</li><li>3D printing</li><li>pytest</li></ul></article>
+    <article class="mini spot reveal"><svg class="ic"><use href="#i-cloud"/></svg><h3>GymTracker</h3><p data-i18n="m3.p">A training-log web app I use every day on my phone: programme, logging, progress charts, an AI coach and cloud sync through serverless functions.</p><ul class="chips"><li>PWA</li><li>Netlify Functions</li><li>LLM</li></ul></article>
+    <a class="mini spot reveal" href="https://github.com/mohamedazizbenhaha/Air-Canvas" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chip"/></svg><h3>Air-Canvas <svg class="ext"><use href="#i-ext"/></svg></h3><p data-i18n="m6.p">Draw in the air with hand gestures: real-time hand tracking turns a webcam into a canvas.</p><ul class="chips"><li>Computer Vision</li><li>OpenCV</li><li>MediaPipe</li></ul></a>
+    <a class="mini spot reveal" href="https://github.com/mohamedazizbenhaha/ThesisVault" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cap"/></svg><h3>ThesisVault <svg class="ext"><use href="#i-ext"/></svg></h3><p data-i18n="m5.p">A simple static platform for researchers to share their work with the world. Open source.</p><ul class="chips"><li>Static site</li><li>Open source</li></ul></a>
+  </div>
+</section>
 
+<!-- CERTIFICATIONS -->
+<section class="section" id="certs">
+  <h2 class="title reveal"><span data-i18n="cert.t1">Certified,</span> <em data-i18n="cert.t2">not just curious.</em></h2>
+  <div class="certs">
+    <div class="cert reveal"><b>CKA</b><span>Certified Kubernetes Administrator</span><small>Linux Foundation · 2024</small></div>
+    <div class="cert reveal"><b>LPI</b><span>DevOps Tools Engineer</span><small>2024</small></div>
+    <div class="cert reveal"><b>RHCSA</b><span>Red Hat Certified System Administrator</span><small>Red Hat · Linux</small></div>
+    <div class="cert reveal"><b>CCNA</b><span>CCNAv7</span><small>Cisco · 2021</small></div>
+    <div class="cert cloud reveal"><b>AZ-104</b><span>Azure Administrator Associate</span><small>Microsoft</small></div>
+    <div class="cert cloud reveal"><b>AWS</b><span>Cloud Practitioner</span><small>2024</small></div>
+    <div class="cert cloud reveal"><b>AWS</b><span>Solutions Architect – Associate</span><small>2025</small></div>
+    <div class="cert cloud reveal"><b>AWS</b><span>SysOps Administrator – Associate</span><small>2025</small></div>
+  </div>
+  <div class="edu reveal">
+    <h3 class="sub" data-i18n="edu.h">Education</h3>
+    <ol class="journey">
+      <li><span class="dot"></span><time>2016 – 2019</time><div class="logo"><svg><use href="#i-cap"/></svg></div><b data-i18n="edu.med">Medicine</b><span>Faculté de Médecine de Tunis</span></li>
+      <li><span class="dot"></span><time>2018 – 2023</time><div class="logo"><img src="res/esprit.png" alt="ESPRIT"></div><b data-i18n="edu.eng">Engineering degree, Cloud Computing &amp; DevOps</b><span>ESPRIT</span></li>
+      <li class="now"><span class="dot"></span><time data-i18n="edu.now">2024 → today</time><div class="logo"><img src="res/supcom.png" alt="Sup'Com"><img src="res/centrale-lyon.svg" alt="École Centrale de Lyon"></div><b data-i18n="edu.phd">PhD, Machine Learning (cotutelle)</b><span>Sup'Com · École Centrale de Lyon</span></li>
+    </ol>
+  </div>
+</section>
 
+<!-- COURSES -->
+<section class="section" id="courses">
+  <h2 class="title reveal"><span data-i18n="course.t1">Free courses,</span> <em data-i18n="course.t2">open to anyone.</em></h2>
+  <div class="courses" id="courses-grid">
+    <a class="course reveal" href="https://classroom.google.com/c/NzU2NjkwNTI4NDIw?cjc=qdjfjfb" target="_blank" rel="noopener"><img src="res/intro ai.png" alt="" loading="lazy"><div><h3 data-i18n="c1">Introduction to Artificial Intelligence</h3><p>Search · PLA · MLP · ANN · SVM · Optimization</p><div class="cprog" style="--p:40%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 40%</small></div></div><svg><use href="#i-ext"/></svg></a>
+    <a class="course reveal" href="https://classroom.google.com/c/NjI3NzI2ODQ1MDI5?cjc=7awlk3u" target="_blank" rel="noopener"><img src="res/intro BD.png" alt="" loading="lazy"><div><h3 data-i18n="c2">Big Data Workshop</h3><p>Hadoop · Spark · Kafka · HBase</p><div class="cprog" style="--p:95%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 95%</small></div></div><svg><use href="#i-ext"/></svg></a>
+    <a class="course reveal" href="https://classroom.google.com/c/NzM2NDYyODY0MTcx?cjc=yt3a3ms" target="_blank" rel="noopener"><img src="res/academic writing.PNG" alt="" loading="lazy"><div><h3 data-i18n="c3">Academic Writing</h3><p>PhD · Zotero · Summaries · Data visualization · Ethics</p><div class="cprog" style="--p:100%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 100%</small></div></div><svg><use href="#i-ext"/></svg></a>
+    <a class="course reveal" href="https://classroom.google.com/c/NjQzMjE4MjAzNDcx?cjc=frtavqz" target="_blank" rel="noopener"><img src="res/Cloud infra.png" alt="" loading="lazy"><div><h3 data-i18n="c4">Cloud Infrastructure Management</h3><p>IaaS · AWS · HPE · Azure</p><div class="cprog" style="--p:100%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 100%</small></div></div><svg><use href="#i-ext"/></svg></a>
+    <a class="course reveal" href="https://classroom.google.com/c/NjYyNzgzODg0MzI5?cjc=oeg35dl" target="_blank" rel="noopener"><img src="res/intro virtualization.png" alt="" loading="lazy"><div><h3 data-i18n="c5">Virtualization</h3><p>VM · Docker · Kubernetes</p><div class="cprog" style="--p:60%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 60%</small></div></div><svg><use href="#i-ext"/></svg></a>
+  </div>
+  <div class="more-wrap"><button class="btn btn-ghost" id="moreCourses" type="button" aria-expanded="false" aria-controls="courses-grid"><span id="moreLabel">Show more</span></button></div>
+</section>
 
-      <script src="js/jquery-3.2.1.min.js"></script>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/jquery.waypoints.min.js"></script>
-      <script src="js/jquery.easing.1.3.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="js/ScrollMagic.min.js"></script>
-      <script src="js/progressbar.js"></script>
-      <script src="js/TweenMax.min.js"></script>
-      <script src="js/scroll.js"></script>
-      <script src="cv_js.js"></script>
+</main>
 
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      <script type="text/javascript">
-
-
-      function sendEmail() {
-        var email   = document.getElementById('inputEmail').value
-    var message = document.getElementById('inputMessage').value
-    var subject   = document.getElementById('inputSubject').value
-
-        Email.send({
-          Host: "smtp.gmail.com",
-          Username : "mohamedaziz.benhaha@gmail.com",
-          Password : "cabeljgwqmwhgzru",
-          To : 'mohamedaziz.benhaha@gmail.com',
-          From : email,
-          Subject : subject,
-          Body : message,
-        })
-        .then(function(message){
-
-          alert("mail sent successfully")
-
-          document.getElementById('inputEmail').value=''
-          document.getElementById('inputMessage').value=''
-          document.getElementById('inputSubject').value=''
-        });
-      }
-    </script>
-
-    </body>
-  </html>
+<footer class="foot">
+  <img src="res/my_logo_w.png" alt="" width="28" height="26">
+  <span>© <span id="year">2026</span> Mohamed Aziz Ben Haha</span>
+  <button type="button" class="foot-link" data-contact data-i18n="nav.contact">Contact</button>
+  <a href="#top" data-i18n="foot.top">Back to top ↑</a>
+</footer>
+<dialog class="modal" id="contactDlg" aria-labelledby="dlgTitle">
+  <button class="x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="modal-in">
+    <div class="modal-main">
+      <h2 id="dlgTitle"><span data-i18n="ct.t1">Let's work</span> <em data-i18n="ct.t2">together.</em></h2>
+      <p data-i18n="ct.p">Cloud and DevOps missions, AI/ML projects, training for your team, or a research collaboration. Pick the channel that suits you.</p>
+      <div class="mail">
+        <a class="btn btn-gold" href="mailto:mohamedaziz.benhaha@gmail.com?subject=Hello%20Aziz" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg><span data-i18n="ct.mail">Email me</span></a>
+        <button class="btn btn-ghost" id="copy" type="button"><svg><use href="#i-copy"/></svg><span data-i18n="ct.copy">Copy email</span></button>
+      </div>
+      <div class="contact-grid">
+        <a href="https://wa.me/21625713413" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg><span>WhatsApp</span><b>+216 25 713 413</b></a>
+        <a href="tel:+33605720598"><svg><use href="#i-phone"/></svg><span data-i18n="ct.fr">France</span><b>+33 6 05 72 05 98</b></a>
+        <a href="https://www.linkedin.com/in/mohamed-aziz-ben-haha/" target="_blank" rel="noopener"><svg><use href="#i-in"/></svg><span>LinkedIn</span><b>mohamed-aziz-ben-haha</b></a>
+        <a href="https://bento.me/mohamed-aziz-ben-haha" target="_blank" rel="noopener"><svg><use href="#i-link"/></svg><span>Bento</span><b>bento.me/mohamed-aziz-ben-haha</b></a>
+      </div>
+      <div class="dl">
+        <a href="res/CV-Mohamed-Aziz-Ben-Haha.pdf" download><svg><use href="#i-down"/></svg><span data-i18n="hero.cv">Download resume</span></a>
+        <a href="res/CV-Formateur-CNFCPP.pdf" download><svg><use href="#i-down"/></svg><span data-i18n="hero.cv2">Trainer resume (CNFCPP)</span></a>
+      </div>
+    </div>
+    <div class="qr">
+      <img src="res/contact-qr.svg" alt="QR code: save Mohamed Aziz Ben Haha to your contacts" width="260" height="260">
+      <p data-i18n="ct.scan">Scan to save me in your contacts</p>
+      <a class="btn btn-ghost btn-sm" href="res/mohamed-aziz-ben-haha.vcf" download><svg><use href="#i-down"/></svg><span data-i18n="ct.vcf">Add to contacts</span></a>
+    </div>
+  </div>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+<script src="main.js"></script>
+</body>
+</html>

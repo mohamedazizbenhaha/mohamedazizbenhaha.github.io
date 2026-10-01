@@ -1,0 +1,6 @@
+# Local tooling
+.claude/settings.local.json
+graphify-out/
+__pycache__/
+.claude/skills/
+.impeccable/mocks/
