@@ -53,6 +53,13 @@ Use only where they earn their tokens:
 - All sections share `--wrap: 1280px`; the Experience panel is a full-height card.
 - **QR now points at the deploy-preview .vcf** because production still runs the old site (404). **Before/at merge to main: regenerate `res/contact-qr.svg` with the production URL** (segno, error='m', scale=10, border=3, dark #07070a, light #f3efe6).
 
+## Round 5 (2026-10-02)
+- Nav: brand "Mohamed Aziz BEN HAHA" (exact casing, the user's word), Contact link removed, gold button "Contact me" / "Me contacter", nav max-width 1180px (aligned with sections).
+- Motto (the user merged options 3+4): "Build it. Automate it. Then teach what runs in production." / « Le construire. L'automatiser. Puis enseigner ce qui tourne en production. » Signature in Mrs Saint Delafield (Google Fonts), like the LinkedIn banner. Photo band no longer `fixed` (zoomed out), lighter overlay.
+- Footer: logo + "© 2026 Mohamed Aziz Ben Haha. All rights reserved." left, the hero contact buttons right. Legal notice / Privacy / Terms and their dialog removed on the user's word.
+- Training: first 5 programmes, then the same Show more / Show less as courses (shared `MORE` list in `main.js`).
+- QR restyled like the phone's contact QR (dots, round eyes, LinkedIn photo `res/contact-photo.jpg` in the centre, error level H, decoded OK with zxing-cpp). The phone's own QR embeds the vCard with BDAY: not published. `.vcf` now has FN "Mohamed Aziz BEN HAHA" and the photo (CRLF kept via `.gitattributes`). Regenerating the QR for production: same recipe, URL https://mohamedazizbenhaha.netlify.app/res/mohamed-aziz-ben-haha.vcf.
+
 ## Deviations from the recommendations
 - Hero status keeps availability: "Based in Écully, France · working with Tunisia · open to missions & training" (the green "available" dot would be meaningless with location only). Wraps to two lines on a 375px phone.
 - Mentor card got its own icon (`#i-team`) since it lost the counters.
@@ -64,7 +71,6 @@ Use only where they earn their tokens:
 - What "replace" meant at the end of the user's message on 2026-10-01 (it was cut off).
 - Guidelines items not done (low value or need the user): logo-strip images have no width/height attributes (CSS fixes their height, no visible shift); the marquee has no pause control (it stops under reduced motion).
 - Merge `redesign` → `main` (production) needs the user's word. Then switch the QR to the production URL (see Round 4).
-- Motto wording: the user picks from the proposed list.
 - Word files for the other training programmes.
 - Phone "Desktop site" mode renders ~980px; the nav collapses below 1020px. If the user wants the full nav there, lower that breakpoint.
 - Main CV PDF says "500+ heures"; the site says 1,000+. The user should update the PDF.

@@ -36,7 +36,7 @@ em{font-style:normal;color:var(--gold)}
 .btn:hover svg[class=""],.btn-gold:hover use[href="#i-arrow"]{transform:translateX(3px)}
 
 /* nav */
-.nav{position:fixed;inset:14px 16px auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1440px;margin:auto;padding:10px 12px 10px 18px;border-radius:999px;border:1px solid transparent;transition:background .4s,border-color .4s,transform .45s var(--ease)}
+.nav{position:fixed;inset:14px 16px auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1180px;margin:auto;padding:10px 12px 10px 18px;border-radius:999px;border:1px solid transparent;transition:background .4s,border-color .4s,transform .45s var(--ease)}
 .nav.solid{background:rgba(12,12,16,.72);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border-color:#22222b}
 .nav.hide{transform:translateY(-130%)}
 .brand{display:flex;align-items:center;gap:10px;font:700 1.02rem var(--display);letter-spacing:-.01em}
@@ -117,6 +117,7 @@ em{font-style:normal;color:var(--gold)}
 /* training */
 .tr-intro{color:var(--mute);max-width:62ch;margin:calc(clamp(32px,5vw,56px) * -.5) 0 32px;font-size:1.02rem}
 .progs{list-style:none;border-top:1px solid var(--line)}
+.progs:not(.open)>li:nth-child(n+6){display:none}
 .progs>li{border-bottom:1px solid var(--line)}
 .prog{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:28px;align-items:center;width:100%;padding:26px 12px;text-align:left;transition:background .35s}
 .prog:hover{background:linear-gradient(90deg,var(--goldsoft),transparent 65%)}
@@ -155,11 +156,10 @@ em{font-style:normal;color:var(--gold)}
 .lg-in h3{font:700 1.15rem var(--display);color:var(--gold2);margin-bottom:8px}
 .lg-in p{color:var(--mute);margin-bottom:8px;max-width:72ch}
 /* motto */
-.motto{position:relative;z-index:1;margin-top:clamp(90px,12vw,140px);padding:clamp(90px,12vw,150px) clamp(16px,3.5vw,48px);text-align:center;border-block:1px solid #1d1a12;background:linear-gradient(180deg,rgba(7,7,10,.92),rgba(7,7,10,.55) 35%,rgba(7,7,10,.55) 65%,rgba(7,7,10,.95)),radial-gradient(70% 90% at 50% 50%,rgba(212,160,36,.12),transparent 70%),url(res/desk.jpg) center/cover fixed}
-.motto p{font:800 clamp(2rem,5.2vw,4.2rem)/1.05 var(--display);letter-spacing:-.035em;max-width:20ch;margin:auto;text-wrap:balance;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.motto{position:relative;z-index:1;margin-top:clamp(90px,12vw,140px);padding:clamp(90px,12vw,150px) clamp(16px,3.5vw,48px);text-align:center;border-block:1px solid #1d1a12;background:linear-gradient(180deg,rgba(7,7,10,.9),rgba(7,7,10,.38) 35%,rgba(7,7,10,.38) 65%,rgba(7,7,10,.92)),radial-gradient(70% 90% at 50% 50%,rgba(212,160,36,.12),transparent 70%),url(res/desk.jpg) center/cover}
+.motto p{font:800 clamp(2rem,5.2vw,4.2rem)/1.05 var(--display);letter-spacing:-.035em;max-width:24ch;margin:auto;text-wrap:balance;text-shadow:0 4px 30px rgba(0,0,0,.6)}
 .motto p::before{content:"\201C";display:block;font-size:1.7em;line-height:.7;color:var(--gold);opacity:.6}
-.motto footer{margin-top:26px;color:var(--mute);font-size:.82rem;letter-spacing:.18em;text-transform:uppercase}
-.motto footer::before{content:"";display:inline-block;width:40px;height:1px;background:var(--gold);vertical-align:middle;margin-right:14px}
+.motto footer{margin-top:18px;font:400 clamp(2.4rem,4.6vw,3.6rem)/1 "Mrs Saint Delafield",cursive;color:var(--gold2);letter-spacing:0;text-transform:none}
 /* bento */
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
 .bento>.cell{grid-column:span 3}
@@ -342,12 +342,11 @@ em{font-style:normal;color:var(--gold)}
 .qr img{width:100%;max-width:240px;height:auto;border-radius:14px;box-shadow:0 0 0 6px #f3efe6}
 .qr p{font-weight:600}
 .foot{color:var(--dim);font-size:.86rem;background:var(--bg)}
-.foot-in{max-width:var(--wrap);margin:auto;padding:30px clamp(16px,3.5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:14px 28px;flex-wrap:wrap}
-.foot-brand{display:inline-flex;align-items:center;gap:10px;color:var(--txt);font:700 .98rem var(--display)}
-.foot-copy{flex:1;min-width:220px}
-.foot-legal{display:flex;flex-wrap:wrap;gap:6px 22px}
-.foot-legal button{color:var(--mute);font-size:.86rem;transition:color .25s}
-.foot-legal button:hover,.foot-brand:hover{color:var(--gold2)}
+.foot-in{max-width:var(--wrap);margin:auto;padding:26px clamp(16px,3.5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap}
+.foot-copy{display:flex;align-items:center;gap:14px}
+.foot-copy img{opacity:.9;transition:opacity .25s}.foot-copy a:hover img{opacity:1}
+.foot .socials{margin:0}
+.foot .socials a{width:40px;height:40px}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,calc(100% + 40px));visibility:hidden;padding:.8em 1.3em;border-radius:999px;background:var(--txt);color:#000;font-weight:700;font-size:.9rem;z-index:70;transition:transform .5s var(--ease)}
 .toast.show{transform:translate(-50%,0);visibility:visible}
 
@@ -391,7 +390,6 @@ em{font-style:normal;color:var(--gold)}
   .certs{grid-template-columns:1fr}
   .prog{grid-template-columns:1fr;gap:10px;padding:22px 4px}.prog-go{grid-column:auto}
   .pm-head{flex-direction:column;align-items:flex-start;gap:10px}
-  .motto{background-attachment:scroll}
   .foot-in{flex-direction:column;align-items:flex-start}
   .contact-grid,.hl-3,.minis,.courses,.journey{grid-template-columns:1fr}
   .qr img,.qr p{display:none}

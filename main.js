@@ -6,7 +6,7 @@ const store = { get: k => { try { return localStorage.getItem(k) } catch { retur
 
 /* ---------- copy ---------- */
 const FR = {
-  'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.train': 'Formations', 'nav.courses': 'Cours gratuits', 'nav.contact': 'Contact', 'nav.hire': 'Me recruter',
+  'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.train': 'Formations', 'nav.courses': 'Cours gratuits', 'nav.hire': 'Me contacter',
   'hero.status': 'Basé à Écully, France · en lien avec la Tunisie · ouvert aux missions et formations',
   'hero.pre': 'Je',
   'hero.lede': 'Ingénieur Cloud &amp; DevOps (CKA, AWS Solutions Architect &amp; SysOps) et praticien IA/ML, formateur avec <b>plus de 1 000 heures</b> dispensées en universités et en entreprises, et doctorant en machine learning pour l’IoT embarqué à <b>Sup’Com × École Centrale de Lyon</b>.',
@@ -52,16 +52,8 @@ const FR = {
   'stat.longest': 'Programmes phares',
   'tr.intro': 'Des programmes que je conçois et dispense pour des universités, des entreprises et des programmes publics pour l’emploi. Ouvrez-en un pour voir son contenu, le télécharger, ou demander une version adaptée à votre équipe : sur site en France ou en Tunisie, ou à distance.',
   'foot.rights': 'Tous droits réservés.',
-  'lg.title': 'Informations légales', 'lg.notice': 'Mentions légales', 'lg.privacy': 'Confidentialité', 'lg.terms': 'Conditions d’utilisation',
-  'lg.n1': 'Éditeur et directeur de la publication : Mohamed Aziz Ben Haha, particulier, Écully (Rhône), France. Contact : mohamedaziz.benhaha@gmail.com.',
-  'lg.n2': 'Hébergement : Netlify, Inc., San Francisco, Californie, États-Unis (netlify.com).',
-  'lg.p1': 'Aucun compte, aucun cookie, aucune mesure d’audience, aucun pistage. Votre choix de langue est conservé dans votre propre navigateur (stockage local) et n’est envoyé nulle part.',
-  'lg.p2': 'Les polices sont chargées depuis Google Fonts, qui reçoit votre adresse IP au chargement de la page. L’hébergeur conserve des journaux techniques standard.',
-  'lg.p3': 'Si vous m’écrivez, votre message sert uniquement à vous répondre. Vous pouvez à tout moment demander à le consulter ou à le supprimer (RGPD) : mohamedaziz.benhaha@gmail.com.',
-  'lg.t1': 'Textes, supports de cours, programmes, photos et logo sont © Mohamed Aziz Ben Haha sauf mention contraire. Les logos des établissements et entreprises appartiennent à leurs propriétaires et indiquent seulement où j’ai travaillé, enseigné ou étudié.',
-  'lg.t2': 'Vous pouvez librement faire un lien vers ce site. Toute reproduction ou réutilisation de son contenu, y compris des programmes téléchargeables, nécessite mon accord écrit. Les informations sont fournies telles quelles et peuvent changer sans préavis.',
   'tr.t1': 'Programmes de formation,', 'tr.t2': 'prêts à lancer.',
-  'motto.1': 'Ce n’est fini que quand ça tourne,', 'motto.2': 'et que d’autres savent le faire tourner.'
+  'motto.1': 'Le construire. L’automatiser.', 'motto.2': 'Puis enseigner ce qui tourne en production.'
 };
 const ROLES = {
   en: ['build AI systems & cloud infrastructure', 'train and deploy ML models', 'design high-availability platforms', 'automate everything, CI/CD to IaC', 'teach Cloud, DevOps & AI'],
@@ -191,9 +183,7 @@ function openProg(i) {
 }
 $('#progs').addEventListener('click', e => { const b = e.target.closest('[data-p]'); if (b) openProg(+b.dataset.p) });
 
-/* ---------- legal dialog ---------- */
-const legalDlg = $('#legalDlg');
-$$('[data-legal]').forEach(b => b.addEventListener('click', () => { legalDlg.showModal(); $('#lg-' + b.dataset.legal).scrollIntoView({ block: 'start' }) }));
+/* ---------- dialogs: close button, backdrop click ---------- */
 $$('.modal').forEach(d => {
   $$('[data-close]', d).forEach(b => b.addEventListener('click', () => d.close()));
   d.addEventListener('click', e => { if (e.target === d) d.close() });
@@ -327,14 +317,14 @@ $$('.orbit').forEach(o => {
   s.forEach((el, i) => { const a = (i / s.length) * Math.PI * 2 - Math.PI / 2; el.style.left = 50 + 50 * Math.cos(a) + '%'; el.style.top = 50 + 50 * Math.sin(a) + '%' });
 });
 
-/* ---------- courses: first row, then Show more / Show less ---------- */
-const grid = $('#courses-grid'), moreBtn = $('#moreCourses');
-function setMoreLabel() { $('#moreLabel').textContent = UI[lang][grid.classList.contains('open') ? 'less' : 'more'] }
-moreBtn.addEventListener('click', () => {
-  const open = grid.classList.toggle('open'); moreBtn.setAttribute('aria-expanded', open); setMoreLabel();
-  if (open) $$('.course', grid).forEach(c => c.classList.add('in'));
-  else grid.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
-});
+/* ---------- Show more / Show less: courses (first row) and programmes (top 5) ---------- */
+const MORE = [[$('#courses-grid'), $('#moreCourses')], [$('#progs'), $('#moreProgs')]];
+function setMoreLabel() { MORE.forEach(([g, b]) => { $('.more-label', b).textContent = UI[lang][g.classList.contains('open') ? 'less' : 'more'] }) }
+MORE.forEach(([g, b]) => b.addEventListener('click', () => {
+  const open = g.classList.toggle('open'); b.setAttribute('aria-expanded', open); setMoreLabel();
+  if (open) $$('.course', g).forEach(c => c.classList.add('in'));
+  else g.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+}));
 
 /* ---------- contact modal (Hire me, Contact) ---------- */
 const dlg = $('#contactDlg');

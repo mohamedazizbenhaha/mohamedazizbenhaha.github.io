@@ -18,7 +18,7 @@
 <link rel="icon" href="res/my_logo_w.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -47,7 +47,7 @@
 </svg>
 
 <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="Home"><img src="res/my_logo_w.png" alt="" width="34" height="32"><span>Aziz Ben Haha</span></a>
+  <a class="brand" href="#top" aria-label="Home"><img src="res/my_logo_w.png" alt="" width="34" height="32"><span>Mohamed Aziz BEN HAHA</span></a>
   <nav class="links" id="links" aria-label="Sections">
     <a href="#about" data-i18n="nav.about">About</a>
     <a href="#experience" data-i18n="nav.exp">Experience</a>
@@ -55,11 +55,10 @@
     <a href="#certs" data-i18n="nav.certs">Certifications</a>
     <a href="#training" data-i18n="nav.train">Training</a>
     <a href="#courses" data-i18n="nav.courses">Free courses</a>
-    <a href="#contact" data-contact data-i18n="nav.contact">Contact</a>
   </nav>
   <div class="nav-end">
     <button class="lang" id="lang" type="button" aria-label="Passer en français"><span class="on">EN</span><span>FR</span></button>
-    <button class="btn btn-gold btn-sm magnetic" type="button" data-contact data-i18n="nav.hire">Hire me</button>
+    <button class="btn btn-gold btn-sm magnetic" type="button" data-contact data-i18n="nav.hire">Contact me</button>
     <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
   </div>
 </header>
@@ -255,6 +254,7 @@
   <h2 class="title reveal"><span data-i18n="tr.t1">Training programmes,</span> <em data-i18n="tr.t2">ready to run.</em></h2>
   <p class="tr-intro reveal" data-i18n="tr.intro">Programmes I design and deliver for universities, companies and public employment programmes. Open one to see its content, download it, or ask for a version adapted to your team: on-site in France or Tunisia, or remote.</p>
   <ol class="progs reveal" id="progs"></ol>
+  <div class="more-wrap"><button class="read" id="moreProgs" type="button" aria-expanded="false" aria-controls="progs"><span class="more-label">Show more</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 6l5 5 5-5M7 13l5 5 5-5"/></svg></button></div>
 </section>
 
 <!-- COURSES -->
@@ -267,13 +267,13 @@
     <a class="course reveal" href="https://classroom.google.com/c/NjQzMjE4MjAzNDcx?cjc=frtavqz" target="_blank" rel="noopener"><img src="res/Cloud infra.png" width="750" height="421" alt="" loading="lazy"><div><h3 data-i18n="c4">Cloud Infrastructure Management</h3><p>IaaS · AWS · HPE · Azure</p><div class="cprog" style="--p:100%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 100%</small></div></div><svg><use href="#i-ext"/></svg></a>
     <a class="course reveal" href="https://classroom.google.com/c/NjYyNzgzODg0MzI5?cjc=oeg35dl" target="_blank" rel="noopener"><img src="res/intro virtualization.png" width="750" height="422" alt="" loading="lazy"><div><h3 data-i18n="c5">Virtualization</h3><p>VM · Docker · Kubernetes</p><div class="cprog" style="--p:60%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 60%</small></div></div><svg><use href="#i-ext"/></svg></a>
   </div>
-  <div class="more-wrap"><button class="read" id="moreCourses" type="button" aria-expanded="false" aria-controls="courses-grid"><span id="moreLabel">Show more</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 6l5 5 5-5M7 13l5 5 5-5"/></svg></button></div>
+  <div class="more-wrap"><button class="read" id="moreCourses" type="button" aria-expanded="false" aria-controls="courses-grid"><span class="more-label">Show more</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 6l5 5 5-5M7 13l5 5 5-5"/></svg></button></div>
 </section>
 
 <!-- MOTTO -->
 <section class="motto" aria-label="Motto">
   <blockquote class="reveal">
-    <p><span data-i18n="motto.1">It isn't done until it runs,</span> <em data-i18n="motto.2">and someone else can run it too.</em></p>
+    <p><span data-i18n="motto.1">Build it. Automate it.</span> <em data-i18n="motto.2">Then teach what runs in production.</em></p>
     <footer>Mohamed Aziz Ben Haha</footer>
   </blockquote>
 </section>
@@ -282,40 +282,18 @@
 
 <footer class="foot">
   <div class="foot-in">
-    <a class="foot-brand" href="#top" aria-label="Back to top"><img src="res/my_logo_w.png" alt="" width="28" height="26"><span>Mohamed Aziz Ben Haha</span></a>
-    <p class="foot-copy">© <span id="year">2026</span> Mohamed Aziz Ben Haha. <span data-i18n="foot.rights">All rights reserved.</span></p>
-    <nav class="foot-legal" aria-label="Legal">
-      <button type="button" data-legal="notice" data-i18n="lg.notice">Legal notice</button>
-      <button type="button" data-legal="privacy" data-i18n="lg.privacy">Privacy</button>
-      <button type="button" data-legal="terms" data-i18n="lg.terms">Terms of use</button>
-    </nav>
+    <p class="foot-copy"><a href="#top" aria-label="Back to top"><img src="res/my_logo_w.png" alt="" width="28" height="26"></a><span>© <span id="year">2026</span> Mohamed Aziz Ben Haha. <span data-i18n="foot.rights">All rights reserved.</span></span></p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/mohamed-aziz-ben-haha/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+        <a href="mailto:mohamedaziz.benhaha@gmail.com" target="_blank" rel="noopener" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+        <a href="https://wa.me/21625713413" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-chat"/></svg></a>
+        <a href="https://bento.me/mohamed-aziz-ben-haha" target="_blank" rel="noopener" aria-label="Bento"><svg><use href="#i-link"/></svg></a>
+      </div>
   </div>
 </footer>
 <dialog class="modal pmodal" id="progDlg" aria-labelledby="pTitle">
   <button class="x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   <div class="pm-in" id="progBody"></div>
-</dialog>
-<dialog class="modal legal" id="legalDlg" aria-labelledby="lgTitle">
-  <button class="x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-  <div class="lg-in">
-    <h2 id="lgTitle" data-i18n="lg.title">Legal</h2>
-    <section id="lg-notice">
-      <h3 data-i18n="lg.notice">Legal notice</h3>
-      <p data-i18n="lg.n1">Publisher and publication director: Mohamed Aziz Ben Haha, individual, Écully (Rhône), France. Contact: mohamedaziz.benhaha@gmail.com.</p>
-      <p data-i18n="lg.n2">Hosting: Netlify, Inc., San Francisco, California, United States (netlify.com).</p>
-    </section>
-    <section id="lg-privacy">
-      <h3 data-i18n="lg.privacy">Privacy</h3>
-      <p data-i18n="lg.p1">No account, no cookies, no analytics, no tracking. Your language choice is kept in your own browser (local storage) and is never sent anywhere.</p>
-      <p data-i18n="lg.p2">Fonts are loaded from Google Fonts, which receives your IP address when the page loads. The host keeps standard technical server logs.</p>
-      <p data-i18n="lg.p3">If you write to me, your message is used only to reply. You can ask at any time to see or delete it (GDPR): mohamedaziz.benhaha@gmail.com.</p>
-    </section>
-    <section id="lg-terms">
-      <h3 data-i18n="lg.terms">Terms of use</h3>
-      <p data-i18n="lg.t1">Text, course material, curricula, photos and the logo are © Mohamed Aziz Ben Haha unless stated otherwise. Institution and company logos belong to their owners and only show where I have worked, taught or studied.</p>
-      <p data-i18n="lg.t2">You may link to this site freely. Reproducing or reusing its content, including the downloadable curricula, needs my written permission. Information is provided as is and may change without notice.</p>
-    </section>
-  </div>
 </dialog>
 <dialog class="modal" id="contactDlg" aria-labelledby="dlgTitle">
   <button class="x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
