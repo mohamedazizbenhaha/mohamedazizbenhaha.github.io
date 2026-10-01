@@ -7,7 +7,7 @@ const store = { get: k => { try { return localStorage.getItem(k) } catch { retur
 /* ---------- copy ---------- */
 const FR = {
   'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.courses': 'Cours gratuits', 'nav.contact': 'Contact', 'nav.hire': 'Me recruter',
-  'hero.status': 'Disponible pour missions, formations et collaborations',
+  'hero.status': 'Basé à Écully, France · en lien avec la Tunisie · ouvert aux missions et formations',
   'hero.pre': 'Je',
   'hero.lede': 'Ingénieur Cloud &amp; DevOps (CKA, AWS Solutions Architect &amp; SysOps) et praticien IA/ML, formateur avec <b>plus de 1 000 heures</b> dispensées en universités et en entreprises, et doctorant en machine learning pour l’IoT embarqué à <b>Sup’Com × École Centrale de Lyon</b>.',
   'hero.cta': 'Travaillons ensemble', 'hero.cv': 'Télécharger le CV', 'hero.cv2': 'CV formateur (CNFCPP)',
@@ -21,7 +21,6 @@ const FR = {
   'about.res.h': 'Je fais de la recherche',
   'about.res.p': 'Doctorat en machine learning pour l’IoT embarqué : une plateforme autonome qui surveille la qualité de l’eau en temps réel.',
   'stat.hours': 'heures de formation dispensées', 'stat.certs': 'certifications', 'stat.schools': 'universités et centres de formation',
-  'about.place': 'Entre l’École Centrale de Lyon et Sup’Com. À distance, ou sur site en France et en Tunisie.',
   'about.lang.h': 'Langues', 'lang.ar': 'Arabe', 'lang.en': 'Anglais', 'lang.fr': 'Français', 'lang.native': 'Langue maternelle',
   'exp.t1': 'Là où j’ai', 'exp.t2': 'livré et enseigné.', 'exp.ind': 'Industrie', 'exp.uni': 'Universités', 'exp.pro': 'Formation professionnelle', 'exp.pfe': 'Encadrement',
   'proj.t1': 'Ce que je', 'proj.t2': 'construis.',
