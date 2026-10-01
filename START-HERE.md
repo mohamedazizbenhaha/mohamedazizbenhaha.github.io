@@ -37,6 +37,14 @@ Use only where they earn their tokens:
 - Logo strip stopped because the guidelines pass froze every animation under prefers-reduced-motion (the user's phone has it on). The strip is exempt now (90s loop) and only pauses on hover for real mouse devices. Under reduced motion the typing rotator, network canvas and orbit still stand still: ask the user if they want those back.
 - Contact QR now encodes the URL of the .vcf (version 5, was 13) so phones open the file and offer "Create new contact"; `netlify.toml` serves `.vcf` as `text/vcard`. It points at the production domain, so it works after merge; test now with the deploy-preview .vcf URL. A phone that already holds the same number (the user's own) may still offer to merge.
 
+## Round 3 (2026-10-02)
+- 1,000+ hours box: "Longest programmes" tags (AI 150 h, DevSecOps 120 h, DevOps 100 h, AWS 100 h) at the top.
+- Hero rotator: "build AI systems & cloud infrastructure"; third role is now "design high-availability platforms".
+- Footer = logo + © only.
+- New `#training` section (nav "Training"/"Formations"): six real programmes as rows (hours · title/outcome/stack · delivered for · Request it mailto). Open: hours for "DevOps from zero" and "Linux & networking".
+- Motto block before the footer; wording is a draft the user may replace.
+- Nav collapses to the burger below 1180px now (7 links); Hire me button still shows down to 1020px.
+
 ## Deviations from the recommendations
 - Hero status keeps availability: "Based in Écully, France · working with Tunisia · open to missions & training" (the green "available" dot would be meaningless with location only). Wraps to two lines on a 375px phone.
 - Mentor card got its own icon (`#i-team`) since it lost the counters.

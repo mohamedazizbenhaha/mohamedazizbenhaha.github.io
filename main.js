@@ -6,7 +6,7 @@ const store = { get: k => { try { return localStorage.getItem(k) } catch { retur
 
 /* ---------- copy ---------- */
 const FR = {
-  'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.courses': 'Cours gratuits', 'nav.contact': 'Contact', 'nav.hire': 'Me recruter',
+  'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.train': 'Formations', 'nav.courses': 'Cours gratuits', 'nav.contact': 'Contact', 'nav.hire': 'Me recruter',
   'hero.status': 'Basé à Écully, France · en lien avec la Tunisie · ouvert aux missions et formations',
   'hero.pre': 'Je',
   'hero.lede': 'Ingénieur Cloud &amp; DevOps (CKA, AWS Solutions Architect &amp; SysOps) et praticien IA/ML, formateur avec <b>plus de 1 000 heures</b> dispensées en universités et en entreprises, et doctorant en machine learning pour l’IoT embarqué à <b>Sup’Com × École Centrale de Lyon</b>.',
@@ -48,11 +48,21 @@ const FR = {
   'ct.t1': 'Travaillons', 'ct.t2': 'ensemble.',
   'ct.p': 'Missions Cloud et DevOps, projets IA/ML, formation de vos équipes ou collaboration de recherche. Choisissez le canal qui vous convient.',
   'ct.copy': 'Copier l’e-mail', 'ct.fr': 'France', 'foot.top': 'Haut de page ↑',
-  'skip': 'Aller au contenu'
+  'skip': 'Aller au contenu', 'stat.longest': 'Plus longs parcours',
+  'tr.t1': 'Programmes de formation,', 'tr.t2': 'prêts à lancer.',
+  'tr.intro': 'Déjà dispensés pour des universités, des entreprises et des programmes publics pour l’emploi. Chacun s’adapte au niveau, à la durée et au format de votre équipe : sur site en France ou en Tunisie, ou à distance.',
+  'tr.for': 'Dispensé pour', 'tr.req': 'Demander', 'tr.custom': 'Durée sur demande',
+  't1.h': 'IA &amp; Machine Learning de bout en bout', 't1.p': 'De zéro à un modèle entraîné sur données réelles, construit en binôme et soutenu devant un jury.',
+  't2.h': 'Azure DevSecOps', 't2.p': 'Construire des pipelines de livraison sur Azure avec des contrôles de sécurité à chaque étape, du commit au déploiement.',
+  't3.h': 'Azure DevOps', 't3.p': 'Toute la chaîne Azure DevOps, en pratique : boards, repos, pipelines et artifacts.',
+  't4.h': 'Cloud AWS &amp; certification', 't4.p': 'Les services AWS essentiels en pratique, avec la préparation aux certifications Cloud Practitioner, Developer et Solutions Architect.',
+  't5.h': 'DevOps de zéro', 't5.p': 'Par projets : CI/CD avec Jenkins et Git, Nexus, SonarQube, Docker, Terraform, Ansible, Kubernetes et AWS.',
+  't6.h': 'Linux &amp; réseaux', 't6.p': 'Administration système Linux et réseaux CCNA, pour élèves ingénieurs et équipes IT.',
+  'motto.1': 'Ce n’est fini que quand ça tourne,', 'motto.2': 'et que d’autres savent le faire tourner.'
 };
 const ROLES = {
-  en: ['build AI systems & RAG pipelines', 'train and deploy ML models', 'build cloud infrastructure', 'automate everything, CI/CD to IaC', 'teach Cloud, DevOps & AI'],
-  fr: ['construis des systèmes d’IA et des pipelines RAG', 'entraîne et déploie des modèles de ML', 'construis des infrastructures cloud', 'automatise tout, de la CI/CD à l’IaC', 'enseigne le Cloud, le DevOps et l’IA']
+  en: ['build AI systems & cloud infrastructure', 'train and deploy ML models', 'design high-availability platforms', 'automate everything, CI/CD to IaC', 'teach Cloud, DevOps & AI'],
+  fr: ['construis des systèmes d’IA et des infrastructures cloud', 'entraîne et déploie des modèles de ML', 'conçois des plateformes haute disponibilité', 'automatise tout, de la CI/CD à l’IaC', 'enseigne le Cloud, le DevOps et l’IA']
 };
 const UI = { en: { copied: 'Email copied', more: 'Show more', less: 'Show less' }, fr: { copied: 'E-mail copié', more: 'Voir plus', less: 'Voir moins' } };
 

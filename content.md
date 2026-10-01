@@ -106,3 +106,6 @@ Introduction to AI · Big Data workshop · Academic writing · Cloud infrastruct
 - Location is no longer in the footer: the closing band and big footer were removed on the user's word (2026-10-01, "filling a blank"). Page ends after Free courses with the one-line footer until the user picks a real feature.
 - About last row: certifications (with the 8 codes) 25% · institutions (the 9 names) 25% · languages 50%.
 - Contact QR encodes the URL of `res/mohamed-aziz-ben-haha.vcf` (production domain), not the vCard text.
+- 2026-10-02: hero rotator starts with "build AI systems & cloud infrastructure" (not RAG; the user's word). Footer = logo + © only.
+- Training programmes section (between Certifications and Free courses), only real programmes: End-to-end AI 150 h, Azure DevSecOps 120 h, Azure DevOps 100 h, AWS Cloud 100 h (ANETI via ISAM; AWS also TED, Clevory), DevOps from zero (GoMyCode, Clevory) and Linux & networking (Sup'Com) with "length on request". "Request it" = mailto with the programme in the subject. `[?]` hours for DevOps from zero and Linux & networking.
+- Motto before the footer (drafted by Claude, the user to confirm or replace): "It isn't done until it runs, and someone else can run it too." / « Ce n'est fini que quand ça tourne, et que d'autres savent le faire tourner. »
