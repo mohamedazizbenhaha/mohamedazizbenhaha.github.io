@@ -60,6 +60,13 @@ Use only where they earn their tokens:
 - Training: first 5 programmes, then the same Show more / Show less as courses (shared `MORE` list in `main.js`).
 - QR restyled like the phone's contact QR (dots, round eyes, LinkedIn photo `res/contact-photo.jpg` in the centre, error level H, decoded OK with zxing-cpp). The phone's own QR embeds the vCard with BDAY: not published. `.vcf` now has FN "Mohamed Aziz BEN HAHA" and the photo (CRLF kept via `.gitattributes`). Regenerating the QR for production: same recipe, URL https://mohamedazizbenhaha.netlify.app/res/mohamed-aziz-ben-haha.vcf.
 
+## Round 6 (2026-10-02)
+- Footer: more space between logo and copyright.
+- Motto: `fitMotto()` sizes each line so both start and end at the same edges (blockquote max 980px); re-runs on fonts ready, resize, language. Signature smaller, right-aligned, gold dash before it.
+- Programme modal: "Rhythm" fact removed; buttons **Book** (booking template) · **Customise** (customisation template) · Download (Word) if a doc exists. Both mails open in a new tab with subject + body.
+- Every plain contact mailto (hero, modal "Email me", footer) gets a default subject ("Contact from your website" / « Prise de contact depuis votre site »), set by `setMailSubjects()`.
+- Portrait: no tilt, no hover effect, 10px corners.
+
 ## Deviations from the recommendations
 - Hero status keeps availability: "Based in Écully, France · working with Tunisia · open to missions & training" (the green "available" dot would be meaningless with location only). Wraps to two lines on a 375px phone.
 - Mentor card got its own icon (`#i-team`) since it lost the counters.

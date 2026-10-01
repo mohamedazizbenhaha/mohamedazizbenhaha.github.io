@@ -59,7 +59,7 @@ const ROLES = {
   en: ['build AI systems & cloud infrastructure', 'train and deploy ML models', 'design high-availability platforms', 'automate everything, CI/CD to IaC', 'teach Cloud, DevOps & AI'],
   fr: ['construis des systèmes d’IA et des infrastructures cloud', 'entraîne et déploie des modèles de ML', 'conçois des plateformes haute disponibilité', 'automatise tout, de la CI/CD à l’IaC', 'enseigne le Cloud, le DevOps et l’IA']
 };
-const UI = { en: { copied: 'Email copied', more: 'Show more', less: 'Show less' }, fr: { copied: 'E-mail copié', more: 'Voir plus', less: 'Voir moins' } };
+const UI = { en: { subj: 'Contact from your website', copied: 'Email copied', more: 'Show more', less: 'Show less' }, fr: { subj: 'Prise de contact depuis votre site', copied: 'E-mail copié', more: 'Voir plus', less: 'Voir moins' } };
 
 /* Each entry: [org, role{en,fr}, dates, points{en[],fr[]}, stack] */
 const EXP = {
@@ -126,7 +126,6 @@ const PROGS = [
     p: { en: 'Machine learning taught by paradigm, with the maths introduced exactly when an algorithm needs it, then carried onto AWS: SageMaker, data engineering and production GenAI. Six portfolio projects on GitHub.',
          fr: 'Le machine learning enseigné par paradigme, avec les maths introduites au moment précis où un algorithme en a besoin, puis porté sur AWS : SageMaker, data engineering et GenAI en production. Six projets de portfolio sur GitHub.' },
     facts: [[{ en: 'Audience', fr: 'Public' }, { en: 'IT professionals; basic Python required', fr: 'Professionnels de l’IT ; bases de Python requises' }],
-            [{ en: 'Rhythm', fr: 'Rythme' }, { en: '3 sessions a week, 3 h each', fr: '3 séances par semaine, 3 h chacune' }],
             [{ en: 'Certifications', fr: 'Certifications' }, 'AWS AIF-C01 · CLF-C02 · DEA-C01']],
     phases: [
       [{ en: 'Python & data science stack', fr: 'Python & outils de data science' }, { en: 'NumPy, Pandas, Matplotlib, Jupyter', fr: 'NumPy, Pandas, Matplotlib, Jupyter' }, 12],
@@ -155,11 +154,15 @@ const PROGS = [
     tags: ['Linux', 'CCNA', 'Networking'] }
 ];
 const PUI = {
-  en: { open: 'View programme', custom: 'Length on request', kicker: 'Training programme', struct: 'Programme structure', dl: 'Download (Word)', cust: 'Customise', none: 'Detailed syllabus on request.',
+  en: { open: 'View programme', custom: 'Length on request', kicker: 'Training programme', struct: 'Programme structure', dl: 'Download (Word)', book: 'Book', cust: 'Customise', none: 'Detailed syllabus on request.',
         format: 'Format', formatV: 'On-site in France or Tunisia, or remote', subj: 'Custom training request: ',
+        bsubj: 'Booking request: ',
+        bbody: t => `Hello Aziz,\n\nWe would like to book the "${t}" programme as described on your website.\n\nOrganisation:\nNumber of participants:\nFormat (on-site France / on-site Tunisia / remote):\nPreferred start date:\nContact person and phone:\n\nBest regards,\n`,
         body: t => `Hello Aziz,\n\nWe are interested in the "${t}" programme, adapted to our team.\n\nOrganisation:\nNumber of participants:\nCurrent level (beginner / intermediate / advanced):\nFormat (on-site France / on-site Tunisia / remote):\nTarget length and dates:\nTopics to add or remove:\n\nBest regards,\n` },
-  fr: { open: 'Voir le programme', custom: 'Durée sur demande', kicker: 'Programme de formation', struct: 'Structure du programme', dl: 'Télécharger (Word)', cust: 'Personnaliser', none: 'Programme détaillé sur demande.',
+  fr: { open: 'Voir le programme', custom: 'Durée sur demande', kicker: 'Programme de formation', struct: 'Structure du programme', dl: 'Télécharger (Word)', book: 'Réserver', cust: 'Personnaliser', none: 'Programme détaillé sur demande.',
         format: 'Format', formatV: 'Sur site en France ou en Tunisie, ou à distance', subj: 'Demande de formation sur mesure : ',
+        bsubj: 'Demande de réservation : ',
+        bbody: t => `Bonjour Aziz,\n\nNous souhaitons réserver le programme « ${t} » tel que décrit sur votre site.\n\nOrganisation :\nNombre de participants :\nFormat (sur site France / sur site Tunisie / à distance) :\nDate de début souhaitée :\nPersonne à contacter et téléphone :\n\nCordialement,\n`,
         body: t => `Bonjour Aziz,\n\nNous sommes intéressés par le programme « ${t} », adapté à notre équipe.\n\nOrganisation :\nNombre de participants :\nNiveau actuel (débutant / intermédiaire / avancé) :\nFormat (sur site France / sur site Tunisie / à distance) :\nDurée et dates souhaitées :\nSujets à ajouter ou retirer :\n\nCordialement,\n` }
 };
 const hrsHTML = h => h ? `<b class="hrs">${h}<small>h</small></b>` : `<b class="hrs na">${PUI[lang].custom}</b>`;
@@ -170,13 +173,13 @@ const progDlg = $('#progDlg');
 function openProg(i) {
   const g = PROGS[i], u = PUI[lang], t = pick(g.title);
   const facts = [...(g.facts || []), [{ en: u.format, fr: u.format }, u.formatV]];
-  const mail = `mailto:mohamedaziz.benhaha@gmail.com?subject=${encodeURIComponent(u.subj + t)}&body=${encodeURIComponent(u.body(t))}`;
+  const mail = (s, b) => `mailto:mohamedaziz.benhaha@gmail.com?subject=${encodeURIComponent(s + t)}&body=${encodeURIComponent(b(t))}`;
   $('#progBody').innerHTML = `<header class="pm-head">${hrsHTML(g.hrs)}<div><p class="pm-kicker">${u.kicker}</p><h2 id="pTitle">${t}</h2></div></header>
     <p class="pm-lede">${pick(g.p)}</p>
     <dl class="pm-facts">${facts.map(([k, v]) => `<div><dt>${pick(k)}</dt><dd>${pick(v)}</dd></div>`).join('')}</dl>
     ${g.phases ? `<h3 class="pm-sub">${u.struct}</h3><ol class="pm-phases">${g.phases.map(([n, f, h]) => `<li><b>${pick(n)}</b><span>${pick(f)}</span><i>${h} h</i></li>`).join('')}</ol>` : ''}
     <ul class="tags">${g.tags.map(t => `<li>${t}</li>`).join('')}</ul>
-    <div class="pm-actions">${g.doc ? `<a class="btn btn-gold" href="${g.doc}" download><svg><use href="#i-down"/></svg><span>${u.dl}</span></a>` : `<p class="pm-note">${u.none}</p>`}<a class="btn btn-ghost" href="${mail}" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg><span>${u.cust}</span></a></div>`;
+    <div class="pm-actions"><a class="btn btn-gold" href="${mail(u.bsubj, u.bbody)}" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg><span>${u.book}</span></a><a class="btn btn-ghost" href="${mail(u.subj, u.body)}" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg><span>${u.cust}</span></a>${g.doc ? `<a class="btn btn-ghost" href="${g.doc}" download><svg><use href="#i-down"/></svg><span>${u.dl}</span></a>` : `<p class="pm-note">${u.none}</p>`}</div>`;
   progDlg.dataset.p = i;
   if (!progDlg.open) progDlg.showModal();
   progDlg.scrollTop = 0;
@@ -188,6 +191,19 @@ $$('.modal').forEach(d => {
   $$('[data-close]', d).forEach(b => b.addEventListener('click', () => d.close()));
   d.addEventListener('click', e => { if (e.target === d) d.close() });
 });
+
+/* ---------- contact mailto links get a default subject ---------- */
+const MAIL = 'mailto:mohamedaziz.benhaha@gmail.com';
+function setMailSubjects() { $$(`a[href^="${MAIL}"]:not(.pm-actions a)`).forEach(a => a.href = `${MAIL}?subject=${encodeURIComponent(UI[lang].subj)}`) }
+
+/* ---------- motto: both lines start and end at the same edges ---------- */
+function fitMotto() {
+  const q = $('.motto blockquote'), W = q.clientWidth;
+  $$('.motto .ml').forEach(l => {
+    l.style.fontSize = '100px';
+    for (let k = 0; k < 3; k++) l.style.fontSize = Math.min(parseFloat(l.style.fontSize) * W / l.getBoundingClientRect().width, 140) + 'px';
+  });
+}
 
 /* ---------- language ---------- */
 let lang = store.get('lang') || ((navigator.language || '').startsWith('fr') ? 'fr' : 'en');
@@ -201,7 +217,7 @@ function applyLang() {
   const [en, fr] = $$('#lang span');
   en.classList.toggle('on', lang === 'en'); fr.classList.toggle('on', lang === 'fr');
   $('#lang').setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
-  renderTabs(); sizeTabs(); renderProgs(); if (progDlg.open) openProg(+progDlg.dataset.p); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
+  renderTabs(); sizeTabs(); renderProgs(); if (progDlg.open) openProg(+progDlg.dataset.p); setMailSubjects(); fitMotto(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
 }
 $('#lang').addEventListener('click', () => { lang = lang === 'en' ? 'fr' : 'en'; store.set('lang', lang); applyLang() });
 
@@ -242,7 +258,7 @@ $('#tabList').addEventListener('keydown', e => {
 $$('.seg button').forEach(b => b.addEventListener('click', () => {
   $$('.seg button').forEach(x => x.setAttribute('aria-selected', x === b)); group = b.dataset.group; idx = 0; renderTabs();
 }));
-let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { renderTabs(); sizeTabs() }, 150) });
+let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { renderTabs(); sizeTabs(); fitMotto() }, 150) });
 
 /* ---------- rotating roles ---------- */
 let rotTimer;
@@ -379,4 +395,4 @@ $('#year').textContent = new Date().getFullYear();
 })();
 
 applyLang();
-document.fonts?.ready.then(sizeTabs);
+document.fonts?.ready.then(() => { sizeTabs(); fitMotto() });
