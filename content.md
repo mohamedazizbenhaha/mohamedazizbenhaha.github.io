@@ -48,7 +48,7 @@ inside the GreenWaterGuard project (microbial fuel cell sensors for real-time wa
   - ViPR SRM · vROps · HAProxy · NFS · Virtualisation · Jenkins · Ansible · Docker · Terraform · Kubernetes · Grafana · Prometheus · Selenium · JMeter · Spring Boot · Neo4j
 
 ### Teaching
-- **Cloud, DevOps & AI Trainer**, ANETI (Bureau Emploi et Travail Indépendant) · 08/2025 – 01/2026 · La Goulette
+- **Cloud, DevOps & AI Trainer**, ISAM Formation, for ANETI (Bureau Emploi et Travail Indépendant) · 08/2025 – 01/2026 · La Goulette (the user, 2026-10-01: the ANETI trainings were delivered through ISAM Formation)
   - End-to-end AI programme (150 h): pairs of learners from zero to models trained on real data, defended before a jury. One team's stock-market decision-support model was picked up by BNA for further development.
   - Azure DevSecOps (120 h) · Azure DevOps (100 h) · AWS Cloud (100 h, Cloud Practitioner / Developer / Solutions Architect prep)
 - **Cloud Computing Lecturer**, MUST University · 09/2025 – 08/2026 (from the CNFCPP form)
@@ -94,9 +94,13 @@ Arabic (native) · English (advanced, IELTS 7.5) · French (advanced, DALF C1)
 Introduction to AI · Big Data workshop · Academic writing · Cloud infrastructure management · Virtualization
 
 ## Site decisions (2026-10-01)
-- Experience tabs: Industry · Universities (MUST, Sup'Com, ENSTAB, TED University) · Professional training (ANETI, Clevory, TTC, GoMyCode) · Supervision.
+- Experience tabs: Industry · Universities (MUST, Sup'Com, ENSTAB, TED University) · Professional training (ISAM Formation · for ANETI, Clevory, TTC, GoMyCode) · Supervision.
 - Downloads: `res/CV-Mohamed-Aziz-Ben-Haha.pdf` (main CV, FR) and `res/CV-Formateur-CNFCPP.pdf` (trainer form for companies; ID number, birth date/place and address blacked out).
 - More projects (no repo links unless public): water-quality gateway firmware (ESP32, Modbus RTU, MQTT), floating MFC reactor (parametric CAD, 3D printing), GymTracker, Life OS, ThesisVault (public repo).
-- Logo strip: Centrale Lyon, Sup'Com, MUST, ENSTAB, ESPRIT, TED, Clevory, ANETI, GoMyCode, TTC, Ooredoo, PASS, IPACT, Klabs (Klabs kept on the user's word, not in the CVs).
+- Logo strip: Centrale Lyon, Sup'Com, MUST, ENSTAB, ESPRIT, TED, Clevory, ANETI, GoMyCode, ISAM Formation, TTC, Ooredoo, PASS, IPACT, Klabs (Klabs kept on the user's word, not in the CVs).
 - Course progress: AI 40%, Big Data 95%, Academic Writing 100%, Cloud Infrastructure 100%, Virtualization 60%.
 - Pending from the user: freelance projects (Industry), more detail per teaching role, other supervised projects.
+- "9 universities & training centres" = MUST, Sup'Com, ENSTAB, TED, ISAM, ANETI, Clevory, TTC, GoMyCode (ISAM and ANETI both count). "8 certifications" = the table above.
+- Certification years stay in the table above but are not shown on the site; the card shows the issuer only for Linux Foundation, Red Hat, Microsoft, Cisco.
+- Location is in the hero status line ("Based in Écully, France · working with Tunisia · open to missions & training") and in the footer.
+- Page ends with a closing band (Hire me, both resumes, socials) and a footer (section links, location, languages, last updated 10/2026). No testimonials or invented metrics.

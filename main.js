@@ -86,7 +86,7 @@ const EXP = {
       ['AWS', 'Kubernetes', 'VMware', 'Docker']]
   ],
   pro: [
-    ['ANETI', { en: 'Cloud, DevOps & AI Trainer', fr: 'Formateur Cloud, DevOps & IA' }, '08/2025 – 01/2026 · La Goulette',
+    [{ en: 'ISAM Formation · for ANETI', fr: 'ISAM Formation · pour l’ANETI' }, { en: 'Cloud, DevOps & AI Trainer', fr: 'Formateur Cloud, DevOps & IA' }, '08/2025 – 01/2026 · La Goulette',
       { en: ['End-to-end AI programme (150 h): pairs of learners from zero to models trained on real data, defended before a jury.', 'One team’s stock-market decision-support model was picked up by BNA for further development.', 'Azure DevSecOps (120 h), Azure DevOps (100 h), AWS Cloud (100 h) with certification prep.'],
         fr: ['Programme IA de bout en bout (150 h) : des binômes partis de zéro jusqu’à des modèles entraînés sur données réelles, soutenus devant jury.', 'Le modèle d’aide à la décision boursière d’un binôme a été repéré par la BNA pour un développement ultérieur.', 'Azure DevSecOps (120 h), Azure DevOps (100 h), Cloud AWS (100 h) avec préparation aux certifications.'] },
       ['Machine Learning', 'Azure DevSecOps', 'Azure DevOps', 'AWS']],
