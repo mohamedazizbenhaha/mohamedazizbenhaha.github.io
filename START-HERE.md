@@ -45,6 +45,14 @@ Use only where they earn their tokens:
 - Motto block before the footer; wording is a draft the user may replace.
 - Nav collapses to the burger below 1180px now (7 links); Hire me button still shows down to 1020px.
 
+## Round 4 (2026-10-02)
+- Animations back as before the guidelines pass (caret blink, network canvas, orbit, rotator run even with reduce-motion on; the user's phone has it on and wants motion). Only reveals, name intro, floating badges and two project art loops stop under reduce-motion, as originally.
+- "Popular programs" (FR "Programmes phares") label in the 1,000+ hours box.
+- Training rows are rendered from `PROGS` in `main.js` (like `EXP`). Click a row → `#progDlg` modal: hours, description, facts, phases (if any), tags, **Download (Word)** if `doc` is set, **Customise** = mailto in a new tab with subject + template body. Only the 130 h AI/ML/AWS programme has a Word file (`res/programmes/AI-ML-AWS-Cloud-130h.docx`, the user's test file, now public). Others say "Detailed syllabus on request" until the user sends their .docx.
+- Motto is a full-width photo band (`res/desk.jpg` = the original site's desk photo), then the footer: logo · © … All rights reserved · Legal notice / Privacy / Terms of use (one `#legalDlg`, EN+FR).
+- All sections share `--wrap: 1280px`; the Experience panel is a full-height card.
+- **QR now points at the deploy-preview .vcf** because production still runs the old site (404). **Before/at merge to main: regenerate `res/contact-qr.svg` with the production URL** (segno, error='m', scale=10, border=3, dark #07070a, light #f3efe6).
+
 ## Deviations from the recommendations
 - Hero status keeps availability: "Based in Écully, France · working with Tunisia · open to missions & training" (the green "available" dot would be meaningless with location only). Wraps to two lines on a 375px phone.
 - Mentor card got its own icon (`#i-team`) since it lost the counters.
@@ -55,7 +63,9 @@ Use only where they earn their tokens:
 - More detail per teaching role; other supervised PFE projects.
 - What "replace" meant at the end of the user's message on 2026-10-01 (it was cut off).
 - Guidelines items not done (low value or need the user): logo-strip images have no width/height attributes (CSS fixes their height, no visible shift); the marquee has no pause control (it stops under reduced motion).
-- Merge `redesign` → `main` (production) needs the user's word.
+- Merge `redesign` → `main` (production) needs the user's word. Then switch the QR to the production URL (see Round 4).
+- Motto wording: the user picks from the proposed list.
+- Word files for the other training programmes.
 - Phone "Desktop site" mode renders ~980px; the nav collapses below 1020px. If the user wants the full nav there, lower that breakpoint.
 - Main CV PDF says "500+ heures"; the site says 1,000+. The user should update the PDF.
 - The user must revoke the old Gmail app password (it is in the public repo history).

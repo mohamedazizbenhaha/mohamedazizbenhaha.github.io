@@ -48,16 +48,19 @@ const FR = {
   'ct.t1': 'Travaillons', 'ct.t2': 'ensemble.',
   'ct.p': 'Missions Cloud et DevOps, projets IA/ML, formation de vos équipes ou collaboration de recherche. Choisissez le canal qui vous convient.',
   'ct.copy': 'Copier l’e-mail', 'ct.fr': 'France', 'foot.top': 'Haut de page ↑',
-  'skip': 'Aller au contenu', 'stat.longest': 'Plus longs parcours',
+  'skip': 'Aller au contenu',
+  'stat.longest': 'Programmes phares',
+  'tr.intro': 'Des programmes que je conçois et dispense pour des universités, des entreprises et des programmes publics pour l’emploi. Ouvrez-en un pour voir son contenu, le télécharger, ou demander une version adaptée à votre équipe : sur site en France ou en Tunisie, ou à distance.',
+  'foot.rights': 'Tous droits réservés.',
+  'lg.title': 'Informations légales', 'lg.notice': 'Mentions légales', 'lg.privacy': 'Confidentialité', 'lg.terms': 'Conditions d’utilisation',
+  'lg.n1': 'Éditeur et directeur de la publication : Mohamed Aziz Ben Haha, particulier, Écully (Rhône), France. Contact : mohamedaziz.benhaha@gmail.com.',
+  'lg.n2': 'Hébergement : Netlify, Inc., San Francisco, Californie, États-Unis (netlify.com).',
+  'lg.p1': 'Aucun compte, aucun cookie, aucune mesure d’audience, aucun pistage. Votre choix de langue est conservé dans votre propre navigateur (stockage local) et n’est envoyé nulle part.',
+  'lg.p2': 'Les polices sont chargées depuis Google Fonts, qui reçoit votre adresse IP au chargement de la page. L’hébergeur conserve des journaux techniques standard.',
+  'lg.p3': 'Si vous m’écrivez, votre message sert uniquement à vous répondre. Vous pouvez à tout moment demander à le consulter ou à le supprimer (RGPD) : mohamedaziz.benhaha@gmail.com.',
+  'lg.t1': 'Textes, supports de cours, programmes, photos et logo sont © Mohamed Aziz Ben Haha sauf mention contraire. Les logos des établissements et entreprises appartiennent à leurs propriétaires et indiquent seulement où j’ai travaillé, enseigné ou étudié.',
+  'lg.t2': 'Vous pouvez librement faire un lien vers ce site. Toute reproduction ou réutilisation de son contenu, y compris des programmes téléchargeables, nécessite mon accord écrit. Les informations sont fournies telles quelles et peuvent changer sans préavis.',
   'tr.t1': 'Programmes de formation,', 'tr.t2': 'prêts à lancer.',
-  'tr.intro': 'Déjà dispensés pour des universités, des entreprises et des programmes publics pour l’emploi. Chacun s’adapte au niveau, à la durée et au format de votre équipe : sur site en France ou en Tunisie, ou à distance.',
-  'tr.for': 'Dispensé pour', 'tr.req': 'Demander', 'tr.custom': 'Durée sur demande',
-  't1.h': 'IA &amp; Machine Learning de bout en bout', 't1.p': 'De zéro à un modèle entraîné sur données réelles, construit en binôme et soutenu devant un jury.',
-  't2.h': 'Azure DevSecOps', 't2.p': 'Construire des pipelines de livraison sur Azure avec des contrôles de sécurité à chaque étape, du commit au déploiement.',
-  't3.h': 'Azure DevOps', 't3.p': 'Toute la chaîne Azure DevOps, en pratique : boards, repos, pipelines et artifacts.',
-  't4.h': 'Cloud AWS &amp; certification', 't4.p': 'Les services AWS essentiels en pratique, avec la préparation aux certifications Cloud Practitioner, Developer et Solutions Architect.',
-  't5.h': 'DevOps de zéro', 't5.p': 'Par projets : CI/CD avec Jenkins et Git, Nexus, SonarQube, Docker, Terraform, Ansible, Kubernetes et AWS.',
-  't6.h': 'Linux &amp; réseaux', 't6.p': 'Administration système Linux et réseaux CCNA, pour élèves ingénieurs et équipes IT.',
   'motto.1': 'Ce n’est fini que quand ça tourne,', 'motto.2': 'et que d’autres savent le faire tourner.'
 };
 const ROLES = {
@@ -121,6 +124,81 @@ const EXP = {
   ]
 };
 
+/* ---------- training programmes: rows + modal ---------- */
+/* hrs: number or null · doc: Word file in res/programmes or null · phases: [name{en,fr}, focus{en,fr}, hours] */
+const PROGS = [
+  { hrs: 150, title: { en: 'End-to-end AI & Machine Learning', fr: 'IA & Machine Learning de bout en bout' },
+    p: { en: 'From zero to a model trained on real data, built in pairs and defended before a jury.', fr: 'De zéro à un modèle entraîné sur données réelles, construit en binôme et soutenu devant un jury.' },
+    tags: ['Python', 'Machine Learning', 'Data preparation', 'Evaluation'] },
+  { hrs: 130, doc: 'res/programmes/AI-ML-AWS-Cloud-130h.docx', title: { en: 'AI, Machine Learning & AWS Cloud', fr: 'IA, Machine Learning & Cloud AWS' },
+    p: { en: 'Machine learning taught by paradigm, with the maths introduced exactly when an algorithm needs it, then carried onto AWS: SageMaker, data engineering and production GenAI. Six portfolio projects on GitHub.',
+         fr: 'Le machine learning enseigné par paradigme, avec les maths introduites au moment précis où un algorithme en a besoin, puis porté sur AWS : SageMaker, data engineering et GenAI en production. Six projets de portfolio sur GitHub.' },
+    facts: [[{ en: 'Audience', fr: 'Public' }, { en: 'IT professionals; basic Python required', fr: 'Professionnels de l’IT ; bases de Python requises' }],
+            [{ en: 'Rhythm', fr: 'Rythme' }, { en: '3 sessions a week, 3 h each', fr: '3 séances par semaine, 3 h chacune' }],
+            [{ en: 'Certifications', fr: 'Certifications' }, 'AWS AIF-C01 · CLF-C02 · DEA-C01']],
+    phases: [
+      [{ en: 'Python & data science stack', fr: 'Python & outils de data science' }, { en: 'NumPy, Pandas, Matplotlib, Jupyter', fr: 'NumPy, Pandas, Matplotlib, Jupyter' }, 12],
+      [{ en: 'Supervised learning', fr: 'Apprentissage supervisé' }, { en: 'Regression, classification, trees, ensembles, with linear algebra, calculus and statistics', fr: 'Régression, classification, arbres, ensembles, avec algèbre linéaire, calcul et statistiques' }, 24],
+      [{ en: 'Unsupervised learning', fr: 'Apprentissage non supervisé' }, { en: 'Clustering, dimensionality reduction, anomaly detection', fr: 'Clustering, réduction de dimension, détection d’anomalies' }, 12],
+      [{ en: 'Reinforcement learning', fr: 'Apprentissage par renforcement' }, { en: 'MDP, Q-learning, policy gradients, actor-critic', fr: 'MDP, Q-learning, policy gradients, actor-critic' }, 9],
+      [{ en: 'Neural networks & deep learning', fr: 'Réseaux de neurones & deep learning' }, { en: 'ANNs from scratch, CNNs, RNNs, Transformers, LLMs', fr: 'Réseaux from scratch, CNN, RNN, Transformers, LLM' }, 21],
+      [{ en: 'AWS foundations & AI Practitioner', fr: 'Fondamentaux AWS & AI Practitioner' }, { en: 'Core AWS, SageMaker, Bedrock, AIF-C01 and CLF-C02 prep', fr: 'AWS essentiel, SageMaker, Bedrock, préparation AIF-C01 et CLF-C02' }, 21],
+      [{ en: 'AWS data engineering', fr: 'Data engineering sur AWS' }, { en: 'Glue, Redshift, Kinesis, Athena, Step Functions, DEA-C01 prep', fr: 'Glue, Redshift, Kinesis, Athena, Step Functions, préparation DEA-C01' }, 18],
+      [{ en: 'AWS GenAI & MLOps', fr: 'GenAI & MLOps sur AWS' }, { en: 'Bedrock, RAG agents, SageMaker pipelines, production deployment', fr: 'Bedrock, agents RAG, pipelines SageMaker, mise en production' }, 13]],
+    tags: ['Python', 'scikit-learn', 'Deep Learning', 'SageMaker', 'Bedrock', 'AWS'] },
+  { hrs: 120, title: { en: 'Azure DevSecOps', fr: 'Azure DevSecOps' },
+    p: { en: 'Build delivery pipelines on Azure with security checks inside every stage, from commit to deployment.', fr: 'Construire des pipelines de livraison sur Azure avec des contrôles de sécurité à chaque étape, du commit au déploiement.' },
+    tags: ['Azure', 'DevSecOps', 'CI/CD', 'Security'] },
+  { hrs: 100, title: { en: 'Azure DevOps', fr: 'Azure DevOps' },
+    p: { en: 'The full Azure DevOps chain, hands-on: boards, repos, pipelines and artifacts.', fr: 'Toute la chaîne Azure DevOps, en pratique : boards, repos, pipelines et artifacts.' },
+    tags: ['Azure DevOps', 'Pipelines', 'Git'] },
+  { hrs: 100, title: { en: 'AWS Cloud & certification', fr: 'Cloud AWS & certification' },
+    p: { en: 'Core AWS services in practice, with preparation for Cloud Practitioner, Developer and Solutions Architect.', fr: 'Les services AWS essentiels en pratique, avec la préparation aux certifications Cloud Practitioner, Developer et Solutions Architect.' },
+    tags: ['AWS', 'EC2 · S3 · VPC', 'IAM', 'Certification prep'] },
+  { hrs: null, title: { en: 'DevOps from zero', fr: 'DevOps de zéro' },
+    p: { en: 'Project-based: CI/CD with Jenkins and Git, Nexus, SonarQube, Docker, Terraform, Ansible, Kubernetes and AWS.', fr: 'Par projets : CI/CD avec Jenkins et Git, Nexus, SonarQube, Docker, Terraform, Ansible, Kubernetes et AWS.' },
+    tags: ['Jenkins', 'Docker', 'Terraform', 'Ansible', 'Kubernetes'] },
+  { hrs: null, title: { en: 'Linux & networking', fr: 'Linux & réseaux' },
+    p: { en: 'Linux system administration and CCNA networking, for engineering students and IT teams.', fr: 'Administration système Linux et réseaux CCNA, pour élèves ingénieurs et équipes IT.' },
+    tags: ['Linux', 'CCNA', 'Networking'] }
+];
+const PUI = {
+  en: { open: 'View programme', custom: 'Length on request', kicker: 'Training programme', struct: 'Programme structure', dl: 'Download (Word)', cust: 'Customise', none: 'Detailed syllabus on request.',
+        format: 'Format', formatV: 'On-site in France or Tunisia, or remote', subj: 'Custom training request: ',
+        body: t => `Hello Aziz,\n\nWe are interested in the "${t}" programme, adapted to our team.\n\nOrganisation:\nNumber of participants:\nCurrent level (beginner / intermediate / advanced):\nFormat (on-site France / on-site Tunisia / remote):\nTarget length and dates:\nTopics to add or remove:\n\nBest regards,\n` },
+  fr: { open: 'Voir le programme', custom: 'Durée sur demande', kicker: 'Programme de formation', struct: 'Structure du programme', dl: 'Télécharger (Word)', cust: 'Personnaliser', none: 'Programme détaillé sur demande.',
+        format: 'Format', formatV: 'Sur site en France ou en Tunisie, ou à distance', subj: 'Demande de formation sur mesure : ',
+        body: t => `Bonjour Aziz,\n\nNous sommes intéressés par le programme « ${t} », adapté à notre équipe.\n\nOrganisation :\nNombre de participants :\nNiveau actuel (débutant / intermédiaire / avancé) :\nFormat (sur site France / sur site Tunisie / à distance) :\nDurée et dates souhaitées :\nSujets à ajouter ou retirer :\n\nCordialement,\n` }
+};
+const hrsHTML = h => h ? `<b class="hrs">${h}<small>h</small></b>` : `<b class="hrs na">${PUI[lang].custom}</b>`;
+function renderProgs() {
+  $('#progs').innerHTML = PROGS.map((g, i) => `<li><button type="button" class="prog" data-p="${i}" aria-haspopup="dialog">${hrsHTML(g.hrs)}<span class="prog-txt"><b class="prog-h">${pick(g.title)}</b><span class="prog-p">${pick(g.p)}</span><span class="tags">${g.tags.map(t => `<i>${t}</i>`).join('')}</span></span><span class="prog-go">${PUI[lang].open}<svg><use href="#i-arrow"/></svg></span></button></li>`).join('');
+}
+const progDlg = $('#progDlg');
+function openProg(i) {
+  const g = PROGS[i], u = PUI[lang], t = pick(g.title);
+  const facts = [...(g.facts || []), [{ en: u.format, fr: u.format }, u.formatV]];
+  const mail = `mailto:mohamedaziz.benhaha@gmail.com?subject=${encodeURIComponent(u.subj + t)}&body=${encodeURIComponent(u.body(t))}`;
+  $('#progBody').innerHTML = `<header class="pm-head">${hrsHTML(g.hrs)}<div><p class="pm-kicker">${u.kicker}</p><h2 id="pTitle">${t}</h2></div></header>
+    <p class="pm-lede">${pick(g.p)}</p>
+    <dl class="pm-facts">${facts.map(([k, v]) => `<div><dt>${pick(k)}</dt><dd>${pick(v)}</dd></div>`).join('')}</dl>
+    ${g.phases ? `<h3 class="pm-sub">${u.struct}</h3><ol class="pm-phases">${g.phases.map(([n, f, h]) => `<li><b>${pick(n)}</b><span>${pick(f)}</span><i>${h} h</i></li>`).join('')}</ol>` : ''}
+    <ul class="tags">${g.tags.map(t => `<li>${t}</li>`).join('')}</ul>
+    <div class="pm-actions">${g.doc ? `<a class="btn btn-gold" href="${g.doc}" download><svg><use href="#i-down"/></svg><span>${u.dl}</span></a>` : `<p class="pm-note">${u.none}</p>`}<a class="btn btn-ghost" href="${mail}" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg><span>${u.cust}</span></a></div>`;
+  progDlg.dataset.p = i;
+  if (!progDlg.open) progDlg.showModal();
+  progDlg.scrollTop = 0;
+}
+$('#progs').addEventListener('click', e => { const b = e.target.closest('[data-p]'); if (b) openProg(+b.dataset.p) });
+
+/* ---------- legal dialog ---------- */
+const legalDlg = $('#legalDlg');
+$$('[data-legal]').forEach(b => b.addEventListener('click', () => { legalDlg.showModal(); $('#lg-' + b.dataset.legal).scrollIntoView({ block: 'start' }) }));
+$$('.modal').forEach(d => {
+  $$('[data-close]', d).forEach(b => b.addEventListener('click', () => d.close()));
+  d.addEventListener('click', e => { if (e.target === d) d.close() });
+});
+
 /* ---------- language ---------- */
 let lang = store.get('lang') || ((navigator.language || '').startsWith('fr') ? 'fr' : 'en');
 const EN = {};
@@ -133,7 +211,7 @@ function applyLang() {
   const [en, fr] = $$('#lang span');
   en.classList.toggle('on', lang === 'en'); fr.classList.toggle('on', lang === 'fr');
   $('#lang').setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
-  renderTabs(); sizeTabs(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
+  renderTabs(); sizeTabs(); renderProgs(); if (progDlg.open) openProg(+progDlg.dataset.p); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
 }
 $('#lang').addEventListener('click', () => { lang = lang === 'en' ? 'fr' : 'en'; store.set('lang', lang); applyLang() });
 
@@ -181,7 +259,6 @@ let rotTimer;
 function restartRotator() {
   clearTimeout(rotTimer);
   const el = $('#rot'), words = ROLES[lang];
-  if (reduced) { el.textContent = words[0]; return }
   let w = 0, c = words[0].length, del = false;
   (function tick() {
     const word = words[w];
@@ -264,8 +341,6 @@ const dlg = $('#contactDlg');
 $$('[data-contact]').forEach(b => b.addEventListener('click', e => {
   e.preventDefault(); links.classList.remove('open'); burger.setAttribute('aria-expanded', false); dlg.showModal();
 }));
-$$('[data-close]', dlg).forEach(b => b.addEventListener('click', () => dlg.close()));
-dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close() });
 if (location.hash === '#contact') dlg.showModal();
 
 /* ---------- copy email ---------- */
@@ -310,7 +385,7 @@ $('#year').textContent = new Date().getFullYear();
   const hero = $('.hero');
   hero.addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top });
   hero.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999 });
-  new IntersectionObserver(([e]) => { cancelAnimationFrame(raf); if (e.isIntersecting) { frame(); if (reduced) cancelAnimationFrame(raf) } }).observe(hero);
+  new IntersectionObserver(([e]) => { cancelAnimationFrame(raf); if (e.isIntersecting) frame() }).observe(hero);
 })();
 
 applyLang();
