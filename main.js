@@ -46,7 +46,8 @@ const FR = {
   'course.t1': 'Cours gratuits,', 'course.t2': 'ouverts à tous.',
   'c1': 'Introduction à l’intelligence artificielle', 'c2': 'Atelier Big Data', 'c3': 'Rédaction académique', 'c4': 'Gestion d’infrastructure cloud', 'c5': 'Virtualisation',
   'ct.t1': 'Travaillons', 'ct.t2': 'ensemble.',
-  'ct.p': 'Missions Cloud et DevOps, projets IA/ML, formation de vos équipes ou collaboration de recherche. Choisissez le canal qui vous convient.',
+  'ct.p': 'Missions en France ou en Tunisie, sur site ou à distance : Cloud et DevOps, projets IA/ML, formation d’équipes, recherche. Dites-moi ce que vous construisez, je réponds en français, en anglais ou en arabe.',
+  'foot.say': 'Un métier entre les mains met à l’abri du besoin.',
   'ct.copy': 'Copier l’e-mail', 'ct.fr': 'France', 'foot.top': 'Haut de page ↑',
   'skip': 'Aller au contenu',
   'stat.longest': 'Programmes phares',
@@ -416,6 +417,10 @@ $('#year').textContent = new Date().getFullYear();
       box.append(el);
     }
   }
+  /* footer tray: the same tiles, quiet until hovered */
+  const kh = '<g fill="currentColor" stroke="none" transform="translate(29 21) scale(.42)"><path fill-rule="evenodd" d="M50 0C30 0 20 22 17 40C14 56 12 66 0 75C3 82 10 85 19 87L18 112C18 122 24 126 34 128L35 137H65L66 128C76 126 82 122 82 112L81 87C90 85 97 82 100 75C88 66 86 56 83 40C80 22 70 0 50 0ZM50 47A15 15 0 1 0 50.01 47ZM50 51A11 11 0 1 1 49.99 51ZM50 57A5 5 0 1 0 50.01 57Z"/></g>';
+  const tray = $('.tray');
+  [...ART.map(a => a[1]), FR + kh].forEach(g => { const el = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); el.setAttribute('viewBox', '0 0 100 100'); el.innerHTML = g; tray.append(el) });
   place(); addEventListener('resize', place); document.fonts?.ready.then(place); addEventListener('load', place);
 })();
 

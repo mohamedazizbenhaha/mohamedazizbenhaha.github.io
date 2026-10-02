@@ -331,7 +331,7 @@ em{font-style:normal;color:var(--gold)}
 .modal .x:hover{color:#000;background:var(--gold);border-color:var(--gold)}
 .modal .x svg{width:18px;height:18px}
 .modal-in{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(20px,4vw,48px);padding:clamp(28px,4vw,48px)}
-.modal h2{font:800 clamp(2rem,4.4vw,3.2rem)/1 var(--display);letter-spacing:-.04em;padding-right:48px}
+.modal h2{font:800 clamp(1.7rem,3.4vw,2.6rem)/1.05 var(--display);letter-spacing:-.04em;padding-right:48px;white-space:nowrap}
 .modal-main>p{color:var(--mute);margin:14px 0 22px;max-width:52ch}
 .mail{display:flex;flex-wrap:wrap;gap:10px}
 .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
@@ -417,3 +417,12 @@ em{font-style:normal;color:var(--gold)}
 .motifs{position:absolute;left:0;right:0;bottom:0;z-index:0;pointer-events:none;overflow:hidden}
 .motifs svg{position:absolute;fill:none;stroke:#d4a024;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;opacity:.05}
 .motifs svg *{vector-effect:non-scaling-stroke}
+.foot-say{flex-basis:100%;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:6px 18px;margin:6px 0 0;padding-top:22px;border-top:1px solid #16161d;text-align:center}
+.foot-say span{font:500 1.35rem/1.4 'Reem Kufi',var(--display);color:var(--gold2)}
+.foot-say small{font-size:.86rem;color:var(--dim)}
+.tray{display:flex;gap:10px;flex-wrap:wrap}
+.tray svg{width:56px;height:56px;fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;color:var(--gold);opacity:.3;transition:opacity .35s,transform .45s var(--ease),filter .35s}
+.tray svg *{vector-effect:non-scaling-stroke}
+.tray svg:hover{opacity:1;transform:translateY(-4px);filter:drop-shadow(0 6px 14px rgba(212,160,36,.35))}
+@media (max-width:700px){.modal h2{white-space:normal}.tray svg{width:46px;height:46px}}
+.modal .mail{margin-top:16px}
