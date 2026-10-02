@@ -70,6 +70,10 @@ Use only where they earn their tokens:
 ## Round 7 (2026-10-02)
 - New hero portrait (the user's choice): AI portrait generated from their recent photos (they are 28; older photos were from age 24). "AI" watermark painted out, cropped 4:5, 880×1100 (`res/portrait.jpg`). Source: `Downloads/2026-10-02_02-02-51_Lumina.png`. QR centre and contact-card photo still use the LinkedIn photo.
 
+## Round 8 (2026-10-02)
+- Name written "Mohamed Aziz BEN HAHA" everywhere on the page (hero h1, title/meta, alt texts, signature, footer ©), the user's word: case sensitive.
+- Signature font = Babylonica (Google Fonts): closest free match to the LinkedIn banner signature (the banner's exact font is likely a Canva signature font, not identified for sure).
+
 ## Deviations from the recommendations
 - Hero status keeps availability: "Based in Écully, France · working with Tunisia · open to missions & training" (the green "available" dot would be meaningless with location only). Wraps to two lines on a 375px phone.
 - Mentor card got its own icon (`#i-team`) since it lost the counters.
