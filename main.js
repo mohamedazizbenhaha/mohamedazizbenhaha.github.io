@@ -207,10 +207,16 @@ function fitMotto() {
 
 /* ---------- hero name: both lines share the same width ---------- */
 function fitName() {
-  const [a, b] = $$('.name .nl');
-  b.style.fontSize = '';
-  const base = parseFloat(getComputedStyle(a).fontSize);
-  b.style.fontSize = base + 'px';
+  const [a, b] = $$('.name .nl'), box = $('.hero-text');
+  const m = $('.rotator').cloneNode();
+  m.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;min-height:0';
+  m.innerHTML = 'I <span class="rot">' + ROLES.en[0] + '</span>';
+  box.append(m);
+  const W = Math.min(m.getBoundingClientRect().width * .96, box.clientWidth);
+  m.remove();
+  a.style.fontSize = b.style.fontSize = '100px';
+  for (let k = 0; k < 3; k++) a.style.fontSize = Math.min(parseFloat(a.style.fontSize) * W / a.getBoundingClientRect().width, 112) + 'px';
+  b.style.fontSize = a.style.fontSize;
   for (let k = 0; k < 3; k++) b.style.fontSize = parseFloat(b.style.fontSize) * a.getBoundingClientRect().width / b.getBoundingClientRect().width + 'px';
 }
 
