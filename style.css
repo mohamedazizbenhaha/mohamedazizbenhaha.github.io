@@ -157,7 +157,8 @@ em{font-style:normal;color:var(--gold)}
 .lg-in h3{font:700 1.15rem var(--display);color:var(--gold2);margin-bottom:8px}
 .lg-in p{color:var(--mute);margin-bottom:8px;max-width:72ch}
 /* motto */
-.motto{position:relative;z-index:1;margin-top:clamp(90px,12vw,140px);padding:clamp(90px,12vw,150px) clamp(16px,3.5vw,48px);text-align:center;border-block:1px solid #1d1a12;background:linear-gradient(180deg,rgba(7,7,10,.9),rgba(7,7,10,.38) 35%,rgba(7,7,10,.38) 65%,rgba(7,7,10,.92)),radial-gradient(70% 90% at 50% 50%,rgba(212,160,36,.12),transparent 70%),url(res/desk.jpg) center/cover}
+.motto{position:relative;z-index:1;margin-top:clamp(90px,12vw,140px);padding:clamp(90px,12vw,150px) clamp(16px,3.5vw,48px);text-align:center;border-block:1px solid #1d1a12;overflow:hidden}
+.motto::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,7,10,.9),rgba(7,7,10,.38) 35%,rgba(7,7,10,.38) 65%,rgba(7,7,10,.92)),radial-gradient(70% 90% at 50% 50%,rgba(212,160,36,.12),transparent 70%),url(res/desk.jpg) center/cover;transform:scale(1.1)}
 .motto blockquote{width:min(980px,100%);margin:auto}
 .motto p{font:800 4rem/1.08 var(--display);letter-spacing:-.035em;text-shadow:0 4px 30px rgba(0,0,0,.6)}
 .motto p::before{content:"\201C";display:block;font-size:1.4em;line-height:.6;color:var(--gold);opacity:.6;text-align:left}
