@@ -418,7 +418,7 @@ em{font-style:normal;color:var(--gold)}
 .motifs{position:absolute;left:0;right:0;bottom:0;z-index:0;pointer-events:none;overflow:hidden}
 .motifs svg{position:absolute;fill:none;stroke:#d4a024;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;opacity:.08}
 .motifs svg *{vector-effect:non-scaling-stroke}
-.tray{display:flex;gap:10px;flex-wrap:wrap}
+.tray{display:flex;gap:10px;flex-wrap:wrap;position:relative;top:-5px}
 .tray svg{width:29px;height:29px;fill:none;stroke:#cfc9bd;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;color:#cfc9bd;opacity:.3;transition:opacity .35s,transform .45s var(--ease),filter .35s}
 .tray svg *{vector-effect:non-scaling-stroke}
 .tray svg:hover{opacity:.95;transform:translateY(-3px)}
@@ -427,4 +427,4 @@ em{font-style:normal;color:var(--gold)}
 .modal .socials{margin:18px 0 0}
 .modal-main>p{margin-top:18px}
 .foot-r{display:flex;align-items:center;gap:clamp(18px,3vw,36px);flex-wrap:wrap}
-.foot-say{margin:0;font:500 1.1rem/1.4 var(--body),'Segoe UI',Tahoma,sans-serif;color:var(--gold2);white-space:nowrap}
+.foot-say{margin:0;font:500 1.3rem/1.4 'Reem Kufi',var(--display);word-spacing:.55em;color:var(--gold2);white-space:nowrap}
