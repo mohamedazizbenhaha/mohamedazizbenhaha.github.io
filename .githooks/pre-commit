@@ -1,0 +1,13 @@
+#!/bin/sh
+# Refuse a commit that carries a plaintext credential (scripts/check_secrets.py).
+# Firmware keeps Wi-Fi and broker passwords in C headers, and a secret committed
+# once stays in history forever. Known, documented exceptions go in .secrets-allow
+# with a reason. Enable in a fresh clone with:  git config core.hooksPath .githooks
+root=$(git rev-parse --show-toplevel)
+python "$root/scripts/check_secrets.py" --root "$root" || {
+    echo
+    echo "pre-commit: refusing to commit a plaintext credential."
+    echo "Move it out of the source (environment, NVS, a gitignored config file),"
+    echo "or, if it is a known and documented exception, add it to .secrets-allow."
+    exit 1
+}
