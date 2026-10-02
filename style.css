@@ -118,7 +118,7 @@ em{font-style:normal;color:var(--gold)}
 /* training */
 .tr-intro{color:var(--mute);max-width:62ch;margin:calc(clamp(32px,5vw,56px) * -.5) 0 32px;font-size:1.02rem}
 .progs{list-style:none;border-top:1px solid var(--line)}
-.progs:not(.open)>li:nth-child(n+6){display:none}
+.progs:not(.open)>li:nth-child(n+4){display:none}
 .progs>li{border-bottom:1px solid var(--line)}
 .prog{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:28px;align-items:center;width:100%;padding:26px 12px;text-align:left;transition:background .35s}
 .prog:hover{background:linear-gradient(90deg,var(--goldsoft),transparent 65%)}
