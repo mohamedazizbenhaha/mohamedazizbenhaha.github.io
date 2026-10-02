@@ -72,7 +72,7 @@ Use only where they earn their tokens:
 
 ## Round 8 (2026-10-02)
 - Name written "Mohamed Aziz BEN HAHA" everywhere on the page (hero h1, title/meta, alt texts, signature, footer ©), the user's word: case sensitive.
-- Signature font = Babylonica (Google Fonts): closest free match to the LinkedIn banner signature (the banner's exact font is likely a Canva signature font, not identified for sure).
+- Signature = `res/signature.svg`: "Mohamed Aziz BEN HAHA" in Winter Pen (Abo Daniel Studio, dafont, free for personal use; the user's choice, personal resume) converted to vector outlines with fontTools, so no font file is published. To change the text: regenerate from `Downloads/winter_pen.zip`.
 
 ## Deviations from the recommendations
 - Hero status keeps availability: "Based in Écully, France · working with Tunisia · open to missions & training" (the green "available" dot would be meaningless with location only). Wraps to two lines on a 375px phone.
