@@ -387,16 +387,16 @@ $('#year').textContent = new Date().getFullYear();
     FR + CORNERS + '<circle cx="50" cy="50" r="38"/><circle cx="50" cy="50" r="31"/><circle cx="50" cy="50" r="22"/>' + sq(14, 0) + sq(14, 45) + '<circle cx="50" cy="50" r="5"/>',
     FR + CORNERS + '<path d="M50 14C70 32 70 68 50 86 30 68 30 32 50 14z"/><path d="M14 50C32 30 68 30 86 50 68 70 32 70 14 50z"/>' + petals(4, 39, 4, 7, 45) + '<circle cx="50" cy="50" r="7"/><circle cx="50" cy="50" r="2"/>'
   ].map(g => ['0 0 100 100', g]);
-  let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  /* random layout, drawn once per visit; only the pixel size follows the screen */
   const box = document.createElement('div'); box.className = 'motifs'; box.setAttribute('aria-hidden', 'true'); document.body.append(box);
+  const spots = Array.from({ length: 16 }, () => ({ a: Math.floor(Math.random() * ART.length), x: Math.random() * 110 - 10, y: Math.random(), s: Math.random(), r: Math.random() * 360 - 180 }));
   function place() {
-    const top = $('.hero').offsetHeight; box.style.top = top + 'px'; box.innerHTML = ''; seed = 7;
-    const small = innerWidth < 700, ns = 'http://www.w3.org/2000/svg';
-    $$('.section').forEach((sec, i) => {
-      const [vb, inner] = ART[(i * 3 + Math.floor(rnd() * 2)) % 5], s = (small ? 110 : 190) + rnd() * (small ? 70 : 110);
-      const y = sec.getBoundingClientRect().top + scrollY - top + (small ? 10 : 40) + rnd() * 50;
-      const el = document.createElementNS(ns, 'svg'); el.setAttribute('viewBox', vb); el.innerHTML = inner;
-      el.style.cssText = `width:${s}px;height:${s}px;left:${(55 + rnd() * 38).toFixed(1)}%;top:${y.toFixed(0)}px;transform:rotate(${(rnd() * 16 - 8).toFixed(0)}deg)`;
+    const top = $('.hero').offsetHeight, H = document.body.scrollHeight - top, small = innerWidth < 700, n = Math.max(4, Math.round(H / (small ? 520 : 480)));
+    box.style.top = top + 'px'; box.innerHTML = '';
+    spots.slice(0, n).forEach(q => {
+      const s = (small ? 120 : 200) + q.s * (small ? 90 : 180), el = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      el.setAttribute('viewBox', ART[q.a][0]); el.innerHTML = ART[q.a][1];
+      el.style.cssText = `width:${s}px;height:${s}px;left:${q.x.toFixed(1)}%;top:${(q.y * (H - s)).toFixed(0)}px;transform:rotate(${q.r.toFixed(0)}deg)`;
       box.append(el);
     });
   }
@@ -406,44 +406,23 @@ $('#year').textContent = new Date().getFullYear();
 /* ---------- hero network: cloud/IoT nodes that reach for the pointer ---------- */
 (function net() {
   const cv = $('#net'), ctx = cv.getContext('2d');
-  let w, h, dpr, pts = [], rings = [], mouse = { x: -9999, y: -9999 }, raf;
+  let w, h, dpr, pts = [], mouse = { x: -9999, y: -9999 }, raf;
   function size() {
     dpr = Math.min(devicePixelRatio || 1, 2); w = cv.offsetWidth; h = cv.offsetHeight;
     cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const n = Math.round(Math.min(110, w * h / 14000) * .45);
+    const n = Math.round(Math.min(110, w * h / 14000));
     pts = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, r: Math.random() * 1.6 + .6, g: Math.random() < .14 }));
-    rings = emblem();
   }
-  /* Tunisian crescent and star, traced by dots that keep floating around their place */
-  function emblem() {
-    const cr = cv.getBoundingClientRect(), fr = ($('.hero .frame') || cv).getBoundingClientRect();
-    const px = fr.left + fr.width / 2 - cr.left, cy = fr.top + fr.height / 2 - cr.top;
-    const R = Math.min(fr.height * .85, px / 1.3, (w - px) / .55), cx = px - .4 * R, d = .22 * R, r = .8 * R, GAP = 38;
-    const mk = (x, y) => { const p = { hx: x, hy: y, x, y, ph: Math.random() * 6.3, f: .0006 + Math.random() * .0008, A: 7 + Math.random() * 9, mx: 0, my: 0, r: Math.random() * 1 + 1.1, g: Math.random() < .2, s: 1 }; pts.push(p); return p };
-    const ix = (d * d + R * R - r * r) / (2 * d), iy = Math.sqrt(R * R - ix * ix);
-    const a1 = Math.atan2(iy, ix), b1 = Math.atan2(iy, ix - d), crescent = [];
-    for (let k = 0, n = Math.round(R * 2 * (Math.PI - a1) / GAP); k < n; k++) { const a = a1 + (2 * (Math.PI - a1)) * k / n; crescent.push(mk(cx + R * Math.cos(a), cy + R * Math.sin(a))) }
-    for (let k = 0, n = Math.round(r * 2 * (Math.PI - b1) / GAP); k < n; k++) { const a = 2 * Math.PI - b1 - (2 * (Math.PI - b1)) * k / n; crescent.push(mk(cx + d + r * Math.cos(a), cy + r * Math.sin(a))) }
-    return [crescent];
-  }
-  function frame(t) {
+  function frame() {
     ctx.clearRect(0, 0, w, h);
     for (const p of pts) {
-      const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
-      if (p.hx !== undefined) {
-        p.mx += ((d < 180 ? dx * .3 : 0) - p.mx) * .05; p.my += ((d < 180 ? dy * .3 : 0) - p.my) * .05;
-        p.x = p.hx + Math.sin(t * p.f + p.ph) * p.A + p.mx; p.y = p.hy + Math.cos(t * p.f * 1.3 + p.ph) * p.A + p.my;
-        continue;
-      }
       p.x += p.vx; p.y += p.vy;
       if (p.x < 0 || p.x > w) p.vx *= -1; if (p.y < 0 || p.y > h) p.vy *= -1;
+      const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
       if (d < 180) { p.x += dx * .006; p.y += dy * .006 }
     }
-    ctx.lineWidth = 1; ctx.strokeStyle = 'rgba(242,196,90,.5)';
-    for (const ring of rings) { ctx.beginPath(); ring.forEach((p, i) => i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y)); ctx.closePath(); ctx.stroke() }
     for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
       const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
-      if (a.hx !== undefined && b.hx !== undefined) continue;
       if (d < 130) { ctx.strokeStyle = `rgba(212,160,36,${(1 - d / 130) * .28})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke() }
     }
     for (const p of pts) {
@@ -454,7 +433,7 @@ $('#year').textContent = new Date().getFullYear();
     }
     raf = requestAnimationFrame(frame);
   }
-  size(); addEventListener('resize', size); document.fonts?.ready.then(size);
+  size(); addEventListener('resize', size); 
   const hero = $('.hero');
   hero.addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top });
   hero.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999 });
