@@ -421,10 +421,10 @@ em{font-style:normal;color:var(--gold)}
 .foot-say span{font:500 1.35rem/1.4 'Reem Kufi',var(--display);color:var(--gold2)}
 .foot-say small{font-size:.86rem;color:var(--dim)}
 .tray{display:flex;gap:10px;flex-wrap:wrap}
-.tray svg{width:40px;height:40px;fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;color:var(--gold);opacity:.3;transition:opacity .35s,transform .45s var(--ease),filter .35s}
+.tray svg{width:32px;height:32px;fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;color:var(--gold);opacity:.3;transition:opacity .35s,transform .45s var(--ease),filter .35s}
 .tray svg *{vector-effect:non-scaling-stroke}
 .tray svg:hover{opacity:1;transform:translateY(-4px);filter:drop-shadow(0 6px 14px rgba(212,160,36,.35))}
-@media (max-width:700px){.modal h2{white-space:normal}.tray svg{width:40px;height:40px}}
+@media (max-width:700px){.modal h2{white-space:normal}.tray svg{width:32px;height:32px}}
 .modal .mail{margin-top:0}
 .modal .socials{margin:18px 0 0}
 .modal-main>p{margin-top:18px}
