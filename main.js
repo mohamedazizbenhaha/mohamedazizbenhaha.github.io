@@ -388,12 +388,13 @@ $('#year').textContent = new Date().getFullYear();
     FR + CORNERS + '<path d="M50 14C70 32 70 68 50 86 30 68 30 32 50 14z"/><path d="M14 50C32 30 68 30 86 50 68 70 32 70 14 50z"/>' + petals(4, 39, 4, 7, 45) + '<circle cx="50" cy="50" r="7"/><circle cx="50" cy="50" r="2"/>'
   ].map(g => ['0 0 100 100', g]);
   /* random layout (new seed each visit); tiles never overlap and keep a clear gap between them */
-  const seed0 = Math.floor(Math.random() * 2147483646) + 1;
+  const seed0 = 20261002; /* fixed while the layout is being reviewed */
   const box = document.createElement('div'); box.className = 'motifs'; box.setAttribute('aria-hidden', 'true'); document.body.append(box);
+  const dbg = document.createElement('div'); dbg.className = 'motifs-dbg'; document.body.append(dbg);
   function place() {
     let sd = seed0; const rnd = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
     const top = $('.hero').offsetHeight, W = innerWidth, H = document.body.scrollHeight - top, small = W < 700, n = Math.max(4, Math.round(H / (small ? 520 : 480))), GAP = small ? 40 : 90, done = [];
-    box.style.top = top + 'px'; box.innerHTML = '';
+    box.style.top = dbg.style.top = top + 'px'; box.innerHTML = dbg.innerHTML = '';
     for (let i = 0; i < n; i++) {
       const s = (small ? 120 : 200) + rnd() * (small ? 90 : 180), a = Math.floor(rnd() * ART.length), rot = rnd() * 360 - 180;
       let best = null;
@@ -407,6 +408,7 @@ $('#year').textContent = new Date().getFullYear();
       el.setAttribute('viewBox', ART[a][0]); el.innerHTML = ART[a][1];
       el.style.cssText = `width:${s}px;height:${s}px;left:${(best.x - s / 2).toFixed(0)}px;top:${(best.y - s / 2).toFixed(0)}px;transform:rotate(${rot.toFixed(0)}deg)`;
       box.append(el);
+      const lb = document.createElement('div'); lb.textContent = box.children.length; lb.style.cssText = `left:${(best.x - s / 2).toFixed(0)}px;top:${(best.y - s / 2).toFixed(0)}px;width:${s}px;height:${s}px`; dbg.append(lb);
     }
   }
   place(); addEventListener('resize', place); document.fonts?.ready.then(place); addEventListener('load', place);
@@ -430,9 +432,14 @@ $('#year').textContent = new Date().getFullYear();
       const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
       if (d < 180) { p.x += dx * .006; p.y += dy * .006 }
     }
-    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
-      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
-      if (d < 130) { ctx.strokeStyle = `rgba(212,160,36,${(1 - d / 130) * .15})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke() }
+    /* each dot links to its 5 nearest neighbours at most */
+    const L = [], cnt = new Map();
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) { const d = Math.hypot(pts[i].x - pts[j].x, pts[i].y - pts[j].y); if (d < 130) L.push([d, pts[i], pts[j]]) }
+    L.sort((x, y) => x[0] - y[0]);
+    for (const [d, a, b] of L) {
+      if ((cnt.get(a) || 0) >= 5 || (cnt.get(b) || 0) >= 5) continue;
+      cnt.set(a, (cnt.get(a) || 0) + 1); cnt.set(b, (cnt.get(b) || 0) + 1);
+      ctx.strokeStyle = `rgba(212,160,36,${(1 - d / 130) * .15})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
     }
     for (const p of pts) {
       const d = Math.hypot(mouse.x - p.x, mouse.y - p.y);
