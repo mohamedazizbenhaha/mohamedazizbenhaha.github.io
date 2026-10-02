@@ -406,7 +406,6 @@ $('#year').textContent = new Date().getFullYear();
       [1, 330, W, T('#training') + 189, 3],
       [1, 266, 0, T('#training') + 832, -122],
       [0, 364, W * .83, card3.t - .2 * 364 * k, -179],
-      [1, 215, W * .76, T('#courses') + 928, 143],
       [4, 225, W * .43, T('.motto') + .2 * 225 * k, 86]
     ];
     box.style.top = top + 'px'; box.innerHTML = '';
