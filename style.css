@@ -350,7 +350,7 @@ em{font-style:normal;color:var(--gold)}
 .foot{position:relative;z-index:1;color:var(--dim);font-size:.86rem;background:var(--bg)}
 .foot-in{max-width:var(--wrap);margin:auto;padding:26px clamp(16px,3.5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap}
 .foot-copy{display:flex;align-items:center;gap:clamp(18px,4.4vw,60px)}
-.foot-copy img{opacity:.9;transition:opacity .25s}.foot-copy a:hover img{opacity:1}
+.foot-copy img{height:29px;width:auto;opacity:.9;transition:opacity .25s}.foot-copy a:hover img{opacity:1}
 .foot .socials{margin:0}
 .foot .socials a{width:40px;height:40px}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,calc(100% + 40px));visibility:hidden;padding:.8em 1.3em;border-radius:999px;background:var(--txt);color:#000;font-weight:700;font-size:.9rem;z-index:70;transition:transform .5s var(--ease)}
@@ -427,5 +427,5 @@ em{font-style:normal;color:var(--gold)}
 .modal .socials{margin:18px 0 0}
 .modal-main>p{margin-top:18px}
 .foot-r{display:flex;align-items:center;gap:clamp(18px,3vw,36px);flex-wrap:wrap}
-.foot-say{margin:0;line-height:0}
-.foot-say img{display:block;height:33px;width:auto}
+.foot-say{margin:0;line-height:0;position:relative;top:2px}
+.foot-say img{display:block;height:30px;width:auto}
