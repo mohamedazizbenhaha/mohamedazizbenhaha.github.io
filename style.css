@@ -161,7 +161,7 @@ em{font-style:normal;color:var(--gold)}
 .motto p::before{content:"\201C";display:block;font-size:1.4em;line-height:.6;color:var(--gold);opacity:.6;text-align:left}
 .motto .ml{display:block;width:max-content;max-width:none;white-space:nowrap;margin:auto}
 .motto footer{margin-top:22px;display:flex;align-items:center;justify-content:flex-end}
-.motto .sig{height:clamp(30px,3.2vw,46px);width:auto;opacity:.95}
+.motto .sig{height:clamp(38px,3.8vw,54px);width:auto}
 .motto footer::before{content:"";flex:none;width:32px;height:1px;background:var(--txt);margin-right:16px}
 /* bento */
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}

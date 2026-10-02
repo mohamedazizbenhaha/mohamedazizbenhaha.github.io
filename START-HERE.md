@@ -72,7 +72,7 @@ Use only where they earn their tokens:
 
 ## Round 8 (2026-10-02)
 - Name written "Mohamed Aziz BEN HAHA" everywhere on the page (hero h1, title/meta, alt texts, signature, footer ©), the user's word: case sensitive.
-- Signature = `res/signature.svg`: "Mohamed Aziz BEN HAHA" in Winter Pen (Abo Daniel Studio, dafont, free for personal use; the user's choice, personal resume) converted to vector outlines with fontTools, so no font file is published. To change the text: regenerate from `Downloads/winter_pen.zip`.
+- Signature = `res/signature.svg`: "Mohamed Aziz ben Haha" (this exact casing, the user's word, signature only) in Pantai Bali (DYSA Studio, dafont, personal use; the user's choice for a personal resume) converted to vector outlines with fontTools, so no font file is published. Regenerate from `Downloads/pantai_bali.zip`.
 
 ## Deviations from the recommendations
 - Hero status keeps availability: "Based in Écully, France · working with Tunisia · open to missions & training" (the green "available" dot would be meaningless with location only). Wraps to two lines on a 375px phone.
