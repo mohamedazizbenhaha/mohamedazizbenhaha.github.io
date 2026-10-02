@@ -3,6 +3,7 @@
 ## State
 - New site lives on branch `redesign` → PR mohamedazizbenhaha/mohamedazizbenhaha.github.io#1.
 - **Live review URL (the user opens it on their phone):** https://deploy-preview-1--mohamedazizbenhaha.netlify.app
+  **2026-10-02: the user moved to a new Netlify account** (same site name, repo linked). The preview returned 404 until a fresh push, then 401: Deploy Preview protection is on in the new account; the user must set it to public (Site configuration → Visitor access) so others can give feedback. If it is still 401, that is the cause, not the code.
   Every push to `redesign` rebuilds it in ~1 min. Production (`main` → mohamedazizbenhaha.netlify.app) is untouched until merge; merging needs the user's word.
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
