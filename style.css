@@ -427,4 +427,4 @@ em{font-style:normal;color:var(--gold)}
 .modal .socials{margin:18px 0 0}
 .modal-main>p{margin-top:18px}
 .foot-r{display:flex;align-items:center;gap:clamp(18px,3vw,36px);flex-wrap:wrap}
-.foot-say{margin:0;font:500 1.3rem/1.4 'Reem Kufi',var(--display);color:var(--gold2);white-space:nowrap}
+.foot-say{margin:0;font:500 1.1rem/1.4 var(--body),'Segoe UI',Tahoma,sans-serif;color:var(--gold2);white-space:nowrap}
