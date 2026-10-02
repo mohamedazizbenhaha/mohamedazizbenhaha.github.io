@@ -387,18 +387,27 @@ $('#year').textContent = new Date().getFullYear();
     FR + CORNERS + '<circle cx="50" cy="50" r="38"/><circle cx="50" cy="50" r="31"/><circle cx="50" cy="50" r="22"/>' + sq(14, 0) + sq(14, 45) + '<circle cx="50" cy="50" r="5"/>',
     FR + CORNERS + '<path d="M50 14C70 32 70 68 50 86 30 68 30 32 50 14z"/><path d="M14 50C32 30 68 30 86 50 68 70 32 70 14 50z"/>' + petals(4, 39, 4, 7, 45) + '<circle cx="50" cy="50" r="7"/><circle cx="50" cy="50" r="2"/>'
   ].map(g => ['0 0 100 100', g]);
-  /* random layout, drawn once per visit; only the pixel size follows the screen */
+  /* random layout (new seed each visit); tiles never overlap and keep a clear gap between them */
+  const seed0 = Math.floor(Math.random() * 2147483646) + 1;
   const box = document.createElement('div'); box.className = 'motifs'; box.setAttribute('aria-hidden', 'true'); document.body.append(box);
-  const spots = Array.from({ length: 16 }, () => ({ a: Math.floor(Math.random() * ART.length), x: Math.random() * 110 - 10, y: Math.random(), s: Math.random(), r: Math.random() * 360 - 180 }));
   function place() {
-    const top = $('.hero').offsetHeight, H = document.body.scrollHeight - top, small = innerWidth < 700, n = Math.max(4, Math.round(H / (small ? 520 : 480)));
+    let sd = seed0; const rnd = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
+    const top = $('.hero').offsetHeight, W = innerWidth, H = document.body.scrollHeight - top, small = W < 700, n = Math.max(4, Math.round(H / (small ? 520 : 480))), GAP = small ? 40 : 90, done = [];
     box.style.top = top + 'px'; box.innerHTML = '';
-    spots.slice(0, n).forEach(q => {
-      const s = (small ? 120 : 200) + q.s * (small ? 90 : 180), el = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      el.setAttribute('viewBox', ART[q.a][0]); el.innerHTML = ART[q.a][1];
-      el.style.cssText = `width:${s}px;height:${s}px;left:${q.x.toFixed(1)}%;top:${(q.y * (H - s)).toFixed(0)}px;transform:rotate(${q.r.toFixed(0)}deg)`;
+    for (let i = 0; i < n; i++) {
+      const s = (small ? 120 : 200) + rnd() * (small ? 90 : 180), a = Math.floor(rnd() * ART.length), rot = rnd() * 360 - 180;
+      let best = null;
+      for (let k = 0; k < 40 && !best; k++) {
+        const x = rnd() * (W + s * .4) - s * .2, y = (i + rnd()) / n * (H - s) + s / 2;
+        if (done.every(q => Math.hypot(q.x - x, q.y - y) >= (q.s + s) * .71 + GAP)) best = { x, y, s };
+      }
+      if (!best) continue;
+      done.push(best);
+      const el = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      el.setAttribute('viewBox', ART[a][0]); el.innerHTML = ART[a][1];
+      el.style.cssText = `width:${s}px;height:${s}px;left:${(best.x - s / 2).toFixed(0)}px;top:${(best.y - s / 2).toFixed(0)}px;transform:rotate(${rot.toFixed(0)}deg)`;
       box.append(el);
-    });
+    }
   }
   place(); addEventListener('resize', place); document.fonts?.ready.then(place); addEventListener('load', place);
 })();
@@ -423,12 +432,12 @@ $('#year').textContent = new Date().getFullYear();
     }
     for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
       const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
-      if (d < 130) { ctx.strokeStyle = `rgba(212,160,36,${(1 - d / 130) * .28})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke() }
+      if (d < 130) { ctx.strokeStyle = `rgba(212,160,36,${(1 - d / 130) * .15})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke() }
     }
     for (const p of pts) {
       const d = Math.hypot(mouse.x - p.x, mouse.y - p.y);
-      if (d < 180) { ctx.strokeStyle = `rgba(242,196,90,${(1 - d / 180) * .5})`; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke() }
-      ctx.fillStyle = p.g ? '#f2c45a' : 'rgba(243,239,230,.55)';
+      if (d < 180) { ctx.strokeStyle = `rgba(242,196,90,${(1 - d / 180) * .3})`; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke() }
+      ctx.fillStyle = p.g ? 'rgba(242,196,90,.6)' : 'rgba(243,239,230,.3)';
       ctx.beginPath(); ctx.arc(p.x, p.y, p.g ? p.r + 1 : p.r, 0, 7); ctx.fill();
     }
     raf = requestAnimationFrame(frame);
