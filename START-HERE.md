@@ -67,6 +67,9 @@ Use only where they earn their tokens:
 - Every plain contact mailto (hero, modal "Email me", footer) gets a default subject ("Contact from your website" / « Prise de contact depuis votre site »), set by `setMailSubjects()`.
 - Portrait: no tilt, no hover effect, 10px corners.
 
+## Round 7 (2026-10-02)
+- New hero portrait (the user's choice): AI portrait generated from their recent photos (they are 28; older photos were from age 24). "AI" watermark painted out, cropped 4:5, 880×1100 (`res/portrait.jpg`). Source: `Downloads/2026-10-02_02-02-51_Lumina.png`. QR centre and contact-card photo still use the LinkedIn photo.
+
 ## Deviations from the recommendations
 - Hero status keeps availability: "Based in Écully, France · working with Tunisia · open to missions & training" (the green "available" dot would be meaningless with location only). Wraps to two lines on a 375px phone.
 - Mentor card got its own icon (`#i-team`) since it lost the counters.
