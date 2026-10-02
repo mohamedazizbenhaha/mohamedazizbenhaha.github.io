@@ -415,7 +415,7 @@ em{font-style:normal;color:var(--gold)}
 }
 
 .motifs{position:absolute;left:0;right:0;bottom:0;z-index:0;pointer-events:none;overflow:hidden}
-.motifs svg{position:absolute;fill:none;stroke:#d4a024;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;opacity:.10}
+.motifs svg{position:absolute;fill:none;stroke:#d4a024;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;opacity:.08}
 .motifs svg *{vector-effect:non-scaling-stroke}
 .foot-say{flex-basis:100%;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:6px 18px;margin:6px 0 0;padding-top:22px;border-top:1px solid #16161d;text-align:center}
 .foot-say span{font:500 1.35rem/1.4 'Reem Kufi',var(--display);color:var(--gold2)}
