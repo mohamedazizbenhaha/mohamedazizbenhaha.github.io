@@ -428,4 +428,4 @@ em{font-style:normal;color:var(--gold)}
 .modal-main>p{margin-top:18px}
 .foot-r{display:flex;align-items:center;gap:clamp(18px,3vw,36px);flex-wrap:wrap}
 .foot-say{margin:0;line-height:0}
-.foot-say img{display:block;height:36px;width:auto}
+.foot-say img{display:block;height:33px;width:auto}
