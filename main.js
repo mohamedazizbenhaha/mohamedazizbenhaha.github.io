@@ -7,8 +7,7 @@ const store = { get: k => { try { return localStorage.getItem(k) } catch { retur
 /* ---------- copy ---------- */
 const FR = {
   'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.train': 'Formations', 'nav.courses': 'Cours gratuits', 'nav.hire': 'Me contacter',
-  'hero.status': 'Fièrement tunisien · basé à Écully, France · ouvert aux missions et formations',
-  'foot.tn': 'Tunisien, et fier de l’être',
+  'hero.status': 'Basé à Écully, France · en lien avec la Tunisie · ouvert aux missions et formations',
   'hero.pre': 'Je',
   'hero.lede': 'Ingénieur Cloud &amp; DevOps (CKA, AWS Solutions Architect &amp; SysOps) et praticien IA/ML, formateur avec <b>plus de 1 000 heures</b> dispensées en universités et en entreprises, et doctorant en machine learning pour l’IoT embarqué à <b>Sup’Com × École Centrale de Lyon</b>.',
   'hero.cta': 'Travaillons ensemble', 'hero.cv': 'Télécharger le CV', 'hero.cv2': 'CV formateur (CNFCPP)',
