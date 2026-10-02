@@ -387,28 +387,34 @@ $('#year').textContent = new Date().getFullYear();
     FR + CORNERS + '<circle cx="50" cy="50" r="38"/><circle cx="50" cy="50" r="31"/><circle cx="50" cy="50" r="22"/>' + sq(14, 0) + sq(14, 45) + '<circle cx="50" cy="50" r="5"/>',
     FR + CORNERS + '<path d="M50 14C70 32 70 68 50 86 30 68 30 32 50 14z"/><path d="M14 50C32 30 68 30 86 50 68 70 32 70 14 50z"/>' + petals(4, 39, 4, 7, 45) + '<circle cx="50" cy="50" r="7"/><circle cx="50" cy="50" r="2"/>'
   ].map(g => ['0 0 100 100', g]);
-  /* random layout (new seed each visit); tiles never overlap and keep a clear gap between them */
-  const seed0 = 20261002; /* fixed while the layout is being reviewed */
+  /* hand-placed layout: each tile is anchored to a page element so the overlaps hold on any screen.
+     [design, size, x, y, rotation]; x and y are functions of the page geometry */
   const box = document.createElement('div'); box.className = 'motifs'; box.setAttribute('aria-hidden', 'true'); document.body.append(box);
-  const dbg = document.createElement('div'); dbg.className = 'motifs-dbg'; document.body.append(dbg);
+  const pg = el => { const r = el.getBoundingClientRect(); return { l: r.left, r: r.right, t: r.top + scrollY, b: r.bottom + scrollY } };
+  const T = sel => pg($(sel)).t, nth = (sel, i) => pg($$(sel)[i]);
   function place() {
-    let sd = seed0; const rnd = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
-    const top = $('.hero').offsetHeight, W = innerWidth, H = document.body.scrollHeight - top, small = W < 700, n = Math.max(4, Math.round(H / (small ? 520 : 480))), GAP = small ? 40 : 90, done = [];
-    box.style.top = dbg.style.top = top + 'px'; box.innerHTML = dbg.innerHTML = '';
-    for (let i = 0; i < n; i++) {
-      const s = (small ? 120 : 200) + rnd() * (small ? 90 : 180), a = Math.floor(rnd() * ART.length), rot = rnd() * 360 - 180;
-      let best = null;
-      for (let k = 0; k < 40 && !best; k++) {
-        const x = rnd() * (W + s * .4) - s * .2, y = (i + rnd()) / n * (H - s) + s / 2;
-        if (done.every(q => Math.hypot(q.x - x, q.y - y) >= (q.s + s) * .71 + GAP)) best = { x, y, s };
-      }
-      if (!best) continue;
-      done.push(best);
-      const el = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    const top = $('.hero').offsetHeight, W = box.clientWidth || innerWidth, k = innerWidth < 700 ? .6 : 1;
+    const proj = $$('#projects article'), tally = pg($('.tally')), card3 = pg($$('#courses-grid > *')[2]);
+    const L = [
+      [1, 303, W * .22, T('#about') + 28, 160],
+      [0, 292, W * .86, T('#about') + 731, -41],
+      [0, 265, W * .283, tally.b - 27, 14],
+      [0, 323, W * .865, T('#experience') + 381, -174],
+      [0, 344, -W * .04, T('#projects') + 269, -120],
+      [2, 309, pg(proj[1]).r, pg(proj[1]).b + 9, -68],
+      [1, 233, W * .011, T('#certs') + 103, -98],
+      [1, 330, W, T('#training') + 189, 3],
+      [1, 266, 0, T('#training') + 832, -122],
+      [0, 364, W * .83, card3.t - .2 * 364 * k, -179],
+      [1, 215, W * .76, T('#courses') + 928, 143],
+      [4, 225, W * .43, T('.motto') + .2 * 225 * k, 86]
+    ];
+    box.style.top = top + 'px'; box.innerHTML = '';
+    for (const [a, s0, x, y, rot] of L) {
+      const s = s0 * k, el = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       el.setAttribute('viewBox', ART[a][0]); el.innerHTML = ART[a][1];
-      el.style.cssText = `width:${s}px;height:${s}px;left:${(best.x - s / 2).toFixed(0)}px;top:${(best.y - s / 2).toFixed(0)}px;transform:rotate(${rot.toFixed(0)}deg)`;
+      el.style.cssText = `width:${s}px;height:${s}px;left:${(x - s / 2).toFixed(0)}px;top:${(y - top - s / 2).toFixed(0)}px;transform:rotate(${rot}deg)`;
       box.append(el);
-      const lb = document.createElement('div'); lb.textContent = box.children.length; lb.style.cssText = `left:${(best.x - s / 2).toFixed(0)}px;top:${(best.y - s / 2).toFixed(0)}px;width:${s}px;height:${s}px`; dbg.append(lb);
     }
   }
   place(); addEventListener('resize', place); document.fonts?.ready.then(place); addEventListener('load', place);

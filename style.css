@@ -415,7 +415,5 @@ em{font-style:normal;color:var(--gold)}
 }
 
 .motifs{position:absolute;left:0;right:0;bottom:0;z-index:0;pointer-events:none;overflow:hidden}
-.motifs svg{position:absolute;fill:none;stroke:#d4a024;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;opacity:.045}
+.motifs svg{position:absolute;fill:none;stroke:#d4a024;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;opacity:.03}
 .motifs svg *{vector-effect:non-scaling-stroke}
-.motifs-dbg{position:absolute;left:0;right:0;bottom:0;z-index:55;pointer-events:none;overflow:hidden}
-.motifs-dbg div{position:absolute;display:grid;place-items:center;border:1px dashed #ff2d2d;border-radius:50%;color:#ff2d2d;font:800 52px/1 monospace;text-shadow:0 0 6px #000}
