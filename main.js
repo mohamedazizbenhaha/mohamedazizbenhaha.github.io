@@ -7,7 +7,7 @@ const store = { get: k => { try { return localStorage.getItem(k) } catch { retur
 /* ---------- copy ---------- */
 const FR = {
   'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.train': 'Formations', 'nav.courses': 'Cours gratuits', 'nav.hire': 'Me contacter',
-  'hero.status': 'Basé à Écully, France · en lien avec la Tunisie · ouvert aux missions et formations',
+  'hero.status': 'Tunis · Lyon · ouvert aux missions et formations',
   'hero.pre': 'Je',
   'hero.lede': 'Ingénieur Cloud &amp; DevOps (CKA, AWS Solutions Architect &amp; SysOps) et praticien IA/ML, formateur avec <b>plus de 1 000 heures</b> dispensées en universités et en entreprises, et doctorant en machine learning pour l’IoT embarqué à <b>Sup’Com × École Centrale de Lyon</b>.',
   'hero.cta': 'Travaillons ensemble', 'hero.cv': 'Télécharger le CV', 'hero.cv2': 'CV formateur (CNFCPP)',
@@ -205,6 +205,15 @@ function fitMotto() {
   });
 }
 
+/* ---------- hero name: both lines share the same width ---------- */
+function fitName() {
+  const [a, b] = $$('.name .nl');
+  b.style.fontSize = '';
+  const base = parseFloat(getComputedStyle(a).fontSize);
+  b.style.fontSize = base + 'px';
+  for (let k = 0; k < 3; k++) b.style.fontSize = parseFloat(b.style.fontSize) * a.getBoundingClientRect().width / b.getBoundingClientRect().width + 'px';
+}
+
 /* ---------- language ---------- */
 let lang = store.get('lang') || ((navigator.language || '').startsWith('fr') ? 'fr' : 'en');
 const EN = {};
@@ -258,7 +267,7 @@ $('#tabList').addEventListener('keydown', e => {
 $$('.seg button').forEach(b => b.addEventListener('click', () => {
   $$('.seg button').forEach(x => x.setAttribute('aria-selected', x === b)); group = b.dataset.group; idx = 0; renderTabs();
 }));
-let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { renderTabs(); sizeTabs(); fitMotto() }, 150) });
+let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { renderTabs(); sizeTabs(); fitMotto(); fitName() }, 150) });
 
 /* ---------- rotating roles ---------- */
 let rotTimer;
@@ -395,4 +404,5 @@ $('#year').textContent = new Date().getFullYear();
 })();
 
 applyLang();
-document.fonts?.ready.then(() => { sizeTabs(); fitMotto() });
+fitName();
+document.fonts?.ready.then(() => { sizeTabs(); fitMotto(); fitName() });
