@@ -21,6 +21,7 @@ em{font-style:normal;color:var(--gold)}
 
 /* progress + cursor glow */
 .progress{position:fixed;top:0;left:0;height:2px;width:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));transform-origin:0 50%;transform:scaleX(0);z-index:60}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cg fill='none' stroke='%23d4a024' stroke-opacity='.032' stroke-width='1'%3E%3Crect x='28' y='28' width='40' height='40'/%3E%3Cpath d='M48 19.7 76.3 48 48 76.3 19.7 48z'/%3E%3Cpath d='M0 8 8 0 16 8 8 16zM80 8 88 0 96 8 88 16zM0 88 8 80 16 88 8 96zM80 88 88 80 96 88 88 96z'/%3E%3C/g%3E%3Cg fill='%23d4a024' fill-opacity='.07'%3E%3Ccircle cx='28' cy='28' r='1.6'/%3E%3Ccircle cx='68' cy='28' r='1.6'/%3E%3Ccircle cx='68' cy='68' r='1.6'/%3E%3Ccircle cx='28' cy='68' r='1.6'/%3E%3Ccircle cx='48' cy='19.7' r='1.6'/%3E%3Ccircle cx='76.3' cy='48' r='1.6'/%3E%3Ccircle cx='48' cy='76.3' r='1.6'/%3E%3Ccircle cx='19.7' cy='48' r='1.6'/%3E%3C/g%3E%3C/svg%3E") 0 0/96px 96px}
 .glow{position:fixed;width:520px;height:520px;left:0;top:0;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(212,160,36,.10),transparent 62%);transform:translate(-50%,-50%);opacity:0;transition:opacity .4s}
 @media(hover:hover){body:hover .glow{opacity:1}}
 
