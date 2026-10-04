@@ -7,8 +7,14 @@
   Every push to `redesign` rebuilds it in ~1 min. Production (`main` → mohamedazizbenhaha.netlify.app) is untouched until merge; merging needs the user's word.
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
-## Now (2026-10-04, evening): training catalogue → Word programmes
-- **Read `W:	rainings-catalog\HANDOFF.md` first.** 39-course catalogue with syllabi confirmed (`W:	rainings-catalog\SYLLABUS.md`); pilot DevOps Engineering built EN + FR; next = cold read of the plan in a new session, fixes, then a new session for the other 38 courses.
+## Now (2026-10-05): programmes done → integrate them in the website
+- **Read `W:\trainings-catalog\HANDOFF.md` first** (top section: state + suggested prompt for the website integration).
+- 39 of 40 courses built EN + FR (78 .docx in `res/programmes/`, 78 PDF previews in `res/programmes/pdf/`); table with preview links: `programmes/INDEX.md`. Course 38 Ethical Hacking not produced (user writes its JSON; see HANDOFF).
+- Scripts: `build_programmes.py` (refuses wrong hours) → `export_pdfs.py` (Word → PDF) → `programme_index.py`. Documents state hours only, never sessions.
+- Next: replace the retired 130 h programme in the Training section (`PROGS` in `main.js`) with the new catalogue. Discuss designs first.
+
+## Earlier (2026-10-04, evening): training catalogue → Word programmes
+- **Read `W:\trainings-catalog\HANDOFF.md` first.** 39-course catalogue with syllabi confirmed (`W:\trainings-catalog\SYLLABUS.md`); pilot DevOps Engineering built EN + FR; next = cold read of the plan in a new session, fixes, then a new session for the other 38 courses.
 - Generator now supports `"lang": "fr"` and `"buffer"`. 130 h programme retired (source renamed `_retired-...`).
 
 ## Earlier (2026-10-04): fixing the content, trainings first
@@ -98,7 +104,7 @@ Use only where they earn their tokens:
 - What "replace" meant at the end of the user's message on 2026-10-01 (it was cut off).
 - Guidelines items not done (low value or need the user): logo-strip images have no width/height attributes (CSS fixes their height, no visible shift); the marquee has no pause control (it stops under reduced motion).
 - Merge `redesign` → `main` (production) needs the user's word. Then switch the QR to the production URL (see Round 4).
-- Word files for the other training programmes: build them with the confirmed template (`programmes/README.md`) once the user gives their content.
+- Word files for the training programmes: done 2026-10-05 except course 38 (see HANDOFF).
 - Phone "Desktop site" mode renders ~980px; the nav collapses below 1020px. If the user wants the full nav there, lower that breakpoint.
 - Main CV PDF says "500+ heures"; the site says 1,000+. The user should update the PDF.
 - The user must revoke the old Gmail app password (it is in the public repo history).

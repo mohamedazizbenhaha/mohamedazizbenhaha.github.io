@@ -9,6 +9,8 @@ One template for every programme's Word file (white pages, gold accents, black c
 ```
 python scripts/build_programmes.py [slug] [--force]   # build (refuses to overwrite a file edited in Word)
 python scripts/sync_programmes.py [slug]              # after editing a .docx in Word: text -> JSON, look -> report
+python scripts/export_pdfs.py [slug]                  # Word -> res/programmes/pdf/ (screen-optimised previews)
+python scripts/programme_index.py                      # programmes/INDEX.md: table of all courses with preview links
 ```
 
 Editing in Word: change text freely; change a look everywhere by modifying its style ("Prog …", Heading 1/2, "Prog Table");
@@ -17,6 +19,6 @@ changes; fold them into the constants above, then rebuild with `--force`.
 
 Optional fields: `subtitle`, `audience_line`, `certifications`, `facts`, phase `intro`/`note`/`math`/`project`,
 `portfolio` (`{"intro", "rows": [{"name", "shows", "phase", "build"}]}`), `notes`, `buffer` (hours shown as a row before the total, added to it and to the cover), `lang` (`"fr"` = French labels and decimal comma), `hours` (cover figure, default = sum of
-phases), `labels` (override any fixed wording, see `LABELS`).
+phases), phase `optional: true` (outside the total and buffer rule, shown as "+ N h optional"), `labels` (override any fixed wording, see `LABELS`).
 
 Needs Python with python-docx, Pillow, PyMuPDF; sync also needs Microsoft Word (Windows).
