@@ -1,0 +1,95 @@
+{
+ "slug": "network-security",
+ "file": "Network-Security-51h.docx",
+ "title": "Network Security",
+ "subtitle": "Secure network devices, firewalls, VPNs and access from the edge to the endpoint",
+ "audience_line": "Network administrators and engineers responsible for securing networks",
+ "certifications": [],
+ "overview": "This programme teaches network engineers to secure the network itself. Participants harden device access and management, centralise authentication with AAA, filter traffic with ACLs, then deploy stateful, zone-based and next-generation firewalls, with a vendor-neutral lab on pfSense or OPNsense, and intrusion prevention. They secure endpoints and Layer 2, apply cryptography, build site-to-site and remote-access VPNs including WireGuard, compare them with zero trust network access, and test their defences. Every chapter ends with a lab, and the programme closes with a final project in which each team secures and validates a branch network.",
+ "facts": [
+  {"label": "Audience", "value": "Network administrators and engineers responsible for securing networks"},
+  {"label": "Prerequisites", "value": "Switching and routing (course: Switching, Routing & Wireless Essentials (CCNA 2)), or equivalent. These are not taught again"},
+  {"label": "Duration", "value": "51 h: 45 h of chapters + 6 h buffer"},
+  {"label": "Format", "value": "Short lectures followed by guided labs on simulated Cisco devices and open-source firewalls"},
+  {"label": "Lab environment", "value": "Runs locally: one laptop per participant (16 GB RAM) with Cisco Packet Tracer, pfSense or OPNsense and Linux virtual machines prepared by the trainer; isolated lab network; no cloud account or cost"},
+  {"label": "Assessment", "value": "A lab validated at the end of each phase and a final project with validation tests; certificate of completion for participants who complete both"},
+  {"label": "Outcome", "value": "Participants can harden network devices, deploy AAA, ACLs, firewalls, IPS, Layer 2 protections and VPNs, and prove the result with security tests"}
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Securing Network Devices",
+   "hours": 12,
+   "focus": "Threats and mitigation, secure management, AAA, ACLs",
+   "intro": "Participants identify what needs protecting in a network, secure administrative access and management protocols, centralise authentication with RADIUS and TACACS+, and design and apply access control lists. Validated lab: routers managed only over SSH with AAA through a server, sending syslog and NTP-synchronised logs, and ACLs that enforce the security policy.",
+   "chapters": [
+    {"id": "1.1", "title": "Securing Networks", "content": "Assets, threats, mitigation", "format": "Lecture + Workshop", "hours": 3},
+    {"id": "1.2", "title": "Device Access & Management", "content": "Secure access, administrative roles, SNMP, syslog, NTP", "format": "Lecture + Lab", "hours": 3},
+    {"id": "1.3", "title": "AAA", "content": "RADIUS, TACACS+", "format": "Lecture + Lab", "hours": 3},
+    {"id": "1.4", "title": "ACLs", "content": "Design and implementation", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Firewalls & IPS",
+   "hours": 12,
+   "focus": "Stateful and zone-based firewalls, NGFW, pfSense or OPNsense, Suricata, IPS",
+   "intro": "Participants build stateful and zone-based policy firewalls, learn what next-generation firewalls add, with application control, URL filtering, TLS inspection and Cisco Secure Firewall concepts, then deploy a vendor-neutral firewall on pfSense or OPNsense with NAT, VLANs, VPN and Suricata, and tune intrusion prevention signatures. Validated lab: a pfSense or OPNsense firewall that segments three VLANs and blocks a test attack with Suricata.",
+   "chapters": [
+    {"id": "2.1", "title": "Firewall Technologies", "content": "Stateful firewalls, zone-based policy firewalls", "format": "Lecture + Lab", "hours": 3},
+    {"id": "2.2", "title": "Next-Generation Firewalls", "content": "Application control, IPS, URL filtering, TLS inspection; Cisco Secure Firewall concepts", "format": "Lecture + Workshop", "hours": 3},
+    {"id": "2.3", "title": "pfSense or OPNsense Lab", "content": "Rules, NAT, VLANs, IPS with Suricata, VPN", "format": "Lab", "hours": 3},
+    {"id": "2.4", "title": "IPS", "content": "IPS technologies, signatures, implementation", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Endpoint, Layer 2 & Cryptography",
+   "hours": 6,
+   "focus": "Endpoint protection, Layer 2 attacks and mitigation, integrity, authenticity, PKI",
+   "intro": "Participants protect endpoints and the switched network against Layer 2 attacks, then apply the cryptography that VPNs and management protocols rely on: hashing, signatures and certificates. Validated lab: a switch that stops MAC flooding, DHCP spoofing and ARP spoofing, and a certificate issued by the lab certificate authority.",
+   "chapters": [
+    {"id": "3.1", "title": "Endpoint & Layer 2 Security", "content": "Endpoint protection, Layer 2 attacks and mitigation", "format": "Lecture + Lab", "hours": 3},
+    {"id": "3.2", "title": "Cryptography", "content": "Integrity, authenticity, PKI", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "VPNs, Zero Trust & Testing",
+   "hours": 9,
+   "focus": "Site-to-site IPsec, remote access with SSL and WireGuard, ZTNA, security testing",
+   "intro": "Participants connect sites with IPsec VPNs, give remote users access with IPsec, SSL VPN and WireGuard, compare these with zero trust network access, then test the network's defences with the standard tools. Validated lab: two sites joined by an IPsec VPN, a remote user connected over WireGuard, and a scan report that confirms only the intended services are exposed.",
+   "chapters": [
+    {"id": "4.1", "title": "Site-to-Site VPNs", "content": "IPsec concepts and configuration", "format": "Lecture + Lab", "hours": 3},
+    {"id": "4.2", "title": "Remote-Access VPNs", "content": "IPsec and SSL VPNs, WireGuard", "format": "Lecture + Lab", "hours": 1.5},
+    {"id": "4.3", "title": "Zero Trust Network Access", "content": "ZTNA principles and products", "format": "Lecture + Workshop", "hours": 1.5},
+    {"id": "4.4", "title": "Security Testing", "content": "Testing techniques and tools", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A secured branch network, validated by tests",
+   "intro": "Teams of two or three secure the network of a branch office from a written brief, reusing the phase labs, then prove their work with validation tests in front of the group.",
+   "chapters": [
+    {"id": "5.1", "title": "Brief & Build", "content": "Read the brief, then deploy AAA, ACLs, a zone-based firewall or pfSense, IPS and Layer 2 security", "format": "Project", "hours": 3},
+    {"id": "5.2", "title": "VPN & Validation", "content": "Site-to-site IPsec VPN to head office, validation test plan and results", "format": "Project", "hours": 1.5},
+    {"id": "5.3", "title": "Demo & Review", "content": "Live tests in front of the group; questions and feedback", "format": "Project", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Securing a Branch Network",
+    "brief": "A branch network secured end to end: AAA for device access, ACLs, a zone-based firewall or pfSense with IPS, Layer 2 protections and a site-to-site IPsec VPN to head office, each control proved by a validation test.",
+    "stack": "Cisco Packet Tracer, Cisco IOS, RADIUS or TACACS+, pfSense or OPNsense, Suricata, IPsec, Nmap",
+    "deliverable": "Configurations, network diagram, validation test plan and results, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

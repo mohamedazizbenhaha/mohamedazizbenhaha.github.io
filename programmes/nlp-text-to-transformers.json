@@ -7,13 +7,34 @@
  "certifications": [],
  "overview": "This programme takes participants through natural language processing from classical text processing to Transformers and large language models. They clean and tokenise text, represent it with bag of words, TF-IDF and word embeddings, build classifiers for sentiment and other tasks, extract entities and relations, and discover topics. They then fine-tune BERT models with Hugging Face, handle multilingual text with attention to Arabic and French, and compare zero- and few-shot LLMs with fine-tuned models. Every chapter ends with a lab, and the programme closes with a final project: an NLP application on multilingual text built and presented by each team.",
  "facts": [
-  {"label": "Audience", "value": "Data scientists and developers who work with text data"},
-  {"label": "Prerequisites", "value": "Python and pandas (course: Python for Data Science) and deep learning basics (course: Machine Learning & Deep Learning, deep learning phase). These are used, not taught"},
-  {"label": "Duration", "value": "27 h: 24 h of chapters + 3 h buffer"},
-  {"label": "Format", "value": "Short lectures followed by guided labs in Jupyter on English, French and Arabic corpora"},
-  {"label": "Lab environment", "value": "One laptop per participant (16 GB RAM, Python 3, JupyterLab, spaCy, NLTK, Hugging Face); GPU notebooks on Google Colab or a GPU server provided by the organiser for fine-tuning; no paid account"},
-  {"label": "Assessment", "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"},
-  {"label": "Outcome", "value": "Participants can build, fine-tune and evaluate NLP models for classification and extraction on English, French and Arabic text, and judge when an LLM is the better tool"}
+  {
+   "label": "Audience",
+   "value": "Data scientists and developers who work with text data"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Python and pandas (course: Python for Data Science) and deep learning basics (course: Machine Learning & Deep Learning, deep learning phase), or equivalent. These are used, not taught"
+  },
+  {
+   "label": "Duration",
+   "value": "27 h: 24 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs in Jupyter on English, French and Arabic corpora"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant (16 GB RAM, Python 3, JupyterLab, spaCy, NLTK, Hugging Face); GPU notebooks on Google Colab or a GPU server provided by the organiser for fine-tuning; an open LLM through Ollama or on the GPU server, or a hosted LLM API key per team with a spending cap, provided by the organiser"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can build, fine-tune and evaluate NLP models for classification and extraction on English, French and Arabic text, and judge when an LLM is the better tool"
+  }
  ],
  "buffer": 3,
  "phases": [
@@ -23,8 +44,20 @@
    "focus": "NLP tasks, tokenisation, normalisation, bag of words, TF-IDF, word embeddings",
    "intro": "Participants see what NLP is used for, then turn raw text into clean tokens with spaCy, NLTK and regular expressions, and into numbers with bag of words, TF-IDF, word2vec and GloVe. Validated lab: a preprocessing pipeline for French and English reviews, and the nearest neighbours of chosen words in an embedding space.",
    "chapters": [
-    {"id": "1.1", "title": "Introduction & Text Processing", "content": "Tasks and applications, tokenisation, normalisation, stemming and lemmatisation, regular expressions, spaCy and NLTK", "format": "Lecture + Lab", "hours": 3},
-    {"id": "1.2", "title": "Text Representation", "content": "Bag of words, TF-IDF, word2vec, GloVe", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "Introduction & Text Processing",
+     "content": "Tasks and applications, tokenisation, normalisation, stemming and lemmatisation, regular expressions, spaCy and NLTK",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Text Representation",
+     "content": "Bag of words, TF-IDF, word2vec, GloVe",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -33,11 +66,29 @@
    "name": "Classical NLP Tasks",
    "hours": 6,
    "focus": "Classification and sentiment, named entities and relations, topic modelling",
-   "intro": "Participants build classical and neural classifiers for sentiment and other labels, extract named entities and relations, and discover the topics of a corpus with LDA and BERTopic. Validated lab: a sentiment classifier evaluated on a held-out set, and the main topics of a news corpus.",
+   "intro": "Participants build classical and neural classifiers for sentiment and other labels, extract named entities and relations, and discover the topics of a corpus with LDA and BERTopic. Validated lab: a sentiment classifier evaluated on a held-out set, and the main topics of a news corpus found with LDA.",
    "chapters": [
-    {"id": "2.1", "title": "Classification & Sentiment", "content": "Classical and neural classifiers", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.2", "title": "Information Extraction", "content": "Named entities, relations", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.3", "title": "Topic Modelling", "content": "LDA, BERTopic", "format": "Lecture + Lab", "hours": 1.5}
+    {
+     "id": "2.1",
+     "title": "Classification & Sentiment",
+     "content": "Classical and neural classifiers",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Information Extraction",
+     "content": "Named entities, relations",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Topic Modelling",
+     "content": "LDA; BERTopic as a preview of Transformer embeddings",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -48,9 +99,27 @@
    "focus": "BERT fine-tuning, multilingual NLP, LLMs for NLP tasks",
    "intro": "Participants fine-tune BERT-family models with Hugging Face, handle translation and the specifics of Arabic and French text, then use LLMs for zero- and few-shot classification and extraction and compare them with the fine-tuned models. Validated lab: the same classification task solved by a fine-tuned multilingual model and by an LLM, with accuracy and cost compared.",
    "chapters": [
-    {"id": "3.1", "title": "Transformers for NLP", "content": "BERT, fine-tuning with Hugging Face", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.2", "title": "Multilingual NLP", "content": "Translation, Arabic and French specifics", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "3.3", "title": "LLMs for NLP Tasks", "content": "Zero- and few-shot classification and extraction, evaluation against fine-tuned models", "format": "Lecture + Lab", "hours": 1.5}
+    {
+     "id": "3.1",
+     "title": "Transformers for NLP",
+     "content": "BERT, fine-tuning with Hugging Face",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Multilingual NLP",
+     "content": "Translation, Arabic and French specifics",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "LLMs for NLP Tasks",
+     "content": "Zero- and few-shot classification and extraction, evaluation against fine-tuned models",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -61,9 +130,27 @@
    "focus": "A multilingual NLP application, presented to the group",
    "intro": "Teams of two or three build an NLP application for classification or extraction on Arabic, French or English text, reusing the phase labs, then present it as they would to a product team.",
    "chapters": [
-    {"id": "4.1", "title": "Brief & Build", "content": "Read the brief, prepare the corpus, build a baseline and fine-tune a Transformer model", "format": "Project", "hours": 3},
-    {"id": "4.2", "title": "Evaluate & Document", "content": "Evaluation per language, error analysis, comparison with an LLM, short report", "format": "Project", "hours": 1.5},
-    {"id": "4.3", "title": "Demo & Review", "content": "Live demo on new text; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, prepare the corpus, build a baseline and fine-tune a Transformer model",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Evaluate & Document",
+     "content": "Evaluation per language, error analysis, comparison with an LLM, short report",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Review",
+     "content": "Live demo on new text; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {

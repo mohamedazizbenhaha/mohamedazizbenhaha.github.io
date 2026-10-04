@@ -1,0 +1,64 @@
+{
+ "slug": "zero-trust-cloud-security-fr",
+ "file": "Zero-Trust-et-securite-du-cloud-15h.docx",
+ "lang": "fr",
+ "title": "Zero Trust et sécurité du cloud",
+ "subtitle": "Planifier l’adoption du zero trust et protéger données et systèmes d’IA dans le cloud",
+ "audience_line": "Responsables sécurité, architectes et dirigeants IT qui définissent une stratégie de sécurité",
+ "certifications": [],
+ "overview": "Cet atelier aide les responsables sécurité et IT à planifier le passage au zero trust et à protéger les données dans le cloud. Les participants découvrent les principes de la NIST SP 800-207 et du modèle de maturité Zero Trust de la CISA, avec l’identité au centre, puis travaillent sur la sécurité des données dans le cloud : chiffrement et gestion des clés, prévention des fuites de données et localisation des données. Ils voient comment l’IA change la détection et la réponse et comment sécuriser les systèmes d’IA eux-mêmes. L’atelier s’achève par un projet final où chaque équipe construit une feuille de route d’adoption du zero trust pour une organisation donnée.",
+ "facts": [
+  {"label": "Public", "value": "Responsables sécurité, architectes et dirigeants IT qui définissent une stratégie de sécurité"},
+  {"label": "Prérequis", "value": "Aucun. Une culture générale en IT ou en sécurité est attendue (le cours Cybersécurité pour les équipes IT aide)"},
+  {"label": "Durée", "value": "15 h : 12 h de chapitres + 3 h de réserve"},
+  {"label": "Format", "value": "Atelier : cours courts, chacun suivi d’exercices de groupe sur le cas d’une organisation"},
+  {"label": "Environnement de TP", "value": "Un portable par participant avec un navigateur ; modèles d’évaluation de maturité ; démonstrations du formateur dans des consoles cloud ; ni compte ni coût pour les participants"},
+  {"label": "Évaluation", "value": "Exercices de groupe revus dans chaque phase et une feuille de route finale présentée au groupe ; attestation de formation pour les participants qui valident les deux"},
+  {"label": "Résultat", "value": "Les participants savent évaluer une organisation selon le modèle de maturité Zero Trust de la CISA et construire une feuille de route priorisée couvrant identité, données et systèmes d’IA"}
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Zero Trust",
+   "hours": 3,
+   "focus": "NIST SP 800-207, modèle de maturité Zero Trust de la CISA, sécurité centrée sur l’identité",
+   "intro": "Les participants apprennent ce que signifie le zero trust en pratique : principes et architecture de la NIST SP 800-207, piliers et niveaux de maturité du modèle de la CISA, et pourquoi l’identité devient le principal contrôle. Exercice validé : l’organisation du cas évaluée sur les cinq piliers de la CISA.",
+   "chapters": [
+    {"id": "1.1", "title": "Principes du zero trust", "content": "NIST SP 800-207, modèle de maturité Zero Trust de la CISA, sécurité centrée sur l’identité", "format": "Cours + atelier", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Données dans le cloud et sécurité de l’IA",
+   "hours": 6,
+   "focus": "Chiffrement et clés, DLP, localisation des données, IA pour la détection, sécurité des systèmes d’IA",
+   "intro": "Les participants décident comment les données cloud sont chiffrées et qui détient les clés, où se place la prévention des fuites de données et comment les règles de localisation contraignent la conception, puis abordent l’IA des deux côtés : comme aide à la détection et à la réponse, et comme nouveau système à sécuriser. Exercice validé : un plan de protection pour le jeu de données le plus sensible de l’organisation du cas.",
+   "chapters": [
+    {"id": "2.1", "title": "Sécurité des données dans le cloud", "content": "Chiffrement, gestion des clés, DLP, localisation des données", "format": "Cours + atelier", "hours": 3},
+    {"id": "2.2", "title": "L’IA et la sécurité", "content": "Détection et réponse appuyées par l’IA, sécurisation des systèmes d’IA", "format": "Cours + atelier", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 3,
+   "focus": "Une feuille de route d’adoption du zero trust, présentée au groupe",
+   "intro": "Par équipes de deux ou trois, les participants construisent une feuille de route d’adoption du zero trust pour une organisation donnée, en réutilisant les exercices de l’atelier, et la présentent comme ils le feraient devant un comité de direction.",
+   "chapters": [
+    {"id": "3.1", "title": "Évaluation et planification", "content": "Maturité actuelle, état cible, initiatives priorisées et jalons", "format": "Projet", "hours": 1.5},
+    {"id": "3.2", "title": "Présentation et revue", "content": "Présenter la feuille de route ; questions et retours", "format": "Projet", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Feuille de route d’adoption du zero trust",
+    "brief": "Une feuille de route zero trust pour une organisation donnée : maturité actuelle sur les piliers de la CISA, état cible, initiatives priorisées pour l’identité, les données et les systèmes d’IA, et jalons.",
+    "stack": "NIST SP 800-207, modèle de maturité Zero Trust de la CISA, modèles d’évaluation",
+    "deliverable": "Évaluation de maturité, feuille de route, présentation"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

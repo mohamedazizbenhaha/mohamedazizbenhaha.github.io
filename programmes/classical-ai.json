@@ -5,15 +5,36 @@
  "subtitle": "Search, logic and probabilistic reasoning: the foundations of artificial intelligence",
  "audience_line": "University students in computer science and engineering",
  "certifications": [],
- "overview": "This one-semester academic course covers the foundations of artificial intelligence: rational agents, search and problem solving, game playing, knowledge representation and logic, and reasoning under uncertainty and over time. It follows the structure of Russell and Norvig's Artificial Intelligence: A Modern Approach. Each part combines lectures that derive the algorithms with an implementation mini-project in Python, so that students both understand and build each method. The course closes with a capstone project: an AI system combining search, logic or probabilistic reasoning, proposed, developed and presented by each team.",
+ "overview": "This one-semester academic course covers the foundations of artificial intelligence: rational agents, search and problem solving, game playing, knowledge representation and logic, and reasoning under uncertainty and over time. It follows the structure of Russell and Norvig's Artificial Intelligence: A Modern Approach (4th edition). Each part combines lectures that derive the algorithms with an implementation mini-project in Python, so that students both understand and build each method. The course closes with a capstone project: an AI system combining search, logic or probabilistic reasoning, proposed, developed and presented by each team.",
  "facts": [
-  {"label": "Audience", "value": "University students in computer science and engineering"},
-  {"label": "Prerequisites", "value": "Python programming (course: Python Programming Fundamentals); discrete mathematics and basic probability"},
-  {"label": "Duration", "value": "90 h: 81 h of chapters + 9 h buffer, over one academic semester"},
-  {"label": "Format", "value": "Lectures that derive each algorithm, followed by implementation mini-projects in Python"},
-  {"label": "Lab environment", "value": "One laptop per student with Python 3, Jupyter and VS Code; course code and datasets in a shared repository; no account or cost"},
-  {"label": "Assessment", "value": "Six mini-projects and a capstone project presented to the class; certificate of completion for students who complete both; grading follows the host institution's rules"},
-  {"label": "Outcome", "value": "Students can formulate AI problems, implement and compare search, logic and probabilistic algorithms, and justify which method fits a problem"}
+  {
+   "label": "Audience",
+   "value": "University students in computer science and engineering"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Python programming (course: Python Programming Fundamentals), or equivalent; discrete mathematics and basic probability"
+  },
+  {
+   "label": "Duration",
+   "value": "90 h: 81 h of chapters + 9 h buffer, over one academic semester"
+  },
+  {
+   "label": "Format",
+   "value": "Lectures that derive each algorithm, followed by implementation mini-projects in Python"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per student with Python 3, Jupyter and VS Code; course code and datasets in a shared repository; no account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "Six mini-projects and a capstone project presented to the class; certificate of completion for students who complete both; grading follows the host institution's rules"
+  },
+  {
+   "label": "Outcome",
+   "value": "Students can formulate AI problems, implement and compare search, logic and probabilistic algorithms, and justify which method fits a problem"
+  }
  ],
  "buffer": 9,
  "phases": [
@@ -23,9 +44,27 @@
    "focus": "What AI is, agents and environments, rationality",
    "intro": "Students see what AI is, where it came from and where it is used, including its ethical questions, then learn the agent framework used throughout the course: environments, rationality and agent architectures. Mini-project: a simple agent designed and simulated in a grid environment.",
    "chapters": [
-    {"id": "1.1", "title": "What AI Is", "content": "Definitions, history, applications, ethics", "format": "Lecture + Workshop", "hours": 3},
-    {"id": "1.2", "title": "Intelligent Agents", "content": "Agents, environments, rationality, agent architectures", "format": "Lecture + Lab", "hours": 3},
-    {"id": "1.3", "title": "Mini-Project: Agents", "content": "Design and simulate a simple agent", "format": "Project", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "What AI Is",
+     "content": "Definitions, history, applications, ethics",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Intelligent Agents",
+     "content": "Agents, environments, rationality, agent architectures",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Mini-Project: Agents",
+     "content": "Design and simulate a simple agent",
+     "format": "Project",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -36,12 +75,48 @@
    "focus": "Uninformed and heuristic search, local search, evolutionary methods, CSPs",
    "intro": "Students formulate problems as state spaces and solve them with uninformed and heuristic search, local search, genetic algorithms and particle swarms, and constraint satisfaction. Mini-project: a planning or optimisation problem solved and compared with at least two search methods.",
    "chapters": [
-    {"id": "2.1", "title": "Uninformed Search", "content": "Problem formulation, BFS, DFS, uniform-cost search, iterative deepening", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.2", "title": "Heuristic Search", "content": "Greedy best-first, A*, admissibility and consistency", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.3", "title": "Local Search", "content": "Hill climbing, simulated annealing, local beam search", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.4", "title": "Evolutionary & Swarm Methods", "content": "Genetic algorithms, particle swarm optimisation", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.5", "title": "Constraint Satisfaction", "content": "CSPs, backtracking, arc consistency", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.6", "title": "Mini-Project: Search", "content": "Solve a planning or optimisation problem with search", "format": "Project", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Uninformed Search",
+     "content": "Problem formulation, BFS, DFS, uniform-cost search, iterative deepening",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Heuristic Search",
+     "content": "Greedy best-first, A*, admissibility and consistency",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Local Search",
+     "content": "Hill climbing, simulated annealing, local beam search",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.4",
+     "title": "Evolutionary & Swarm Methods",
+     "content": "Genetic algorithms, particle swarm optimisation",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.5",
+     "title": "Constraint Satisfaction",
+     "content": "CSPs, backtracking, arc consistency",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.6",
+     "title": "Mini-Project: Search",
+     "content": "Solve a planning or optimisation problem with search",
+     "format": "Project",
+     "hours": 3
+    }
    ],
    "math": "Graph theory (state spaces, paths) · Complexity (time and space of search algorithms) · Optimisation (objective functions, local optima, annealing schedules)",
    "project": null
@@ -52,10 +127,22 @@
    "focus": "Minimax, alpha-beta pruning, evaluation functions, Monte Carlo tree search",
    "intro": "Students search against an opponent with minimax and alpha-beta pruning, design evaluation functions, and use Monte Carlo tree search when the game tree is too large. Mini-project: a game-playing agent evaluated against baseline players.",
    "chapters": [
-    {"id": "3.1", "title": "Adversarial Search", "content": "Minimax, alpha-beta pruning, evaluation functions, Monte Carlo tree search", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.2", "title": "Mini-Project: Game Agent", "content": "Build and evaluate a game-playing agent", "format": "Project", "hours": 3}
+    {
+     "id": "3.1",
+     "title": "Adversarial Search",
+     "content": "Minimax, alpha-beta pruning, evaluation functions, Monte Carlo tree search",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Mini-Project: Game Agent",
+     "content": "Build and evaluate a game-playing agent",
+     "format": "Project",
+     "hours": 3
+    }
    ],
-   "math": null,
+   "math": "Game theory (zero-sum games, minimax value) · Probability (Monte Carlo estimates, UCB1 in MCTS)",
    "project": null
   },
   {
@@ -64,11 +151,41 @@
    "focus": "Propositional and first-order logic, inference, knowledge engineering",
    "intro": "Students represent knowledge in propositional and first-order logic and derive new facts with resolution, DPLL, forward and backward chaining and unification. Mini-project: a small knowledge base and reasoner that answers queries in a chosen domain.",
    "chapters": [
-    {"id": "4.1", "title": "Propositional Logic", "content": "Syntax, semantics, entailment", "format": "Lecture + Lab", "hours": 3},
-    {"id": "4.2", "title": "Propositional Inference", "content": "Resolution, DPLL, forward and backward chaining", "format": "Lecture + Lab", "hours": 3},
-    {"id": "4.3", "title": "First-Order Logic", "content": "Syntax, semantics, knowledge engineering", "format": "Lecture + Lab", "hours": 3},
-    {"id": "4.4", "title": "First-Order Inference", "content": "Unification, chaining, resolution", "format": "Lecture + Lab", "hours": 3},
-    {"id": "4.5", "title": "Mini-Project: Knowledge-Based Agent", "content": "Build a small knowledge base and reasoner", "format": "Project", "hours": 3}
+    {
+     "id": "4.1",
+     "title": "Propositional Logic",
+     "content": "Syntax, semantics, entailment",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Propositional Inference",
+     "content": "Resolution, DPLL, forward and backward chaining",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.3",
+     "title": "First-Order Logic",
+     "content": "Syntax, semantics, knowledge engineering",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.4",
+     "title": "First-Order Inference",
+     "content": "Unification, chaining, resolution",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.5",
+     "title": "Mini-Project: Knowledge-Based Agent",
+     "content": "Build a small knowledge base and reasoner",
+     "format": "Project",
+     "hours": 3
+    }
    ],
    "math": "Formal logic (syntax, semantics, entailment, soundness and completeness) · Satisfiability · Unification",
    "project": null
@@ -79,11 +196,41 @@
    "focus": "Probability, Bayesian networks, exact and approximate inference",
    "intro": "Students reason under uncertainty with probability and Bayes' rule, model dependencies with Bayesian networks, and answer queries with exact inference and with sampling methods. Mini-project: a Bayesian network for a real decision problem, queried and checked against data.",
    "chapters": [
-    {"id": "5.1", "title": "Uncertainty & Probability", "content": "Probability axioms, Bayes' rule, independence", "format": "Lecture + Lab", "hours": 3},
-    {"id": "5.2", "title": "Bayesian Networks", "content": "Structure, conditional independence, semantics", "format": "Lecture + Lab", "hours": 3},
-    {"id": "5.3", "title": "Exact Inference", "content": "Enumeration, variable elimination", "format": "Lecture + Lab", "hours": 3},
-    {"id": "5.4", "title": "Approximate Inference", "content": "Sampling, likelihood weighting, MCMC", "format": "Lecture + Lab", "hours": 3},
-    {"id": "5.5", "title": "Mini-Project: Bayesian Network", "content": "Model and query a real decision problem", "format": "Project", "hours": 3}
+    {
+     "id": "5.1",
+     "title": "Uncertainty & Probability",
+     "content": "Probability axioms, Bayes' rule, independence",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Bayesian Networks",
+     "content": "Structure, conditional independence, semantics",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.3",
+     "title": "Exact Inference",
+     "content": "Enumeration, variable elimination",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.4",
+     "title": "Approximate Inference",
+     "content": "Sampling, likelihood weighting, MCMC",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.5",
+     "title": "Mini-Project: Bayesian Network",
+     "content": "Model and query a real decision problem",
+     "format": "Project",
+     "hours": 3
+    }
    ],
    "math": "Probability (axioms, conditional probability, Bayes' rule, independence) · Sampling and Markov chain Monte Carlo",
    "project": null
@@ -94,9 +241,27 @@
    "focus": "Markov processes, hidden Markov models, filtering, smoothing, Viterbi",
    "intro": "Students model processes that change over time with Markov chains and hidden Markov models, and infer hidden states with filtering, smoothing and the Viterbi algorithm. Mini-project: sequence labelling or tracking with a hidden Markov model.",
    "chapters": [
-    {"id": "6.1", "title": "Temporal Models & HMMs", "content": "Markov processes, hidden Markov models", "format": "Lecture + Lab", "hours": 3},
-    {"id": "6.2", "title": "Inference over Time", "content": "Filtering, smoothing, Viterbi", "format": "Lecture + Lab", "hours": 3},
-    {"id": "6.3", "title": "Mini-Project: HMM", "content": "Sequence labelling or tracking with an HMM", "format": "Project", "hours": 3}
+    {
+     "id": "6.1",
+     "title": "Temporal Models & HMMs",
+     "content": "Markov processes, hidden Markov models",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "6.2",
+     "title": "Inference over Time",
+     "content": "Filtering, smoothing, Viterbi",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "6.3",
+     "title": "Mini-Project: HMM",
+     "content": "Sequence labelling or tracking with an HMM",
+     "format": "Project",
+     "hours": 3
+    }
    ],
    "math": "Markov chains · Dynamic programming (forward-backward, Viterbi)",
    "project": null
@@ -107,16 +272,40 @@
    "focus": "A capstone AI system, proposed, developed and presented",
    "intro": "Teams of two or three propose and build an AI system that combines at least two parts of the course, reusing their mini-projects, then present it to the class.",
    "chapters": [
-    {"id": "7.1", "title": "Proposal & Design", "content": "Problem statement, choice of methods, design and evaluation plan, approved by the lecturer", "format": "Project", "hours": 3},
-    {"id": "7.2", "title": "Development", "content": "Implementation and experiments", "format": "Project", "hours": 3},
-    {"id": "7.3", "title": "Evaluation & Report", "content": "Results, comparison with a baseline, written report", "format": "Project", "hours": 1.5},
-    {"id": "7.4", "title": "Presentation", "content": "Presentation to the class; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "7.1",
+     "title": "Proposal & Design",
+     "content": "Problem statement, choice of methods, design and evaluation plan, approved by the lecturer",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "7.2",
+     "title": "Development",
+     "content": "Implementation and experiments",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "7.3",
+     "title": "Evaluation & Report",
+     "content": "Results, comparison with a baseline, written report",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "7.4",
+     "title": "Presentation",
+     "content": "Presentation to the class; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {
     "title": "Capstone AI System",
-    "brief": "An AI system that combines search, logic or probabilistic reasoning to solve a problem chosen by the team, evaluated against a baseline and explained in a written report.",
-    "stack": "Python 3, Jupyter, NumPy, standard AI libraries where appropriate",
+    "brief": "An AI system that combines at least two of the course's methods (search, game playing, logic, probabilistic or temporal reasoning) to solve a problem chosen by the team, evaluated against a baseline and explained in a written report.",
+    "stack": "Python 3, Jupyter, NumPy, aima-python, NetworkX, pgmpy, hmmlearn",
     "deliverable": "Proposal, code repository, written report, presentation"
    }
   }

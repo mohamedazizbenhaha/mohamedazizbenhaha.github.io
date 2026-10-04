@@ -1,0 +1,67 @@
+{
+ "slug": "technical-academic-writing-fr",
+ "file": "Redaction-technique-et-academique-18h.docx",
+ "lang": "fr",
+ "title": "Rédaction technique et académique",
+ "subtitle": "Chercher, citer et écrire clairement, avec des sources honnêtes et des figures utiles",
+ "audience_line": "Étudiants, chercheurs et ingénieurs qui rédigent des rapports et des articles",
+ "certifications": [],
+ "overview": "Ce cours gratuit aide les participants à rédiger des documents techniques et académiques clairs, honnêtes et bien sourcés. Ils gèrent leurs références avec Zotero, lisent et résument des articles, apprennent les règles de l’éthique de publication et la manière d’éviter le plagiat, puis appliquent les principes d’une écriture claire, précise et concise, utilisent la voix passive à bon escient, et conçoivent des figures qui servent le texte. Le cours s’achève par un projet final où chaque participant rédige une courte section d’article avec citations et figure, et relit le travail d’un pair.",
+ "facts": [
+  {"label": "Public", "value": "Étudiants, chercheurs et ingénieurs qui rédigent des rapports et des articles"},
+  {"label": "Prérequis", "value": "Aucun. Les participants apportent un projet d’écriture personnel s’ils en ont un"},
+  {"label": "Durée", "value": "18 h : 15 h de chapitres + 3 h de réserve"},
+  {"label": "Format", "value": "Cours gratuit : cours courts, chacun suivi d’exercices d’écriture et de retours entre pairs"},
+  {"label": "Environnement de TP", "value": "Un portable par participant avec Zotero, un traitement de texte et un outil de graphiques ; ni compte ni coût"},
+  {"label": "Évaluation", "value": "Exercices revus dans chaque phase et une section d’article finale relue par un pair ; attestation de formation pour les participants qui valident les deux"},
+  {"label": "Résultat", "value": "Les participants savent gérer et citer leurs sources avec Zotero, résumer des articles, éviter le plagiat, et rédiger des sections claires avec des figures efficaces"}
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Sources et éthique",
+   "hours": 6,
+   "focus": "Zotero, lecture et résumé d’articles, éthique de publication, plagiat",
+   "intro": "Les participants constituent une bibliothèque de références dans Zotero et citent à partir d’elle, apprennent à lire et résumer efficacement des articles, et étudient l’éthique de publication et la manière d’éviter le plagiat. Exercice validé : le résumé d’un article en une page avec des citations correctement générées.",
+   "chapters": [
+    {"id": "1.1", "title": "Gestion des références", "content": "Zotero : installation, bibliothèque, citations, exercice", "format": "Cours + TP", "hours": 3},
+    {"id": "1.2", "title": "Lire et résumer", "content": "Résumer des articles", "format": "Cours + atelier", "hours": 1.5},
+    {"id": "1.3", "title": "Éthique", "content": "Éthique de publication, éviter le plagiat", "format": "Cours + atelier", "hours": 1.5}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Écriture et figures",
+   "hours": 6,
+   "focus": "Clarté, précision, concision, voix et style, figures",
+   "intro": "Les participants appliquent les règles de l’écriture académique pour la clarté, la précision et la concision, choisissent délibérément entre voix active et passive, et conçoivent des figures qui portent chacune un seul message. Exercice validé : un paragraphe réécrit pour gagner en clarté et une figure refaite à partir d’un original surchargé.",
+   "chapters": [
+    {"id": "2.1", "title": "Règles d’écriture", "content": "Règles de l’écriture académique ; clarté, précision, concision", "format": "Cours + atelier", "hours": 3},
+    {"id": "2.2", "title": "Style", "content": "Voix passive et style", "format": "Cours + atelier", "hours": 1.5},
+    {"id": "2.3", "title": "Visualisation de données", "content": "L’essentiel pour les articles", "format": "Cours + atelier", "hours": 1.5}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 3,
+   "focus": "Une courte section d’article, rédigée et relue par un pair",
+   "intro": "Chaque participant rédige une courte section d’article ou de rapport, en réutilisant les exercices du cours, et relit la section d’un pair.",
+   "chapters": [
+    {"id": "3.1", "title": "Rédaction", "content": "Une courte section d’article avec citations Zotero et une figure", "format": "Projet", "hours": 1.5},
+    {"id": "3.2", "title": "Relecture par les pairs", "content": "Relire la section d’un pair, réviser la sienne ; retours", "format": "Projet", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Section d’article relue par un pair",
+    "brief": "Une courte section d’article ou de rapport avec des citations gérées dans Zotero et une figure, relue par un pair puis révisée.",
+    "stack": "Zotero, un traitement de texte, un outil de graphiques",
+    "deliverable": "Section révisée, notes de relecture"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

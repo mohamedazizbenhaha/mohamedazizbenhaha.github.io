@@ -1,0 +1,321 @@
+{
+ "slug": "machine-learning-deep-learning-fr",
+ "file": "Machine-learning-et-deep-learning-75h.docx",
+ "lang": "fr",
+ "title": "Machine learning et deep learning",
+ "subtitle": "Des modèles linéaires aux Transformers, avec les mathématiques qui les fondent",
+ "audience_line": "Développeurs, analystes et ingénieurs qui veulent construire des modèles de machine learning",
+ "certifications": [],
+ "overview": "Ce programme apprend aux participants à construire, évaluer et expliquer des modèles de machine learning, et les mathématiques qui les font fonctionner : apprentissage supervisé, des régressions aux arbres, ensembles et SVM, avec évaluation rigoureuse, optimisation, pipelines et suivi des expériences ; apprentissage non supervisé ; deep learning, d’un réseau construit à la main à PyTorch, aux CNN, à l’attention et au Transformer. Une phase d’IA responsable couvre explicabilité, équité et gouvernance, un module optionnel d’apprentissage par renforcement ajoute 9 h, et le programme s’achève par un projet de bout en bout présenté par chaque équipe.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Développeurs, analystes et ingénieurs qui veulent construire des modèles de machine learning"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Python, NumPy et pandas (cours : Python pour la data science), ou équivalent ; algèbre du lycée. Les mathématiques nécessaires sont enseignées dans le cours"
+  },
+  {
+   "label": "Durée",
+   "value": "75 h : 66 h de chapitres + 9 h de réserve ; + 9 h en option (renforcement)"
+  },
+  {
+   "label": "Format",
+   "value": "Cours qui établissent chaque méthode, suivis de TP dans Jupyter ; les mathématiques sont enseignées là où elles servent"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant (16 Go de RAM, Python 3, JupyterLab, scikit-learn, PyTorch, MLflow) ; GPU sur Google Colab ou serveur fourni par l’organisateur ; aucun compte cloud payant"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent poser un problème de ML, comparer modèles classiques et de deep learning, les évaluer sans fuite de données, expliquer leurs prédictions et suivre les expériences"
+  }
+ ],
+ "buffer": 9,
+ "phases": [
+  {
+   "name": "Apprentissage supervisé",
+   "hours": 24,
+   "focus": "Régression, classification, arbres, ensembles, SVM, évaluation, pipelines",
+   "intro": "Les participants apprennent comment un modèle généralise et comment le mesurer honnêtement, puis construisent les principales méthodes supervisées à partir de leurs mathématiques : régression linéaire et logistique entraînées par descente de gradient, arbres de décision et méthodes d’ensemble, et machines à vecteurs de support. Ils terminent par la validation croisée, la recherche d’hyperparamètres, les pipelines de variables et le suivi des expériences avec MLflow. TP validé : un pipeline scikit-learn optimisé comparé à deux modèles de référence sur un jeu de test réservé, chaque exécution étant suivie dans MLflow.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Formulation du problème et régression linéaire",
+     "content": "Régression et classification, généralisation, découpage des données, fuite de données ; vecteurs, matrices, équation normale",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Descente de gradient et régularisation",
+     "content": "Dérivées, règle de dérivation en chaîne, descente de gradient, ridge et lasso",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Régression logistique et métriques",
+     "content": "Sigmoïde, maximum de vraisemblance, entropie croisée, précision, rappel, courbe ROC",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.4",
+     "title": "Arbres de décision",
+     "content": "Entropie, gain d’information, indice de Gini, CART",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.5",
+     "title": "Méthodes d’ensemble",
+     "content": "Bagging, forêts aléatoires, boosting (XGBoost, LightGBM)",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.6",
+     "title": "Machines à vecteurs de support",
+     "content": "Marges, marge souple, noyaux, SVR",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.7",
+     "title": "Évaluation et optimisation",
+     "content": "Validation croisée, courbes d’apprentissage, recherche en grille, aléatoire et bayésienne",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.8",
+     "title": "Ingénierie des variables et pipelines",
+     "content": "Encodage, mise à l’échelle, pipelines scikit-learn, suivi avec MLflow",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": "Algèbre linéaire (vecteurs, matrices, équation normale) · Analyse (dérivées, dérivation en chaîne, gradient) · Statistiques (maximum de vraisemblance, entropie croisée, biais et variance) · Théorie de l’information (entropie, gain d’information) · Optimisation (convexité, descente de gradient, pénalités L1 et L2, optimisation sous contraintes pour la marge des SVM, noyaux)",
+   "project": null
+  },
+  {
+   "name": "Apprentissage non supervisé",
+   "hours": 12,
+   "focus": "Clustering, modèles de mélange, ACP, apprentissage de variétés, anomalies, recommandation",
+   "intro": "Les participants trouvent une structure dans des données sans étiquettes : clustering hiérarchique, par densité et par centroïdes, mélanges gaussiens entraînés par l’algorithme EM, réduction de dimension avec l’ACP, t-SNE et UMAP, détection d’anomalies, règles d’association et filtrage collaboratif. TP validé : une segmentation de clients avec K-Means et un mélange gaussien, visualisée après ACP, avec un choix justifié du nombre de groupes.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Problématique non supervisée",
+     "content": "Clustering, estimation de densité, réduction de dimension",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Clustering hiérarchique et DBSCAN",
+     "content": "Critères d’agrégation, clustering par densité",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "K-Means et mélanges gaussiens",
+     "content": "Fonction objectif, algorithme de Lloyd, espérance-maximisation (EM)",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.4",
+     "title": "ACP",
+     "content": "Covariance, décomposition en valeurs propres, variance expliquée",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.5",
+     "title": "Variétés et anomalies",
+     "content": "t-SNE, UMAP, forêt d’isolement (isolation forest)",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.6",
+     "title": "Règles d’association et recommandation",
+     "content": "Apriori, support, confiance et lift, filtrage collaboratif",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": "Probabilités (gaussienne multivariée, espérance-maximisation) · Algèbre linéaire (matrice de covariance, décomposition en valeurs propres) · Distances et mesures de similarité",
+   "project": null
+  },
+  {
+   "name": "Deep learning",
+   "hours": 15,
+   "focus": "Réseaux de neurones à la main, rétropropagation, PyTorch, CNN, attention et Transformers",
+   "intro": "Les participants construisent un réseau de neurones en NumPy pour voir chaque étape, établissent la rétropropagation, puis entraînent des modèles avec PyTorch : réseaux convolutifs et apprentissage par transfert pour les images, réseaux récurrents pour les séquences, attention et architecture Transformer. TP validé : un classifieur d’images affiné à partir d’un CNN pré-entraîné dans PyTorch, avec ses courbes d’entraînement et ses points de sauvegarde.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Perceptron et MLP à la main",
+     "content": "Implémentation d’un perceptron multicouche en NumPy",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Rétropropagation",
+     "content": "Graphes de calcul, disparition du gradient",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Entraîner avec PyTorch",
+     "content": "Tenseurs, autograd, boucles d’entraînement, optimiseurs (SGD, Adam), régularisation, points de sauvegarde",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.4",
+     "title": "CNN",
+     "content": "Convolution, pooling, architectures, apprentissage par transfert",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.5",
+     "title": "Séquences et attention",
+     "content": "RNN, LSTM et GRU, attention, architecture Transformer",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": "Analyse (dérivation en chaîne sur les graphes de calcul) · Algèbre linéaire (produits matriciels, convolution) · Optimisation (descente de gradient stochastique, Adam) · Probabilités (softmax, entropie croisée)",
+   "project": null
+  },
+  {
+   "name": "IA responsable",
+   "hours": 6,
+   "focus": "Explicabilité, équité, règlement européen sur l’IA, model cards",
+   "intro": "Les participants expliquent les prédictions des modèles de façon globale et locale, mesurent et réduisent les biais, et documentent les modèles pour la gouvernance selon le règlement européen sur l’IA (AI Act) et les règles de protection des données. TP validé : une explication SHAP et un rapport d’équité pour le modèle de la phase 1, résumés dans une model card.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Explicabilité",
+     "content": "SHAP, LIME, importance des variables",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Biais, équité et gouvernance",
+     "content": "Métriques d’équité, règlement européen sur l’IA (AI Act) et protection des données, model cards",
+     "format": "Cours + atelier",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Apprentissage par renforcement",
+   "optional": true,
+   "hours": 9,
+   "focus": "MDP, programmation dynamique, Q-learning, DQN, gradients de politique",
+   "intro": "Ce module optionnel ajoute 9 h pour les groupes qui le souhaitent. Les participants modélisent des problèmes de décision comme des processus de décision markoviens, les résolvent par programmation dynamique, puis apprennent par l’expérience avec Q-learning et SARSA, les deep Q-networks et les méthodes de gradient de politique. TP validé : un agent entraîné par Q-learning puis par DQN sur un environnement Gymnasium, avec ses courbes d’apprentissage comparées.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Renforcement et MDP",
+     "content": "Agent, environnement, récompenses, politiques, équations de Bellman",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "Programmation dynamique",
+     "content": "Itération sur les valeurs et sur les politiques",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Q-learning et SARSA",
+     "content": "Apprentissage par différence temporelle",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.4",
+     "title": "Deep Q-Networks",
+     "content": "Mémoire de rejeu, réseaux cibles",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.5",
+     "title": "Gradients de politique et acteur-critique",
+     "content": "REINFORCE, A2C, présentation de PPO",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": "Probabilités (processus de décision markoviens, espérances) · Programmation dynamique (équations de Bellman) · Analyse (théorème du gradient de politique, astuce de la log-dérivée)",
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 9,
+   "focus": "Un projet de machine learning de bout en bout, présenté au groupe",
+   "intro": "Par équipes de deux ou trois, les participants mènent un problème de machine learning de sa formulation à son explication sur un jeu de données fourni, en réutilisant les TP de phase, puis le présentent comme ils le feraient devant une équipe produit.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Formulation et exploration",
+     "content": "Poser le problème et la métrique, analyse exploratoire, stratégie de découpage",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "6.2",
+     "title": "Modèles et expériences",
+     "content": "Pipeline de variables, comparaison de modèles classiques et d’un modèle de deep learning, le tout suivi dans MLflow",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "6.3",
+     "title": "Explication et documentation",
+     "content": "Rapport d’explicabilité, model card, court rapport technique",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "6.4",
+     "title": "Présentation et revue",
+     "content": "Présentation des résultats et des limites ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Projet de machine learning de bout en bout",
+    "brief": "Un problème de machine learning mené de la formulation et de l’exploration à un pipeline de variables, une comparaison de modèles classiques avec un modèle de deep learning, un rapport d’explicabilité et une model card, chaque expérience étant suivie.",
+    "stack": "Python, pandas, scikit-learn, XGBoost ou LightGBM, PyTorch, MLflow, SHAP, JupyterLab",
+    "deliverable": "Dépôt avec notebooks et code du pipeline, exécutions MLflow, rapport d’explicabilité, model card, présentation"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

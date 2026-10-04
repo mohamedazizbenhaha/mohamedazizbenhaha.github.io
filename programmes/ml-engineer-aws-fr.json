@@ -1,0 +1,200 @@
+{
+ "slug": "ml-engineer-aws-fr",
+ "file": "Ingenierie-du-machine-learning-sur-AWS-45h.docx",
+ "lang": "fr",
+ "title": "Ingénierie du machine learning sur AWS",
+ "subtitle": "Préparer les données, entraîner, déployer, automatiser et superviser des modèles avec SageMaker AI",
+ "audience_line": "Data scientists et ingénieurs qui mettent des modèles de machine learning en production sur AWS",
+ "certifications": [
+  "AWS Certified Machine Learning Engineer – Associate (MLA-C01)"
+ ],
+ "overview": "Ce programme apprend aux participants à construire et exploiter des systèmes de machine learning sur Amazon SageMaker AI et prépare l’examen AWS Certified Machine Learning Engineer – Associate (MLA-C01). Ils préparent et étiquettent les données, construisent les variables et vérifient les biais, entraînent et optimisent les modèles, les déploient sur des endpoints et par transformation par lots, automatisent le cycle de vie avec SageMaker Pipelines et le Model Registry, supervisent dérive et coûts, sécurisent les charges de travail, et mettent l’IA générative en production avec Bedrock. Un entraînement à l’examen clôt le contenu, et le programme s’achève par un système de ML en production construit et présenté par chaque équipe.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Data scientists et ingénieurs qui mettent des modèles de machine learning en production sur AWS"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Machine learning (cours : Machine learning et deep learning) et services d’IA AWS (cours : AWS AI Practitioner et IA générative), avec les services AWS essentiels (cours : AWS Cloud Practitioner), ou équivalent"
+  },
+  {
+   "label": "Durée",
+   "value": "45 h : 39 h de chapitres + 6 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés dans SageMaker Studio ; un même modèle repris dans toutes les phases ; entraînement à l’examen"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant avec un navigateur ; un compte AWS de test par équipe (domaine SageMaker AI, quota GPU, alerte budgétaire) fourni par l’organisateur ; endpoints supprimés et sessions Canvas fermées à la fin de chaque TP"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase, des questions d’entraînement et un projet final présenté au groupe ; attestation de formation si les TP et le projet sont validés"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent construire un pipeline automatisé de la préparation des données à un endpoint supervisé sur SageMaker AI, le sécuriser, et se présenter à l’examen MLA-C01"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Infrastructure de ML et préparation des données",
+   "hours": 9,
+   "focus": "Infrastructure SageMaker AI, ingestion, Data Wrangler, Feature Store, contrôle des biais",
+   "intro": "Les participants mettent en place l’infrastructure utilisée par toutes les phases suivantes : un domaine SageMaker AI, des rôles d’exécution, S3, des instances GPU et FSx. Ils ingèrent et préparent ensuite les données avec Glue et Data Wrangler, enregistrent les variables dans Feature Store et vérifient les biais des données avec Clarify avant l’entraînement. TP validé : un groupe de variables dans Feature Store construit à partir de données brutes, avec un rapport de biais Clarify avant entraînement.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Infrastructure de ML",
+     "content": "Domaines SageMaker AI, rôles d’exécution IAM, S3, instances GPU, FSx",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Ingestion et préparation des données",
+     "content": "Glue et Glue DataBrew, Data Wrangler dans SageMaker Canvas, ingestion en flux (Kinesis), formats de données (Parquet, CSV, RecordIO), qualité des données, étiquetage avec Ground Truth",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Ingénierie des variables et biais",
+     "content": "Feature Store, transformations, déséquilibre des classes, traitement des données personnelles, biais avant entraînement avec Clarify",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Développement des modèles",
+   "hours": 6,
+   "focus": "Algorithmes intégrés, script mode, entraînement distribué, optimisation, évaluation",
+   "intro": "Les participants entraînent des modèles avec les algorithmes intégrés et leur propre code de framework en script mode, répartissent l’entraînement sur plusieurs instances, suivent les expériences, puis optimisent automatiquement les hyperparamètres et évaluent et expliquent les résultats. TP validé : un job d’optimisation dont le meilleur modèle bat la référence sur la métrique d’évaluation, avec un rapport d’explicabilité Clarify.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Entraînement",
+     "content": "Choix entre services d’IA, Bedrock, JumpStart ou entraînement personnalisé ; algorithmes intégrés, script mode, entraînement sur instances Spot, entraînement distribué, SageMaker Debugger, expériences avec MLflow managé",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Optimisation et évaluation",
+     "content": "Optimisation automatique des modèles, métriques d’évaluation, Clarify",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Déploiement et MLOps",
+   "hours": 9,
+   "focus": "Endpoints, mise à l’échelle automatique, SageMaker Pipelines, Model Registry, CI/CD, supervision",
+   "intro": "Les participants choisissent la bonne option d’inférence, endpoints temps réel, serverless et asynchrones et transformation par lots, avec mise à l’échelle automatique, automatisent le cycle de vie avec SageMaker Pipelines, le Model Registry et la CI/CD, puis surveillent la production avec Model Monitor, la détection de dérive, CloudWatch et la maîtrise des coûts. TP validé : un pipeline qui enregistre un modèle, le déploie après approbation et déclenche une alerte quand les données d’entrée dérivent.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Déploiement",
+     "content": "Endpoints temps réel, serverless et asynchrones, transformation par lots (batch transform), endpoints multi-modèles, Inference Recommender, conteneurs personnalisés dans ECR, mise à l’échelle automatique",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "MLOps",
+     "content": "SageMaker Pipelines, Model Registry, CloudFormation et CDK, EventBridge, CodePipeline ; déploiements blue/green, canary et shadow",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Supervision et coûts",
+     "content": "Model Monitor (qualité des données, qualité du modèle, dérive des biais et des attributions), tests A/B, CloudWatch, CloudTrail, Cost Explorer, Savings Plans et Spot",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Sécurité, IA générative et préparation à l’examen",
+   "hours": 9,
+   "focus": "Moindre privilège, isolation VPC, chiffrement, Bedrock en production, MLA-C01",
+   "intro": "Les participants sécurisent les charges de travail de ML avec IAM au moindre privilège, l’isolation VPC et le chiffrement, mettent l’IA générative en production avec l’affinage Bedrock, les Knowledge Bases et les Agents, puis s’entraînent sur des questions MLA-C01. TP validé : un job d’entraînement et un endpoint qui tournent sans accès Internet dans un VPC, avec données et artefacts de modèle chiffrés.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Sécurité pour le ML",
+     "content": "IAM au moindre privilège, isolation VPC, chiffrement, conformité",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "IA générative en production",
+     "content": "Personnalisation Bedrock (un petit affinage, inférence à la demande), Knowledge Bases, Agents",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.3",
+     "title": "Préparation au MLA-C01",
+     "content": "Questions d’entraînement et révision",
+     "format": "Cours + atelier",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Un système de ML en production sur SageMaker AI, présenté au groupe",
+   "intro": "Par équipes de deux ou trois, les participants construisent un système de ML en production pour un cas d’usage fourni, en réutilisant les TP de phase, puis le présentent comme ils le feraient devant un responsable data.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, construire le pipeline de la préparation des données au Model Registry",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Déploiement et supervision",
+     "content": "Déploiement automatisé, alertes de dérive, une fonctionnalité appuyée sur Bedrock ; schéma d’architecture",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Démonstration et revue",
+     "content": "Exécution en direct du pipeline et d’une alerte de dérive, suppression des ressources ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Un système de ML en production sur SageMaker AI",
+    "brief": "Un pipeline SageMaker de la préparation des données au Model Registry, un déploiement automatisé sur un endpoint, des alertes de dérive en production, et une fonctionnalité appuyée sur Amazon Bedrock.",
+    "stack": "AWS : SageMaker AI (Studio, Pipelines, Model Registry, Model Monitor, Clarify, Feature Store), Glue, S3, CloudWatch, Amazon Bedrock",
+    "deliverable": "Code du pipeline, schéma d’architecture, tableau de bord de supervision, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

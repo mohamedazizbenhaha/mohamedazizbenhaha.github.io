@@ -1,0 +1,167 @@
+{
+ "slug": "nlp-text-to-transformers-fr",
+ "file": "NLP-du-traitement-de-texte-aux-Transformers-27h.docx",
+ "lang": "fr",
+ "title": "NLP : du traitement de texte aux Transformers",
+ "subtitle": "Traiter, représenter, classer et extraire l’information de textes en français, en anglais et en arabe",
+ "audience_line": "Data scientists et développeurs qui travaillent avec des données textuelles",
+ "certifications": [],
+ "overview": "Ce programme fait parcourir aux participants le traitement automatique des langues, du traitement de texte classique aux Transformers et aux grands modèles de langage. Ils nettoient et segmentent le texte, le représentent par sacs de mots, TF-IDF et plongements lexicaux, construisent des classifieurs pour le sentiment et d’autres tâches, extraient entités et relations, et découvrent des thèmes. Ils affinent ensuite des modèles BERT avec Hugging Face, traitent des textes multilingues en portant attention à l’arabe et au français, et comparent les LLM en zero-shot et few-shot aux modèles affinés. Chaque chapitre se termine par un TP, et le programme s’achève par un projet final : une application de NLP sur des textes multilingues, construite et présentée par chaque équipe.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Data scientists et développeurs qui travaillent avec des données textuelles"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Python et pandas (cours : Python pour la data science) et bases du deep learning (cours : Machine learning et deep learning, phase deep learning), ou équivalent. Ces notions sont utilisées, pas enseignées"
+  },
+  {
+   "label": "Durée",
+   "value": "27 h : 24 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés dans Jupyter sur des corpus en français, en anglais et en arabe"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant (16 Go de RAM, Python 3, JupyterLab, spaCy, NLTK, Hugging Face) ; notebooks GPU sur Google Colab ou serveur GPU fourni par l’organisateur pour l’affinage ; un LLM ouvert via Ollama ou sur le serveur GPU, ou une clé d’API de LLM hébergé par équipe avec plafond de dépenses, fournie par l’organisateur"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent construire, affiner et évaluer des modèles de NLP de classification et d’extraction sur des textes en français, en anglais et en arabe, et juger quand un LLM est le meilleur outil"
+  }
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Traitement et représentation du texte",
+   "hours": 6,
+   "focus": "Tâches de NLP, segmentation, normalisation, sacs de mots, TF-IDF, plongements lexicaux",
+   "intro": "Les participants voient à quoi sert le NLP, puis transforment le texte brut en tokens propres avec spaCy, NLTK et les expressions régulières, et en nombres avec les sacs de mots, TF-IDF, word2vec et GloVe. TP validé : une chaîne de prétraitement pour des avis en français et en anglais, et les plus proches voisins de mots choisis dans un espace de plongements.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Introduction et traitement du texte",
+     "content": "Tâches et applications, segmentation en tokens, normalisation, racinisation et lemmatisation, expressions régulières, spaCy et NLTK",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Représentation du texte",
+     "content": "Sacs de mots, TF-IDF, word2vec, GloVe",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Tâches classiques du NLP",
+   "hours": 6,
+   "focus": "Classification et sentiment, entités nommées et relations, modélisation thématique",
+   "intro": "Les participants construisent des classifieurs classiques et neuronaux pour le sentiment et d’autres étiquettes, extraient entités nommées et relations, et découvrent les thèmes d’un corpus avec LDA et BERTopic. TP validé : un classifieur de sentiment évalué sur un jeu réservé, et les principaux thèmes d’un corpus d’actualités trouvés avec LDA.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Classification et sentiment",
+     "content": "Classifieurs classiques et neuronaux",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Extraction d’information",
+     "content": "Entités nommées, relations",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Modélisation thématique",
+     "content": "LDA ; BERTopic en avant-goût des plongements Transformer",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Transformers et LLM",
+   "hours": 6,
+   "focus": "Affinage de BERT, NLP multilingue, LLM pour les tâches de NLP",
+   "intro": "Les participants affinent des modèles de la famille BERT avec Hugging Face, traitent la traduction et les spécificités des textes arabes et français, puis utilisent des LLM en zero-shot et few-shot pour la classification et l’extraction, et les comparent aux modèles affinés. TP validé : la même tâche de classification résolue par un modèle multilingue affiné et par un LLM, avec exactitude et coût comparés.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Transformers pour le NLP",
+     "content": "BERT, affinage avec Hugging Face",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "NLP multilingue",
+     "content": "Traduction, spécificités de l’arabe et du français",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "LLM pour les tâches de NLP",
+     "content": "Classification et extraction en zero-shot et few-shot, évaluation face aux modèles affinés",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Une application de NLP multilingue, présentée au groupe",
+   "intro": "Par équipes de deux ou trois, les participants construisent une application de NLP de classification ou d’extraction sur des textes en arabe, en français ou en anglais, en réutilisant les TP de phase, puis la présentent comme ils le feraient devant une équipe produit.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, préparer le corpus, construire une référence et affiner un modèle Transformer",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Évaluation et documentation",
+     "content": "Évaluation par langue, analyse des erreurs, comparaison avec un LLM, court rapport",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct sur de nouveaux textes ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Une application de NLP multilingue",
+    "brief": "Une application qui classe des textes ou en extrait l’information dans des documents en arabe, en français ou en anglais avec un modèle Transformer affiné, évaluée par langue et comparée à une référence et à un LLM.",
+    "stack": "Python, spaCy, Hugging Face Transformers et Datasets, scikit-learn, PyTorch, JupyterLab",
+    "deliverable": "Dépôt avec notebooks et modèle, rapport d’évaluation, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

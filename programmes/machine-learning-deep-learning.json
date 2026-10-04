@@ -13,7 +13,7 @@
   },
   {
    "label": "Prerequisites",
-   "value": "Python, NumPy and pandas (course: Python for Data Science); secondary-school algebra. The mathematics needed is taught in the course"
+   "value": "Python, NumPy and pandas (course: Python for Data Science), or equivalent; secondary-school algebra. The mathematics needed is taught in the course"
   },
   {
    "label": "Duration",
@@ -101,7 +101,7 @@
      "hours": 3
     }
    ],
-   "math": "Linear algebra (vectors, matrices, normal equation) · Calculus (derivatives, chain rule, gradient) · Statistics (maximum likelihood, cross-entropy, bias and variance) · Information theory (entropy, information gain) · Optimisation (convexity, margins, kernels)",
+   "math": "Linear algebra (vectors, matrices, normal equation) · Calculus (derivatives, chain rule, gradient) · Statistics (maximum likelihood, cross-entropy, bias and variance) · Information theory (entropy, information gain) · Optimisation (convexity, gradient descent, L1 and L2 penalties, constrained optimisation for the SVM margin, kernels)",
    "project": null
   },
   {
@@ -205,7 +205,7 @@
    "name": "Responsible AI",
    "hours": 6,
    "focus": "Explainability, fairness, the EU AI Act, model cards",
-   "intro": "Participants explain model predictions globally and locally, measure and mitigate bias, and document models for governance under the EU AI Act and data protection rules. Validated lab: a SHAP explanation and a fairness report for the supervised model, summarised in a model card.",
+   "intro": "Participants explain model predictions globally and locally, measure and mitigate bias, and document models for governance under the EU AI Act and data protection rules. Validated lab: a SHAP explanation and a fairness report for the phase 1 model, summarised in a model card.",
    "chapters": [
     {
      "id": "4.1",
@@ -268,7 +268,7 @@
      "hours": 3
     }
    ],
-   "math": "Probability (Markov decision processes, expectations) · Dynamic programming (Bellman equations) · Calculus (policy gradient)",
+   "math": "Probability (Markov decision processes, expectations) · Dynamic programming (Bellman equations) · Calculus (policy gradient theorem, log-derivative trick)",
    "project": null
   },
   {

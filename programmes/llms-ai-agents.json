@@ -7,13 +7,34 @@
  "certifications": [],
  "overview": "This programme teaches developers to build applications on large language models and to put them into production responsibly. Participants learn how Transformers and LLMs are trained and where their limits are, write effective prompts and structured outputs, use hosted APIs and open models, build retrieval-augmented generation over their own documents, and give models tools through function calling, agent frameworks and the Model Context Protocol. They then defend the application against prompt injection, evaluate it with test sets and LLM judges, trace its cost and serve it as an API. The programme closes with a final project: an agent application built, evaluated and presented by each team.",
  "facts": [
-  {"label": "Audience", "value": "Developers who want to build applications with large language models"},
-  {"label": "Prerequisites", "value": "Python programming (course: Python Programming Fundamentals, or equivalent). No machine learning background needed"},
-  {"label": "Duration", "value": "27 h: 24 h of chapters + 3 h buffer"},
-  {"label": "Format", "value": "Short lectures followed by guided labs; one application carried through every phase"},
-  {"label": "Lab environment", "value": "One laptop per participant (16 GB RAM, Python 3, Docker, VS Code, Ollama for open models); API access to a hosted LLM provided by the organiser with a spending cap; no other account or cost"},
-  {"label": "Assessment", "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"},
-  {"label": "Outcome", "value": "Participants can build a RAG and tool-using agent application, protect it against prompt injection, measure its quality and cost, and deploy it as a containerised API"}
+  {
+   "label": "Audience",
+   "value": "Developers who want to build applications with large language models"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Python programming (course: Python Programming Fundamentals), or equivalent; basic Docker use helps (course: Docker & Kubernetes). No machine learning background needed"
+  },
+  {
+   "label": "Duration",
+   "value": "27 h: 24 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs; one application carried through every phase"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant (16 GB RAM, Python 3, Docker, VS Code, Ollama for open models); API access to a hosted LLM provided by the organiser with a spending cap; no other account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can build a RAG and tool-using agent application, reduce its exposure to prompt injection, measure its quality and cost, and deploy it as a containerised API"
+  }
  ],
  "buffer": 3,
  "phases": [
@@ -23,9 +44,27 @@
    "focus": "Transformers and training, prompting, structured output, APIs and open models",
    "intro": "Participants learn how LLMs are built, from attention and tokens to pretraining, instruction tuning and preference optimisation, and what reasoning models change. They then write prompts that work, get structured output, and call both hosted APIs and open models running locally. Validated lab: the same extraction task solved with a hosted model and a local open model, returning validated JSON.",
    "chapters": [
-    {"id": "1.1", "title": "Transformers & LLMs", "content": "Attention, tokens, pretraining, instruction tuning, RLHF and DPO, reasoning models, model landscape", "format": "Lecture + Workshop", "hours": 3},
-    {"id": "1.2", "title": "Prompt Engineering", "content": "Patterns, few-shot prompting, structured output", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.3", "title": "Using Models", "content": "LLM APIs, structured outputs, open models (Ollama, Hugging Face)", "format": "Lecture + Lab", "hours": 1.5}
+    {
+     "id": "1.1",
+     "title": "Transformers & LLMs",
+     "content": "Attention, tokens, pretraining, instruction tuning, RLHF and DPO, reasoning models, model landscape",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Prompt Engineering",
+     "content": "Patterns, few-shot prompting, structured output",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Using Models",
+     "content": "LLM APIs, structured outputs, open models (Ollama, Hugging Face)",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -36,8 +75,20 @@
    "focus": "Embeddings, vector stores, retrieval and reranking, tool use, agent frameworks",
    "intro": "Participants ground answers in their own documents with retrieval-augmented generation, from embeddings and chunking to hybrid retrieval, reranking and RAG evaluation, then let models act through tool use and function calling, planning, and multi-agent frameworks such as LangGraph and CrewAI. Validated lab: a question-answering assistant over a document set that cites its sources, extended into an agent that calls two tools.",
    "chapters": [
-    {"id": "2.1", "title": "Retrieval-Augmented Generation", "content": "Embeddings, vector stores, chunking, hybrid retrieval, reranking, RAG evaluation", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.2", "title": "Agents", "content": "Tool use, function calling, planning, multi-agent frameworks (LangGraph, CrewAI)", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Retrieval-Augmented Generation",
+     "content": "Embeddings, vector stores, chunking, hybrid retrieval, reranking, RAG evaluation",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Agents",
+     "content": "Tool use, function calling, planning, multi-agent frameworks (LangGraph, CrewAI)",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -48,9 +99,27 @@
    "focus": "Model Context Protocol, prompt injection and guardrails, evaluation, tracing, deployment",
    "intro": "Participants expose tools through the Model Context Protocol, defend the application against prompt injection and the other OWASP risks for LLM applications, then measure quality with evaluation sets and LLM-as-judge, trace calls and cost, and serve the application as an API in a container. Validated lab: an MCP server used by the agent, an injection attempt blocked by a guardrail, and an evaluation report run before deployment.",
    "chapters": [
-    {"id": "3.1", "title": "MCP", "content": "Building and connecting MCP servers and tools", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "3.2", "title": "Guardrails & Security", "content": "Prompt injection, OWASP Top 10 for LLM applications, guardrails", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "3.3", "title": "Evaluation & Deployment", "content": "Evaluation sets, LLM-as-judge, tracing, cost; serving as an API in a container", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "3.1",
+     "title": "MCP",
+     "content": "Building and connecting MCP servers and tools",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Guardrails & Security",
+     "content": "Prompt injection, OWASP Top 10 for LLM Applications (2025), guardrails",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Evaluation & Deployment",
+     "content": "Evaluation sets, LLM-as-judge, tracing, cost; serving as an API in a container",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -61,15 +130,33 @@
    "focus": "An agent application, evaluated and deployed",
    "intro": "Teams of two or three build an agent application for a written brief, reusing the phase labs, then present its quality, security and cost as they would to a product owner.",
    "chapters": [
-    {"id": "4.1", "title": "Brief & Build", "content": "Read the brief, design the agent, build RAG over the provided documents, tools and an MCP server", "format": "Project", "hours": 3},
-    {"id": "4.2", "title": "Evaluate & Secure", "content": "Evaluation set and report, guardrails, tracing and cost per request, containerised API", "format": "Project", "hours": 1.5},
-    {"id": "4.3", "title": "Demo & Review", "content": "Live demo including an attack attempt; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, design the agent, build RAG over the provided documents, tools and an MCP server",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Evaluate & Secure",
+     "content": "Evaluation set and report, guardrails, tracing and cost per request, containerised API",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Review",
+     "content": "Live demo including an attack attempt; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {
-    "title": "An Agent Application in Production",
-    "brief": "An agent that answers from a document set with cited sources, acts through tools and an MCP server, resists prompt injection, is measured on an evaluation set with its cost per request, and runs as a containerised API.",
-    "stack": "Python, an LLM API and an open model (Ollama), embeddings and a vector store, LangGraph, MCP, guardrails, an evaluation and tracing tool, FastAPI, Docker",
+    "title": "A Deployed Agent Application",
+    "brief": "An agent that answers from a document set with cited sources, acts through tools and an MCP server, is tested against prompt injection, is measured on an evaluation set with its cost per request, and runs as a containerised API.",
+    "stack": "Python, an LLM API and an open model (Ollama), embeddings and a vector store, LangGraph, MCP, a guardrails library (e.g. NeMo Guardrails), Ragas, Langfuse, FastAPI, Docker",
     "deliverable": "Repository with code and evaluation set, evaluation report, live demo"
    }
   }

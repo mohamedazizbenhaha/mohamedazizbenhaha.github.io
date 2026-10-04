@@ -1,0 +1,153 @@
+{
+ "slug": "python-fundamentals-fr",
+ "file": "Fondamentaux-de-la-programmation-Python-27h.docx",
+ "lang": "fr",
+ "title": "Fondamentaux de la programmation Python",
+ "subtitle": "Écrire des programmes Python clairs et testés dès la première ligne de code",
+ "audience_line": "Débutants, étudiants et professionnels qui apprennent à programmer avec Python",
+ "certifications": [],
+ "overview": "Ce programme apprend aux participants à programmer en Python depuis le tout début. Ils installent un environnement de travail, puis apprennent variables et types, conditions et boucles, listes, dictionnaires et autres structures de données, fonctions, modules et paquets, environnements virtuels et leurs premiers tests unitaires avec pytest. Ils lisent et écrivent des fichiers, gèrent les erreurs, manipulent des données JSON et CSV, et organisent leur code avec des classes et des dataclasses. Chaque chapitre se termine par des exercices sur machine, et le programme s’achève par un projet final où chaque participant construit, teste et présente une application en ligne de commande.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Débutants, étudiants et professionnels qui apprennent à programmer avec Python"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aucun. Usage courant d’un ordinateur ; aucune expérience de la programmation n’est nécessaire"
+  },
+  {
+   "label": "Durée",
+   "value": "27 h : 24 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts avec programmation en direct, chacun suivi d’exercices guidés"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant avec Python 3, VS Code et Git, installés au premier chapitre ; ni compte ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Exercices validés à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent écrire, organiser et tester des programmes Python qui utilisent structures de données, fonctions, fichiers, gestion des erreurs et classes"
+  }
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Bases de Python",
+   "hours": 6,
+   "focus": "Installation, variables, types, opérateurs, entrées et sorties, conditions et boucles",
+   "intro": "Les participants installent Python et VS Code, écrivent leurs premiers programmes avec variables, types, opérateurs, entrées et sorties, puis contrôlent le déroulement d’un programme avec des conditions et des boucles. Exercice validé : un jeu de devinette de nombre qui vérifie que chaque proposition est dans l’intervalle et compte les essais.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Premiers pas",
+     "content": "Installation, variables, types, opérateurs, entrées et sorties",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Structures de contrôle",
+     "content": "Conditions, boucles",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Structures de données et fonctions",
+   "hours": 6,
+   "focus": "Listes, tuples, dictionnaires, ensembles, compréhensions, fonctions, modules, pytest",
+   "intro": "Les participants stockent et transforment des données avec listes, tuples, dictionnaires, ensembles et compréhensions, puis découpent leur code en fonctions, modules et paquets, gèrent les dépendances avec venv et pip, et écrivent leurs premiers tests unitaires avec pytest. Exercice validé : un module de fonctions de statistiques sur du texte, avec des tests pytest qui passent.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Structures de données",
+     "content": "Listes, tuples, dictionnaires, ensembles, compréhensions",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Fonctions et modules",
+     "content": "Fonctions, portée, modules, paquets, venv et pip, premiers tests unitaires avec pytest",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Fichiers, erreurs et objets",
+   "hours": 6,
+   "focus": "Lecture et écriture de fichiers, exceptions, JSON et CSV, classes, héritage, dataclasses",
+   "intro": "Les participants lisent et écrivent des fichiers, gèrent les erreurs avec les exceptions, échangent des données en JSON et CSV, puis modélisent leurs programmes avec classes, héritage et dataclasses. Exercice validé : un carnet de contacts enregistré dans un fichier JSON, avec des classes pour ses entrées et une gestion propre d’un fichier absent ou corrompu.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Fichiers et erreurs",
+     "content": "Lecture et écriture de fichiers, exceptions, JSON et CSV",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Python orienté objet",
+     "content": "Classes, héritage, dataclasses",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Une application en ligne de commande testée, présentée au groupe",
+   "intro": "Chaque participant construit une application en ligne de commande à partir d’un court cahier des charges, par exemple un gestionnaire de tâches ou de dépenses, en réutilisant les exercices des phases, puis la présente au groupe.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Choisir le sujet, concevoir les modules et les classes, écrire l’application avec stockage dans des fichiers, arguments de ligne de commande avec argparse",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Tests et documentation",
+     "content": "Tests pytest des fonctions principales, gestion des erreurs, README",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct et présentation du code ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Application en ligne de commande",
+    "brief": "Une application en ligne de commande, par exemple un gestionnaire de tâches ou de dépenses, organisée en modules et en classes, qui enregistre ses données dans des fichiers, gère les erreurs et est couverte par des tests pytest.",
+    "stack": "Python 3, bibliothèque standard (json, csv, argparse, dataclasses), pytest, Git, VS Code",
+    "deliverable": "Dépôt Git avec code, tests et README, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

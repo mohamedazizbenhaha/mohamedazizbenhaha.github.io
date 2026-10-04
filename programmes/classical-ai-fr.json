@@ -1,0 +1,316 @@
+{
+ "slug": "classical-ai-fr",
+ "file": "Intelligence-artificielle-classique-90h.docx",
+ "lang": "fr",
+ "title": "Intelligence artificielle classique",
+ "subtitle": "Recherche, logique et raisonnement probabiliste : les fondements de l’intelligence artificielle",
+ "audience_line": "Étudiants universitaires en informatique et en ingénierie",
+ "certifications": [],
+ "overview": "Ce cours académique d’un semestre couvre les fondements de l’intelligence artificielle : agents rationnels, recherche et résolution de problèmes, jeux, représentation des connaissances et logique, et raisonnement dans l’incertain et dans le temps. Il suit la structure de l’ouvrage de Russell et Norvig, Artificial Intelligence: A Modern Approach (4e édition). Chaque partie associe des cours qui établissent les algorithmes à un mini-projet d’implémentation en Python, afin que les étudiants comprennent et construisent chaque méthode. Le cours s’achève par un projet de synthèse : un système d’IA combinant recherche, logique ou raisonnement probabiliste, proposé, développé et présenté par chaque équipe.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Étudiants universitaires en informatique et en ingénierie"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Programmation Python (cours : Fondamentaux de la programmation Python), ou équivalent ; mathématiques discrètes et bases de probabilités"
+  },
+  {
+   "label": "Durée",
+   "value": "90 h : 81 h de chapitres + 9 h de réserve, sur un semestre universitaire"
+  },
+  {
+   "label": "Format",
+   "value": "Cours qui établissent chaque algorithme, suivis de mini-projets d’implémentation en Python"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par étudiant avec Python 3, Jupyter et VS Code ; code et jeux de données du cours dans un dépôt partagé ; ni compte ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Six mini-projets et un projet de synthèse présenté à la classe ; attestation de formation si les deux sont validés ; notation selon les règles de l’établissement"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les étudiants savent formuler un problème d’IA, implémenter et comparer des algorithmes de recherche, de logique et probabilistes, et choisir la méthode adaptée"
+  }
+ ],
+ "buffer": 9,
+ "phases": [
+  {
+   "name": "Introduction et agents intelligents",
+   "hours": 9,
+   "focus": "Ce qu’est l’IA, agents et environnements, rationalité",
+   "intro": "Les étudiants découvrent ce qu’est l’IA, d’où elle vient et où elle est utilisée, y compris ses questions éthiques, puis apprennent le cadre des agents utilisé tout au long du cours : environnements, rationalité et architectures d’agents. Mini-projet : un agent simple conçu et simulé dans un environnement en grille.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Qu’est-ce que l’IA",
+     "content": "Définitions, histoire, applications, éthique",
+     "format": "Cours + atelier",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Agents intelligents",
+     "content": "Agents, environnements, rationalité, architectures d’agents",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Mini-projet : agents",
+     "content": "Concevoir et simuler un agent simple",
+     "format": "Projet",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Recherche et résolution de problèmes",
+   "hours": 18,
+   "focus": "Recherche non informée et heuristique, recherche locale, méthodes évolutionnaires, CSP",
+   "intro": "Les étudiants formulent des problèmes comme des espaces d’états et les résolvent par recherche non informée et heuristique, recherche locale, algorithmes génétiques et essaims particulaires, et satisfaction de contraintes. Mini-projet : un problème de planification ou d’optimisation résolu et comparé avec au moins deux méthodes de recherche.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Recherche non informée",
+     "content": "Formulation du problème, BFS, DFS, recherche à coût uniforme, approfondissement itératif",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Recherche heuristique",
+     "content": "Meilleur d’abord glouton, A*, admissibilité et cohérence",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Recherche locale",
+     "content": "Escalade, recuit simulé, recherche locale en faisceau",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.4",
+     "title": "Méthodes évolutionnaires et essaims",
+     "content": "Algorithmes génétiques, optimisation par essaims particulaires",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.5",
+     "title": "Satisfaction de contraintes",
+     "content": "CSP, retour arrière, cohérence d’arc",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.6",
+     "title": "Mini-projet : recherche",
+     "content": "Résoudre un problème de planification ou d’optimisation par la recherche",
+     "format": "Projet",
+     "hours": 3
+    }
+   ],
+   "math": "Théorie des graphes (espaces d’états, chemins) · Complexité (temps et espace des algorithmes de recherche) · Optimisation (fonctions objectif, optima locaux, schémas de recuit)",
+   "project": null
+  },
+  {
+   "name": "Jeux et recherche adversariale",
+   "hours": 6,
+   "focus": "Minimax, élagage alpha-bêta, fonctions d’évaluation, recherche arborescente Monte-Carlo",
+   "intro": "Les étudiants cherchent contre un adversaire avec minimax et l’élagage alpha-bêta, conçoivent des fonctions d’évaluation, et utilisent la recherche arborescente Monte-Carlo quand l’arbre de jeu est trop grand. Mini-projet : un agent de jeu évalué contre des joueurs de référence.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Recherche adversariale",
+     "content": "Minimax, élagage alpha-bêta, fonctions d’évaluation, recherche arborescente Monte-Carlo",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Mini-projet : agent de jeu",
+     "content": "Construire et évaluer un agent de jeu",
+     "format": "Projet",
+     "hours": 3
+    }
+   ],
+   "math": "Théorie des jeux (jeux à somme nulle, valeur minimax) · Probabilités (estimations de Monte-Carlo, UCB1 dans MCTS)",
+   "project": null
+  },
+  {
+   "name": "Représentation des connaissances et logique",
+   "hours": 15,
+   "focus": "Logique propositionnelle et du premier ordre, inférence, ingénierie des connaissances",
+   "intro": "Les étudiants représentent des connaissances en logique propositionnelle et du premier ordre et en déduisent de nouveaux faits par résolution, DPLL, chaînage avant et arrière et unification. Mini-projet : une petite base de connaissances et un moteur de raisonnement qui répond à des requêtes dans un domaine choisi.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Logique propositionnelle",
+     "content": "Syntaxe, sémantique, conséquence logique",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Inférence propositionnelle",
+     "content": "Résolution, DPLL, chaînage avant et arrière",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.3",
+     "title": "Logique du premier ordre",
+     "content": "Syntaxe, sémantique, ingénierie des connaissances",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.4",
+     "title": "Inférence du premier ordre",
+     "content": "Unification, chaînage, résolution",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.5",
+     "title": "Mini-projet : agent à base de connaissances",
+     "content": "Construire une petite base de connaissances et un moteur de raisonnement",
+     "format": "Projet",
+     "hours": 3
+    }
+   ],
+   "math": "Logique formelle (syntaxe, sémantique, conséquence logique, correction et complétude) · Satisfiabilité · Unification",
+   "project": null
+  },
+  {
+   "name": "Raisonnement probabiliste",
+   "hours": 15,
+   "focus": "Probabilités, réseaux bayésiens, inférence exacte et approchée",
+   "intro": "Les étudiants raisonnent dans l’incertain avec les probabilités et la règle de Bayes, modélisent les dépendances avec des réseaux bayésiens, et répondent aux requêtes par inférence exacte et par méthodes d’échantillonnage. Mini-projet : un réseau bayésien pour un problème de décision réel, interrogé et confronté aux données.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Incertitude et probabilités",
+     "content": "Axiomes des probabilités, règle de Bayes, indépendance",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Réseaux bayésiens",
+     "content": "Structure, indépendance conditionnelle, sémantique",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "5.3",
+     "title": "Inférence exacte",
+     "content": "Énumération, élimination de variables",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "5.4",
+     "title": "Inférence approchée",
+     "content": "Échantillonnage, pondération par la vraisemblance, MCMC",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "5.5",
+     "title": "Mini-projet : réseau bayésien",
+     "content": "Modéliser et interroger un problème de décision réel",
+     "format": "Projet",
+     "hours": 3
+    }
+   ],
+   "math": "Probabilités (axiomes, probabilité conditionnelle, règle de Bayes, indépendance) · Échantillonnage et méthodes de Monte-Carlo par chaînes de Markov",
+   "project": null
+  },
+  {
+   "name": "Raisonnement dans le temps",
+   "hours": 9,
+   "focus": "Processus de Markov, modèles de Markov cachés, filtrage, lissage, Viterbi",
+   "intro": "Les étudiants modélisent des processus qui évoluent dans le temps avec des chaînes de Markov et des modèles de Markov cachés, et infèrent les états cachés par filtrage, lissage et algorithme de Viterbi. Mini-projet : étiquetage de séquences ou suivi avec un modèle de Markov caché.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Modèles temporels et HMM",
+     "content": "Processus de Markov, modèles de Markov cachés",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "6.2",
+     "title": "Inférence dans le temps",
+     "content": "Filtrage, lissage, Viterbi",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "6.3",
+     "title": "Mini-projet : HMM",
+     "content": "Étiquetage de séquences ou suivi avec un HMM",
+     "format": "Projet",
+     "hours": 3
+    }
+   ],
+   "math": "Chaînes de Markov · Programmation dynamique (avant-arrière, Viterbi)",
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 9,
+   "focus": "Un système d’IA de synthèse, proposé, développé et présenté",
+   "intro": "Par équipes de deux ou trois, les étudiants proposent et construisent un système d’IA qui combine au moins deux parties du cours, en réutilisant leurs mini-projets, puis le présentent à la classe.",
+   "chapters": [
+    {
+     "id": "7.1",
+     "title": "Proposition et conception",
+     "content": "Énoncé du problème, choix des méthodes, plan de conception et d’évaluation, validés par l’enseignant",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "7.2",
+     "title": "Développement",
+     "content": "Implémentation et expériences",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "7.3",
+     "title": "Évaluation et rapport",
+     "content": "Résultats, comparaison avec une référence, rapport écrit",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "7.4",
+     "title": "Présentation",
+     "content": "Présentation à la classe ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Système d’IA de synthèse",
+    "brief": "Un système d’IA qui combine au moins deux méthodes du cours (recherche, jeux, logique, raisonnement probabiliste ou temporel) pour résoudre un problème choisi par l’équipe, évalué par rapport à une référence et expliqué dans un rapport écrit.",
+    "stack": "Python 3, Jupyter, NumPy, aima-python, NetworkX, pgmpy, hmmlearn",
+    "deliverable": "Proposition, dépôt de code, rapport écrit, présentation"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

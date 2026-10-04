@@ -1,0 +1,183 @@
+{
+ "slug": "aws-ai-practitioner-genai-fr",
+ "file": "AWS-AI-Practitioner-et-IA-generative-33h.docx",
+ "lang": "fr",
+ "title": "AWS AI Practitioner et IA générative",
+ "subtitle": "Utiliser de façon responsable les services d’IA, de machine learning et d’IA générative sur AWS",
+ "audience_line": "Professionnels de l’IT, développeurs, analystes et managers qui travaillent avec l’IA sur AWS",
+ "certifications": [
+  "AWS Certified AI Practitioner (AIF-C01)"
+ ],
+ "overview": "Ce programme donne aux participants une compréhension pratique de l’IA, du machine learning et de l’IA générative sur Amazon Web Services et prépare l’examen AWS Certified AI Practitioner (AIF-C01). Ils découvrent le cycle de vie du ML et les services d’IA prêts à l’emploi pour l’image, le langage, les documents et la parole, puis les notions derrière les modèles de fondation, l’ingénierie des prompts, et Amazon Bedrock avec bases de connaissances, agents et personnalisation. Ils utilisent SageMaker Canvas et JumpStart, voient ce qu’offre Amazon Q, et appliquent les pratiques d’IA responsable, de sécurité et de gouvernance. Un entraînement à l’examen clôt le contenu, et le programme s’achève par un projet final : un assistant d’IA générative sur Bedrock construit et présenté par chaque équipe.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Professionnels de l’IT, développeurs, analystes et managers qui travaillent avec l’IA sur AWS"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aucun en IA. Connaître les services AWS essentiels aide (cours : AWS Cloud Practitioner) sans être nécessaire"
+  },
+  {
+   "label": "Durée",
+   "value": "33 h : 27 h de chapitres + 6 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés dans la console AWS ; entraînement à l’examen"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant avec un navigateur ; un compte AWS de test par équipe avec alerte budgétaire, fourni par l’organisateur ; Knowledge Bases sur S3 Vectors ; endpoints et bases vectorielles supprimés, Canvas fermé après chaque TP"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase, des questions d’entraînement et un projet final présenté au groupe ; attestation de formation si les TP et le projet sont validés"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent choisir le bon service d’IA AWS pour un cas d’usage, construire un assistant RAG protégé avec Bedrock, en estimer le coût et se présenter à l’examen AIF-C01"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "IA et ML sur AWS",
+   "hours": 6,
+   "focus": "Notions d’IA et de ML, cycle de vie du ML, services d’IA prêts à l’emploi",
+   "intro": "Les participants apprennent le vocabulaire de l’IA et du machine learning et le cycle de vie d’un projet de ML sur AWS, puis utilisent des services prêts à l’emploi pour les images, le texte, les documents, la parole et la traduction, sans entraîner de modèle. TP validé : un document traité par Textract, ses entités et son sentiment détectés par Comprehend, et le résultat lu à voix haute par Polly.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Fondamentaux de l’IA et du ML",
+     "content": "IA, ML et deep learning ; apprentissage supervisé, non supervisé et par renforcement ; cycle de vie du ML sur AWS ; métriques de modèle (exactitude, F1, AUC) et métriques métier",
+     "format": "Cours + atelier",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Services d’IA AWS",
+     "content": "Rekognition, Comprehend, Textract, Lex, Polly, Transcribe, Translate",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "IA générative et Amazon Bedrock",
+   "hours": 6,
+   "focus": "Modèles de fondation, prompts, bases de connaissances, agents et personnalisation Bedrock",
+   "intro": "Les participants apprennent comment fonctionnent les modèles de fondation et où ils échouent, écrivent des prompts efficaces, puis construisent avec Amazon Bedrock : choix du modèle dans les playgrounds, génération augmentée par la recherche avec les Knowledge Bases, Agents et personnalisation des modèles. TP validé : une Knowledge Base Bedrock qui répond à des questions sur un ensemble de documents d’entreprise en citant ses sources.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Notions d’IA générative",
+     "content": "Modèles de fondation, tokens, embeddings, cas d’usage et limites",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Ingénierie des prompts",
+     "content": "Techniques et pièges",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Amazon Bedrock",
+     "content": "Modèles et playgrounds, paramètres d’inférence (température, top-p), Knowledge Bases (RAG) et bases vectorielles sur AWS, Agents, personnalisation (affinage, pré-entraînement continu, distillation), évaluation des modèles (ROUGE, BLEU, BERTScore, revue humaine)",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Outils, IA responsable et préparation à l’examen",
+   "hours": 9,
+   "focus": "SageMaker Canvas et JumpStart, Amazon Q, IA responsable, sécurité, AIF-C01",
+   "intro": "Les participants construisent un modèle sans code dans SageMaker Canvas et déploient un modèle pré-entraîné depuis JumpStart, voient les cas d’usage d’Amazon Q Business et Q Developer, appliquent l’IA responsable avec Bedrock Guardrails et SageMaker Clarify, et sécurisent et gouvernent les charges de travail d’IA avant de s’entraîner sur des questions AIF-C01. TP validé : un Guardrail Bedrock qui bloque un sujet interdit et masque les données personnelles dans les réponses de l’assistant.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "SageMaker AI pour les praticiens",
+     "content": "SageMaker Canvas, JumpStart",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Amazon Q",
+     "content": "Cas d’usage d’Amazon Q Business et d’Amazon Q Developer (périmètre de l’examen) ; Amazon Quick Suite, le nouvel espace de travail agentique",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "IA responsable",
+     "content": "Biais, transparence, Bedrock Guardrails, SageMaker Clarify, revue humaine avec Amazon A2I, SageMaker Model Cards",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Sécurité et gouvernance",
+     "content": "Responsabilité partagée, IAM, chiffrement, Macie, PrivateLink, CloudTrail, AWS Config, Audit Manager, AWS Artifact, traçabilité des données",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "3.5",
+     "title": "Préparation à l’AIF-C01",
+     "content": "Questions d’entraînement et révision",
+     "format": "Cours + atelier",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Un assistant d’IA générative sur Bedrock, présenté au groupe",
+   "intro": "Par équipes de deux ou trois, les participants construisent un assistant pour les documents d’une entreprise à partir d’un cahier des charges écrit, en réutilisant les TP de phase, puis le présentent avec son estimation de coût comme ils le feraient devant un sponsor métier.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, construire la Knowledge Base sur les documents de l’entreprise, connecter un service d’IA comme Textract",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Protection et estimation",
+     "content": "Guardrails, questions de test, estimation de coût, schéma d’architecture",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct incluant une requête bloquée, suppression des ressources ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Un assistant d’IA générative sur Bedrock",
+    "brief": "Un assistant qui répond aux questions sur les documents d’une entreprise via une Knowledge Base Bedrock, lit les documents numérisés avec un service d’IA comme Textract, est protégé par des Guardrails et est accompagné d’une estimation de coût.",
+    "stack": "AWS : Amazon Bedrock (Knowledge Bases, Guardrails), S3, Textract, AWS Pricing Calculator",
+    "deliverable": "Assistant fonctionnel, questions de test et résultats, estimation de coût, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

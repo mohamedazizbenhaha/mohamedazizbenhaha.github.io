@@ -1,0 +1,96 @@
+{
+ "slug": "network-security-fr",
+ "file": "Securite-des-reseaux-51h.docx",
+ "lang": "fr",
+ "title": "Sécurité des réseaux",
+ "subtitle": "Sécuriser équipements, pare-feu, VPN et accès, de la périphérie au terminal",
+ "audience_line": "Administrateurs et ingénieurs réseau chargés de sécuriser les réseaux",
+ "certifications": [],
+ "overview": "Ce programme apprend aux ingénieurs réseau à sécuriser le réseau lui-même. Les participants durcissent l’accès et l’administration des équipements, centralisent l’authentification avec AAA, filtrent le trafic avec des ACL, puis déploient des pare-feu à états, par zones et de nouvelle génération, avec un TP indépendant des éditeurs sur pfSense ou OPNsense, et la prévention d’intrusion. Ils sécurisent les terminaux et le niveau 2, appliquent la cryptographie, construisent des VPN site à site et d’accès distant dont WireGuard, les comparent à l’accès réseau zero trust, et testent leurs défenses. Chaque chapitre se termine par un TP, et le programme s’achève par un projet final où chaque équipe sécurise et valide le réseau d’un site distant.",
+ "facts": [
+  {"label": "Public", "value": "Administrateurs et ingénieurs réseau chargés de sécuriser les réseaux"},
+  {"label": "Prérequis", "value": "Commutation et routage (cours : Commutation, routage et sans-fil : notions essentielles (CCNA 2)), ou équivalent. Ces sujets ne sont pas réenseignés"},
+  {"label": "Durée", "value": "51 h : 45 h de chapitres + 6 h de réserve"},
+  {"label": "Format", "value": "Cours courts suivis de TP guidés sur des équipements Cisco simulés et des pare-feu open source"},
+  {"label": "Environnement de TP", "value": "En local : un portable par participant (16 Go de RAM) avec Cisco Packet Tracer, pfSense ou OPNsense et des machines virtuelles Linux préparées par le formateur ; réseau de TP isolé ; ni compte cloud ni coût"},
+  {"label": "Évaluation", "value": "Un TP validé à la fin de chaque phase et un projet final avec tests de validation ; attestation de formation pour les participants qui valident les deux"},
+  {"label": "Résultat", "value": "Les participants savent durcir les équipements réseau, déployer AAA, ACL, pare-feu, IPS, protections de niveau 2 et VPN, et prouver le résultat par des tests de sécurité"}
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Sécuriser les équipements réseau",
+   "hours": 12,
+   "focus": "Menaces et parades, administration sécurisée, AAA, ACL",
+   "intro": "Les participants identifient ce qu’il faut protéger dans un réseau, sécurisent l’accès administrateur et les protocoles d’administration, centralisent l’authentification avec RADIUS et TACACS+, et conçoivent et appliquent des listes de contrôle d’accès. TP validé : des routeurs administrés uniquement en SSH avec AAA via un serveur, qui envoient des journaux syslog synchronisés par NTP, et des ACL qui appliquent la politique de sécurité.",
+   "chapters": [
+    {"id": "1.1", "title": "Sécuriser les réseaux", "content": "Actifs, menaces, parades", "format": "Cours + atelier", "hours": 3},
+    {"id": "1.2", "title": "Accès et administration des équipements", "content": "Accès sécurisé, rôles d’administration, SNMP, syslog, NTP", "format": "Cours + TP", "hours": 3},
+    {"id": "1.3", "title": "AAA", "content": "RADIUS, TACACS+", "format": "Cours + TP", "hours": 3},
+    {"id": "1.4", "title": "ACL", "content": "Conception et mise en œuvre", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Pare-feu et IPS",
+   "hours": 12,
+   "focus": "Pare-feu à états et par zones, NGFW, pfSense ou OPNsense, Suricata, IPS",
+   "intro": "Les participants construisent des pare-feu à états et à politique par zones, voient ce qu’apportent les pare-feu de nouvelle génération, avec contrôle applicatif, filtrage d’URL, inspection TLS et concepts de Cisco Secure Firewall, puis déploient un pare-feu indépendant des éditeurs sur pfSense ou OPNsense avec NAT, VLAN, VPN et Suricata, et règlent les signatures de prévention d’intrusion. TP validé : un pare-feu pfSense ou OPNsense qui segmente trois VLAN et bloque une attaque de test avec Suricata.",
+   "chapters": [
+    {"id": "2.1", "title": "Technologies de pare-feu", "content": "Pare-feu à états, pare-feu à politique par zones", "format": "Cours + TP", "hours": 3},
+    {"id": "2.2", "title": "Pare-feu de nouvelle génération", "content": "Contrôle applicatif, IPS, filtrage d’URL, inspection TLS ; concepts de Cisco Secure Firewall", "format": "Cours + atelier", "hours": 3},
+    {"id": "2.3", "title": "TP pfSense ou OPNsense", "content": "Règles, NAT, VLAN, IPS avec Suricata, VPN", "format": "TP", "hours": 3},
+    {"id": "2.4", "title": "IPS", "content": "Technologies IPS, signatures, mise en œuvre", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Terminaux, niveau 2 et cryptographie",
+   "hours": 6,
+   "focus": "Protection des terminaux, attaques de niveau 2 et parades, intégrité, authenticité, PKI",
+   "intro": "Les participants protègent les terminaux et le réseau commuté contre les attaques de niveau 2, puis appliquent la cryptographie sur laquelle reposent les VPN et les protocoles d’administration : empreintes, signatures et certificats. TP validé : un commutateur qui arrête l’inondation MAC, l’usurpation DHCP et l’usurpation ARP, et un certificat émis par l’autorité de certification du TP.",
+   "chapters": [
+    {"id": "3.1", "title": "Sécurité des terminaux et du niveau 2", "content": "Protection des terminaux, attaques de niveau 2 et parades", "format": "Cours + TP", "hours": 3},
+    {"id": "3.2", "title": "Cryptographie", "content": "Intégrité, authenticité, PKI", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "VPN, zero trust et tests",
+   "hours": 9,
+   "focus": "IPsec site à site, accès distant SSL et WireGuard, ZTNA, tests de sécurité",
+   "intro": "Les participants relient des sites par des VPN IPsec, donnent un accès distant aux utilisateurs avec IPsec, VPN SSL et WireGuard, les comparent à l’accès réseau zero trust, puis testent les défenses du réseau avec les outils usuels. TP validé : deux sites reliés par un VPN IPsec, un utilisateur distant connecté en WireGuard, et un rapport de balayage qui confirme que seuls les services prévus sont exposés.",
+   "chapters": [
+    {"id": "4.1", "title": "VPN site à site", "content": "Concepts et configuration IPsec", "format": "Cours + TP", "hours": 3},
+    {"id": "4.2", "title": "VPN d’accès distant", "content": "VPN IPsec et SSL, WireGuard", "format": "Cours + TP", "hours": 1.5},
+    {"id": "4.3", "title": "Accès réseau zero trust", "content": "Principes et produits ZTNA", "format": "Cours + atelier", "hours": 1.5},
+    {"id": "4.4", "title": "Tests de sécurité", "content": "Techniques et outils de test", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Le réseau sécurisé d’un site distant, validé par des tests",
+   "intro": "Par équipes de deux ou trois, les participants sécurisent le réseau d’un site distant à partir d’un cahier des charges écrit, en réutilisant les TP de phase, puis prouvent leur travail par des tests de validation devant le groupe.",
+   "chapters": [
+    {"id": "5.1", "title": "Cahier des charges et réalisation", "content": "Analyser le besoin, puis déployer AAA, ACL, un pare-feu par zones ou pfSense, IPS et sécurité de niveau 2", "format": "Projet", "hours": 3},
+    {"id": "5.2", "title": "VPN et validation", "content": "VPN IPsec site à site vers le siège, plan et résultats des tests de validation", "format": "Projet", "hours": 1.5},
+    {"id": "5.3", "title": "Démonstration et revue", "content": "Tests en direct devant le groupe ; questions et retours", "format": "Projet", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Sécuriser le réseau d’un site distant",
+    "brief": "Le réseau d’un site distant sécurisé de bout en bout : AAA pour l’accès aux équipements, ACL, pare-feu par zones ou pfSense avec IPS, protections de niveau 2 et VPN IPsec site à site vers le siège, chaque contrôle étant prouvé par un test de validation.",
+    "stack": "Cisco Packet Tracer, Cisco IOS, RADIUS ou TACACS+, pfSense ou OPNsense, Suricata, IPsec, Nmap",
+    "deliverable": "Configurations, schéma réseau, plan et résultats des tests de validation, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

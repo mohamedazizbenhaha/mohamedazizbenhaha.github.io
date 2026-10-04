@@ -1,0 +1,167 @@
+{
+ "slug": "llms-ai-agents-fr",
+ "file": "LLM-et-agents-d-IA-27h.docx",
+ "lang": "fr",
+ "title": "LLM et agents d’IA",
+ "subtitle": "Construire, sécuriser, évaluer et déployer des applications sur des grands modèles de langage",
+ "audience_line": "Développeurs qui veulent construire des applications avec des grands modèles de langage",
+ "certifications": [],
+ "overview": "Ce programme apprend aux développeurs à construire des applications sur des grands modèles de langage et à les mettre en production de façon responsable. Les participants découvrent comment Transformers et LLM sont entraînés et où sont leurs limites, écrivent des prompts efficaces et des sorties structurées, utilisent des API hébergées et des modèles ouverts, construisent de la génération augmentée par la recherche (RAG) sur leurs propres documents, et donnent des outils aux modèles par l’appel de fonctions, les frameworks d’agents et le Model Context Protocol. Ils protègent ensuite l’application contre l’injection de prompt, l’évaluent avec des jeux de test et des LLM juges, suivent son coût et la servent comme API. Le programme s’achève par un projet final : une application d’agent construite, évaluée et présentée par chaque équipe.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Développeurs qui veulent construire des applications avec des grands modèles de langage"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Programmation Python (cours : Fondamentaux de la programmation Python), ou équivalent ; des bases de Docker aident (cours : Docker et Kubernetes). Aucune connaissance en machine learning n’est nécessaire"
+  },
+  {
+   "label": "Durée",
+   "value": "27 h : 24 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés ; une même application reprise dans toutes les phases"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant (16 Go de RAM, Python 3, Docker, VS Code, Ollama pour les modèles ouverts) ; accès API à un LLM hébergé fourni par l’organisateur avec un plafond de dépenses ; aucun autre compte ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent construire une application d’agent avec RAG et outils, réduire son exposition à l’injection de prompt, mesurer sa qualité et son coût, et la déployer comme API conteneurisée"
+  }
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Fondamentaux des LLM",
+   "hours": 6,
+   "focus": "Transformers et entraînement, prompts, sortie structurée, API et modèles ouverts",
+   "intro": "Les participants apprennent comment les LLM sont construits, de l’attention et des tokens au pré-entraînement, à l’ajustement par instructions et à l’optimisation par préférences, et ce que changent les modèles de raisonnement. Ils écrivent ensuite des prompts qui fonctionnent, obtiennent une sortie structurée, et appellent aussi bien des API hébergées que des modèles ouverts exécutés en local. TP validé : la même tâche d’extraction résolue avec un modèle hébergé et un modèle ouvert local, qui renvoient un JSON validé.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Transformers et LLM",
+     "content": "Attention, tokens, pré-entraînement, ajustement par instructions (instruction tuning), RLHF et DPO, modèles de raisonnement, panorama des modèles",
+     "format": "Cours + atelier",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Ingénierie des prompts",
+     "content": "Schémas de prompts, prompts few-shot, sortie structurée",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Utiliser les modèles",
+     "content": "API de LLM, sorties structurées, modèles ouverts (Ollama, Hugging Face)",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "RAG et agents",
+   "hours": 6,
+   "focus": "Embeddings, bases vectorielles, recherche et reclassement, outils, frameworks d’agents",
+   "intro": "Les participants ancrent les réponses dans leurs propres documents par la génération augmentée par la recherche, des embeddings et du découpage à la recherche hybride, au reclassement et à l’évaluation du RAG, puis laissent les modèles agir par l’usage d’outils et l’appel de fonctions, la planification et des frameworks multi-agents comme LangGraph et CrewAI. TP validé : un assistant de questions-réponses sur un ensemble de documents qui cite ses sources, étendu en agent qui appelle deux outils.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Génération augmentée par la recherche (RAG)",
+     "content": "Embeddings, bases vectorielles, découpage, recherche hybride, reclassement, évaluation du RAG",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Agents",
+     "content": "Usage d’outils, appel de fonctions, planification, frameworks multi-agents (LangGraph, CrewAI)",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "MCP, sécurité et évaluation",
+   "hours": 6,
+   "focus": "Model Context Protocol, injection de prompt et garde-fous, évaluation, traçage, déploiement",
+   "intro": "Les participants exposent des outils par le Model Context Protocol, protègent l’application contre l’injection de prompt et les autres risques OWASP des applications LLM, puis mesurent la qualité avec des jeux d’évaluation et des LLM juges, tracent les appels et le coût, et servent l’application comme API dans un conteneur. TP validé : un serveur MCP utilisé par l’agent, une tentative d’injection bloquée par un garde-fou, et un rapport d’évaluation exécuté avant le déploiement.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "MCP",
+     "content": "Construire et connecter des serveurs et outils MCP",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Garde-fous et sécurité",
+     "content": "Injection de prompt, OWASP Top 10 pour les applications LLM (2025), garde-fous",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Évaluation et déploiement",
+     "content": "Jeux d’évaluation, LLM juge, traçage, coût ; mise à disposition comme API dans un conteneur",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Une application d’agent, évaluée et déployée",
+   "intro": "Par équipes de deux ou trois, les participants construisent une application d’agent pour un cahier des charges écrit, en réutilisant les TP de phase, puis présentent sa qualité, sa sécurité et son coût comme ils le feraient devant un product owner.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, concevoir l’agent, construire le RAG sur les documents fournis, les outils et un serveur MCP",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Évaluation et sécurisation",
+     "content": "Jeu d’évaluation et rapport, garde-fous, traçage et coût par requête, API conteneurisée",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct incluant une tentative d’attaque ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Une application d’agent déployée",
+    "brief": "Un agent qui répond à partir d’un ensemble de documents en citant ses sources, agit par des outils et un serveur MCP, est testé contre l’injection de prompt, est mesuré sur un jeu d’évaluation avec son coût par requête, et tourne comme API conteneurisée.",
+    "stack": "Python, une API de LLM et un modèle ouvert (Ollama), embeddings et base vectorielle, LangGraph, MCP, une bibliothèque de garde-fous (par ex. NeMo Guardrails), Ragas, Langfuse, FastAPI, Docker",
+    "deliverable": "Dépôt avec code et jeu d’évaluation, rapport d’évaluation, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

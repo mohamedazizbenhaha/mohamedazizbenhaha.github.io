@@ -7,13 +7,34 @@
  "certifications": [],
  "overview": "This programme teaches participants to program in Python from the very beginning. They set up a working environment, then learn variables and types, conditions and loops, lists, dictionaries and other data structures, functions, modules and packages, virtual environments and their first unit tests with pytest. They read and write files, handle errors, work with JSON and CSV data, and organise code with classes and dataclasses. Every chapter ends with exercises at the keyboard, and the programme closes with a final project in which each participant builds, tests and presents a command-line application.",
  "facts": [
-  {"label": "Audience", "value": "Beginners, students and professionals learning to program with Python"},
-  {"label": "Prerequisites", "value": "None. Basic computer use; no programming experience needed"},
-  {"label": "Duration", "value": "27 h: 24 h of chapters + 3 h buffer"},
-  {"label": "Format", "value": "Short lectures with live coding, each followed by guided exercises"},
-  {"label": "Lab environment", "value": "Runs locally: one laptop per participant with Python 3, VS Code and Git, installed in the first chapter; no account or cost"},
-  {"label": "Assessment", "value": "Exercises validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"},
-  {"label": "Outcome", "value": "Participants can write, organise and test Python programs that use data structures, functions, files, error handling and classes"}
+  {
+   "label": "Audience",
+   "value": "Beginners, students and professionals learning to program with Python"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None. Basic computer use; no programming experience needed"
+  },
+  {
+   "label": "Duration",
+   "value": "27 h: 24 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures with live coding, each followed by guided exercises"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant with Python 3, VS Code and Git, installed in the first chapter; no account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "Exercises validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can write, organise and test Python programs that use data structures, functions, files, error handling and classes"
+  }
  ],
  "buffer": 3,
  "phases": [
@@ -21,10 +42,22 @@
    "name": "Python Basics",
    "hours": 6,
    "focus": "Setup, variables, types, operators, input and output, conditions and loops",
-   "intro": "Participants install Python and VS Code, write their first programs with variables, types, operators and input and output, then control the flow of a program with conditions and loops. Validated exercise: a number-guessing game that validates the player's input and counts the attempts.",
+   "intro": "Participants install Python and VS Code, write their first programs with variables, types, operators and input and output, then control the flow of a program with conditions and loops. Validated exercise: a number-guessing game that checks each guess is within range and counts the attempts.",
    "chapters": [
-    {"id": "1.1", "title": "Getting Started", "content": "Setup, variables, types, operators, input and output", "format": "Lecture + Lab", "hours": 3},
-    {"id": "1.2", "title": "Control Flow", "content": "Conditions, loops", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "Getting Started",
+     "content": "Setup, variables, types, operators, input and output",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Control Flow",
+     "content": "Conditions, loops",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -35,8 +68,20 @@
    "focus": "Lists, tuples, dictionaries, sets, comprehensions, functions, modules, pytest",
    "intro": "Participants store and transform data with lists, tuples, dictionaries, sets and comprehensions, then split their code into functions, modules and packages, manage dependencies with venv and pip, and write their first unit tests with pytest. Validated exercise: a module of text-statistics functions with passing pytest tests.",
    "chapters": [
-    {"id": "2.1", "title": "Data Structures", "content": "Lists, tuples, dictionaries, sets, comprehensions", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.2", "title": "Functions & Modules", "content": "Functions, scope, modules, packages, venv and pip, first unit tests with pytest", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Data Structures",
+     "content": "Lists, tuples, dictionaries, sets, comprehensions",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Functions & Modules",
+     "content": "Functions, scope, modules, packages, venv and pip, first unit tests with pytest",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -47,8 +92,20 @@
    "focus": "File input and output, exceptions, JSON and CSV, classes, inheritance, dataclasses",
    "intro": "Participants read and write files, handle errors with exceptions, exchange data as JSON and CSV, then model their programs with classes, inheritance and dataclasses. Validated exercise: a contact book stored in a JSON file, with classes for its entries and graceful handling of a missing or corrupted file.",
    "chapters": [
-    {"id": "3.1", "title": "Files & Errors", "content": "File input and output, exceptions, JSON and CSV", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.2", "title": "Object-Oriented Python", "content": "Classes, inheritance, dataclasses", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "3.1",
+     "title": "Files & Errors",
+     "content": "File input and output, exceptions, JSON and CSV",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Object-Oriented Python",
+     "content": "Classes, inheritance, dataclasses",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -59,9 +116,27 @@
    "focus": "A tested command-line application, presented to the group",
    "intro": "Each participant builds a command-line application from a short brief, such as a task manager or an expense tracker, reusing the exercises of the phases, then presents it to the group.",
    "chapters": [
-    {"id": "4.1", "title": "Brief & Build", "content": "Choose the brief, design the modules and classes, write the application with file storage", "format": "Project", "hours": 3},
-    {"id": "4.2", "title": "Test & Document", "content": "pytest tests for the main functions, error handling, README", "format": "Project", "hours": 1.5},
-    {"id": "4.3", "title": "Demo & Review", "content": "Live demo and code walkthrough; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Brief & Build",
+     "content": "Choose the brief, design the modules and classes, write the application with file storage, command-line arguments with argparse",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Test & Document",
+     "content": "pytest tests for the main functions, error handling, README",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Review",
+     "content": "Live demo and code walkthrough; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {

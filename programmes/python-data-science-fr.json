@@ -1,0 +1,136 @@
+{
+ "slug": "python-data-science-fr",
+ "file": "Python-pour-la-data-science-21h.docx",
+ "lang": "fr",
+ "title": "Python pour la data science",
+ "subtitle": "Explorer, interroger et visualiser des données avec Python, pandas et SQL",
+ "audience_line": "Analystes, étudiants et développeurs qui travaillent avec des données",
+ "certifications": [],
+ "overview": "Ce programme donne aux participants la pile de données Python utilisée en analyse de données et en machine learning. Ils ajoutent les fonctionnalités de Python sur lesquelles repose le code de données, travaillent de façon reproductible dans Jupyter, calculent avec les tableaux NumPy, nettoient, remodèlent et combinent les données avec pandas, interrogent des bases de données en SQL depuis Python, et communiquent leurs résultats avec Matplotlib, Seaborn et Plotly. Chaque chapitre se termine par des exercices sur des jeux de données réels, et le programme s’achève par un projet final où chaque participant livre un rapport d’analyse exploratoire sous forme de notebook Jupyter.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Analystes, étudiants et développeurs qui travaillent avec des données"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Bases de Python (cours : Fondamentaux de la programmation Python, ou équivalent) : variables, structures de données, fonctions. Ces notions ne sont pas réenseignées"
+  },
+  {
+   "label": "Durée",
+   "value": "21 h : 18 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts avec programmation en direct dans Jupyter, chacun suivi d’exercices sur des jeux de données réels"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant avec Python 3, JupyterLab, pandas, NumPy, Matplotlib, Seaborn, Plotly et SQLite ; une base PostgreSQL fournie par l’organisateur ; Google Colab en solution de repli ; ni compte ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Exercices validés à la fin de chaque phase et un rapport d’analyse final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent charger, nettoyer, interroger, analyser et visualiser un jeu de données réel avec Python, pandas et SQL, et présenter leurs résultats dans un notebook reproductible"
+  }
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Outils et NumPy",
+   "hours": 6,
+   "focus": "Python pour les données, Jupyter et reproductibilité, tableaux NumPy",
+   "intro": "Les participants ajoutent les fonctionnalités de Python utilisées chaque jour dans le code de données, travaillent dans JupyterLab et Colab de façon que d’autres puissent relancer leur travail, puis calculent avec les tableaux NumPy grâce à la vectorisation, au broadcasting et à l’algèbre linéaire. Exercice validé : un notebook qui simule et résume un jeu de données avec du code NumPy vectorisé et se relance proprement du début à la fin.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Python pour les données",
+     "content": "Compréhensions, lambdas, décorateurs, générateurs, annotations de type, dataclasses",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Jupyter et reproductibilité",
+     "content": "JupyterLab, commandes magiques, nbconvert, Colab",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "NumPy",
+     "content": "ndarrays, vectorisation, broadcasting, algèbre linéaire",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Pandas, SQL et visualisation",
+   "hours": 9,
+   "focus": "DataFrames, nettoyage et remodelage, requêtes SQL depuis Python, graphiques",
+   "intro": "Les participants chargent, nettoient, filtrent, regroupent, fusionnent et remodèlent des données avec pandas, interrogent des bases SQLite et PostgreSQL en SQL et ramènent les résultats dans pandas, puis choisissent et construisent le bon graphique avec Matplotlib, Seaborn et Plotly. Exercice validé : une question sur un jeu de données de ventes traitée une fois en SQL et une fois avec pandas, et présentée dans un graphique clair.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Pandas",
+     "content": "DataFrames, lecture et écriture, filtrage, groupby, fusion, tableaux croisés, valeurs manquantes",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "SQL pour l’analyse de données",
+     "content": "SELECT, jointures, GROUP BY, fonctions de fenêtrage ; interroger SQLite et PostgreSQL depuis Python et pandas",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Visualisation",
+     "content": "Matplotlib, Seaborn, Plotly",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 3,
+   "focus": "Un rapport d’analyse exploratoire sur un jeu de données réel",
+   "intro": "Chaque participant analyse un jeu de données public réel, en réutilisant les exercices des phases, et présente ses résultats comme il le ferait devant un manager qui doit décider.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Exploration et analyse",
+     "content": "Charger et nettoyer le jeu de données, répondre aux questions du cahier des charges avec SQL et pandas, construire les graphiques",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Rapport et présentation",
+     "content": "Finaliser le notebook en rapport, présenter les résultats ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Rapport d’analyse exploratoire",
+    "brief": "Un jeu de données public réel chargé, nettoyé, interrogé avec SQL et pandas, et exploré par des graphiques, livré sous forme de notebook Jupyter qui expose les questions, la méthode et les résultats.",
+    "stack": "Python 3, JupyterLab, pandas, NumPy, SQLite ou PostgreSQL, Matplotlib, Seaborn, Plotly",
+    "deliverable": "Rapport sous forme de notebook Jupyter, présentation des résultats"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}
