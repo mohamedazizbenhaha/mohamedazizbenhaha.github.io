@@ -7,15 +7,36 @@
  "certifications": [
   "AWS Certified Cloud Practitioner (CLF-C02)"
  ],
- "overview": "This programme gives participants a working knowledge of Amazon Web Services and prepares the AWS Certified Cloud Practitioner exam (CLF-C02). They learn the cloud models and AWS pricing, secure an account with IAM, then use the core services: networking with VPC, Route 53 and CloudFront, compute with EC2, Lambda and containers, storage, databases, scaling and monitoring, all framed by the Well-Architected Framework. Every chapter ends with a lab in the AWS console or CLI, exam practice closes the content, and the programme ends with a final project in which teams deploy a highly available web application and present its cost estimate.",
+ "overview": "This programme gives participants a working knowledge of Amazon Web Services and prepares the AWS Certified Cloud Practitioner exam (CLF-C02). They learn the cloud models and AWS pricing, secure an account with IAM, then use the core services: networking with VPC, Route 53 and CloudFront, compute with EC2, Lambda and containers, storage, databases, scaling and monitoring, all framed by the Well-Architected Framework. Almost every chapter ends with a lab in the AWS console or CLI, exam practice closes the content, and the programme ends with a final project in which teams deploy a highly available web application and present its cost estimate.",
  "facts": [
-  {"label": "Audience", "value": "IT staff, developers, students and managers starting with AWS"},
-  {"label": "Prerequisites", "value": "None. Basic IT literacy; networking or Linux basics help but are not required"},
-  {"label": "Duration", "value": "33 h: 27 h of chapters + 6 h buffer"},
-  {"label": "Format", "value": "Short lectures followed by guided labs in the AWS console and CLI; exam practice"},
-  {"label": "Lab environment", "value": "One laptop per participant with a browser and the AWS CLI; one AWS sandbox account per team, provided by the organiser, with a budget alert; resources destroyed at the end of each lab to control cost"},
-  {"label": "Assessment", "value": "A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project"},
-  {"label": "Outcome", "value": "Participants can explain and choose the core AWS services, deploy a simple highly available web application, estimate its cost and sit the CLF-C02 exam"}
+  {
+   "label": "Audience",
+   "value": "IT staff, developers, students and managers starting with AWS"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None. Basic IT literacy; networking or Linux basics help but are not required"
+  },
+  {
+   "label": "Duration",
+   "value": "33 h: 27 h of chapters + 6 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs in the AWS console and CLI; exam practice"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant with a browser and the AWS CLI; one AWS sandbox account per team, provided by the organiser, with a budget alert; resources destroyed at the end of each lab to control cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can explain and choose the core AWS services, deploy a simple highly available web application, estimate its cost and sit the CLF-C02 exam"
+  }
  ],
  "buffer": 6,
  "phases": [
@@ -23,11 +44,29 @@
    "name": "Cloud Concepts & Security",
    "hours": 6,
    "focus": "Cloud models, pricing and global infrastructure, IAM",
-   "intro": "Participants learn what the cloud changes, how AWS charges for it and where it runs, then secure their sandbox account: the shared responsibility model, IAM users, groups, roles and policies, and MFA. Validated lab: an account with MFA on the root user, an administrators group, a least-privilege role and a cost budget with an alert.",
+   "intro": "Participants learn what the cloud changes, how AWS charges for it and where it runs, then secure their sandbox account: the shared responsibility model, IAM users, groups, roles and policies, and MFA. Validated lab: an account with MFA on every user, an administrators group, a least-privilege role and a cost budget with an alert.",
    "chapters": [
-    {"id": "1.1", "title": "Cloud Concepts", "content": "Service and deployment models, benefits of the cloud", "format": "Lecture + Workshop", "hours": 1.5},
-    {"id": "1.2", "title": "Economics & Global Infrastructure", "content": "Pricing models, total cost of ownership, billing, Regions, Availability Zones, edge locations", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.3", "title": "Security & IAM", "content": "Shared responsibility, users, groups, roles, policies, MFA", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "Cloud Concepts",
+     "content": "Service and deployment models, benefits of the cloud",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Economics & Global Infrastructure",
+     "content": "Pricing models, total cost of ownership, billing, AWS Budgets and Cost Explorer, consolidated billing, support plans, Regions, Availability Zones, edge locations",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Security & IAM",
+     "content": "Shared responsibility, users, groups, roles, policies, MFA, security services overview (GuardDuty, Inspector, Shield, WAF, AWS Artifact)",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -38,10 +77,34 @@
    "focus": "VPC, Route 53, CloudFront, EC2, Lambda, containers, storage, databases",
    "intro": "Participants build with the services most workloads use: a VPC with public and private subnets, DNS and content delivery, virtual machines, functions and containers, object, block and file storage, and relational and NoSQL databases. Validated lab: a web server in a public subnet serving images from S3, with its database in a private subnet.",
    "chapters": [
-    {"id": "2.1", "title": "Networking & Content Delivery", "content": "VPC, subnets, security groups, Route 53, CloudFront", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.2", "title": "Compute", "content": "EC2, Lambda, containers, Elastic Beanstalk", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.3", "title": "Storage", "content": "S3 and its storage classes (including S3 Glacier), EBS, EFS", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.4", "title": "Databases", "content": "RDS, Aurora, DynamoDB, Redshift", "format": "Lecture + Lab", "hours": 1.5}
+    {
+     "id": "2.1",
+     "title": "Networking & Content Delivery",
+     "content": "VPC, subnets, security groups, Route 53, CloudFront",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Compute",
+     "content": "EC2, Lambda, containers, Elastic Beanstalk",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Storage",
+     "content": "S3 and its storage classes (including S3 Glacier), EBS, EFS",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Databases",
+     "content": "RDS, Aurora, DynamoDB, Redshift",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -52,9 +115,27 @@
    "focus": "Well-Architected Framework, load balancing, Auto Scaling, CloudWatch, CLF-C02 practice",
    "intro": "Participants judge an architecture against the six pillars of the Well-Architected Framework, make it scale and heal with Elastic Load Balancing and Auto Scaling, watch it with CloudWatch, then practise exam questions across the four CLF-C02 domains. Validated lab: an Auto Scaling group behind a load balancer that replaces a stopped instance, with a CloudWatch alarm.",
    "chapters": [
-    {"id": "3.1", "title": "Cloud Architecture", "content": "Well-Architected Framework", "format": "Lecture + Workshop", "hours": 1.5},
-    {"id": "3.2", "title": "Scaling & Monitoring", "content": "Elastic Load Balancing, Auto Scaling, CloudWatch", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "3.3", "title": "CLF-C02 Preparation", "content": "Practice questions and review", "format": "Lecture + Workshop", "hours": 3}
+    {
+     "id": "3.1",
+     "title": "Cloud Architecture",
+     "content": "Well-Architected Framework",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Scaling & Monitoring",
+     "content": "Elastic Load Balancing, Auto Scaling, CloudWatch",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "CLF-C02 Preparation",
+     "content": "Practice questions across the four domains; review of service categories not used in labs (analytics, AI/ML, migration)",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -65,9 +146,27 @@
    "focus": "A highly available web application and its cost estimate",
    "intro": "Teams of two or three deploy a highly available web application in their sandbox account from a written brief, reusing the phase labs, then present the architecture and its monthly cost as they would to a manager.",
    "chapters": [
-    {"id": "4.1", "title": "Brief & Build", "content": "Read the brief, draw the architecture, then deploy the VPC, EC2 Auto Scaling group behind an Application Load Balancer, RDS database and S3 bucket", "format": "Project", "hours": 3},
-    {"id": "4.2", "title": "Monitor & Estimate", "content": "CloudWatch alarms, a budget, a cost estimate with the AWS Pricing Calculator, architecture diagram", "format": "Project", "hours": 1.5},
-    {"id": "4.3", "title": "Demo & Review", "content": "Live demo with an instance failure, cost presentation, teardown; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, draw the architecture, then deploy the VPC, EC2 Auto Scaling group behind an Application Load Balancer, RDS database and S3 bucket",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Monitor & Estimate",
+     "content": "CloudWatch alarms, a budget, a cost estimate with the AWS Pricing Calculator, architecture diagram",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Review",
+     "content": "Live demo with an instance failure, cost presentation, teardown; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {

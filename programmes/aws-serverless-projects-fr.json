@@ -8,13 +8,34 @@
  "certifications": [],
  "overview": "Ce programme est construit autour de projets. Les participants déploient une application web évolutive avec Terraform, livrent des conteneurs sur ECS Fargate via GitHub Actions sans clés de longue durée, construisent une API serverless et une chaîne de traitement d’images pilotée par les événements, automatisent la réponse aux incidents, et ajoutent des contrôles de sécurité à une chaîne de conteneurs. Chaque projet part d’un dépôt de départ fourni et se termine par un déploiement fonctionnel, puis supprimé. Le programme s’achève par un projet final où les participants réunissent les projets en une architecture de portfolio documentée, avec infrastructure en code et revue des coûts.",
  "facts": [
-  {"label": "Public", "value": "Ingénieurs ayant des bases d’architecture AWS qui veulent des projets de portfolio concrets"},
-  {"label": "Prérequis", "value": "AWS Solutions Architect Associate (cours), plus des bases de Terraform et de GitHub Actions (telles qu’enseignées dans Ingénierie DevOps). Ces outils sont utilisés, pas enseignés"},
-  {"label": "Durée", "value": "18 h : 15 h de chapitres + 3 h de réserve"},
-  {"label": "Format", "value": "Projets pratiques à partir de dépôts de départ fournis, chacun précédé d’une courte présentation de la conception"},
-  {"label": "Environnement de TP", "value": "Un portable par participant (Terraform, CLI AWS, Git, Docker) ; un dépôt GitHub et un compte AWS de test par équipe, fournis par l’organisateur, avec alerte budgétaire ; chaque projet détruit avec terraform destroy à la fin du TP pour maîtriser les coûts"},
-  {"label": "Évaluation", "value": "Chaque projet validé quand il fonctionne, et un projet final de portfolio présenté au groupe ; attestation de formation pour les participants qui valident les deux"},
-  {"label": "Résultat", "value": "Les participants repartent avec six projets AWS fonctionnels dans Git, réunis en une architecture documentée qu’ils savent expliquer, reconstruire et chiffrer"}
+  {
+   "label": "Public",
+   "value": "Ingénieurs ayant des bases d’architecture AWS qui veulent des projets de portfolio concrets"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Architecture AWS (cours : AWS Solutions Architect Associate) ; bases de Terraform et de GitHub Actions (cours : Ingénierie DevOps). Ces outils sont utilisés, pas enseignés"
+  },
+  {
+   "label": "Durée",
+   "value": "18 h : 15 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Projets pratiques à partir de dépôts de départ fournis, chacun précédé d’une courte présentation de la conception"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant (Terraform, CLI AWS, Git, Docker) ; un dépôt GitHub par participant et un compte AWS de test par équipe, fournis par l’organisateur, avec alerte budgétaire ; chaque projet détruit avec terraform destroy à la fin du TP pour maîtriser les coûts"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Chaque projet validé quand il fonctionne, et un projet final de portfolio présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants repartent avec six projets AWS fonctionnels dans Git, réunis en une architecture documentée qu’ils savent expliquer, reconstruire et chiffrer"
+  }
  ],
  "buffer": 3,
  "phases": [
@@ -24,8 +45,20 @@
    "focus": "Application web avec Terraform, CI/CD vers ECS Fargate avec OIDC",
    "intro": "Les participants provisionnent une application web évolutive avec Terraform à partir d’un dépôt de départ, puis en livrent une version conteneurisée via GitHub Actions sur ECS Fargate, en s’authentifiant auprès d’AWS par OIDC au lieu de clés stockées. Projets validés : l’application web qui répond derrière son répartiteur de charge, et un commit qui atteint Fargate via le pipeline.",
    "chapters": [
-    {"id": "1.1", "title": "Application web évolutive", "content": "Terraform : VPC, Application Load Balancer, Auto Scaling, RDS, à partir d’un dépôt de départ fourni", "format": "TP", "hours": 3},
-    {"id": "1.2", "title": "CI/CD vers ECS Fargate", "content": "GitHub Actions avec OIDC, Amazon ECR, Amazon ECS sur Fargate", "format": "TP", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "Application web évolutive",
+     "content": "Terraform : VPC, Application Load Balancer, Auto Scaling, RDS, à partir d’un dépôt de départ fourni",
+     "format": "TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "CI/CD vers ECS Fargate",
+     "content": "GitHub Actions avec OIDC, Amazon ECR, Amazon ECS sur Fargate",
+     "format": "TP",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -34,12 +67,36 @@
    "name": "Serverless et automatisation de la sécurité",
    "hours": 6,
    "focus": "API serverless, chaîne événementielle, automatisation des incidents, contrôles d’images",
-   "intro": "Les participants construisent des systèmes serverless et événementiels : une API sur Lambda, API Gateway et DynamoDB, une chaîne de traitement d’images déclenchée par des événements S3, une réponse automatisée aux incidents de GuardDuty et CloudWatch via EventBridge, et une chaîne de conteneurs qui s’arrête sur les vulnérabilités critiques. Projets validés : chacun des quatre en fonctionnement, démontré avec un événement de test.",
+   "intro": "Les participants construisent des systèmes serverless et événementiels : une API sur Lambda, API Gateway et DynamoDB, une chaîne de traitement d’images déclenchée par des événements S3, une réponse automatisée aux alertes GuardDuty et CloudWatch via EventBridge, et un pipeline de conteneurs qui s’arrête sur les vulnérabilités critiques. Projets validés : chacun des quatre en fonctionnement, démontré avec un événement de test.",
    "chapters": [
-    {"id": "2.1", "title": "API serverless", "content": "Lambda, API Gateway, DynamoDB", "format": "TP", "hours": 1.5},
-    {"id": "2.2", "title": "Chaîne de traitement d’images", "content": "Événements S3, Lambda, notifications", "format": "TP", "hours": 1.5},
-    {"id": "2.3", "title": "Automatisation de la réponse aux incidents", "content": "GuardDuty et CloudWatch vers EventBridge, puis Lambda et SNS", "format": "TP", "hours": 1.5},
-    {"id": "2.4", "title": "Chaîne de sécurité des conteneurs", "content": "Analyse ECR, Amazon Inspector, contrôles au build", "format": "TP", "hours": 1.5}
+    {
+     "id": "2.1",
+     "title": "API serverless",
+     "content": "Lambda, API Gateway, DynamoDB",
+     "format": "TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Chaîne de traitement d’images",
+     "content": "Événements S3, Lambda, notifications",
+     "format": "TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Automatisation de la réponse aux incidents",
+     "content": "GuardDuty et CloudWatch vers EventBridge, puis Lambda et SNS",
+     "format": "TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Pipeline de sécurité des conteneurs",
+     "content": "Analyse ECR, Amazon Inspector, points de blocage dans le build",
+     "format": "TP",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -50,8 +107,20 @@
    "focus": "Une architecture de portfolio documentée",
    "intro": "Chaque participant réunit les six projets en une architecture de portfolio, documentée pour qu’un autre ingénieur puisse la reconstruire, et la présente au groupe.",
    "chapters": [
-    {"id": "3.1", "title": "Intégration et documentation", "content": "Réunir les projets dans un dépôt avec infrastructure en code, schéma d’architecture et README", "format": "Projet", "hours": 1.5},
-    {"id": "3.2", "title": "Revue des coûts, démonstration et suppression", "content": "Revue des coûts, démonstration en direct, suppression complète des ressources ; questions et retours", "format": "Projet", "hours": 1.5}
+    {
+     "id": "3.1",
+     "title": "Intégration et documentation",
+     "content": "Réunir les projets dans un dépôt avec infrastructure en code, schéma d’architecture et README",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Revue des coûts, démonstration et suppression",
+     "content": "Revue des coûts, démonstration en direct, suppression complète des ressources ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {

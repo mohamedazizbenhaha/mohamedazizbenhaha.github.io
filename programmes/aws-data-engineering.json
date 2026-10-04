@@ -7,15 +7,36 @@
  "certifications": [
   "AWS Certified Data Engineer – Associate (DEA-C01), core topics"
  ],
- "overview": "This programme teaches participants to build data pipelines on Amazon Web Services and covers the core topics of the AWS Certified Data Engineer – Associate exam (DEA-C01). They design an S3 data lake with partitioned Parquet and Apache Iceberg tables, ingest batch and streaming data, transform it with AWS Glue and EMR, load and query Amazon Redshift Serverless, govern access and quality with Lake Formation and Glue Data Quality, orchestrate with Step Functions and Amazon MWAA, and analyse results with Athena, Managed Service for Apache Flink and QuickSight. Exam practice closes the content, and the programme ends with a final project: an end-to-end data pipeline built and presented by each team.",
+ "overview": "This programme teaches participants to build data pipelines on Amazon Web Services and covers the core topics of the AWS Certified Data Engineer – Associate exam (DEA-C01). They design an S3 data lake with partitioned Parquet and Apache Iceberg tables, ingest batch and streaming data, transform it with AWS Glue and EMR, load and query Amazon Redshift Serverless, govern access and quality with Lake Formation and Glue Data Quality, orchestrate with Step Functions and Amazon MWAA, and analyse results with Athena, Amazon Managed Service for Apache Flink and QuickSight. Exam practice closes the content, and the programme ends with a final project: an end-to-end data pipeline built and presented by each team.",
  "facts": [
-  {"label": "Audience", "value": "Data analysts, developers and engineers building data pipelines on AWS"},
-  {"label": "Prerequisites", "value": "AWS Cloud Practitioner (course) and Python for Data Science (course), or equivalent: core AWS services, Python and SQL. These are used, not taught"},
-  {"label": "Duration", "value": "27 h: 24 h of chapters + 3 h buffer"},
-  {"label": "Format", "value": "Short lectures followed by guided labs on a shared dataset; exam practice"},
-  {"label": "Lab environment", "value": "One laptop per participant with a browser and the AWS CLI; one AWS sandbox account per team, provided by the organiser, with a budget alert; streams, clusters and warehouses deleted at the end of each lab to control cost"},
-  {"label": "Assessment", "value": "A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project"},
-  {"label": "Outcome", "value": "Participants can build an orchestrated pipeline that ingests, catalogues, transforms, governs and serves data on AWS, and explain its design choices"}
+  {
+   "label": "Audience",
+   "value": "Data analysts, developers and engineers building data pipelines on AWS"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Core AWS services (course: AWS Cloud Practitioner); Python and SQL (course: Python for Data Science), or equivalent. These are used, not taught"
+  },
+  {
+   "label": "Duration",
+   "value": "27 h: 24 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs on a shared dataset; exam practice"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant with a browser and the AWS CLI; one AWS sandbox account per team, provided by the organiser, with a budget alert; MWAA and the QuickSight subscription set up by the organiser for the course, Redshift Serverless at minimum base capacity; streams, clusters and warehouses deleted at the end of each lab"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can build an orchestrated pipeline that ingests, catalogues, transforms, governs and serves data on AWS, and explain its design choices"
+  }
  ],
  "buffer": 3,
  "phases": [
@@ -23,11 +44,29 @@
    "name": "Data Lakes & Ingestion",
    "hours": 6,
    "focus": "Lake, warehouse and lakehouse, S3 formats and Iceberg, batch and streaming ingestion",
-   "intro": "Participants compare batch and streaming, data lakes, warehouses and lakehouses, design an S3 data lake with partitioned Parquet and Apache Iceberg tables, then ingest data with Kinesis Data Streams, Amazon Data Firehose, DMS and AppFlow, with an overview of Amazon MSK. Validated lab: a clickstream delivered by Firehose into partitioned Parquet files in the lake.",
+   "intro": "Participants compare batch and streaming, data lakes, warehouses and lakehouses, design an S3 data lake with partitioned Parquet and Apache Iceberg tables, then ingest data with Kinesis Data Streams, Amazon Data Firehose, DMS and AppFlow, with an overview of Amazon MSK. Validated lab: a clickstream sent through Kinesis Data Streams and delivered by Firehose into date-partitioned JSON files in the raw zone of the lake.",
    "chapters": [
-    {"id": "1.1", "title": "Data Engineering Fundamentals", "content": "Batch vs streaming, data lake vs warehouse vs lakehouse", "format": "Lecture + Workshop", "hours": 1.5},
-    {"id": "1.2", "title": "Storage & Formats", "content": "S3 data lake, partitioning, Parquet, Apache Iceberg tables", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.3", "title": "Ingestion", "content": "Kinesis Data Streams, Amazon Data Firehose, DMS, AppFlow, Amazon MSK overview", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "Data Engineering Fundamentals",
+     "content": "Batch vs streaming, data lake vs warehouse vs lakehouse",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Storage & Formats",
+     "content": "S3 data lake, partitioning, Parquet, Apache Iceberg tables (including Amazon S3 Tables)",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Ingestion",
+     "content": "Kinesis Data Streams, Amazon Data Firehose, DMS, AppFlow, Amazon MSK overview",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -38,8 +77,20 @@
    "focus": "AWS Glue, EMR, Amazon Redshift Serverless",
    "intro": "Participants catalogue and transform the lake with AWS Glue crawlers, the Data Catalog and ETL jobs, see when EMR is the better choice, then design, load and query a Redshift Serverless warehouse. Validated lab: a Glue job that cleans the raw data into a curated Iceberg table, loaded into Redshift Serverless and queried.",
    "chapters": [
-    {"id": "2.1", "title": "Processing", "content": "AWS Glue (ETL jobs, crawlers, Data Catalog), EMR", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.2", "title": "Data Warehousing", "content": "Amazon Redshift Serverless design, loading and querying", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Processing",
+     "content": "AWS Glue (ETL jobs, crawlers, Data Catalog), EMR",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Data Warehousing",
+     "content": "Amazon Redshift Serverless design, loading and querying",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -50,10 +101,34 @@
    "focus": "Lake Formation, data quality, Step Functions, MWAA, Athena, Flink, QuickSight",
    "intro": "Participants control who sees which data with Lake Formation, check it with Glue Data Quality and trace its lineage, orchestrate the pipeline with Step Functions and Amazon MWAA, analyse it with Athena, Managed Service for Apache Flink and QuickSight, then practise DEA-C01 questions. Validated lab: an orchestrated run that stops when a data quality rule fails, and an analyst role that can query only its permitted columns in Athena.",
    "chapters": [
-    {"id": "3.1", "title": "Governance & Quality", "content": "Lake Formation permissions, Glue Data Quality, data lineage", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "3.2", "title": "Orchestration", "content": "Step Functions, Amazon MWAA (Apache Airflow)", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "3.3", "title": "Analytics & Streaming Analytics", "content": "Athena, Amazon Managed Service for Apache Flink, QuickSight", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "3.4", "title": "DEA-C01 Preparation", "content": "Practice questions and review", "format": "Lecture + Workshop", "hours": 1.5}
+    {
+     "id": "3.1",
+     "title": "Governance & Quality",
+     "content": "Lake Formation permissions, Glue Data Quality, data lineage (Amazon DataZone / SageMaker Catalog)",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Orchestration",
+     "content": "Step Functions, Amazon MWAA (Apache Airflow)",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Analytics & Streaming Analytics",
+     "content": "Athena, Amazon Managed Service for Apache Flink, QuickSight",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "DEA-C01 Preparation",
+     "content": "Practice questions and review",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -64,9 +139,27 @@
    "focus": "An end-to-end data pipeline, presented to the group",
    "intro": "Teams of two or three build a complete pipeline for a provided dataset, reusing the phase labs, then present it as they would to a data team lead and tear it down.",
    "chapters": [
-    {"id": "4.1", "title": "Brief & Build", "content": "Read the brief, ingest with Kinesis and S3, catalogue and transform with Glue, query with Athena", "format": "Project", "hours": 3},
-    {"id": "4.2", "title": "Serve & Orchestrate", "content": "Load Redshift Serverless, build the QuickSight dashboard, orchestrate with Step Functions; architecture diagram", "format": "Project", "hours": 1.5},
-    {"id": "4.3", "title": "Demo & Teardown", "content": "Live run of the pipeline, dashboard walkthrough, teardown; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, ingest with Kinesis and S3, catalogue and transform with Glue, query with Athena",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Serve & Orchestrate",
+     "content": "Load Redshift Serverless, build the QuickSight dashboard, orchestrate with Step Functions; architecture diagram",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Teardown",
+     "content": "Live run of the pipeline, dashboard walkthrough, teardown; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {

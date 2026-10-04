@@ -3,20 +3,41 @@
  "file": "AWS-CloudOps-Engineer-33h-FR.docx",
  "lang": "fr",
  "title": "AWS CloudOps Engineer",
- "subtitle": "Superviser, automatiser, déployer et garder sûres et disponibles les charges de travail AWS",
+ "subtitle": "Superviser, automatiser et déployer les charges de travail AWS, et les garder sécurisées et disponibles",
  "audience_line": "Administrateurs système et ingénieurs d’exploitation qui exploitent des charges de travail sur AWS",
  "certifications": [
   "AWS Certified CloudOps Engineer – Associate (SOA-C03)"
  ],
- "overview": "Ce programme apprend aux participants à exploiter des charges de travail sur Amazon Web Services et prépare l’examen AWS Certified CloudOps Engineer – Associate (SOA-C03). Ils supervisent et optimisent les charges avec CloudWatch, X-Ray et Compute Optimizer, automatisent la remédiation avec EventBridge et Systems Manager, maintiennent la disponibilité avec Auto Scaling, la répartition de charge, AWS Backup et des stratégies de reprise après sinistre, déploient avec CloudFormation et les outils de développement AWS, exécutent des conteneurs sur ECS et EKS, appliquent des contrôles de sécurité et de coût, et dépannent les réseaux. Chaque chapitre se termine par un TP, un entraînement à l’examen clôt le contenu, et le programme s’achève par un projet final : une charge de travail exploitée de bout en bout par chaque équipe.",
+ "overview": "Ce programme apprend aux participants à exploiter des charges de travail sur Amazon Web Services et prépare l’examen AWS Certified CloudOps Engineer – Associate (SOA-C03). Ils supervisent et optimisent les charges avec CloudWatch, X-Ray et Compute Optimizer, automatisent la remédiation avec EventBridge et Systems Manager, maintiennent la disponibilité avec Auto Scaling, la répartition de charge, AWS Backup et des stratégies de reprise après sinistre, déploient avec CloudFormation et les outils de développement AWS, exécutent des conteneurs sur ECS et EKS, appliquent des contrôles de sécurité et de coût, et dépannent les réseaux. Presque chaque chapitre se termine par un TP, un entraînement à l’examen clôt le contenu, et le programme s’achève par un projet final : une charge de travail exploitée de bout en bout par chaque équipe.",
  "facts": [
-  {"label": "Public", "value": "Administrateurs système et ingénieurs d’exploitation qui exploitent des charges de travail sur AWS"},
-  {"label": "Prérequis", "value": "AWS Cloud Practitioner (cours), ou pratique équivalente des services AWS essentiels ; ligne de commande Linux. Ces services ne sont pas réintroduits"},
-  {"label": "Durée", "value": "33 h : 27 h de chapitres + 6 h de réserve"},
-  {"label": "Format", "value": "Cours courts suivis de TP guidés ; entraînement à l’examen"},
-  {"label": "Environnement de TP", "value": "Un portable par participant avec la CLI AWS ; un compte AWS de test par équipe, fourni par l’organisateur, avec alerte budgétaire ; piles supprimées à la fin de chaque TP pour maîtriser les coûts"},
-  {"label": "Évaluation", "value": "Un TP validé à la fin de chaque phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet"},
-  {"label": "Résultat", "value": "Les participants savent déployer une charge de travail avec CloudFormation via un pipeline, la superviser, automatiser sa remédiation et ses correctifs, tester sa sauvegarde et sa reprise, rendre compte de son coût et se présenter à l’examen SOA-C03"}
+  {
+   "label": "Public",
+   "value": "Administrateurs système et ingénieurs d’exploitation qui exploitent des charges de travail sur AWS"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Services AWS essentiels (cours : AWS Cloud Practitioner) et ligne de commande Linux (cours : Linux et scripting Bash), ou équivalent. Ces services ne sont pas réenseignés"
+  },
+  {
+   "label": "Durée",
+   "value": "33 h : 27 h de chapitres + 6 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés ; entraînement à l’examen"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant avec la CLI AWS ; un compte AWS de test par équipe, fourni par l’organisateur, avec alerte budgétaire ; piles et points de récupération supprimés à la fin de chaque TP pour maîtriser les coûts"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent déployer une charge de travail avec CloudFormation via un pipeline, la superviser, automatiser sa remédiation et ses correctifs, tester sa sauvegarde et sa reprise, rendre compte de son coût et se présenter à l’examen SOA-C03"
+  }
  ],
  "buffer": 6,
  "phases": [
@@ -26,8 +47,20 @@
    "focus": "CloudWatch, X-Ray, optimisation des performances, EventBridge, Systems Manager",
    "intro": "Les participants rendent une charge de travail observable avec les métriques, journaux, Logs Insights, alarmes et tableaux de bord CloudWatch et les traces X-Ray, l’optimisent avec Compute Optimizer et les réglages de stockage et de base de données, puis laissent AWS corriger seul les problèmes courants avec des règles EventBridge et des runbooks Systems Manager. TP validé : une alarme de disque plein qui déclenche un runbook Automation nettoyant l’instance, avec Session Manager à la place de SSH.",
    "chapters": [
-    {"id": "1.1", "title": "Supervision, journalisation et performances", "content": "Métriques, journaux, Logs Insights, alarmes et tableaux de bord CloudWatch, X-Ray ; optimisation avec Compute Optimizer, réglage EBS et RDS", "format": "Cours + TP", "hours": 3},
-    {"id": "1.2", "title": "Remédiation et automatisation", "content": "Règles EventBridge, runbooks Systems Manager Automation, Run Command, Patch Manager, Session Manager", "format": "Cours + TP", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "Supervision, journalisation et performances",
+     "content": "Métriques et agent CloudWatch, journaux, Logs Insights, alarmes et tableaux de bord CloudWatch, X-Ray ; optimisation avec Compute Optimizer, réglage EBS et RDS",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Remédiation et automatisation",
+     "content": "Règles EventBridge, runbooks Systems Manager Automation, Run Command, Patch Manager, Session Manager",
+     "format": "Cours + TP",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -36,10 +69,22 @@
    "name": "Fiabilité et déploiement",
    "hours": 6,
    "focus": "Auto Scaling, répartition de charge, AWS Backup, reprise, CloudFormation, CI/CD, ECS et EKS",
-   "intro": "Les participants maintiennent la charge disponible face aux pannes et aux sinistres avec Auto Scaling, Elastic Load Balancing, des conceptions multi-AZ, AWS Backup et des stratégies de reprise choisies selon le RTO et le RPO. Ils la déploient ensuite en code avec CloudFormation, StackSets et la détection de dérive, via un pipeline construit avec les outils de développement AWS, y compris des conteneurs sur ECS et EKS. TP validé : une pile CloudFormation déployée par CodePipeline, et une base restaurée depuis AWS Backup dans l’objectif de reprise fixé.",
+   "intro": "Les participants maintiennent la charge disponible face aux pannes et aux sinistres avec Auto Scaling, Elastic Load Balancing, des conceptions multi-AZ, AWS Backup et des stratégies de reprise choisies selon le RTO et le RPO. Ils la déploient ensuite sous forme de code avec CloudFormation, StackSets et la détection de dérive, via un pipeline construit avec les outils de développement AWS, y compris des conteneurs sur ECS et EKS. TP validé : une pile CloudFormation déployée par CodePipeline, et une base restaurée depuis AWS Backup dans l’objectif de reprise fixé.",
    "chapters": [
-    {"id": "2.1", "title": "Fiabilité et continuité d’activité", "content": "Auto Scaling, Elastic Load Balancing, multi-AZ, AWS Backup, RTO et RPO, stratégies de reprise après sinistre", "format": "Cours + TP", "hours": 3},
-    {"id": "2.2", "title": "Déploiement, provisionnement et automatisation", "content": "CloudFormation, StackSets, détection de dérive, CodeBuild, CodeDeploy, CodePipeline avec une source Git, conteneurs sur ECS et EKS", "format": "Cours + TP", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Fiabilité et continuité d’activité",
+     "content": "Auto Scaling, Elastic Load Balancing, multi-AZ, AWS Backup, RTO et RPO, stratégies de reprise après sinistre",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Déploiement, provisionnement et automatisation",
+     "content": "CloudFormation, StackSets, détection de dérive, CodeBuild, CodeDeploy, CodePipeline avec une source Git (GitHub via AWS CodeConnections, ou CodeCommit), conteneurs sur ECS et EKS",
+     "format": "Cours + TP",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -48,11 +93,29 @@
    "name": "Sécurité, réseau et préparation à l’examen",
    "hours": 9,
    "focus": "Opérations IAM, Config, Security Hub, maîtrise des coûts, dépannage VPC, SOA-C03",
-   "intro": "Les participants exploitent les contrôles de sécurité et de conformité avec IAM, Organizations, les règles Config, Security Hub et le chiffrement, gardent les coûts visibles avec Trusted Advisor, Cost Explorer et Budgets, dépannent la connectivité avec les Flow Logs et Reachability Analyzer, puis s’entraînent sur les domaines de l’examen SOA-C03. TP validé : une instance injoignable diagnostiquée avec Reachability Analyzer et corrigée, et une ressource non conforme signalée par une règle Config.",
+   "intro": "Les participants exploitent les contrôles de sécurité et de conformité avec IAM, Organizations, les règles Config, Security Hub CSPM et le chiffrement, gardent les coûts visibles avec Trusted Advisor, Cost Explorer et Budgets, dépannent la connectivité avec les Flow Logs et Reachability Analyzer, puis s’entraînent sur les domaines de l’examen SOA-C03. TP validé : une instance injoignable diagnostiquée avec Reachability Analyzer et corrigée, et une ressource non conforme signalée par une règle Config.",
    "chapters": [
-    {"id": "3.1", "title": "Sécurité et conformité", "content": "Opérations IAM, Organizations, règles Config, Security Hub, chiffrement, Trusted Advisor, Cost Explorer et Budgets", "format": "Cours + TP", "hours": 3},
-    {"id": "3.2", "title": "Réseau et diffusion de contenu", "content": "Exploitation des VPC, Flow Logs, Reachability Analyzer, Route 53, CloudFront, dépannage de la connectivité", "format": "Cours + TP", "hours": 3},
-    {"id": "3.3", "title": "Préparation au SOA-C03", "content": "Questions d’entraînement et révision", "format": "Cours + atelier", "hours": 3}
+    {
+     "id": "3.1",
+     "title": "Sécurité et conformité",
+     "content": "Opérations IAM, Organizations, règles Config, Security Hub CSPM, chiffrement, Trusted Advisor, Cost Explorer et Budgets",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Réseau et diffusion de contenu",
+     "content": "Exploitation des VPC, Flow Logs, Reachability Analyzer, Route 53, CloudFront, dépannage de la connectivité",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Préparation au SOA-C03",
+     "content": "Questions d’entraînement et révision",
+     "format": "Cours + atelier",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -63,9 +126,27 @@
    "focus": "Une charge de travail exploitée de bout en bout",
    "intro": "Par équipes de deux ou trois, les participants prennent en charge une charge de travail fournie, en réutilisant les TP de phase, puis présentent leur manière de l’exploiter comme ils le feraient devant un responsable d’exploitation.",
    "chapters": [
-    {"id": "4.1", "title": "Cahier des charges et déploiement", "content": "Analyser le besoin, déployer la charge avec CloudFormation via CodePipeline, construire tableaux de bord et alarmes", "format": "Projet", "hours": 3},
-    {"id": "4.2", "title": "Automatisation et reprise", "content": "Remédiation et correctifs automatisés, test de sauvegarde et de reprise après sinistre, rapport de coût et runbook", "format": "Projet", "hours": 1.5},
-    {"id": "4.3", "title": "Démonstration et revue", "content": "Incident en direct traité par l’automatisation, résultats de la reprise, suppression des ressources ; questions et retours", "format": "Projet", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et déploiement",
+     "content": "Analyser le besoin, déployer la charge avec CloudFormation via CodePipeline, construire tableaux de bord et alarmes",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Automatisation et reprise",
+     "content": "Remédiation et correctifs automatisés, test de sauvegarde et de reprise après sinistre, rapport de coût et runbook",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Démonstration et revue",
+     "content": "Incident en direct traité par l’automatisation, résultats de la reprise, suppression des ressources ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {

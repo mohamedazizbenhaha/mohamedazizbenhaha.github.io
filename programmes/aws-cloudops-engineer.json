@@ -7,15 +7,36 @@
  "certifications": [
   "AWS Certified CloudOps Engineer – Associate (SOA-C03)"
  ],
- "overview": "This programme teaches participants to operate workloads on Amazon Web Services and prepares the AWS Certified CloudOps Engineer – Associate exam (SOA-C03). They monitor and tune workloads with CloudWatch, X-Ray and Compute Optimizer, automate remediation with EventBridge and Systems Manager, keep services available with Auto Scaling, load balancing, AWS Backup and disaster recovery strategies, deploy with CloudFormation and the AWS developer tools, run containers on ECS and EKS, enforce security and cost controls, and troubleshoot networks. Every chapter ends with a lab, exam practice closes the content, and the programme ends with a final project: a workload operated end to end by each team.",
+ "overview": "This programme teaches participants to operate workloads on Amazon Web Services and prepares the AWS Certified CloudOps Engineer – Associate exam (SOA-C03). They monitor and tune workloads with CloudWatch, X-Ray and Compute Optimizer, automate remediation with EventBridge and Systems Manager, keep services available with Auto Scaling, load balancing, AWS Backup and disaster recovery strategies, deploy with CloudFormation and the AWS developer tools, run containers on ECS and EKS, enforce security and cost controls, and troubleshoot networks. Almost every chapter ends with a lab, exam practice closes the content, and the programme ends with a final project: a workload operated end to end by each team.",
  "facts": [
-  {"label": "Audience", "value": "System administrators and operations engineers running workloads on AWS"},
-  {"label": "Prerequisites", "value": "AWS Cloud Practitioner (course), or equivalent hands-on use of the core AWS services; Linux command line. Core services are not introduced again"},
-  {"label": "Duration", "value": "33 h: 27 h of chapters + 6 h buffer"},
-  {"label": "Format", "value": "Short lectures followed by guided labs; exam practice"},
-  {"label": "Lab environment", "value": "One laptop per participant with the AWS CLI; one AWS sandbox account per team, provided by the organiser, with a budget alert; stacks deleted at the end of each lab to control cost"},
-  {"label": "Assessment", "value": "A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project"},
-  {"label": "Outcome", "value": "Participants can deploy a workload with CloudFormation through a pipeline, monitor it, automate its remediation and patching, test its backup and recovery, report its cost and sit the SOA-C03 exam"}
+  {
+   "label": "Audience",
+   "value": "System administrators and operations engineers running workloads on AWS"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Core AWS services (course: AWS Cloud Practitioner) and the Linux command line (course: Linux & Bash Scripting), or equivalent. Core services are not taught again"
+  },
+  {
+   "label": "Duration",
+   "value": "33 h: 27 h of chapters + 6 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs; exam practice"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant with the AWS CLI; one AWS sandbox account per team, provided by the organiser, with a budget alert; stacks and recovery points deleted at the end of each lab to control cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can deploy a workload with CloudFormation through a pipeline, monitor it, automate its remediation and patching, test its backup and recovery, report its cost and sit the SOA-C03 exam"
+  }
  ],
  "buffer": 6,
  "phases": [
@@ -25,8 +46,20 @@
    "focus": "CloudWatch, X-Ray, performance tuning, EventBridge, Systems Manager",
    "intro": "Participants make a workload observable with CloudWatch metrics, logs, Logs Insights, alarms, dashboards and X-Ray traces, tune it with Compute Optimizer and storage and database settings, then let AWS fix common problems on its own with EventBridge rules and Systems Manager runbooks. Validated lab: a disk-full alarm that triggers an Automation runbook which cleans the instance, with Session Manager replacing SSH.",
    "chapters": [
-    {"id": "1.1", "title": "Monitoring, Logging & Performance", "content": "CloudWatch metrics, logs, Logs Insights, alarms, dashboards, X-Ray; performance optimisation with Compute Optimizer, EBS and RDS tuning", "format": "Lecture + Lab", "hours": 3},
-    {"id": "1.2", "title": "Remediation & Automation", "content": "EventBridge rules, Systems Manager Automation runbooks, Run Command, Patch Manager, Session Manager", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "Monitoring, Logging & Performance",
+     "content": "CloudWatch metrics and the CloudWatch agent, logs, Logs Insights, alarms, dashboards, X-Ray; performance optimisation with Compute Optimizer, EBS and RDS tuning",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Remediation & Automation",
+     "content": "EventBridge rules, Systems Manager Automation runbooks, Run Command, Patch Manager, Session Manager",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -37,8 +70,20 @@
    "focus": "Auto Scaling, load balancing, AWS Backup, DR, CloudFormation, CI/CD, ECS and EKS",
    "intro": "Participants keep the workload available through failures and disasters with Auto Scaling, Elastic Load Balancing, multi-AZ designs, AWS Backup and recovery strategies chosen against RTO and RPO. They then deploy it as code with CloudFormation, StackSets and drift detection, through a pipeline built with the AWS developer tools, including container workloads on ECS and EKS. Validated lab: a CloudFormation stack deployed by CodePipeline, and a database restored from AWS Backup within the stated recovery objective.",
    "chapters": [
-    {"id": "2.1", "title": "Reliability & Business Continuity", "content": "Auto Scaling, Elastic Load Balancing, multi-AZ, AWS Backup, RTO and RPO, disaster recovery strategies", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.2", "title": "Deployment, Provisioning & Automation", "content": "CloudFormation, StackSets, drift detection, CodeBuild, CodeDeploy, CodePipeline with a Git source, container workloads on ECS and EKS", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Reliability & Business Continuity",
+     "content": "Auto Scaling, Elastic Load Balancing, multi-AZ, AWS Backup, RTO and RPO, disaster recovery strategies",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Deployment, Provisioning & Automation",
+     "content": "CloudFormation, StackSets, drift detection, CodeBuild, CodeDeploy, CodePipeline with a Git source (GitHub through AWS CodeConnections, or CodeCommit), container workloads on ECS and EKS",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -47,11 +92,29 @@
    "name": "Security, Networking & Exam Preparation",
    "hours": 9,
    "focus": "IAM operations, Config, Security Hub, cost controls, VPC troubleshooting, SOA-C03",
-   "intro": "Participants operate security and compliance controls with IAM, Organizations, Config rules, Security Hub and encryption, keep costs visible with Trusted Advisor, Cost Explorer and Budgets, troubleshoot connectivity with Flow Logs and Reachability Analyzer, then practise exam questions across the SOA-C03 domains. Validated lab: an unreachable instance diagnosed with Reachability Analyzer and fixed, and a non-compliant resource flagged by a Config rule.",
+   "intro": "Participants operate security and compliance controls with IAM, Organizations, Config rules, Security Hub CSPM and encryption, keep costs visible with Trusted Advisor, Cost Explorer and Budgets, troubleshoot connectivity with Flow Logs and Reachability Analyzer, then practise exam questions across the SOA-C03 domains. Validated lab: an unreachable instance diagnosed with Reachability Analyzer and fixed, and a non-compliant resource flagged by a Config rule.",
    "chapters": [
-    {"id": "3.1", "title": "Security & Compliance", "content": "IAM operations, Organizations, Config rules, Security Hub, encryption, Trusted Advisor, Cost Explorer and Budgets", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.2", "title": "Networking & Content Delivery", "content": "VPC operations, Flow Logs, Reachability Analyzer, Route 53, CloudFront, connectivity troubleshooting", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.3", "title": "SOA-C03 Preparation", "content": "Practice questions and review", "format": "Lecture + Workshop", "hours": 3}
+    {
+     "id": "3.1",
+     "title": "Security & Compliance",
+     "content": "IAM operations, Organizations, Config rules, Security Hub CSPM, encryption, Trusted Advisor, Cost Explorer and Budgets",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Networking & Content Delivery",
+     "content": "VPC operations, Flow Logs, Reachability Analyzer, Route 53, CloudFront, connectivity troubleshooting",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "SOA-C03 Preparation",
+     "content": "Practice questions and review",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -62,9 +125,27 @@
    "focus": "A workload operated end to end",
    "intro": "Teams of two or three take charge of a provided workload, reusing the phase labs, then present how they run it as they would to an operations manager.",
    "chapters": [
-    {"id": "4.1", "title": "Brief & Deploy", "content": "Read the brief, deploy the workload with CloudFormation through CodePipeline, build dashboards and alarms", "format": "Project", "hours": 3},
-    {"id": "4.2", "title": "Automate & Recover", "content": "Automated remediation and patching, a backup and disaster recovery test, the cost report and runbook", "format": "Project", "hours": 1.5},
-    {"id": "4.3", "title": "Demo & Review", "content": "Live incident handled by automation, recovery results, teardown; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Brief & Deploy",
+     "content": "Read the brief, deploy the workload with CloudFormation through CodePipeline, build dashboards and alarms",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Automate & Recover",
+     "content": "Automated remediation and patching, a backup and disaster recovery test, the cost report and runbook",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Review",
+     "content": "Live incident handled by automation, recovery results, teardown; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {
