@@ -1,0 +1,174 @@
+{
+ "slug": "linux-network-services-fr",
+ "file": "Services-reseau-Linux-36h.docx",
+ "lang": "fr",
+ "title": "Services réseau Linux (RHEL 10)",
+ "subtitle": "Mettre en place et exploiter les services réseau d’une petite entreprise sur Red Hat Enterprise Linux 10",
+ "audience_line": "Administrateurs RHEL qui exploitent des services réseau et applicatifs",
+ "certifications": [],
+ "overview": "Ce programme apprend aux participants à mettre en place et exploiter les services dont dépend une petite entreprise, sur Red Hat Enterprise Linux 10. Ils vont au-delà de l’administration de base avec des unités systemd personnalisées, IPv6, l’agrégation de liens, les ponts et les VLAN, des règles de pare-feu avec masquerading et redirection de ports, puis déploient DNS, serveurs web avec TLS, envoi de courrier, une base MariaDB et du stockage réseau en iSCSI, NFS et SMB. Chaque chapitre se termine par un TP sur des machines virtuelles RHEL 10, et le programme s’achève par un projet final où les équipes construisent et présentent l’infrastructure d’une petite entreprise.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Administrateurs RHEL qui exploitent des services réseau et applicatifs"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Niveau RHCSA (cours : RHCSA partie 2 : administration système Red Hat II, ou RHCSA en parcours accéléré) : les bases de SELinux, firewalld et du stockage ne sont pas réenseignées"
+  },
+  {
+   "label": "Durée",
+   "value": "36 h : 30 h de chapitres + 6 h de réserve, en 12 séances de 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés sur RHEL 10"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant (16 Go de RAM, virtualisation matérielle activée) avec trois machines virtuelles RHEL 10 sur un réseau virtuel isolé, issues des images du formateur, enregistrées avec l’abonnement gratuit Red Hat Developer for Individuals de chaque participant ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent déployer, sécuriser et dépanner des services DNS, web, courrier, base de données et stockage réseau sur RHEL 10"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "systemd et réseau avancé",
+   "hours": 9,
+   "focus": "Unités personnalisées, IPv6, agrégation de liens, ponts et VLAN",
+   "intro": "Les participants écrivent et surchargent les unités systemd des services qu’ils vont déployer, puis configurent le réseau dont ces services ont besoin : IPv6 avec SLAAC et double pile, liens agrégés pour la redondance, ponts et interfaces VLAN avec NetworkManager. TP validé : un serveur avec une connexion agrégée en double pile sur un VLAN étiqueté, qui survit à la perte d’un lien.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "systemd avancé",
+     "content": "Fichiers d’unité, surcharges, cibles, journald",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "IPv6 et NetworkManager",
+     "content": "Adressage IPv6, SLAAC, double pile, nmcli",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Agrégation de liens",
+     "content": "Modes de bonding, ponts, interfaces VLAN (teaming réseau supprimé dans RHEL 10)",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Pare-feu et DNS",
+   "hours": 6,
+   "focus": "Règles riches, NAT et redirection de ports, DNS cache et faisant autorité",
+   "intro": "Les participants filtrent et traduisent le trafic avec les règles riches firewalld, le masquerading et la redirection de ports, et voient les règles nftables sous-jacentes. Ils assurent ensuite la résolution de noms de l’entreprise : un résolveur cache avec unbound et une zone faisant autorité avec BIND. TP validé : une zone interne servie par BIND, résolue via le résolveur cache, et accessible uniquement depuis les réseaux autorisés.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Pare-feu avancé",
+     "content": "Règles riches firewalld, masquerading, redirection de ports, nftables, étiquetage SELinux des ports",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "DNS",
+     "content": "Résolveur cache (unbound), zones faisant autorité BIND, enregistrements, dépannage",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Services applicatifs et stockage",
+   "hours": 9,
+   "focus": "Apache et Nginx avec TLS, Postfix, MariaDB, iSCSI, NFS et SMB",
+   "intro": "Les participants déploient les services que voient les utilisateurs : sites web sur des hôtes virtuels Apache httpd avec TLS derrière un reverse proxy Nginx, envoi de courrier via Postfix configuré en null client, une base MariaDB avec sauvegardes, puis du stockage partagé en iSCSI, NFS et SMB. TP validé : un site web TLS adossé à MariaDB, sa base restaurée depuis une sauvegarde, et un disque iSCSI monté sur un second serveur.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Services web",
+     "content": "Hôtes virtuels Apache httpd, certificats TLS, authentification, contenu dynamique, reverse proxy Nginx",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Courrier",
+     "content": "Postfix en client nul (null client)",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Bases de données",
+     "content": "Installation de MariaDB, utilisateurs et privilèges, sauvegarde et restauration",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Stockage réseau",
+     "content": "Cible iSCSI (targetcli) et initiateur, partages NFS et SMB",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "L’infrastructure d’une petite entreprise, présentée au groupe",
+   "intro": "Par équipes de deux ou trois, les participants construisent l’infrastructure d’une petite entreprise à partir d’un cahier des charges écrit, en réutilisant les configurations des TP de phase, puis la présentent comme ils le feraient devant le responsable informatique de l’entreprise.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, dessiner le plan réseau, puis déployer la zone DNS, les hôtes virtuels TLS derrière le reverse proxy et la base MariaDB",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Courrier, stockage et documentation",
+     "content": "Relais Postfix, stockage sur iSCSI, règles de pare-feu, schéma réseau et runbook (procédures d’exploitation)",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct depuis un poste client ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Infrastructure d’une petite entreprise",
+    "brief": "Les services d’une petite entreprise sur RHEL 10 : une zone DNS interne, des sites web sur des hôtes virtuels TLS derrière un reverse proxy avec une base MariaDB, l’envoi de courrier via un relais Postfix, du stockage sur iSCSI et des règles de pare-feu qui n’exposent que le nécessaire.",
+    "stack": "RHEL 10, systemd, NetworkManager, firewalld, unbound, BIND, Apache httpd, Nginx, Postfix, MariaDB, targetcli, NFS, Samba",
+    "deliverable": "Infrastructure fonctionnelle, schéma réseau, runbook, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

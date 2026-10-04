@@ -1,0 +1,214 @@
+{
+ "slug": "linux-automation-ansible-fr",
+ "file": "Automatisation-Linux-avec-Ansible-42h.docx",
+ "lang": "fr",
+ "title": "Automatisation Linux avec Ansible (EX294)",
+ "subtitle": "Automatiser l’administration de Red Hat Enterprise Linux avec Ansible, depuis un dépôt Git",
+ "audience_line": "Administrateurs RHEL qui veulent automatiser leur travail quotidien et préparer l’EX294",
+ "certifications": [
+  "Red Hat Certified Advanced System Administrator in Ansible (EX294)"
+ ],
+ "overview": "Ce programme apprend aux participants à automatiser l’administration de Red Hat Enterprise Linux avec Ansible, en suivant les objectifs de l’examen EX294. Ils mettent en place un nœud de contrôle avec ansible-navigator, des environnements d’exécution, VS Code avec un conteneur de développement Ansible et Git, puis écrivent inventaires, playbooks, variables et templates, protègent les secrets avec Ansible Vault, organisent leur code en rôles et en collections de contenu, et utilisent les rôles système RHEL. Chaque chapitre se termine par un TP sur un petit parc de machines RHEL 10. Un examen blanc EX294 chronométré mesure le niveau atteint, et le programme s’achève par un projet final : un environnement à trois niveaux automatisé depuis un dépôt Git et prouvé idempotent.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Administrateurs RHEL qui veulent automatiser leur travail quotidien et préparer l’EX294"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Niveau RHCSA (cours : RHCSA partie 2 : administration système Red Hat II, ou RHCSA en parcours accéléré). Seule l’automatisation des tâches d’administration est enseignée, pas les tâches elles-mêmes"
+  },
+  {
+   "label": "Durée",
+   "value": "42 h : 36 h de chapitres + 6 h de réserve, en 14 séances de 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés ; un examen blanc chronométré"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant (16 Go de RAM minimum, virtualisation matérielle, Podman ou Docker pour le conteneur de développement VS Code) avec un nœud de contrôle et trois nœuds gérés RHEL 10 dotés de disques supplémentaires, enregistrés avec l’abonnement gratuit Red Hat Developer for Individuals de chaque participant ; serveur Git fourni par le formateur ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase, un examen blanc EX294 chronométré et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent automatiser l’administration RHEL avec des playbooks idempotents, des rôles, des collections et Vault conservés dans Git, et se présenter à l’examen EX294"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Fondamentaux d’Ansible",
+   "hours": 6,
+   "focus": "Nœud de contrôle, outillage, Git, inventaires et commandes ad hoc",
+   "intro": "Les participants mettent en place les outils qu’ils utiliseront pendant tout le cours : un nœud de contrôle avec ansible-navigator et des environnements d’exécution, VS Code avec un conteneur de développement Ansible, et un dépôt Git pour leur code d’automatisation. Ils décrivent ensuite le parc du TP dans des inventaires et lancent leurs premières commandes ad hoc. TP validé : un inventaire avec groupes et variables, versionné dans Git, qui atteint chaque nœud géré avec élévation de privilèges.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Architecture et outillage d’Ansible",
+     "content": "Nœud de contrôle, nœuds gérés, ansible.cfg, ansible-navigator et ansible-navigator.yml, environnements d’exécution, VS Code avec un conteneur de développement Ansible, bases de Git (clone, add, commit, push)",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Inventaires",
+     "content": "Inventaires statiques INI et YAML, groupes, variables d’hôtes et de groupes, inventaire dynamique",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Nœuds gérés et commandes ad hoc",
+     "content": "Distribution des clés SSH, élévation de privilèges, modules, ansible-doc et recherche de modules dans les collections",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Écriture de playbooks",
+   "hours": 9,
+   "focus": "Plays, handlers, variables, facts et contrôle des tâches",
+   "intro": "Les participants écrivent des playbooks qui décrivent l’état attendu d’un serveur et peuvent être relancés sans risque. Ils utilisent variables et facts pour s’adapter à chaque hôte, puis contrôlent l’exécution avec boucles, conditions, blocs et gestion des erreurs. TP validé : un playbook qui installe et configure un serveur web sur le groupe web, ne le redémarre que si sa configuration change, et n’indique aucun changement à la seconde exécution.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Playbooks",
+     "content": "Plays, tâches, handlers, idempotence, mode check, exécution avec ansible-navigator et ansible-playbook",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Variables et facts",
+     "content": "Priorité des variables, variables enregistrées, facts, variables magiques",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Contrôle des tâches",
+     "content": "Boucles, conditions, blocs et rescue, gestion des erreurs, tags",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Templates, secrets et rôles",
+   "hours": 6,
+   "focus": "Templates Jinja2, Ansible Vault, rôles et collections de contenu",
+   "intro": "Les participants génèrent des fichiers de configuration à partir de templates Jinja2, gardent les mots de passe hors du dépôt avec Ansible Vault, et réorganisent leurs playbooks en rôles qui utilisent des collections de contenu. TP validé : le playbook du serveur web refactorisé en rôle avec une configuration générée par template et un mot de passe chiffré par Vault, installé avec ses collections depuis un fichier requirements.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Templates",
+     "content": "Jinja2, filtres, lookups",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Ansible Vault",
+     "content": "Chiffrement de variables et de fichiers, identifiants de vault",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Rôles et collections de contenu",
+     "content": "Structure d’un rôle, création de rôles, Ansible Galaxy, installation de collections, fichiers requirements",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Tâches d’administration et préparation à l’examen",
+   "hours": 9,
+   "focus": "Rôles système RHEL, dépannage, administration automatisée, examen blanc",
+   "intro": "Les participants automatisent les tâches d’administration qu’ils savent déjà faire à la main : paquets, services, pare-feu, stockage, utilisateurs, tâches planifiées et SELinux, en utilisant les rôles système RHEL lorsqu’ils existent. Ils apprennent à déboguer des playbooks en échec, puis passent un examen blanc EX294 chronométré. TP validé : un playbook qui applique une configuration de référence complète (heure, SELinux, pare-feu, utilisateurs, stockage) à chaque nœud géré.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Rôles système RHEL",
+     "content": "Rôles timesync, selinux, network et storage",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Dépannage des playbooks",
+     "content": "Débogage, niveaux de verbosité, modes check et diff",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Automatiser l’administration",
+     "content": "Paquets et dépôts, services, règles de pare-feu, systèmes de fichiers et stockage, contenu de fichiers, archivage, tâches planifiées, SELinux, utilisateurs et groupes",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.4",
+     "title": "Examen blanc",
+     "content": "Examen blanc EX294 chronométré et correction",
+     "format": "TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Un environnement à trois niveaux automatisé depuis Git, présenté au groupe",
+   "intro": "Chaque participant automatise un environnement à trois niveaux depuis son dépôt Git, en réutilisant les rôles et playbooks des TP de phase, puis le présente comme il le ferait devant une équipe d’exploitation.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, concevoir l’inventaire et les rôles, puis automatiser les niveaux web, application et base de données avec collections, Vault, templates et rôles système",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Preuve et documentation",
+     "content": "Exécution complète sur des nœuds neufs, seconde exécution sans changement, README et documentation des rôles",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Démonstration et revue",
+     "content": "Exécution en direct depuis le dépôt Git ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Un environnement à trois niveaux en code",
+    "brief": "Des serveurs web, application et base de données configurés entièrement depuis un dépôt Git avec des rôles, des collections de contenu, des secrets protégés par Vault, des templates et les rôles système RHEL ; une seconde exécution n’indique aucun changement.",
+    "stack": "RHEL 10, Ansible, ansible-navigator, environnements d’exécution, Ansible Vault, rôles système RHEL, Jinja2, Git, VS Code",
+    "deliverable": "Dépôt Git avec playbooks et rôles, README, exécution en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

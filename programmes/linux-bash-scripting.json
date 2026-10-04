@@ -1,0 +1,180 @@
+{
+ "slug": "linux-bash-scripting",
+ "file": "Linux-Bash-Scripting-39h.docx",
+ "title": "Linux & Bash Scripting",
+ "subtitle": "Work at the Linux command line and automate everyday tasks with Bash",
+ "audience_line": "Students, developers and IT staff starting with Linux",
+ "certifications": [],
+ "overview": "This programme takes participants from their first terminal session to Bash scripts that run unattended and fail safely. They learn how a Linux system is organised, how to manage files, users, permissions, processes, services and packages, and how to process text with the standard command-line tools. The second half turns these commands into scripts: variables, conditions, loops, functions, arrays and traps, then error handling, debugging and ShellCheck. Every chapter ends with a lab on a Linux virtual machine, and the programme closes with a final project in which each participant builds and presents a small automation toolkit.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Students, developers and IT staff starting with Linux"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None. Basic computer use; no prior Linux or programming experience needed"
+  },
+  {
+   "label": "Duration",
+   "value": "39 h: 33 h of chapters + 6 h buffer, in 13 sessions of 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs at the command line"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant (8 GB RAM minimum) with two Linux virtual machines prepared by the trainer, one Ubuntu Server and one Rocky Linux, so both apt and dnf are practised; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can use and manage a Linux system from the command line and write, debug and schedule robust Bash scripts that automate backups, user provisioning and health reports"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Linux Essentials",
+   "hours": 9,
+   "focus": "The shell, the filesystem, permissions and text processing",
+   "intro": "Participants learn how a Linux system is organised and how to work efficiently at the command line: finding help, moving through the filesystem, controlling who can read and change files, and chaining small tools into pipelines. Validated lab: a shared project directory with the right owners, groups and permissions, and a one-line pipeline that summarises a log file.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Linux & the Shell",
+     "content": "Distributions, kernel vs userspace, terminal and shells, man pages and help",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Filesystem & Navigation",
+     "content": "FHS layout, absolute and relative paths, find and locate, file types, hard and symbolic links",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Permissions & Users",
+     "content": "rwx, chmod and chown, umask, sudo, useradd and groups, /etc/passwd and /etc/shadow",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.4",
+     "title": "Text Processing",
+     "content": "cat, less, head and tail, grep, sed, awk, cut, sort, uniq and wc, pipes and redirection",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "System Administration Basics",
+   "hours": 6,
+   "focus": "Processes, services, scheduling, packages and networking",
+   "intro": "A running system is a set of processes and services. Participants inspect and control them, read the logs, schedule jobs, install software and check network connectivity, then connect to another machine with SSH keys. Validated lab: a service installed, enabled and diagnosed from its logs, a cron job, and passwordless SSH access to a second virtual machine.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Processes & Services",
+     "content": "ps and top, kill and signals, systemctl, journalctl, cron",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Packages & Networking Basics",
+     "content": "apt and dnf, ip, ss, ping, curl and wget, dig, /etc/hosts, SSH keys and client configuration",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Bash Scripting",
+   "hours": 12,
+   "focus": "Bash syntax, control flow, functions and robust scripts",
+   "intro": "The commands from the first two phases become scripts. Participants write Bash with correct quoting and exit codes, build control flow, functions and argument parsing, then make their scripts safe to run unattended: strict mode, traps, logging, debugging and ShellCheck. Validated lab: a script that takes options, validates its input, logs what it does and passes ShellCheck without warnings.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Bash Fundamentals",
+     "content": "Variables, quoting, exit codes, test and [[ ]], if and case",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Loops & Functions",
+     "content": "for, while and until, command substitution, arithmetic, functions, arguments and getopts",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Advanced Bash",
+     "content": "Arrays, here-documents, file descriptors, subshells, aliases, trap",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.4",
+     "title": "Robust Scripts",
+     "content": "set -euo pipefail, debugging with bash -x, ShellCheck, logging, best practices",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "An automation toolkit, presented to the group",
+   "intro": "Each participant builds a small automation toolkit for a provided server, reusing the scripts from the phase labs, then presents it as they would to a system administration team.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, plan the scripts, then write the backup with rotation, the user provisioning from a CSV file and the system health report",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Schedule, Test & Document",
+     "content": "Schedule the scripts with cron, test failure cases, pass ShellCheck, write the README",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Review",
+     "content": "Live demo on a fresh virtual machine; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Server Automation Toolkit",
+    "brief": "A set of Bash scripts that back up directories with rotation, create user accounts from a CSV file and produce a daily health report, scheduled with cron, safe to rerun and documented for the next administrator.",
+    "stack": "Bash, coreutils, grep, sed, awk, tar, cron, systemd journal, ShellCheck, Git",
+    "deliverable": "Script repository with README, cron schedule, test log, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,173 @@
+{
+ "slug": "linux-network-services",
+ "file": "Linux-Network-Services-36h.docx",
+ "title": "Linux Network Services (RHEL 10)",
+ "subtitle": "Run the network services of a small company on Red Hat Enterprise Linux 10",
+ "audience_line": "RHEL administrators who run network and application services",
+ "certifications": [],
+ "overview": "This programme teaches participants to run the services a small company depends on, on Red Hat Enterprise Linux 10. They go beyond basic administration with custom systemd units, IPv6, bonds, bridges and VLANs, firewall rules with masquerading and port forwarding, then deploy DNS, web servers with TLS, outbound mail, a MariaDB database and network storage over iSCSI, NFS and SMB. Every chapter ends with a lab on RHEL 10 virtual machines, and the programme closes with a final project in which teams build and present the infrastructure of a small company.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "RHEL administrators who run network and application services"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "RHCSA level (course: RHCSA Part 2: Red Hat System Administration II, or RHCSA Rapid Track): SELinux, firewalld and storage basics are not taught again"
+  },
+  {
+   "label": "Duration",
+   "value": "36 h: 30 h of chapters + 6 h buffer, in 12 sessions of 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs on RHEL 10"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant (16 GB RAM, hardware virtualization enabled) with three RHEL 10 virtual machines on an isolated virtual network, built from the trainer’s images and registered with each participant’s no-cost Red Hat Developer Subscription for Individuals; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can deploy, secure and troubleshoot DNS, web, mail, database and network storage services on RHEL 10"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "systemd & Advanced Networking",
+   "hours": 9,
+   "focus": "Custom units, IPv6, bonds, bridges and VLANs",
+   "intro": "Participants write and override systemd units for the services they will deploy, then configure the network those services need: IPv6 with SLAAC and dual stack, bonded links for redundancy, bridges and VLAN interfaces with NetworkManager. Validated lab: a server with a bonded, dual-stack connection on a tagged VLAN that survives the loss of one link.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Advanced systemd",
+     "content": "Unit files, overrides, targets, journald",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "IPv6 & NetworkManager",
+     "content": "IPv6 addressing, SLAAC, dual stack, nmcli",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Link Aggregation",
+     "content": "Bonding modes, bridges, VLAN interfaces (network teaming removed in RHEL 10)",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Firewall & DNS",
+   "hours": 6,
+   "focus": "Rich rules, NAT and port forwarding, caching and authoritative DNS",
+   "intro": "Participants filter and translate traffic with firewalld rich rules, masquerading and port forwarding, and see the nftables rules underneath. They then run name resolution for the company: a caching resolver with unbound and an authoritative zone with BIND. Validated lab: an internal zone served by BIND, resolved through the caching resolver, and reachable only from the allowed networks.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Advanced Firewall",
+     "content": "firewalld rich rules, masquerading, port forwarding, nftables, SELinux port labels",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "DNS",
+     "content": "Caching resolver (unbound), BIND authoritative zones, records, troubleshooting",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Application & Storage Services",
+   "hours": 9,
+   "focus": "Apache and Nginx with TLS, Postfix, MariaDB, iSCSI, NFS and SMB",
+   "intro": "Participants deploy the services users see: web sites on Apache httpd virtual hosts with TLS behind an Nginx reverse proxy, outbound mail through a Postfix null client, a MariaDB database with backups, then shared storage over iSCSI, NFS and SMB. Validated lab: a TLS web site backed by MariaDB, its database restored from backup, and an iSCSI disk mounted on a second server.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Web Services",
+     "content": "Apache httpd virtual hosts, TLS certificates, authentication, dynamic content, Nginx reverse proxy",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Mail",
+     "content": "Postfix null client",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Databases",
+     "content": "MariaDB installation, users and privileges, backup and restore",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Network Storage",
+     "content": "iSCSI target (targetcli) and initiator, NFS and SMB shares",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A small company's infrastructure, presented to the group",
+   "intro": "Teams of two or three build the infrastructure of a small company from a written brief, reusing the configurations from the phase labs, then present it as they would to the company's IT manager.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, draw the network plan, then deploy the DNS zone, the TLS virtual hosts behind the reverse proxy and the MariaDB backend",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Mail, Storage & Documentation",
+     "content": "Postfix relay, iSCSI-backed storage, firewall rules, network diagram and runbook",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Review",
+     "content": "Live demo from a client machine; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Small-Company Infrastructure",
+    "brief": "The services of a small company on RHEL 10: an internal DNS zone, web sites on TLS virtual hosts behind a reverse proxy with a MariaDB backend, outbound mail through a Postfix relay, iSCSI-backed storage and firewall rules that expose only what is needed.",
+    "stack": "RHEL 10, systemd, NetworkManager, firewalld, unbound, BIND, Apache httpd, Nginx, Postfix, MariaDB, targetcli, NFS, Samba",
+    "deliverable": "Working infrastructure, network diagram, runbook, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

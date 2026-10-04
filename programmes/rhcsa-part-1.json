@@ -1,0 +1,223 @@
+{
+ "slug": "rhcsa-part-1",
+ "file": "RHCSA-Part-1-42h.docx",
+ "title": "RHCSA Part 1: Red Hat System Administration I",
+ "subtitle": "Run and manage a Red Hat Enterprise Linux 10 server",
+ "audience_line": "IT staff, technicians and students starting Linux system administration",
+ "certifications": [
+  "RHCSA (EX200, RHEL 10), first half of the objectives"
+ ],
+ "overview": "This programme is the first half of the RHCSA path on Red Hat Enterprise Linux 10. Participants install RHEL, work at the command line, manage files, users, groups and permissions, control processes and systemd services, secure remote access with OpenSSH, keep logs and time correct, configure networking with NetworkManager and install software with dnf and Flatpak. Every chapter ends with a lab on RHEL 10 virtual machines, and the programme closes with a final project in which each participant builds and documents a server against a checklist. RHCSA Part 2 completes the exam objectives.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "IT staff, technicians and students starting Linux system administration"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None. Basic computer use; no prior Linux experience needed"
+  },
+  {
+   "label": "Duration",
+   "value": "42 h: 36 h of chapters + 6 h buffer, in 14 sessions of 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs on RHEL 10"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant (16 GB RAM, hardware virtualization enabled) with two RHEL 10 virtual machines built from the trainer’s images and registered with each participant’s no-cost Red Hat Developer Subscription for Individuals; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project graded against a checklist; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can install a RHEL 10 server and manage its users, permissions, services, SSH access, logs, network settings and software"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Command Line Foundations",
+   "hours": 6,
+   "focus": "RHEL 10, help, text files and managing files",
+   "intro": "Participants install RHEL 10, register it, and learn to find help and edit files without leaving the terminal. They then manage files and directories, links and wildcards. Validated lab: a freshly installed RHEL 10 virtual machine with a directory tree built, linked and documented entirely from the command line.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Getting Started with RHEL 10",
+     "content": "Red Hat ecosystem, installation, subscriptions, first login, the web console (Cockpit)",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Help & Text Files",
+     "content": "man, info, /usr/share/doc, vim, input and output redirection",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Command Line & Files",
+     "content": "Bash, filesystem hierarchy, managing files, hard and symbolic links, globbing",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Users, Groups & Permissions",
+   "hours": 6,
+   "focus": "Local accounts, sudo, file permissions and special permissions",
+   "intro": "Access control is the first job of an administrator. Participants create local users and groups, set password ageing, grant administrative rights through sudo, and control access to files with standard and special permissions. Validated lab: a team directory where group members can collaborate, other users cannot read, and one user can run selected commands through sudo.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Users & Groups",
+     "content": "Local accounts, groups, passwords and ageing, privileged access with sudo",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "File Permissions",
+     "content": "User, group and other permissions, chmod and chown, special permissions (SUID, SGID, sticky bit), umask",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Processes & Services",
+   "hours": 6,
+   "focus": "Process control, systemd units and boot targets",
+   "intro": "Participants observe and control what runs on the system: processes, jobs and signals, priorities, then the systemd units that start services at boot. Validated lab: a runaway process found and stopped, a service enabled at boot, and the default target changed and checked after a reboot.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Processes",
+     "content": "Process states, jobs, signals, kill, top, load average, nice",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Services & systemd",
+     "content": "Units, systemctl, enabling at boot, default target",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Remote Access & Logging",
+   "hours": 6,
+   "focus": "OpenSSH, archives and transfers, logs and time",
+   "intro": "Servers are administered remotely and diagnosed from their logs. Participants set up key-based SSH and harden the SSH server, archive and copy files between machines, make the journal persistent and keep time synchronised. Validated lab: key-only SSH access between the two lab machines, a compressed archive copied with rsync, and an event traced in the persistent journal.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "OpenSSH",
+     "content": "Remote access, key-based authentication, sshd hardening",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Archiving & Transfer",
+     "content": "tar, gzip and bzip2, scp, sftp, rsync",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Logs & Time",
+     "content": "journald, rsyslog, persistent journal, chrony",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Networking, Software & Filesystems",
+   "hours": 6,
+   "focus": "NetworkManager, dnf and Flatpak, mounting and disk usage",
+   "intro": "Participants give the server a static network configuration, install and update software from RPM repositories and Flatpak, then mount filesystems and find where disk space goes. Validated lab: a server with a static IPv4 and IPv6 configuration and a hostname that survive a reboot, a package installed from a configured repository, and a filesystem mounted and checked.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Networking",
+     "content": "NetworkManager, nmcli, IPv4 and IPv6 addresses, hostnames, name resolution",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Software",
+     "content": "dnf, RPM repositories, RPM packages, Flatpak repositories and applications",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Filesystems",
+     "content": "Mounting, block devices, df and du, locating files",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A documented RHEL 10 server, graded against a checklist",
+   "intro": "Each participant builds a RHEL 10 server from a written brief, reusing the configurations from the phase labs, then documents it and has it graded against a checklist.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, then configure users and groups policy, permissions, services, SSH hardening and networking",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "6.2",
+     "title": "Logging, Backup & Documentation",
+     "content": "Persistent logging, archived backups copied to the second machine, a short administration guide",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "6.3",
+     "title": "Checklist Review",
+     "content": "Reboot test, grading against the checklist, questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "A RHEL 10 Server Ready for Service",
+    "brief": "A RHEL 10 server configured from a written brief: users and groups policy, file permissions, services enabled at boot, hardened SSH access, static networking, persistent logs and archived backups, all still correct after a reboot.",
+    "stack": "RHEL 10, Bash, systemd, OpenSSH, NetworkManager, dnf, journald, rsyslog, chrony, tar, rsync",
+    "deliverable": "Configured server, administration guide, graded checklist"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

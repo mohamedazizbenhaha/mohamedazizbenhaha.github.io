@@ -1,0 +1,206 @@
+{
+ "slug": "rhcsa-part-2",
+ "file": "RHCSA-Part-2-42h.docx",
+ "title": "RHCSA Part 2: Red Hat System Administration II",
+ "subtitle": "Secure, store, schedule and recover a Red Hat Enterprise Linux 10 server",
+ "audience_line": "Administrators who completed RHCSA Part 1 or have equivalent RHEL experience",
+ "certifications": [
+  "RHCSA (EX200, RHEL 10), second half of the objectives"
+ ],
+ "overview": "This programme is the second half of the RHCSA path on Red Hat Enterprise Linux 10. Participants script administrative tasks, schedule them with cron and systemd timers, tune the system, keep SELinux enforcing, manage partitions, logical volumes and network storage, fix permission problems with ACLs, repair a system that does not boot and protect it with firewalld. They also run rootless containers with Podman, a RHEL skill that is no longer part of the RHCSA 10 exam. A timed mock EX200 exam prepares the certification, and the programme closes with a final project: a production-ready host that must survive a broken boot.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Administrators who completed RHCSA Part 1 or have equivalent RHEL experience"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "First half of the RHCSA objectives (course: RHCSA Part 1: Red Hat System Administration I) or equivalent RHEL experience with users, permissions, services, SSH and networking. These topics are not taught again"
+  },
+  {
+   "label": "Duration",
+   "value": "42 h: 36 h of chapters + 6 h buffer, in 14 sessions of 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs on RHEL 10; one timed mock exam"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant (16 GB RAM, hardware virtualization enabled) with two RHEL 10 virtual machines with spare virtual disks, built from the trainer’s images and registered with each participant’s no-cost Red Hat Developer Subscription for Individuals; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase, a timed mock EX200 exam and a final project graded against a checklist; certificate of completion for participants who complete the labs and the project"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can automate, secure and troubleshoot a RHEL 10 server with SELinux enforcing, manage its storage and boot process, and sit the EX200 exam"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Scripting & System Tuning",
+   "hours": 6,
+   "focus": "Admin scripts, regular expressions, scheduling and tuning",
+   "intro": "Participants automate routine work with Bash scripts and regular expressions, schedule it with at, cron and systemd timers, and tune the system with tuned profiles and process priorities. Validated lab: a reporting script run every night by a systemd timer, with its output checked in the journal.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Scripting & Regex for Admins",
+     "content": "Bash scripts, positional parameters, loops, conditionals, grep and regular expressions",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Scheduling",
+     "content": "at, cron, systemd timer units, temporary files",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Tuning",
+     "content": "tuned profiles, process scheduling, nice and renice",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "SELinux & Storage",
+   "hours": 9,
+   "focus": "SELinux contexts and booleans, partitions, filesystems and LVM",
+   "intro": "Participants keep SELinux enforcing and fix denials instead of disabling it, then manage storage from raw disks: partitions, filesystems, swap and persistent mounts, and logical volumes that grow without downtime. Validated lab: a web server serving content from a custom directory with SELinux enforcing, on a logical volume extended while mounted.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "SELinux",
+     "content": "Enforcing and permissive modes, file and process contexts, restorecon and semanage, booleans, troubleshooting",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Basic Storage",
+     "content": "GPT and MBR partitions, VFAT, ext4 and XFS filesystems, swap, persistent mounts by UUID or label",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Logical Volumes",
+     "content": "LVM physical volumes, volume groups and logical volumes, creating and extending logical volumes without data loss",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Access Control, Network Storage & Boot",
+   "hours": 6,
+   "focus": "ACLs, NFS and autofs, the boot process and recovery",
+   "intro": "Participants diagnose permission problems and solve them with ACLs, mount shared storage over NFS on demand with autofs, then follow the boot process from firmware to target and recover a system that does not start. Validated lab: home directories automounted from an NFS server, and a lost root password reset on a machine that boots again cleanly.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Permission Problems & ACLs",
+     "content": "Diagnosing and correcting permission problems, default permissions, getfacl and setfacl",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Network Storage",
+     "content": "NFS mounts, autofs",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Boot Process",
+     "content": "systemd targets, bootloader configuration (GRUB 2, grubby), root password reset, filesystem repair",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Firewall, Containers & Mock Exam",
+   "hours": 9,
+   "focus": "firewalld, Podman containers as services, mock EX200 exam",
+   "intro": "Participants open only the services a server needs with firewalld and SELinux port labels, run rootless containers with Podman as systemd services, then sit a timed mock EX200 exam. Validated lab: a web service on a non-standard port, reachable through the firewall with SELinux enforcing, and a containerised service that starts at boot.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Network Security",
+     "content": "firewalld zones and services, firewall-cmd, SELinux port labelling",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Containers with Podman",
+     "content": "Images, registries, rootless containers, volumes, containers as systemd services (a RHEL skill, no longer in the RHCSA 10 exam)",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.3",
+     "title": "Mock Exam",
+     "content": "Timed mock EX200 exam on RHEL 10 and debrief",
+     "format": "Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A production-ready RHEL 10 host that survives a broken boot",
+   "intro": "Each participant turns a bare RHEL 10 virtual machine into a production-ready host from a written brief, reusing the phase labs, then proves that it can be recovered when the trainer breaks its boot.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, then build LVM storage and swap, the NFS automount, the SELinux-enforcing web service and the firewall rules",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Automate & Document",
+     "content": "A systemd timer for maintenance, a Podman container run as a systemd service, a short runbook",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Recovery & Review",
+     "content": "Recover from a boot failure set by the trainer, grading against the checklist, questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "A Production-Ready RHEL 10 Host",
+    "brief": "A RHEL 10 host with LVM storage and swap, an NFS automount, a web service running with SELinux enforcing behind firewalld, a maintenance job on a systemd timer and a Podman container started at boot, recovered by its builder after a broken boot.",
+    "stack": "RHEL 10, Bash, systemd timers, SELinux, LVM, XFS, NFS, autofs, firewalld, GRUB 2, Podman",
+    "deliverable": "Configured host, runbook, graded checklist including the recovery"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

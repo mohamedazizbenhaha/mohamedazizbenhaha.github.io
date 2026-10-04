@@ -443,7 +443,9 @@ def build_doc(g):
     k = P(doc, 'Prog Cover Kicker', L['kicker'])
     img, w, h = tiles_png()
     behind_text(k, img, w, h, 'Cover tiles', locked=False)
-    P(doc, 'Prog Cover Title', g['title'])
+    # no line break inside "(RHEL 10)" or before "&"
+    title = re.sub(r'\([^)]*\)', lambda m: m[0].replace(' ', ' '), g['title']).replace(' &', ' &')
+    P(doc, 'Prog Cover Title', title)
     if g.get('subtitle'): P(doc, 'Prog Cover Sub', g['subtitle'])
     total = g.get('hours') or sum(ph['hours'] or 0 for ph in g['phases']) + buffer
     P(doc, 'Prog Cover Stat', f'{total:g}', ('Prog Cover Unit', '  ' + L['hours']))

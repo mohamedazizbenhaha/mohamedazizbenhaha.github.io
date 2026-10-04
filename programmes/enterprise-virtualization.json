@@ -1,0 +1,173 @@
+{
+ "slug": "enterprise-virtualization",
+ "file": "Enterprise-Virtualization-36h.docx",
+ "title": "Enterprise Virtualization: KVM & Proxmox VE",
+ "subtitle": "Design, run and protect a highly available virtualization cluster",
+ "audience_line": "System administrators who run or plan a virtualization platform",
+ "certifications": [],
+ "overview": "This programme teaches participants to build and run a virtualization platform on open-source software. They start with KVM, QEMU and libvirt on a single host, then deploy Proxmox VE: networking with bridges, VLANs, bonds and SDN, local and shared storage up to hyperconverged Ceph, virtual machines and LXC containers, automation through the API and Ansible, clustering with high availability and live migration, access control, firewalling and backups with Proxmox Backup Server. They also migrate virtual machines from VMware ESXi and compare the platforms on the market. Every chapter ends with a lab, and the programme closes with a final project in which teams deploy and present a three-node cluster.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "System administrators who run or plan a virtualization platform"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Linux administration (course: Linux & Bash Scripting, or RHCSA Part 1: Red Hat System Administration I) and basic IP networking. Linux basics are not taught again"
+  },
+  {
+   "label": "Duration",
+   "value": "36 h: 30 h of chapters + 6 h buffer, in 12 sessions of 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs on premises: one lab server per team of two or three (64 GB RAM, nested virtualization), provided by the organiser, hosting as virtual machines a KVM host, three Proxmox VE nodes, a Proxmox Backup Server and a source hypervisor for migration; Windows evaluation images; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can deploy and operate a Proxmox VE cluster with shared storage, high availability, tested backups and migrated workloads, and choose a platform for their organisation"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "KVM & Proxmox VE Foundations",
+   "hours": 9,
+   "focus": "KVM and libvirt, Proxmox VE networking and storage",
+   "intro": "Participants see how a hypervisor works with KVM, QEMU and libvirt on a single host, then install Proxmox VE and build the networking and storage it needs: Linux bridges, VLANs, bonds and SDN, local LVM-thin and ZFS, shared NFS and iSCSI, and hyperconverged Ceph. Ceph is introduced here and deployed in phase 3, once the cluster exists. Validated lab: a Proxmox VE node with a VLAN-aware bridge, ZFS local storage and an NFS share, managed from the web interface and the command line.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Virtualization & KVM",
+     "content": "Hypervisor types, KVM and QEMU, libvirt, virsh, virt-install, Cockpit",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Proxmox VE Architecture",
+     "content": "Installation, web interface and command line, nodes, Linux bridges, VLANs and bonds, SDN",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Storage",
+     "content": "Local LVM-thin and ZFS, NFS and iSCSI shared storage, hyperconverged Ceph",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Virtual Machines & Containers",
+   "hours": 6,
+   "focus": "VMs, templates and cloud-init, LXC containers and automation",
+   "intro": "Participants create Linux and Windows virtual machines with VirtIO drivers, turn them into cloud-init templates, and use snapshots and clones. They run LXC containers, then automate the platform through its API, pvesh and Ansible. Validated lab: a cloud-init template cloned into three configured virtual machines by an Ansible playbook.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Virtual Machines",
+     "content": "Linux and Windows VMs, VirtIO drivers, cloud-init, templates, snapshots, clones",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Containers & Automation",
+     "content": "LXC containers, the Proxmox VE API and pvesh, automation with Ansible",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Clustering, Operations & Migration",
+   "hours": 9,
+   "focus": "High availability, access control, backups, migration, platform choice",
+   "intro": "Participants join nodes into a cluster with quorum, move running machines with live migration and protect them with high availability. They control access, firewall the platform, back up and restore with Proxmox Backup Server, migrate workloads from VMware ESXi and other hypervisors, and compare Proxmox VE with the alternatives now that Red Hat Virtualization has reached end of life. Validated lab: a virtual machine on Ceph storage restarted automatically on another node after a node failure, then restored from backup.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Clustering & High Availability",
+     "content": "Corosync cluster, quorum and QDevice, live migration, HA rules (node and resource affinity), fencing",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Operations & Security",
+     "content": "Users, roles and realms (LDAP and Active Directory), permissions, firewall, updates, Proxmox Backup Server, restore",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Migrating to Proxmox VE",
+     "content": "ESXi import wizard, virt-v2v, OVF and OVA import, migration planning",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "The Enterprise Landscape",
+     "content": "Red Hat Virtualization end of life, oVirt as a community project, OpenShift Virtualization (KubeVirt), choosing a platform",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A three-node highly available cluster, presented to the group",
+   "intro": "Teams of two or three design and deploy a three-node Proxmox VE cluster on their lab server, reusing the phase labs, then present it as they would to an IT manager choosing a platform.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Design & Build",
+     "content": "Read the brief, design the network and storage, then build the three-node cluster with Ceph or shared storage, templates and an HA virtual machine",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Migrate, Back Up & Document",
+     "content": "Migrate a virtual machine from another hypervisor, run and restore a backup, write the architecture diagram and runbook",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Review",
+     "content": "Live migration and a node failure during the demo; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "A Highly Available Virtualization Cluster",
+    "brief": "A three-node Proxmox VE cluster with Ceph or shared storage, templates, a highly available virtual machine that survives a node failure, live migration, a tested backup and restore plan, and a virtual machine migrated from another hypervisor.",
+    "stack": "Proxmox VE, KVM, QEMU, LXC, Ceph or NFS, ZFS, Corosync, Proxmox Backup Server, cloud-init, Ansible",
+    "deliverable": "Working cluster, architecture diagram, backup plan and runbook, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

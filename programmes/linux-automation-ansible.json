@@ -1,0 +1,213 @@
+{
+ "slug": "linux-automation-ansible",
+ "file": "Linux-Automation-with-Ansible-42h.docx",
+ "title": "Linux Automation with Ansible (EX294)",
+ "subtitle": "Automate Red Hat Enterprise Linux administration with Ansible, from a Git repository",
+ "audience_line": "RHEL administrators who want to automate their daily work and prepare EX294",
+ "certifications": [
+  "Red Hat Certified Advanced System Administrator in Ansible (EX294)"
+ ],
+ "overview": "This programme teaches participants to automate the administration of Red Hat Enterprise Linux with Ansible, following the EX294 exam objectives. They set up a control node with ansible-navigator, execution environments, VS Code with an Ansible development container and Git, then write inventories, playbooks, variables and templates, protect secrets with Ansible Vault, organise their code in roles and content collections, and use the RHEL system roles. Every chapter ends with a lab on a small fleet of RHEL 10 machines. A timed mock EX294 exam measures readiness, and the programme closes with a final project: a three-tier environment automated from a Git repository and proved idempotent.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "RHEL administrators who want to automate their daily work and prepare EX294"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "RHCSA level (course: RHCSA Part 2: Red Hat System Administration II, or RHCSA Rapid Track): the administration tasks themselves are not taught again, only their automation"
+  },
+  {
+   "label": "Duration",
+   "value": "42 h: 36 h of chapters + 6 h buffer, in 14 sessions of 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs; one timed mock exam"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant (16 GB RAM minimum, hardware virtualization, Podman or Docker for the VS Code development container) with a RHEL 10 control node and three managed nodes with spare disks, registered with each participant’s no-cost Red Hat Developer Subscription for Individuals; Git server provided by the trainer; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase, a timed mock EX294 exam and a final project presented to the group; certificate of completion for participants who complete the labs and the project"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can automate RHEL administration with idempotent playbooks, roles, collections and Vault kept in Git, and sit the EX294 exam"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Ansible Foundations",
+   "hours": 6,
+   "focus": "Control node, tooling, Git, inventories and ad hoc commands",
+   "intro": "Participants set up the tools they will use for the whole course: a control node with ansible-navigator and execution environments, VS Code with an Ansible development container, and a Git repository for their automation code. They then describe the lab fleet in inventories and run their first ad hoc commands. Validated lab: an inventory with groups and variables, committed to Git, that reaches every managed node with privilege escalation.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Ansible Architecture & Tooling",
+     "content": "Control node, managed nodes, ansible.cfg, ansible-navigator and ansible-navigator.yml, execution environments, VS Code with an Ansible development container, Git basics (clone, add, commit, push)",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Inventories",
+     "content": "Static INI and YAML inventories, groups, host and group variables, dynamic inventory",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Managed Nodes & Ad Hoc Commands",
+     "content": "Distributing SSH keys, privilege escalation, modules, ansible-doc and finding modules in collections",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Writing Playbooks",
+   "hours": 9,
+   "focus": "Plays, handlers, variables, facts and task control",
+   "intro": "Participants write playbooks that describe the desired state of a server and can be run again safely. They use variables and facts to adapt to each host, then control execution with loops, conditions, blocks and error handling. Validated lab: a playbook that installs and configures a web server on the web group, restarts it only when its configuration changes, and reports no change on a second run.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Playbooks",
+     "content": "Plays, tasks, handlers, idempotency, check mode, running with ansible-navigator and ansible-playbook",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Variables & Facts",
+     "content": "Variable precedence, registered variables, facts, magic variables",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Task Control",
+     "content": "Loops, conditionals, blocks and rescue, error handling, tags",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Templates, Secrets & Roles",
+   "hours": 6,
+   "focus": "Jinja2 templates, Ansible Vault, roles and content collections",
+   "intro": "Participants generate configuration files from Jinja2 templates, keep passwords out of the repository with Ansible Vault, and reorganise their playbooks into roles that use content collections. Validated lab: the web server playbook refactored into a role with a templated configuration and a Vault-encrypted password, installed with its collections from a requirements file.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Templates",
+     "content": "Jinja2, filters, lookups",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Ansible Vault",
+     "content": "Encrypting variables and files, vault IDs",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Roles & Content Collections",
+     "content": "Role structure, creating roles, Ansible Galaxy, installing collections, requirements files",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Administration Tasks & Exam Practice",
+   "hours": 9,
+   "focus": "RHEL system roles, troubleshooting, automated administration, mock exam",
+   "intro": "Participants automate the administration tasks they already know by hand: packages, services, firewall, storage, users, scheduled jobs and SELinux, using the RHEL system roles where they exist. They learn to debug failing playbooks, then sit a timed mock EX294 exam. Validated lab: a playbook that applies a complete baseline (time, SELinux, firewall, users, storage) to every managed node.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "RHEL System Roles",
+     "content": "timesync, selinux, network and storage roles",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Troubleshooting Playbooks",
+     "content": "Debugging, verbosity, check and diff modes",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Automating Administration",
+     "content": "Packages and repositories, services, firewall rules, filesystems and storage, file content, archiving, scheduled tasks, SELinux, users and groups",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.4",
+     "title": "Mock Exam",
+     "content": "Timed EX294 mock exam and debrief",
+     "format": "Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A three-tier environment automated from Git, presented to the group",
+   "intro": "Each participant automates a three-tier environment from their Git repository, reusing the roles and playbooks from the phase labs, then presents it as they would to an operations team.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, design the inventory and roles, then automate the web, application and database tiers with collections, Vault, templates and system roles",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Prove & Document",
+     "content": "Clean run on fresh nodes, a second run with no changes, README and role documentation",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Demo & Review",
+     "content": "Live run from the Git repository; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "A Three-Tier Environment as Code",
+    "brief": "Web, application and database servers configured entirely from a Git repository with roles, content collections, Vault-protected secrets, templates and RHEL system roles; a second run reports no changes.",
+    "stack": "RHEL 10, Ansible, ansible-navigator, execution environments, Ansible Vault, RHEL system roles, Jinja2, Git, VS Code",
+    "deliverable": "Git repository with playbooks and roles, README, live run"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,228 @@
+{
+ "slug": "rhcsa-rapid-track-fr",
+ "file": "RHCSA-en-parcours-accelere-48h.docx",
+ "lang": "fr",
+ "title": "RHCSA en parcours accéléré",
+ "subtitle": "Tous les objectifs RHCSA sur RHEL 10, pour des administrateurs qui utilisent déjà Linux",
+ "audience_line": "Utilisateurs et administrateurs Linux qui préparent l’examen RHCSA en un seul cours",
+ "certifications": [
+  "RHCSA (EX200, RHEL 10)"
+ ],
+ "overview": "Ce programme couvre les objectifs RHCSA sur Red Hat Enterprise Linux 10 en un seul cours, pour des participants qui travaillent déjà sous Linux. Un rappel rapide des fondamentaux mène aux tâches d’administration évaluées à l’examen : réseau et SSH, logiciels, planification, scripts, firewalld, SELinux, partitions et LVM, NFS et autofs, dépannage des droits et récupération du démarrage. Les conteneurs rootless avec Podman sont enseignés comme compétence RHEL hors examen. Deux examens blancs EX200 chronométrés mesurent le niveau atteint, et le programme s’achève par un projet final : la construction complète d’un serveur à partir d’une machine virtuelle vierge et d’une liste de tâches écrite, en conditions d’examen.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Utilisateurs et administrateurs Linux qui préparent l’examen RHCSA en un seul cours"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Expérience pratique de Linux : ligne de commande, fichiers, utilisateurs, droits, services, vim ; rappelés rapidement, pas enseignés. Les débutants suivent plutôt RHCSA partie 1 : administration système Red Hat I et RHCSA partie 2 : administration système Red Hat II"
+  },
+  {
+   "label": "Durée",
+   "value": "48 h : 42 h de chapitres + 6 h de réserve, en 16 séances de 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés sur RHEL 10 ; deux examens blancs chronométrés"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant (16 Go de RAM, virtualisation matérielle activée) avec deux machines virtuelles RHEL 10 et des disques virtuels supplémentaires, issus des images du formateur, enregistrés avec l’abonnement gratuit Red Hat Developer for Individuals de chaque participant ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase, deux examens blancs EX200 chronométrés et un projet final noté selon une liste de tâches ; attestation de formation pour les participants qui valident les TP et le projet"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent réaliser les tâches des objectifs RHCSA sur RHEL 10 en temps limité et sont prêts à passer l’examen EX200"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Administration de base",
+   "hours": 9,
+   "focus": "Rappel des fondamentaux, exploitation du système, réseau et SSH",
+   "intro": "Un rappel rapide de la ligne de commande, des fichiers et des droits met le groupe au même niveau, puis les participants exploitent le système : processus, optimisation, services, journaux et heure, configuration réseau et SSH par clés. TP validé : un serveur avec utilisateurs, droits, journal persistant, réseau statique et SSH par clés uniquement, construit en temps limité.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Rappel des fondamentaux",
+     "content": "Ligne de commande, fichiers, liens, utilisateurs, vieillissement des mots de passe, droits, droits spéciaux, documentation",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Exploitation du système",
+     "content": "Processus, priorités des processus (nice, renice), profils d’optimisation, services, journaux et journal persistant, chrony",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Réseau et SSH",
+     "content": "nmcli, IPv4 et IPv6, résolution de noms, SSH par clés, transfert de fichiers sécurisé",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Logiciels, automatisation et pare-feu",
+   "hours": 6,
+   "focus": "dnf et Flatpak, archives, planification, scripts shell, firewalld",
+   "intro": "Les participants installent des logiciels depuis les dépôts et Flatpak, archivent des fichiers, planifient des tâches avec cron, at et les timers systemd, écrivent les courts scripts shell demandés à l’examen, et ouvrent des services avec firewalld. TP validé : un script planifié par un timer systemd qui archive un répertoire, et un service accessible à travers le pare-feu.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Logiciels et archives",
+     "content": "dnf, dépôts RPM, Flatpak, tar et compression",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Planification",
+     "content": "cron, at, unités timer systemd",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Scripts shell",
+     "content": "Conditions, boucles, arguments de script, traitement de la sortie des commandes",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Pare-feu",
+     "content": "firewalld et firewall-cmd",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Sécurité et stockage",
+   "hours": 9,
+   "focus": "SELinux, partitions et LVM, NFS et autofs, ACL",
+   "intro": "Les participants corrigent les refus SELinux avec les contextes, les booléens et l’étiquetage des ports, construisent le stockage à partir de disques bruts avec partitions, LVM et swap, montent du stockage réseau à la demande, et résolvent les problèmes de droits avec les ACL. TP validé : un volume logique étendu, des répertoires personnels NFS montés automatiquement et un service web sur un port personnalisé avec SELinux en mode enforcing.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "SELinux",
+     "content": "Modes, contextes, booléens, étiquetage des ports, dépannage",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Stockage",
+     "content": "Partitions GPT, LVM, extension de volumes, swap, VFAT, ext4 et XFS, montages par UUID",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "NFS et autofs",
+     "content": "Montages réseau, montage automatique",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Dépannage des droits",
+     "content": "Droits par défaut, diagnostic des problèmes de droits, ACL",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Démarrage, conteneurs et examens blancs",
+   "hours": 12,
+   "focus": "Récupération du démarrage, Podman, deux examens blancs EX200 chronométrés",
+   "intro": "Les participants contrôlent les cibles de démarrage et le chargeur d’amorçage et réinitialisent un mot de passe root perdu, exécutent des conteneurs Podman rootless en tant que services systemd, puis passent deux examens blancs EX200 chronométrés, chacun suivi d’une correction des tâches échouées. TP validé : un examen blanc réussi dans le temps imparti.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Démarrage et récupération",
+     "content": "Cibles, chargeur d’amorçage, réinitialisation du mot de passe root",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Conteneurs avec Podman",
+     "content": "Conteneurs rootless, intégration à systemd (compétence RHEL, hors examen RHCSA 10)",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.3",
+     "title": "Examen blanc 1",
+     "content": "Examen blanc EX200 chronométré sur RHEL 10 et correction des tâches échouées",
+     "format": "TP",
+     "hours": 3
+    },
+    {
+     "id": "4.4",
+     "title": "Examen blanc 2",
+     "content": "Second examen blanc EX200 chronométré sur un nouveau jeu de tâches et correction finale",
+     "format": "TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Construction complète d’un serveur de type RHCSA à partir d’une machine virtuelle vierge",
+   "intro": "Chaque participant construit un serveur à partir d’une machine virtuelle RHEL 10 vierge et d’une liste de tâches écrite, comme à l’examen, puis vérifie et documente le résultat avant sa notation.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Liste de tâches et réalisation",
+     "content": "Traiter la liste de tâches écrite sur une machine virtuelle RHEL 10 vierge : réseau, utilisateurs, stockage, SELinux, pare-feu, planification, NFS",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Vérification et documentation",
+     "content": "Test de redémarrage, autocontrôle de chaque tâche, notes sur les choix effectués",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Notation et revue",
+     "content": "Notation selon la liste de tâches, revue des tâches échouées, plan de préparation à l’examen",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Construction d’un serveur de type RHCSA",
+    "brief": "Une machine virtuelle RHEL 10 vierge transformée en serveur fonctionnel à partir d’une liste de tâches écrite couvrant les objectifs RHCSA, chaque tâche restant correcte après un redémarrage.",
+    "stack": "RHEL 10, Bash, systemd, NetworkManager, dnf, SELinux, LVM, XFS, NFS, autofs, firewalld",
+    "deliverable": "Serveur configuré, notes d’autocontrôle, liste de tâches notée"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

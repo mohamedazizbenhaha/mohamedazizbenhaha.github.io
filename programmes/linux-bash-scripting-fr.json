@@ -1,0 +1,181 @@
+{
+ "slug": "linux-bash-scripting-fr",
+ "file": "Linux-et-scripting-Bash-39h.docx",
+ "lang": "fr",
+ "title": "Linux et scripting Bash",
+ "subtitle": "Travailler en ligne de commande Linux et automatiser les tâches courantes avec Bash",
+ "audience_line": "Étudiants, développeurs et professionnels de l’IT qui débutent sous Linux",
+ "certifications": [],
+ "overview": "Ce programme mène les participants de leur première session de terminal à des scripts Bash qui tournent sans surveillance et échouent proprement. Ils apprennent comment un système Linux est organisé, comment gérer fichiers, utilisateurs, droits, processus, services et paquets, et comment traiter du texte avec les outils standard de la ligne de commande. La seconde moitié transforme ces commandes en scripts : variables, conditions, boucles, fonctions, tableaux et traps, puis gestion des erreurs, débogage et ShellCheck. Chaque chapitre se termine par un TP sur une machine virtuelle Linux, et le programme s’achève par un projet final où chaque participant construit et présente une petite boîte à outils d’automatisation.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Étudiants, développeurs et professionnels de l’IT qui débutent sous Linux"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aucun. Usage courant d’un ordinateur ; aucune expérience préalable de Linux ou de la programmation n’est nécessaire"
+  },
+  {
+   "label": "Durée",
+   "value": "39 h : 33 h de chapitres + 6 h de réserve, en 13 séances de 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés en ligne de commande"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant (8 Go de RAM minimum) avec deux machines virtuelles Linux préparées par le formateur, une Ubuntu Server et une Rocky Linux, pour pratiquer apt et dnf ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent utiliser et gérer un système Linux en ligne de commande et écrire, déboguer et planifier des scripts Bash robustes qui automatisent sauvegardes, création de comptes et rapports d’état"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Fondamentaux de Linux",
+   "hours": 9,
+   "focus": "Le shell, le système de fichiers, les droits et le traitement de texte",
+   "intro": "Les participants découvrent comment un système Linux est organisé et comment travailler efficacement en ligne de commande : trouver de l’aide, parcourir le système de fichiers, contrôler qui peut lire et modifier les fichiers, et enchaîner de petits outils en pipelines. TP validé : un répertoire de projet partagé avec les bons propriétaires, groupes et droits, et un pipeline d’une ligne qui résume un fichier journal.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Linux et le shell",
+     "content": "Distributions, noyau et espace utilisateur, terminal et shells, pages de manuel et aide",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Système de fichiers et navigation",
+     "content": "Arborescence FHS, chemins absolus et relatifs, find et locate, types de fichiers, liens physiques et symboliques",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Droits et utilisateurs",
+     "content": "rwx, chmod et chown, umask, sudo, useradd et groupes, /etc/passwd et /etc/shadow",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.4",
+     "title": "Traitement de texte",
+     "content": "cat, less, head et tail, grep, sed, awk, cut, sort, uniq et wc, tubes (pipes) et redirections",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Bases de l’administration système",
+   "hours": 6,
+   "focus": "Processus, services, planification, paquets et réseau",
+   "intro": "Un système en marche est un ensemble de processus et de services. Les participants les observent et les contrôlent, lisent les journaux, planifient des tâches, installent des logiciels et vérifient la connectivité réseau, puis se connectent à une autre machine avec des clés SSH. TP validé : un service installé, activé et diagnostiqué à partir de ses journaux, une tâche cron, et un accès SSH sans mot de passe à une seconde machine virtuelle.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Processus et services",
+     "content": "ps et top, kill et signaux, systemctl, journalctl, cron",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Paquets et bases du réseau",
+     "content": "apt et dnf, ip, ss, ping, curl et wget, dig, /etc/hosts, clés SSH et configuration du client",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Scripting Bash",
+   "hours": 12,
+   "focus": "Syntaxe Bash, structures de contrôle, fonctions et scripts robustes",
+   "intro": "Les commandes des deux premières phases deviennent des scripts. Les participants écrivent du Bash avec des guillemets et des codes de retour corrects, construisent structures de contrôle, fonctions et analyse des arguments, puis rendent leurs scripts sûrs sans surveillance : mode strict, traps, journalisation, débogage et ShellCheck. TP validé : un script qui accepte des options, valide ses entrées, journalise ce qu’il fait et passe ShellCheck sans avertissement.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Fondamentaux de Bash",
+     "content": "Variables, guillemets, codes de retour, test et [[ ]], if et case",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Boucles et fonctions",
+     "content": "for, while et until, substitution de commande, arithmétique, fonctions, arguments et getopts",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Bash avancé",
+     "content": "Tableaux, here-documents, descripteurs de fichiers, sous-shells, alias, trap",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.4",
+     "title": "Scripts robustes",
+     "content": "set -euo pipefail, débogage avec bash -x, ShellCheck, journalisation, bonnes pratiques",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Une boîte à outils d’automatisation, présentée au groupe",
+   "intro": "Chaque participant construit une petite boîte à outils d’automatisation pour un serveur fourni, en réutilisant les scripts des TP de phase, puis la présente comme il le ferait devant une équipe d’administration système.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, planifier les scripts, puis écrire la sauvegarde avec rotation, la création de comptes à partir d’un fichier CSV et le rapport d’état du système",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Planification, tests et documentation",
+     "content": "Planifier les scripts avec cron, tester les cas d’échec, passer ShellCheck, rédiger le README",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct sur une machine virtuelle neuve ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Boîte à outils d’automatisation serveur",
+    "brief": "Un ensemble de scripts Bash qui sauvegardent des répertoires avec rotation, créent des comptes à partir d’un fichier CSV et produisent un rapport d’état quotidien, planifiés avec cron, relançables sans risque et documentés pour l’administrateur suivant.",
+    "stack": "Bash, coreutils, grep, sed, awk, tar, cron, journal systemd, ShellCheck, Git",
+    "deliverable": "Dépôt de scripts avec README, planification cron, journal de tests, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

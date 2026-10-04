@@ -1,0 +1,174 @@
+{
+ "slug": "enterprise-virtualization-fr",
+ "file": "Virtualisation-d-entreprise-36h.docx",
+ "lang": "fr",
+ "title": "Virtualisation d’entreprise : KVM et Proxmox VE",
+ "subtitle": "Concevoir, exploiter et protéger un cluster de virtualisation hautement disponible",
+ "audience_line": "Administrateurs système qui exploitent ou préparent une plateforme de virtualisation",
+ "certifications": [],
+ "overview": "Ce programme apprend aux participants à construire et exploiter une plateforme de virtualisation à base de logiciels libres. Ils commencent par KVM, QEMU et libvirt sur un seul hôte, puis déploient Proxmox VE : réseau avec ponts, VLAN, agrégation de liens et SDN, stockage local et partagé jusqu’à Ceph en hyperconvergé, machines virtuelles et conteneurs LXC, automatisation par l’API et Ansible, cluster avec haute disponibilité et migration à chaud, contrôle d’accès, pare-feu et sauvegardes avec Proxmox Backup Server. Ils migrent aussi des machines virtuelles depuis VMware ESXi et comparent les plateformes du marché. Chaque chapitre se termine par un TP, et le programme s’achève par un projet final où les équipes déploient et présentent un cluster de trois nœuds.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Administrateurs système qui exploitent ou préparent une plateforme de virtualisation"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Administration Linux (cours : Linux et scripting Bash, ou RHCSA partie 1 : administration système Red Hat I) et bases des réseaux IP. Les bases de Linux ne sont pas réenseignées"
+  },
+  {
+   "label": "Durée",
+   "value": "36 h : 30 h de chapitres + 6 h de réserve, en 12 séances de 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Sur site : un serveur de TP par équipe de deux ou trois (64 Go de RAM, virtualisation imbriquée), fourni par l’organisateur, qui héberge en machines virtuelles un hôte KVM, trois nœuds Proxmox VE, un Proxmox Backup Server et un hyperviseur source pour la migration ; images Windows d’évaluation ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent déployer et exploiter un cluster Proxmox VE avec stockage partagé, haute disponibilité, sauvegardes testées et charges de travail migrées, et choisir une plateforme pour leur organisation"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Fondamentaux de KVM et Proxmox VE",
+   "hours": 9,
+   "focus": "KVM et libvirt, réseau et stockage Proxmox VE",
+   "intro": "Les participants voient comment fonctionne un hyperviseur avec KVM, QEMU et libvirt sur un seul hôte, puis installent Proxmox VE et construisent le réseau et le stockage nécessaires : ponts Linux, VLAN, agrégation de liens et SDN, stockage local LVM-thin et ZFS, partagé NFS et iSCSI, et Ceph en hyperconvergé. Ceph est présenté ici et déployé en phase 3, une fois le cluster en place. TP validé : un nœud Proxmox VE avec un pont compatible VLAN, un stockage local ZFS et un partage NFS, géré depuis l’interface web et en ligne de commande.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Virtualisation et KVM",
+     "content": "Types d’hyperviseurs, KVM et QEMU, libvirt, virsh, virt-install, Cockpit",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Architecture de Proxmox VE",
+     "content": "Installation, interface web et ligne de commande, nœuds, ponts Linux, VLAN et agrégation de liens, SDN",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Stockage",
+     "content": "Stockage local LVM-thin et ZFS, stockage partagé NFS et iSCSI, Ceph en hyperconvergé",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Machines virtuelles et conteneurs",
+   "hours": 6,
+   "focus": "VM, modèles et cloud-init, conteneurs LXC et automatisation",
+   "intro": "Les participants créent des machines virtuelles Linux et Windows avec les pilotes VirtIO, les transforment en modèles cloud-init, et utilisent instantanés et clones. Ils exécutent des conteneurs LXC, puis automatisent la plateforme via son API, pvesh et Ansible. TP validé : un modèle cloud-init cloné en trois machines virtuelles configurées par un playbook Ansible.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Machines virtuelles",
+     "content": "VM Linux et Windows, pilotes VirtIO, cloud-init, modèles, instantanés, clones",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Conteneurs et automatisation",
+     "content": "Conteneurs LXC, API Proxmox VE et pvesh, automatisation avec Ansible",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Cluster, exploitation et migration",
+   "hours": 9,
+   "focus": "Haute disponibilité, contrôle d’accès, sauvegardes, migration, choix d’une plateforme",
+   "intro": "Les participants réunissent les nœuds en cluster avec quorum, déplacent des machines en fonctionnement par migration à chaud et les protègent par la haute disponibilité. Ils contrôlent les accès, protègent la plateforme par un pare-feu, sauvegardent et restaurent avec Proxmox Backup Server, migrent des charges depuis VMware ESXi et d’autres hyperviseurs, et comparent Proxmox VE aux alternatives maintenant que Red Hat Virtualization est en fin de vie. TP validé : une machine virtuelle sur stockage Ceph redémarrée automatiquement sur un autre nœud après une panne, puis restaurée depuis une sauvegarde.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Cluster et haute disponibilité",
+     "content": "Cluster Corosync, quorum et QDevice, migration à chaud, règles HA (affinité de nœuds et de ressources), fencing",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Exploitation et sécurité",
+     "content": "Utilisateurs, rôles et domaines d’authentification (LDAP et Active Directory), permissions, pare-feu, mises à jour, Proxmox Backup Server, restauration",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Migrer vers Proxmox VE",
+     "content": "Assistant d’import ESXi, virt-v2v, import OVF et OVA, planification de la migration",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Le paysage des plateformes",
+     "content": "Fin de vie de Red Hat Virtualization, oVirt devenu projet communautaire, OpenShift Virtualization (KubeVirt), choisir une plateforme",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Un cluster hautement disponible de trois nœuds, présenté au groupe",
+   "intro": "Par équipes de deux ou trois, les participants conçoivent et déploient un cluster Proxmox VE de trois nœuds sur leur serveur de TP, en réutilisant les TP de phase, puis le présentent comme ils le feraient devant un responsable informatique qui choisit une plateforme.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Conception et réalisation",
+     "content": "Analyser le besoin, concevoir le réseau et le stockage, puis construire le cluster de trois nœuds avec Ceph ou un stockage partagé, des modèles et une machine virtuelle HA",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Migration, sauvegarde et documentation",
+     "content": "Migrer une machine virtuelle depuis un autre hyperviseur, réaliser et restaurer une sauvegarde, rédiger le schéma d’architecture et le runbook",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Démonstration et revue",
+     "content": "Migration à chaud et panne d’un nœud pendant la démonstration ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Un cluster de virtualisation hautement disponible",
+    "brief": "Un cluster Proxmox VE de trois nœuds avec Ceph ou un stockage partagé, des modèles, une machine virtuelle hautement disponible qui survit à la panne d’un nœud, la migration à chaud, un plan de sauvegarde et de restauration testé, et une machine virtuelle migrée depuis un autre hyperviseur.",
+    "stack": "Proxmox VE, KVM, QEMU, LXC, Ceph ou NFS, ZFS, Corosync, Proxmox Backup Server, cloud-init, Ansible",
+    "deliverable": "Cluster fonctionnel, schéma d’architecture, plan de sauvegarde et runbook, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

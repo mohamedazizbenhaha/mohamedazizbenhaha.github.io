@@ -1,0 +1,207 @@
+{
+ "slug": "rhcsa-part-2-fr",
+ "file": "RHCSA-partie-2-42h.docx",
+ "lang": "fr",
+ "title": "RHCSA partie 2 : administration système Red Hat II",
+ "subtitle": "Sécuriser, stocker, planifier et dépanner un serveur Red Hat Enterprise Linux 10",
+ "audience_line": "Administrateurs ayant suivi RHCSA partie 1 ou disposant d’une expérience équivalente de RHEL",
+ "certifications": [
+  "RHCSA (EX200, RHEL 10), seconde moitié des objectifs"
+ ],
+ "overview": "Ce programme est la seconde moitié du parcours RHCSA sur Red Hat Enterprise Linux 10. Les participants écrivent des scripts d’administration, les planifient avec cron et les timers systemd, optimisent le système, gardent SELinux en mode enforcing, gèrent partitions, volumes logiques et stockage réseau, corrigent les problèmes de droits avec les ACL, réparent un système qui ne démarre plus et le protègent avec firewalld. Ils exécutent aussi des conteneurs rootless avec Podman, compétence RHEL hors examen RHCSA 10. Un examen blanc EX200 chronométré prépare la certification, et le programme s’achève par un projet final : un serveur prêt pour la production, à remettre en service après une panne de démarrage.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Administrateurs ayant suivi RHCSA partie 1 ou disposant d’une expérience équivalente de RHEL"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Première moitié des objectifs RHCSA (cours : RHCSA partie 1 : administration système Red Hat I) ou expérience équivalente de RHEL ; ces sujets ne sont pas réenseignés"
+  },
+  {
+   "label": "Durée",
+   "value": "42 h : 36 h de chapitres + 6 h de réserve, en 14 séances de 3 h"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés sur RHEL 10 ; un examen blanc chronométré"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant (16 Go de RAM, virtualisation matérielle activée) avec deux machines virtuelles RHEL 10 et des disques virtuels supplémentaires, issus des images du formateur, enregistrés avec l’abonnement gratuit Red Hat Developer for Individuals de chaque participant ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase, un examen blanc EX200 chronométré et un projet final noté selon une grille ; attestation de formation pour les participants qui valident les TP et le projet"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent automatiser, sécuriser et dépanner un serveur RHEL 10 avec SELinux en mode enforcing, en gérer le stockage et le démarrage, et se présenter à l’examen EX200"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Scripts et optimisation du système",
+   "hours": 6,
+   "focus": "Scripts d’administration, expressions régulières, planification et optimisation",
+   "intro": "Les participants automatisent les tâches courantes avec des scripts Bash et des expressions régulières, les planifient avec at, cron et les timers systemd, et optimisent le système avec les profils tuned et les priorités des processus. TP validé : un script de rapport lancé chaque nuit par un timer systemd, dont la sortie est vérifiée dans le journal.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Scripts et expressions régulières pour l’administrateur",
+     "content": "Scripts Bash, paramètres positionnels, boucles, conditions, grep et expressions régulières",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Planification",
+     "content": "at, cron, unités timer systemd, fichiers temporaires",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Optimisation",
+     "content": "Profils tuned, ordonnancement des processus, nice et renice",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "SELinux et stockage",
+   "hours": 9,
+   "focus": "Contextes et booléens SELinux, partitions, systèmes de fichiers et LVM",
+   "intro": "Les participants gardent SELinux en mode enforcing et corrigent les refus au lieu de le désactiver, puis gèrent le stockage à partir de disques bruts : partitions, systèmes de fichiers, swap et montages persistants, et volumes logiques qui s’agrandissent sans interruption. TP validé : un serveur web qui sert du contenu depuis un répertoire personnalisé avec SELinux en mode enforcing, sur un volume logique étendu pendant qu’il est monté.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "SELinux",
+     "content": "Modes enforcing et permissive, contextes de fichiers et de processus, restorecon et semanage, booléens, dépannage",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Stockage de base",
+     "content": "Partitions GPT et MBR, systèmes de fichiers VFAT, ext4 et XFS, swap, montages persistants par UUID ou étiquette",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Volumes logiques",
+     "content": "Volumes physiques, groupes de volumes et volumes logiques LVM, création et extension de volumes logiques sans perte de données",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Contrôle d’accès, stockage réseau et démarrage",
+   "hours": 6,
+   "focus": "ACL, NFS et autofs, processus de démarrage et dépannage",
+   "intro": "Les participants diagnostiquent les problèmes de droits et les résolvent avec les ACL, montent du stockage partagé NFS à la demande avec autofs, puis suivent le démarrage du micrologiciel jusqu’à la cible et réparent un système qui ne démarre plus. TP validé : des répertoires personnels montés automatiquement depuis un serveur NFS, et un mot de passe root perdu réinitialisé sur une machine qui redémarre proprement.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Problèmes de droits et ACL",
+     "content": "Diagnostic et correction des problèmes de droits, droits par défaut, getfacl et setfacl",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Stockage réseau",
+     "content": "Montages NFS, autofs",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Processus de démarrage",
+     "content": "Cibles systemd, configuration du chargeur d’amorçage (GRUB 2, grubby), réinitialisation du mot de passe root, réparation du système de fichiers",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Pare-feu, conteneurs et examen blanc",
+   "hours": 9,
+   "focus": "firewalld, conteneurs Podman en tant que services, examen blanc EX200",
+   "intro": "Les participants n’ouvrent que les services nécessaires avec firewalld et l’étiquetage SELinux des ports, exécutent des conteneurs rootless avec Podman en tant que services systemd, puis passent un examen blanc EX200 chronométré. TP validé : un service web sur un port non standard, accessible à travers le pare-feu avec SELinux en mode enforcing, et un service conteneurisé qui démarre au démarrage.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Sécurité réseau",
+     "content": "Zones et services firewalld, firewall-cmd, étiquetage SELinux des ports",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Conteneurs avec Podman",
+     "content": "Images, registres, conteneurs rootless, volumes, conteneurs en tant que services systemd (compétence RHEL, hors examen RHCSA 10)",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.3",
+     "title": "Examen blanc",
+     "content": "Examen blanc EX200 chronométré sur RHEL 10 et correction",
+     "format": "TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Un serveur RHEL 10 prêt pour la production, remis en service après une panne de démarrage",
+   "intro": "Chaque participant transforme une machine virtuelle RHEL 10 vierge en serveur prêt pour la production à partir d’un cahier des charges écrit, en réutilisant les TP de phase, puis prouve qu’il sait la remettre en service lorsque le formateur casse son démarrage.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, puis construire le stockage LVM et le swap, le montage automatique NFS, le service web avec SELinux en mode enforcing et les règles de pare-feu",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Automatisation et documentation",
+     "content": "Un timer systemd de maintenance, un conteneur Podman exécuté en tant que service systemd, un court runbook (procédures d’exploitation)",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Dépannage et revue",
+     "content": "Réparer une panne de démarrage provoquée par le formateur, notation selon la grille de contrôle, questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Un serveur RHEL 10 prêt pour la production",
+    "brief": "Un serveur RHEL 10 avec stockage LVM et swap, un montage automatique NFS, un service web qui tourne avec SELinux en mode enforcing derrière firewalld, une tâche de maintenance sur un timer systemd et un conteneur Podman lancé au démarrage, remis en service par son auteur après une panne de démarrage.",
+    "stack": "RHEL 10, Bash, timers systemd, SELinux, LVM, XFS, NFS, autofs, firewalld, GRUB 2, Podman",
+    "deliverable": "Serveur configuré, runbook, grille de contrôle notée incluant la remise en service"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

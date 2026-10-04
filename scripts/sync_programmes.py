@@ -116,7 +116,7 @@ def read_doc(path, old):
                 labels['portfolio_kicker'] = text
                 g['portfolio'] = {'intro': '', 'rows': []}; where = 'portfolio'
         elif st == 'Prog Cover Kicker': labels['kicker'] = text
-        elif st == 'Prog Cover Title': g['title'] = text
+        elif st == 'Prog Cover Title': g['title'] = text.replace(' ', ' ')
         elif st == 'Prog Cover Sub': g['subtitle'] = text
         elif st == 'Prog Cover Stat':  # big hours figure; kept in data only if it differs from the phases' sum
             unit = ''.join(r.text for r in p.runs if r.style is not None and r.style.name == 'Prog Cover Unit').strip()
