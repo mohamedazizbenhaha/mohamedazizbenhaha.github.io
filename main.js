@@ -51,7 +51,7 @@ const FR = {
   'ct.copy': 'Copier l’e-mail', 'ct.fr': 'France', 'foot.top': 'Haut de page ↑',
   'skip': 'Aller au contenu',
   'stat.longest': 'Programmes phares',
-  'tr.intro': 'Des programmes que je conçois et dispense pour des universités, des entreprises et des programmes publics pour l’emploi. Choisissez une formation pour voir son plan, consulter ou télécharger le programme complet, ou demander une version adaptée à votre équipe : sur site en France ou en Tunisie, ou à distance.',
+  'tr.intro': 'Des programmes que je conçois et dispense pour des universités, des entreprises et des programmes publics pour l’emploi. Ouvrez une formation pour voir son plan et consulter le programme complet, ou demander une version adaptée à votre équipe : sur site en France ou en Tunisie, ou à distance.',
   'foot.rights': 'Tous droits réservés.',
   'tr.t1': 'Programmes de formation,', 'tr.t2': 'prêts à lancer.',
   'tr.infra': 'Infrastructure', 'tr.cloud': 'Cloud et DevOps', 'tr.data': 'Data et IA', 'tr.sec': 'Sécurité', 'tr.acad': 'Académique',
@@ -120,29 +120,43 @@ const EXP = {
 
 /* ---------- training programmes: catalogue data PROGS in programmes.js (generated), labels here ---------- */
 const PUI = {
-  en: { kicker: 'Training programme', struct: 'Programme structure', pdf: 'Preview (PDF)', dl: 'Download (Word)', book: 'Book', cust: 'Customise',
+  en: { kicker: 'Training programme', struct: 'Programme structure', open: 'View programme', pdf: 'Preview (PDF)', book: 'Book', cust: 'Customise',
         aud: 'Audience', pre: 'Prerequisites', cert: 'Certification', buf: 'Buffer', bufF: 'Catch-up, revision, extra lab time', opt: 'optional', subj: 'Custom training request: ',
         bsubj: 'Booking request: ',
         bbody: t => `Hello Aziz,\n\nWe would like to book the "${t}" programme as described on your website.\n\nOrganisation:\nNumber of participants:\nFormat (on-site France / on-site Tunisia / remote):\nPreferred start date:\nContact person and phone:\n\nBest regards,\n`,
         body: t => `Hello Aziz,\n\nWe are interested in the "${t}" programme, adapted to our team.\n\nOrganisation:\nNumber of participants:\nCurrent level (beginner / intermediate / advanced):\nFormat (on-site France / on-site Tunisia / remote):\nTarget length and dates:\nTopics to add or remove:\n\nBest regards,\n` },
-  fr: { kicker: 'Programme de formation', struct: 'Structure du programme', pdf: 'Aperçu (PDF)', dl: 'Télécharger (Word)', book: 'Réserver', cust: 'Personnaliser',
+  fr: { kicker: 'Programme de formation', struct: 'Structure du programme', open: 'Voir le programme', pdf: 'Aperçu (PDF)', book: 'Réserver', cust: 'Personnaliser',
         aud: 'Public', pre: 'Prérequis', cert: 'Certification', buf: 'Réserve', bufF: 'Rattrapage, révision, TP supplémentaires', opt: 'optionnel', subj: 'Demande de formation sur mesure : ',
         bsubj: 'Demande de réservation : ',
         bbody: t => `Bonjour Aziz,\n\nNous souhaitons réserver le programme « ${t} » tel que décrit sur votre site.\n\nOrganisation :\nNombre de participants :\nFormat (sur site France / sur site Tunisie / à distance) :\nDate de début souhaitée :\nPersonne à contacter et téléphone :\n\nCordialement,\n`,
         body: t => `Bonjour Aziz,\n\nNous sommes intéressés par le programme « ${t} », adapté à notre équipe.\n\nOrganisation :\nNombre de participants :\nNiveau actuel (débutant / intermédiaire / avancé) :\nFormat (sur site France / sur site Tunisie / à distance) :\nDurée et dates souhaitées :\nSujets à ajouter ou retirer :\n\nCordialement,\n` }
 };
-const progItem = c => `${pick(c.title)}<small>${c.h} h${c.opt ? ` + ${c.opt} h` : ''}</small>`;
-function progPanel(c) {
-  const u = PUI[lang], t = pick(c.title), f = c.file[lang];
+let pgroup = 'infra';
+const hrsHTML = c => `<b class="hrs">${c.h}<small>h</small></b>`;
+function renderProgs() {
+  const items = PROGS[pgroup];
+  $('#progs').innerHTML = items.map((c, i) => `<li><button type="button" class="prog" data-p="${i}" aria-haspopup="dialog">${hrsHTML(c)}<span class="prog-txt"><b class="prog-h">${pick(c.title)}</b><span class="prog-p">${pick(c.sub)}</span></span><span class="prog-go">${PUI[lang].open}<svg><use href="#i-arrow"/></svg></span></button></li>`).join('');
+  $('#moreProgs').parentElement.hidden = items.length <= 3;
+}
+$$('#training .seg button').forEach(b => b.addEventListener('click', () => {
+  $$('#training .seg button').forEach(x => x.setAttribute('aria-pressed', x === b)); pgroup = b.dataset.group; renderProgs();
+}));
+const progDlg = $('#progDlg');
+function openProg(i) {
+  const c = PROGS[pgroup][i], u = PUI[lang], t = pick(c.title);
   const mail = (s, b) => `mailto:mohamedaziz.benhaha@gmail.com?subject=${encodeURIComponent(s + t)}&body=${encodeURIComponent(b(t))}`;
   const facts = [[u.aud, pick(c.aud)], [u.pre, pick(c.pre)], ...(c.cert ? [[u.cert, pick(c.cert).join('<br>')]] : [])];
-  return `<header class="pm-head"><b class="hrs">${c.h}<small>h</small></b><div><p class="pm-kicker">${u.kicker}${c.opt ? ` · +${c.opt} h ${u.opt}` : ''}</p><h3>${t}</h3></div></header>
+  $('#progBody').innerHTML = `<header class="pm-head">${hrsHTML(c)}<div><p class="pm-kicker">${u.kicker}${c.opt ? ` · +${c.opt} h ${u.opt}` : ''}</p><h2 id="pTitle">${t}</h2></div></header>
     <p class="pm-lede">${pick(c.sub)}</p>
     <dl class="pm-facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
-    <h4 class="pm-sub">${u.struct}</h4>
+    <h3 class="pm-sub">${u.struct}</h3>
     <ol class="pm-phases">${c.ph.map(([n, fo, h, o]) => `<li><b>${pick(n)}${o ? ` <em>(${u.opt})</em>` : ''}</b><span>${pick(fo)}</span><i>${h} h</i></li>`).join('')}${c.buf ? `<li class="buf"><b>${u.buf}</b><span>${u.bufF}</span><i>${c.buf} h</i></li>` : ''}</ol>
-    <div class="pm-actions"><a class="btn btn-gold" href="res/programmes/pdf/${f}.pdf" target="_blank" rel="noopener"><svg><use href="#i-ext"/></svg><span>${u.pdf}</span></a><a class="btn btn-ghost" href="res/programmes/${f}.docx" download><svg><use href="#i-down"/></svg><span>${u.dl}</span></a><a class="btn btn-ghost" href="${mail(u.bsubj, u.bbody)}" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg><span>${u.book}</span></a><a class="btn btn-ghost" href="${mail(u.subj, u.body)}" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg><span>${u.cust}</span></a></div>`;
+    <div class="pm-actions"><a class="btn btn-gold" href="res/programmes/pdf/${c.file[lang]}.pdf" target="_blank" rel="noopener"><svg><use href="#i-ext"/></svg><span>${u.pdf}</span></a><a class="btn btn-ghost" href="${mail(u.bsubj, u.bbody)}" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg><span>${u.book}</span></a><a class="btn btn-ghost" href="${mail(u.subj, u.body)}" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg><span>${u.cust}</span></a></div>`;
+  progDlg.dataset.p = i;
+  if (!progDlg.open) progDlg.showModal();
+  progDlg.scrollTop = 0;
 }
+$('#progs').addEventListener('click', e => { const b = e.target.closest('[data-p]'); if (b) openProg(+b.dataset.p) });
 
 /* ---------- dialogs: close button, backdrop click ---------- */
 $$('.modal').forEach(d => {
@@ -190,11 +204,11 @@ function applyLang() {
   const [en, fr] = $$('#lang span');
   en.classList.toggle('on', lang === 'en'); fr.classList.toggle('on', lang === 'fr');
   $('#lang').setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
-  TABS.forEach(t => t.render()); sizeTabs(); setMailSubjects(); fitMotto(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
+  TABS.forEach(t => t.render()); sizeTabs(); renderProgs(); if (progDlg.open) openProg(+progDlg.dataset.p); setMailSubjects(); fitMotto(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
 }
 $('#lang').addEventListener('click', () => { lang = lang === 'en' ? 'fr' : 'en'; store.set('lang', lang); applyLang() });
 
-/* ---------- tabbed boxes: experience and training (group buttons, entry list, panel) ---------- */
+/* ---------- experience tabs (group buttons, entry list, panel) ---------- */
 /* Each box is locked to its tallest content (every group and entry, current language) so the next section never moves. */
 function tabbed(sec, data, itemHTML, panelHTML) {
   const box = $('.tabs', sec), list = $('.tab-list', sec), panel = $('.tab-panel', sec);
@@ -234,8 +248,7 @@ function tabbed(sec, data, itemHTML, panelHTML) {
 }
 const TABS = [
   tabbed($('#experience'), EXP, e => `${pick(e[0])}<small>${pick(e[2]).split(' · ')[0]}</small>`,
-    ([org, role, dates, pts, stack]) => `<h3>${pick(role)} <span>@ ${pick(org)}</span></h3><p class="meta">${pick(dates)}</p><ul class="pts">${pick(pts).map(p => `<li>${p}</li>`).join('')}</ul><ul class="chips">${stack.map(s => `<li>${s}</li>`).join('')}</ul>`),
-  tabbed($('#training'), PROGS, progItem, progPanel)
+    ([org, role, dates, pts, stack]) => `<h3>${pick(role)} <span>@ ${pick(org)}</span></h3><p class="meta">${pick(dates)}</p><ul class="pts">${pick(pts).map(p => `<li>${p}</li>`).join('')}</ul><ul class="chips">${stack.map(s => `<li>${s}</li>`).join('')}</ul>`)
 ];
 const sizeTabs = () => TABS.forEach(t => t.size());
 let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { TABS.forEach(t => t.render()); sizeTabs(); fitMotto(); fitName() }, 150) });
@@ -313,8 +326,8 @@ $$('.orbit').forEach(o => {
   s.forEach((el, i) => { const a = (i / s.length) * Math.PI * 2 - Math.PI / 2; el.style.left = 50 + 50 * Math.cos(a) + '%'; el.style.top = 50 + 50 * Math.sin(a) + '%' });
 });
 
-/* ---------- Show more / Show less: courses (first row) ---------- */
-const MORE = [[$('#courses-grid'), $('#moreCourses')]];
+/* ---------- Show more / Show less: courses (first row) and programmes (first 3 of the filtered rows) ---------- */
+const MORE = [[$('#courses-grid'), $('#moreCourses')], [$('#progs'), $('#moreProgs')]];
 function setMoreLabel() { MORE.forEach(([g, b]) => { $('.more-label', b).textContent = UI[lang][g.classList.contains('open') ? 'less' : 'more'] }) }
 MORE.forEach(([g, b]) => b.addEventListener('click', () => {
   const open = g.classList.toggle('open'); b.setAttribute('aria-expanded', open); setMoreLabel();
