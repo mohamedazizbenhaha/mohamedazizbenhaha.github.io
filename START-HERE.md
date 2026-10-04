@@ -9,7 +9,7 @@
 
 ## Now (2026-10-05): programmes done → integrate them in the website
 - **Read `W:\trainings-catalog\HANDOFF.md` first** (top section: state + suggested prompt for the website integration).
-- 39 of 40 courses built EN + FR (78 .docx in `res/programmes/`, 78 PDF previews in `res/programmes/pdf/`); table with preview links: `programmes/INDEX.md`. Course 38 Ethical Hacking not produced (user writes its JSON; see HANDOFF).
+- All 39 catalogue courses built EN + FR (78 .docx in `res/programmes/`, 78 PDF previews in `res/programmes/pdf/`); table with preview links: `programmes/INDEX.md`. Ethical Hacking was removed from the catalogue for good (user, 2026-10-05).
 - Scripts: `build_programmes.py` (refuses wrong hours) → `export_pdfs.py` (Word → PDF) → `programme_index.py`. Documents state hours only, never sessions.
 - Next: replace the retired 130 h programme in the Training section (`PROGS` in `main.js`) with the new catalogue. Discuss designs first.
 
@@ -104,7 +104,7 @@ Use only where they earn their tokens:
 - What "replace" meant at the end of the user's message on 2026-10-01 (it was cut off).
 - Guidelines items not done (low value or need the user): logo-strip images have no width/height attributes (CSS fixes their height, no visible shift); the marquee has no pause control (it stops under reduced motion).
 - Merge `redesign` → `main` (production) needs the user's word. Then switch the QR to the production URL (see Round 4).
-- Word files for the training programmes: done 2026-10-05 except course 38 (see HANDOFF).
+- Word files for the training programmes: done 2026-10-05 (all 39 courses).
 - Phone "Desktop site" mode renders ~980px; the nav collapses below 1020px. If the user wants the full nav there, lower that breakpoint.
 - Main CV PDF says "500+ heures"; the site says 1,000+. The user should update the PDF.
 - The user must revoke the old Gmail app password (it is in the public repo history).
