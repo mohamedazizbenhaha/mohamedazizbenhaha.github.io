@@ -21,7 +21,7 @@
   },
   {
    "label": "Duration",
-   "value": "81 h: 72 h of chapters + 9 h buffer, in 27 sessions of 3 h"
+   "value": "81 h: 72 h of chapters + 9 h buffer"
   },
   {
    "label": "Format",
@@ -29,7 +29,7 @@
   },
   {
    "label": "Lab environment",
-   "value": "One laptop per participant (16 GB RAM minimum, Docker, VS Code); phases 1 and 2 run locally, phase 3 moves the stack to AWS. One AWS sandbox account per team, provided by the organiser; resources destroyed after each session to control cost"
+   "value": "One laptop per participant (16 GB RAM minimum, Docker, VS Code); phases 1 and 2 run locally, phase 3 moves the stack to AWS. One AWS sandbox account per team, provided by the organiser; resources destroyed at the end of each lab to control cost"
   },
   {
    "label": "Assessment",
@@ -48,11 +48,41 @@
    "focus": "DevOps principles, Git and team workflows",
    "intro": "DevOps starts with how a team works, then with how it shares code. This phase sets the vocabulary and metrics used for the rest of the programme and gives every participant a working command of Git and pull-request based collaboration. The phase ends with a validated lab: a team repository with protected branches, a reviewed pull request and a tagged release.",
    "chapters": [
-    {"id": "1.1", "title": "DevOps Culture", "content": "CALMS, DORA software delivery metrics (throughput and instability, including rework rate), Agile and Kanban, value stream mapping, where automation pays off", "format": "Lecture + Workshop", "hours": 3},
-    {"id": "1.2", "title": "Git Fundamentals", "content": "How Git stores history (commits, trees, refs), init, clone, add, commit, log, diff, .gitignore, commit message conventions", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.3", "title": "Branching & Merging", "content": "Branch model, fast-forward and three-way merges, rebase, cherry-pick, conflict resolution", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.4", "title": "Remote Repositories & Pull Requests", "content": "fetch, pull, push, SSH vs HTTPS authentication, forks, origin and upstream, pull requests and code review", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.5", "title": "Team Workflow", "content": "GitFlow vs trunk-based development, branch protection rules, release tags, semantic versioning", "format": "Lecture + Lab", "hours": 1.5}
+    {
+     "id": "1.1",
+     "title": "DevOps Culture",
+     "content": "CALMS, DORA software delivery metrics (throughput and instability, including rework rate), Agile and Kanban, value stream mapping, where automation pays off",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Git Fundamentals",
+     "content": "How Git stores history (commits, trees, refs), init, clone, add, commit, log, diff, .gitignore, commit message conventions",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Branching & Merging",
+     "content": "Branch model, fast-forward and three-way merges, rebase, cherry-pick, conflict resolution",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.4",
+     "title": "Remote Repositories & Pull Requests",
+     "content": "fetch, pull, push, SSH vs HTTPS authentication, forks, origin and upstream, pull requests and code review",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.5",
+     "title": "Team Workflow",
+     "content": "GitFlow vs trunk-based development, branch protection rules, release tags, semantic versioning",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -63,17 +93,83 @@
    "focus": "Jenkins, automated tests, SonarQube, Nexus, deployment strategies, GitHub Actions",
    "intro": "Participants build the same pipeline twice: on Jenkins, a widely used self-hosted CI server, and on GitHub Actions. Tests, quality gates and an artifact repository make sure that only tested, versioned builds are deployed, and the phase ends with the release strategies that keep a deployment reversible. Validated lab: the course application built, tested, analysed, published to Nexus and deployed to the local cluster by both pipelines.",
    "chapters": [
-    {"id": "2.1", "title": "Jenkins Foundations", "content": "Installation, plugins, security settings, controller and agents, job types", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.2", "title": "Triggers & Credentials", "content": "Webhooks, SCM polling, scheduled builds, credential types and their safe use", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.3", "title": "Jenkins Pipelines", "content": "Declarative Jenkinsfile, stages and steps, post actions, parameters, environment variables", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.4", "title": "Scaling Jenkins", "content": "Distributed agents, parallel stages, shared libraries for reusable pipeline code", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.5", "title": "Automated Testing in the Pipeline", "content": "Unit and integration test stages, JUnit reports, failing fast, disposable test environments with containers", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.6", "title": "Code Quality with SonarQube", "content": "Static analysis, coverage import, quality profiles, quality gates that stop the pipeline", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.7", "title": "Artifact Management with Nexus", "content": "Hosted, proxy and group repositories, Nexus as a Docker registry, versioning, cleanup policies, publishing from the pipeline", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.8", "title": "Deploying from Jenkins", "content": "Build, tag and push images to Nexus, deploy to Kubernetes with Helm, promotion between environments", "format": "Lab", "hours": 1.5},
-    {"id": "2.9", "title": "Deployment Strategies & Rollback", "content": "Rolling, blue/green and canary releases, rollback, feature flags; push-based deployment vs GitOps (Argo CD, taught in Docker & Kubernetes)", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.10", "title": "GitHub Actions", "content": "Workflows, events, jobs and steps, expressions and contexts, hosted and self-hosted runners, matrix builds, caching, artifacts", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.11", "title": "Secure Delivery & Reuse with Actions", "content": "Secrets, environments and required reviewers, OIDC federation to AWS without long-lived keys, reusable workflows, custom composite, JavaScript and Docker actions, organisation policies and runner groups", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Jenkins Foundations",
+     "content": "Installation, plugins, security settings, controller and agents, job types",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Triggers & Credentials",
+     "content": "Webhooks, SCM polling, scheduled builds, credential types and their safe use",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Jenkins Pipelines",
+     "content": "Declarative Jenkinsfile, stages and steps, post actions, parameters, environment variables",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.4",
+     "title": "Scaling Jenkins",
+     "content": "Distributed agents, parallel stages, shared libraries for reusable pipeline code",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.5",
+     "title": "Automated Testing in the Pipeline",
+     "content": "Unit and integration test stages, JUnit reports, failing fast, disposable test environments with containers",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.6",
+     "title": "Code Quality with SonarQube",
+     "content": "Static analysis, coverage import, quality profiles, quality gates that stop the pipeline",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.7",
+     "title": "Artifact Management with Nexus",
+     "content": "Hosted, proxy and group repositories, Nexus as a Docker registry, versioning, cleanup policies, publishing from the pipeline",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.8",
+     "title": "Deploying from Jenkins",
+     "content": "Build, tag and push images to Nexus, deploy to Kubernetes with Helm, promotion between environments",
+     "format": "Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.9",
+     "title": "Deployment Strategies & Rollback",
+     "content": "Rolling, blue/green and canary releases, rollback, feature flags; push-based deployment vs GitOps (Argo CD, taught in Docker & Kubernetes)",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.10",
+     "title": "GitHub Actions",
+     "content": "Workflows, events, jobs and steps, expressions and contexts, hosted and self-hosted runners, matrix builds, caching, artifacts",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.11",
+     "title": "Secure Delivery & Reuse with Actions",
+     "content": "Secrets, environments and required reviewers, OIDC federation to AWS without long-lived keys, reusable workflows, custom composite, JavaScript and Docker actions, organisation policies and runner groups",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -84,15 +180,69 @@
    "focus": "Terraform provisioning on AWS, Ansible configuration management",
    "intro": "Infrastructure is described in code, reviewed like code and applied by the pipeline. Terraform creates the AWS environment for the course application; Ansible then configures the servers that run the team's tooling. Each tool ends with a validated project that the final project reuses.",
    "chapters": [
-    {"id": "3.1", "title": "Terraform Foundations", "content": "Providers, HCL, resources, data sources, dependency graph, init, plan and apply, fmt and validate", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.2", "title": "State & Variables", "content": "Variables and validation, outputs, state and the terraform state commands, S3 remote backend and locking, HCP Terraform", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.3", "title": "Modules & Environments", "content": "Writing and versioning modules, the Terraform Registry, workspaces, lifecycle rules, import and moved blocks, code organisation", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.4", "title": "Terraform Project", "content": "Provision the course environment on AWS: VPC, EKS cluster, RDS database and EC2 hosts for the tooling", "format": "Lab", "hours": 3},
-    {"id": "3.5", "title": "Ansible Basics", "content": "Declarative vs imperative, configuration drift, architecture, static and AWS dynamic inventories, ad hoc commands", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.6", "title": "Playbooks", "content": "YAML, plays and tasks, core modules, handlers, conditionals, loops, idempotency", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.7", "title": "Variables, Templates & Vault", "content": "group_vars and host_vars, facts, Jinja2 templates and filters, Ansible Vault for secrets", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.8", "title": "Roles", "content": "Role structure, defaults, dependencies, Ansible Galaxy, designing reusable roles", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "3.9", "title": "Ansible Project", "content": "Configure the EC2 tool servers (Jenkins controller and agents, SonarQube, Nexus) with roles, then rerun to prove idempotency", "format": "Lab", "hours": 1.5}
+    {
+     "id": "3.1",
+     "title": "Terraform Foundations",
+     "content": "Providers, HCL, resources, data sources, dependency graph, init, plan and apply, fmt and validate",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "State & Variables",
+     "content": "Variables and validation, outputs, state and the terraform state commands, S3 remote backend and locking, HCP Terraform",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Modules & Environments",
+     "content": "Writing and versioning modules, the Terraform Registry, workspaces, lifecycle rules, import and moved blocks, code organisation",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.4",
+     "title": "Terraform Project",
+     "content": "Provision the course environment on AWS: VPC, EKS cluster, RDS database and EC2 hosts for the tooling",
+     "format": "Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.5",
+     "title": "Ansible Basics",
+     "content": "Declarative vs imperative, configuration drift, architecture, static and AWS dynamic inventories, ad hoc commands",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.6",
+     "title": "Playbooks",
+     "content": "YAML, plays and tasks, core modules, handlers, conditionals, loops, idempotency",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.7",
+     "title": "Variables, Templates & Vault",
+     "content": "group_vars and host_vars, facts, Jinja2 templates and filters, Ansible Vault for secrets",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.8",
+     "title": "Roles",
+     "content": "Role structure, defaults, dependencies, Ansible Galaxy, designing reusable roles",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.9",
+     "title": "Ansible Project",
+     "content": "Configure the EC2 tool servers (Jenkins controller and agents, SonarQube, Nexus) with roles, then rerun to prove idempotency",
+     "format": "Lab",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -103,8 +253,20 @@
    "focus": "Prometheus metrics and alerts, Grafana dashboards and Loki logs",
    "intro": "A delivery chain is only finished when the team can see what runs in production. Participants instrument the course application, build dashboards from metrics and logs, and route alerts to the right people. Validated lab: a dashboard for the course application and an alert that fires and reaches its contact point.",
    "chapters": [
-    {"id": "4.1", "title": "Metrics & Alerting with Prometheus", "content": "Metrics model, exporters, instrumenting the application with OpenTelemetry and Prometheus client libraries, PromQL, recording and alerting rules, Alertmanager routing", "format": "Lecture + Lab", "hours": 3},
-    {"id": "4.2", "title": "Dashboards & Logs with Grafana", "content": "Dashboards, Loki for logs, Grafana alert rules, contact points and notification policies, service level objectives", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "4.1",
+     "title": "Metrics & Alerting with Prometheus",
+     "content": "Metrics model, exporters, instrumenting the application with OpenTelemetry and Prometheus client libraries, PromQL, recording and alerting rules, Alertmanager routing",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Dashboards & Logs with Grafana",
+     "content": "Dashboards, Loki for logs, Grafana alert rules, contact points and notification policies, service level objectives",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -115,10 +277,34 @@
    "focus": "End-to-end delivery chain, presented to the group",
    "intro": "Teams of two or three assemble everything from the programme into one working delivery chain for a provided application, then present it as they would to an engineering manager.",
    "chapters": [
-    {"id": "5.1", "title": "Brief & Design", "content": "Read the brief, draw the target architecture, split the work into a backlog, set up the team repository and AWS environment from the phase projects", "format": "Project", "hours": 3},
-    {"id": "5.2", "title": "Build", "content": "Git workflow; CI with tests, quality gate and versioned artifacts; AWS infrastructure with Terraform; tool servers configured by Ansible; deployment to EKS with a rollout strategy", "format": "Project", "hours": 3},
-    {"id": "5.3", "title": "Monitor & Document", "content": "Metrics, logs, dashboards and alerts; README, architecture diagram, runbook", "format": "Project", "hours": 1.5},
-    {"id": "5.4", "title": "Demo & Review", "content": "Live demo of a change going from commit to production, then a rollback; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "5.1",
+     "title": "Brief & Design",
+     "content": "Read the brief, draw the target architecture, split the work into a backlog, set up the team repository and AWS environment from the phase projects",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Build",
+     "content": "Git workflow; CI with tests, quality gate and versioned artifacts; AWS infrastructure with Terraform; tool servers configured by Ansible; deployment to EKS with a rollout strategy",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "5.3",
+     "title": "Monitor & Document",
+     "content": "Metrics, logs, dashboards and alerts; README, architecture diagram, runbook",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "5.4",
+     "title": "Demo & Review",
+     "content": "Live demo of a change going from commit to production, then a rollback; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {
