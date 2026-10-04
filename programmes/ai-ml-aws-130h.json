@@ -1,0 +1,582 @@
+{
+ "slug": "ai-ml-aws-130h",
+ "file": "AI-ML-AWS-Cloud-130h.docx",
+ "title": "AI, Machine Learning & AWS Cloud",
+ "subtitle": "Professional Training Curriculum",
+ "audience_line": "IT Professionals entering the AI/ML & Cloud Engineering space",
+ "certifications": [
+  "AWS AI Practitioner (AIF-C01)",
+  "AWS Cloud Practitioner (CLF-C02)",
+  "AWS Data Engineer Associate (DEA-C01)"
+ ],
+ "overview": "This program teaches Machine Learning the way it should be taught: by learning paradigm, not by tool. Mathematics is not a separate phase — it is introduced at the exact moment it is needed, in the context of the algorithm it explains. Students see gradient descent for the first time while implementing linear regression, not in an abstract calculus lecture two weeks earlier. This approach is harder to deliver but produces engineers who genuinely understand what their models are doing.",
+ "facts": [
+  {
+   "label": "Total Duration",
+   "value": "130 hours (3h × 3 sessions/week)"
+  },
+  {
+   "label": "Audience",
+   "value": "IT professionals; basic Python required (variables, loops, functions). Phase 1 covers the data science stack."
+  },
+  {
+   "label": "ML Structure",
+   "value": "Organised by learning paradigm: Supervised → Unsupervised → Reinforcement Learning → Neural Networks. Math integrated contextually throughout."
+  },
+  {
+   "label": "AWS Structure",
+   "value": "Builds on ML foundations: AWS AI services → SageMaker → Data Engineering → Production GenAI. Every AWS service is anchored to something students already built locally."
+  },
+  {
+   "label": "Certifications",
+   "value": "AIF-C01 (AWS AI Practitioner) · CLF-C02 (AWS Cloud Practitioner) · DEA-C01 (AWS Data Engineer Associate)"
+  },
+  {
+   "label": "GitHub Portfolio",
+   "value": "6 projects: EDA notebook · supervised ML pipeline · unsupervised analysis · RL agent · deep learning app · production GenAI on AWS"
+  }
+ ],
+ "phases": [
+  {
+   "name": "Python & Data Science Stack",
+   "hours": 12,
+   "focus": "NumPy, Pandas, Matplotlib, Jupyter — tooling only",
+   "intro": "This phase is tooling only — no ML concepts, no maths. The goal is that every student can manipulate data, write clean Python, and use Jupyter fluently before the first algorithm appears in Phase 2. Short and sharp.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Python for Data Work",
+     "content": "List/dict comprehensions, lambda, *args/**kwargs, decorators, context managers, generators, type hints, dataclasses, virtual environments (venv/conda), requirements.txt",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Jupyter & Reproducibility",
+     "content": "JupyterLab anatomy, magic commands (%timeit, %%time, %matplotlib), Markdown cells, nbconvert for HTML/PDF export, Google Colab setup, reproducible environments",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "NumPy",
+     "content": "ndarray creation, dtypes, vectorised ops, broadcasting rules, indexing and fancy indexing, linear algebra module (dot, matmul, linalg.norm, linalg.eig), random module, performance benchmarks vs pure Python",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.4",
+     "title": "Pandas",
+     "content": "Series and DataFrame anatomy, read_csv/read_json/read_sql, loc/iloc, boolean filtering, groupby + agg, merge/join, pivot_table, missing value strategies, method chaining style",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.5",
+     "title": "Data Visualisation",
+     "content": "Matplotlib figure/axes model, subplots, styles; Seaborn for statistical plots (distplot, boxplot, heatmap, pairplot); Plotly for interactive charts; chart selection framework",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Exploratory Data Analysis — Real Dataset",
+    "brief": "Students select a public dataset (Kaggle, UCI ML, or instructor-provided real-world data) and produce a complete EDA notebook. Required: data cleaning with documented decisions, statistical profiling, minimum 8 meaningful visualisations, correlation analysis, outlier investigation, and a written 'Key Findings' section answering a defined business question. No model — pure data understanding. This notebook becomes the foundation for Projects 2 and 3.",
+    "stack": "Python, Jupyter, Pandas, NumPy, Matplotlib, Seaborn, Plotly",
+    "deliverable": "eda-project/ — clean .ipynb, exported HTML, README with dataset source, business question, and 5 key findings"
+   },
+   "note": "Python language fundamentals (variables, loops, functions, OOP basics) are assumed known. Phase 1 starts at the data science stack."
+  },
+  {
+   "name": "Supervised Learning",
+   "hours": 24,
+   "focus": "Regression, classification, trees, ensembles + linear algebra, calculus, stats",
+   "intro": "The largest ML phase — and rightly so, since supervised learning covers the majority of real-world ML problems. Mathematics is introduced at the moment it is needed: vectors and matrices when we discuss linear regression weights, calculus and gradient descent when we optimise, probability when we interpret logistic regression outputs, information theory when we build decision trees. Students implement every foundational algorithm from scratch in NumPy before using scikit-learn.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "What is Supervised Learning?",
+     "content": "Problem framing taxonomy (regression vs classification), the generalisation goal, training/validation/test split, data leakage, baseline models (mean predictor, majority class), scikit-learn API: fit/predict/transform, Pipeline object",
+     "format": "Lecture + Demo",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Linear Regression — Math First",
+     "content": "MATH: vectors, dot product, matrix multiplication, transpose — introduced via the weight vector w and feature matrix X. Normal equation derivation (X^T X)^{-1} X^T y. Geometric interpretation (projection onto column space). NumPy implementation from scratch, then sklearn LinearRegression.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Gradient Descent & Regularisation",
+     "content": "MATH: derivatives, partial derivatives, chain rule, gradient vector, cost function surface. Gradient descent derivation and implementation from scratch (batch, mini-batch, stochastic). Learning rate effect. L1 (Lasso) and L2 (Ridge) regularisation — Lagrangian interpretation. ElasticNet. Bias-variance trade-off formalised.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.4",
+     "title": "Logistic Regression & Classification Metrics",
+     "content": "MATH: sigmoid function, log-likelihood, MLE derivation for logistic regression, cross-entropy loss. Multi-class via softmax and one-vs-rest. Confusion matrix, precision, recall, F1, ROC curve, AUC — derived from first principles, not just sklearn calls. Class imbalance strategies (class_weight, SMOTE).",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.5",
+     "title": "Decision Trees",
+     "content": "MATH: entropy H(S) = -Σ p log p, information gain, Gini impurity — derived and computed by hand first. CART algorithm. Overfitting and pruning (max_depth, min_samples_leaf, cost-complexity pruning). Visualising decision boundaries. Regression trees.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.6",
+     "title": "Ensemble Methods",
+     "content": "Bagging and the bias-variance effect of averaging. Random Forests — feature subsampling, out-of-bag error, feature importance via mean decrease impurity. Boosting: AdaBoost (weight update derivation), Gradient Boosting (residual fitting), XGBoost and LightGBM (practical tuning). When to use which.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.7",
+     "title": "Support Vector Machines",
+     "content": "MATH: hyperplane equation, margin maximisation as a constrained optimisation (Lagrange multipliers — conceptual, not full derivation), support vectors, dual problem, kernel trick (RBF, polynomial). SVR for regression. Practical: when SVMs beat trees and when they don't.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.8",
+     "title": "Model Evaluation, Selection & Hyperparameter Tuning",
+     "content": "Cross-validation strategies (k-fold, stratified, time-series split), learning curves, validation curves. GridSearchCV vs RandomizedSearchCV vs Optuna (Bayesian optimisation). Evaluation pitfalls: data leakage in pipelines, test set contamination, multiple comparison problem.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.9",
+     "title": "Feature Engineering & ML Pipelines",
+     "content": "Encoding strategies (ordinal, one-hot, target encoding, embeddings for high cardinality). Scaling (StandardScaler, MinMax, RobustScaler — and why it matters for each algorithm). Imputation. Feature creation. sklearn ColumnTransformer + Pipeline. MLflow for experiment tracking and model registry.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": "Linear algebra (vectors, matrices, dot product, transpose, inverse) · Calculus (derivatives, partial derivatives, gradient, chain rule) · Statistics (MLE, cross-entropy, bias-variance) · Information theory (entropy, information gain)",
+   "project": {
+    "title": "End-to-End Supervised ML Pipeline",
+    "brief": "Students extend the Phase 1 dataset into a full supervised learning project. Requirements: minimum 3 algorithms compared (must include at least one linear model and one ensemble), feature engineering with written justification for every decision, proper cross-validation (no test set touched until final evaluation), hyperparameter tuning with Optuna logged in MLflow, final model evaluation with full metric suite appropriate to the problem (not just accuracy), serialised model artifact, and a one-page model card documenting assumptions, limitations, and intended use.",
+    "stack": "Python, scikit-learn, XGBoost or LightGBM, Optuna, MLflow, Pandas, Jupyter",
+    "deliverable": "supervised-ml/ — notebooks/, src/pipeline.py, mlruns/, model.pkl + model_card.md, README with comparison table"
+   }
+  },
+  {
+   "name": "Unsupervised Learning",
+   "hours": 12,
+   "focus": "Clustering, dimensionality reduction, anomaly detection + probability, info theory",
+   "intro": "Unsupervised learning is where probability and information theory enter properly. Students already know entropy from Phase 2's decision trees — now it generalises. Dimensionality reduction connects back to the linear algebra (eigenvalues) introduced in Phase 2 and extends it. Every algorithm is accompanied by its mathematical derivation and its real-world use case.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "What is Unsupervised Learning?",
+     "content": "Problem taxonomy: clustering, density estimation, dimensionality reduction, generative modelling, anomaly detection. When you have no labels. Evaluation challenge — introducing internal (silhouette, Davies-Bouldin) vs external (ARI, NMI) metrics.",
+     "format": "Lecture",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "K-Means & Gaussian Mixture Models",
+     "content": "MATH: K-Means objective function (sum of squared distances), Lloyd's algorithm convergence proof (it always converges, never to global optimum). Elbow method, silhouette score. GMMs: MATH: multivariate Gaussian distribution, covariance matrix, EM algorithm derivation (E-step = expectation of log-likelihood, M-step = MLE update). Soft vs hard assignment. When GMM beats K-Means.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Hierarchical Clustering & DBSCAN",
+     "content": "Agglomerative clustering, linkage criteria (single, complete, average, Ward — Ward's criterion is a variance minimisation, derive it). Dendrogram reading and cutting. DBSCAN: epsilon-neighbourhood, core/border/noise points, no need to specify k, handles arbitrary shapes. Parameter selection (k-distance graph).",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Dimensionality Reduction — PCA",
+     "content": "MATH: variance maximisation objective, covariance matrix Σ = (1/n)X^T X, eigendecomposition — connects directly to Phase 2 linear algebra. Principal components as eigenvectors, explained variance ratio, scree plot. PCA for visualisation, noise reduction, and as preprocessing. Kernel PCA intro.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.5",
+     "title": "Manifold Learning & Anomaly Detection",
+     "content": "t-SNE: intuition (preserving local structure), perplexity parameter, why you cannot use t-SNE distances for downstream tasks. UMAP: faster, preserves more global structure. Anomaly detection: Isolation Forest (path length argument), One-Class SVM, Local Outlier Factor — when to use each.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.6",
+     "title": "Association Rules & Recommender Systems Intro",
+     "content": "Apriori algorithm, support/confidence/lift — derived from probability rules (P(A∩B), P(B|A)). Market basket analysis. Collaborative filtering (user-user, item-item via cosine similarity), matrix factorisation intro (SVD decomposition — reconnects to Phase 2 linear algebra).",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": "Probability (multivariate Gaussian, EM algorithm, Bayes) · Linear algebra (eigendecomposition, covariance matrix, SVD) · Information theory (entropy, KL divergence in GMMs)",
+   "project": {
+    "title": "Unsupervised Analysis & Anomaly Detection",
+    "brief": "Students apply unsupervised techniques to either: (A) a customer segmentation problem — K-Means + GMM comparison, PCA visualisation, segment profiling and business interpretation, or (B) an anomaly detection problem — Isolation Forest + LOF comparison on a time-series or transactional dataset, precision/recall evaluation against labelled anomalies if available, visualisation of detected anomalies. Includes a t-SNE / UMAP 2D visualisation of the final clusters or anomaly scores.",
+    "stack": "Python, scikit-learn, NumPy, Matplotlib, Seaborn, Plotly",
+    "deliverable": "unsupervised-project/ — notebook with full analysis, visualisations, written cluster/anomaly interpretation, README"
+   }
+  },
+  {
+   "name": "Reinforcement Learning",
+   "hours": 9,
+   "focus": "MDP, Q-learning, policy gradients, actor-critic + Bellman equations",
+   "intro": "Reinforcement Learning gets its own phase because it is a fundamentally different learning paradigm — no dataset, no labels, only an agent interacting with an environment and receiving rewards. The mathematics here is different from Phases 2 and 3: dynamic programming, the Bellman equation, and policy optimisation. Students implement Q-learning from scratch and train a basic policy gradient agent.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "RL Fundamentals & the MDP Framework",
+     "content": "Agent, environment, state, action, reward, policy, value function. Markov Decision Process (MDP) formal definition: (S, A, P, R, γ). Markov property. Episodic vs continuing tasks. Exploration vs exploitation dilemma. OpenAI Gymnasium setup and environment anatomy (reset, step, render).",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Dynamic Programming & the Bellman Equation",
+     "content": "MATH: Bellman expectation equation for V^π and Q^π — derived from the recursive definition of return. Bellman optimality equation. Policy evaluation (iterative), policy improvement, policy iteration, value iteration — implemented from scratch on a GridWorld environment. Convergence guarantees.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.3",
+     "title": "Model-Free Methods: Q-Learning & SARSA",
+     "content": "MATH: TD learning, TD error δ_t = r + γV(s') - V(s). Q-learning update rule derivation (off-policy, greedy target). SARSA (on-policy). ε-greedy exploration. Tabular Q-learning implemented from scratch on FrozenLake and Taxi environments. Q-table visualisation. Limitations of tabular methods.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.4",
+     "title": "Deep Q-Networks (DQN)",
+     "content": "Replace Q-table with neural network. Experience replay buffer — why it breaks correlations. Target network — why it stabilises training. DQN algorithm (Mnih et al. 2015) implemented with PyTorch/Keras on CartPole. Double DQN improvement. Training curves and evaluation.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.5",
+     "title": "Policy Gradient Methods & Actor-Critic",
+     "content": "MATH: policy gradient theorem derivation — ∇J(θ) = E[∇log π(a|s) · Q(s,a)]. REINFORCE algorithm. Variance problem and baselines. Actor-Critic: actor (policy network) + critic (value network). Advantage function A(s,a) = Q(s,a) - V(s). Proximal Policy Optimisation (PPO) — conceptual overview, the clipped objective. Where RL is used in production (RLHF in LLMs, robotics, recommendation systems).",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": "Dynamic programming · Bellman equations · Expected return and discounted reward · Policy gradient theorem · Markov chains and transition probabilities",
+   "project": {
+    "title": "RL Agent — Game Environment",
+    "brief": "Students train a DQN agent to solve a Gymnasium environment of their choice (CartPole-v1 for fundamentals, LunarLander-v2 for a challenge). Required: tabular Q-learning baseline first, then DQN with experience replay and target network, training curve showing convergence, evaluation over 100 episodes with mean reward and standard deviation, hyperparameter sensitivity analysis (at least 3 parameters varied), and a written analysis of failure modes observed during training.",
+    "stack": "Python, Gymnasium (OpenAI), PyTorch or TensorFlow/Keras, NumPy, Matplotlib",
+    "deliverable": "rl-agent/ — tabular_qlearning.ipynb, dqn_agent.ipynb, trained model weights, training curves, README with results table"
+   }
+  },
+  {
+   "name": "Neural Networks & Deep Learning",
+   "hours": 21,
+   "focus": "ANNs from scratch, CNNs, RNNs, Transformers, LLMs + backprop math",
+   "intro": "Neural networks are the synthesis phase. Students have the maths (from Phases 2 and 3), the optimisation intuition (from Phase 2 gradient descent), and the policy network concept (from Phase 4 actor-critic). Now we go deep: implement backpropagation in NumPy, then build CNNs, RNNs, and Transformers in Keras. NLP and LLMs close this phase as the bridge into AWS Bedrock.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "The Perceptron & MLP — NumPy from Scratch",
+     "content": "MATH: neuron as a linear classifier, step function, perceptron learning rule. MLP: forward pass as matrix multiplications, activation functions (sigmoid, tanh, ReLU, Leaky ReLU, GELU — derivatives of each). Implement a 2-layer MLP in pure NumPy. No frameworks. This chapter is mandatory — students who skip it treat Keras as a black box forever.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Backpropagation — Derived and Implemented",
+     "content": "MATH: computational graph, chain rule applied layer by layer, gradient flow, vanishing/exploding gradient problem (formal analysis). Implement backprop in NumPy for the MLP from 5.1. Verify gradients numerically (gradient checking). Weight initialisation: Xavier/Glorot and He initialisation — derived from variance preservation argument.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.3",
+     "title": "TensorFlow / Keras & Training Deep Networks",
+     "content": "Keras Sequential and Functional API. Optimisers: SGD with momentum, Adam (derivation: first and second moment estimates), RMSprop. Callbacks: EarlyStopping, ModelCheckpoint, ReduceLROnPlateau, TensorBoard. Batch normalisation (running mean/var, γ and β parameters). Dropout (regularisation effect, inverted dropout). Learning rate schedules.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.4",
+     "title": "Convolutional Neural Networks (CNN)",
+     "content": "MATH: convolution operation as cross-correlation, receptive field, feature map dimensions formula: ((W - F + 2P) / S) + 1. Pooling. CNN architectures: LeNet → VGG → ResNet (residual connections — why they solve vanishing gradients). Transfer learning: freeze base, replace head, fine-tune. Practical: image classification on a real dataset with EfficientNetB0.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.5",
+     "title": "Recurrent Neural Networks & Sequence Models",
+     "content": "MATH: unrolled RNN, BPTT (backpropagation through time), vanishing gradient in sequences (formal analysis). LSTM gating mechanism — forget/input/output gates derived. GRU as a simplified variant. Sequence-to-sequence. Time series forecasting with LSTM. Attention mechanism — motivation and scaled dot-product attention derivation: Attention(Q,K,V) = softmax(QK^T / √d_k) V.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.6",
+     "title": "The Transformer Architecture",
+     "content": "Multi-head attention, positional encoding (sinusoidal — why it works), encoder and decoder blocks, layer normalisation. BERT (bidirectional, masked LM pretraining, [CLS] token, fine-tuning). GPT (causal, autoregressive). HuggingFace Transformers: tokenisation (WordPiece, BPE), fine-tuning BERT for classification on a real NLP task.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.7",
+     "title": "LLMs, RAG & Prompt Engineering",
+     "content": "LLM training: pretraining → instruction tuning → RLHF (connects to Phase 4). Hallucination problem. Context window. Prompt engineering: zero-shot, few-shot, chain-of-thought, ReAct. RAG: vector databases (FAISS), embedding models, chunking, retrieval quality metrics. Build a local RAG pipeline with FAISS + an open LLM (Mistral 7B via Ollama). Bridge to AWS Bedrock in Phase 6.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": "Backpropagation (chain rule, computational graphs) · Activation function derivatives · Convolution mathematics · BPTT and LSTM gate equations · Scaled dot-product attention · Positional encoding",
+   "project": {
+    "title": "Deep Learning Application (Choice of Track)",
+    "brief": "Students choose one of three tracks based on their interests: (A) Computer Vision — train an EfficientNetB0 classifier on a real image dataset, fine-tune, evaluate with confusion matrix and class activation maps (Grad-CAM), build a Gradio demo. (B) Time Series — LSTM forecasting model vs ARIMA baseline, confidence intervals, residual analysis. (C) NLP — fine-tune DistilBERT on a text classification task, compare against TF-IDF + logistic regression baseline, full classification report. All tracks: ONNX export, MLflow tracking, model card.",
+    "stack": "TensorFlow/Keras, HuggingFace Transformers, FAISS (for track C RAG extension), Gradio or Streamlit, MLflow, ONNX",
+    "deliverable": "deep-learning-project/ — training notebook, saved model (ONNX + Keras/PT), demo app, evaluation report, README"
+   }
+  },
+  {
+   "name": "AWS Cloud Foundations + AI Practitioner",
+   "hours": 21,
+   "focus": "Core AWS, SageMaker, Bedrock, AIF-C01 + CLF-C02 prep",
+   "intro": "Students now move everything they built locally to AWS. The transition framing matters: SageMaker is managed Jupyter + managed training + managed endpoints. Bedrock is managed LLMs. The RAG pipeline from Phase 5 becomes Bedrock Knowledge Bases. The MLflow tracking from Phases 2-5 becomes SageMaker Experiments. Say this explicitly every time — these bridges are what make 21h of AWS content actually stick.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "AWS Foundations for ML Practitioners",
+     "content": "Cloud concepts and the shared responsibility model. IAM for ML workloads: execution roles, resource-based policies, least privilege for SageMaker and Bedrock. VPC fundamentals: subnets, security groups, VPC endpoints for SageMaker and Bedrock (keep data off public internet). S3 for ML datasets: storage classes, versioning, lifecycle policies, presigned URLs.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "6.2",
+     "title": "AWS Core Compute & Storage for ML",
+     "content": "EC2 GPU instances (P3/P4/G4/G5 families — when each makes sense). EFS and FSx for Lustre for shared training data. Lambda for inference triggers and lightweight preprocessing. Auto Scaling for inference endpoints. ECR for custom Docker containers. Cost comparison: on-demand vs Spot for training jobs.",
+     "format": "Lecture + Demo",
+     "hours": 1.5
+    },
+    {
+     "id": "6.3",
+     "title": "AWS AI Services (Managed, No-Model-Required)",
+     "content": "Rekognition (image/video analysis), Textract (document extraction), Comprehend (NLP: sentiment, entities, topics), Translate, Polly, Transcribe, Forecast, Personalize, Kendra. Decision framework: when to use a managed AI service vs SageMaker vs Bedrock vs build your own. Real cost comparisons.",
+     "format": "Lecture + Demo",
+     "hours": 1.5
+    },
+    {
+     "id": "6.4",
+     "title": "Amazon SageMaker — Training & Experiments",
+     "content": "SageMaker Studio. Training jobs: built-in algorithms, script mode (Bring Your Own Script), custom containers. Automatic Model Tuning (= managed Optuna, connects to Phase 2). SageMaker Experiments for tracking (= managed MLflow). SageMaker Debugger. Distributed training with SageMaker (data parallelism, model parallelism).",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "6.5",
+     "title": "Amazon SageMaker — Deployment & Monitoring",
+     "content": "Real-time endpoints, serverless inference, async inference, batch transform. Multi-variant endpoints for A/B testing. SageMaker Clarify: bias detection and explainability (SHAP values — connects to Phase 2 feature importance). SageMaker Model Monitor: data drift, model quality, bias drift. Model registry and approval workflow.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "6.6",
+     "title": "Amazon Bedrock",
+     "content": "Foundation model catalogue (Anthropic Claude, Meta Llama, Mistral, Amazon Nova, Stability AI). Inference API. Bedrock Knowledge Bases (= managed RAG from Phase 5 — FAISS becomes OpenSearch Serverless). Bedrock Agents (tool use, Lambda functions as tools). Bedrock Guardrails (content filtering, PII redaction, grounding). Model evaluation in Bedrock.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "6.7",
+     "title": "Responsible AI & Governance on AWS",
+     "content": "SageMaker Clarify in production. AWS AI Service Cards. Model cards standard. Bias and fairness frameworks. AWS AI governance policy. Generative AI security and compliance considerations. Bedrock Guardrails deep dive.",
+     "format": "Lecture + Demo",
+     "hours": 1.5
+    },
+    {
+     "id": "6.8",
+     "title": "AIF-C01 Certification Prep",
+     "content": "Exam domain breakdown: AI/ML fundamentals (20%), generative AI (24%), responsible AI (14%), security (14%), AWS AI services (28%). Practice questions by domain. Mock exam. Common traps. Exam strategy and time management.",
+     "format": "Review + Practice",
+     "hours": 3
+    },
+    {
+     "id": "6.9",
+     "title": "CLF-C02 Delta Prep",
+     "content": "Topics not fully covered in 6.1-6.7: billing and pricing models, support plan tiers, global infrastructure detail, Well-Architected Framework pillars, migration strategies. Practice questions. Both exams can realistically be attempted in the same week.",
+     "format": "Review + Practice",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "AWS Data Engineering",
+   "hours": 18,
+   "focus": "Glue, Redshift, Kinesis, Athena, Step Functions, DEA-C01 prep",
+   "intro": "Data engineering is the infrastructure that feeds every ML model at scale. Students have built models locally on clean CSVs — now they build the pipelines that produce those clean CSVs at terabyte scale. This phase maps to the AWS Academy Data Engineering curriculum and targets DEA-C01.",
+   "chapters": [
+    {
+     "id": "7.1",
+     "title": "Data Engineering Fundamentals",
+     "content": "Data pipeline anatomy. Batch vs streaming trade-offs. ETL vs ELT — when each makes sense. Data lake vs data warehouse vs lakehouse (Delta Lake, Apache Iceberg). The modern data stack. Data quality dimensions (the 5 Vs of data: volume, velocity, variety, veracity, value).",
+     "format": "Lecture",
+     "hours": 1.5
+    },
+    {
+     "id": "7.2",
+     "title": "Data Ingestion on AWS",
+     "content": "AWS Glue: crawlers, Data Catalog, ETL jobs (Spark under the hood), Glue Studio visual editor, job bookmarks for incremental loads. AWS DMS for database migration. Kinesis Data Streams vs Kinesis Firehose (delivery stream to S3/Redshift/OpenSearch). MSK (managed Kafka). AppFlow for SaaS data.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "7.3",
+     "title": "Storage Layer & Data Organisation",
+     "content": "S3 as data lake: partitioning strategy (year/month/day), columnar file formats (Parquet vs ORC vs Avro vs JSON — query performance and cost implications). Glue Data Catalog as the metastore. AWS Lake Formation: fine-grained access control at column/row level. Apache Iceberg on S3: ACID transactions, time travel, schema evolution.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "7.4",
+     "title": "Data Processing & Transformation",
+     "content": "Amazon Athena: serverless SQL on S3, partition projection, cost optimisation (columnar formats, partition pruning). Amazon EMR: Spark on AWS, cluster types (instance fleet vs instance group), EMR Serverless. AWS Glue Spark jobs vs Athena for different workload sizes. Apache Hudi for change data capture.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "7.5",
+     "title": "Data Warehousing with Amazon Redshift",
+     "content": "Redshift MPP architecture, distribution styles (KEY, ALL, EVEN, AUTO), sort keys, zone maps. COPY command from S3. Redshift Spectrum for querying S3 directly. Redshift Serverless. Materialised views. WLM (workload management). Redshift ML (CREATE MODEL calls SageMaker). Performance tuning: EXPLAIN, VACUUM, ANALYZE.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "7.6",
+     "title": "Real-Time Analytics & Visualisation",
+     "content": "Kinesis Data Analytics (Flink on AWS) for stream processing. Amazon OpenSearch Service for search and log analytics. Amazon QuickSight: datasets, SPICE engine, visual types, ML Insights (anomaly detection, forecasting). Connecting QuickSight to Athena, Redshift, S3.",
+     "format": "Lecture + Demo",
+     "hours": 1.5
+    },
+    {
+     "id": "7.7",
+     "title": "Pipeline Orchestration & Data Quality",
+     "content": "AWS Step Functions for ML pipeline orchestration (state machines, parallel branches, error handling). Amazon MWAA (managed Apache Airflow). EventBridge for scheduling. AWS Glue Data Quality (DQ rules, DQ scores). Deequ for data unit testing. Monitoring with CloudWatch.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "7.8",
+     "title": "DEA-C01 Certification Prep",
+     "content": "Exam domain review: data ingestion (22%), transformation (20%), storage (22%), operations and security (18%), data analysis (18%). Scenario-based questions — the exam tests service selection, not just recall. Mock exam. Common traps (Glue vs EMR vs Athena decision matrix). Q&A.",
+     "format": "Review + Practice",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "AWS Data Pipeline for ML",
+    "brief": "Students build a full AWS data pipeline that feeds a machine learning model trained in Phases 2-5. Architecture: raw data lands in S3 raw zone → Glue crawler catalogs → Glue ETL job cleans, transforms, writes Parquet to processed zone → Athena for ad-hoc queries → Redshift Serverless for BI workloads → QuickSight dashboard → Step Functions orchestrates the full pipeline on a daily schedule → output triggers a SageMaker batch transform job on the trained Phase 2 or 3 model. CloudWatch alarms on pipeline failure.",
+    "stack": "S3, AWS Glue, Athena, Redshift Serverless, Step Functions, QuickSight, CloudWatch, IAM, SageMaker Batch Transform",
+    "deliverable": "aws-data-pipeline/ — Glue ETL scripts, Step Functions ASL definition, CloudFormation template, QuickSight screenshots, architecture diagram, README with cost estimate and data flow description"
+   }
+  },
+  {
+   "name": "AWS Generative AI & MLOps",
+   "hours": 13,
+   "focus": "Bedrock, RAG agents, SageMaker pipelines, production deployment",
+   "intro": "The final phase closes the loop: students who built a local RAG pipeline in Phase 5 now productionise it on Bedrock. The MLflow tracking from Phase 2 becomes SageMaker Pipelines. The Gradio demo from Phase 5 becomes a production endpoint with monitoring, CI/CD, and cost controls. This is the full ML lifecycle.",
+   "chapters": [
+    {
+     "id": "8.1",
+     "title": "GenAI Application Patterns on AWS",
+     "content": "RAG on AWS: Bedrock Knowledge Bases + OpenSearch Serverless — connects directly to Phase 5 FAISS implementation. Agentic patterns: Bedrock Agents + Lambda tools (web search, database lookup, email). Prompt management with Bedrock Prompt Management. Multi-model routing and fallback patterns. Cost optimisation for inference.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "8.2",
+     "title": "Fine-Tuning & Model Customisation on AWS",
+     "content": "SageMaker JumpStart fine-tuning. Bedrock custom model import. Continued pre-training vs instruction fine-tuning. LoRA adapters via SageMaker (connects to HuggingFace PEFT from Phase 5). Cost vs performance analysis: fine-tuning when RAG is not enough.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "8.3",
+     "title": "MLOps: Production ML Lifecycle",
+     "content": "SageMaker Pipelines: full ML pipeline as code (preprocessing → training → evaluation → registration → deployment). SageMaker Projects for MLOps templates with CodePipeline. A/B testing with multi-variant endpoints. Canary deployments. Shadow mode (run new model in parallel, compare outputs before cutover).",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "8.4",
+     "title": "Monitoring, Governance & Cost Control",
+     "content": "SageMaker Model Monitor in production: data quality, model quality, bias drift, feature attribution drift — connecting back to Phase 2 metrics. Model cards on AWS. Instance right-sizing. SageMaker Savings Plans. Bedrock cost monitoring (token usage dashboards in CloudWatch).",
+     "format": "Lecture + Demo",
+     "hours": 1.5
+    },
+    {
+     "id": "8.5",
+     "title": "Capstone Review & Portfolio Polish",
+     "content": "Full program walkthrough across all 6 projects. GitHub portfolio structuring: README best practices, architecture diagrams, demo GIFs, metrics tables. How to present ML projects in technical interviews. Career pathways: MLS-C01 (ML Specialty), CKA, Terraform Associate, continuing education. Final Q&A.",
+     "format": "Workshop",
+     "hours": 4
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Production GenAI Application on AWS — Capstone",
+    "brief": "Students build a production-ready GenAI application on AWS using everything from the program. Required components: (1) Bedrock Knowledge Bases RAG system over a domain of their choice (minimum 100 documents), directly extending the Phase 5 local RAG project to managed AWS. (2) Bedrock Agent with at least 2 Lambda tool integrations. (3) Bedrock Guardrails for content filtering, PII redaction, and grounding checks. (4) CloudWatch dashboard monitoring latency, token usage, error rate, and retrieval relevance score. (5) Full CloudFormation or CDK stack for one-command deployment. Optional: fine-tune a Bedrock foundation model on domain-specific data.",
+    "stack": "Amazon Bedrock, Bedrock Knowledge Bases, Bedrock Agents, Lambda, OpenSearch Serverless, CloudFormation or CDK, CloudWatch, S3, IAM",
+    "deliverable": "genai-production-app/ — CDK/CFN stacks, Lambda functions, evaluation notebooks, architecture diagram, README with cost analysis. This is the portfolio flagship."
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "Six projects demonstrating the complete arc from raw data exploration to production AI on AWS.",
+  "rows": [
+   {
+    "name": "EDA Notebook",
+    "shows": "Data fluency, visualisation, analytical storytelling, business framing",
+    "phase": "Phase 1",
+    "build": "~3h"
+   },
+   {
+    "name": "Supervised ML Pipeline",
+    "shows": "Feature engineering, model comparison, Optuna tuning, MLflow, model card",
+    "phase": "Phase 2",
+    "build": "~6h"
+   },
+   {
+    "name": "Unsupervised Analysis",
+    "shows": "Clustering, PCA, anomaly detection, probabilistic modelling, business interpretation",
+    "phase": "Phase 3",
+    "build": "~4h"
+   },
+   {
+    "name": "RL Agent",
+    "shows": "Tabular Q-learning, DQN, training curves, hyperparameter sensitivity, failure analysis",
+    "phase": "Phase 4",
+    "build": "~5h"
+   },
+   {
+    "name": "Deep Learning App",
+    "shows": "CNNs / LSTMs / Transformers, transfer learning, ONNX, Gradio demo, model card",
+    "phase": "Phase 5",
+    "build": "~7h"
+   },
+   {
+    "name": "Production GenAI on AWS",
+    "shows": "Bedrock RAG + Agents + Guardrails + monitoring + IaC — the portfolio flagship",
+    "phase": "Phase 8",
+    "build": "~8h"
+   }
+  ]
+ },
+ "notes": [
+  "The NumPy-from-scratch neural network (chapter 5.1) and the backprop derivation (5.2) together cost 6h. Every hour spent there saves three hours of confused hyperparameter tweaking later.",
+  "Phase 4 (RL) is the most isolated phase — RL skills don't directly feed Phase 5. If time is critically short, RL is the phase to trim (cut to 6h by dropping 4.5 policy gradients). But do not cut it entirely — the Bellman equation and the exploration/exploitation framing produce significantly better intuition about LLM training (RLHF) in Phase 5.7.",
+  "AWS costs for Phases 6-8: budget $50-80 per student. SageMaker training jobs, Bedrock inference (especially Knowledge Bases + Agents), and OpenSearch Serverless are the main cost drivers. Set hard budget alerts in AWS Budgets. Shut down everything after every lab session — a forgotten SageMaker endpoint costs real money.",
+  "The Phase 8 capstone review (4h) is not optional padding. The GitHub portfolio is the product. A project with no README, no architecture diagram, and no results table is worth zero in a job interview regardless of how good the code is."
+ ]
+}

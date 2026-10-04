@@ -1,0 +1,51 @@
+{
+ "slug": "example-programme",
+ "file": "Example-Programme-40h.docx",
+ "title": "Programme title",
+ "subtitle": "Professional Training Curriculum",
+ "audience_line": "Who it is for, in one line",
+ "certifications": [
+  "Certification it prepares for (optional, remove the line if none)"
+ ],
+ "overview": "One paragraph: what the programme teaches and how.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Prerequisites and profile"
+  }
+ ],
+ "phases": [
+  {
+   "name": "Phase name",
+   "hours": 12,
+   "focus": "One line for the At a glance table",
+   "intro": "Short paragraph introducing the phase.",
+   "note": "Optional prerequisite line (or remove)",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Chapter title",
+     "content": "What is covered.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Chapter with maths",
+     "content": "MATH: a leading MATH: becomes a gold Maths label. Then the content.",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": "Optional: maths covered in the phase (or null)",
+   "project": {
+    "title": "Optional project (or null)",
+    "brief": "What participants build.",
+    "stack": "Tools",
+    "deliverable": "What they hand in"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,4 +1,4 @@
-# START HERE (handoff, updated 2026-10-01, evening)
+# START HERE (handoff, updated 2026-10-04)
 
 ## State
 - New site lives on branch `redesign` → PR mohamedazizbenhaha/mohamedazizbenhaha.github.io#1.
@@ -6,6 +6,11 @@
   **2026-10-02: the user moved to a new Netlify account** (same site name, repo linked). The preview returned 404 until a fresh push, then 401: Deploy Preview protection is on in the new account; the user must set it to public (Site configuration → Visitor access) so others can give feedback. If it is still 401, that is the cause, not the code.
   Every push to `redesign` rebuilds it in ~1 min. Production (`main` → mohamedazizbenhaha.netlify.app) is untouched until merge; merging needs the user's word.
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
+
+## Now (2026-10-04): fixing the content, trainings first
+- **The training-programme Word template is confirmed by the user** (black Nabeul-tile cover, white + gold pages). Use it for every programme document; do not redesign it unless asked. How it works: `programmes/README.md`. New programme = copy `programmes/_example.json`, fill, `python scripts/build_programmes.py <slug>`, set `doc:` in `PROGS` (`main.js`).
+- The user edits the .docx in Word and says so → run `scripts/sync_programmes.py`, fold look changes into the constants, rebuild with `--force`, render page 1 through Word (export to PDF) to check.
+- Next step agreed with the user: **discuss the trainings content** (start with the 130 h programme's issues listed under Round notes below), then the other programmes' documents. Discuss before applying (user's rule).
 
 ## Workflow each round
 1. Edit. Find code with Grep, read by line range.
@@ -50,6 +55,9 @@ Use only where they earn their tokens:
 - Animations back as before the guidelines pass (caret blink, network canvas, orbit, rotator run even with reduce-motion on; the user's phone has it on and wants motion). Only reveals, name intro, floating badges and two project art loops stop under reduce-motion, as originally.
 - "Popular programs" (FR "Programmes phares") label in the 1,000+ hours box.
 - Training rows are rendered from `PROGS` in `main.js` (like `EXP`). Click a row → `#progDlg` modal: hours, description, facts, phases (if any), tags, **Download (Word)** if `doc` is set, **Customise** = mailto in a new tab with subject + template body. Only the 130 h AI/ML/AWS programme has a Word file (`res/programmes/AI-ML-AWS-Cloud-130h.docx`, the user's test file, now public). Others say "Detailed syllabus on request" until the user sends their .docx.
+- **Programme Word files are generated** (white + gold template, 2026-10-04): data in `programmes/<slug>.json`, look in `STYLES` of `scripts/build_programmes.py`, output `res/programmes/<file>`. Every block uses a named Word style ("Prog …", Heading 1/2, "Prog Table"). Page 1 is a black cover (user picked "C-wall" of 7 options, then: only 3 tile rows at the top, fading out): editable by hand in Word: black page = locked image in the first-page header; tile band (TILES, COVER_ROWS, TILE_COLS; PyMuPDF) = unlocked picture "Cover tiles" behind the text; author block (logo + name + site, never a footer-style line) = floating table at AUTHOR_Y. Sync reports moved/resized pictures and floating tables in cm; copy them into those constants. Pages 2+: logo in the footer, not the header (user's edit). Cover shows one big gold hours figure (sum of phases, or "hours" in the JSON); never sessions/week or hours/session (user: irrelevant). Subtitle without "Path B (v2)".
+  The user edits the .docx in Word; then `python scripts/sync_programmes.py` writes text edits back to the JSON and prints style / hand-formatting / header changes (compared against a Word-resaved rebuild, so only real edits show; needs Word). Fold look changes into `STYLES`, then `build_programmes.py --force`. The build refuses to overwrite a docx edited since its last build (`programmes/.built.json`).
+  Content issues spotted in the 130 h file, to discuss: phase 7 chapters = 19.5 h vs 18 h; two "Project 5" in the original (now auto-numbered → 7, portfolio lists 6); Key facts repeat page 1; "Notes" are trainer-facing (AWS costs, where to cut).
 - Motto is a full-width photo band (`res/desk.jpg` = the original site's desk photo), then the footer: logo · © … All rights reserved · Legal notice / Privacy / Terms of use (one `#legalDlg`, EN+FR).
 - All sections share `--wrap: 1280px`; the Experience panel is a full-height card.
 - **QR now points at the deploy-preview .vcf** because production still runs the old site (404). **Before/at merge to main: regenerate `res/contact-qr.svg` with the production URL** (segno, error='m', scale=10, border=3, dark #07070a, light #f3efe6).
@@ -86,7 +94,7 @@ Use only where they earn their tokens:
 - What "replace" meant at the end of the user's message on 2026-10-01 (it was cut off).
 - Guidelines items not done (low value or need the user): logo-strip images have no width/height attributes (CSS fixes their height, no visible shift); the marquee has no pause control (it stops under reduced motion).
 - Merge `redesign` → `main` (production) needs the user's word. Then switch the QR to the production URL (see Round 4).
-- Word files for the other training programmes.
+- Word files for the other training programmes: build them with the confirmed template (`programmes/README.md`) once the user gives their content.
 - Phone "Desktop site" mode renders ~980px; the nav collapses below 1020px. If the user wants the full nav there, lower that breakpoint.
 - Main CV PDF says "500+ heures"; the site says 1,000+. The user should update the PDF.
 - The user must revoke the old Gmail app password (it is in the public repo history).
