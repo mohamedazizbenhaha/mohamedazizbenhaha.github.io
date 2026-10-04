@@ -47,7 +47,19 @@ LABELS = {
     'project': 'Project', 'stack': 'Stack', 'deliverable': 'Deliverable',
     'portfolio_kicker': 'What participants leave with', 'portfolio': 'Project portfolio',
     'portfolio_cols': ['#', 'Project', 'What it demonstrates', 'Phase', 'Build time'],
-    'notes': 'Notes',
+    'notes': 'Notes', 'buffer': 'Buffer: catch-up, revision, extra lab time',
+}
+LABELS_FR = {  # "lang": "fr" in a programme selects these
+    'kicker': 'Programme de formation', 'hours': 'Heures', 'for': 'Pour', 'certs': 'Prépare à',
+    'overview': 'Présentation', 'glance': 'En un coup d’œil', 'facts': 'Informations clés',
+    'glance_cols': ['#', 'Phase', 'Objet', 'Heures'], 'total': 'Total',
+    'phase': 'Phase', 'prereq': 'Prérequis',
+    'chapter_cols': ['#', 'Chapitre', 'Contenu', 'Format', 'Heures'],
+    'maths': 'Maths', 'maths_box': 'Mathématiques abordées dans cette phase',
+    'project': 'Projet', 'stack': 'Outils', 'deliverable': 'Livrable',
+    'portfolio_kicker': 'Ce que les participants emportent', 'portfolio': 'Portfolio de projets',
+    'portfolio_cols': ['#', 'Projet', 'Ce qu’il démontre', 'Phase', 'Durée'],
+    'notes': 'Notes', 'buffer': 'Marge : rattrapage, révision, temps de lab supplémentaire',
 }
 
 # ---------- styles: the whole look lives here ----------
@@ -232,8 +244,11 @@ def spacer(doc):
     return doc.add_paragraph(style='Prog Body')
 
 
+DEC = '.'  # decimal separator, set per programme language
+
+
 def hrs(h):
-    return f'{h:g} h' if h is not None else '—'
+    return f'{h:g} h'.replace('.', DEC) if h is not None else '—'
 
 
 def logo_png(color=INK):
@@ -314,7 +329,7 @@ def field(p, code):
 
 # ---------- page furniture ----------
 
-def setup(doc, title):
+def setup(doc, title, kicker=LABELS['kicker']):
     sec = doc.sections[0]
     sec.page_width, sec.page_height = Cm(21), Cm(29.7)
     sec.left_margin = sec.right_margin = Cm(2)
@@ -333,7 +348,7 @@ def setup(doc, title):
                  {'top': (LINE, 4, 6)} if top else {'bottom': (GOLD, 6, 4)})
 
     hp = sec.header.paragraphs[0]
-    add(hp, ('Prog Label', LABELS['kicker']), '\t' + title)
+    add(hp, ('Prog Label', kicker), '\t' + title)
 
     p = sec.footer.paragraphs[0]
     p.add_run().add_picture(logo_png(), height=Cm(0.3))
@@ -368,12 +383,16 @@ def author_block(doc):
 # ---------- the document ----------
 
 def build_doc(g):
-    L = {**LABELS, **g.get('labels', {})}
+    global DEC
+    fr = g.get('lang') == 'fr'
+    DEC = ',' if fr else '.'
+    L = {**(LABELS_FR if fr else LABELS), **g.get('labels', {})}
+    buffer = g.get('buffer') or 0
     doc = Document()
     make_styles(doc)
-    setup(doc, g['title'])
+    setup(doc, g['title'], L['kicker'])
     cp = doc.core_properties
-    cp.title, cp.author, cp.subject = g['title'], NAME, 'Training programme'
+    cp.title, cp.author, cp.subject = g['title'], NAME, L['kicker']
 
     # cover (page 1, on the black background)
     k = P(doc, 'Prog Cover Kicker', L['kicker'])
@@ -381,7 +400,7 @@ def build_doc(g):
     behind_text(k, img, w, h, 'Cover tiles', locked=False)
     P(doc, 'Prog Cover Title', g['title'])
     if g.get('subtitle'): P(doc, 'Prog Cover Sub', g['subtitle'])
-    total = g.get('hours') or sum(ph['hours'] or 0 for ph in g['phases'])
+    total = g.get('hours') or sum(ph['hours'] or 0 for ph in g['phases']) + buffer
     P(doc, 'Prog Cover Stat', f'{total:g}', ('Prog Cover Unit', '  ' + L['hours']))
     if g.get('audience_line'):
         P(doc, 'Prog Cover Line', ('Prog Cover Label', L['for']), '   ' + g['audience_line'])
@@ -397,7 +416,10 @@ def build_doc(g):
     rows = [[('Prog Table Number', [f'{i:02d}']), ('Prog Table Strong', [ph['name']]),
              ('Prog Table Muted', [ph['focus']]), ('Prog Table Hours', [hrs(ph['hours'])])]
             for i, ph in enumerate(g['phases'], 1)]
-    total = sum(ph['hours'] or 0 for ph in g['phases'])
+    if buffer:
+        rows.append([('Prog Table Text', []), ('Prog Table Muted', [L['buffer']]),
+                     ('Prog Table Text', []), ('Prog Table Hours', [hrs(buffer)])])
+    total = sum(ph['hours'] or 0 for ph in g['phases']) + buffer
     rows.append([('Prog Table Text', []), ('Prog Table Strong', [L['total']]),
                  ('Prog Table Text', []), ('Prog Table Total', [hrs(total)])])
     t = table(doc, [1.2, 5.2, 8.8, 1.8], L['glance_cols'], rows, together=True)

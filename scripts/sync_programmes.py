@@ -22,7 +22,7 @@ from docx.text.paragraph import Paragraph
 from lxml import etree
 
 sys.path.insert(0, str(__import__('pathlib').Path(__file__).parent))
-from build_programmes import CHAR_STYLES, LABELS, OUT, SRC, STYLES, build_doc, load_built, sha
+from build_programmes import CHAR_STYLES, LABELS, LABELS_FR, OUT, SRC, STYLES, build_doc, load_built, sha
 
 NOISE = re.compile(r'\s(xmlns(:\w+)?|(w|w14|w15):(rsid\w*|paraId|textId)|wp14:(anchorId|editId))="[^"]*"'
                    r'|\s(id|name)="(\d+|Picture \d+)"')  # ids Word renumbers on every save
@@ -50,15 +50,15 @@ def cell_text(cell, maths_label=None):
 
 
 def hours(s):
-    m = re.search(r'[\d.]+', s or '')
+    m = re.search(r'\d+(?:[.,]\d+)?', s or '')
     if not m: return None
-    h = float(m.group())
+    h = float(m.group().replace(',', '.'))
     return int(h) if h == int(h) else h
 
 
 def read_doc(path, old):
     doc = Document(path)
-    g = {k: old[k] for k in ('slug', 'file') if k in old}
+    g = {k: old[k] for k in ('slug', 'file', 'lang') if k in old}
     labels, warn = {}, []
     g.update(facts=[], phases=[], notes=[])
     where, ph, box = 'cover', None, None
@@ -76,7 +76,9 @@ def read_doc(path, old):
                 labels['glance_cols'] = head
                 glance_focus = [r[2].text.strip() for r in rows[1:] if r[0].text.strip()]
                 total = [r for r in rows[1:] if not r[0].text.strip()]
-                if total: labels['total'] = total[0][1].text.strip()
+                if len(total) > 1:  # buffer row, then total row
+                    labels['buffer'] = total[0][1].text.strip(); g['buffer'] = hours(total[0][3].text)
+                if total: labels['total'] = total[-1][1].text.strip()
             elif where == 'facts':
                 g['facts'] = [{'label': r[0].text.strip(), 'value': r[1].text.strip()} for r in rows]
             elif where == 'phase':
@@ -164,7 +166,7 @@ def read_doc(path, old):
             box = None
 
     shown_hours = g.pop('_hours', None)
-    if shown_hours is not None and shown_hours != sum(ph_['hours'] or 0 for ph_ in g['phases']):
+    if shown_hours is not None and shown_hours != sum(ph_['hours'] or 0 for ph_ in g['phases']) + (g.get('buffer') or 0):
         g['hours'] = shown_hours
     for ph_, f in zip(g['phases'], glance_focus):
         ph_['focus'] = f
@@ -173,8 +175,9 @@ def read_doc(path, old):
     if len(glance_focus) != len(g['phases']):
         warn.append(f'At a glance has {len(glance_focus)} rows but there are {len(g["phases"])} phases')
     # keep only labels that differ from the template's
-    lab = {k: v for k, v in labels.items() if v and LABELS.get(k) != v
-           and not (isinstance(v, str) and LABELS.get(k, '').lower() == v.lower())}
+    base = LABELS_FR if old.get('lang') == 'fr' else LABELS
+    lab = {k: v for k, v in labels.items() if v and base.get(k) != v
+           and not (isinstance(v, str) and base.get(k, '').lower() == v.lower())}
     if lab: g['labels'] = {**old.get('labels', {}), **lab}
     elif 'labels' in old: g['labels'] = old['labels']
     order = list(old.keys()) + [k for k in g if k not in old]

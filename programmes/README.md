@@ -16,7 +16,7 @@ the cover tiles (picture) and author block (floating table) can be dragged. Sync
 changes; fold them into the constants above, then rebuild with `--force`.
 
 Optional fields: `subtitle`, `audience_line`, `certifications`, `facts`, phase `intro`/`note`/`math`/`project`,
-`portfolio` (`{"intro", "rows": [{"name", "shows", "phase", "build"}]}`), `notes`, `hours` (cover figure, default = sum of
+`portfolio` (`{"intro", "rows": [{"name", "shows", "phase", "build"}]}`), `notes`, `buffer` (hours shown as a row before the total, added to it and to the cover), `lang` (`"fr"` = French labels and decimal comma), `hours` (cover figure, default = sum of
 phases), `labels` (override any fixed wording, see `LABELS`).
 
 Needs Python with python-docx, Pillow, PyMuPDF; sync also needs Microsoft Word (Windows).
