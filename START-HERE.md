@@ -7,7 +7,11 @@
   Every push to `redesign` rebuilds it in ~1 min. Production (`main` → mohamedazizbenhaha.netlify.app) is untouched until merge; merging needs the user's word.
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
-## Now (2026-10-04): fixing the content, trainings first
+## Now (2026-10-04, evening): training catalogue → Word programmes
+- **Read `W:	rainings-catalog\HANDOFF.md` first.** 39-course catalogue with syllabi confirmed (`W:	rainings-catalog\SYLLABUS.md`); pilot DevOps Engineering built EN + FR; next = cold read of the plan in a new session, fixes, then a new session for the other 38 courses.
+- Generator now supports `"lang": "fr"` and `"buffer"`. 130 h programme retired (source renamed `_retired-...`).
+
+## Earlier (2026-10-04): fixing the content, trainings first
 - **The training-programme Word template is confirmed by the user** (black Nabeul-tile cover, white + gold pages). Use it for every programme document; do not redesign it unless asked. How it works: `programmes/README.md`. New programme = copy `programmes/_example.json`, fill, `python scripts/build_programmes.py <slug>`, set `doc:` in `PROGS` (`main.js`).
 - The user edits the .docx in Word and says so → run `scripts/sync_programmes.py`, fold look changes into the constants, rebuild with `--force`, render page 1 through Word (export to PDF) to check.
 - Next step agreed with the user: **discuss the trainings content** (start with the 130 h programme's issues listed under Round notes below), then the other programmes' documents. Discuss before applying (user's rule).

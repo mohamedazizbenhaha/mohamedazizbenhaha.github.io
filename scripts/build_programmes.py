@@ -47,19 +47,21 @@ LABELS = {
     'project': 'Project', 'stack': 'Stack', 'deliverable': 'Deliverable',
     'portfolio_kicker': 'What participants leave with', 'portfolio': 'Project portfolio',
     'portfolio_cols': ['#', 'Project', 'What it demonstrates', 'Phase', 'Build time'],
-    'notes': 'Notes', 'buffer': 'Buffer: catch-up, revision, extra lab time',
+    'notes': 'Notes', 'buffer': 'Buffer', 'buffer_focus': 'Catch-up, revision, extra lab time',
+    'final_project': 'Final project', 'page': 'Page', 'of': 'of',
 }
 LABELS_FR = {  # "lang": "fr" in a programme selects these
     'kicker': 'Programme de formation', 'hours': 'Heures', 'for': 'Pour', 'certs': 'Prépare à',
-    'overview': 'Présentation', 'glance': 'En un coup d’œil', 'facts': 'Informations clés',
-    'glance_cols': ['#', 'Phase', 'Objet', 'Heures'], 'total': 'Total',
+    'overview': 'Présentation', 'glance': 'Vue d’ensemble', 'facts': 'Informations clés',
+    'glance_cols': ['#', 'Phase', 'Thèmes', 'Heures'], 'total': 'Total',
     'phase': 'Phase', 'prereq': 'Prérequis',
     'chapter_cols': ['#', 'Chapitre', 'Contenu', 'Format', 'Heures'],
     'maths': 'Maths', 'maths_box': 'Mathématiques abordées dans cette phase',
     'project': 'Projet', 'stack': 'Outils', 'deliverable': 'Livrable',
     'portfolio_kicker': 'Ce que les participants emportent', 'portfolio': 'Portfolio de projets',
     'portfolio_cols': ['#', 'Projet', 'Ce qu’il démontre', 'Phase', 'Durée'],
-    'notes': 'Notes', 'buffer': 'Marge : rattrapage, révision, temps de lab supplémentaire',
+    'notes': 'Notes', 'buffer': 'Réserve', 'buffer_focus': 'Rattrapage, révision, TP supplémentaires',
+    'final_project': 'Projet final', 'page': 'Page', 'of': 'sur',
 }
 
 # ---------- styles: the whole look lives here ----------
@@ -198,12 +200,22 @@ def P(doc, style, *parts):
     return p
 
 
+FR = False  # French typography, set per programme language
+
+
+def typo(text):
+    """French: narrow no-break space before : ; ? ! and a no-break space between a number and h."""
+    if not FR or not isinstance(text, str): return text
+    text = re.sub(r' ([:;?!])', '\u202f\\1', text)
+    return re.sub(r'(\d) h\b', '\\1\u00a0h', text)
+
+
 def add(p, *parts):
     for part in parts:
         if isinstance(part, tuple):
-            p.add_run(part[1], style=part[0])
+            p.add_run(typo(part[1]), style=part[0])
         elif part:
-            p.add_run(part)
+            p.add_run(typo(part))
 
 
 def page_break(doc):
@@ -248,7 +260,7 @@ DEC = '.'  # decimal separator, set per programme language
 
 
 def hrs(h):
-    return f'{h:g} h'.replace('.', DEC) if h is not None else '—'
+    return f'{h:g}\u00a0h'.replace('.', DEC) if h is not None else '—'
 
 
 def logo_png(color=INK):
@@ -329,7 +341,7 @@ def field(p, code):
 
 # ---------- page furniture ----------
 
-def setup(doc, title, kicker=LABELS['kicker']):
+def setup(doc, title, L=LABELS):
     sec = doc.sections[0]
     sec.page_width, sec.page_height = Cm(21), Cm(29.7)
     sec.left_margin = sec.right_margin = Cm(2)
@@ -348,12 +360,12 @@ def setup(doc, title, kicker=LABELS['kicker']):
                  {'top': (LINE, 4, 6)} if top else {'bottom': (GOLD, 6, 4)})
 
     hp = sec.header.paragraphs[0]
-    add(hp, ('Prog Label', kicker), '\t' + title)
+    add(hp, ('Prog Label', L['kicker']), '\t' + title)
 
     p = sec.footer.paragraphs[0]
     p.add_run().add_picture(logo_png(), height=Cm(0.3))
-    add(p, '  ', ('Prog Strong', NAME), '  ·  ' + SITE + '\tPage ')
-    field(p, 'PAGE'); p.add_run(' of '); field(p, 'NUMPAGES')
+    add(p, '  ', ('Prog Strong', NAME), '  ·  ' + SITE + '\t' + L['page'] + ' ')
+    field(p, 'PAGE'); p.add_run(f" {L['of']} "); field(p, 'NUMPAGES')
 
     # cover: the black page, locked behind everything (first-page header); no cover footer
     hp = sec.first_page_header.paragraphs[0]
@@ -383,14 +395,14 @@ def author_block(doc):
 # ---------- the document ----------
 
 def build_doc(g):
-    global DEC
-    fr = g.get('lang') == 'fr'
+    global DEC, FR
+    fr = FR = g.get('lang') == 'fr'
     DEC = ',' if fr else '.'
     L = {**(LABELS_FR if fr else LABELS), **g.get('labels', {})}
     buffer = g.get('buffer') or 0
     doc = Document()
     make_styles(doc)
-    setup(doc, g['title'], L['kicker'])
+    setup(doc, g['title'], L)
     cp = doc.core_properties
     cp.title, cp.author, cp.subject = g['title'], NAME, L['kicker']
 
@@ -417,8 +429,8 @@ def build_doc(g):
              ('Prog Table Muted', [ph['focus']]), ('Prog Table Hours', [hrs(ph['hours'])])]
             for i, ph in enumerate(g['phases'], 1)]
     if buffer:
-        rows.append([('Prog Table Text', []), ('Prog Table Muted', [L['buffer']]),
-                     ('Prog Table Text', []), ('Prog Table Hours', [hrs(buffer)])])
+        rows.append([('Prog Table Text', []), ('Prog Table Strong', [L['buffer']]),
+                     ('Prog Table Muted', [L['buffer_focus']]), ('Prog Table Hours', [hrs(buffer)])])
     total = sum(ph['hours'] or 0 for ph in g['phases']) + buffer
     rows.append([('Prog Table Text', []), ('Prog Table Strong', [L['total']]),
                  ('Prog Table Text', []), ('Prog Table Total', [hrs(total)])])
@@ -459,7 +471,8 @@ def build_doc(g):
         pr = ph.get('project')
         if pr:
             n += 1
-            P(doc, 'Prog Box Tag', f"{L['project']} {n}")
+            single = sum(1 for q in g['phases'] if q.get('project')) == 1
+            P(doc, 'Prog Box Tag', L['final_project'] if single else f"{L['project']} {n}")
             P(doc, 'Prog Box Title', pr['title'])
             last = P(doc, 'Prog Box Text', pr['brief'])
             if pr.get('stack'): last = P(doc, 'Prog Box Text', ('Prog Label', L['stack']), '  ' + pr['stack'])

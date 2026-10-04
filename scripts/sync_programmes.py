@@ -77,7 +77,8 @@ def read_doc(path, old):
                 glance_focus = [r[2].text.strip() for r in rows[1:] if r[0].text.strip()]
                 total = [r for r in rows[1:] if not r[0].text.strip()]
                 if len(total) > 1:  # buffer row, then total row
-                    labels['buffer'] = total[0][1].text.strip(); g['buffer'] = hours(total[0][3].text)
+                    labels['buffer'] = total[0][1].text.strip(); labels['buffer_focus'] = total[0][2].text.strip()
+                    g['buffer'] = hours(total[0][3].text)
                 if total: labels['total'] = total[-1][1].text.strip()
             elif where == 'facts':
                 g['facts'] = [{'label': r[0].text.strip(), 'value': r[1].text.strip()} for r in rows]
@@ -142,8 +143,9 @@ def read_doc(path, old):
             labels['prereq'] = lab; ph['note'] = rest
         elif st == 'Prog Box Tag':
             m = re.match(r'(.*?)\s+\d+$', text)
-            if m:
-                labels['project'] = m.group(1)
+            if m or (ph is not None and where == 'phase' and not ph['project'] and text.lower() in
+                     (LABELS['final_project'].lower(), LABELS_FR['final_project'].lower())):
+                if m: labels['project'] = m.group(1)
                 box = ph['project'] = {'title': '', 'brief': '', 'stack': '', 'deliverable': ''}
             else:
                 labels['maths_box'] = text; box = 'math'
