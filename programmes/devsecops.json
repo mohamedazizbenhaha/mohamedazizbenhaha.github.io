@@ -1,0 +1,95 @@
+{
+ "slug": "devsecops",
+ "file": "DevSecOps-57h.docx",
+ "title": "DevSecOps",
+ "subtitle": "Build security into every stage of the delivery pipeline",
+ "audience_line": "DevOps engineers and developers who own a delivery pipeline",
+ "certifications": [],
+ "overview": "This programme adds security to a working DevOps pipeline, stage by stage, without slowing delivery down. Participants model threats, scan code and dependencies, test the running application, then secure the software supply chain: hardened and scanned images, SBOMs, signatures, attestations and SLSA provenance checked before deployment. They scan infrastructure code, enforce policies as code, manage secrets with HashiCorp Vault, and harden and watch Kubernetes at runtime. The same application and pipeline are carried through every phase, and the programme closes with a final project in which teams deliver a pipeline with a security gate at every stage and a security report.",
+ "facts": [
+  {"label": "Audience", "value": "DevOps engineers and developers who own a delivery pipeline"},
+  {"label": "Prerequisites", "value": "DevOps Engineering (course), or equivalent: CI pipelines with Jenkins or GitHub Actions, Terraform, Docker and Kubernetes. Pipeline building is not taught again"},
+  {"label": "Duration", "value": "57 h: 48 h of chapters + 9 h buffer"},
+  {"label": "Format", "value": "Short lectures followed by guided labs; one application and pipeline carried through every phase"},
+  {"label": "Lab environment", "value": "Runs locally: one laptop per participant (16 GB RAM minimum, Docker, kind, VS Code), a GitHub repository per team with GitHub Actions, and a provided Jenkins and SonarQube stack in containers; Terraform code is scanned, not applied; no cloud account or cost"},
+  {"label": "Assessment", "value": "A lab validated at the end of each phase and a final project with a security report presented to the group; certificate of completion for participants who complete both"},
+  {"label": "Outcome", "value": "Participants can add and tune security gates for code, dependencies, the running application, images, infrastructure code, secrets and Kubernetes runtime, and report the residual risk"}
+ ],
+ "buffer": 9,
+ "phases": [
+  {
+   "name": "Foundations & Application Security",
+   "hours": 12,
+   "focus": "Shift-left, threat modelling, SAST, SCA and licences, DAST",
+   "intro": "Participants learn where security belongs in the pipeline and which gate stops what, model the threats of the course application with STRIDE, then add static analysis, dependency and licence checks, and dynamic scans of the running application. Validated lab: a pipeline that fails on a planted SQL injection, a vulnerable dependency and a ZAP finding, with the false positives triaged.",
+   "chapters": [
+    {"id": "1.1", "title": "DevSecOps Principles", "content": "Shift-left, threat modelling with STRIDE, security gates and their thresholds", "format": "Lecture + Workshop", "hours": 3},
+    {"id": "1.2", "title": "Static Analysis (SAST)", "content": "SonarQube security rules, Semgrep, custom rules, triaging false positives", "format": "Lecture + Lab", "hours": 3},
+    {"id": "1.3", "title": "Dependencies & Licences (SCA)", "content": "OWASP Dependency-Check, vulnerable dependency updates, licence compliance", "format": "Lecture + Lab", "hours": 3},
+    {"id": "1.4", "title": "Dynamic Testing (DAST)", "content": "ZAP baseline, full and API scans in the pipeline", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Container & Supply Chain Security",
+   "hours": 9,
+   "focus": "Image scanning and hardening, SBOM, signing, SLSA provenance, admission",
+   "intro": "Participants harden and scan the course images, then prove where they come from: an SBOM for every image, signatures and attestations with Cosign and Sigstore, SLSA provenance from the build, and admission policies that refuse unsigned images in the cluster. Validated lab: an unsigned image rejected by the cluster while the signed, attested build is admitted.",
+   "chapters": [
+    {"id": "2.1", "title": "Image Scanning & Hardening", "content": "Trivy, minimal and distroless base images, non-root images, fixing findings", "format": "Lecture + Lab", "hours": 3},
+    {"id": "2.2", "title": "SBOM & Signing", "content": "SBOM with Syft, signing with Cosign and Sigstore, keyless signing", "format": "Lecture + Lab", "hours": 3},
+    {"id": "2.3", "title": "Attestations & Admission", "content": "Attestations, SLSA provenance, admission policies for images", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Infrastructure & Secrets",
+   "hours": 12,
+   "focus": "IaC scanning, policy as code, HashiCorp Vault, secret scanning",
+   "intro": "Participants scan the course Terraform and Kubernetes code with Checkov and Trivy, enforce rules in the cluster with OPA Gatekeeper or Kyverno, then remove secrets from code: HashiCorp Vault with dynamic secrets, its Jenkins and Kubernetes integrations, and secret scanning with gitleaks. Validated lab: a pipeline that blocks a public bucket in Terraform and a committed password, and an application that reads short-lived database credentials from Vault.",
+   "chapters": [
+    {"id": "3.1", "title": "IaC Security", "content": "Checkov, Trivy IaC scanning (formerly tfsec), fixing misconfigurations in Terraform and Kubernetes manifests", "format": "Lecture + Lab", "hours": 3},
+    {"id": "3.2", "title": "Policy as Code", "content": "OPA Gatekeeper and Kyverno, writing and testing policies, audit and enforce modes", "format": "Lecture + Lab", "hours": 3},
+    {"id": "3.3", "title": "HashiCorp Vault", "content": "Architecture, secrets engines, dynamic secrets, policies and authentication", "format": "Lecture + Lab", "hours": 3},
+    {"id": "3.4", "title": "Secrets in the Pipeline", "content": "Vault integration with Jenkins and Kubernetes, secret scanning with gitleaks", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Kubernetes & Runtime Security",
+   "hours": 6,
+   "focus": "Pod Security Standards, RBAC hardening, NetworkPolicies, Falco",
+   "intro": "Participants harden the cluster that runs the course application with Pod Security Standards, least-privilege RBAC and default-deny NetworkPolicies, then detect attacks while they happen with Falco rules. Validated lab: a shell opened in a running container detected by Falco and an alert raised.",
+   "chapters": [
+    {"id": "4.1", "title": "Kubernetes Hardening", "content": "Pod Security Standards, RBAC hardening, NetworkPolicies", "format": "Lecture + Lab", "hours": 3},
+    {"id": "4.2", "title": "Runtime Security", "content": "Falco rules, runtime detection and alerting", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 9,
+   "focus": "A secure end-to-end pipeline and its security report",
+   "intro": "Teams of two or three secure the delivery pipeline of a provided application, reusing the phase labs, then present the result and its residual risks as they would to a security officer.",
+   "chapters": [
+    {"id": "5.1", "title": "Brief & Threat Model", "content": "Read the brief, model the threats, choose the gates and their thresholds", "format": "Project", "hours": 3},
+    {"id": "5.2", "title": "Build the Secure Pipeline", "content": "SAST, SCA, DAST, image scanning and signing, IaC scanning, secrets from Vault", "format": "Project", "hours": 3},
+    {"id": "5.3", "title": "Runtime & Report", "content": "Cluster policies and Falco rules; security report with findings, fixes and accepted risks", "format": "Project", "hours": 1.5},
+    {"id": "5.4", "title": "Demo & Review", "content": "Live demo of a vulnerable change stopped by the pipeline; questions and feedback", "format": "Project", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "A Secure Delivery Pipeline",
+    "brief": "A pipeline with a security gate at every stage: code, dependencies, running application, images, infrastructure code, secrets and Kubernetes runtime, with signed images admitted to the cluster and a security report that states what is fixed and what risk remains.",
+    "stack": "GitHub Actions or Jenkins, SonarQube, Semgrep, OWASP Dependency-Check, ZAP, Trivy, Syft, Cosign, Checkov, Kyverno or OPA Gatekeeper, HashiCorp Vault, gitleaks, Falco, Kubernetes",
+    "deliverable": "Repository with pipeline and policies, threat model, security report, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,214 @@
+{
+ "slug": "ccna-2-switching-routing-wireless-fr",
+ "file": "Commutation-routage-et-sans-fil-CCNA-2-42h.docx",
+ "lang": "fr",
+ "title": "Commutation, routage et sans-fil : notions essentielles (CCNA 2)",
+ "subtitle": "Concevoir et sécuriser un réseau de campus commuté, redondant et sans fil",
+ "audience_line": "Participants ayant suivi le CCNA 1 ou disposant d’une expérience réseau équivalente",
+ "certifications": [
+  "CCNA (200-301 v1.1), cours 2 sur 3"
+ ],
+ "overview": "Ce programme est le deuxième des trois cours qui préparent l’examen Cisco CCNA 200-301, aligné sur le cursus Switching, Routing and Wireless Essentials v7 de la Cisco Networking Academy. Les participants segmentent les réseaux avec VLAN et trunks, routent entre eux, rendent le LAN résilient avec STP, EtherChannel et HSRP, distribuent les adresses avec DHCPv4, SLAAC et DHCPv6, protègent les ports des commutateurs contre les attaques de niveau 2, déploient un réseau sans fil géré par un contrôleur et sécurisé avec WPA2, et le comparent à WPA3, et configurent et dépannent le routage statique. Chaque chapitre se termine par un TP dans Cisco Packet Tracer, et le programme s’achève par un projet final : un réseau de campus construit et présenté par chaque participant. Le cours Réseaux d’entreprise, sécurité et automatisation (CCNA 3) fait suite.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Participants ayant suivi le CCNA 1 ou disposant d’une expérience réseau équivalente"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Introduction aux réseaux (CCNA 1), ou équivalent : configuration IOS, adressage IPv4 et IPv6, sous-réseaux. Ces sujets ne sont pas réenseignés"
+  },
+  {
+   "label": "Durée",
+   "value": "42 h : 36 h de chapitres + 6 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés sur des équipements Cisco simulés"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant avec Cisco Packet Tracer (gratuit avec le compte Cisco Networking Academy de chaque participant) ; commutateurs, routeurs et contrôleur sans fil Cisco physiques pour certains TP lorsque l’organisateur fournit une baie ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent construire un LAN de campus redondant et sécurisé avec VLAN, routage inter-VLAN, accès sans fil et routage statique, et le dépanner"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Commutation et VLAN",
+   "hours": 9,
+   "focus": "Configuration des commutateurs, VLAN et trunks, routage inter-VLAN",
+   "intro": "Les participants configurent les commutateurs pour une administration à distance sécurisée, découpent le réseau en VLAN transportés sur des trunks 802.1Q, puis routent entre les VLAN avec un router-on-a-stick et un commutateur de niveau 3. TP validé : trois VLAN qui communiquent par les deux méthodes de routage inter-VLAN.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Concepts et configuration de la commutation",
+     "content": "Démarrage du commutateur et SSH, acheminement des trames, domaines de collision et de diffusion",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "VLAN et trunks",
+     "content": "VLAN, trunks 802.1Q, VLAN natif, DTP",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Routage inter-VLAN",
+     "content": "Router-on-a-stick, commutateur de niveau 3",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Redondance et services d’adressage",
+   "hours": 9,
+   "focus": "STP, EtherChannel, DHCPv4, SLAAC et DHCPv6, HSRP",
+   "intro": "Liens et passerelles redondants maintiennent le LAN en service quand un élément tombe en panne. Les participants évitent les boucles avec Rapid PVST+ et agrègent des liens avec EtherChannel, distribuent les adresses IPv4 et IPv6 avec DHCPv4, SLAAC et DHCPv6, puis protègent la passerelle par défaut avec HSRP. TP validé : un LAN qui continue d’acheminer le trafic quand un lien ou une passerelle tombe, avec des postes adressés automatiquement dans les deux versions d’IP.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "STP",
+     "content": "Prévention des boucles, STP et Rapid PVST+, PortFast, BPDU guard",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "EtherChannel",
+     "content": "LACP et PAgP, configuration et vérification",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "DHCPv4",
+     "content": "Serveur et relais DHCPv4",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "SLAAC et DHCPv6",
+     "content": "SLAAC, DHCPv6 sans état et avec état",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.5",
+     "title": "Redondance du premier saut",
+     "content": "Concepts FHRP, HSRP",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Sécurité du LAN et sans-fil",
+   "hours": 6,
+   "focus": "Parades aux attaques de niveau 2, WLAN avec contrôleur, WPA2 et WPA3",
+   "intro": "Les participants protègent les ports des commutateurs contre les attaques de niveau 2 courantes, puis déploient un réseau sans fil géré par un contrôleur WLAN et sécurisé avec WPA2 et WPA3. TP validé : un commutateur qui bloque un serveur DHCP pirate grâce au DHCP snooping et désactive un port en cas de violation de la sécurité des ports, et un WLAN configuré sur le contrôleur en WPA2-Personal et WPA2-Enterprise.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Sécurité du LAN",
+     "content": "Sécurité des ports, DHCP snooping, inspection ARP dynamique, parades aux attaques VLAN et STP",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Réseaux locaux sans fil",
+     "content": "Concepts 802.11, composants WLAN, configuration du WLC, WPA2 et WPA3",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Routage",
+   "hours": 6,
+   "focus": "Table de routage, routes statiques et par défaut, dépannage, intégration des compétences",
+   "intro": "Les participants lisent la table de routage et configurent des routes statiques, par défaut et flottantes en IPv4 et IPv6, les dépannent avec méthode, puis combinent commutation, routage et sans-fil dans un TP d’intégration. TP validé : deux sites reliés par des routes statiques IPv4 et IPv6, avec une route statique flottante qui prend le relais quand le lien principal tombe, au sein de la topologie intégrée de commutation et de sans-fil.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Concepts de routage et routage statique",
+     "content": "Table de routage, choix du chemin, routes statiques, par défaut et flottantes en IPv4 et IPv6",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Dépannage des routes statiques",
+     "content": "Dépannage méthodique des routes statiques et par défaut",
+     "format": "TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Intégration des compétences",
+     "content": "TP intégré de commutation, routage et sans-fil",
+     "format": "TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Un réseau de campus, construit et présenté",
+   "intro": "Chaque participant construit un réseau de campus dans Packet Tracer à partir d’un cahier des charges écrit, en réutilisant les TP de phase, puis le documente et défend sa conception devant le groupe.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, puis construire VLAN et trunks, routage inter-VLAN, STP et EtherChannel, HSRP et routage statique",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Services, sécurité et documentation",
+     "content": "DHCPv4 et DHCPv6, sécurité du LAN, le WLAN ; schéma de topologie et table d’adressage",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration de bascule (lien et passerelle), questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Réseau de campus",
+    "brief": "Un réseau de campus avec VLAN et trunks, routage inter-VLAN, STP et EtherChannel, HSRP, DHCPv4 et DHCPv6, sécurité du LAN, un WLAN géré par contrôleur et un routage statique vers l’opérateur, qui reste opérationnel quand un lien ou une passerelle tombe.",
+    "stack": "Cisco Packet Tracer, commutateurs et routeurs Cisco IOS, contrôleur WLAN, IPv4, IPv6",
+    "deliverable": "Fichier Packet Tracer, schéma de topologie, table d’adressage, démonstration de bascule"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

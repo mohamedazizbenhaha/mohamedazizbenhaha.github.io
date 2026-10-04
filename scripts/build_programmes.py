@@ -49,6 +49,7 @@ LABELS = {
     'portfolio_cols': ['#', 'Project', 'What it demonstrates', 'Phase', 'Build time'],
     'notes': 'Notes', 'buffer': 'Buffer', 'buffer_focus': 'Catch-up, revision, extra lab time',
     'final_project': 'Final project', 'page': 'Page', 'of': 'of',
+    'optional': 'Optional', 'plus_optional': '+ {h} optional',
 }
 LABELS_FR = {  # "lang": "fr" in a programme selects these
     'kicker': 'Programme de formation', 'hours': 'Heures', 'for': 'Pour', 'certs': 'Prépare à',
@@ -62,6 +63,7 @@ LABELS_FR = {  # "lang": "fr" in a programme selects these
     'portfolio_cols': ['#', 'Projet', 'Ce qu’il démontre', 'Phase', 'Durée'],
     'notes': 'Notes', 'buffer': 'Réserve', 'buffer_focus': 'Rattrapage, révision, TP supplémentaires',
     'final_project': 'Projet final', 'page': 'Page', 'of': 'sur',
+    'optional': 'Optionnel', 'plus_optional': '+ {h} en option',
 }
 
 # ---------- styles: the whole look lives here ----------
@@ -403,6 +405,13 @@ def check(g):
         s = sum(c['hours'] for c in ph['chapters'])
         if ph['hours'] is not None and abs(s - ph['hours']) > 1e-9:
             errors.append(f"phase '{ph['name']}': chapters add up to {s:g} h, phase says {ph['hours']:g} h")
+        if ph.get('optional'):  # outside the total and the buffer rule, but still whole 3 h sessions
+            o, oends = 0, set()
+            for c in ph['chapters']:
+                o += c['hours']; oends.add(round(o, 2))
+            if o % 3 or any(x not in oends for x in range(3, int(o) + 1, 3)):
+                errors.append(f"optional phase '{ph['name']}' is not whole 3 h sessions on chapter boundaries")
+            continue
         for c in ph['chapters']:
             run += c['hours']; ends.add(round(run, 2))
     if run % 3:
@@ -443,12 +452,15 @@ def build_doc(g):
     k = P(doc, 'Prog Cover Kicker', L['kicker'])
     img, w, h = tiles_png()
     behind_text(k, img, w, h, 'Cover tiles', locked=False)
-    # no line break inside "(RHEL 10)" or before "&"
-    title = re.sub(r'\([^)]*\)', lambda m: m[0].replace(' ', ' '), g['title']).replace(' &', ' &')
+    # no line break inside "(RHEL 10)", before "&" or at a hyphen ("sans-fil")
+    title = re.sub(r'\([^)]*\)', lambda m: m[0].replace(' ', '\u00a0'), g['title']).replace(' &', '\u00a0&').replace('-', '\u2011')
     P(doc, 'Prog Cover Title', title)
     if g.get('subtitle'): P(doc, 'Prog Cover Sub', g['subtitle'])
-    total = g.get('hours') or sum(ph['hours'] or 0 for ph in g['phases']) + buffer
-    P(doc, 'Prog Cover Stat', f'{total:g}', ('Prog Cover Unit', '  ' + L['hours']))
+    core = [ph for ph in g['phases'] if not ph.get('optional')]
+    extra = sum(ph['hours'] or 0 for ph in g['phases'] if ph.get('optional'))
+    total = g.get('hours') or sum(ph['hours'] or 0 for ph in core) + buffer
+    P(doc, 'Prog Cover Stat', f'{total:g}', ('Prog Cover Unit', '  ' + L['hours']
+      + ('   ' + L['plus_optional'].format(h=hrs(extra)) if extra else '')))
     if g.get('audience_line'):
         P(doc, 'Prog Cover Line', ('Prog Cover Label', L['for']), '   ' + g['audience_line'])
     if g.get('certifications'):
@@ -463,14 +475,16 @@ def build_doc(g):
 
     P(doc, 'Heading 2', L['glance'])
     rows = [[('Prog Table Number', [f'{i:02d}']), ('Prog Table Strong', [ph['name']]),
-             ('Prog Table Muted', [ph['focus']]), ('Prog Table Hours', [hrs(ph['hours'])])]
+             ('Prog Table Muted', [('Prog Label', L['optional']), '  ' + ph['focus']] if ph.get('optional') else [ph['focus']]),
+             ('Prog Table Hours', ['+' + hrs(ph['hours'])] if ph.get('optional') else [hrs(ph['hours'])])]
             for i, ph in enumerate(g['phases'], 1)]
     if buffer:
         rows.append([('Prog Table Text', []), ('Prog Table Strong', [L['buffer']]),
                      ('Prog Table Muted', [L['buffer_focus']]), ('Prog Table Hours', [hrs(buffer)])])
-    total = sum(ph['hours'] or 0 for ph in g['phases']) + buffer
+    total = sum(ph['hours'] or 0 for ph in core) + buffer
     rows.append([('Prog Table Text', []), ('Prog Table Strong', [L['total']]),
-                 ('Prog Table Text', []), ('Prog Table Total', [hrs(total)])])
+                 ('Prog Table Muted', [L['plus_optional'].format(h=hrs(extra))] if extra else []),
+                 ('Prog Table Total', [hrs(total)])])
     t = table(doc, [1.2, 5.2, 8.8, 1.8], L['glance_cols'], rows, together=True)
     for c in t.rows[-1].cells:  # total row: ink rule above
         tcPr = c._tc.get_or_add_tcPr()
@@ -486,7 +500,10 @@ def build_doc(g):
     # before it (an empty paragraph there could spill onto a blank page)
     n = 0
     for i, ph in enumerate(g['phases'], 1):
-        P(doc, 'Prog Kicker', f"{L['phase']} {i:02d}\t{hrs(ph['hours'])}")
+        if ph.get('optional'):
+            P(doc, 'Prog Kicker', f"{L['phase']} {i:02d}  ·  {L['optional']}\t+{hrs(ph['hours'])}")
+        else:
+            P(doc, 'Prog Kicker', f"{L['phase']} {i:02d}\t{hrs(ph['hours'])}")
         P(doc, 'Heading 1', ph['name'])
         if ph.get('intro'): P(doc, 'Prog Intro', ph['intro'])
         if ph.get('note'): P(doc, 'Prog Note', ('Prog Label', L['prereq']), '  ' + ph['note'])

@@ -1,0 +1,220 @@
+{
+ "slug": "ccna-3-enterprise-networking",
+ "file": "Enterprise-Networking-Security-Automation-CCNA-3-42h.docx",
+ "title": "Enterprise Networking, Security & Automation (CCNA 3)",
+ "subtitle": "Connect, secure, manage and automate a multi-site enterprise network",
+ "audience_line": "Participants who completed CCNA 2 and are preparing the CCNA exam",
+ "certifications": [
+  "CCNA (200-301 v1.1), course 3 of 3"
+ ],
+ "overview": "This programme is the third of three courses that prepare the Cisco CCNA 200-301 exam, aligned with Cisco Networking Academy Enterprise Networking, Security and Automation v7. Participants route between sites with single-area OSPFv2, filter traffic with access control lists, connect to the internet with NAT and PAT, and study WAN technologies, VPNs with IPsec, and QoS. They manage, design and troubleshoot the network, and automate it with REST APIs and Python. A timed practice exam covers the three courses, and the programme closes with a final project: a documented enterprise branch network.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Participants who completed CCNA 2 and are preparing the CCNA exam"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Switching, Routing & Wireless Essentials (CCNA 2), or equivalent: VLANs, inter-VLAN and static routing. These topics are not taught again; no prior Python needed"
+  },
+  {
+   "label": "Duration",
+   "value": "42 h: 36 h of chapters + 6 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs on simulated Cisco devices; one timed practice exam"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant with Cisco Packet Tracer (free with a Cisco Networking Academy account; its network controller serves the REST API labs) and Python 3; physical Cisco routers for selected labs when the organiser provides a rack; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase, a timed practice exam and a final project presented to the group; certificate of completion for participants who complete the labs and the project"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can build, secure and manage a multi-site network with OSPF, ACLs and NAT, read device data through a REST API with Python, and sit the CCNA 200-301 exam"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "OSPF",
+   "hours": 6,
+   "focus": "Single-area OSPFv2 configuration, tuning and troubleshooting",
+   "intro": "Participants replace static routes with a dynamic routing protocol: single-area OSPFv2, its neighbours and link-state database, then DR and BDR election, cost tuning and default route propagation. Validated lab: three sites routed by OSPF, with a default route to the internet learned by every router.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Single-Area OSPFv2",
+     "content": "OSPF concepts, configuration and verification",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "OSPF in Practice",
+     "content": "Multi-access networks, DR and BDR, cost, default route propagation, troubleshooting",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Security, ACLs & NAT",
+   "hours": 9,
+   "focus": "Threats, access control lists, NAT and PAT",
+   "intro": "Participants review the threats an enterprise network faces, then filter traffic with standard, extended and named ACLs placed where they belong, and connect private addressing to the internet with static NAT, dynamic NAT and PAT. Validated lab: a security policy written as ACLs, tested against allowed and denied flows, with users reaching the internet through PAT.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Network Security Concepts",
+     "content": "Threats, attack types, security best practices",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "ACL Concepts",
+     "content": "Wildcard masks, ACL types, placement",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "ACL Configuration",
+     "content": "Standard, extended and named IPv4 ACLs, securing VTY access",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.4",
+     "title": "NAT for IPv4",
+     "content": "Static NAT, dynamic NAT, PAT",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "WAN, VPN & Network Management",
+   "hours": 6,
+   "focus": "WAN and SD-WAN, VPNs and IPsec, QoS, management protocols",
+   "intro": "Participants compare WAN technologies, see how site-to-site and remote-access VPNs protect traffic with IPsec and GRE, how QoS gives priority to sensitive traffic, then manage devices with CDP, LLDP, NTP, SNMP and syslog and back up configurations and IOS images. Validated lab: routers synchronised by NTP, sending syslog and SNMP data to a management server, with configurations backed up.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "WAN Concepts",
+     "content": "WAN topologies and technologies, broadband, SD-WAN overview",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "VPN & IPsec Concepts",
+     "content": "Site-to-site and remote-access VPNs, IPsec, GRE",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "QoS Concepts",
+     "content": "Traffic characteristics, queuing, QoS models and mechanisms",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Network Management",
+     "content": "CDP and LLDP, NTP, SNMP, syslog, configuration backup and IOS image management",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Design, Automation & CCNA Review",
+   "hours": 9,
+   "focus": "Scalable design, troubleshooting, SDN, automation, practice exam",
+   "intro": "Participants design hierarchical networks that scale and troubleshoot them with a method, see how virtualization, SDN and controllers such as Catalyst Center change network operations, and read device data through a REST API with a short Python script. A timed practice exam across the three CCNA courses closes the phase. Validated lab: a Python script that lists the devices known to the Packet Tracer network controller.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Network Design & Troubleshooting",
+     "content": "Hierarchical and scalable design, troubleshooting methodology and tools",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Network Virtualization",
+     "content": "Cloud, virtualization, SDN and controller-based networking",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Network Automation",
+     "content": "REST APIs, JSON and YAML, configuration management tools, Catalyst Center, AI in network operations",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.4",
+     "title": "CCNA 200-301 Review",
+     "content": "Timed practice exam across the three courses and debrief",
+     "format": "Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "An enterprise branch network, documented and tested",
+   "intro": "Each participant builds the network that connects a branch to its head office from a written brief, reusing the phase labs, then documents and tests it before presenting it to the group.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, then configure OSPF between sites, the ACL security policy and PAT to the internet",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Manage, Automate & Document",
+     "content": "SNMP, syslog and NTP; a Python script that reads device data through a REST API; site-to-site VPN design; test plan and documentation",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Demo & Review",
+     "content": "Test results and live demo; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Enterprise Branch Network",
+    "brief": "A branch connected to its head office: OSPF between sites, an ACL security policy, PAT to the internet, a site-to-site VPN design, SNMP, syslog and NTP management, and a Python script that reads device data through a REST API; documented and tested.",
+    "stack": "Cisco Packet Tracer and its network controller, Cisco IOS routers and switches, OSPFv2, ACLs, NAT, SNMP, syslog, NTP, REST API, Python",
+    "deliverable": "Packet Tracer file, Python script, design document, test results, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

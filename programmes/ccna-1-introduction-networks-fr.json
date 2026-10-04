@@ -1,0 +1,193 @@
+{
+ "slug": "ccna-1-introduction-networks-fr",
+ "file": "Introduction-aux-reseaux-CCNA-1-39h.docx",
+ "lang": "fr",
+ "title": "Introduction aux réseaux (CCNA 1)",
+ "subtitle": "Construire, adresser et sécuriser un petit réseau avec des équipements Cisco",
+ "audience_line": "Étudiants, techniciens et professionnels de l’IT qui commencent le parcours CCNA",
+ "certifications": [
+  "CCNA (200-301 v1.1), cours 1 sur 3"
+ ],
+ "overview": "Ce programme est le premier des trois cours qui préparent l’examen Cisco CCNA 200-301, aligné sur le cursus Introduction to Networks v7 de la Cisco Networking Academy. Les participants apprennent comment les réseaux sont construits et comment les données y circulent, configurent des commutateurs et des routeurs Cisco, conçoivent des plans d’adressage IPv4 avec découpage en sous-réseaux et VLSM, déploient IPv6, et sécurisent les équipements avec des mots de passe robustes et SSH. Chaque chapitre se termine par un TP dans Cisco Packet Tracer, et le programme s’achève par un projet final où chaque participant conçoit, construit et documente le réseau d’une petite entreprise. Le cours Commutation, routage et sans-fil : notions essentielles (CCNA 2) fait suite.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Étudiants, techniciens et professionnels de l’IT qui commencent le parcours CCNA"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aucun. Usage courant d’un ordinateur ; l’aisance avec le binaire aide, et il est revu pendant le cours"
+  },
+  {
+   "label": "Durée",
+   "value": "39 h : 33 h de chapitres + 6 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés sur des équipements Cisco simulés"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant avec Cisco Packet Tracer (gratuit avec le compte Cisco Networking Academy de chaque participant) ; commutateurs et routeurs Cisco physiques pour certains TP lorsque l’organisateur fournit une baie ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent construire un petit réseau commuté et routé, planifier l’adressage IPv4 et IPv6 avec sous-réseaux et VLSM, sécuriser des équipements Cisco et dépanner la connectivité de base"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Fondamentaux des réseaux",
+   "hours": 6,
+   "focus": "Types de réseaux, modèles de référence, première configuration d’équipements",
+   "intro": "Les participants découvrent de quoi se compose un réseau et comment les modèles OSI et TCP/IP le décrivent, puis font leurs premiers pas dans Cisco IOS sur des commutateurs et des postes. TP validé : un commutateur avec nom d’hôte, mots de passe, adresse de gestion et configuration enregistrée, joignable depuis un PC.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Réseaux et modèles",
+     "content": "Composants, topologies, types de réseaux, modèles OSI et TCP/IP, normes",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Configuration de base des équipements",
+     "content": "Cisco IOS, configuration des commutateurs et des postes",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Du lien au paquet",
+   "hours": 6,
+   "focus": "Supports, Ethernet et commutation, paquets IP, ARP et découverte de voisins",
+   "intro": "Les participants suivent les données du câble jusqu’au paquet : supports et trames Ethernet, apprentissage des adresses MAC par le commutateur, puis routage des paquets IPv4 et IPv6 et résolution d’adresses. TP validé : un échange capturé qui montre une table MAC qui se remplit, une requête ARP et une sollicitation de voisin IPv6, sur des postes adressés à l’avance par le formateur, observé en mode simulation de Packet Tracer.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Couches physique et liaison de données",
+     "content": "Supports, trames Ethernet, adresses MAC, commutation, tables d’adresses MAC",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Couche réseau et résolution d’adresses",
+     "content": "Paquets IPv4 et IPv6, routage, ARP et découverte de voisins IPv6 (Neighbor Discovery)",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Routeurs et adressage IP",
+   "hours": 9,
+   "focus": "Configuration du routeur, IPv4, sous-réseaux et VLSM, IPv6",
+   "intro": "Les participants configurent un routeur comme passerelle par défaut, puis approfondissent l’adressage IP : structure et binaire IPv4, découpage en sous-réseaux et conception VLSM, types d’adresses IPv6, SLAAC et sous-réseaux IPv6. TP validé : un plan d’adressage VLSM pour un site de plusieurs LAN derrière un même routeur, mis en œuvre en double pile et vérifié avec ping et traceroute.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Configuration de base du routeur",
+     "content": "Paramètres initiaux du routeur, passerelle par défaut",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Adressage IPv4",
+     "content": "Structure des adresses, binaire, monodiffusion, diffusion et multidiffusion, adresses publiques et privées",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Sous-réseaux et VLSM",
+     "content": "Découpage de réseaux IPv4 en sous-réseaux, conception VLSM",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.4",
+     "title": "Adressage IPv6",
+     "content": "Types d’adresses, SLAAC, sous-réseaux IPv6",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Transport, services et sécurité",
+   "hours": 6,
+   "focus": "ICMP, TCP et UDP, DNS, DHCP, HTTP, sécurisation d’un petit réseau",
+   "intro": "Les participants voient comment les applications utilisent le réseau via ICMP, TCP, UDP, DNS, DHCP et HTTP, puis sécurisent les équipements d’un petit réseau contre les menaces courantes avec des mots de passe robustes et SSH. TP validé : un petit réseau où les postes obtiennent leur adresse par DHCP et joignent un serveur web par son nom, chaque équipement n’étant administré qu’en SSH.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Couches transport et application",
+     "content": "ICMP, TCP et UDP, DNS, DHCP, HTTP",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Bases de la sécurité et petits réseaux",
+     "content": "Menaces, mots de passe, SSH, sécurisation des équipements, construction d’un petit réseau",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Le réseau d’une petite entreprise, documenté et présenté",
+   "intro": "Chaque participant conçoit et construit le réseau d’une petite entreprise à partir d’un cahier des charges écrit, en réutilisant les TP de phase, puis le documente et dépanne les pannes injectées par le formateur.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, rédiger le plan d’adressage VLSM, construire la topologie en double pile IPv4 et IPv6",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Sécurisation et documentation",
+     "content": "Durcissement des équipements et accès SSH, table d’adressage, schéma de topologie, configurations enregistrées",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Dépannage et revue",
+     "content": "Trouver et corriger les pannes injectées par le formateur ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Réseau d’une petite entreprise",
+    "brief": "Le réseau d’une petite entreprise avec un plan d’adressage VLSM, une connectivité IPv4 et IPv6, des équipements Cisco durcis administrés en SSH, et une documentation qui permet à un autre technicien de le dépanner.",
+    "stack": "Cisco Packet Tracer, commutateurs et routeurs Cisco IOS, IPv4, IPv6, SSH",
+    "deliverable": "Fichier Packet Tracer, table d’adressage, schéma de topologie, configurations des équipements"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

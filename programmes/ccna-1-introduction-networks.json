@@ -1,0 +1,192 @@
+{
+ "slug": "ccna-1-introduction-networks",
+ "file": "Introduction-to-Networks-CCNA-1-39h.docx",
+ "title": "Introduction to Networks (CCNA 1)",
+ "subtitle": "Build, address and secure a small network with Cisco devices",
+ "audience_line": "Students, technicians and IT staff starting the CCNA path",
+ "certifications": [
+  "CCNA (200-301 v1.1), course 1 of 3"
+ ],
+ "overview": "This programme is the first of three courses that prepare the Cisco CCNA 200-301 exam, aligned with Cisco Networking Academy Introduction to Networks v7. Participants learn how networks are built and how data moves through them, configure Cisco switches and routers, design IPv4 addressing plans with subnetting and VLSM, deploy IPv6, and secure devices with strong passwords and SSH. Every chapter ends with a lab in Cisco Packet Tracer, and the programme closes with a final project in which each participant designs, builds and documents a small business network. Switching, Routing & Wireless Essentials (CCNA 2) follows.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Students, technicians and IT staff starting the CCNA path"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None. Basic computer use; comfort with binary numbers helps and is reviewed in the course"
+  },
+  {
+   "label": "Duration",
+   "value": "39 h: 33 h of chapters + 6 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs on simulated Cisco devices"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant with Cisco Packet Tracer (free with each participant’s Cisco Networking Academy account); physical Cisco switches and routers for selected labs when the organiser provides a rack; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can build a small switched and routed network, plan IPv4 and IPv6 addressing with subnetting and VLSM, secure Cisco devices and troubleshoot basic connectivity"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Network Fundamentals",
+   "hours": 6,
+   "focus": "Network types, reference models, first device configuration",
+   "intro": "Participants learn what a network is made of and how the OSI and TCP/IP models describe it, then take their first steps in Cisco IOS on switches and end devices. Validated lab: a switch with a hostname, passwords, a management address and a saved configuration, reachable from a PC.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Networks & Models",
+     "content": "Components, topologies, network types, OSI and TCP/IP models, standards",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Basic Device Configuration",
+     "content": "Cisco IOS, switch and end-device configuration",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "From Links to Packets",
+   "hours": 6,
+   "focus": "Media, Ethernet and switching, IP packets, ARP and Neighbor Discovery",
+   "intro": "Participants follow data from the cable to the packet: media and Ethernet frames, how a switch learns MAC addresses, then how IPv4 and IPv6 packets are routed and how addresses are resolved. Validated lab: a captured exchange that shows a MAC table filling, an ARP request and an IPv6 neighbor solicitation, on hosts addressed in advance by the trainer, observed in Packet Tracer simulation mode.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Physical & Data Link Layers",
+     "content": "Media, Ethernet frames, MAC addresses, switching, MAC address tables",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Network Layer & Address Resolution",
+     "content": "IPv4 and IPv6 packets, routing, ARP and IPv6 Neighbor Discovery",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Routers & IP Addressing",
+   "hours": 9,
+   "focus": "Router configuration, IPv4, subnetting and VLSM, IPv6",
+   "intro": "Participants configure a router as the default gateway, then learn IP addressing in depth: IPv4 structure and binary, subnetting and VLSM design, IPv6 address types, SLAAC and IPv6 subnetting. Validated lab: a VLSM addressing plan for a site with several LANs behind one router, implemented in dual stack and verified with ping and traceroute.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Basic Router Configuration",
+     "content": "Initial router settings, default gateway",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "IPv4 Addressing",
+     "content": "Address structure, binary, unicast, broadcast and multicast, public and private addresses",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Subnetting & VLSM",
+     "content": "Subnetting IPv4 networks, VLSM design",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.4",
+     "title": "IPv6 Addressing",
+     "content": "Address types, SLAAC, subnetting IPv6",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Transport, Services & Security",
+   "hours": 6,
+   "focus": "ICMP, TCP and UDP, DNS, DHCP, HTTP, securing a small network",
+   "intro": "Participants see how applications use the network through ICMP, TCP, UDP, DNS, DHCP and HTTP, then secure the devices of a small network against common threats with strong passwords and SSH. Validated lab: a small network where hosts get addresses from DHCP and reach a web server by name, and every device is managed only over SSH.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Transport & Application Layers",
+     "content": "ICMP, TCP and UDP, DNS, DHCP, HTTP",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Security Basics & Small Networks",
+     "content": "Threats, passwords, SSH, securing devices, building a small network",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A small business network, documented and presented",
+   "intro": "Each participant designs and builds the network of a small business from a written brief, reusing the phase labs, then documents it and troubleshoots faults injected by the trainer.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, write the VLSM addressing plan, build the topology in dual stack IPv4 and IPv6",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Harden & Document",
+     "content": "Device hardening and SSH access, addressing table, topology diagram, saved configurations",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Troubleshoot & Review",
+     "content": "Find and fix faults injected by the trainer; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Small Business Network",
+    "brief": "The network of a small business with a VLSM addressing plan, IPv4 and IPv6 connectivity, hardened Cisco devices managed over SSH, and documentation that lets another technician troubleshoot it.",
+    "stack": "Cisco Packet Tracer, Cisco IOS switches and routers, IPv4, IPv6, SSH",
+    "deliverable": "Packet Tracer file, addressing table, topology diagram, device configurations"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,213 @@
+{
+ "slug": "ccna-2-switching-routing-wireless",
+ "file": "Switching-Routing-Wireless-Essentials-CCNA-2-42h.docx",
+ "title": "Switching, Routing & Wireless Essentials (CCNA 2)",
+ "subtitle": "Design and secure a switched campus network with redundancy and wireless access",
+ "audience_line": "Participants who completed CCNA 1 or have equivalent networking experience",
+ "certifications": [
+  "CCNA (200-301 v1.1), course 2 of 3"
+ ],
+ "overview": "This programme is the second of three courses that prepare the Cisco CCNA 200-301 exam, aligned with Cisco Networking Academy Switching, Routing and Wireless Essentials v7. Participants segment networks with VLANs and trunks, route between them, make the LAN resilient with STP, EtherChannel and HSRP, provide addresses with DHCPv4, SLAAC and DHCPv6, secure switch ports against layer 2 attacks, deploy a wireless LAN through a controller secured with WPA2, and compare it with WPA3, and configure and troubleshoot static routing. Every chapter ends with a lab in Cisco Packet Tracer, and the programme closes with a final project: a campus network built and presented by each participant. Enterprise Networking, Security & Automation (CCNA 3) follows.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Participants who completed CCNA 1 or have equivalent networking experience"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Introduction to Networks (CCNA 1), or equivalent: IOS configuration, IPv4 and IPv6 addressing, subnetting. These topics are not taught again"
+  },
+  {
+   "label": "Duration",
+   "value": "42 h: 36 h of chapters + 6 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs on simulated Cisco devices"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant with Cisco Packet Tracer (free with each participant’s Cisco Networking Academy account); physical Cisco switches, routers and a wireless controller for selected labs when the organiser provides a rack; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can build a redundant, secured campus LAN with VLANs, inter-VLAN routing, wireless access and static routing, and troubleshoot it"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Switching & VLANs",
+   "hours": 9,
+   "focus": "Switch configuration, VLANs and trunks, inter-VLAN routing",
+   "intro": "Participants configure switches for secure remote management, split the network into VLANs carried over 802.1Q trunks, then route between the VLANs with a router-on-a-stick and a layer 3 switch. Validated lab: three VLANs that reach each other through both inter-VLAN routing methods.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Switching Concepts & Configuration",
+     "content": "Switch boot and SSH, frame forwarding, collision and broadcast domains",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "VLANs & Trunking",
+     "content": "VLANs, 802.1Q trunks, native VLAN, DTP",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Inter-VLAN Routing",
+     "content": "Router-on-a-stick, layer 3 switch",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Redundancy & Address Services",
+   "hours": 9,
+   "focus": "STP, EtherChannel, DHCPv4, SLAAC and DHCPv6, HSRP",
+   "intro": "Redundant links and gateways keep a LAN running when one part fails. Participants prevent loops with Rapid PVST+ and bundle links with EtherChannel, hand out IPv4 and IPv6 addresses with DHCPv4, SLAAC and DHCPv6, then protect the default gateway with HSRP. Validated lab: a LAN that keeps forwarding when a link or a gateway fails, with hosts addressed automatically in both IP versions.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "STP",
+     "content": "Loop prevention, STP and Rapid PVST+, PortFast, BPDU guard",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "EtherChannel",
+     "content": "LACP and PAgP, configuration and verification",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "DHCPv4",
+     "content": "DHCPv4 server and relay",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "SLAAC & DHCPv6",
+     "content": "SLAAC, stateless and stateful DHCPv6",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.5",
+     "title": "First Hop Redundancy",
+     "content": "FHRP concepts, HSRP",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "LAN Security & Wireless",
+   "hours": 6,
+   "focus": "Layer 2 attack mitigation, WLAN with a controller, WPA2 and WPA3",
+   "intro": "Participants protect switch ports against common layer 2 attacks, then deploy a wireless LAN managed by a wireless LAN controller and secured with WPA2 and WPA3. Validated lab: a switch that blocks a rogue DHCP server with DHCP snooping and shuts down a port on a port-security violation, and a WLAN configured on the controller with WPA2-Personal and WPA2-Enterprise.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "LAN Security",
+     "content": "Port security, DHCP snooping, dynamic ARP inspection, VLAN and STP attack mitigation",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Wireless LANs",
+     "content": "802.11 concepts, WLAN components, WLC configuration, WPA2 and WPA3",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Routing",
+   "hours": 6,
+   "focus": "Routing table, static and default routes, troubleshooting, skills integration",
+   "intro": "Participants read the routing table and configure IPv4 and IPv6 static, default and floating static routes, troubleshoot them methodically, then combine switching, routing and wireless in one integration lab. Validated lab: two sites joined by IPv4 and IPv6 static routes, with a floating static route that takes over when the primary link fails, inside the integrated switching and wireless topology.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Routing Concepts & Static Routing",
+     "content": "Routing table, path selection, IPv4 and IPv6 static, default and floating static routes",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Troubleshooting Static Routes",
+     "content": "Methodical troubleshooting of static and default routes",
+     "format": "Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Skills Integration",
+     "content": "Integrated switching, routing and wireless lab",
+     "format": "Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A campus network, built and presented",
+   "intro": "Each participant builds a campus network in Packet Tracer from a written brief, reusing the phase labs, then documents it and defends the design in front of the group.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, then build VLANs and trunks, inter-VLAN routing, STP and EtherChannel, HSRP and static routing",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Services, Security & Documentation",
+     "content": "DHCPv4 and DHCPv6, LAN security, the WLAN; topology diagram and addressing table",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Demo & Review",
+     "content": "Failover demo (link and gateway), questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Campus Network",
+    "brief": "A campus network with VLANs and trunks, inter-VLAN routing, STP and EtherChannel, HSRP, DHCPv4 and DHCPv6, LAN security, a controller-based WLAN and static routing to the provider, which keeps working when a link or gateway fails.",
+    "stack": "Cisco Packet Tracer, Cisco IOS switches and routers, wireless LAN controller, IPv4, IPv6",
+    "deliverable": "Packet Tracer file, topology diagram, addressing table, failover demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

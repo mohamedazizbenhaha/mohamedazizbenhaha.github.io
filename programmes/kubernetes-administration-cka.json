@@ -1,0 +1,92 @@
+{
+ "slug": "kubernetes-administration-cka",
+ "file": "Kubernetes-Administration-CKA-36h.docx",
+ "title": "Kubernetes Administration (CKA)",
+ "subtitle": "Install, secure, upgrade and troubleshoot Kubernetes clusters",
+ "audience_line": "Engineers who run Kubernetes clusters and are preparing the CKA exam",
+ "certifications": [
+  "Certified Kubernetes Administrator (CKA)"
+ ],
+ "overview": "This programme prepares participants to administer Kubernetes clusters and to pass the Certified Kubernetes Administrator exam on its 2025 curriculum. They install a highly available cluster with kubeadm, upgrade it and back up etcd, secure it with RBAC and security contexts, control scheduling, configure cluster networking from the CNI to the Gateway API, manage storage, and extend the cluster with Helm, Kustomize, custom resources and operators. Troubleshooting runs through every phase, a timed mock exam measures readiness, and the programme closes with a final project: a cluster built, secured, upgraded and repaired by each team.",
+ "facts": [
+  {"label": "Audience", "value": "Engineers who run Kubernetes clusters and are preparing the CKA exam"},
+  {"label": "Prerequisites", "value": "Kubernetes user level (course: Docker & Kubernetes): Pods, Deployments, Services, Helm. Using Kubernetes is not taught again; this course is about running it"},
+  {"label": "Duration", "value": "36 h: 30 h of chapters + 6 h buffer"},
+  {"label": "Format", "value": "Short lectures followed by guided labs at the command line; one timed mock exam"},
+  {"label": "Lab environment", "value": "Runs on premises: one lab server per team of two (64 GB RAM), provided by the organiser, hosting the Ubuntu virtual machines of each cluster (three control-plane nodes, two workers, a load balancer); open-source software only; no cloud account or cost"},
+  {"label": "Assessment", "value": "A lab validated at the end of each phase, a timed mock exam and a final project presented to the group; certificate of completion for participants who complete the labs and the project"},
+  {"label": "Outcome", "value": "Participants can install, secure, upgrade, back up and troubleshoot a Kubernetes cluster from the command line and sit the CKA exam"}
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Cluster Installation & Lifecycle",
+   "hours": 6,
+   "focus": "kubeadm, highly available control plane, upgrades, etcd backup",
+   "intro": "Participants build a cluster the way the exam and production expect: a container runtime, kubeadm, a highly available control plane behind a load balancer. They then upgrade it one minor version and back up and restore etcd. Validated lab: a three-control-plane cluster upgraded without downtime, restored from an etcd snapshot.",
+   "chapters": [
+    {"id": "1.1", "title": "Cluster Installation", "content": "kubeadm, highly available control plane, container runtime", "format": "Lecture + Lab", "hours": 3},
+    {"id": "1.2", "title": "Cluster Lifecycle", "content": "Version upgrades, etcd backup and restore", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Security & Scheduling",
+   "hours": 6,
+   "focus": "RBAC, ServiceAccounts, security contexts, scheduling controls",
+   "intro": "Participants grant each user and workload only the access it needs, run containers with restrictive security contexts, then decide where pods run with taints and tolerations, affinity, resource requests and priority classes. Validated lab: a team namespace with least-privilege RBAC, and a workload pinned to dedicated nodes that keeps priority under pressure.",
+   "chapters": [
+    {"id": "2.1", "title": "Security", "content": "RBAC, ServiceAccounts, security contexts", "format": "Lecture + Lab", "hours": 3},
+    {"id": "2.2", "title": "Scheduling", "content": "Taints and tolerations, affinity, resource requests and limits, priority classes", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Networking, Storage & Extensions",
+   "hours": 6,
+   "focus": "CNI, Services and DNS, NetworkPolicies, Gateway API, storage, Helm, CRDs",
+   "intro": "Participants configure cluster networking from the CNI plugin to Services, CoreDNS, NetworkPolicies and the Gateway API, migrate an Ingress off the retired ingress-nginx, provision storage dynamically, and extend the cluster with Helm, Kustomize, custom resources and operators. Validated lab: an application reachable through the Gateway API, isolated by NetworkPolicies, with a dynamically provisioned volume.",
+   "chapters": [
+    {"id": "3.1", "title": "Networking", "content": "CNI, Services, CoreDNS, NetworkPolicies, Gateway API, Ingress and migrating off ingress-nginx", "format": "Lecture + Lab", "hours": 3},
+    {"id": "3.2", "title": "Storage", "content": "PersistentVolumes and PersistentVolumeClaims, StorageClasses, dynamic provisioning", "format": "Lecture + Lab", "hours": 1.5},
+    {"id": "3.3", "title": "Extending Kubernetes", "content": "Helm, Kustomize, custom resource definitions and operators", "format": "Lecture + Lab", "hours": 1.5}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Troubleshooting & Exam Preparation",
+   "hours": 6,
+   "focus": "Node, pod and network troubleshooting, timed mock exam",
+   "intro": "Participants diagnose broken nodes, failing pods and network faults from logs, events and metrics, then sit a timed mock exam and learn the kubectl techniques that save time in a performance-based exam. Validated lab: a cluster with injected faults returned to a healthy state.",
+   "chapters": [
+    {"id": "4.1", "title": "Troubleshooting", "content": "Nodes, pods, networking, logs and monitoring", "format": "Lecture + Lab", "hours": 3},
+    {"id": "4.2", "title": "Exam Preparation", "content": "Timed mock exam, kubectl speed techniques", "format": "Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A highly available cluster, built, secured, upgraded and repaired",
+   "intro": "Each team builds a production-style cluster from a written brief on its lab server, reusing the phase labs, then repairs the faults injected by the trainer and presents its runbook.",
+   "chapters": [
+    {"id": "5.1", "title": "Brief & Build", "content": "Read the brief, build a highly available cluster with kubeadm, secure it with RBAC and NetworkPolicies", "format": "Project", "hours": 3},
+    {"id": "5.2", "title": "Operate & Document", "content": "Back up and restore etcd, upgrade the cluster, write the runbook", "format": "Project", "hours": 1.5},
+    {"id": "5.3", "title": "Fault Repair & Review", "content": "Fix the faults injected by the trainer; questions and feedback", "format": "Project", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "A Production-Style Kubernetes Cluster",
+    "brief": "A highly available cluster built with kubeadm, secured with RBAC and NetworkPolicies, backed up and restored from etcd, upgraded one minor version, and returned to health after faults injected by the trainer.",
+    "stack": "Kubernetes, kubeadm, containerd, etcd, a CNI plugin, CoreDNS, Gateway API, Helm, Kustomize, kubectl",
+    "deliverable": "Working cluster, runbook (install, backup, upgrade, recovery), fault report"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

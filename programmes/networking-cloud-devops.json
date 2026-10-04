@@ -1,0 +1,128 @@
+{
+ "slug": "networking-cloud-devops",
+ "file": "Networking-for-Cloud-and-DevOps-18h.docx",
+ "title": "Networking for Cloud & DevOps",
+ "subtitle": "The networking a developer or DevOps engineer needs to deploy and debug services",
+ "audience_line": "Developers, DevOps and cloud engineers without a networking background",
+ "certifications": [],
+ "overview": "This workshop gives developers and DevOps engineers the networking they meet every day when they deploy and debug services. Participants work through IP addressing and subnetting, DNS, HTTP and TLS, routing, NAT, firewalls and VPNs, then load balancers, reverse proxies and CDNs, with their cloud equivalents, always with the command-line tools used to check each layer. The workshop closes with a final project: a multi-tier web deployment with injected faults, which participants diagnose and repair.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Developers, DevOps and cloud engineers without a networking background"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None. Comfort with a Linux terminal helps (course: Linux & Bash Scripting). No networking knowledge needed"
+  },
+  {
+   "label": "Duration",
+   "value": "18 h: 15 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Workshop: short lectures, each followed by hands-on exercises at the command line"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant (8 GB RAM, Docker) running a multi-tier web stack in containers prepared by the trainer (DNS server, load balancer, web and database tiers); no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "Exercises validated during each phase and a final troubleshooting project; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can read a network path from client to service, plan subnets, and find and fix DNS, TLS, routing, firewall and load-balancer faults with standard tools"
+  }
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Network Foundations",
+   "hours": 6,
+   "focus": "TCP/IP, IPv4 addressing and subnetting, DNS, HTTP and TLS",
+   "intro": "Participants build the mental model used for the rest of the workshop: layers, addresses and subnets, then the application protocols that every web service depends on. Validated exercise: a subnet plan for a three-tier application, and a request traced from DNS lookup to TLS handshake to HTTP response.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "TCP/IP Essentials",
+     "content": "OSI and TCP/IP models, Ethernet, IPv4 addressing, subnetting, CIDR",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Application Protocols",
+     "content": "DNS, HTTP and HTTPS, TLS and certificates",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Routing, Traffic & Troubleshooting",
+   "hours": 6,
+   "focus": "Routing, NAT, firewalls, load balancing and diagnostic tools",
+   "intro": "Participants follow traffic across routers, NAT and firewalls, see how load balancers, reverse proxies and CDNs spread it across servers, then practise a layer-by-layer troubleshooting method with the standard Linux tools. Validated exercise: a packet capture that shows why a request through the load balancer fails.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Routing & Edges",
+     "content": "Routing, NAT, firewalls, VPN basics; cloud equivalents: VPC subnets, route tables, security groups",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Traffic Management",
+     "content": "Layer 4 and layer 7 load balancing, reverse proxies, CDN; managed cloud load balancers",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Troubleshooting",
+     "content": "ip, ss, dig, curl, traceroute, tcpdump",
+     "format": "Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 3,
+   "focus": "Diagnose and repair a broken multi-tier deployment",
+   "intro": "Teams of two receive a multi-tier web deployment in which the trainer has injected faults, find each fault with the tools from the workshop, fix it and explain it to the group.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Brief & Diagnosis",
+     "content": "Read the incident report, map the deployment, locate the faults layer by layer",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Fix & Debrief",
+     "content": "Fix the DNS, TLS, load-balancer and firewall faults, write the incident notes, present root causes to the group",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Broken Deployment Rescue",
+    "brief": "A multi-tier web deployment that does not answer: participants trace the path from client to database, find the injected DNS, TLS, load-balancer and firewall faults, and restore the service.",
+    "stack": "Linux, Docker, CoreDNS, HAProxy, Nginx, OpenSSL, ip, ss, dig, curl, traceroute, tcpdump",
+    "deliverable": "Working deployment, incident notes with root cause for each fault"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

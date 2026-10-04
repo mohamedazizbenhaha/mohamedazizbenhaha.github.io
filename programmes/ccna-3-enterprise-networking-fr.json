@@ -1,0 +1,221 @@
+{
+ "slug": "ccna-3-enterprise-networking-fr",
+ "file": "Reseaux-d-entreprise-securite-et-automatisation-CCNA-3-42h.docx",
+ "lang": "fr",
+ "title": "Réseaux d’entreprise, sécurité et automatisation (CCNA 3)",
+ "subtitle": "Relier, sécuriser, administrer et automatiser un réseau d’entreprise multisite",
+ "audience_line": "Participants ayant suivi le CCNA 2 et qui préparent l’examen CCNA",
+ "certifications": [
+  "CCNA (200-301 v1.1), cours 3 sur 3"
+ ],
+ "overview": "Ce programme est le troisième des trois cours qui préparent l’examen Cisco CCNA 200-301, aligné sur le cursus Enterprise Networking, Security and Automation v7 de la Cisco Networking Academy. Les participants routent entre sites avec OSPFv2 en zone unique, filtrent le trafic avec des listes de contrôle d’accès, relient le réseau à Internet avec la NAT et la PAT, et étudient les technologies WAN, les VPN avec IPsec, et la QoS. Ils administrent, conçoivent et dépannent le réseau, et l’automatisent avec les API REST et Python. Un examen blanc chronométré couvre les trois cours, et le programme s’achève par un projet final : le réseau documenté d’un site distant d’entreprise.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Participants ayant suivi le CCNA 2 et qui préparent l’examen CCNA"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Commutation, routage et sans-fil : notions essentielles (CCNA 2), ou équivalent ; ces sujets ne sont pas réenseignés. Python non requis"
+  },
+  {
+   "label": "Durée",
+   "value": "42 h : 36 h de chapitres + 6 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés sur équipements Cisco simulés ; un examen blanc"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant avec Cisco Packet Tracer (gratuit avec un compte Cisco Networking Academy ; son contrôleur réseau sert aux TP d’API REST) et Python 3 ; routeurs Cisco physiques pour certains TP lorsque l’organisateur fournit une baie ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase, un examen blanc et un projet final présenté au groupe ; attestation de formation pour qui valide les TP et le projet"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent construire, sécuriser et administrer un réseau multisite (OSPF, ACL, NAT), l’interroger via une API REST en Python, et passer l’examen CCNA 200-301"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "OSPF",
+   "hours": 6,
+   "focus": "Configuration, réglage et dépannage d’OSPFv2 en zone unique",
+   "intro": "Les participants remplacent les routes statiques par un protocole de routage dynamique : OSPFv2 en zone unique, ses voisins et sa base de données d’états de liens, puis l’élection DR et BDR, le réglage du coût et la propagation de la route par défaut. TP validé : trois sites routés par OSPF, avec une route par défaut vers Internet apprise par chaque routeur.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "OSPFv2 en zone unique",
+     "content": "Concepts OSPF, configuration et vérification",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "OSPF en pratique",
+     "content": "Réseaux à accès multiple, DR et BDR, coût, propagation de la route par défaut, dépannage",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Sécurité, ACL et NAT",
+   "hours": 9,
+   "focus": "Menaces, listes de contrôle d’accès, NAT et PAT",
+   "intro": "Les participants passent en revue les menaces qui visent un réseau d’entreprise, puis filtrent le trafic avec des ACL standard, étendues et nommées placées au bon endroit, et relient l’adressage privé à Internet avec la NAT statique, la NAT dynamique et la PAT. TP validé : une politique de sécurité écrite sous forme d’ACL, testée sur des flux autorisés et refusés, avec des utilisateurs qui accèdent à Internet via la PAT.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Concepts de sécurité réseau",
+     "content": "Menaces, types d’attaques, bonnes pratiques de sécurité",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Concepts des ACL",
+     "content": "Masques génériques (wildcard), types d’ACL, placement",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Configuration des ACL",
+     "content": "ACL IPv4 standard, étendues et nommées, sécurisation de l’accès VTY",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.4",
+     "title": "NAT pour IPv4",
+     "content": "NAT statique, NAT dynamique, PAT",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "WAN, VPN et administration du réseau",
+   "hours": 6,
+   "focus": "WAN et SD-WAN, VPN et IPsec, QoS, protocoles d’administration",
+   "intro": "Les participants comparent les technologies WAN, voient comment les VPN site à site et d’accès distant protègent le trafic avec IPsec et GRE, comment la QoS donne la priorité au trafic sensible, puis administrent les équipements avec CDP, LLDP, NTP, SNMP et syslog et sauvegardent configurations et images IOS. TP validé : des routeurs synchronisés par NTP, qui envoient leurs données syslog et SNMP à un serveur d’administration, avec des configurations sauvegardées.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Concepts WAN",
+     "content": "Topologies et technologies WAN, haut débit, présentation du SD-WAN",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Concepts VPN et IPsec",
+     "content": "VPN site à site et d’accès distant, IPsec, GRE",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Concepts de QoS",
+     "content": "Caractéristiques du trafic, files d’attente, modèles et mécanismes de QoS",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Administration du réseau",
+     "content": "CDP et LLDP, NTP, SNMP, syslog, sauvegarde des configurations et gestion des images IOS",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Conception, automatisation et révision CCNA",
+   "hours": 9,
+   "focus": "Conception évolutive, dépannage, SDN, automatisation, examen blanc",
+   "intro": "Les participants conçoivent des réseaux hiérarchiques évolutifs et les dépannent avec méthode, voient comment la virtualisation, le SDN et les contrôleurs comme Catalyst Center changent l’exploitation des réseaux, et lisent les données des équipements via une API REST avec un court script Python. Un examen blanc chronométré sur les trois cours CCNA clôt la phase. TP validé : un script Python qui liste les équipements connus du contrôleur réseau de Packet Tracer.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Conception et dépannage du réseau",
+     "content": "Conception hiérarchique et évolutive, méthodologie et outils de dépannage",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Virtualisation des réseaux",
+     "content": "Cloud, virtualisation, SDN et réseaux pilotés par contrôleur",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Automatisation des réseaux",
+     "content": "API REST, JSON et YAML, outils de gestion de configuration, Catalyst Center, IA dans l’exploitation des réseaux",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.4",
+     "title": "Révision CCNA 200-301",
+     "content": "Examen blanc chronométré sur les trois cours et correction",
+     "format": "TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Le réseau d’un site distant d’entreprise, documenté et testé",
+   "intro": "Chaque participant construit le réseau qui relie un site distant à son siège à partir d’un cahier des charges écrit, en réutilisant les TP de phase, puis le documente et le teste avant de le présenter au groupe.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, puis configurer OSPF entre les sites, la politique de sécurité par ACL et la PAT vers Internet",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Administration, automatisation et documentation",
+     "content": "SNMP, syslog et NTP ; un script Python qui lit les données des équipements via une API REST ; conception du VPN site à site ; plan de tests et documentation",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Démonstration et revue",
+     "content": "Résultats des tests et démonstration en direct ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Réseau d’un site distant d’entreprise",
+    "brief": "Un site distant relié à son siège : OSPF entre les sites, une politique de sécurité par ACL, la PAT vers Internet, la conception d’un VPN site à site, l’administration par SNMP, syslog et NTP, et un script Python qui lit les données des équipements via une API REST ; documenté et testé.",
+    "stack": "Cisco Packet Tracer et son contrôleur réseau, routeurs et commutateurs Cisco IOS, OSPFv2, ACL, NAT, SNMP, syslog, NTP, API REST, Python",
+    "deliverable": "Fichier Packet Tracer, script Python, document de conception, résultats des tests, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,129 @@
+{
+ "slug": "networking-cloud-devops-fr",
+ "file": "Reseaux-pour-le-cloud-et-le-DevOps-18h.docx",
+ "lang": "fr",
+ "title": "Réseaux pour le cloud et le DevOps",
+ "subtitle": "Le réseau dont un développeur ou un ingénieur DevOps a besoin pour déployer et dépanner des services",
+ "audience_line": "Développeurs, ingénieurs DevOps et cloud sans formation en réseau",
+ "certifications": [],
+ "overview": "Cet atelier donne aux développeurs et aux ingénieurs DevOps les notions de réseau qu’ils rencontrent chaque jour en déployant et en dépannant des services. Les participants abordent l’adressage IP et le découpage en sous-réseaux, DNS, HTTP et TLS, le routage, la NAT, les pare-feu et les VPN, puis les répartiteurs de charge, les reverse proxies et les CDN, avec leurs équivalents cloud, toujours avec les outils en ligne de commande qui permettent de vérifier chaque couche. L’atelier s’achève par un projet final : un déploiement web multiniveau dans lequel des pannes ont été injectées, que les participants diagnostiquent et réparent.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Développeurs, ingénieurs DevOps et cloud sans formation en réseau"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aucun. L’aisance dans un terminal Linux aide (cours : Linux et scripting Bash). Aucune connaissance réseau nécessaire"
+  },
+  {
+   "label": "Durée",
+   "value": "18 h : 15 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Atelier : cours courts, chacun suivi d’exercices pratiques en ligne de commande"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant (8 Go de RAM, Docker) qui fait tourner une application web multiniveau en conteneurs préparée par le formateur (serveur DNS, répartiteur de charge, niveaux web et base de données) ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Exercices validés dans chaque phase et un projet final de dépannage ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent suivre le chemin réseau du client au service, planifier des sous-réseaux, et trouver et corriger des pannes DNS, TLS, de routage, de pare-feu et de répartiteur de charge avec les outils standard"
+  }
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Fondamentaux des réseaux",
+   "hours": 6,
+   "focus": "TCP/IP, adressage IPv4 et sous-réseaux, DNS, HTTP et TLS",
+   "intro": "Les participants construisent le modèle mental utilisé pendant tout l’atelier : couches, adresses et sous-réseaux, puis les protocoles applicatifs dont dépend tout service web. Exercice validé : un plan de sous-réseaux pour une application à trois niveaux, et une requête suivie de la résolution DNS à la négociation TLS puis à la réponse HTTP.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "L’essentiel de TCP/IP",
+     "content": "Modèles OSI et TCP/IP, Ethernet, adressage IPv4, sous-réseaux, CIDR",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Protocoles applicatifs",
+     "content": "DNS, HTTP et HTTPS, TLS et certificats",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Routage, trafic et dépannage",
+   "hours": 6,
+   "focus": "Routage, NAT, pare-feu, répartition de charge et outils de diagnostic",
+   "intro": "Les participants suivent le trafic à travers routeurs, NAT et pare-feu, voient comment répartiteurs de charge, reverse proxies et CDN le distribuent entre serveurs, puis pratiquent une méthode de dépannage couche par couche avec les outils Linux standard. Exercice validé : une capture de paquets qui montre pourquoi une requête échoue à travers le répartiteur de charge.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Routage et bordure du réseau",
+     "content": "Routage, NAT, pare-feu, bases des VPN ; équivalents cloud : sous-réseaux VPC, tables de routage, groupes de sécurité",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Gestion du trafic",
+     "content": "Répartition de charge de niveau 4 et 7, reverse proxies, CDN ; répartiteurs de charge managés du cloud",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Dépannage",
+     "content": "ip, ss, dig, curl, traceroute, tcpdump",
+     "format": "TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 3,
+   "focus": "Diagnostiquer et réparer un déploiement multiniveau en panne",
+   "intro": "Par binômes, les participants reçoivent un déploiement web multiniveau dans lequel le formateur a injecté des pannes, trouvent chaque panne avec les outils de l’atelier, la corrigent et l’expliquent au groupe.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Cahier des charges et diagnostic",
+     "content": "Lire le rapport d’incident, cartographier le déploiement, localiser les pannes couche par couche",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Correction et restitution",
+     "content": "Corriger les pannes DNS, TLS, de répartiteur de charge et de pare-feu, rédiger les notes d’incident, présenter les causes au groupe",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Sauvetage d’un déploiement en panne",
+    "brief": "Un déploiement web multiniveau qui ne répond plus : les participants suivent le chemin du client à la base de données, trouvent les pannes DNS, TLS, de répartiteur de charge et de pare-feu injectées, et rétablissent le service.",
+    "stack": "Linux, Docker, CoreDNS, HAProxy, Nginx, OpenSSL, ip, ss, dig, curl, traceroute, tcpdump",
+    "deliverable": "Déploiement fonctionnel, notes d’incident avec la cause de chaque panne"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}
