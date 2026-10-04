@@ -1,0 +1,83 @@
+{
+ "slug": "aws-ai-practitioner-genai",
+ "file": "AWS-AI-Practitioner-and-Generative-AI-33h.docx",
+ "title": "AWS AI Practitioner & Generative AI",
+ "subtitle": "Use AI, machine learning and generative AI services on AWS responsibly",
+ "audience_line": "IT professionals, developers, analysts and managers working with AI on AWS",
+ "certifications": [
+  "AWS Certified AI Practitioner (AIF-C01)"
+ ],
+ "overview": "This programme gives participants a practical understanding of AI, machine learning and generative AI on Amazon Web Services and prepares the AWS Certified AI Practitioner exam (AIF-C01). They learn the ML lifecycle and the ready-made AI services for vision, language, documents and speech, then the concepts behind foundation models, prompt engineering, and Amazon Bedrock with knowledge bases, agents and customisation. They use SageMaker Canvas and JumpStart, see what Amazon Q offers, and apply responsible AI, security and governance practices. Exam practice closes the content, and the programme ends with a final project: a generative AI assistant on Bedrock built and presented by each team.",
+ "facts": [
+  {"label": "Audience", "value": "IT professionals, developers, analysts and managers working with AI on AWS"},
+  {"label": "Prerequisites", "value": "None in AI. Familiarity with core AWS services helps (course: AWS Cloud Practitioner) but is not required"},
+  {"label": "Duration", "value": "33 h: 27 h of chapters + 6 h buffer"},
+  {"label": "Format", "value": "Short lectures followed by guided labs in the AWS console; exam practice"},
+  {"label": "Lab environment", "value": "One laptop per participant with a browser; one AWS sandbox account per team with Bedrock model access enabled and a budget alert, provided by the organiser; knowledge bases and endpoints deleted at the end of each lab to control cost"},
+  {"label": "Assessment", "value": "A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project"},
+  {"label": "Outcome", "value": "Participants can choose the right AWS AI service for a use case, build a guarded RAG assistant with Bedrock, estimate its cost and sit the AIF-C01 exam"}
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "AI & ML on AWS",
+   "hours": 6,
+   "focus": "AI and ML concepts, the ML lifecycle, ready-made AI services",
+   "intro": "Participants learn the vocabulary of AI and machine learning and the lifecycle of an ML project on AWS, then use ready-made services for images, text, documents, speech and translation without training a model. Validated lab: a document processed by Textract, its text analysed by Comprehend and its summary read aloud by Polly.",
+   "chapters": [
+    {"id": "1.1", "title": "AI & ML Fundamentals", "content": "Concepts, the ML lifecycle on AWS", "format": "Lecture + Workshop", "hours": 3},
+    {"id": "1.2", "title": "AWS AI Services", "content": "Rekognition, Comprehend, Textract, Lex, Polly, Transcribe, Translate", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Generative AI & Amazon Bedrock",
+   "hours": 6,
+   "focus": "Foundation models, prompting, Bedrock knowledge bases, agents and customisation",
+   "intro": "Participants learn how foundation models work and where they fail, write effective prompts, then build with Amazon Bedrock: model choice in the playgrounds, retrieval-augmented generation with Knowledge Bases, Agents and model customisation. Validated lab: a Bedrock Knowledge Base that answers questions over a set of company documents with cited sources.",
+   "chapters": [
+    {"id": "2.1", "title": "Generative AI Concepts", "content": "Foundation models, tokens, embeddings, use cases and limits", "format": "Lecture + Workshop", "hours": 1.5},
+    {"id": "2.2", "title": "Prompt Engineering", "content": "Techniques and pitfalls", "format": "Lecture + Lab", "hours": 1.5},
+    {"id": "2.3", "title": "Amazon Bedrock", "content": "Models, playgrounds, Knowledge Bases (RAG), Agents, customisation", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Tools, Responsible AI & Exam Preparation",
+   "hours": 9,
+   "focus": "SageMaker Canvas and JumpStart, Amazon Q, responsible AI, security, AIF-C01",
+   "intro": "Participants build a model without code in SageMaker Canvas and deploy a pretrained one from JumpStart, see the use cases of Amazon Q Business and Q Developer, apply responsible AI with Bedrock Guardrails and SageMaker Clarify, and secure and govern AI workloads before practising AIF-C01 questions. Validated lab: a Bedrock Guardrail that blocks a denied topic and masks personal data in the assistant's answers.",
+   "chapters": [
+    {"id": "3.1", "title": "SageMaker AI for Practitioners", "content": "SageMaker Canvas, JumpStart", "format": "Lecture + Lab", "hours": 1.5},
+    {"id": "3.2", "title": "Amazon Q", "content": "Amazon Q Business and Q Developer use cases", "format": "Lecture + Workshop", "hours": 1.5},
+    {"id": "3.3", "title": "Responsible AI", "content": "Bias, transparency, Bedrock Guardrails, SageMaker Clarify", "format": "Lecture + Lab", "hours": 1.5},
+    {"id": "3.4", "title": "Security & Governance", "content": "Data privacy, compliance for AI workloads", "format": "Lecture + Workshop", "hours": 1.5},
+    {"id": "3.5", "title": "AIF-C01 Preparation", "content": "Practice questions and review", "format": "Lecture + Workshop", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A generative AI assistant on Bedrock, presented to the group",
+   "intro": "Teams of two or three build an assistant for a company's documents from a written brief, reusing the phase labs, then present it with its cost estimate as they would to a business sponsor.",
+   "chapters": [
+    {"id": "4.1", "title": "Brief & Build", "content": "Read the brief, build the Knowledge Base over the company documents, connect one AI service such as Textract", "format": "Project", "hours": 3},
+    {"id": "4.2", "title": "Guard & Estimate", "content": "Guardrails, test questions, cost estimate, architecture diagram", "format": "Project", "hours": 1.5},
+    {"id": "4.3", "title": "Demo & Review", "content": "Live demo including a blocked request, cleanup; questions and feedback", "format": "Project", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "A Generative AI Assistant on Bedrock",
+    "brief": "An assistant that answers questions over company documents through a Bedrock Knowledge Base, reads scanned documents with an AI service such as Textract, is protected by Guardrails and comes with a cost estimate.",
+    "stack": "AWS: Amazon Bedrock (Knowledge Bases, Guardrails), S3, Textract, AWS Pricing Calculator",
+    "deliverable": "Working assistant, test questions and results, cost estimate, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

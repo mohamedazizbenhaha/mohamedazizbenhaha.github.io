@@ -1,0 +1,122 @@
+{
+ "slug": "blockchain-for-business-fr",
+ "file": "La-blockchain-pour-l-entreprise-12h.docx",
+ "lang": "fr",
+ "title": "La blockchain pour l’entreprise",
+ "subtitle": "Comprendre la blockchain et décider où elle crée de la valeur",
+ "audience_line": "Managers, consultants et professionnels de l’IT qui évaluent des projets blockchain",
+ "certifications": [],
+ "overview": "Cet atelier explique ce qu’est une blockchain et comment décider si un processus métier en a besoin. Les participants découvrent d’où vient la blockchain et comment fonctionnent registres partagés, permissions, consensus et contrats intelligents, puis examinent les frictions métier qu’elle peut supprimer et des cas d’usage réels en finance, commerce, assurance et chaînes d’approvisionnement, y compris les cas où une base de données classique est le meilleur choix. L’atelier s’achève par un projet final où chaque équipe évalue un processus métier et conçoit le réseau dont il aurait besoin.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Managers, consultants et professionnels de l’IT qui évaluent des projets blockchain"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aucun. Aucune connaissance en programmation ou en cryptographie n’est nécessaire"
+  },
+  {
+   "label": "Durée",
+   "value": "12 h : 9 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Atelier : cours courts, chacun suivi d’exercices de groupe sur des cas métier"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant avec un navigateur ; un explorateur de blocs public et une démonstration d’un réseau permissionné par le formateur (réseau de test Hyperledger Fabric) ; ni compte ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Exercices de groupe revus dans chaque phase et une évaluation finale d’un cas d’usage présentée au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent expliquer le fonctionnement d’une blockchain, juger si un processus métier en a besoin, et esquisser les participants, permissions et contrats intelligents d’un réseau adapté"
+  }
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Fondamentaux de la blockchain",
+   "hours": 3,
+   "focus": "Origines, Bitcoin, registres distribués, consensus, contrats intelligents",
+   "intro": "Les participants découvrent d’où vient la blockchain et comment elle fonctionne : registres partagés, permissions, mécanismes de consensus, contrats intelligents et rôles des participants. Exercice validé : une transaction retrouvée dans un explorateur de blocs public, et la différence entre réseau public et réseau permissionné expliquée par chaque groupe.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Fondamentaux",
+     "content": "Origines, Bitcoin, registres distribués",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Fonctionnement",
+     "content": "Registre partagé, permissions, consensus, contrats intelligents, participants",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Valeur métier et cas d’usage",
+   "hours": 3,
+   "focus": "Frictions d’information, d’interaction et d’innovation, cas d’usage sectoriels, quand s’en passer",
+   "intro": "Les participants analysent les frictions métier qu’un registre partagé peut supprimer, étudient des cas d’usage en finance, commerce, assurance et chaînes d’approvisionnement, et apprennent les questions qui montrent quand une base de données classique est le meilleur choix. Exercice validé : une grille de décision appliquée à trois projets proposés.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Valeur métier",
+     "content": "Frictions d’information, d’interaction et d’innovation",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Cas d’usage",
+     "content": "Finance, commerce, assurance, chaîne d’approvisionnement ; quand ne pas utiliser la blockchain, y compris des consortiums arrêtés (TradeLens, we.trade)",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 3,
+   "focus": "L’évaluation d’un cas d’usage, présentée au groupe",
+   "intro": "Par équipes de deux ou trois, les participants choisissent un processus métier, décident s’il a besoin d’une blockchain à l’aide de la grille de l’atelier, et présentent leur recommandation comme ils le feraient devant un comité de pilotage.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Évaluation et conception",
+     "content": "Choisir un processus métier, décider blockchain ou non, concevoir le réseau : participants, permissions, contrats intelligents",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Présentation et revue",
+     "content": "Présenter la recommandation et la conception du réseau ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Évaluation d’un cas d’usage blockchain",
+    "brief": "Un processus métier évalué selon la grille de l’atelier, avec une décision argumentée pour ou contre la blockchain et, lorsqu’elle convient, la conception du réseau : participants, permissions et contrats intelligents.",
+    "stack": "Grille de décision, canevas de conception de réseau, explorateur de blocs public",
+    "deliverable": "Évaluation et recommandation, conception du réseau, présentation"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

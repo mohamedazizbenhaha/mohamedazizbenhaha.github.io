@@ -1,0 +1,200 @@
+{
+ "slug": "azure-devops-engineer-fr",
+ "file": "Azure-DevOps-Engineer-45h-FR.docx",
+ "lang": "fr",
+ "title": "Azure DevOps Engineer",
+ "subtitle": "Planifier, construire, livrer, sécuriser et superviser des logiciels sur Azure avec Azure DevOps et GitHub",
+ "audience_line": "Administrateurs Azure et développeurs qui construisent des chaînes de livraison sur Azure",
+ "certifications": [
+  "Microsoft Certified: DevOps Engineer Expert (AZ-400)"
+ ],
+ "overview": "Ce programme apprend aux participants à faire vivre des pratiques DevOps sur Microsoft Azure et prépare l’examen AZ-400 de la certification DevOps Engineer Expert. Ils planifient avec Azure Boards et GitHub Projects, gèrent le code dans Azure Repos et GitHub, construisent des pipelines YAML testés avec builds de conteneurs et flux de paquets, provisionnent l’infrastructure avec Bicep et Terraform, livrent progressivement sur AKS avec approbations, sécurisent les pipelines sans identifiants stockés, et bouclent avec Application Insights. Un entraînement à l’examen clôt le contenu, et le programme s’achève par un projet Azure DevOps complet, construit et présenté par chaque équipe.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Administrateurs Azure et développeurs qui construisent des chaînes de livraison sur Azure"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Administration Azure (cours : Azure Administrator) ou bases de la CI/CD (cours : Ingénierie DevOps) ; non réenseignées. La certification Expert exige aussi Azure Administrator ou Azure Developer Associate"
+  },
+  {
+   "label": "Durée",
+   "value": "45 h : 39 h de chapitres + 6 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés ; une même application reprise dans toutes les phases ; entraînement à l’examen"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant (Git, Azure CLI, VS Code, Docker) ; par équipe, une organisation Azure DevOps et une organisation GitHub (Advanced Security activé) et un abonnement Azure avec alerte budgétaire, fournis par l’organisateur ; ressources supprimées après chaque TP"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent faire passer une application du backlog à une livraison canary supervisée sur AKS via des pipelines sécurisés, et se présenter à l’examen AZ-400"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Planification et code source",
+   "hours": 6,
+   "focus": "Azure Boards, GitHub Projects, Azure Repos et GitHub, stratégies de branche",
+   "intro": "Les participants planifient le travail sur l’application du cours avec Azure Boards et GitHub Projects et en mesurent le flux, puis gèrent le code dans Azure Repos et GitHub avec un modèle de branches, des pull requests et des stratégies de branche. TP validé : un élément de backlog lié à une branche, une pull request relue et une branche principale protégée.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Planification",
+     "content": "Azure Boards, planification agile, GitHub Projects, indicateurs de flux, tableaux de bord ; wikis, documentation Markdown et Mermaid, notes de version, webhooks",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Gestion du code source",
+     "content": "Azure Repos et GitHub, modèles de branches, pull requests et stratégies de branche, permissions des dépôts, Git LFS, récupération et purge de données",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Intégration continue",
+   "hours": 9,
+   "focus": "Pipelines YAML, templates, ACR, Azure Artifacts, GitHub Actions",
+   "intro": "Les participants construisent l’application du cours avec Azure Pipelines en YAML, factorisent le pipeline en templates, construisent et poussent des images vers Azure Container Registry, publient des paquets versionnés dans Azure Artifacts, et lancent le même build depuis GitHub Actions vers Azure. TP validé : une pull request validée par un pipeline à base de templates, puis la fusion qui publie une image versionnée dans ACR et un paquet dans un flux.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Azure Pipelines",
+     "content": "Pipelines YAML, agents et pools, déclencheurs, phases (stages), travaux (jobs) et étapes (steps) ; stratégie de test, couverture de code, seuils de qualité",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Templates et builds de conteneurs",
+     "content": "Templates de pipeline, Azure Container Registry, builds multi-étapes dans les pipelines",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Gestion des paquets",
+     "content": "Azure Artifacts et GitHub Packages, flux, vues et sources amont, versionnement SemVer ; GitHub Actions vers Azure avec OpenID Connect ; santé des pipelines, rétention, migration des pipelines classiques vers YAML",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Infrastructure et déploiement",
+   "hours": 9,
+   "focus": "Bicep et Terraform, gestion de configuration, AKS, stratégies de livraison",
+   "intro": "Les participants provisionnent l’environnement du cours avec Bicep et Terraform et maintiennent la configuration des machines dans un état attendu, créent un cluster AKS et y déploient depuis les pipelines, puis livrent en sécurité avec environnements, approbations et vérifications, déploiements blue-green et canary et indicateurs de fonctionnalité (feature flags). TP validé : une livraison canary sur AKS promue après approbation, avec une infrastructure créée par le pipeline.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Infrastructure en code",
+     "content": "Bicep, Terraform sur Azure, configuration d’état souhaité avec Azure Machine Configuration (Automation State Configuration, service historique) ; Azure Deployment Environments",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "AKS",
+     "content": "Provisionnement, déploiement depuis les pipelines, mise à l’échelle",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Stratégies de livraison",
+     "content": "Environnements, approbations et vérifications, blue-green, canary, emplacements de déploiement, indicateurs de fonctionnalité (feature flags) avec Azure App Configuration",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Sécurité et supervision",
+   "hours": 9,
+   "focus": "Key Vault, identité fédérée, Advanced Security, Application Insights, préparation AZ-400",
+   "intro": "Les participants retirent les secrets des pipelines avec Key Vault et des connexions de service fondées sur la fédération d’identité de charge de travail, analysent code et dépendances avec GitHub Advanced Security for Azure DevOps et Defender for Cloud, puis bouclent avec Application Insights, KQL, tableaux de bord et alertes avant de s’entraîner sur des questions AZ-400. TP validé : un pipeline qui déploie sans identifiant stocké, un push contenant un secret bloqué par la protection des push, et une alerte sur le taux d’échec de l’application.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Pipelines sécurisés",
+     "content": "Key Vault, connexions de service avec fédération d’identité de charge de travail, permissions, GitHub Advanced Security for Azure DevOps, sécurité DevOps de Defender for Cloud, GitHub Apps et GITHUB_TOKEN, groupes de sécurité Azure DevOps",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Supervision et retours",
+     "content": "Application Insights, Container insights, KQL, tableaux de bord, alertes",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.3",
+     "title": "Préparation à l’AZ-400",
+     "content": "Questions d’entraînement et révision",
+     "format": "Cours + atelier",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Un projet Azure DevOps complet, présenté au groupe",
+   "intro": "Par équipes de deux ou trois, les participants livrent une application fournie du backlog à la production sur Azure, en réutilisant les TP de phase, puis présentent le résultat comme ils le feraient devant un responsable technique.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, mettre en place le backlog Boards, Repos avec stratégies de branche, un pipeline YAML vers ACR et l’infrastructure Bicep ou Terraform",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Livraison et supervision",
+     "content": "Déploiement AKS avec approbations et canary, secrets dans Key Vault, Application Insights ; README et schéma d’architecture",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct de l’élément de backlog à la livraison canary, suppression des ressources ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Du backlog à la livraison canary sur Azure",
+    "brief": "Un élément de backlog planifié dans Azure Boards, développé sous stratégies de branche, construit par un pipeline YAML vers ACR, déployé sur AKS sur une infrastructure créée avec Bicep ou Terraform, livré en canary après approbation, avec les secrets dans Key Vault et l’état suivi dans Application Insights.",
+    "stack": "Azure Boards, Azure Repos ou GitHub, Azure Pipelines, Azure Container Registry, Bicep ou Terraform, AKS, Key Vault, Application Insights",
+    "deliverable": "Dépôts avec le code du pipeline et de l’infrastructure, schéma d’architecture, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

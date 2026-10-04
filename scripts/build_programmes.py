@@ -50,6 +50,7 @@ LABELS = {
     'notes': 'Notes', 'buffer': 'Buffer', 'buffer_focus': 'Catch-up, revision, extra lab time',
     'final_project': 'Final project', 'page': 'Page', 'of': 'of',
     'optional': 'Optional', 'plus_optional': '+ {h} optional',
+    'optional_total': 'Not included: optional phase {n}, + {h}',
 }
 LABELS_FR = {  # "lang": "fr" in a programme selects these
     'kicker': 'Programme de formation', 'hours': 'Heures', 'for': 'Pour', 'certs': 'Prépare à',
@@ -64,6 +65,7 @@ LABELS_FR = {  # "lang": "fr" in a programme selects these
     'notes': 'Notes', 'buffer': 'Réserve', 'buffer_focus': 'Rattrapage, révision, TP supplémentaires',
     'final_project': 'Projet final', 'page': 'Page', 'of': 'sur',
     'optional': 'Optionnel', 'plus_optional': '+ {h} en option',
+    'optional_total': 'Non inclus : phase {n} en option, + {h}',
 }
 
 # ---------- styles: the whole look lives here ----------
@@ -483,7 +485,8 @@ def build_doc(g):
                      ('Prog Table Muted', [L['buffer_focus']]), ('Prog Table Hours', [hrs(buffer)])])
     total = sum(ph['hours'] or 0 for ph in core) + buffer
     rows.append([('Prog Table Text', []), ('Prog Table Strong', [L['total']]),
-                 ('Prog Table Muted', [L['plus_optional'].format(h=hrs(extra))] if extra else []),
+                 ('Prog Table Muted', [L['optional_total'].format(h=hrs(extra), n=', '.join(
+                     f'{i:02d}' for i, ph in enumerate(g['phases'], 1) if ph.get('optional')))] if extra else []),
                  ('Prog Table Total', [hrs(total)])])
     t = table(doc, [1.2, 5.2, 8.8, 1.8], L['glance_cols'], rows, together=True)
     for c in t.rows[-1].cells:  # total row: ink rule above

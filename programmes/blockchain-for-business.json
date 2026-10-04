@@ -1,0 +1,121 @@
+{
+ "slug": "blockchain-for-business",
+ "file": "Blockchain-for-Business-12h.docx",
+ "title": "Blockchain for Business",
+ "subtitle": "Understand blockchain and decide where it creates business value",
+ "audience_line": "Managers, consultants and IT professionals evaluating blockchain projects",
+ "certifications": [],
+ "overview": "This workshop explains what a blockchain is and how to decide whether a business process needs one. Participants learn where blockchain comes from and how shared ledgers, permissions, consensus and smart contracts work, then look at the business frictions it can remove and at real use cases in finance, trade, insurance and supply chains, including the cases where a conventional database is the better choice. The workshop closes with a final project in which each team assesses a business process and designs the network it would need.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Managers, consultants and IT professionals evaluating blockchain projects"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None. No programming or cryptography background needed"
+  },
+  {
+   "label": "Duration",
+   "value": "12 h: 9 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Workshop: short lectures, each followed by group exercises on business cases"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant with a browser; a public block explorer and a trainer demonstration of a permissioned network (Hyperledger Fabric test network); no account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "Group exercises reviewed in each phase and a final use-case assessment presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can explain how a blockchain works, judge whether a business process needs one, and outline the participants, permissions and smart contracts of a suitable network"
+  }
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Blockchain Fundamentals",
+   "hours": 3,
+   "focus": "Origins, Bitcoin, distributed ledgers, consensus, smart contracts",
+   "intro": "Participants learn where blockchain comes from and how it works: shared ledgers, permissions, consensus mechanisms, smart contracts and the roles of the participants. Validated exercise: a transaction traced in a public block explorer, and the difference between a public and a permissioned network explained by each group.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Fundamentals",
+     "content": "Origins, Bitcoin, distributed ledgers",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "How It Works",
+     "content": "Shared ledger, permissions, consensus, smart contracts, participants",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Business Value & Use Cases",
+   "hours": 3,
+   "focus": "Information, interaction and innovation frictions, sector use cases, when not to use it",
+   "intro": "Participants analyse the business frictions a shared ledger can remove, study use cases in finance, trade, insurance and supply chains, and learn the questions that show when a conventional database is the better choice. Validated exercise: a decision checklist applied to three proposed projects.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Business Value",
+     "content": "Information, interaction and innovation frictions",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Use Cases",
+     "content": "Finance, trade, insurance, supply chain; when not to use blockchain, including discontinued consortia (TradeLens, we.trade)",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 3,
+   "focus": "A use-case assessment, presented to the group",
+   "intro": "Teams of two or three choose a business process, decide whether it needs a blockchain using the workshop's checklist, and present their recommendation as they would to a steering committee.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Assess & Design",
+     "content": "Pick a business process, decide blockchain or not, design the network: participants, permissions, smart contracts",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Present & Review",
+     "content": "Present the recommendation and the network design; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Blockchain Use-Case Assessment",
+    "brief": "A business process assessed against the workshop's checklist, with a reasoned decision for or against blockchain and, where it fits, the design of the network: participants, permissions and smart contracts.",
+    "stack": "Decision checklist, network design canvas, public block explorer",
+    "deliverable": "Assessment and recommendation, network design, presentation"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,174 @@
+{
+ "slug": "data-engineering-spark-kafka-fr",
+ "file": "Ingenierie-des-donnees-avec-Spark-et-Kafka-33h.docx",
+ "lang": "fr",
+ "title": "Ingénierie des données avec Spark et Kafka",
+ "subtitle": "Pipelines par lots et en flux avec Apache Spark, Apache Kafka et les tables lakehouse",
+ "audience_line": "Analystes de données, développeurs et ingénieurs qui se tournent vers l’ingénierie des données",
+ "certifications": [],
+ "overview": "Ce programme apprend aux participants à construire des pipelines de données par lots et en flux avec des outils open source et Confluent Schema Registry. Ils voient comment le traitement des données massives est passé de HDFS et MapReduce au stockage objet et au lakehouse, traitent les données avec les DataFrames et Spark SQL, les stockent dans des tables Delta Lake et Apache Iceberg, et optimisent les jobs Spark. Ils exploitent ensuite Kafka en mode KRaft, traitent des flux d’événements avec Spark Structured Streaming, intègrent des systèmes avec Kafka Connect et Schema Registry, et planifient et contrôlent les pipelines avec Airflow et des tests de qualité des données. Chaque chapitre se termine par un TP sur une pile locale, et le programme s’achève par un projet final : une analyse des commandes en temps réel, construite et présentée par chaque équipe.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Analystes de données, développeurs et ingénieurs qui se tournent vers l’ingénierie des données"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Python, pandas et SQL (cours : Python pour la data science), ou équivalent. Ces notions sont utilisées, pas enseignées"
+  },
+  {
+   "label": "Durée",
+   "value": "33 h : 27 h de chapitres + 6 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés sur un même jeu de données repris dans toutes les phases"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant (16 Go de RAM minimum, Docker, VS Code, Jupyter) avec une pile Docker Compose préparée par le formateur : Spark, Kafka 4 (KRaft), Schema Registry, Kafka Connect, Airflow 3, MinIO et un catalogue REST Iceberg, services démarrés par phase ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent construire, optimiser et planifier des pipelines par lots et en flux avec Spark et Kafka, qui écrivent des tables lakehouse fiables et passent des contrôles de qualité des données"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Fondamentaux de Spark",
+   "hours": 6,
+   "focus": "De Hadoop au lakehouse, architecture de Spark, DataFrames et Spark SQL",
+   "intro": "Les participants voient pourquoi les plateformes de données sont passées de HDFS et MapReduce au stockage objet et au lakehouse, apprennent comment Spark planifie et exécute le travail sur un cluster, puis transforment des données avec les DataFrames, Spark SQL et les fonctions définies par l’utilisateur. TP validé : un job Spark qui nettoie et agrège le jeu de données du cours depuis le stockage objet.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Fondamentaux des données massives",
+     "content": "De HDFS et MapReduce au stockage objet et au lakehouse",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Architecture de Spark",
+     "content": "Driver, executors, jobs, stages, évaluation paresseuse",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "DataFrames et Spark SQL",
+     "content": "API DataFrame, Spark SQL, fonctions définies par l’utilisateur",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Tables lakehouse et performances",
+   "hours": 6,
+   "focus": "Parquet, Delta Lake et Iceberg, partitionnement, jointures, exécution adaptative",
+   "intro": "Les participants stockent les résultats dans des formats de tables ouverts qui apportent transactions, voyage dans le temps et évolution du schéma au stockage objet, puis accélèrent les jobs Spark avec le partitionnement, le cache, les bonnes jointures et l’exécution adaptative des requêtes, en lisant l’interface web Spark (Spark UI) pour trouver le goulot d’étranglement. TP validé : une table Delta ou Iceberg mise à jour par un merge et relue dans une version antérieure, et un job lent rendu mesurablement plus rapide.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Formats de tables",
+     "content": "Parquet, Delta Lake et Apache Iceberg : tables ACID, voyage dans le temps, évolution du schéma",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Performances de Spark",
+     "content": "Partitionnement, cache, jointures, exécution adaptative des requêtes, interface web Spark (Spark UI)",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Flux, intégration et orchestration",
+   "hours": 9,
+   "focus": "Kafka en KRaft, Structured Streaming, Kafka Connect, Schema Registry, Airflow",
+   "intro": "Les participants exploitent Kafka en mode KRaft et apprennent topics, partitions, producteurs et groupes de consommateurs, traitent des flux d’événements avec Spark Structured Streaming à l’aide de fenêtres et de watermarks, relient des systèmes externes avec Kafka Connect et imposent des schémas avec Schema Registry, puis planifient les pipelines avec Airflow et ajoutent des contrôles de qualité des données. TP validé : un flux d’événements agrégé par minute dans une table lakehouse, avec les événements tardifs gérés par un watermark.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Fondamentaux de Kafka",
+     "content": "Clusters KRaft, topics, partitions, producteurs, groupes de consommateurs, sémantiques de livraison",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Structured Streaming avec Kafka",
+     "content": "Requêtes en flux, fenêtres, watermarks, sinks, sortie exactly-once",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Kafka Connect et Schema Registry",
+     "content": "Connecteurs, schémas et compatibilité",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Orchestration et qualité des données",
+     "content": "DAG Airflow, contrôles de qualité des données",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Analyse des commandes en temps réel, présentée au groupe",
+   "intro": "Par équipes de deux ou trois, les participants construisent un pipeline d’analyse en temps réel des commandes d’une boutique en ligne, en réutilisant les TP de phase, puis le présentent comme ils le feraient devant un responsable data.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, produire les événements de commande dans Kafka avec un schéma enregistré, les agréger avec Structured Streaming dans des tables Delta ou Iceberg",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Planification, contrôle et documentation",
+     "content": "Un traitement par lots quotidien planifié par Airflow, des contrôles de qualité des données, un tableau de bord dans un notebook Jupyter et une courte note de conception",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct avec un pic de commandes ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Analyse des commandes en temps réel",
+    "brief": "Des événements de commande produits dans Kafka avec un schéma enregistré, agrégés par Spark Structured Streaming dans des tables Delta ou Iceberg, complétés par un traitement par lots quotidien planifié dans Airflow, vérifiés par des tests de qualité des données et affichés sur un tableau de bord.",
+    "stack": "Apache Kafka (KRaft), Schema Registry, Apache Spark (Structured Streaming, Spark SQL), Delta Lake ou Apache Iceberg, MinIO, Apache Airflow, Python, Jupyter",
+    "deliverable": "Code du pipeline, note de conception, tableau de bord, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

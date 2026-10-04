@@ -1,0 +1,199 @@
+{
+ "slug": "azure-administrator",
+ "file": "Azure-Administrator-42h.docx",
+ "title": "Azure Administrator",
+ "subtitle": "Manage identities, governance, networks, storage, compute and monitoring in Microsoft Azure",
+ "audience_line": "System administrators and IT engineers who run Microsoft Azure environments",
+ "certifications": [
+  "Microsoft Certified: Azure Administrator Associate (AZ-104)"
+ ],
+ "overview": "This programme teaches participants to administer Microsoft Azure and prepares the AZ-104 exam for the Azure Administrator Associate certification. They organise subscriptions and resources, manage identities in Microsoft Entra ID, govern access and cost with RBAC, Azure Policy and tags, build virtual networks with secure access, DNS and load balancing, manage storage accounts, deploy virtual machines with ARM templates and Bicep, run web apps and containers, and monitor and protect workloads with Azure Monitor, Azure Backup and Site Recovery. Every chapter ends with a lab in the portal, CLI or PowerShell, exam practice closes the content, and the programme ends with a final project: a company's Azure environment built and presented by each team.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "System administrators and IT engineers who run Microsoft Azure environments"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None in Azure. Working knowledge of operating systems, IP networking and the command line is expected"
+  },
+  {
+   "label": "Duration",
+   "value": "42 h: 36 h of chapters + 6 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs in the Azure portal, Azure CLI and PowerShell; exam practice"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant (browser, Azure CLI, PowerShell, VS Code with Bicep); per team, an Azure subscription in its own Microsoft Entra test tenant with an Entra ID P2 trial and a budget alert, provided by the organiser; resource groups deleted after each lab to control cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can build and govern an Azure environment with identities, policies, networks, storage, virtual machines, monitoring and backup, and sit the AZ-104 exam"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Identity & Governance",
+   "hours": 9,
+   "focus": "Subscriptions and Resource Manager, Microsoft Entra ID, RBAC, Azure Policy, cost",
+   "intro": "Participants learn how Azure is organised and administered from the portal, CLI and PowerShell, manage users, groups and external identities in Microsoft Entra ID, then govern access and spending with RBAC, Azure Policy, management groups, tags, locks and cost management. Validated lab: a management group hierarchy that applies the Allowed locations policy, a team has Contributor rights on its resource group only, and a budget raises an alert.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Azure Foundations",
+     "content": "Regions, subscriptions, resource groups, Azure Resource Manager, portal, CLI and PowerShell",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Identity",
+     "content": "Microsoft Entra ID users and groups, licences, external users, self-service password reset",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Governance & Cost",
+     "content": "RBAC, Azure Policy, management groups, tags, locks, cost management, Azure Advisor, moving resources",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Networking",
+   "hours": 6,
+   "focus": "VNets, peering, routes, NSGs, Bastion, private endpoints, DNS, load balancing",
+   "intro": "Participants build and connect virtual networks, filter traffic with network and application security groups, reach machines securely through Azure Bastion and services through private endpoints, resolve names with Azure DNS, and spread traffic with Azure Load Balancer and Application Gateway. Validated lab: two peered VNets where a VM without a public IP is reached only through Bastion and reads a storage account, created from a provided Bicep file, through a private endpoint.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Virtual Networks",
+     "content": "VNets, subnets, peering, user-defined routes, NSGs and ASGs",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Secure Access & DNS",
+     "content": "Azure Bastion, service and private endpoints, Azure DNS",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Load Balancing",
+     "content": "Azure Load Balancer, Application Gateway",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Storage & Compute",
+   "hours": 9,
+   "focus": "Storage accounts, virtual machines and scale sets, Bicep, App Service, containers",
+   "intro": "Participants create and secure storage accounts with the right redundancy and lifecycle rules, deploy virtual machines and scale sets across availability zones with ARM templates and Bicep, then run web apps on App Service with deployment slots and containers on Container Instances and Container Apps. Validated lab: a zone-redundant VM scale set deployed from a Bicep file, and a web app swapped from its staging slot to production.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Storage",
+     "content": "Storage accounts, redundancy, encryption; access keys, SAS and stored access policies, firewalls, identity-based access to Azure Files; Blob tiers, soft delete, versioning, lifecycle management; AzCopy",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Virtual Machines",
+     "content": "VMs, disks and encryption at host, resizing and moving VMs, availability sets and zones, scale sets; ARM templates and Bicep: deploy, export, convert",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "App Service & Containers",
+     "content": "App Service plans, scaling, TLS certificates, custom domains, backup, deployment slots; Azure Container Registry, Container Instances, Container Apps",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Monitoring, Backup & Exam Preparation",
+   "hours": 6,
+   "focus": "Azure Monitor, Log Analytics, Network Watcher, Azure Backup, Site Recovery, AZ-104",
+   "intro": "Participants collect metrics and logs with Azure Monitor and Log Analytics, alert on them, diagnose connectivity with Network Watcher, protect workloads with Azure Backup and Site Recovery, then practise AZ-104 questions. Validated lab: a deleted file recovered from an Azure Backup recovery point of a VM, and an alert raised from a KQL query in Log Analytics.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Monitoring & Backup",
+     "content": "Azure Monitor, Log Analytics and KQL, alerts and action groups, VM and network insights, Network Watcher and Connection Monitor, Recovery Services and Backup vaults, Site Recovery",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "AZ-104 Preparation",
+     "content": "Practice questions and review",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A company's Azure environment, presented to the group",
+   "intro": "Teams of two or three build the Azure environment of a company from a written brief, reusing the phase labs, then present it as they would to an IT manager.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, then set up Entra ID groups and RBAC, policies, hub-and-spoke VNets with NSGs, load-balanced VMs and storage, deployed with Bicep where possible",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Monitor, Protect & Document",
+     "content": "Monitoring, alerts and backup; architecture diagram and administration guide",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Demo & Review",
+     "content": "Live demo with a restore, cleanup; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "A Company's Azure Environment",
+    "brief": "The Azure environment of a company: Entra ID groups with RBAC, policies that enforce its rules, hub-and-spoke virtual networks with NSGs, load-balanced virtual machines, storage, monitoring with alerts and a tested backup.",
+    "stack": "Azure: Microsoft Entra ID, RBAC, Azure Policy, VNets, NSGs, Load Balancer, Bastion, virtual machines, storage accounts, Azure Monitor, Log Analytics, Azure Backup, Bicep",
+    "deliverable": "Working environment, Bicep files, architecture diagram, administration guide, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

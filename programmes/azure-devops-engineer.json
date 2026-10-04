@@ -1,0 +1,199 @@
+{
+ "slug": "azure-devops-engineer",
+ "file": "Azure-DevOps-Engineer-45h.docx",
+ "title": "Azure DevOps Engineer",
+ "subtitle": "Plan, build, release, secure and monitor software on Azure with Azure DevOps and GitHub",
+ "audience_line": "Azure administrators and developers who build delivery pipelines on Azure",
+ "certifications": [
+  "Microsoft Certified: DevOps Engineer Expert (AZ-400)"
+ ],
+ "overview": "This programme teaches participants to run DevOps practices on Microsoft Azure and prepares the AZ-400 exam for the DevOps Engineer Expert certification. They plan with Azure Boards and GitHub Projects, manage code in Azure Repos and GitHub, build tested YAML pipelines with container builds and package feeds, provision infrastructure with Bicep and Terraform, release to AKS progressively with approvals, secure pipelines without stored credentials, and close the loop with Application Insights. Exam practice closes the content, and the programme ends with a complete Azure DevOps project built and presented by each team.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Azure administrators and developers who build delivery pipelines on Azure"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Azure administration (course: Azure Administrator) or CI/CD basics (course: DevOps Engineering); not taught again. The Expert certification also requires Azure Administrator or Azure Developer Associate"
+  },
+  {
+   "label": "Duration",
+   "value": "45 h: 39 h of chapters + 6 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs; one application carried through every phase; exam practice"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant (Git, Azure CLI, VS Code, Docker); per team, an Azure DevOps and a GitHub organisation (Advanced Security enabled) and an Azure subscription with a budget alert, provided by the organiser; resources deleted after each lab"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can take an application from a planned backlog item to a monitored canary release on AKS through secure pipelines, and sit the AZ-400 exam"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Planning & Source Control",
+   "hours": 6,
+   "focus": "Azure Boards, GitHub Projects, flow metrics, Azure Repos and GitHub, branch policies",
+   "intro": "Participants plan the work for the course application with Azure Boards and GitHub Projects and measure its flow, then manage the code in Azure Repos and GitHub with a branching strategy, pull requests and branch policies. Validated lab: a backlog item linked to a branch, a reviewed pull request and a protected main branch.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Planning",
+     "content": "Azure Boards, Agile planning, GitHub Projects, flow metrics, dashboards; wikis, Markdown and Mermaid documentation, release notes, webhooks",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Source Control",
+     "content": "Azure Repos and GitHub, branch strategies, pull requests and branch policies, repository permissions, Git LFS, recovering and purging data",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Continuous Integration",
+   "hours": 9,
+   "focus": "YAML pipelines, templates, container builds to ACR, Azure Artifacts, GitHub Actions",
+   "intro": "Participants build the course application with Azure Pipelines in YAML, factor the pipeline into templates, build and push container images to Azure Container Registry, publish versioned packages to Azure Artifacts, and run the same build from GitHub Actions to Azure. Validated lab: a pull request validated by a templated pipeline, then the merge publishing a versioned image to ACR and a package to a feed.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Azure Pipelines",
+     "content": "YAML pipelines, agents and pools, triggers, stages, jobs and steps; testing strategy, code coverage, quality gates",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Templates & Container Builds",
+     "content": "Pipeline templates, Azure Container Registry, multi-stage builds in pipelines",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Package Management",
+     "content": "Azure Artifacts and GitHub Packages, feeds, views and upstream sources, SemVer versioning; GitHub Actions to Azure with OpenID Connect; pipeline health, retention, classic-to-YAML migration",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Infrastructure & Deployment",
+   "hours": 9,
+   "focus": "Bicep and Terraform, configuration management, AKS, release strategies",
+   "intro": "Participants provision the course environment with Bicep and Terraform and keep machine configuration in a desired state, create an AKS cluster and deploy to it from pipelines, then release safely with environments, approvals and checks, blue-green and canary deployments and feature flags. Validated lab: a canary release on AKS promoted after an approval, with the infrastructure created by the pipeline.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Infrastructure as Code",
+     "content": "Bicep, Terraform on Azure, desired state configuration with Azure Machine Configuration (Automation State Configuration as the legacy service); Azure Deployment Environments",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "AKS",
+     "content": "Provisioning, deploying from pipelines, scaling",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Release Strategies",
+     "content": "Environments, approvals and checks, blue-green, canary, deployment slots, feature flags with Azure App Configuration",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Security, Monitoring & Exam Preparation",
+   "hours": 9,
+   "focus": "Key Vault, workload identity federation, Advanced Security, Application Insights, AZ-400",
+   "intro": "Participants remove secrets from pipelines with Key Vault and service connections that use workload identity federation, scan code and dependencies with GitHub Advanced Security for Azure DevOps and Defender for Cloud, then close the feedback loop with Application Insights, KQL, dashboards and alerts before practising AZ-400 questions. Validated lab: a pipeline that deploys with no stored credentials, a push containing a secret blocked by push protection, and an alert on the application's failure rate.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Secure Pipelines",
+     "content": "Key Vault, service connections with workload identity federation, permissions, GitHub Advanced Security for Azure DevOps, Defender for Cloud DevOps security, GitHub Apps and GITHUB_TOKEN, Azure DevOps security groups",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Monitoring & Feedback",
+     "content": "Application Insights, Container insights, KQL, dashboards, alerts",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.3",
+     "title": "AZ-400 Preparation",
+     "content": "Practice questions and review",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A complete Azure DevOps project, presented to the group",
+   "intro": "Teams of two or three deliver a provided application from backlog to production on Azure, reusing the phase labs, then present the result as they would to an engineering manager.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, set up the Boards backlog, Repos with branch policies, a YAML pipeline to ACR and the Bicep or Terraform infrastructure",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Release & Monitor",
+     "content": "AKS deployment with approvals and canary, secrets from Key Vault, Application Insights; README and architecture diagram",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Demo & Review",
+     "content": "Live demo from backlog item to canary release, cleanup; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "From Backlog to Canary Release on Azure",
+    "brief": "A backlog item planned in Azure Boards, coded under branch policies, built by a YAML pipeline to ACR, deployed to AKS on infrastructure created with Bicep or Terraform, released as a canary after approval, with secrets in Key Vault and health watched in Application Insights.",
+    "stack": "Azure Boards, Azure Repos or GitHub, Azure Pipelines, Azure Container Registry, Bicep or Terraform, AKS, Key Vault, Application Insights",
+    "deliverable": "Repositories with pipeline and infrastructure code, architecture diagram, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

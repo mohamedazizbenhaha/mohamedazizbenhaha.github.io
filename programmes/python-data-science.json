@@ -1,0 +1,66 @@
+{
+ "slug": "python-data-science",
+ "file": "Python-for-Data-Science-21h.docx",
+ "title": "Python for Data Science",
+ "subtitle": "Explore, query and visualise data with Python, pandas and SQL",
+ "audience_line": "Analysts, students and developers who work with data",
+ "certifications": [],
+ "overview": "This programme gives participants the Python data stack used in data analysis and machine learning. They add the Python features that data code relies on, work reproducibly in Jupyter, compute with NumPy arrays, clean, reshape and combine data with pandas, query databases with SQL from Python, and communicate results with Matplotlib, Seaborn and Plotly. Every chapter ends with exercises on real datasets, and the programme closes with a final project in which each participant delivers an exploratory data analysis report as a Jupyter notebook.",
+ "facts": [
+  {"label": "Audience", "value": "Analysts, students and developers who work with data"},
+  {"label": "Prerequisites", "value": "Python basics (course: Python Programming Fundamentals, or equivalent): variables, data structures, functions. These are not taught again"},
+  {"label": "Duration", "value": "21 h: 18 h of chapters + 3 h buffer"},
+  {"label": "Format", "value": "Short lectures with live coding in Jupyter, each followed by exercises on real datasets"},
+  {"label": "Lab environment", "value": "Runs locally: one laptop per participant with Python 3, JupyterLab, pandas, NumPy, Matplotlib, Seaborn, Plotly and SQLite; Google Colab as a fallback; no account or cost"},
+  {"label": "Assessment", "value": "Exercises validated at the end of each phase and a final analysis report presented to the group; certificate of completion for participants who complete both"},
+  {"label": "Outcome", "value": "Participants can load, clean, query, analyse and visualise a real dataset with Python, pandas and SQL, and report their findings in a reproducible notebook"}
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Tools & NumPy",
+   "hours": 6,
+   "focus": "Python for data work, Jupyter and reproducibility, NumPy arrays",
+   "intro": "Participants add the Python features that data code uses every day, work in JupyterLab and Colab in a way others can rerun, then compute with NumPy arrays through vectorisation, broadcasting and linear algebra. Validated exercise: a notebook that simulates and summarises a dataset with vectorised NumPy code and reruns cleanly from top to bottom.",
+   "chapters": [
+    {"id": "1.1", "title": "Python for Data Work", "content": "Comprehensions, lambdas, decorators, generators, type hints, dataclasses", "format": "Lecture + Lab", "hours": 1.5},
+    {"id": "1.2", "title": "Jupyter & Reproducibility", "content": "JupyterLab, magics, nbconvert, Colab", "format": "Lecture + Lab", "hours": 1.5},
+    {"id": "1.3", "title": "NumPy", "content": "ndarrays, vectorisation, broadcasting, linear algebra", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Pandas, SQL & Visualisation",
+   "hours": 9,
+   "focus": "DataFrames, cleaning and reshaping, SQL queries from Python, charts",
+   "intro": "Participants load, clean, filter, group, merge and reshape data with pandas, query SQLite and PostgreSQL databases with SQL and bring the results into pandas, then choose and build the right chart with Matplotlib, Seaborn and Plotly. Validated exercise: a question about a sales dataset answered once in SQL and once in pandas, and shown in a clear chart.",
+   "chapters": [
+    {"id": "2.1", "title": "Pandas", "content": "DataFrames, input and output, filtering, groupby, merge, pivot, missing values", "format": "Lecture + Lab", "hours": 3},
+    {"id": "2.2", "title": "SQL for Data Analysis", "content": "SELECT, joins, GROUP BY, window functions; querying SQLite and PostgreSQL from Python and pandas", "format": "Lecture + Lab", "hours": 3},
+    {"id": "2.3", "title": "Visualisation", "content": "Matplotlib, Seaborn, Plotly", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 3,
+   "focus": "An exploratory data analysis report on a real dataset",
+   "intro": "Each participant analyses a real public dataset, reusing the exercises of the phases, and presents the findings as they would to a manager who needs to decide.",
+   "chapters": [
+    {"id": "3.1", "title": "Explore & Analyse", "content": "Load and clean the dataset, answer the brief's questions with SQL and pandas, build the charts", "format": "Project", "hours": 1.5},
+    {"id": "3.2", "title": "Report & Present", "content": "Finish the notebook as a report, present the findings; questions and feedback", "format": "Project", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Exploratory Data Analysis Report",
+    "brief": "A real public dataset loaded, cleaned, queried with SQL and pandas, and explored with charts, delivered as a Jupyter notebook that states the questions, the method and the findings.",
+    "stack": "Python 3, JupyterLab, pandas, NumPy, SQLite or PostgreSQL, Matplotlib, Seaborn, Plotly",
+    "deliverable": "Jupyter notebook report, presentation of the findings"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,320 @@
+{
+ "slug": "machine-learning-deep-learning",
+ "file": "Machine-Learning-and-Deep-Learning-75h.docx",
+ "title": "Machine Learning & Deep Learning",
+ "subtitle": "From linear models to Transformers, with the mathematics behind them",
+ "audience_line": "Developers, analysts and engineers who want to build machine learning models",
+ "certifications": [],
+ "overview": "This programme teaches participants to build, evaluate and explain machine learning models, and the mathematics that makes them work. They cover supervised learning, from linear and logistic regression to trees, ensembles and support vector machines, with sound evaluation, tuning, pipelines and experiment tracking; unsupervised learning; and deep learning, from a network built from scratch to PyTorch, CNNs, attention and the Transformer. A responsible AI phase covers explainability, fairness and governance, an optional reinforcement learning module adds 9 h, and the programme closes with an end-to-end machine learning project presented by each team.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Developers, analysts and engineers who want to build machine learning models"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Python, NumPy and pandas (course: Python for Data Science); secondary-school algebra. The mathematics needed is taught in the course"
+  },
+  {
+   "label": "Duration",
+   "value": "75 h: 66 h of chapters + 9 h buffer; optional reinforcement learning module: +9 h"
+  },
+  {
+   "label": "Format",
+   "value": "Lectures that derive each method, followed by labs in Jupyter; the mathematics is taught where it is used"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant (16 GB RAM, Python 3, JupyterLab, scikit-learn, PyTorch, MLflow); GPU notebooks on Google Colab or a GPU server provided by the organiser for deep learning; no paid cloud account"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can frame a machine learning problem, build and compare classical and deep learning models, evaluate them without leakage, explain their predictions and track the experiments"
+  }
+ ],
+ "buffer": 9,
+ "phases": [
+  {
+   "name": "Supervised Learning",
+   "hours": 24,
+   "focus": "Regression, classification, trees, ensembles, SVMs, evaluation, pipelines",
+   "intro": "Participants learn how a model generalises and how to measure it honestly, then build the main supervised methods from their mathematics: linear and logistic regression trained by gradient descent, decision trees and ensembles, and support vector machines. They finish with cross-validation, hyperparameter search, feature pipelines and experiment tracking with MLflow. Validated lab: a tuned scikit-learn pipeline compared with two baselines on a held-out test set, with every run tracked in MLflow.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Framing & Linear Regression",
+     "content": "Regression vs classification, generalisation, data splits, data leakage; vectors, matrices, normal equation",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Gradient Descent & Regularisation",
+     "content": "Derivatives, chain rule, gradient descent, ridge and lasso",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Logistic Regression & Metrics",
+     "content": "Sigmoid, maximum likelihood, cross-entropy, precision, recall, ROC",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.4",
+     "title": "Decision Trees",
+     "content": "Entropy, information gain, Gini impurity, CART",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.5",
+     "title": "Ensembles",
+     "content": "Bagging, random forests, boosting (XGBoost, LightGBM)",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.6",
+     "title": "Support Vector Machines",
+     "content": "Margins, soft margin, kernels, SVR",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.7",
+     "title": "Evaluation & Tuning",
+     "content": "Cross-validation, learning curves, grid, random and Bayesian search",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.8",
+     "title": "Feature Engineering & Pipelines",
+     "content": "Encoding, scaling, scikit-learn pipelines, MLflow tracking",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": "Linear algebra (vectors, matrices, normal equation) · Calculus (derivatives, chain rule, gradient) · Statistics (maximum likelihood, cross-entropy, bias and variance) · Information theory (entropy, information gain) · Optimisation (convexity, margins, kernels)",
+   "project": null
+  },
+  {
+   "name": "Unsupervised Learning",
+   "hours": 12,
+   "focus": "Clustering, mixture models, PCA, manifold learning, anomalies, recommenders",
+   "intro": "Participants find structure in data without labels: hierarchical, density-based and centroid clustering, Gaussian mixtures trained with expectation-maximisation, dimensionality reduction with PCA, t-SNE and UMAP, anomaly detection, association rules and collaborative filtering. Validated lab: a customer segmentation with K-Means and a Gaussian mixture, visualised after PCA, with the choice of the number of clusters justified.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Unsupervised Framing",
+     "content": "Clustering, density estimation, dimensionality reduction",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Hierarchical Clustering & DBSCAN",
+     "content": "Linkage criteria, density-based clustering",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "K-Means & Gaussian Mixtures",
+     "content": "Objective function, Lloyd’s algorithm, expectation-maximisation",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.4",
+     "title": "PCA",
+     "content": "Covariance, eigendecomposition, explained variance",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.5",
+     "title": "Manifolds & Anomalies",
+     "content": "t-SNE, UMAP, isolation forest",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.6",
+     "title": "Association Rules & Recommenders",
+     "content": "Apriori, support, confidence and lift, collaborative filtering",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": "Probability (multivariate Gaussian, expectation-maximisation) · Linear algebra (covariance matrix, eigendecomposition) · Distances and similarity measures",
+   "project": null
+  },
+  {
+   "name": "Deep Learning",
+   "hours": 15,
+   "focus": "Neural networks from scratch, backpropagation, PyTorch, CNNs, attention and Transformers",
+   "intro": "Participants build a neural network in NumPy to see every step, derive backpropagation, then train models with PyTorch: convolutional networks and transfer learning for images, recurrent networks for sequences, attention and the Transformer architecture. Validated lab: an image classifier fine-tuned from a pretrained CNN in PyTorch, with its training curves and checkpoints.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Perceptron & MLP from Scratch",
+     "content": "NumPy implementation of a multilayer perceptron",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Backpropagation",
+     "content": "Computational graphs, vanishing gradients",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Training with PyTorch",
+     "content": "Tensors, autograd, training loops, optimisers (SGD, Adam), regularisation, checkpoints",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.4",
+     "title": "CNNs",
+     "content": "Convolution, pooling, architectures, transfer learning",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.5",
+     "title": "Sequences & Attention",
+     "content": "RNN, LSTM and GRU, attention, the Transformer architecture",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": "Calculus (chain rule on computational graphs) · Linear algebra (matrix products, convolution) · Optimisation (stochastic gradient descent, Adam) · Probability (softmax, cross-entropy)",
+   "project": null
+  },
+  {
+   "name": "Responsible AI",
+   "hours": 6,
+   "focus": "Explainability, fairness, the EU AI Act, model cards",
+   "intro": "Participants explain model predictions globally and locally, measure and mitigate bias, and document models for governance under the EU AI Act and data protection rules. Validated lab: a SHAP explanation and a fairness report for the supervised model, summarised in a model card.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Explainability",
+     "content": "SHAP, LIME, feature importance",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Bias, Fairness & Governance",
+     "content": "Fairness metrics, the EU AI Act and data protection, model cards",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Reinforcement Learning",
+   "optional": true,
+   "hours": 9,
+   "focus": "MDPs, dynamic programming, Q-learning, DQN, policy gradients",
+   "intro": "This optional module adds 9 h for groups who want it. Participants model decision problems as Markov decision processes, solve them with dynamic programming, then learn from experience with Q-learning and SARSA, deep Q-networks and policy-gradient methods. Validated lab: an agent trained with Q-learning and then with a DQN on a Gymnasium environment, with the learning curves compared.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "RL & MDPs",
+     "content": "Agent, environment, rewards, policies, Bellman equations",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "Dynamic Programming",
+     "content": "Value iteration and policy iteration",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Q-Learning & SARSA",
+     "content": "Temporal-difference learning",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.4",
+     "title": "Deep Q-Networks",
+     "content": "Experience replay, target networks",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.5",
+     "title": "Policy Gradients & Actor-Critic",
+     "content": "REINFORCE, A2C, PPO overview",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": "Probability (Markov decision processes, expectations) · Dynamic programming (Bellman equations) · Calculus (policy gradient)",
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 9,
+   "focus": "An end-to-end machine learning project, presented to the group",
+   "intro": "Teams of two or three carry a machine learning problem from framing to explanation on a provided dataset, reusing the phase labs, then present it as they would to a product team.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Framing & Exploration",
+     "content": "Frame the problem and the metric, exploratory data analysis, split strategy",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "6.2",
+     "title": "Models & Experiments",
+     "content": "Feature pipeline, comparison of classical models and a deep learning model, all tracked in MLflow",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "6.3",
+     "title": "Explain & Document",
+     "content": "Explainability report, model card, short technical report",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "6.4",
+     "title": "Presentation & Review",
+     "content": "Presentation of the results and limits; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "End-to-End Machine Learning Project",
+    "brief": "A machine learning problem carried from framing and exploration to a feature pipeline, a comparison of classical models with a deep learning model, an explainability report and a model card, with every experiment tracked.",
+    "stack": "Python, pandas, scikit-learn, XGBoost or LightGBM, PyTorch, MLflow, SHAP, JupyterLab",
+    "deliverable": "Repository with notebooks and pipeline code, MLflow runs, explainability report, model card, presentation"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,200 @@
+{
+ "slug": "azure-administrator-fr",
+ "file": "Azure-Administrator-42h-FR.docx",
+ "lang": "fr",
+ "title": "Azure Administrator",
+ "subtitle": "Gérer identités, gouvernance, réseaux, stockage, calcul et supervision dans Microsoft Azure",
+ "audience_line": "Administrateurs système et ingénieurs IT qui exploitent Microsoft Azure",
+ "certifications": [
+  "Microsoft Certified: Azure Administrator Associate (AZ-104)"
+ ],
+ "overview": "Ce programme apprend aux participants à administrer Microsoft Azure et prépare l’examen AZ-104 de la certification Azure Administrator Associate. Ils organisent abonnements et ressources, gèrent les identités dans Microsoft Entra ID, gouvernent accès et coûts avec RBAC, Azure Policy et les étiquettes, construisent des réseaux virtuels sécurisés, gèrent le stockage, déploient des machines virtuelles avec Bicep, exécutent applications web et conteneurs, et supervisent et protègent les charges de travail avec Azure Monitor et Azure Backup. Un entraînement à l’examen clôt le contenu, et le programme s’achève par l’environnement Azure d’une entreprise, construit et présenté par chaque équipe.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Administrateurs système et ingénieurs IT qui exploitent Microsoft Azure"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aucun sur Azure. Une bonne connaissance des systèmes d’exploitation, des réseaux IP et de la ligne de commande est attendue"
+  },
+  {
+   "label": "Durée",
+   "value": "42 h : 36 h de chapitres + 6 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts et TP guidés (portail, Azure CLI, PowerShell) ; entraînement à l’examen"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant (navigateur, Azure CLI, PowerShell, VS Code avec Bicep) ; par équipe, un abonnement Azure dans son propre locataire Microsoft Entra de test avec un essai Entra ID P2 et une alerte budgétaire, fournis par l’organisateur ; groupes de ressources supprimés après chaque TP pour maîtriser les coûts"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent construire et gouverner un environnement Azure avec identités, stratégies, réseaux, stockage, machines virtuelles, supervision et sauvegarde, et se présenter à l’examen AZ-104"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Identité et gouvernance",
+   "hours": 9,
+   "focus": "Resource Manager, Microsoft Entra ID, RBAC, Azure Policy, coûts",
+   "intro": "Les participants découvrent comment Azure est organisé et s’administre depuis le portail, la CLI et PowerShell, gèrent utilisateurs, groupes et identités externes dans Microsoft Entra ID, puis gouvernent accès et dépenses avec RBAC, Azure Policy, les groupes d’administration, les étiquettes, les verrous et la gestion des coûts. TP validé : une hiérarchie de groupes d’administration qui applique la stratégie Allowed locations, une équipe disposant du rôle Contributeur sur son seul groupe de ressources, et un budget qui déclenche une alerte.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Fondamentaux d’Azure",
+     "content": "Régions, abonnements, groupes de ressources, Azure Resource Manager, portail, CLI et PowerShell",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Identité",
+     "content": "Utilisateurs et groupes Microsoft Entra ID, licences, utilisateurs externes, réinitialisation du mot de passe en libre-service",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Gouvernance et coûts",
+     "content": "RBAC, Azure Policy, groupes d’administration, étiquettes, verrous, gestion des coûts, Azure Advisor, déplacement de ressources",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Réseau",
+   "hours": 6,
+   "focus": "VNet, NSG, Bastion, points de terminaison privés, DNS",
+   "intro": "Les participants construisent et relient des réseaux virtuels, filtrent le trafic avec des groupes de sécurité réseau et d’application, accèdent aux machines de façon sécurisée via Azure Bastion et aux services via des points de terminaison privés, résolvent les noms avec Azure DNS, et répartissent le trafic avec Azure Load Balancer et Application Gateway. TP validé : deux VNet appairés où une VM sans IP publique n’est joignable que par Bastion et lit un compte de stockage, créé depuis un fichier Bicep fourni, via un point de terminaison privé.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Réseaux virtuels",
+     "content": "VNet, sous-réseaux, peering, routes définies par l’utilisateur, NSG et ASG",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Accès sécurisé et DNS",
+     "content": "Azure Bastion, points de terminaison de service et privés, Azure DNS",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Répartition de charge",
+     "content": "Azure Load Balancer, Application Gateway",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Stockage et calcul",
+   "hours": 9,
+   "focus": "Stockage, VM et groupes identiques, Bicep, App Service, conteneurs",
+   "intro": "Les participants créent et sécurisent des comptes de stockage avec la bonne redondance et des règles de cycle de vie, déploient des machines virtuelles et des groupes identiques sur plusieurs zones de disponibilité avec des modèles ARM et Bicep, puis exécutent des applications web sur App Service avec emplacements de déploiement et des conteneurs sur Container Instances et Container Apps. TP validé : un groupe de machines virtuelles identiques redondant entre zones, déployé depuis un fichier Bicep, et une application web basculée de son emplacement de préproduction vers la production.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Stockage",
+     "content": "Comptes de stockage, redondance, chiffrement ; clés d’accès, SAS et stratégies d’accès stockées, pare-feu, accès basé sur l’identité à Azure Files ; niveaux d’accès Blob, suppression réversible, contrôle de version, gestion du cycle de vie ; AzCopy",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Machines virtuelles",
+     "content": "VM, disques et chiffrement sur l’hôte, redimensionnement et déplacement de VM, groupes à haute disponibilité et zones, groupes identiques ; modèles ARM et Bicep : déployer, exporter, convertir",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "App Service et conteneurs",
+     "content": "Plans App Service, mise à l’échelle, certificats TLS, domaines personnalisés, sauvegarde, emplacements de déploiement ; Azure Container Registry, Container Instances, Container Apps",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Supervision et sauvegarde",
+   "hours": 6,
+   "focus": "Azure Monitor, Network Watcher, Azure Backup, AZ-104",
+   "intro": "Les participants collectent métriques et journaux avec Azure Monitor et Log Analytics, créent des alertes, diagnostiquent la connectivité avec Network Watcher, protègent les charges avec Azure Backup et Site Recovery, puis s’entraînent sur des questions AZ-104. TP validé : un fichier supprimé récupéré depuis un point de récupération Azure Backup d’une VM, et une alerte déclenchée par une requête KQL dans Log Analytics.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Supervision et sauvegarde",
+     "content": "Azure Monitor, Log Analytics et KQL, alertes et groupes d’actions, insights VM et réseau, Network Watcher et Connection Monitor, coffres Recovery Services et Backup, Site Recovery",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Préparation à l’AZ-104",
+     "content": "Questions d’entraînement et révision",
+     "format": "Cours + atelier",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "L’environnement Azure d’une entreprise, présenté au groupe",
+   "intro": "Par équipes de deux ou trois, les participants construisent l’environnement Azure d’une entreprise à partir d’un cahier des charges écrit, en réutilisant les TP de phase, puis le présentent comme ils le feraient devant un responsable informatique.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, puis mettre en place groupes Entra ID et RBAC, stratégies, VNet en hub-and-spoke avec NSG, VM derrière un répartiteur de charge et stockage, déployés avec Bicep si possible",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Supervision, protection et documentation",
+     "content": "Supervision, alertes et sauvegarde ; schéma d’architecture et guide d’administration",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct avec une restauration, suppression des ressources ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "L’environnement Azure d’une entreprise",
+    "brief": "L’environnement Azure d’une entreprise : groupes Entra ID avec RBAC, stratégies qui imposent ses règles, réseaux virtuels en hub-and-spoke avec NSG, machines virtuelles derrière un répartiteur de charge, stockage, supervision avec alertes et sauvegarde testée.",
+    "stack": "Azure : Microsoft Entra ID, RBAC, Azure Policy, VNet, NSG, Load Balancer, Bastion, machines virtuelles, comptes de stockage, Azure Monitor, Log Analytics, Azure Backup, Bicep",
+    "deliverable": "Environnement fonctionnel, fichiers Bicep, schéma d’architecture, guide d’administration, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,173 @@
+{
+ "slug": "data-engineering-spark-kafka",
+ "file": "Data-Engineering-with-Spark-and-Kafka-33h.docx",
+ "title": "Data Engineering with Spark & Kafka",
+ "subtitle": "Batch and streaming pipelines with Apache Spark, Apache Kafka and lakehouse tables",
+ "audience_line": "Data analysts, developers and engineers moving into data engineering",
+ "certifications": [],
+ "overview": "This programme teaches participants to build batch and streaming data pipelines with open-source tools and Confluent Schema Registry. They see how big data processing moved from HDFS and MapReduce to object storage and the lakehouse, process data with Spark DataFrames and Spark SQL, store it in Delta Lake and Apache Iceberg tables, and tune Spark jobs. They then run Kafka on KRaft, process event streams with Spark Structured Streaming, integrate systems with Kafka Connect and Schema Registry, and schedule and check pipelines with Airflow and data quality tests. Every chapter ends with a lab on a local stack, and the programme closes with a final project: real-time order analytics built and presented by each team.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Data analysts, developers and engineers moving into data engineering"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Python, pandas and SQL (course: Python for Data Science), or equivalent. These are used, not taught"
+  },
+  {
+   "label": "Duration",
+   "value": "33 h: 27 h of chapters + 6 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs on one dataset carried through every phase"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant (16 GB RAM minimum, Docker, VS Code, Jupyter) with a Docker Compose stack prepared by the trainer: Spark, Kafka 4 (KRaft), Schema Registry, Kafka Connect, Airflow 3, MinIO and an Iceberg REST catalog, services started per phase; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can build, tune and schedule batch and streaming pipelines with Spark and Kafka that write reliable lakehouse tables and pass data quality checks"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Spark Foundations",
+   "hours": 6,
+   "focus": "From Hadoop to the lakehouse, Spark architecture, DataFrames and Spark SQL",
+   "intro": "Participants see why data platforms moved from HDFS and MapReduce to object storage and the lakehouse, learn how Spark plans and runs work across a cluster, then transform data with DataFrames, Spark SQL and user-defined functions. Validated lab: a Spark job that cleans and aggregates the course dataset from object storage.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Big Data Foundations",
+     "content": "From HDFS and MapReduce to object storage and the lakehouse",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Spark Architecture",
+     "content": "Driver, executors, jobs, stages, lazy evaluation",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "DataFrames & Spark SQL",
+     "content": "DataFrame API, Spark SQL, user-defined functions",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Lakehouse Tables & Performance",
+   "hours": 6,
+   "focus": "Parquet, Delta Lake and Iceberg, partitioning, joins, adaptive query execution",
+   "intro": "Participants store results in open table formats that bring transactions, time travel and schema evolution to object storage, then make Spark jobs faster with partitioning, caching, the right joins and adaptive query execution, reading the Spark UI to find the bottleneck. Validated lab: a Delta or Iceberg table updated with a merge and read at an earlier version, and a slow job made measurably faster.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Table Formats",
+     "content": "Parquet, Delta Lake and Apache Iceberg: ACID tables, time travel, schema evolution",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Spark Performance",
+     "content": "Partitioning, caching, joins, adaptive query execution, Spark UI",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Streaming, Integration & Orchestration",
+   "hours": 9,
+   "focus": "Kafka on KRaft, Structured Streaming, Kafka Connect, Schema Registry, Airflow",
+   "intro": "Participants run Kafka on KRaft and learn topics, partitions, producers and consumer groups, process event streams with Spark Structured Streaming using windows and watermarks, connect external systems with Kafka Connect and enforce schemas with Schema Registry, then schedule pipelines with Airflow and add data quality checks. Validated lab: a stream of events aggregated per minute into a lakehouse table, with late events handled by a watermark.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Kafka Fundamentals",
+     "content": "KRaft clusters, topics, partitions, producers, consumer groups, delivery semantics",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Structured Streaming with Kafka",
+     "content": "Streaming queries, windows, watermarks, sinks, exactly-once output",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Kafka Connect & Schema Registry",
+     "content": "Connectors, schemas and compatibility",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Orchestration & Data Quality",
+     "content": "Airflow DAGs, data quality checks",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "Real-time order analytics, presented to the group",
+   "intro": "Teams of two or three build a real-time analytics pipeline for an online shop's orders, reusing the phase labs, then present it as they would to a data team lead.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, produce order events to Kafka with a registered schema, aggregate them with Structured Streaming into Delta or Iceberg tables",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Schedule, Check & Document",
+     "content": "A daily batch job scheduled by Airflow, data quality checks, a Jupyter notebook dashboard and a short design note",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Review",
+     "content": "Live demo with a burst of orders; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Real-Time Order Analytics",
+    "brief": "Order events produced to Kafka with a registered schema, aggregated by Spark Structured Streaming into Delta or Iceberg tables, completed by a daily batch job scheduled in Airflow, checked by data quality tests and shown on a dashboard.",
+    "stack": "Apache Kafka (KRaft), Schema Registry, Apache Spark (Structured Streaming, Spark SQL), Delta Lake or Apache Iceberg, MinIO, Apache Airflow, Python, Jupyter",
+    "deliverable": "Pipeline code, design note, dashboard, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

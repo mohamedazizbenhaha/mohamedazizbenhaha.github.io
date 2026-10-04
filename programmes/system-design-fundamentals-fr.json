@@ -1,0 +1,153 @@
+{
+ "slug": "system-design-fundamentals-fr",
+ "file": "Fondamentaux-de-la-conception-de-systemes-21h.docx",
+ "lang": "fr",
+ "title": "Fondamentaux de la conception de systèmes",
+ "subtitle": "Concevoir des systèmes évolutifs et fiables, et en expliquer les compromis",
+ "audience_line": "Développeurs et ingénieurs qui conçoivent ou relisent des systèmes logiciels",
+ "certifications": [],
+ "overview": "Cet atelier apprend aux participants à concevoir des systèmes logiciels qui montent en charge et restent fiables, et à expliquer leurs choix. Ils abordent les fondamentaux de l’évolutivité, de la latence et de la cohérence, les styles d’API et l’authentification, le cache et les CDN, le stockage des données, la réplication et le partitionnement, la messagerie asynchrone, et les styles d’architecture avec les motifs qui les rendent résilients et observables. Des études de cas classiques assemblent le tout, et l’atelier s’achève par un projet final où chaque équipe conçoit un système pour un cahier des charges et le défend lors d’une revue par les pairs.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Développeurs et ingénieurs qui conçoivent ou relisent des systèmes logiciels"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Programmation dans un langage (cours : Fondamentaux de la programmation Python), ou équivalent, et notions de bases de données et de HTTP"
+  },
+  {
+   "label": "Durée",
+   "value": "21 h : 18 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Atelier : cours courts, chacun suivi d’exercices de conception en petits groupes ; études de cas et revue par les pairs"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant avec un navigateur et un outil de schémas (Excalidraw ou draw.io) ; petites démonstrations avec Redis et Kafka sous Docker menées par le formateur ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Exercices de conception revus dans chaque phase et une conception finale défendue en revue par les pairs ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent transformer des exigences en conception de système avec API, modèle de données, cache, messagerie et plan de montée en charge, et en défendre les compromis"
+  }
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Fondamentaux, API et cache",
+   "hours": 6,
+   "focus": "Évolutivité, CAP et cohérence, styles d’API, authentification, cache, CDN",
+   "intro": "Les participants apprennent le vocabulaire de la conception de systèmes : évolutivité, latence et débit, théorème CAP et modèles de cohérence. Ils choisissent ensuite comment les services communiquent et s’authentifient, et où le cache et les CDN réduisent latence et charge. Exercice validé : une estimation de capacité rapide et une API avec stratégie de cache pour un service de partage de photos.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Fondamentaux",
+     "content": "Évolutivité, latence et débit, théorème CAP, modèles de cohérence, estimations de capacité",
+     "format": "Cours + atelier",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "API et communication",
+     "content": "REST, GraphQL, gRPC, webhooks, WebSockets, passerelles d’API, authentification (OAuth 2.0, OpenID Connect)",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Cache et CDN",
+     "content": "Stratégies de cache, éviction, Redis, CDN",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Données, messagerie et architecture",
+   "hours": 6,
+   "focus": "SQL et NoSQL, réplication, partitionnement, files et Kafka, styles d’architecture, résilience",
+   "intro": "Les participants choisissent et font monter en charge les bases de données avec la réplication, le partitionnement et les index, découplent les services avec files d’attente, publication/abonnement et Kafka, et comparent les styles d’architecture avec les motifs qui les rendent fiables : limitation de débit, nouvelles tentatives, disjoncteurs, observabilité et objectifs de niveau de service. Exercice validé : le modèle de données, la clé de partitionnement et le flux de traitement des commandes d’une boutique en ligne, avec la gestion des pannes.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Données",
+     "content": "SQL et NoSQL, réplication, partitionnement (sharding), indexation",
+     "format": "Cours + atelier",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Systèmes asynchrones",
+     "content": "Files d’attente, publication/abonnement, Kafka, idempotence, sagas",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Styles d’architecture",
+     "content": "Monolithe, microservices, architecture événementielle, serverless ; limitation de débit, nouvelles tentatives, disjoncteurs, observabilité, SLO",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Études de cas",
+   "hours": 3,
+   "focus": "Raccourcisseur d’URL, messagerie instantanée, système de paiement, fil d’actualité",
+   "intro": "Les participants appliquent toute la méthode à des problèmes classiques, des exigences et estimations jusqu’à l’architecture finale et ses points faibles, en comparant leurs conceptions entre eux. Exercice validé : une étude de cas conçue par chaque groupe et critiquée par un autre.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Études de cas",
+     "content": "Raccourcisseur d’URL, application de messagerie instantanée, système de paiement, fil d’actualité",
+     "format": "Cours + atelier",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 3,
+   "focus": "Un système conçu pour un cahier des charges, défendu en revue par les pairs",
+   "intro": "Par équipes de deux ou trois, les participants conçoivent un système pour un cahier des charges écrit, par exemple une application de VTC, en réutilisant les méthodes de l’atelier, puis le défendent devant une autre équipe.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et conception",
+     "content": "Exigences et estimations, schéma d’architecture, modèle de données, plan de montée en charge",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Revue par les pairs",
+     "content": "Présenter la conception et ses compromis, relire la conception d’une autre équipe ; retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Conception d’un système sur cahier des charges",
+    "brief": "Un système conçu à partir d’un cahier des charges écrit, par exemple une application de VTC : exigences et estimations de capacité, schéma d’architecture, API, modèle de données, cache et messagerie, plan de montée en charge et compromis derrière chaque choix.",
+    "stack": "Schémas d’architecture (Excalidraw ou draw.io), estimations de capacité, document de conception",
+    "deliverable": "Document de conception avec schémas, modèle de données et plan de montée en charge, notes de revue par les pairs"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

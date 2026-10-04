@@ -1,0 +1,94 @@
+{
+ "slug": "ml-engineer-aws",
+ "file": "Machine-Learning-Engineer-on-AWS-45h.docx",
+ "title": "Machine Learning Engineer on AWS",
+ "subtitle": "Prepare data, train, deploy, automate and monitor models with SageMaker AI",
+ "audience_line": "Data scientists and engineers who put machine learning models into production on AWS",
+ "certifications": [
+  "AWS Certified Machine Learning Engineer – Associate (MLA-C01)"
+ ],
+ "overview": "This programme teaches participants to build and operate machine learning systems on Amazon SageMaker AI and prepares the AWS Certified Machine Learning Engineer – Associate exam (MLA-C01). They set up the ML infrastructure, ingest and prepare data with Glue and Data Wrangler, engineer features and check bias, train and tune models with built-in algorithms and frameworks, deploy them on real-time, serverless, batch and asynchronous endpoints, automate the lifecycle with SageMaker Pipelines and the Model Registry, monitor drift and cost, secure the workloads, and bring generative AI into production with Bedrock. Exam practice closes the content, and the programme ends with a final project: a production ML system built and presented by each team.",
+ "facts": [
+  {"label": "Audience", "value": "Data scientists and engineers who put machine learning models into production on AWS"},
+  {"label": "Prerequisites", "value": "Machine learning (course: Machine Learning & Deep Learning) and AWS AI services (course: AWS AI Practitioner & Generative AI), or equivalent. ML theory is not taught again"},
+  {"label": "Duration", "value": "45 h: 39 h of chapters + 6 h buffer"},
+  {"label": "Format", "value": "Short lectures followed by guided labs in SageMaker Studio; one model carried through every phase; exam practice"},
+  {"label": "Lab environment", "value": "One laptop per participant with a browser; one AWS sandbox account per team with a SageMaker AI domain, GPU quota and a budget alert, provided by the organiser; endpoints and training jobs stopped at the end of each lab to control cost"},
+  {"label": "Assessment", "value": "A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project"},
+  {"label": "Outcome", "value": "Participants can build an automated pipeline from data preparation to a monitored endpoint on SageMaker AI, secure it, and sit the MLA-C01 exam"}
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Data Preparation",
+   "hours": 9,
+   "focus": "SageMaker AI infrastructure, ingestion, Data Wrangler, Feature Store, bias checks",
+   "intro": "Participants set up the infrastructure every later phase uses: a SageMaker AI domain, execution roles, S3, GPU instances and FSx. They then ingest and prepare data with Glue and Data Wrangler, store features in Feature Store and check the data for bias with Clarify before training. Validated lab: a feature group in Feature Store built from raw data, with a Clarify pre-training bias report.",
+   "chapters": [
+    {"id": "1.1", "title": "ML Infrastructure", "content": "SageMaker AI domains, IAM execution roles, S3, GPU instances, FSx", "format": "Lecture + Lab", "hours": 3},
+    {"id": "1.2", "title": "Data Ingestion & Preparation", "content": "Glue, Data Wrangler in SageMaker Canvas, data formats, data quality", "format": "Lecture + Lab", "hours": 3},
+    {"id": "1.3", "title": "Feature Engineering & Bias", "content": "Feature Store, transformations, Clarify pre-training bias", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Model Development",
+   "hours": 6,
+   "focus": "Built-in algorithms, script mode, distributed training, tuning, evaluation",
+   "intro": "Participants train models with built-in algorithms and their own framework code in script mode, scale training across instances, track experiments, then tune hyperparameters automatically and evaluate and explain the results. Validated lab: a tuning job whose best model beats the baseline on the evaluation metric, with a Clarify explainability report.",
+   "chapters": [
+    {"id": "2.1", "title": "Training", "content": "Built-in algorithms, script mode, frameworks, distributed training, experiments", "format": "Lecture + Lab", "hours": 3},
+    {"id": "2.2", "title": "Tuning & Evaluation", "content": "Automatic model tuning, evaluation metrics, Clarify", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Deployment & MLOps",
+   "hours": 9,
+   "focus": "Endpoints, autoscaling, SageMaker Pipelines, Model Registry, CI/CD, monitoring",
+   "intro": "Participants choose the right inference option, from real-time and serverless to batch and asynchronous endpoints with autoscaling, automate the lifecycle with SageMaker Pipelines, the Model Registry and CI/CD, then watch production with Model Monitor, drift detection, CloudWatch and cost controls. Validated lab: a pipeline that registers a model, deploys it after approval and raises an alert when the input data drifts.",
+   "chapters": [
+    {"id": "3.1", "title": "Deployment", "content": "Real-time, serverless, batch and asynchronous endpoints, autoscaling", "format": "Lecture + Lab", "hours": 3},
+    {"id": "3.2", "title": "MLOps", "content": "SageMaker Pipelines, Model Registry, CI/CD for ML", "format": "Lecture + Lab", "hours": 3},
+    {"id": "3.3", "title": "Monitoring & Cost", "content": "Model Monitor, drift, CloudWatch, cost control", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Security, Generative AI & Exam Preparation",
+   "hours": 9,
+   "focus": "Least privilege, VPC isolation, encryption, Bedrock in production, MLA-C01",
+   "intro": "Participants secure ML workloads with least-privilege IAM, VPC isolation and encryption, bring generative AI into production with Bedrock fine-tuning, Knowledge Bases and Agents, then practise MLA-C01 questions. Validated lab: a training job and endpoint running without internet access inside a VPC, with encrypted data and model artifacts.",
+   "chapters": [
+    {"id": "4.1", "title": "Security for ML", "content": "IAM least privilege, VPC isolation, encryption, compliance", "format": "Lecture + Lab", "hours": 3},
+    {"id": "4.2", "title": "Generative AI in Production", "content": "Bedrock fine-tuning, Knowledge Bases, Agents", "format": "Lecture + Lab", "hours": 3},
+    {"id": "4.3", "title": "MLA-C01 Preparation", "content": "Practice questions and review", "format": "Lecture + Workshop", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A production ML system on SageMaker AI, presented to the group",
+   "intro": "Teams of two or three build a production ML system for a provided use case, reusing the phase labs, then present it as they would to a head of data.",
+   "chapters": [
+    {"id": "5.1", "title": "Brief & Build", "content": "Read the brief, build the pipeline from data preparation to the Model Registry", "format": "Project", "hours": 3},
+    {"id": "5.2", "title": "Deploy & Monitor", "content": "Automated deployment, drift alerts, a Bedrock-backed feature; architecture diagram", "format": "Project", "hours": 1.5},
+    {"id": "5.3", "title": "Demo & Review", "content": "Live run of the pipeline and a drift alert, cleanup; questions and feedback", "format": "Project", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "A Production ML System on SageMaker AI",
+    "brief": "A SageMaker pipeline from data preparation to the Model Registry, automated deployment to an endpoint, drift alerts in production, and a feature backed by Amazon Bedrock.",
+    "stack": "AWS: SageMaker AI (Studio, Pipelines, Model Registry, Model Monitor, Clarify, Feature Store), Glue, S3, CloudWatch, Amazon Bedrock",
+    "deliverable": "Pipeline code, architecture diagram, monitoring dashboard, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

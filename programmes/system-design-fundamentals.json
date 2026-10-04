@@ -1,0 +1,152 @@
+{
+ "slug": "system-design-fundamentals",
+ "file": "System-Design-Fundamentals-21h.docx",
+ "title": "System Design Fundamentals",
+ "subtitle": "Design scalable, reliable systems and explain the trade-offs",
+ "audience_line": "Developers and engineers who design or review software systems",
+ "certifications": [],
+ "overview": "This workshop teaches participants to design software systems that scale and stay reliable, and to explain their choices. They work through the fundamentals of scalability, latency and consistency, API styles and authentication, caching and CDNs, data storage, replication and sharding, asynchronous messaging, and architecture styles with the patterns that keep them resilient and observable. Classic case studies put the pieces together, and the workshop closes with a final project in which each team designs a system for a brief and defends it in a peer review.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Developers and engineers who design or review software systems"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Programming in any language (course: Python Programming Fundamentals), or equivalent, and basic knowledge of databases and HTTP"
+  },
+  {
+   "label": "Duration",
+   "value": "21 h: 18 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Workshop: short lectures, each followed by design exercises in small groups; case studies and peer review"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant with a browser and a diagramming tool (Excalidraw or draw.io); small demonstrations with Redis and Kafka in Docker run by the trainer; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "Design exercises reviewed in each phase and a final design defended in a peer review; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can turn requirements into a system design with APIs, data model, caching, messaging and a scaling plan, and argue its trade-offs"
+  }
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Foundations, APIs & Caching",
+   "hours": 6,
+   "focus": "Scalability, CAP and consistency, API styles, authentication, caching, CDNs",
+   "intro": "Participants learn the vocabulary of system design: scalability, latency and throughput, the CAP theorem and consistency models. They then choose how services communicate and authenticate, and where caching and CDNs cut latency and load. Validated exercise: a back-of-the-envelope capacity estimate and an API with a caching strategy for a photo-sharing service.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Fundamentals",
+     "content": "Scalability, latency vs throughput, CAP theorem, consistency models, capacity estimates",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "APIs & Communication",
+     "content": "REST, GraphQL, gRPC, webhooks, WebSockets, API gateways, authentication (OAuth 2.0, OpenID Connect)",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Caching & CDN",
+     "content": "Caching strategies, eviction, Redis, CDNs",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Data, Messaging & Architecture",
+   "hours": 6,
+   "focus": "SQL vs NoSQL, replication, sharding, queues and Kafka, architecture styles, resilience",
+   "intro": "Participants choose and scale data stores with replication, sharding and indexes, decouple services with queues, publish/subscribe and Kafka, and compare architecture styles with the patterns that keep them reliable: rate limiting, retries, circuit breakers, observability and service level objectives. Validated exercise: the data model, sharding key and order-processing flow of an online shop, with its failure handling.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Data",
+     "content": "SQL vs NoSQL, replication, sharding, indexing",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Asynchronous Systems",
+     "content": "Queues, publish/subscribe, Kafka, idempotency, sagas",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Architecture Styles",
+     "content": "Monolith, microservices, event-driven, serverless; rate limiting, retries, circuit breakers, observability, SLOs",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Case Studies",
+   "hours": 3,
+   "focus": "URL shortener, chat application, payment system, news feed",
+   "intro": "Participants apply the whole method to classic problems, from requirements and estimates to the final architecture and its weak points, comparing their designs with each other. Validated exercise: one case study designed by each group and critiqued by another.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Case Studies",
+     "content": "URL shortener, chat application, payment system, news feed",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 3,
+   "focus": "A system designed for a brief, defended in peer review",
+   "intro": "Teams of two or three design a system for a written brief, such as a ride-hailing application, reusing the methods of the workshop, then defend it in front of another team.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Brief & Design",
+     "content": "Requirements and estimates, architecture diagram, data model, scaling plan",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Peer Review",
+     "content": "Present the design and its trade-offs, review another team’s design; feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "System Design for a Brief",
+    "brief": "A system designed from a written brief, such as a ride-hailing application: requirements and capacity estimates, architecture diagram, APIs, data model, caching and messaging, a scaling plan and the trade-offs behind each choice.",
+    "stack": "Architecture diagrams (Excalidraw or draw.io), capacity estimates, design document",
+    "deliverable": "Design document with diagrams, data model and scaling plan, peer-review notes"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}
