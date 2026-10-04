@@ -1,0 +1,93 @@
+{
+ "slug": "aws-solutions-architect-fr",
+ "file": "AWS-Solutions-Architect-Associate-36h-FR.docx",
+ "lang": "fr",
+ "title": "AWS Solutions Architect Associate",
+ "subtitle": "Concevoir des architectures AWS résilientes, sécurisées, performantes et optimisées en coût",
+ "audience_line": "Ingénieurs et architectes qui conçoivent des charges de travail sur AWS",
+ "certifications": [
+  "AWS Certified Solutions Architect – Associate (SAA-C03)"
+ ],
+ "overview": "Ce programme apprend aux participants à concevoir des architectures sur Amazon Web Services et prépare l’examen AWS Certified Solutions Architect – Associate (SAA-C03). Ils conçoivent pour la résilience sur plusieurs zones de disponibilité et Régions, construisent des réseaux VPC avancés et une connectivité hybride, choisissent les modèles de calcul, de stockage et de bases de données, découplent les applications avec files d’attente, événements et workflows, les sécurisent sur plusieurs comptes avec IAM, KMS, WAF et Organizations, et construisent des microservices serverless et conteneurisés. Chaque chapitre associe discussion de conception et TP, un entraînement sur scénarios clôt le contenu, et le programme s’achève par un projet final : une architecture conçue, construite et défendue lors d’une revue d’architecture.",
+ "facts": [
+  {"label": "Public", "value": "Ingénieurs et architectes qui conçoivent des charges de travail sur AWS"},
+  {"label": "Prérequis", "value": "AWS Cloud Practitioner (cours), ou pratique équivalente des services AWS essentiels. Ces services ne sont pas réintroduits"},
+  {"label": "Durée", "value": "36 h : 30 h de chapitres + 6 h de réserve"},
+  {"label": "Format", "value": "Discussions de conception et cours courts suivis de TP guidés ; entraînement à l’examen sur scénarios"},
+  {"label": "Environnement de TP", "value": "Un portable par participant avec la CLI AWS ; un compte AWS de test par équipe, fourni par l’organisateur, avec alerte budgétaire ; ressources détruites à la fin de chaque TP pour maîtriser les coûts"},
+  {"label": "Évaluation", "value": "Un TP validé à la fin de chaque phase, des questions d’entraînement sur scénarios et une revue d’architecture finale ; attestation de formation pour les participants qui valident les TP et le projet"},
+  {"label": "Résultat", "value": "Les participants savent concevoir et construire une architecture multiniveau sur plusieurs zones de disponibilité, justifier ses compromis de coût, de résilience et de sécurité, et se présenter à l’examen SAA-C03"}
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Architectures résilientes et connectées",
+   "hours": 6,
+   "focus": "Conception multi-AZ et multi-Région, sauvegarde, conception VPC et connectivité hybride",
+   "intro": "Les participants conçoivent en prévoyant les pannes : charges réparties sur plusieurs zones de disponibilité et Régions, sauvegardes et objectifs de reprise. Ils conçoivent ensuite les réseaux sous-jacents : organisation des VPC, peering, Transit Gateway, endpoints et connectivité hybride. TP validé : deux VPC reliés par un Transit Gateway, avec un accès privé à S3 par un gateway endpoint.",
+   "chapters": [
+    {"id": "1.1", "title": "Architectures résilientes", "content": "Principes de conception, multi-AZ, multi-Région, sauvegarde", "format": "Cours + TP", "hours": 3},
+    {"id": "1.2", "title": "Réseau avancé", "content": "Conception des VPC, peering, Transit Gateway, endpoints, connectivité hybride", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Calcul, stockage et données",
+   "hours": 6,
+   "focus": "EC2 et Auto Scaling, S3 et stockage fichier, transfert de données, modèles de bases de données",
+   "intro": "Les participants choisissent familles d’instances et stratégies de mise à l’échelle, classes de stockage et règles de cycle de vie, systèmes de fichiers et services de transfert, puis des modèles de bases de données avec réplicas, conception de clés DynamoDB et cache. TP validé : un cluster Aurora avec un réplica en lecture et une couche ElastiCache, mesuré avant et après la mise en cache.",
+   "chapters": [
+    {"id": "2.1", "title": "Modèles de calcul", "content": "Familles EC2, stratégies Auto Scaling, conteneurs, groupes de placement", "format": "Cours + TP", "hours": 3},
+    {"id": "2.2", "title": "Stockage et transfert de données", "content": "Classes et cycle de vie S3, EFS et FSx, DataSync, famille Snow", "format": "Cours + TP", "hours": 1.5},
+    {"id": "2.3", "title": "Modèles de bases de données", "content": "Réplicas RDS et Aurora, conception DynamoDB, cache", "format": "Cours + TP", "hours": 1.5}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Découplage et sécurité",
+   "hours": 6,
+   "focus": "SQS, SNS, EventBridge, Step Functions, stratégie IAM, KMS, WAF, Organizations",
+   "intro": "Les participants découplent les composants pour qu’une panne n’arrête pas toute l’application, puis sécurisent l’architecture sur plusieurs comptes : stratégie IAM, chiffrement avec KMS, protection périphérique avec WAF et Shield, et gouvernance avec Organizations. TP validé : un flux de commandes via SQS, SNS et Step Functions qui continue d’accepter des commandes pendant que le service de traitement est arrêté, avec des files chiffrées.",
+   "chapters": [
+    {"id": "3.1", "title": "Découplage", "content": "SQS, SNS, EventBridge, Step Functions", "format": "Cours + TP", "hours": 3},
+    {"id": "3.2", "title": "Architecture de sécurité", "content": "Stratégie IAM, KMS, WAF, Shield, Organizations", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Serverless et préparation à l’examen",
+   "hours": 6,
+   "focus": "Lambda, API Gateway, ECS et EKS, Fargate, scénarios SAA-C03",
+   "intro": "Les participants construisent des microservices sans gérer de serveurs, avec Lambda et API Gateway ou des conteneurs sur ECS et EKS avec Fargate, puis traitent des scénarios couvrant les quatre domaines de l’examen SAA-C03. TP validé : une API serverless et un service conteneurisé sur Fargate derrière le même domaine.",
+   "chapters": [
+    {"id": "4.1", "title": "Serverless et microservices", "content": "Lambda, API Gateway, ECS et EKS, Fargate", "format": "Cours + TP", "hours": 3},
+    {"id": "4.2", "title": "Préparation au SAA-C03", "content": "Questions sur scénarios et révision", "format": "Cours + atelier", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Une architecture multiniveau, défendue en revue d’architecture",
+   "intro": "Par équipes de deux ou trois, les participants conçoivent et construisent une architecture pour un cas métier écrit, en réutilisant les TP de phase, puis défendent leurs choix lors d’une revue d’architecture menée par le formateur.",
+   "chapters": [
+    {"id": "5.1", "title": "Cahier des charges et conception", "content": "Analyser le cas métier, concevoir une architecture multiniveau sur plusieurs zones de disponibilité, en construire le cœur dans le compte de test", "format": "Projet", "hours": 3},
+    {"id": "5.2", "title": "Coût, résilience et sécurité", "content": "Estimation de coût, scénarios de panne, contrôles de sécurité, schéma d’architecture et registre des décisions", "format": "Projet", "hours": 1.5},
+    {"id": "5.3", "title": "Revue d’architecture", "content": "Défendre les compromis devant le groupe, suppression des ressources ; questions et retours", "format": "Projet", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Architecture pour un cas métier",
+    "brief": "Une architecture multiniveau sur plusieurs zones de disponibilité pour un cas métier écrit, construite dans le compte de test et défendue lors d’une revue d’architecture qui pèse les compromis de coût, de résilience et de sécurité.",
+    "stack": "AWS : VPC, EC2 ou Fargate, Elastic Load Balancing, Auto Scaling, Aurora ou DynamoDB, S3, SQS, KMS, WAF, CloudWatch, AWS Pricing Calculator",
+    "deliverable": "Schéma d’architecture, registre des décisions, estimation de coût, cœur fonctionnel, revue d’architecture"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

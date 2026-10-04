@@ -1,0 +1,81 @@
+{
+ "slug": "aws-cloud-security",
+ "file": "AWS-Cloud-Security-33h.docx",
+ "title": "AWS Cloud Security",
+ "subtitle": "Secure, monitor and respond to incidents on AWS accounts and workloads",
+ "audience_line": "Security, cloud and operations engineers responsible for AWS environments",
+ "certifications": [
+  "AWS Certified Security – Specialty (SCS-C03), core topics"
+ ],
+ "overview": "This programme teaches participants to secure Amazon Web Services environments from identity to incident response. They work with IAM policies and their evaluation logic, govern many accounts with Organizations, service and resource control policies and IAM Identity Center, protect networks and the edge, encrypt data and manage secrets, detect threats and misconfigurations with CloudTrail, Config, GuardDuty, Security Hub and Inspector, and respond to incidents with playbooks and automated remediation. An overview of the Security – Specialty exam closes the content, and the programme ends with a final project: a deliberately insecure account secured by each team, with a findings report.",
+ "facts": [
+  {"label": "Audience", "value": "Security, cloud and operations engineers responsible for AWS environments"},
+  {"label": "Prerequisites", "value": "AWS Cloud Practitioner (course), or equivalent hands-on use of the core AWS services. Core services are not introduced again"},
+  {"label": "Duration", "value": "33 h: 27 h of chapters + 6 h buffer"},
+  {"label": "Format", "value": "Short lectures followed by guided labs; incident simulations"},
+  {"label": "Lab environment", "value": "One laptop per participant with the AWS CLI; one AWS Organizations sandbox per team (management and member accounts), provided by the organiser, with a budget alert; detection services and resources disabled or destroyed at the end of each lab to control cost"},
+  {"label": "Assessment", "value": "A lab validated at the end of each phase and a final project with a findings report; certificate of completion for participants who complete both"},
+  {"label": "Outcome", "value": "Participants can apply least privilege across accounts, protect networks and data, detect threats and misconfigurations, and respond to an incident on AWS with automated remediation"}
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Identity & Governance",
+   "hours": 6,
+   "focus": "Shared responsibility, IAM policies and evaluation, Organizations, federation",
+   "intro": "Participants start from the security pillar of the Well-Architected Framework, then master the identity layer: how IAM evaluates policies, roles and permission boundaries, access analysis, and multi-account governance with Organizations, service and resource control policies, IAM Identity Center and Cognito. Validated lab: a member account where a service control policy blocks disabling CloudTrail, and developers sign in through IAM Identity Center with a permission set.",
+   "chapters": [
+    {"id": "1.1", "title": "Security on AWS", "content": "Shared responsibility, the Well-Architected security pillar", "format": "Lecture + Workshop", "hours": 1.5},
+    {"id": "1.2", "title": "IAM in Depth", "content": "Policies and evaluation logic, roles, permission boundaries, IAM Access Analyzer", "format": "Lecture + Lab", "hours": 1.5},
+    {"id": "1.3", "title": "Multi-Account Governance & Federation", "content": "Organizations, service control policies and resource control policies, IAM Identity Center, Cognito", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Infrastructure & Data Protection",
+   "hours": 6,
+   "focus": "VPC security, WAF, Shield, Network Firewall, KMS, Secrets Manager, Macie",
+   "intro": "Participants protect the network layer with security groups, network ACLs, AWS Network Firewall, WAF and Shield, then protect data with KMS keys and key policies, encryption at rest and in transit, Secrets Manager, ACM certificates and Macie. Validated lab: a web application behind WAF that blocks an injection attempt, with its database encrypted by a customer managed key and its password rotated by Secrets Manager.",
+   "chapters": [
+    {"id": "2.1", "title": "Network & Edge Protection", "content": "VPC security, security groups and network ACLs, WAF, Shield, Network Firewall", "format": "Lecture + Lab", "hours": 3},
+    {"id": "2.2", "title": "Protecting Data", "content": "KMS, encryption at rest and in transit, Secrets Manager, ACM, Macie", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Detection, Response & Exam Overview",
+   "hours": 9,
+   "focus": "CloudTrail, Config, GuardDuty, Security Hub, Inspector, incident response, SCS-C03",
+   "intro": "Participants turn on the services that show what happens in an account, fix the posture findings, then respond to simulated incidents with playbooks, automated remediation and evidence collection. An overview of the SCS-C03 domains and scenario practice closes the phase. Validated lab: a GuardDuty finding that triggers an EventBridge rule and a Lambda function isolating the compromised instance.",
+   "chapters": [
+    {"id": "3.1", "title": "Detection & Posture", "content": "CloudTrail, CloudWatch, Config, GuardDuty, Security Hub, Inspector, patching with Systems Manager", "format": "Lecture + Lab", "hours": 3},
+    {"id": "3.2", "title": "Incident Response", "content": "Playbooks, automated remediation, forensics", "format": "Lecture + Lab", "hours": 3},
+    {"id": "3.3", "title": "Security – Specialty (SCS-C03) Overview", "content": "Exam domains, scenario practice and gap analysis", "format": "Lecture + Workshop", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A deliberately insecure account, secured and reported",
+   "intro": "Each team receives an AWS account with deliberately insecure settings, secures it by reusing the phase labs, and presents its findings report as it would to a security officer.",
+   "chapters": [
+    {"id": "4.1", "title": "Assess & Fix", "content": "Find the weaknesses, apply least-privilege IAM, encryption and logging", "format": "Project", "hours": 3},
+    {"id": "4.2", "title": "Detect & Automate", "content": "Enable GuardDuty and Security Hub, automate one remediation, write the findings report", "format": "Project", "hours": 1.5},
+    {"id": "4.3", "title": "Report & Review", "content": "Present findings, fixes and remaining risks; questions and feedback", "format": "Project", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Securing an Insecure AWS Account",
+    "brief": "An AWS account with deliberately insecure settings brought to a secure baseline: least-privilege IAM, encryption, logging, GuardDuty and Security Hub, and at least one automated remediation, documented in a findings report.",
+    "stack": "AWS: IAM, Organizations, KMS, CloudTrail, Config, GuardDuty, Security Hub, EventBridge, Lambda, Systems Manager",
+    "deliverable": "Secured account, findings report with fixes and remaining risks, presentation"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

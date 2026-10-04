@@ -1,0 +1,84 @@
+{
+ "slug": "aws-cloud-practitioner-fr",
+ "file": "AWS-Cloud-Practitioner-33h-FR.docx",
+ "lang": "fr",
+ "title": "AWS Cloud Practitioner",
+ "subtitle": "Comprendre, utiliser et chiffrer les services essentiels d’Amazon Web Services",
+ "audience_line": "Professionnels de l’IT, développeurs, étudiants et managers qui débutent avec AWS",
+ "certifications": [
+  "AWS Certified Cloud Practitioner (CLF-C02)"
+ ],
+ "overview": "Ce programme donne aux participants une connaissance pratique d’Amazon Web Services et prépare l’examen AWS Certified Cloud Practitioner (CLF-C02). Ils découvrent les modèles du cloud et la tarification AWS, sécurisent un compte avec IAM, puis utilisent les services essentiels : réseau avec VPC, Route 53 et CloudFront, calcul avec EC2, Lambda et les conteneurs, stockage, bases de données, mise à l’échelle et supervision, le tout guidé par le Well-Architected Framework. Chaque chapitre se termine par un TP dans la console ou la CLI AWS, un entraînement à l’examen clôt le contenu, et le programme s’achève par un projet final où les équipes déploient une application web hautement disponible et présentent son estimation de coût.",
+ "facts": [
+  {"label": "Public", "value": "Professionnels de l’IT, développeurs, étudiants et managers qui débutent avec AWS"},
+  {"label": "Prérequis", "value": "Aucun. Culture informatique de base ; des notions de réseau ou de Linux aident sans être nécessaires"},
+  {"label": "Durée", "value": "33 h : 27 h de chapitres + 6 h de réserve"},
+  {"label": "Format", "value": "Cours courts suivis de TP guidés dans la console et la CLI AWS ; entraînement à l’examen"},
+  {"label": "Environnement de TP", "value": "Un portable par participant avec un navigateur et la CLI AWS ; un compte AWS de test par équipe, fourni par l’organisateur, avec alerte budgétaire ; ressources détruites à la fin de chaque TP pour maîtriser les coûts"},
+  {"label": "Évaluation", "value": "Un TP validé à la fin de chaque phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet"},
+  {"label": "Résultat", "value": "Les participants savent expliquer et choisir les services AWS essentiels, déployer une application web simple et hautement disponible, en estimer le coût et se présenter à l’examen CLF-C02"}
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Concepts du cloud et sécurité",
+   "hours": 6,
+   "focus": "Modèles du cloud, tarification et infrastructure mondiale, IAM",
+   "intro": "Les participants découvrent ce que le cloud change, comment AWS le facture et où il fonctionne, puis sécurisent leur compte de test : modèle de responsabilité partagée, utilisateurs, groupes, rôles et politiques IAM, et MFA. TP validé : un compte avec MFA sur l’utilisateur root, un groupe d’administrateurs, un rôle au moindre privilège et un budget avec alerte.",
+   "chapters": [
+    {"id": "1.1", "title": "Concepts du cloud", "content": "Modèles de service et de déploiement, avantages du cloud", "format": "Cours + atelier", "hours": 1.5},
+    {"id": "1.2", "title": "Économie et infrastructure mondiale", "content": "Modèles de tarification, coût total de possession, facturation, Régions, zones de disponibilité, emplacements périphériques", "format": "Cours + TP", "hours": 1.5},
+    {"id": "1.3", "title": "Sécurité et IAM", "content": "Responsabilité partagée, utilisateurs, groupes, rôles, politiques, MFA", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Services essentiels",
+   "hours": 9,
+   "focus": "VPC, Route 53, CloudFront, EC2, Lambda, conteneurs, stockage, bases de données",
+   "intro": "Les participants construisent avec les services qu’utilisent la plupart des charges de travail : un VPC avec sous-réseaux publics et privés, DNS et diffusion de contenu, machines virtuelles, fonctions et conteneurs, stockage objet, bloc et fichier, et bases de données relationnelles et NoSQL. TP validé : un serveur web dans un sous-réseau public qui sert des images depuis S3, avec sa base de données dans un sous-réseau privé.",
+   "chapters": [
+    {"id": "2.1", "title": "Réseau et diffusion de contenu", "content": "VPC, sous-réseaux, groupes de sécurité, Route 53, CloudFront", "format": "Cours + TP", "hours": 3},
+    {"id": "2.2", "title": "Calcul", "content": "EC2, Lambda, conteneurs, Elastic Beanstalk", "format": "Cours + TP", "hours": 3},
+    {"id": "2.3", "title": "Stockage", "content": "S3 et ses classes de stockage (dont S3 Glacier), EBS, EFS", "format": "Cours + TP", "hours": 1.5},
+    {"id": "2.4", "title": "Bases de données", "content": "RDS, Aurora, DynamoDB, Redshift", "format": "Cours + TP", "hours": 1.5}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Architecture, exploitation et préparation à l’examen",
+   "hours": 6,
+   "focus": "Well-Architected Framework, répartition de charge, Auto Scaling, CloudWatch, entraînement CLF-C02",
+   "intro": "Les participants évaluent une architecture selon les six piliers du Well-Architected Framework, la rendent capable de monter en charge et de se rétablir avec Elastic Load Balancing et Auto Scaling, la supervisent avec CloudWatch, puis s’entraînent sur les quatre domaines de l’examen CLF-C02. TP validé : un groupe Auto Scaling derrière un répartiteur de charge qui remplace une instance arrêtée, avec une alarme CloudWatch.",
+   "chapters": [
+    {"id": "3.1", "title": "Architecture cloud", "content": "Well-Architected Framework", "format": "Cours + atelier", "hours": 1.5},
+    {"id": "3.2", "title": "Mise à l’échelle et supervision", "content": "Elastic Load Balancing, Auto Scaling, CloudWatch", "format": "Cours + TP", "hours": 1.5},
+    {"id": "3.3", "title": "Préparation au CLF-C02", "content": "Questions d’entraînement et révision", "format": "Cours + atelier", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Une application web hautement disponible et son estimation de coût",
+   "intro": "Par équipes de deux ou trois, les participants déploient une application web hautement disponible dans leur compte de test à partir d’un cahier des charges écrit, en réutilisant les TP de phase, puis présentent l’architecture et son coût mensuel comme ils le feraient devant un manager.",
+   "chapters": [
+    {"id": "4.1", "title": "Cahier des charges et réalisation", "content": "Analyser le besoin, dessiner l’architecture, puis déployer le VPC, le groupe Auto Scaling EC2 derrière un Application Load Balancer, la base RDS et le bucket S3", "format": "Projet", "hours": 3},
+    {"id": "4.2", "title": "Supervision et estimation", "content": "Alarmes CloudWatch, un budget, une estimation de coût avec l’AWS Pricing Calculator, schéma d’architecture", "format": "Projet", "hours": 1.5},
+    {"id": "4.3", "title": "Démonstration et revue", "content": "Démonstration en direct avec la panne d’une instance, présentation du coût, suppression des ressources ; questions et retours", "format": "Projet", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Une application web hautement disponible sur AWS",
+    "brief": "Une application web qui survit à la perte d’un serveur : un VPC sur deux zones de disponibilité, un groupe Auto Scaling derrière un Application Load Balancer, une base RDS, du contenu statique sur S3, des alarmes CloudWatch et un budget, présentée avec son estimation de coût mensuel.",
+    "stack": "AWS : VPC, EC2, Auto Scaling, Application Load Balancer, RDS, S3, CloudWatch, AWS Budgets, AWS Pricing Calculator",
+    "deliverable": "Déploiement fonctionnel, schéma d’architecture, estimation de coût, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

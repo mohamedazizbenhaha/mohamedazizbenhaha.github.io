@@ -1,0 +1,82 @@
+{
+ "slug": "aws-cloud-security-fr",
+ "file": "Securite-du-cloud-AWS-33h.docx",
+ "lang": "fr",
+ "title": "Sécurité du cloud AWS",
+ "subtitle": "Sécuriser, surveiller et répondre aux incidents sur les comptes et les charges de travail AWS",
+ "audience_line": "Ingénieurs sécurité, cloud et exploitation responsables d’environnements AWS",
+ "certifications": [
+  "AWS Certified Security – Specialty (SCS-C03), thèmes principaux"
+ ],
+ "overview": "Ce programme apprend aux participants à sécuriser des environnements Amazon Web Services, de l’identité à la réponse aux incidents. Ils travaillent avec les politiques IAM et leur logique d’évaluation, gouvernent de nombreux comptes avec Organizations, les politiques de contrôle de services et de ressources et IAM Identity Center, protègent les réseaux et la périphérie, chiffrent les données et gèrent les secrets, détectent menaces et erreurs de configuration avec CloudTrail, Config, GuardDuty, Security Hub et Inspector, et répondent aux incidents avec des procédures et une remédiation automatisée. Une présentation de l’examen Security – Specialty clôt le contenu, et le programme s’achève par un projet final : un compte volontairement non sécurisé, sécurisé par chaque équipe, avec un rapport de constats.",
+ "facts": [
+  {"label": "Public", "value": "Ingénieurs sécurité, cloud et exploitation responsables d’environnements AWS"},
+  {"label": "Prérequis", "value": "AWS Cloud Practitioner (cours), ou pratique équivalente des services AWS essentiels. Ces services ne sont pas réintroduits"},
+  {"label": "Durée", "value": "33 h : 27 h de chapitres + 6 h de réserve"},
+  {"label": "Format", "value": "Cours courts suivis de TP guidés ; simulations d’incidents"},
+  {"label": "Environnement de TP", "value": "Un portable par participant avec la CLI AWS ; un environnement AWS Organizations de test par équipe (compte de gestion et comptes membres), fourni par l’organisateur, avec alerte budgétaire ; services de détection et ressources désactivés ou détruits à la fin de chaque TP pour maîtriser les coûts"},
+  {"label": "Évaluation", "value": "Un TP validé à la fin de chaque phase et un projet final avec rapport de constats ; attestation de formation pour les participants qui valident les deux"},
+  {"label": "Résultat", "value": "Les participants savent appliquer le moindre privilège sur plusieurs comptes, protéger réseaux et données, détecter menaces et erreurs de configuration, et répondre à un incident sur AWS avec une remédiation automatisée"}
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Identité et gouvernance",
+   "hours": 6,
+   "focus": "Responsabilité partagée, politiques IAM et évaluation, Organizations, fédération",
+   "intro": "Les participants partent du pilier sécurité du Well-Architected Framework, puis maîtrisent la couche identité : évaluation des politiques IAM, rôles et limites d’autorisations, analyse des accès, et gouvernance multicompte avec Organizations, les politiques de contrôle de services et de ressources, IAM Identity Center et Cognito. TP validé : un compte membre où une politique de contrôle de services empêche de désactiver CloudTrail, et des développeurs qui se connectent via IAM Identity Center avec un jeu d’autorisations.",
+   "chapters": [
+    {"id": "1.1", "title": "La sécurité sur AWS", "content": "Responsabilité partagée, pilier sécurité du Well-Architected Framework", "format": "Cours + atelier", "hours": 1.5},
+    {"id": "1.2", "title": "IAM en profondeur", "content": "Politiques et logique d’évaluation, rôles, limites d’autorisations, IAM Access Analyzer", "format": "Cours + TP", "hours": 1.5},
+    {"id": "1.3", "title": "Gouvernance multicompte et fédération", "content": "Organizations, politiques de contrôle de services (SCP) et de ressources (RCP), IAM Identity Center, Cognito", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Protection de l’infrastructure et des données",
+   "hours": 6,
+   "focus": "Sécurité VPC, WAF, Shield, Network Firewall, KMS, Secrets Manager, Macie",
+   "intro": "Les participants protègent la couche réseau avec les groupes de sécurité, les ACL réseau, AWS Network Firewall, WAF et Shield, puis protègent les données avec les clés et politiques de clés KMS, le chiffrement au repos et en transit, Secrets Manager, les certificats ACM et Macie. TP validé : une application web derrière WAF qui bloque une tentative d’injection, avec sa base chiffrée par une clé gérée par le client et son mot de passe renouvelé par Secrets Manager.",
+   "chapters": [
+    {"id": "2.1", "title": "Protection du réseau et de la périphérie", "content": "Sécurité VPC, groupes de sécurité et ACL réseau, WAF, Shield, Network Firewall", "format": "Cours + TP", "hours": 3},
+    {"id": "2.2", "title": "Protection des données", "content": "KMS, chiffrement au repos et en transit, Secrets Manager, ACM, Macie", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Détection, réponse et présentation de l’examen",
+   "hours": 9,
+   "focus": "CloudTrail, Config, GuardDuty, Security Hub, Inspector, réponse aux incidents, SCS-C03",
+   "intro": "Les participants activent les services qui montrent ce qui se passe dans un compte, corrigent les constats de posture, puis répondent à des incidents simulés avec des procédures, une remédiation automatisée et la collecte de preuves. Une présentation des domaines du SCS-C03 et un entraînement sur scénarios closent la phase. TP validé : un constat GuardDuty qui déclenche une règle EventBridge et une fonction Lambda isolant l’instance compromise.",
+   "chapters": [
+    {"id": "3.1", "title": "Détection et posture", "content": "CloudTrail, CloudWatch, Config, GuardDuty, Security Hub, Inspector, correctifs avec Systems Manager", "format": "Cours + TP", "hours": 3},
+    {"id": "3.2", "title": "Réponse aux incidents", "content": "Procédures (playbooks), remédiation automatisée, investigation numérique", "format": "Cours + TP", "hours": 3},
+    {"id": "3.3", "title": "Présentation du Security – Specialty (SCS-C03)", "content": "Domaines de l’examen, entraînement sur scénarios et analyse des écarts", "format": "Cours + atelier", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Un compte volontairement non sécurisé, sécurisé et documenté",
+   "intro": "Chaque équipe reçoit un compte AWS aux réglages volontairement non sécurisés, le sécurise en réutilisant les TP de phase, et présente son rapport de constats comme elle le ferait devant un responsable de la sécurité.",
+   "chapters": [
+    {"id": "4.1", "title": "Évaluation et correction", "content": "Trouver les faiblesses, appliquer IAM au moindre privilège, chiffrement et journalisation", "format": "Projet", "hours": 3},
+    {"id": "4.2", "title": "Détection et automatisation", "content": "Activer GuardDuty et Security Hub, automatiser une remédiation, rédiger le rapport de constats", "format": "Projet", "hours": 1.5},
+    {"id": "4.3", "title": "Rapport et revue", "content": "Présenter constats, corrections et risques restants ; questions et retours", "format": "Projet", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Sécuriser un compte AWS non sécurisé",
+    "brief": "Un compte AWS aux réglages volontairement non sécurisés ramené à un niveau de sécurité de référence : IAM au moindre privilège, chiffrement, journalisation, GuardDuty et Security Hub, et au moins une remédiation automatisée, documentés dans un rapport de constats.",
+    "stack": "AWS : IAM, Organizations, KMS, CloudTrail, Config, GuardDuty, Security Hub, EventBridge, Lambda, Systems Manager",
+    "deliverable": "Compte sécurisé, rapport de constats avec corrections et risques restants, présentation"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

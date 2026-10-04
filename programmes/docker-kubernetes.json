@@ -7,13 +7,34 @@
  "certifications": [],
  "overview": "This programme takes participants from their first container to a multi-service application running on Kubernetes and delivered by GitOps. They build small, secure images, run multi-container applications with Docker Compose, then deploy them on Kubernetes: workloads, services and network policies, configuration and storage, traffic routing with the Gateway API and TLS, autoscaling, Helm charts, monitoring, security and an overview of managed clusters on EKS and AKS. The last phase introduces GitOps with Argo CD and per-environment configuration with Kustomize and Helm. The same application is carried through every phase, and the programme closes with a final project in which teams containerise, deploy and present a multi-service application.",
  "facts": [
-  {"label": "Audience", "value": "Developers, system administrators and DevOps engineers starting with containers"},
-  {"label": "Prerequisites", "value": "Linux command line (course: Linux & Bash Scripting, or equivalent). No prior container experience needed"},
-  {"label": "Duration", "value": "57 h: 48 h of chapters + 9 h buffer"},
-  {"label": "Format", "value": "Short lectures followed by guided labs; one application carried through every phase"},
-  {"label": "Lab environment", "value": "Runs locally: one laptop per participant (16 GB RAM minimum, Docker, kind, kubectl, Helm, VS Code) and a GitHub repository per team for GitOps; managed clusters (EKS, AKS) shown by trainer demonstration; no cloud account or cost for participants"},
-  {"label": "Assessment", "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"},
-  {"label": "Outcome", "value": "Participants can containerise a multi-service application, deploy it on Kubernetes with Helm, routing, TLS, autoscaling and monitoring, and deliver it from Git with Argo CD"}
+  {
+   "label": "Audience",
+   "value": "Developers, system administrators and DevOps engineers starting with containers"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Linux command line (course: Linux & Bash Scripting, or equivalent). No prior container experience needed"
+  },
+  {
+   "label": "Duration",
+   "value": "57 h: 48 h of chapters + 9 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs; one application carried through every phase"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant (16 GB RAM minimum, Docker, kind, kubectl, Helm, VS Code) and a GitHub repository per team for GitOps; managed clusters (EKS, AKS) shown by trainer demonstration; no cloud account or cost for participants"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can containerise a multi-service application, deploy it on Kubernetes with Helm, routing, TLS, autoscaling and monitoring, and deliver it from Git with Argo CD"
+  }
  ],
  "buffer": 9,
  "phases": [
@@ -23,14 +44,62 @@
    "focus": "Images, containers, storage, networking, Compose and security",
    "intro": "Participants learn what a container really is, then build and run them: efficient multi-stage images, persistent storage, container networking and multi-container applications with Docker Compose, with security scanning and the practices that keep containers easy to operate. Validated lab: the course application (frontend, API and database) running with Docker Compose from small, non-root images that pass a Trivy scan.",
    "chapters": [
-    {"id": "1.1", "title": "Containers vs VMs", "content": "Namespaces, cgroups, OCI, Docker Engine, containerd", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.2", "title": "Running Containers", "content": "run, ps, exec and logs, ports, environment variables, restart policies, resource limits", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.3", "title": "Building Images", "content": "Dockerfile, layers and cache, CMD vs ENTRYPOINT, multi-stage builds, image size", "format": "Lecture + Lab", "hours": 3},
-    {"id": "1.4", "title": "Storage", "content": "Volumes, bind mounts, tmpfs, backup and restore", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.5", "title": "Networking", "content": "Bridge, host and overlay networks, DNS between containers", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.6", "title": "Docker Compose", "content": "Services, health checks, env files, profiles, development and production overrides", "format": "Lecture + Lab", "hours": 3},
-    {"id": "1.7", "title": "Security & Registries", "content": "Trivy scanning, non-root users, read-only filesystems, private registry", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "1.8", "title": "Best Practices", "content": "Twelve-factor apps, logging, sidecar pattern, debugging containers", "format": "Lecture + Lab", "hours": 1.5}
+    {
+     "id": "1.1",
+     "title": "Containers vs VMs",
+     "content": "Namespaces, cgroups, OCI, Docker Engine, containerd",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Running Containers",
+     "content": "run, ps, exec and logs, ports, environment variables, restart policies, resource limits",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Building Images",
+     "content": "Dockerfile, layers and cache, CMD vs ENTRYPOINT, multi-stage builds, image size",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.4",
+     "title": "Storage",
+     "content": "Volumes, bind mounts, tmpfs, backup and restore",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.5",
+     "title": "Networking",
+     "content": "Bridge and host networks, overlay networks (concept), DNS between containers",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.6",
+     "title": "Docker Compose",
+     "content": "Services, health checks, env files, profiles, development and production overrides",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.7",
+     "title": "Security & Registries",
+     "content": "Trivy scanning, non-root users, read-only filesystems, private registry",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.8",
+     "title": "Best Practices",
+     "content": "Twelve-factor apps, logging, sidecar pattern, debugging containers",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -41,18 +110,90 @@
    "focus": "Workloads, services, configuration, storage, routing, scaling, Helm, security",
    "intro": "Participants move the course application from Compose to a local Kubernetes cluster and learn each object it needs: workloads, services and network policies, configuration and secrets, persistent storage, traffic routing with the Gateway API and TLS from cert-manager, resource limits and autoscaling, Helm packaging, monitoring with Prometheus and Grafana, and basic security. Ingress is covered for existing clusters, including migration away from the retired ingress-nginx. Validated lab: the course application installed from a Helm chart, reachable over HTTPS through the Gateway API and scaled by the Horizontal Pod Autoscaler.",
    "chapters": [
-    {"id": "2.1", "title": "Architecture", "content": "Control plane, nodes, kubectl, local clusters (kind, minikube)", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.2", "title": "Pods & Deployments", "content": "Pods, ReplicaSets, Deployments, rolling updates", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.3", "title": "Other Workloads", "content": "DaemonSets, StatefulSets, Jobs, CronJobs", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.4", "title": "Services & Networking", "content": "ClusterIP, NodePort, LoadBalancer, CoreDNS, NetworkPolicies", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.5", "title": "Configuration", "content": "ConfigMaps, Secrets", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.6", "title": "Storage", "content": "PersistentVolumes, PersistentVolumeClaims, StorageClasses", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.7", "title": "Traffic Routing", "content": "Gateway API, Ingress (ingress-nginx retired in March 2026) and migration, TLS with cert-manager", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.8", "title": "Scaling", "content": "Requests and limits, resource quotas, Horizontal Pod Autoscaler", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.9", "title": "Helm", "content": "Charts, values, install, upgrade and rollback", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.10", "title": "Observability & Troubleshooting", "content": "describe, logs and events, metrics-server, Prometheus and Grafana installed with Helm", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.11", "title": "Security Basics", "content": "RBAC, ServiceAccounts, Pod Security Standards", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.12", "title": "Managed Kubernetes", "content": "Amazon EKS and Azure AKS overview, trainer demonstration", "format": "Lecture + Workshop", "hours": 1.5}
+    {
+     "id": "2.1",
+     "title": "Architecture",
+     "content": "Control plane, nodes, kubectl, local clusters (kind, minikube)",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Pods & Deployments",
+     "content": "Pods, ReplicaSets, Deployments, rolling updates",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Other Workloads",
+     "content": "DaemonSets, StatefulSets, Jobs, CronJobs",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Services & Networking",
+     "content": "ClusterIP, NodePort, LoadBalancer (cloud-provider-kind locally), CoreDNS, NetworkPolicies",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.5",
+     "title": "Configuration",
+     "content": "ConfigMaps, Secrets",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.6",
+     "title": "Storage",
+     "content": "PersistentVolumes, PersistentVolumeClaims, StorageClasses",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.7",
+     "title": "Traffic Routing",
+     "content": "Gateway API with Envoy Gateway, Ingress (community ingress-nginx retired in March 2026) and migration, TLS with cert-manager",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.8",
+     "title": "Scaling",
+     "content": "Requests and limits, resource quotas, Horizontal Pod Autoscaler",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.9",
+     "title": "Helm",
+     "content": "Charts, values, install, upgrade and rollback",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.10",
+     "title": "Observability & Troubleshooting",
+     "content": "describe, logs and events, metrics-server, Prometheus and Grafana installed with Helm",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.11",
+     "title": "Security Basics",
+     "content": "RBAC, ServiceAccounts, Pod Security Standards",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.12",
+     "title": "Managed Kubernetes",
+     "content": "Amazon EKS and Azure AKS: trainer demonstration, then a comparison exercise",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -63,9 +204,27 @@
    "focus": "Argo CD, the pull model, environments with Kustomize and Helm",
    "intro": "With GitOps, the cluster pulls its desired state from Git instead of receiving commands. Participants install Argo CD, deliver the course application from a Git repository, roll back by reverting a commit, and manage development and production environments with Kustomize overlays and Helm values. Validated lab: a change merged in Git that reaches the development environment automatically and production after promotion.",
    "chapters": [
-    {"id": "3.1", "title": "GitOps & Argo CD", "content": "Principles, pull model, Argo CD installation", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.2", "title": "Argo CD in Practice", "content": "Applications, sync, rollback, app-of-apps", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.3", "title": "Environments", "content": "Kustomize overlays, Helm values per environment", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "3.1",
+     "title": "GitOps & Argo CD",
+     "content": "Principles, pull model, Argo CD installation",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Argo CD in Practice",
+     "content": "Applications, ApplicationSets, sync, rollback, app-of-apps",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Environments",
+     "content": "Kustomize overlays, Helm values per environment",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -74,17 +233,35 @@
    "name": "Final Project",
    "hours": 6,
    "focus": "A multi-service application, from Compose to GitOps",
-   "intro": "Teams of two or three containerise and deploy a provided multi-service application, reusing the phase labs, then present it as they would to an engineering team.",
+   "intro": "Teams of two or three containerise and deploy a second provided multi-service application, reusing the Dockerfiles, chart and manifests of the phase labs, then present it as they would to an engineering team.",
    "chapters": [
-    {"id": "4.1", "title": "Brief & Build", "content": "Read the brief, containerise the frontend, API and database, write the Compose file for development and the Helm chart", "format": "Project", "hours": 3},
-    {"id": "4.2", "title": "Deliver & Document", "content": "Gateway API routing with TLS, autoscaling, monitoring, delivery by Argo CD; README and architecture diagram", "format": "Project", "hours": 1.5},
-    {"id": "4.3", "title": "Demo & Review", "content": "Live demo of a change delivered from Git, then a rollback; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Brief & Build",
+     "content": "Read the brief, containerise the frontend, API and database, write the Compose file for development and the Helm chart",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Deliver & Document",
+     "content": "Gateway API routing with TLS, autoscaling, monitoring, delivery by Argo CD; README and architecture diagram",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Demo & Review",
+     "content": "Live demo of a change delivered from Git, then a rollback; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {
     "title": "A Multi-Service Application on Kubernetes",
     "brief": "A frontend, an API and a database containerised, run with Compose for development, packaged as a Helm chart, routed over HTTPS through the Gateway API, autoscaled and monitored, and delivered to the cluster by Argo CD from Git.",
-    "stack": "Docker, Docker Compose, Trivy, Kubernetes (kind), Helm, Gateway API, cert-manager, Prometheus, Grafana, Argo CD, Kustomize, Git",
+    "stack": "Docker, Docker Compose, Trivy, Kubernetes (kind), Helm, Gateway API (Envoy Gateway), cert-manager, Prometheus, Grafana, Argo CD, Kustomize, Git",
     "deliverable": "Git repository with Dockerfiles, Compose file, Helm chart and Argo CD manifests, architecture diagram, live demo"
    }
   }

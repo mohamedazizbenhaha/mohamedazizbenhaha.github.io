@@ -1,0 +1,83 @@
+{
+ "slug": "aws-data-engineering-fr",
+ "file": "Ingenierie-des-donnees-sur-AWS-27h.docx",
+ "lang": "fr",
+ "title": "Ingénierie des données sur AWS",
+ "subtitle": "Ingérer, transformer, gouverner et analyser des données sur AWS",
+ "audience_line": "Analystes de données, développeurs et ingénieurs qui construisent des pipelines de données sur AWS",
+ "certifications": [
+  "AWS Certified Data Engineer – Associate (DEA-C01), thèmes principaux"
+ ],
+ "overview": "Ce programme apprend aux participants à construire des pipelines de données sur Amazon Web Services et couvre les thèmes principaux de l’examen AWS Certified Data Engineer – Associate (DEA-C01). Ils conçoivent un data lake S3 avec des tables Parquet partitionnées et Apache Iceberg, ingèrent des données par lots et en flux, les transforment avec AWS Glue et EMR, chargent et interrogent Amazon Redshift Serverless, gouvernent accès et qualité avec Lake Formation et Glue Data Quality, orchestrent avec Step Functions et Amazon MWAA, et analysent les résultats avec Athena, Managed Service for Apache Flink et QuickSight. Un entraînement à l’examen clôt le contenu, et le programme s’achève par un projet final : un pipeline de données de bout en bout construit et présenté par chaque équipe.",
+ "facts": [
+  {"label": "Public", "value": "Analystes de données, développeurs et ingénieurs qui construisent des pipelines de données sur AWS"},
+  {"label": "Prérequis", "value": "AWS Cloud Practitioner (cours) et Python pour la data science (cours), ou équivalent : services AWS essentiels, Python et SQL. Ces notions sont utilisées, pas enseignées"},
+  {"label": "Durée", "value": "27 h : 24 h de chapitres + 3 h de réserve"},
+  {"label": "Format", "value": "Cours courts suivis de TP guidés sur un jeu de données commun ; entraînement à l’examen"},
+  {"label": "Environnement de TP", "value": "Un portable par participant avec un navigateur et la CLI AWS ; un compte AWS de test par équipe, fourni par l’organisateur, avec alerte budgétaire ; flux, clusters et entrepôts supprimés à la fin de chaque TP pour maîtriser les coûts"},
+  {"label": "Évaluation", "value": "Un TP validé à la fin de chaque phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet"},
+  {"label": "Résultat", "value": "Les participants savent construire un pipeline orchestré qui ingère, catalogue, transforme, gouverne et met à disposition des données sur AWS, et expliquer ses choix de conception"}
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Data lakes et ingestion",
+   "hours": 6,
+   "focus": "Lake, entrepôt et lakehouse, formats S3 et Iceberg, ingestion par lots et en flux",
+   "intro": "Les participants comparent traitement par lots et en flux, data lakes, entrepôts et lakehouses, conçoivent un data lake S3 avec des tables Parquet partitionnées et Apache Iceberg, puis ingèrent des données avec Kinesis Data Streams, Amazon Data Firehose, DMS et AppFlow, avec une présentation d’Amazon MSK. TP validé : un flux de navigation livré par Firehose en fichiers Parquet partitionnés dans le lake.",
+   "chapters": [
+    {"id": "1.1", "title": "Fondamentaux de l’ingénierie des données", "content": "Lots et flux, data lake, entrepôt et lakehouse", "format": "Cours + atelier", "hours": 1.5},
+    {"id": "1.2", "title": "Stockage et formats", "content": "Data lake S3, partitionnement, Parquet, tables Apache Iceberg", "format": "Cours + TP", "hours": 1.5},
+    {"id": "1.3", "title": "Ingestion", "content": "Kinesis Data Streams, Amazon Data Firehose, DMS, AppFlow, présentation d’Amazon MSK", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Traitement et entreposage",
+   "hours": 6,
+   "focus": "AWS Glue, EMR, Amazon Redshift Serverless",
+   "intro": "Les participants cataloguent et transforment le lake avec les crawlers, le Data Catalog et les jobs ETL d’AWS Glue, voient quand EMR est le meilleur choix, puis conçoivent, chargent et interrogent un entrepôt Redshift Serverless. TP validé : un job Glue qui nettoie les données brutes vers une table Iceberg organisée, chargée dans Redshift Serverless et interrogée.",
+   "chapters": [
+    {"id": "2.1", "title": "Traitement", "content": "AWS Glue (jobs ETL, crawlers, Data Catalog), EMR", "format": "Cours + TP", "hours": 3},
+    {"id": "2.2", "title": "Entreposage de données", "content": "Conception, chargement et interrogation d’Amazon Redshift Serverless", "format": "Cours + TP", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Gouvernance, orchestration et analyse",
+   "hours": 6,
+   "focus": "Lake Formation, qualité des données, Step Functions, MWAA, Athena, Flink, QuickSight",
+   "intro": "Les participants contrôlent qui voit quelles données avec Lake Formation, les vérifient avec Glue Data Quality et en tracent le lignage, orchestrent le pipeline avec Step Functions et Amazon MWAA, l’analysent avec Athena, Managed Service for Apache Flink et QuickSight, puis s’entraînent sur des questions DEA-C01. TP validé : une exécution orchestrée qui s’arrête quand une règle de qualité échoue, et un rôle d’analyste qui ne peut interroger que ses colonnes autorisées dans Athena.",
+   "chapters": [
+    {"id": "3.1", "title": "Gouvernance et qualité", "content": "Permissions Lake Formation, Glue Data Quality, lignage des données", "format": "Cours + TP", "hours": 1.5},
+    {"id": "3.2", "title": "Orchestration", "content": "Step Functions, Amazon MWAA (Apache Airflow)", "format": "Cours + TP", "hours": 1.5},
+    {"id": "3.3", "title": "Analyse et analyse en flux", "content": "Athena, Amazon Managed Service for Apache Flink, QuickSight", "format": "Cours + TP", "hours": 1.5},
+    {"id": "3.4", "title": "Préparation au DEA-C01", "content": "Questions d’entraînement et révision", "format": "Cours + atelier", "hours": 1.5}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Un pipeline de données de bout en bout, présenté au groupe",
+   "intro": "Par équipes de deux ou trois, les participants construisent un pipeline complet pour un jeu de données fourni, en réutilisant les TP de phase, puis le présentent comme ils le feraient devant un responsable data et suppriment les ressources.",
+   "chapters": [
+    {"id": "4.1", "title": "Cahier des charges et réalisation", "content": "Analyser le besoin, ingérer avec Kinesis et S3, cataloguer et transformer avec Glue, interroger avec Athena", "format": "Projet", "hours": 3},
+    {"id": "4.2", "title": "Mise à disposition et orchestration", "content": "Charger Redshift Serverless, construire le tableau de bord QuickSight, orchestrer avec Step Functions ; schéma d’architecture", "format": "Projet", "hours": 1.5},
+    {"id": "4.3", "title": "Démonstration et suppression", "content": "Exécution en direct du pipeline, présentation du tableau de bord, suppression des ressources ; questions et retours", "format": "Projet", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Un pipeline de données de bout en bout sur AWS",
+    "brief": "Des données ingérées avec Kinesis et S3, cataloguées et transformées avec Glue, interrogées avec Athena, chargées dans Redshift Serverless et affichées sur un tableau de bord QuickSight, l’ensemble orchestré par Step Functions et supprimé après la démonstration.",
+    "stack": "AWS : S3, Kinesis Data Streams, Amazon Data Firehose, Glue, Athena, Redshift Serverless, Lake Formation, Step Functions, QuickSight ; Python, SQL",
+    "deliverable": "Code du pipeline, schéma d’architecture, tableau de bord, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

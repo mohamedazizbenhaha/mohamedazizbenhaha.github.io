@@ -1,0 +1,92 @@
+{
+ "slug": "aws-solutions-architect",
+ "file": "AWS-Solutions-Architect-Associate-36h.docx",
+ "title": "AWS Solutions Architect Associate",
+ "subtitle": "Design resilient, secure, high-performing and cost-optimised architectures on AWS",
+ "audience_line": "Engineers and architects who design workloads on AWS",
+ "certifications": [
+  "AWS Certified Solutions Architect – Associate (SAA-C03)"
+ ],
+ "overview": "This programme teaches participants to design architectures on Amazon Web Services and prepares the AWS Certified Solutions Architect – Associate exam (SAA-C03). They design for resilience across Availability Zones and Regions, build advanced VPC networks and hybrid connectivity, choose compute, storage and database patterns, decouple applications with queues, events and workflows, secure them across accounts with IAM, KMS, WAF and Organizations, and build serverless and container-based microservices. Every chapter combines design discussion with a lab, scenario practice closes the content, and the programme ends with a final project: an architecture designed, built and defended in an architecture review.",
+ "facts": [
+  {"label": "Audience", "value": "Engineers and architects who design workloads on AWS"},
+  {"label": "Prerequisites", "value": "AWS Cloud Practitioner (course), or equivalent hands-on use of the core AWS services. Core services are not introduced again"},
+  {"label": "Duration", "value": "36 h: 30 h of chapters + 6 h buffer"},
+  {"label": "Format", "value": "Design discussions and short lectures followed by guided labs; scenario-based exam practice"},
+  {"label": "Lab environment", "value": "One laptop per participant with the AWS CLI; one AWS sandbox account per team, provided by the organiser, with a budget alert; resources destroyed at the end of each lab to control cost"},
+  {"label": "Assessment", "value": "A lab validated at the end of each phase, scenario practice questions and a final architecture review; certificate of completion for participants who complete the labs and the project"},
+  {"label": "Outcome", "value": "Participants can design and build a multi-tier, multi-AZ architecture on AWS, justify its cost, resilience and security trade-offs, and sit the SAA-C03 exam"}
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Resilient & Connected Architectures",
+   "hours": 6,
+   "focus": "Multi-AZ and multi-Region design, backup, VPC design and hybrid connectivity",
+   "intro": "Participants design for failure: workloads spread across Availability Zones and Regions, backups and recovery objectives. They then design the networks underneath: VPC layout, peering, Transit Gateway, endpoints and hybrid connectivity. Validated lab: two VPCs joined through a Transit Gateway, with private access to S3 through a gateway endpoint.",
+   "chapters": [
+    {"id": "1.1", "title": "Resilient Architectures", "content": "Design principles, multi-AZ, multi-Region, backup", "format": "Lecture + Lab", "hours": 3},
+    {"id": "1.2", "title": "Advanced Networking", "content": "VPC design, peering, Transit Gateway, endpoints, hybrid connectivity", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Compute, Storage & Data",
+   "hours": 6,
+   "focus": "EC2 and Auto Scaling, S3 and file storage, data transfer, database patterns",
+   "intro": "Participants choose instance families and scaling strategies, storage classes and lifecycle rules, file systems and data transfer services, then database patterns with replicas, DynamoDB key design and caching. Validated lab: an Aurora cluster with a read replica and an ElastiCache layer, measured before and after caching.",
+   "chapters": [
+    {"id": "2.1", "title": "Compute Patterns", "content": "EC2 families, Auto Scaling strategies, containers, placement groups", "format": "Lecture + Lab", "hours": 3},
+    {"id": "2.2", "title": "Storage & Data Transfer", "content": "S3 classes and lifecycle, EFS and FSx, DataSync, Snow family", "format": "Lecture + Lab", "hours": 1.5},
+    {"id": "2.3", "title": "Database Patterns", "content": "RDS and Aurora replicas, DynamoDB design, caching", "format": "Lecture + Lab", "hours": 1.5}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Decoupling & Security",
+   "hours": 6,
+   "focus": "SQS, SNS, EventBridge, Step Functions, IAM strategy, KMS, WAF, Organizations",
+   "intro": "Participants decouple components so that one failure does not stop the whole application, then secure the architecture across accounts: IAM strategy, encryption with KMS, edge protection with WAF and Shield, and governance with Organizations. Validated lab: an order flow through SQS, SNS and Step Functions that keeps accepting orders while the processing service is down, with encrypted queues.",
+   "chapters": [
+    {"id": "3.1", "title": "Decoupling", "content": "SQS, SNS, EventBridge, Step Functions", "format": "Lecture + Lab", "hours": 3},
+    {"id": "3.2", "title": "Security Architecture", "content": "IAM strategy, KMS, WAF, Shield, Organizations", "format": "Lecture + Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Serverless & Exam Preparation",
+   "hours": 6,
+   "focus": "Lambda, API Gateway, ECS and EKS, Fargate, SAA-C03 scenarios",
+   "intro": "Participants build microservices without managing servers, with Lambda and API Gateway or containers on ECS and EKS with Fargate, then work through scenario questions across the four SAA-C03 domains. Validated lab: a serverless API and a containerised service on Fargate behind the same domain.",
+   "chapters": [
+    {"id": "4.1", "title": "Serverless & Microservices", "content": "Lambda, API Gateway, ECS and EKS, Fargate", "format": "Lecture + Lab", "hours": 3},
+    {"id": "4.2", "title": "SAA-C03 Preparation", "content": "Scenario questions and review", "format": "Lecture + Workshop", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 6,
+   "focus": "A multi-tier architecture, defended in an architecture review",
+   "intro": "Teams of two or three design and build an architecture for a written business case, reusing the phase labs, then defend their choices in an architecture review led by the trainer.",
+   "chapters": [
+    {"id": "5.1", "title": "Brief & Design", "content": "Read the business case, design a multi-tier, multi-AZ architecture, build its core in the sandbox account", "format": "Project", "hours": 3},
+    {"id": "5.2", "title": "Cost, Resilience & Security", "content": "Cost estimate, failure scenarios, security controls, architecture diagram and decision record", "format": "Project", "hours": 1.5},
+    {"id": "5.3", "title": "Architecture Review", "content": "Defend the trade-offs in front of the group, teardown; questions and feedback", "format": "Project", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "Architecture for a Business Case",
+    "brief": "A multi-tier, multi-AZ architecture for a written business case, built in the sandbox account and defended in an architecture review that weighs cost, resilience and security trade-offs.",
+    "stack": "AWS: VPC, EC2 or Fargate, Elastic Load Balancing, Auto Scaling, Aurora or DynamoDB, S3, SQS, KMS, WAF, CloudWatch, AWS Pricing Calculator",
+    "deliverable": "Architecture diagram, decision record, cost estimate, working core, architecture review"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,66 @@
+{
+ "slug": "aws-serverless-projects",
+ "file": "AWS-Serverless-and-Automation-Projects-18h.docx",
+ "title": "AWS Serverless & Automation Projects",
+ "subtitle": "Six hands-on AWS projects, combined into one portfolio architecture",
+ "audience_line": "Engineers with AWS architecture basics who want hands-on portfolio projects",
+ "certifications": [],
+ "overview": "This programme is built from projects. Participants deploy a scalable web application with Terraform, ship containers to ECS Fargate through GitHub Actions without long-lived keys, build a serverless API and an event-driven image processing pipeline, automate incident response, and add security gates to a container pipeline. Each project starts from a provided starter repository and ends with a working, torn-down deployment. The programme closes with a final project in which participants combine the projects into one documented portfolio architecture with infrastructure as code and a cost review.",
+ "facts": [
+  {"label": "Audience", "value": "Engineers with AWS architecture basics who want hands-on portfolio projects"},
+  {"label": "Prerequisites", "value": "AWS Solutions Architect Associate (course), plus Terraform and GitHub Actions basics (as taught in DevOps Engineering). These are used, not taught"},
+  {"label": "Duration", "value": "18 h: 15 h of chapters + 3 h buffer"},
+  {"label": "Format", "value": "Project labs from provided starter repositories, each with a short design briefing"},
+  {"label": "Lab environment", "value": "One laptop per participant (Terraform, AWS CLI, Git, Docker); a GitHub repository and an AWS sandbox account per team, provided by the organiser, with a budget alert; every project destroyed with terraform destroy at the end of the lab to control cost"},
+  {"label": "Assessment", "value": "Each project validated when it runs, and a final portfolio project presented to the group; certificate of completion for participants who complete both"},
+  {"label": "Outcome", "value": "Participants leave with six working AWS projects in Git, combined into one documented architecture they can explain, rebuild and cost"}
+ ],
+ "buffer": 3,
+ "phases": [
+  {
+   "name": "Containers & Infrastructure as Code",
+   "hours": 6,
+   "focus": "Terraform web stack, CI/CD to ECS Fargate with OIDC",
+   "intro": "Participants provision a scalable web stack with Terraform from a starter repository, then deliver a containerised version through GitHub Actions to ECS Fargate, authenticating to AWS with OIDC instead of stored keys. Validated projects: the web stack answering behind its load balancer, and a commit that reaches Fargate through the pipeline.",
+   "chapters": [
+    {"id": "1.1", "title": "Scalable Web App", "content": "Terraform: VPC, Application Load Balancer, Auto Scaling, RDS, from a provided starter repository", "format": "Lab", "hours": 3},
+    {"id": "1.2", "title": "CI/CD to ECS Fargate", "content": "GitHub Actions with OIDC, Amazon ECR, Amazon ECS on Fargate", "format": "Lab", "hours": 3}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Serverless & Security Automation",
+   "hours": 6,
+   "focus": "Serverless API, event-driven pipeline, incident automation, image scanning gates",
+   "intro": "Participants build serverless and event-driven systems: an API on Lambda, API Gateway and DynamoDB, an image processing pipeline triggered by S3 events, automated incident response from GuardDuty and CloudWatch through EventBridge, and a container pipeline that stops on critical vulnerabilities. Validated projects: each of the four running and demonstrated with a test event.",
+   "chapters": [
+    {"id": "2.1", "title": "Serverless API", "content": "Lambda, API Gateway, DynamoDB", "format": "Lab", "hours": 1.5},
+    {"id": "2.2", "title": "Image Processing Pipeline", "content": "S3 events, Lambda, notifications", "format": "Lab", "hours": 1.5},
+    {"id": "2.3", "title": "Incident Response Automation", "content": "GuardDuty and CloudWatch to EventBridge to Lambda and SNS", "format": "Lab", "hours": 1.5},
+    {"id": "2.4", "title": "Container Security Pipeline", "content": "ECR scanning, Amazon Inspector, build gates", "format": "Lab", "hours": 1.5}
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Final Project",
+   "hours": 3,
+   "focus": "One documented portfolio architecture",
+   "intro": "Each participant combines the six projects into one portfolio architecture, documented so that another engineer could rebuild it, and presents it to the group.",
+   "chapters": [
+    {"id": "3.1", "title": "Integrate & Document", "content": "Combine the projects in one repository with infrastructure as code, architecture diagram and README", "format": "Project", "hours": 1.5},
+    {"id": "3.2", "title": "Cost Review, Demo & Teardown", "content": "Cost review, live demo, full teardown; questions and feedback", "format": "Project", "hours": 1.5}
+   ],
+   "math": null,
+   "project": {
+    "title": "AWS Portfolio Architecture",
+    "brief": "The six projects combined into one documented architecture: a web tier and containers on Fargate, a serverless API and event pipeline, incident automation and image scanning gates, all rebuilt from code and reviewed for cost.",
+    "stack": "AWS: VPC, ALB, Auto Scaling, RDS, ECR, ECS Fargate, Lambda, API Gateway, DynamoDB, S3, EventBridge, SNS, GuardDuty, Inspector; Terraform, GitHub Actions",
+    "deliverable": "Git repository with IaC and pipelines, architecture diagram, cost review, live demo"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,186 @@
+{
+ "slug": "kubernetes-administration-cka-fr",
+ "file": "Administration-Kubernetes-CKA-36h.docx",
+ "lang": "fr",
+ "title": "Administration Kubernetes (CKA)",
+ "subtitle": "Installer, sécuriser, mettre à niveau et dépanner des clusters Kubernetes",
+ "audience_line": "Ingénieurs qui exploitent des clusters Kubernetes et préparent l’examen CKA",
+ "certifications": [
+  "Certified Kubernetes Administrator (CKA, programme 2025)"
+ ],
+ "overview": "Ce programme prépare les participants à administrer des clusters Kubernetes et à se présenter à l’examen CKA (programme 2025). Ils installent un cluster hautement disponible avec kubeadm, le mettent à niveau et sauvegardent etcd, le sécurisent avec RBAC et les contextes de sécurité, contrôlent l’ordonnancement, configurent le réseau du cluster du CNI à la Gateway API, gèrent le stockage, et étendent le cluster avec Helm, Kustomize, les ressources personnalisées et les opérateurs. Chaque TP se termine par une étape de dépannage, un examen blanc chronométré mesure le niveau atteint, et le programme s’achève par un projet final : un cluster construit, sécurisé, mis à niveau et réparé par chaque équipe. La sauvegarde et la restauration d’etcd sont enseignées comme compétence d’exploitation ; elles ne font plus partie des objectifs CKA.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Ingénieurs qui exploitent des clusters Kubernetes et préparent l’examen CKA"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Niveau utilisateur de Kubernetes (cours : Docker et Kubernetes) : Pods, Deployments, Services, Helm. L’utilisation de Kubernetes n’est pas réenseignée ; ce cours porte sur son exploitation"
+  },
+  {
+   "label": "Durée",
+   "value": "36 h : 30 h de chapitres + 6 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés en ligne de commande ; un examen blanc chronométré"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Sur site : un serveur de TP par binôme (64 Go de RAM), fourni par l’organisateur, avec les machines virtuelles Ubuntu du cluster (trois nœuds de plan de contrôle, deux nœuds workers, un répartiteur de charge) ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase, un examen blanc et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent installer, sécuriser, mettre à niveau, sauvegarder et dépanner un cluster Kubernetes en ligne de commande, et se présenter à l’examen CKA"
+  }
+ ],
+ "buffer": 6,
+ "phases": [
+  {
+   "name": "Installation et cycle de vie du cluster",
+   "hours": 6,
+   "focus": "kubeadm, plan de contrôle hautement disponible, mises à niveau, sauvegarde d’etcd",
+   "intro": "Les participants construisent un cluster comme l’attendent l’examen et la production : un runtime de conteneurs, kubeadm, un plan de contrôle hautement disponible derrière un répartiteur de charge. Ils le mettent ensuite à niveau d’une version mineure, puis sauvegardent et restaurent etcd. TP validé : un cluster à trois nœuds de plan de contrôle mis à niveau sans interruption, restauré depuis un instantané etcd.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Installation du cluster",
+     "content": "kubeadm, plan de contrôle hautement disponible, runtime de conteneurs",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Cycle de vie du cluster",
+     "content": "Mises à niveau de version, sauvegarde et restauration d’etcd",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Sécurité et ordonnancement",
+   "hours": 6,
+   "focus": "RBAC, ServiceAccounts, contextes de sécurité, contrôle de l’ordonnancement",
+   "intro": "Les participants n’accordent à chaque utilisateur et à chaque charge de travail que les accès nécessaires, exécutent les conteneurs avec des contextes de sécurité restrictifs, puis décident où tournent les pods avec les taints et tolerations, l’affinité, les demandes de ressources et les classes de priorité. TP validé : un namespace d’équipe avec un RBAC au moindre privilège, et une charge de travail affectée à des nœuds dédiés qui garde sa priorité sous contrainte.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Sécurité",
+     "content": "RBAC, ServiceAccounts, contextes de sécurité",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Ordonnancement",
+     "content": "Taints et tolerations, affinité, demandes et limites de ressources, classes de priorité ; rappel des déploiements progressifs, ConfigMaps et Secrets, mise à l’échelle automatique",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Réseau, stockage et extensions",
+   "hours": 6,
+   "focus": "CNI, Services et DNS, NetworkPolicies, Gateway API, stockage, Helm, CRD",
+   "intro": "Les participants configurent le réseau du cluster, du plugin CNI aux Services, à CoreDNS, aux NetworkPolicies et à la Gateway API, migrent un Ingress depuis ingress-nginx, retiré en mars 2026, provisionnent le stockage dynamiquement, et étendent le cluster avec Helm, Kustomize, les ressources personnalisées et les opérateurs. TP validé : une application accessible via la Gateway API, isolée par des NetworkPolicies, avec un volume provisionné dynamiquement.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Réseau",
+     "content": "CNI, Services, CoreDNS, NetworkPolicies, Gateway API, Ingress et migration depuis ingress-nginx",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Stockage",
+     "content": "PersistentVolumes et PersistentVolumeClaims, modes d’accès, politiques de récupération, StorageClasses, provisionnement dynamique",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Étendre Kubernetes",
+     "content": "Helm, Kustomize, interfaces d’extension (CNI, CSI, CRI), définitions de ressources personnalisées (CRD) et opérateurs",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Dépannage et préparation à l’examen",
+   "hours": 6,
+   "focus": "Dépannage des nœuds, des pods et du réseau, examen blanc chronométré",
+   "intro": "Les participants diagnostiquent des nœuds en panne, des pods en échec et des défauts réseau à partir des journaux, des événements et des métriques, puis passent un examen blanc chronométré et apprennent les techniques kubectl qui font gagner du temps dans un examen pratique. TP validé : un cluster aux pannes injectées remis en bon état de fonctionnement.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Dépannage",
+     "content": "Nœuds, pods, réseau, journaux et supervision",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Préparation à l’examen",
+     "content": "Examen blanc chronométré, techniques de rapidité avec kubectl",
+     "format": "TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Un cluster hautement disponible, construit, sécurisé, mis à niveau et réparé",
+   "intro": "Chaque équipe construit un cluster de type production sur son serveur de TP à partir d’un cahier des charges écrit, en réutilisant les TP de phase, puis répare les pannes injectées par le formateur et présente son runbook.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, construire un cluster hautement disponible avec kubeadm, le sécuriser avec RBAC et des NetworkPolicies",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Exploitation et documentation",
+     "content": "Sauvegarder et restaurer etcd, mettre à niveau le cluster, rédiger le runbook",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Réparation et revue",
+     "content": "Corriger les pannes injectées par le formateur ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Un cluster Kubernetes de type production",
+    "brief": "Un cluster hautement disponible construit avec kubeadm, sécurisé avec RBAC et des NetworkPolicies, sauvegardé et restauré depuis etcd, mis à niveau d’une version mineure, et remis en état après des pannes injectées par le formateur.",
+    "stack": "Kubernetes, kubeadm, containerd, etcd, un plugin CNI, CoreDNS, Envoy Gateway, MetalLB, local-path-provisioner, Helm, Kustomize, kubectl",
+    "deliverable": "Cluster fonctionnel, runbook (installation, sauvegarde, mise à niveau, reprise), rapport de pannes"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

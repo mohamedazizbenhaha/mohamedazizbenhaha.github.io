@@ -1,0 +1,272 @@
+{
+ "slug": "docker-kubernetes-fr",
+ "file": "Docker-et-Kubernetes-57h.docx",
+ "lang": "fr",
+ "title": "Docker et Kubernetes",
+ "subtitle": "Conteneuriser des applications, les exécuter sur Kubernetes et les livrer en GitOps",
+ "audience_line": "Développeurs, administrateurs système et ingénieurs DevOps qui débutent avec les conteneurs",
+ "certifications": [],
+ "overview": "Ce programme mène les participants de leur premier conteneur à une application multiservice qui tourne sur Kubernetes et qui est livrée en GitOps. Ils construisent des images légères et sûres, exécutent des applications multiconteneurs avec Docker Compose, puis les déploient sur Kubernetes : charges de travail, services et politiques réseau, configuration et stockage, routage du trafic avec la Gateway API et TLS, mise à l’échelle automatique, charts Helm, supervision, sécurité et présentation des clusters managés EKS et AKS. La dernière phase introduit le GitOps avec Argo CD et la configuration par environnement avec Kustomize et Helm. La même application est reprise dans toutes les phases, et le programme s’achève par un projet final où les équipes conteneurisent, déploient et présentent une application multiservice.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Développeurs, administrateurs système et ingénieurs DevOps qui débutent avec les conteneurs"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Ligne de commande Linux (cours : Linux et scripting Bash, ou équivalent). Aucune expérience des conteneurs n’est nécessaire"
+  },
+  {
+   "label": "Durée",
+   "value": "57 h : 48 h de chapitres + 9 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés ; une même application reprise dans toutes les phases"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant (16 Go de RAM minimum, Docker, kind, kubectl, Helm, VS Code) et un dépôt GitHub par équipe pour le GitOps ; clusters managés (EKS, AKS) présentés en démonstration par le formateur ; ni compte cloud ni coût pour les participants"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent conteneuriser une application multiservice, la déployer sur Kubernetes avec Helm, routage, TLS, mise à l’échelle automatique et supervision, et la livrer depuis Git avec Argo CD"
+  }
+ ],
+ "buffer": 9,
+ "phases": [
+  {
+   "name": "Docker",
+   "hours": 15,
+   "focus": "Images, conteneurs, stockage, réseau, Compose et sécurité",
+   "intro": "Les participants découvrent ce qu’est réellement un conteneur, puis en construisent et en exécutent : images multi-étapes efficaces, stockage persistant, réseau entre conteneurs et applications multiconteneurs avec Docker Compose, avec l’analyse de sécurité et les pratiques qui rendent les conteneurs faciles à exploiter. TP validé : l’application du cours (frontend, API et base de données) lancée avec Docker Compose à partir d’images légères, sans root, qui passent une analyse Trivy.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Conteneurs et machines virtuelles",
+     "content": "Namespaces, cgroups, OCI, Docker Engine, containerd",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Exécuter des conteneurs",
+     "content": "run, ps, exec et logs, ports, variables d’environnement, politiques de redémarrage, limites de ressources",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Construire des images",
+     "content": "Dockerfile, couches et cache, CMD et ENTRYPOINT, builds multi-étapes, taille des images",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.4",
+     "title": "Stockage",
+     "content": "Volumes, bind mounts, tmpfs, sauvegarde et restauration",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.5",
+     "title": "Réseau",
+     "content": "Réseaux bridge et host, réseaux overlay (principe), DNS entre conteneurs",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.6",
+     "title": "Docker Compose",
+     "content": "Services, contrôles de santé (healthchecks), fichiers d’environnement, profils, surcharges développement et production",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.7",
+     "title": "Sécurité et registres",
+     "content": "Analyse avec Trivy, utilisateurs non root, systèmes de fichiers en lecture seule, registre privé",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.8",
+     "title": "Bonnes pratiques",
+     "content": "Applications twelve-factor, journalisation, motif sidecar, débogage des conteneurs",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Kubernetes",
+   "hours": 18,
+   "focus": "Charges de travail, services, configuration, stockage, routage, mise à l’échelle, Helm, sécurité",
+   "intro": "Les participants font passer l’application du cours de Compose à un cluster Kubernetes local et apprennent chaque objet dont elle a besoin : charges de travail, services et politiques réseau, configuration et secrets, stockage persistant, routage du trafic avec la Gateway API et TLS via cert-manager, limites de ressources et mise à l’échelle automatique, packaging avec Helm, supervision avec Prometheus et Grafana, et sécurité de base. L’Ingress est traité pour les clusters existants, y compris la migration depuis ingress-nginx, retiré en mars 2026. TP validé : l’application du cours installée depuis un chart Helm, accessible en HTTPS via la Gateway API et mise à l’échelle par le Horizontal Pod Autoscaler.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Architecture",
+     "content": "Plan de contrôle, nœuds, kubectl, clusters locaux (kind, minikube)",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Pods et Deployments",
+     "content": "Pods, ReplicaSets, Deployments, mises à jour progressives",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Autres charges de travail",
+     "content": "DaemonSets, StatefulSets, Jobs, CronJobs",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Services et réseau",
+     "content": "ClusterIP, NodePort, LoadBalancer (cloud-provider-kind en local), CoreDNS, NetworkPolicies",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.5",
+     "title": "Configuration",
+     "content": "ConfigMaps, Secrets",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.6",
+     "title": "Stockage",
+     "content": "PersistentVolumes, PersistentVolumeClaims, StorageClasses",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.7",
+     "title": "Routage du trafic",
+     "content": "Gateway API avec Envoy Gateway, Ingress (ingress-nginx communautaire retiré en mars 2026) et migration, TLS avec cert-manager",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.8",
+     "title": "Mise à l’échelle",
+     "content": "Demandes et limites de ressources, quotas de ressources, Horizontal Pod Autoscaler",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.9",
+     "title": "Helm",
+     "content": "Charts, values, installation, mise à jour et retour arrière",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.10",
+     "title": "Supervision et dépannage",
+     "content": "describe, logs et events, metrics-server, Prometheus et Grafana installés avec Helm",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.11",
+     "title": "Bases de la sécurité",
+     "content": "RBAC, ServiceAccounts, Pod Security Standards",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.12",
+     "title": "Kubernetes managé",
+     "content": "Amazon EKS et Azure AKS : démonstration par le formateur, puis exercice de comparaison",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "GitOps",
+   "hours": 9,
+   "focus": "Argo CD, modèle pull, environnements avec Kustomize et Helm",
+   "intro": "Avec le GitOps, le cluster récupère son état attendu dans Git au lieu de recevoir des commandes. Les participants installent Argo CD, livrent l’application du cours depuis un dépôt Git, reviennent en arrière en annulant un commit, et gèrent les environnements de développement et de production avec des overlays Kustomize et des values Helm. TP validé : une modification fusionnée dans Git qui atteint automatiquement l’environnement de développement, puis la production après promotion.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "GitOps et Argo CD",
+     "content": "Principes, modèle pull, installation d’Argo CD",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Argo CD en pratique",
+     "content": "Applications, ApplicationSets, synchronisation, retour arrière, app-of-apps",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Environnements",
+     "content": "Overlays Kustomize, values Helm par environnement",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 6,
+   "focus": "Une application multiservice, de Compose au GitOps",
+   "intro": "Par équipes de deux ou trois, les participants conteneurisent et déploient une seconde application multiservice fournie, en réutilisant les Dockerfiles, le chart et les manifestes des TP de phase, puis la présentent comme ils le feraient devant une équipe technique.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et réalisation",
+     "content": "Analyser le besoin, conteneuriser le frontend, l’API et la base de données, écrire le fichier Compose de développement et le chart Helm",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Livraison et documentation",
+     "content": "Routage Gateway API avec TLS, mise à l’échelle automatique, supervision, livraison par Argo CD ; README et schéma d’architecture",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct d’une modification livrée depuis Git, puis d’un retour arrière ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Une application multiservice sur Kubernetes",
+    "brief": "Un frontend, une API et une base de données conteneurisés, exécutés avec Compose en développement, packagés en chart Helm, routés en HTTPS via la Gateway API, mis à l’échelle automatiquement et supervisés, et livrés au cluster par Argo CD depuis Git.",
+    "stack": "Docker, Docker Compose, Trivy, Kubernetes (kind), Helm, Gateway API (Envoy Gateway), cert-manager, Prometheus, Grafana, Argo CD, Kustomize, Git",
+    "deliverable": "Dépôt Git avec Dockerfiles, fichier Compose, chart Helm et manifestes Argo CD, schéma d’architecture, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}

@@ -1,0 +1,219 @@
+{
+ "slug": "devsecops-fr",
+ "file": "DevSecOps-57h-FR.docx",
+ "lang": "fr",
+ "title": "DevSecOps",
+ "subtitle": "Intégrer la sécurité à chaque étape de la chaîne de livraison",
+ "audience_line": "Ingénieurs DevOps et développeurs responsables d’une chaîne de livraison",
+ "certifications": [],
+ "overview": "Ce programme ajoute la sécurité à une chaîne DevOps qui fonctionne déjà, étape par étape, en gardant une chaîne rapide. Les participants modélisent les menaces, analysent le code et les dépendances, testent l’application en fonctionnement, puis sécurisent la chaîne d’approvisionnement logicielle : images durcies et analysées, SBOM, signatures, attestations et provenance SLSA vérifiées avant le déploiement. Ils analysent le code d’infrastructure, appliquent des politiques en code, gèrent les secrets avec HashiCorp Vault, et durcissent et surveillent Kubernetes à l’exécution. Le programme s’achève par un projet final : une chaîne avec un contrôle de sécurité à chaque étape et un rapport de sécurité.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Ingénieurs DevOps et développeurs responsables d’une chaîne de livraison"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Intégration et livraison continues, Terraform et déploiement sur Kubernetes (cours : Ingénierie DevOps, qui prolonge Docker et Kubernetes), ou équivalent. La construction de pipelines n’est pas réenseignée"
+  },
+  {
+   "label": "Durée",
+   "value": "57 h : 48 h de chapitres + 9 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP guidés ; une même application et une même chaîne dans toutes les phases"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant (16 Go de RAM minimum, Docker, kind, VS Code) ; Jenkins et SonarQube sur un serveur fourni par le formateur ; un dépôt GitHub public et GitHub Container Registry par équipe ; le code Terraform est analysé, pas appliqué ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase et un projet final avec rapport de sécurité ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent placer et régler des contrôles de sécurité du code jusqu’à l’exécution sur Kubernetes, et rendre compte du risque résiduel"
+  }
+ ],
+ "buffer": 9,
+ "phases": [
+  {
+   "name": "Fondamentaux et sécurité applicative",
+   "hours": 12,
+   "focus": "Shift-left, modélisation des menaces, SAST, SCA et licences, DAST",
+   "intro": "Les participants apprennent où placer la sécurité dans la chaîne et quel contrôle arrête quoi, modélisent les menaces de l’application du cours avec STRIDE, puis ajoutent l’analyse statique, le contrôle des dépendances et des licences, et l’analyse dynamique de l’application en fonctionnement. TP validé : une chaîne qui échoue sur une injection SQL introduite volontairement, une dépendance vulnérable et une alerte ZAP, avec les faux positifs triés.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Principes du DevSecOps",
+     "content": "Shift-left, modélisation des menaces avec STRIDE, contrôles de sécurité et leurs seuils",
+     "format": "Cours + atelier",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Analyse statique (SAST)",
+     "content": "Règles de sécurité SonarQube, règles Semgrep pour les failles d’injection, règles personnalisées, tri des faux positifs",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.3",
+     "title": "Dépendances et licences (SCA)",
+     "content": "OWASP Dependency-Check, mise à jour des dépendances vulnérables, conformité des licences",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "1.4",
+     "title": "Tests dynamiques (DAST)",
+     "content": "Analyses ZAP baseline, complète et d’API dans la chaîne",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Conteneurs et chaîne d’approvisionnement",
+   "hours": 9,
+   "focus": "Analyse et durcissement des images, SBOM, signature, SLSA, admission",
+   "intro": "Les participants durcissent et analysent les images du cours, puis prouvent leur origine : un SBOM pour chaque image, des signatures et attestations avec Cosign et Sigstore, la provenance SLSA issue du build, et des politiques d’admission qui refusent les images non signées dans le cluster. TP validé : une image non signée refusée par le cluster, tandis que le build signé et attesté est admis.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Analyse et durcissement des images",
+     "content": "Trivy, images de base minimales et distroless, images sans root, correction des vulnérabilités",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "SBOM et signature",
+     "content": "SBOM avec Syft, signature avec Cosign et Sigstore, signature sans clé (keyless)",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.3",
+     "title": "Attestations et admission",
+     "content": "Attestations, provenance SLSA, admission des images signées avec le policy-controller Sigstore",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Infrastructure et secrets",
+   "hours": 12,
+   "focus": "Analyse de l’IaC, politiques en code, HashiCorp Vault, détection de secrets",
+   "intro": "Les participants analysent le code Terraform et Kubernetes du cours avec Checkov et Trivy, imposent des règles dans le cluster avec OPA Gatekeeper ou Kyverno, puis retirent les secrets du code : HashiCorp Vault avec des secrets dynamiques, ses intégrations Jenkins et Kubernetes, et la détection de secrets avec gitleaks. TP validé : une chaîne qui bloque un bucket public dans Terraform et un mot de passe poussé dans le dépôt, et une application qui lit dans Vault des identifiants de base de données à durée de vie courte.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Sécurité de l’IaC",
+     "content": "Checkov, analyse IaC avec Trivy (anciennement tfsec), correction des erreurs de configuration dans Terraform et les manifestes Kubernetes",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Politiques en code",
+     "content": "Kyverno en TP, comparé à OPA Gatekeeper et à ValidatingAdmissionPolicy intégré à Kubernetes ; écriture et test de politiques, modes audit et blocage, vérification des images avec Kyverno verifyImages",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "HashiCorp Vault",
+     "content": "Architecture, moteurs de secrets, secrets dynamiques, politiques et authentification",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "3.4",
+     "title": "Les secrets dans la chaîne",
+     "content": "Intégration de Vault avec Jenkins et Kubernetes, détection de secrets avec gitleaks, épinglage des actions tierces par SHA de commit",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Kubernetes et exécution",
+   "hours": 6,
+   "focus": "Pod Security Standards, durcissement RBAC, NetworkPolicies, Falco",
+   "intro": "Les participants durcissent le cluster qui exécute l’application du cours avec les Pod Security Standards, un RBAC au moindre privilège et des NetworkPolicies qui refusent tout par défaut, puis détectent les attaques en cours avec des règles Falco. TP validé : l’ouverture d’un shell dans un conteneur en fonctionnement détectée par Falco et une alerte levée.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Durcissement de Kubernetes",
+     "content": "Pod Security Standards, durcissement RBAC, NetworkPolicies",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Sécurité à l’exécution",
+     "content": "Règles Falco, détection et alertes à l’exécution",
+     "format": "Cours + TP",
+     "hours": 3
+    }
+   ],
+   "math": null,
+   "project": null
+  },
+  {
+   "name": "Projet final",
+   "hours": 9,
+   "focus": "Chaîne de livraison sécurisée et rapport de sécurité",
+   "intro": "Par équipes de deux ou trois, les participants sécurisent la chaîne de livraison d’une application fournie, en réutilisant les TP de phase, puis présentent le résultat et ses risques résiduels comme ils le feraient devant un responsable de la sécurité.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cahier des charges et modèle de menaces",
+     "content": "Analyser le besoin, modéliser les menaces, choisir les contrôles et leurs seuils",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Construire la chaîne sécurisée",
+     "content": "SAST, SCA, DAST, analyse et signature des images, analyse de l’IaC, secrets dans Vault",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "5.3",
+     "title": "Exécution et rapport",
+     "content": "Politiques du cluster et règles Falco ; rapport de sécurité avec vulnérabilités, corrections et risques acceptés",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.4",
+     "title": "Démonstration et revue",
+     "content": "Démonstration en direct d’une modification vulnérable arrêtée par la chaîne ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "math": null,
+   "project": {
+    "title": "Une chaîne de livraison sécurisée",
+    "brief": "Une chaîne avec un contrôle de sécurité à chaque étape : code, dépendances, application en fonctionnement, images, code d’infrastructure, secrets et exécution sur Kubernetes, des images signées admises dans le cluster, et un rapport de sécurité qui précise ce qui est corrigé et le risque qui reste.",
+    "stack": "GitHub Actions ou Jenkins, SonarQube, Semgrep, OWASP Dependency-Check, ZAP, Trivy, Syft, Cosign, Checkov, Kyverno ou OPA Gatekeeper, HashiCorp Vault, gitleaks, Falco, Kubernetes",
+    "deliverable": "Dépôt avec la chaîne et les politiques, modèle de menaces, rapport de sécurité, démonstration en direct"
+   }
+  }
+ ],
+ "portfolio": null,
+ "notes": []
+}
