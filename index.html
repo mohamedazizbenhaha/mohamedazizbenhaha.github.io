@@ -161,8 +161,8 @@
     <button role="tab" aria-selected="false" data-group="pfe" data-i18n="exp.pfe">Supervision</button>
   </div>
   <div class="tabs reveal">
-    <div class="tab-list" id="tabList" role="tablist" aria-orientation="vertical"></div>
-    <div class="tab-panel" id="tabPanel" role="tabpanel" aria-live="polite"></div>
+    <div class="tab-list" role="tablist" aria-orientation="vertical"></div>
+    <div class="tab-panel" role="tabpanel" aria-live="polite"></div>
   </div>
 </section>
 
@@ -253,9 +253,18 @@
 <!-- TRAINING -->
 <section class="section" id="training">
   <h2 class="title reveal"><span data-i18n="tr.t1">Training programmes,</span> <em data-i18n="tr.t2">ready to run.</em></h2>
-  <p class="tr-intro reveal" data-i18n="tr.intro">Programmes I design and deliver for universities, companies and public employment programmes. Open one to see its content, download it, or ask for a version adapted to your team: on-site in France or Tunisia, or remote.</p>
-  <ol class="progs reveal" id="progs"></ol>
-  <div class="more-wrap"><button class="read" id="moreProgs" type="button" aria-expanded="false" aria-controls="progs"><span class="more-label">Show more</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 6l5 5 5-5M7 13l5 5 5-5"/></svg></button></div>
+  <p class="tr-intro reveal" data-i18n="tr.intro">Programmes I design and deliver for universities, companies and public employment programmes. Pick a course to see its outline, preview or download the full programme, or ask for a version adapted to your team: on-site in France or Tunisia, or remote.</p>
+  <div class="seg reveal" role="tablist" aria-label="Training area">
+    <button role="tab" aria-selected="true" data-group="infra" data-i18n="tr.infra">Infrastructure</button>
+    <button role="tab" aria-selected="false" data-group="cloud" data-i18n="tr.cloud">Cloud & DevOps</button>
+    <button role="tab" aria-selected="false" data-group="data" data-i18n="tr.data">Data & AI</button>
+    <button role="tab" aria-selected="false" data-group="sec" data-i18n="tr.sec">Security</button>
+    <button role="tab" aria-selected="false" data-group="acad" data-i18n="tr.acad">Academic</button>
+  </div>
+  <div class="tabs tabs-prog reveal">
+    <div class="tab-list" role="tablist" aria-orientation="vertical"></div>
+    <div class="tab-panel" role="tabpanel" aria-live="polite"></div>
+  </div>
 </section>
 
 <!-- COURSES -->
@@ -287,10 +296,6 @@
       <div class="foot-r"><p class="foot-say"><img src="res/saying.svg" alt="اقْلَعْ الجِّبَالْ وَلَا تقْعِدْ فِ التّوَالِي" lang="ar" height="30"></p><div class="tray" aria-hidden="true"></div></div>
   </div>
 </footer>
-<dialog class="modal pmodal" id="progDlg" aria-labelledby="pTitle">
-  <button class="x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-  <div class="pm-in" id="progBody"></div>
-</dialog>
 <dialog class="modal" id="contactDlg" aria-labelledby="dlgTitle">
   <button class="x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   <div class="modal-in">
@@ -326,6 +331,7 @@
   </div>
 </dialog>
 <div class="toast" id="toast" role="status"></div>
+<script src="programmes.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

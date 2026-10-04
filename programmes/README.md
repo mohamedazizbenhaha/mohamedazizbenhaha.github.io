@@ -11,6 +11,7 @@ python scripts/build_programmes.py [slug] [--force]   # build (refuses to overwr
 python scripts/sync_programmes.py [slug]              # after editing a .docx in Word: text -> JSON, look -> report
 python scripts/export_pdfs.py [slug]                  # Word -> res/programmes/pdf/ (screen-optimised previews)
 python scripts/programme_index.py                      # programmes/INDEX.md: table of all courses with preview links
+python scripts/programme_site.py                       # programmes.js: PROGS for the website Training tabs (run after any JSON change)
 ```
 
 Editing in Word: change text freely; change a look everywhere by modifying its style ("Prog …", Heading 1/2, "Prog Table");

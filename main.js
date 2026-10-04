@@ -51,9 +51,10 @@ const FR = {
   'ct.copy': 'Copier l’e-mail', 'ct.fr': 'France', 'foot.top': 'Haut de page ↑',
   'skip': 'Aller au contenu',
   'stat.longest': 'Programmes phares',
-  'tr.intro': 'Des programmes que je conçois et dispense pour des universités, des entreprises et des programmes publics pour l’emploi. Ouvrez-en un pour voir son contenu, le télécharger, ou demander une version adaptée à votre équipe : sur site en France ou en Tunisie, ou à distance.',
+  'tr.intro': 'Des programmes que je conçois et dispense pour des universités, des entreprises et des programmes publics pour l’emploi. Choisissez une formation pour voir son plan, consulter ou télécharger le programme complet, ou demander une version adaptée à votre équipe : sur site en France ou en Tunisie, ou à distance.',
   'foot.rights': 'Tous droits réservés.',
   'tr.t1': 'Programmes de formation,', 'tr.t2': 'prêts à lancer.',
+  'tr.infra': 'Infrastructure', 'tr.cloud': 'Cloud et DevOps', 'tr.data': 'Data et IA', 'tr.sec': 'Sécurité', 'tr.acad': 'Académique',
   'motto.1': 'Le construire. L’automatiser.', 'motto.2': 'Puis enseigner ce qui tourne en production.'
 };
 const ROLES = {
@@ -117,75 +118,31 @@ const EXP = {
   ]
 };
 
-/* ---------- training programmes: rows + modal ---------- */
-/* hrs: number or null · doc: Word file in res/programmes or null · phases: [name{en,fr}, focus{en,fr}, hours] */
-const PROGS = [
-  { hrs: 150, title: { en: 'End-to-end AI & Machine Learning', fr: 'IA & Machine Learning de bout en bout' },
-    p: { en: 'From zero to a model trained on real data, built in pairs and defended before a jury.', fr: 'De zéro à un modèle entraîné sur données réelles, construit en binôme et soutenu devant un jury.' },
-    tags: ['Python', 'Machine Learning', 'Data preparation', 'Evaluation'] },
-  { hrs: 130, doc: 'res/programmes/AI-ML-AWS-Cloud-130h.docx', title: { en: 'AI, Machine Learning & AWS Cloud', fr: 'IA, Machine Learning & Cloud AWS' },
-    p: { en: 'Machine learning taught by paradigm, with the maths introduced exactly when an algorithm needs it, then carried onto AWS: SageMaker, data engineering and production GenAI. Six portfolio projects on GitHub.',
-         fr: 'Le machine learning enseigné par paradigme, avec les maths introduites au moment précis où un algorithme en a besoin, puis porté sur AWS : SageMaker, data engineering et GenAI en production. Six projets de portfolio sur GitHub.' },
-    facts: [[{ en: 'Audience', fr: 'Public' }, { en: 'IT professionals; basic Python required', fr: 'Professionnels de l’IT ; bases de Python requises' }],
-            [{ en: 'Certifications', fr: 'Certifications' }, 'AWS AIF-C01 · CLF-C02 · DEA-C01']],
-    phases: [
-      [{ en: 'Python & data science stack', fr: 'Python & outils de data science' }, { en: 'NumPy, Pandas, Matplotlib, Jupyter', fr: 'NumPy, Pandas, Matplotlib, Jupyter' }, 12],
-      [{ en: 'Supervised learning', fr: 'Apprentissage supervisé' }, { en: 'Regression, classification, trees, ensembles, with linear algebra, calculus and statistics', fr: 'Régression, classification, arbres, ensembles, avec algèbre linéaire, calcul et statistiques' }, 24],
-      [{ en: 'Unsupervised learning', fr: 'Apprentissage non supervisé' }, { en: 'Clustering, dimensionality reduction, anomaly detection', fr: 'Clustering, réduction de dimension, détection d’anomalies' }, 12],
-      [{ en: 'Reinforcement learning', fr: 'Apprentissage par renforcement' }, { en: 'MDP, Q-learning, policy gradients, actor-critic', fr: 'MDP, Q-learning, policy gradients, actor-critic' }, 9],
-      [{ en: 'Neural networks & deep learning', fr: 'Réseaux de neurones & deep learning' }, { en: 'ANNs from scratch, CNNs, RNNs, Transformers, LLMs', fr: 'Réseaux from scratch, CNN, RNN, Transformers, LLM' }, 21],
-      [{ en: 'AWS foundations & AI Practitioner', fr: 'Fondamentaux AWS & AI Practitioner' }, { en: 'Core AWS, SageMaker, Bedrock, AIF-C01 and CLF-C02 prep', fr: 'AWS essentiel, SageMaker, Bedrock, préparation AIF-C01 et CLF-C02' }, 21],
-      [{ en: 'AWS data engineering', fr: 'Data engineering sur AWS' }, { en: 'Glue, Redshift, Kinesis, Athena, Step Functions, DEA-C01 prep', fr: 'Glue, Redshift, Kinesis, Athena, Step Functions, préparation DEA-C01' }, 18],
-      [{ en: 'AWS GenAI & MLOps', fr: 'GenAI & MLOps sur AWS' }, { en: 'Bedrock, RAG agents, SageMaker pipelines, production deployment', fr: 'Bedrock, agents RAG, pipelines SageMaker, mise en production' }, 13]],
-    tags: ['Python', 'scikit-learn', 'Deep Learning', 'SageMaker', 'Bedrock', 'AWS'] },
-  { hrs: 120, title: { en: 'Azure DevSecOps', fr: 'Azure DevSecOps' },
-    p: { en: 'Build delivery pipelines on Azure with security checks inside every stage, from commit to deployment.', fr: 'Construire des pipelines de livraison sur Azure avec des contrôles de sécurité à chaque étape, du commit au déploiement.' },
-    tags: ['Azure', 'DevSecOps', 'CI/CD', 'Security'] },
-  { hrs: 100, title: { en: 'Azure DevOps', fr: 'Azure DevOps' },
-    p: { en: 'The full Azure DevOps chain, hands-on: boards, repos, pipelines and artifacts.', fr: 'Toute la chaîne Azure DevOps, en pratique : boards, repos, pipelines et artifacts.' },
-    tags: ['Azure DevOps', 'Pipelines', 'Git'] },
-  { hrs: 100, title: { en: 'AWS Cloud & certification', fr: 'Cloud AWS & certification' },
-    p: { en: 'Core AWS services in practice, with preparation for Cloud Practitioner, Developer and Solutions Architect.', fr: 'Les services AWS essentiels en pratique, avec la préparation aux certifications Cloud Practitioner, Developer et Solutions Architect.' },
-    tags: ['AWS', 'EC2 · S3 · VPC', 'IAM', 'Certification prep'] },
-  { hrs: null, title: { en: 'DevOps from zero', fr: 'DevOps de zéro' },
-    p: { en: 'Project-based: CI/CD with Jenkins and Git, Nexus, SonarQube, Docker, Terraform, Ansible, Kubernetes and AWS.', fr: 'Par projets : CI/CD avec Jenkins et Git, Nexus, SonarQube, Docker, Terraform, Ansible, Kubernetes et AWS.' },
-    tags: ['Jenkins', 'Docker', 'Terraform', 'Ansible', 'Kubernetes'] },
-  { hrs: null, title: { en: 'Linux & networking', fr: 'Linux & réseaux' },
-    p: { en: 'Linux system administration and CCNA networking, for engineering students and IT teams.', fr: 'Administration système Linux et réseaux CCNA, pour élèves ingénieurs et équipes IT.' },
-    tags: ['Linux', 'CCNA', 'Networking'] }
-];
+/* ---------- training programmes: catalogue data PROGS in programmes.js (generated), labels here ---------- */
 const PUI = {
-  en: { open: 'View programme', custom: 'Length on request', kicker: 'Training programme', struct: 'Programme structure', dl: 'Download (Word)', book: 'Book', cust: 'Customise', none: 'Detailed syllabus on request.',
-        format: 'Format', formatV: 'On-site in France or Tunisia, or remote', subj: 'Custom training request: ',
+  en: { kicker: 'Training programme', struct: 'Programme structure', pdf: 'Preview (PDF)', dl: 'Download (Word)', book: 'Book', cust: 'Customise',
+        aud: 'Audience', pre: 'Prerequisites', cert: 'Certification', buf: 'Buffer', bufF: 'Catch-up, revision, extra lab time', opt: 'optional', subj: 'Custom training request: ',
         bsubj: 'Booking request: ',
         bbody: t => `Hello Aziz,\n\nWe would like to book the "${t}" programme as described on your website.\n\nOrganisation:\nNumber of participants:\nFormat (on-site France / on-site Tunisia / remote):\nPreferred start date:\nContact person and phone:\n\nBest regards,\n`,
         body: t => `Hello Aziz,\n\nWe are interested in the "${t}" programme, adapted to our team.\n\nOrganisation:\nNumber of participants:\nCurrent level (beginner / intermediate / advanced):\nFormat (on-site France / on-site Tunisia / remote):\nTarget length and dates:\nTopics to add or remove:\n\nBest regards,\n` },
-  fr: { open: 'Voir le programme', custom: 'Durée sur demande', kicker: 'Programme de formation', struct: 'Structure du programme', dl: 'Télécharger (Word)', book: 'Réserver', cust: 'Personnaliser', none: 'Programme détaillé sur demande.',
-        format: 'Format', formatV: 'Sur site en France ou en Tunisie, ou à distance', subj: 'Demande de formation sur mesure : ',
+  fr: { kicker: 'Programme de formation', struct: 'Structure du programme', pdf: 'Aperçu (PDF)', dl: 'Télécharger (Word)', book: 'Réserver', cust: 'Personnaliser',
+        aud: 'Public', pre: 'Prérequis', cert: 'Certification', buf: 'Réserve', bufF: 'Rattrapage, révision, TP supplémentaires', opt: 'optionnel', subj: 'Demande de formation sur mesure : ',
         bsubj: 'Demande de réservation : ',
         bbody: t => `Bonjour Aziz,\n\nNous souhaitons réserver le programme « ${t} » tel que décrit sur votre site.\n\nOrganisation :\nNombre de participants :\nFormat (sur site France / sur site Tunisie / à distance) :\nDate de début souhaitée :\nPersonne à contacter et téléphone :\n\nCordialement,\n`,
         body: t => `Bonjour Aziz,\n\nNous sommes intéressés par le programme « ${t} », adapté à notre équipe.\n\nOrganisation :\nNombre de participants :\nNiveau actuel (débutant / intermédiaire / avancé) :\nFormat (sur site France / sur site Tunisie / à distance) :\nDurée et dates souhaitées :\nSujets à ajouter ou retirer :\n\nCordialement,\n` }
 };
-const hrsHTML = h => h ? `<b class="hrs">${h}<small>h</small></b>` : `<b class="hrs na">${PUI[lang].custom}</b>`;
-function renderProgs() {
-  $('#progs').innerHTML = PROGS.map((g, i) => `<li><button type="button" class="prog" data-p="${i}" aria-haspopup="dialog">${hrsHTML(g.hrs)}<span class="prog-txt"><b class="prog-h">${pick(g.title)}</b><span class="prog-p">${pick(g.p)}</span><span class="tags">${g.tags.map(t => `<i>${t}</i>`).join('')}</span></span><span class="prog-go">${PUI[lang].open}<svg><use href="#i-arrow"/></svg></span></button></li>`).join('');
-}
-const progDlg = $('#progDlg');
-function openProg(i) {
-  const g = PROGS[i], u = PUI[lang], t = pick(g.title);
-  const facts = [...(g.facts || []), [{ en: u.format, fr: u.format }, u.formatV]];
+const progItem = c => `${pick(c.title)}<small>${c.h} h${c.opt ? ` + ${c.opt} h` : ''}</small>`;
+function progPanel(c) {
+  const u = PUI[lang], t = pick(c.title), f = c.file[lang];
   const mail = (s, b) => `mailto:mohamedaziz.benhaha@gmail.com?subject=${encodeURIComponent(s + t)}&body=${encodeURIComponent(b(t))}`;
-  $('#progBody').innerHTML = `<header class="pm-head">${hrsHTML(g.hrs)}<div><p class="pm-kicker">${u.kicker}</p><h2 id="pTitle">${t}</h2></div></header>
-    <p class="pm-lede">${pick(g.p)}</p>
-    <dl class="pm-facts">${facts.map(([k, v]) => `<div><dt>${pick(k)}</dt><dd>${pick(v)}</dd></div>`).join('')}</dl>
-    ${g.phases ? `<h3 class="pm-sub">${u.struct}</h3><ol class="pm-phases">${g.phases.map(([n, f, h]) => `<li><b>${pick(n)}</b><span>${pick(f)}</span><i>${h} h</i></li>`).join('')}</ol>` : ''}
-    <ul class="tags">${g.tags.map(t => `<li>${t}</li>`).join('')}</ul>
-    <div class="pm-actions"><a class="btn btn-gold" href="${mail(u.bsubj, u.bbody)}" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg><span>${u.book}</span></a><a class="btn btn-ghost" href="${mail(u.subj, u.body)}" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg><span>${u.cust}</span></a>${g.doc ? `<a class="btn btn-ghost" href="${g.doc}" download><svg><use href="#i-down"/></svg><span>${u.dl}</span></a>` : `<p class="pm-note">${u.none}</p>`}</div>`;
-  progDlg.dataset.p = i;
-  if (!progDlg.open) progDlg.showModal();
-  progDlg.scrollTop = 0;
+  const facts = [[u.aud, pick(c.aud)], [u.pre, pick(c.pre)], ...(c.cert ? [[u.cert, pick(c.cert).join('<br>')]] : [])];
+  return `<header class="pm-head"><b class="hrs">${c.h}<small>h</small></b><div><p class="pm-kicker">${u.kicker}${c.opt ? ` · +${c.opt} h ${u.opt}` : ''}</p><h3>${t}</h3></div></header>
+    <p class="pm-lede">${pick(c.sub)}</p>
+    <dl class="pm-facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
+    <h4 class="pm-sub">${u.struct}</h4>
+    <ol class="pm-phases">${c.ph.map(([n, fo, h, o]) => `<li><b>${pick(n)}${o ? ` <em>(${u.opt})</em>` : ''}</b><span>${pick(fo)}</span><i>${h} h</i></li>`).join('')}${c.buf ? `<li class="buf"><b>${u.buf}</b><span>${u.bufF}</span><i>${c.buf} h</i></li>` : ''}</ol>
+    <div class="pm-actions"><a class="btn btn-gold" href="res/programmes/pdf/${f}.pdf" target="_blank" rel="noopener"><svg><use href="#i-ext"/></svg><span>${u.pdf}</span></a><a class="btn btn-ghost" href="res/programmes/${f}.docx" download><svg><use href="#i-down"/></svg><span>${u.dl}</span></a><a class="btn btn-ghost" href="${mail(u.bsubj, u.bbody)}" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg><span>${u.book}</span></a><a class="btn btn-ghost" href="${mail(u.subj, u.body)}" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg><span>${u.cust}</span></a></div>`;
 }
-$('#progs').addEventListener('click', e => { const b = e.target.closest('[data-p]'); if (b) openProg(+b.dataset.p) });
 
 /* ---------- dialogs: close button, backdrop click ---------- */
 $$('.modal').forEach(d => {
@@ -233,48 +190,55 @@ function applyLang() {
   const [en, fr] = $$('#lang span');
   en.classList.toggle('on', lang === 'en'); fr.classList.toggle('on', lang === 'fr');
   $('#lang').setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
-  renderTabs(); sizeTabs(); renderProgs(); if (progDlg.open) openProg(+progDlg.dataset.p); setMailSubjects(); fitMotto(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
+  TABS.forEach(t => t.render()); sizeTabs(); setMailSubjects(); fitMotto(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
 }
 $('#lang').addEventListener('click', () => { lang = lang === 'en' ? 'fr' : 'en'; store.set('lang', lang); applyLang() });
 
-/* ---------- experience tabs ---------- */
-let group = 'ind', idx = 0;
-const listHTML = items => items.map((e, i) => `<button role="tab" aria-selected="${i === idx}" data-i="${i}">${pick(e[0])}<small>${pick(e[2]).split(' · ')[0]}</small></button>`).join('');
-const panelHTML = ([org, role, dates, pts, stack]) => `<h3>${pick(role)} <span>@ ${pick(org)}</span></h3><p class="meta">${pick(dates)}</p><ul class="pts">${pick(pts).map(p => `<li>${p}</li>`).join('')}</ul><ul class="chips">${stack.map(s => `<li>${s}</li>`).join('')}</ul>`;
-/* Lock the box to its tallest content (every group and entry, current language) so the next section never moves. */
-function sizeTabs() {
-  const box = $('.tabs'), list = $('#tabList'), panel = $('#tabPanel');
-  const probe = (el, w) => { const c = el.cloneNode(false); c.removeAttribute('id'); c.style.cssText = `position:absolute;left:-9999px;top:0;visibility:hidden;animation:none;width:${w}px`; box.append(c); return c };
-  const pl = probe(list, list.offsetWidth), pp = probe(panel, panel.offsetWidth);
-  const stacked = getComputedStyle(box).gridTemplateColumns.split(' ').length < 2;
-  let h = 0;
-  Object.values(EXP).forEach(items => {
-    pl.innerHTML = listHTML(items);
-    items.forEach(e => { pp.innerHTML = panelHTML(e); h = Math.max(h, stacked ? pl.offsetHeight + pp.offsetHeight : Math.max(pl.offsetHeight, pp.offsetHeight)) });
+/* ---------- tabbed boxes: experience and training (group buttons, entry list, panel) ---------- */
+/* Each box is locked to its tallest content (every group and entry, current language) so the next section never moves. */
+function tabbed(sec, data, itemHTML, panelHTML) {
+  const box = $('.tabs', sec), list = $('.tab-list', sec), panel = $('.tab-panel', sec);
+  let group = $('.seg [aria-selected=true]', sec).dataset.group, idx = 0;
+  const listHTML = items => items.map((e, i) => `<button role="tab" aria-selected="${i === idx}" data-i="${i}">${itemHTML(e)}</button>`).join('');
+  function size() {
+    const probe = (el, w) => { const c = el.cloneNode(false); c.style.cssText = `position:absolute;left:-9999px;top:0;visibility:hidden;animation:none;width:${w}px`; box.append(c); return c };
+    const pl = probe(list, list.offsetWidth), pp = probe(panel, panel.offsetWidth);
+    const stacked = getComputedStyle(box).gridTemplateColumns.split(' ').length < 2;
+    let h = 0;
+    Object.values(data).forEach(items => {
+      pl.innerHTML = listHTML(items);
+      items.forEach(e => { pp.innerHTML = panelHTML(e); h = Math.max(h, stacked ? pl.offsetHeight + pp.offsetHeight : Math.max(pl.offsetHeight, pp.offsetHeight)) });
+    });
+    pl.remove(); pp.remove();
+    box.style.minHeight = (stacked ? h + parseFloat(getComputedStyle(box).rowGap) : h) + 'px';
+  }
+  function render() {
+    const items = data[group];
+    if (idx >= items.length) idx = 0;
+    list.innerHTML = listHTML(items);
+    panel.innerHTML = panelHTML(items[idx]);
+    panel.style.animation = 'none'; panel.offsetHeight; panel.style.animation = '';
+    const b = list.children[idx];
+    if (b) { list.style.setProperty('--ty', b.offsetTop + 'px'); list.style.setProperty('--th', b.offsetHeight + 'px') }
+  }
+  list.addEventListener('click', e => { const b = e.target.closest('button'); if (b) { idx = +b.dataset.i; render() } });
+  list.addEventListener('keydown', e => {
+    if (!['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+    e.preventDefault(); const n = data[group].length;
+    idx = (idx + (e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : n - 1)) % n; render(); list.children[idx].focus();
   });
-  pl.remove(); pp.remove();
-  box.style.minHeight = (stacked ? h + parseFloat(getComputedStyle(box).rowGap) : h) + 'px';
+  $$('.seg button', sec).forEach(b => b.addEventListener('click', () => {
+    $$('.seg button', sec).forEach(x => x.setAttribute('aria-selected', x === b)); group = b.dataset.group; idx = 0; list.scrollLeft = 0; render();
+  }));
+  return { render, size };
 }
-function renderTabs() {
-  const list = $('#tabList'), items = EXP[group];
-  if (idx >= items.length) idx = 0;
-  list.innerHTML = listHTML(items);
-  const panel = $('#tabPanel');
-  panel.innerHTML = panelHTML(items[idx]);
-  panel.style.animation = 'none'; panel.offsetHeight; panel.style.animation = '';
-  const b = list.children[idx];
-  if (b) { list.style.setProperty('--ty', b.offsetTop + 'px'); list.style.setProperty('--th', b.offsetHeight + 'px') }
-}
-$('#tabList').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { idx = +b.dataset.i; renderTabs() } });
-$('#tabList').addEventListener('keydown', e => {
-  if (!['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight'].includes(e.key)) return;
-  e.preventDefault(); const n = EXP[group].length;
-  idx = (idx + (e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : n - 1)) % n; renderTabs(); $('#tabList').children[idx].focus();
-});
-$$('.seg button').forEach(b => b.addEventListener('click', () => {
-  $$('.seg button').forEach(x => x.setAttribute('aria-selected', x === b)); group = b.dataset.group; idx = 0; renderTabs();
-}));
-let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { renderTabs(); sizeTabs(); fitMotto(); fitName() }, 150) });
+const TABS = [
+  tabbed($('#experience'), EXP, e => `${pick(e[0])}<small>${pick(e[2]).split(' · ')[0]}</small>`,
+    ([org, role, dates, pts, stack]) => `<h3>${pick(role)} <span>@ ${pick(org)}</span></h3><p class="meta">${pick(dates)}</p><ul class="pts">${pick(pts).map(p => `<li>${p}</li>`).join('')}</ul><ul class="chips">${stack.map(s => `<li>${s}</li>`).join('')}</ul>`),
+  tabbed($('#training'), PROGS, progItem, progPanel)
+];
+const sizeTabs = () => TABS.forEach(t => t.size());
+let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { TABS.forEach(t => t.render()); sizeTabs(); fitMotto(); fitName() }, 150) });
 
 /* ---------- rotating roles ---------- */
 let rotTimer;
@@ -349,8 +313,8 @@ $$('.orbit').forEach(o => {
   s.forEach((el, i) => { const a = (i / s.length) * Math.PI * 2 - Math.PI / 2; el.style.left = 50 + 50 * Math.cos(a) + '%'; el.style.top = 50 + 50 * Math.sin(a) + '%' });
 });
 
-/* ---------- Show more / Show less: courses (first row) and programmes (top 5) ---------- */
-const MORE = [[$('#courses-grid'), $('#moreCourses')], [$('#progs'), $('#moreProgs')]];
+/* ---------- Show more / Show less: courses (first row) ---------- */
+const MORE = [[$('#courses-grid'), $('#moreCourses')]];
 function setMoreLabel() { MORE.forEach(([g, b]) => { $('.more-label', b).textContent = UI[lang][g.classList.contains('open') ? 'less' : 'more'] }) }
 MORE.forEach(([g, b]) => b.addEventListener('click', () => {
   const open = g.classList.toggle('open'); b.setAttribute('aria-expanded', open); setMoreLabel();
