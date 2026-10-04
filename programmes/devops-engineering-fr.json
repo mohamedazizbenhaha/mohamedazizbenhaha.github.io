@@ -6,9 +6,9 @@
  "subtitle": "Construire, livrer et exploiter des applications avec une chaîne automatisée",
  "audience_line": "Développeurs, administrateurs système et ingénieurs IT souhaitant évoluer vers des fonctions DevOps",
  "certifications": [
-  "HashiCorp Terraform Associate",
-  "GitHub Actions (GH-200)",
-  "LPI DevOps Tools Engineer (thèmes principaux)"
+  "HashiCorp Terraform Associate (004), thèmes principaux",
+  "GitHub Actions (GH-200), thèmes principaux",
+  "LPI DevOps Tools Engineer 2.0 (701-200), thèmes principaux"
  ],
  "overview": "Ce programme suit une modification depuis le commit d’un développeur jusqu’à une application supervisée en production sur AWS. Les participants mettent en place la collaboration avec Git, construisent des pipelines d’intégration et de livraison continues avec Jenkins et GitHub Actions, ajoutent tests automatisés, seuils de qualité (quality gates) et artefacts versionnés, provisionnent l’infrastructure avec Terraform et configurent les serveurs avec Ansible, puis suivent le résultat grâce aux métriques, aux journaux et aux alertes. La même application est reprise dans toutes les phases, presque chaque chapitre se termine par un TP, et le programme s’achève par un projet final où les équipes assemblent toute la chaîne de livraison et la présentent.",
  "facts": [
@@ -18,7 +18,7 @@
   },
   {
    "label": "Prérequis",
-   "value": "Ligne de commande Linux et Bash (cours : Linux & Bash Scripting) ; bases de Docker et Kubernetes (cours : Docker & Kubernetes). Ce cours prolonge Docker & Kubernetes sans le répéter."
+   "value": "Ligne de commande Linux et Bash (cours : Linux et scripting Bash) ; bases de Docker et Kubernetes (cours : Docker et Kubernetes). Ce cours prolonge Docker et Kubernetes sans le répéter."
   },
   {
    "label": "Durée",
@@ -30,7 +30,7 @@
   },
   {
    "label": "Environnement de TP",
-   "value": "Un ordinateur portable par participant (16 Go de RAM, Docker, VS Code) et un compte AWS de test par participant, fourni par l’organisateur"
+   "value": "Un portable par participant (16 Go de RAM minimum, Docker, VS Code) ; phases 1 et 2 en local, la phase 3 passe sur AWS. Un compte AWS de test par équipe, fourni par l’organisateur ; ressources détruites après chaque séance pour maîtriser les coûts"
   },
   {
    "label": "Évaluation",
@@ -47,9 +47,9 @@
    "name": "Culture DevOps et collaboration",
    "hours": 9,
    "focus": "Principes DevOps, Git et méthodes de travail en équipe",
-   "intro": "Le DevOps commence par la manière dont une équipe travaille, puis par la manière dont elle partage le code. Cette phase pose le vocabulaire et les indicateurs utilisés dans tout le programme, et permet à chaque participant de maîtriser Git et la collaboration par pull requests.",
+   "intro": "Le DevOps commence par la manière dont une équipe travaille, puis par la manière dont elle partage le code. Cette phase pose le vocabulaire et les indicateurs utilisés dans tout le programme, et permet à chaque participant de maîtriser Git et la collaboration par pull requests. La phase se termine par un TP validé : un dépôt d’équipe avec branches protégées, une pull request relue et une version taguée.",
    "chapters": [
-    {"id": "1.1", "title": "Culture DevOps", "content": "CALMS, indicateurs DORA de performance de livraison, Agile et Kanban, cartographie de la chaîne de valeur, où l’automatisation est rentable", "format": "Cours + atelier", "hours": 3},
+    {"id": "1.1", "title": "Culture DevOps", "content": "CALMS, indicateurs DORA de performance de livraison (débit et instabilité, dont le taux de reprise), Agile et Kanban, cartographie de la chaîne de valeur, où l’automatisation est rentable", "format": "Cours + atelier", "hours": 3},
     {"id": "1.2", "title": "Fondamentaux de Git", "content": "Comment Git stocke l’historique (commits, arbres, références), init, clone, add, commit, log, diff, .gitignore, conventions de messages de commit", "format": "Cours + TP", "hours": 1.5},
     {"id": "1.3", "title": "Branches et fusions", "content": "Modèle de branches, fusions fast-forward et à trois voies, rebase, cherry-pick, résolution de conflits", "format": "Cours + TP", "hours": 1.5},
     {"id": "1.4", "title": "Dépôts distants et pull requests", "content": "fetch, pull, push, authentification SSH ou HTTPS, forks, origin et upstream, pull requests et revue de code", "format": "Cours + TP", "hours": 1.5},
@@ -62,7 +62,7 @@
    "name": "Intégration et livraison continues",
    "hours": 24,
    "focus": "Jenkins, tests automatisés, SonarQube, Nexus, stratégies de déploiement, GitHub Actions",
-   "intro": "Les participants construisent le même pipeline deux fois : sur Jenkins, le serveur d’intégration continue auto-hébergé le plus répandu, et sur GitHub Actions. Tests, seuils de qualité et dépôt d’artefacts garantissent que seules des versions testées et versionnées sont déployées, et la phase se termine par les stratégies de mise en production qui rendent un déploiement réversible.",
+   "intro": "Les participants construisent le même pipeline deux fois : sur Jenkins, un serveur d’intégration continue auto-hébergé très utilisé, et sur GitHub Actions. Tests, seuils de qualité et dépôt d’artefacts garantissent que seules des versions testées et versionnées sont déployées, et la phase se termine par les stratégies de mise en production qui rendent un déploiement réversible. TP validé : l’application du cours construite, testée, analysée, publiée dans Nexus et déployée sur le cluster local par les deux pipelines.",
    "chapters": [
     {"id": "2.1", "title": "Bases de Jenkins", "content": "Installation, plugins, paramètres de sécurité, contrôleur et agents, types de jobs", "format": "Cours + TP", "hours": 1.5},
     {"id": "2.2", "title": "Déclencheurs et identifiants", "content": "Webhooks, scrutation du dépôt, builds planifiés, types d’identifiants et usage sécurisé", "format": "Cours + TP", "hours": 1.5},
@@ -72,18 +72,18 @@
     {"id": "2.6", "title": "Qualité du code avec SonarQube", "content": "Analyse statique, import de la couverture, profils qualité, seuils de qualité qui arrêtent le pipeline", "format": "Cours + TP", "hours": 3},
     {"id": "2.7", "title": "Gestion des artefacts avec Nexus", "content": "Dépôts hosted, proxy et group, Nexus comme registre Docker, versionnage, politiques de nettoyage, publication depuis le pipeline", "format": "Cours + TP", "hours": 3},
     {"id": "2.8", "title": "Déployer depuis Jenkins", "content": "Construire, étiqueter et publier les images dans Nexus, déployer sur Kubernetes avec Helm, promotion entre environnements", "format": "TP", "hours": 1.5},
-    {"id": "2.9", "title": "Stratégies de déploiement et retour arrière", "content": "Déploiements progressifs, blue/green et canary, retour arrière, feature flags ; déploiement poussé ou GitOps (Argo CD, vu dans Docker & Kubernetes)", "format": "Cours + TP", "hours": 1.5},
-    {"id": "2.10", "title": "GitHub Actions", "content": "Workflows, événements, jobs et steps, runners hébergés et auto-hébergés, builds matriciels, cache", "format": "Cours + TP", "hours": 3},
-    {"id": "2.11", "title": "Livraison sécurisée avec Actions", "content": "Secrets, environnements et validations obligatoires, fédération OIDC vers AWS sans clés permanentes, workflows réutilisables, déploiement", "format": "Cours + TP", "hours": 3}
+    {"id": "2.9", "title": "Stratégies de déploiement et retour arrière", "content": "Déploiements progressifs, blue/green et canary, retour arrière, feature flags ; déploiement poussé ou GitOps (Argo CD, vu dans Docker et Kubernetes)", "format": "Cours + TP", "hours": 1.5},
+    {"id": "2.10", "title": "GitHub Actions", "content": "Workflows, événements, jobs et steps, expressions et contextes, runners hébergés et auto-hébergés, builds matriciels, cache, artefacts", "format": "Cours + TP", "hours": 3},
+    {"id": "2.11", "title": "Livraison sécurisée et réutilisation avec Actions", "content": "Secrets, environnements et validations obligatoires, fédération OIDC vers AWS sans clés permanentes, workflows réutilisables, actions personnalisées composites, JavaScript et Docker, politiques d’organisation et groupes de runners", "format": "Cours + TP", "hours": 3}
    ],
    "math": null,
    "project": null
   },
   {
-   "name": "Infrastructure as Code",
+   "name": "Infrastructure en code (IaC)",
    "hours": 24,
    "focus": "Provisionnement AWS avec Terraform, gestion de configuration avec Ansible",
-   "intro": "L’infrastructure est décrite sous forme de code, relue comme du code et appliquée par le pipeline. Terraform crée l’environnement AWS de l’application du cours ; Ansible configure ensuite les serveurs qui hébergent les outils de l’équipe. Chaque outil se termine par un projet que le projet final réutilise.",
+   "intro": "L’infrastructure est décrite sous forme de code, relue comme du code et appliquée par le pipeline. Terraform crée l’environnement AWS de l’application du cours ; Ansible configure ensuite les serveurs qui hébergent les outils de l’équipe. Chaque outil se termine par un projet validé que le projet final réutilise.",
    "chapters": [
     {"id": "3.1", "title": "Bases de Terraform", "content": "Providers, HCL, ressources, data sources, graphe de dépendances, init, plan et apply, fmt et validate", "format": "Cours + TP", "hours": 3},
     {"id": "3.2", "title": "État et variables", "content": "Variables et validation, outputs, état et commandes terraform state, backend distant S3 et verrouillage, HCP Terraform", "format": "Cours + TP", "hours": 3},
@@ -93,7 +93,7 @@
     {"id": "3.6", "title": "Playbooks", "content": "YAML, plays et tâches, modules principaux, handlers, conditions, boucles, idempotence", "format": "Cours + TP", "hours": 3},
     {"id": "3.7", "title": "Variables, templates et Vault", "content": "group_vars et host_vars, facts, templates et filtres Jinja2, Ansible Vault pour les secrets", "format": "Cours + TP", "hours": 3},
     {"id": "3.8", "title": "Rôles", "content": "Structure d’un rôle, valeurs par défaut, dépendances, Ansible Galaxy, conception de rôles réutilisables", "format": "Cours + TP", "hours": 1.5},
-    {"id": "3.9", "title": "Projet Ansible", "content": "Configurer les serveurs d’outils EC2 (agents Jenkins, SonarQube, Nexus) avec des rôles, puis relancer pour prouver l’idempotence", "format": "TP", "hours": 1.5}
+    {"id": "3.9", "title": "Projet Ansible", "content": "Configurer les serveurs d’outils EC2 (contrôleur et agents Jenkins, SonarQube, Nexus) avec des rôles, puis relancer pour prouver l’idempotence", "format": "TP", "hours": 1.5}
    ],
    "math": null,
    "project": null
@@ -102,9 +102,9 @@
    "name": "Supervision",
    "hours": 6,
    "focus": "Métriques et alertes Prometheus, tableaux de bord Grafana et journaux Loki",
-   "intro": "Une chaîne de livraison n’est terminée que lorsque l’équipe voit ce qui tourne en production. Les participants instrumentent l’application du cours, construisent des tableaux de bord à partir des métriques et des journaux, et acheminent les alertes vers les bonnes personnes.",
+   "intro": "Une chaîne de livraison n’est terminée que lorsque l’équipe voit ce qui tourne en production. Les participants instrumentent l’application du cours, construisent des tableaux de bord à partir des métriques et des journaux, et acheminent les alertes vers les bonnes personnes. TP validé : un tableau de bord pour l’application du cours et une alerte qui se déclenche et atteint son point de contact.",
    "chapters": [
-    {"id": "4.1", "title": "Métriques et alertes avec Prometheus", "content": "Modèle de métriques, exporters, instrumentation de l’application avec les bibliothèques clientes, PromQL, règles d’enregistrement et d’alerte, routage avec Alertmanager", "format": "Cours + TP", "hours": 3},
+    {"id": "4.1", "title": "Métriques et alertes avec Prometheus", "content": "Modèle de métriques, exporters, instrumentation de l’application avec OpenTelemetry et les bibliothèques clientes Prometheus, PromQL, règles d’enregistrement et d’alerte, routage avec Alertmanager", "format": "Cours + TP", "hours": 3},
     {"id": "4.2", "title": "Tableaux de bord et journaux avec Grafana", "content": "Tableaux de bord, Loki pour les journaux, règles d’alerte Grafana, points de contact et politiques de notification, objectifs de niveau de service (SLO)", "format": "Cours + TP", "hours": 3}
    ],
    "math": null,
@@ -116,8 +116,8 @@
    "focus": "Chaîne de livraison complète, présentée au groupe",
    "intro": "Par équipes de deux ou trois, les participants assemblent tout le programme en une chaîne de livraison fonctionnelle pour une application fournie, puis la présentent comme ils le feraient devant un responsable technique.",
    "chapters": [
-    {"id": "5.1", "title": "Cahier des charges et conception", "content": "Analyser le besoin, dessiner l’architecture cible, découper le travail en backlog", "format": "Projet", "hours": 1.5},
-    {"id": "5.2", "title": "Réalisation", "content": "Workflow Git ; intégration continue avec tests, seuil de qualité et artefacts versionnés ; infrastructure AWS avec Terraform ; serveurs d’outils configurés par Ansible ; déploiement sur EKS avec une stratégie de mise en production", "format": "Projet", "hours": 4.5},
+    {"id": "5.1", "title": "Cahier des charges et conception", "content": "Analyser le besoin, dessiner l’architecture cible, découper le travail en backlog, préparer le dépôt de l’équipe et l’environnement AWS à partir des projets de phase", "format": "Projet", "hours": 3},
+    {"id": "5.2", "title": "Réalisation", "content": "Workflow Git ; intégration continue avec tests, seuil de qualité et artefacts versionnés ; infrastructure AWS avec Terraform ; serveurs d’outils configurés par Ansible ; déploiement sur EKS avec une stratégie de mise en production", "format": "Projet", "hours": 3},
     {"id": "5.3", "title": "Supervision et documentation", "content": "Métriques, journaux, tableaux de bord et alertes ; README, schéma d’architecture, runbook (procédures d’exploitation)", "format": "Projet", "hours": 1.5},
     {"id": "5.4", "title": "Démonstration et revue", "content": "Démonstration en direct d’une modification qui va du commit à la production, puis d’un retour arrière ; questions et retours", "format": "Projet", "hours": 1.5}
    ],

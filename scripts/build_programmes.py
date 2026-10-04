@@ -69,12 +69,12 @@ LABELS_FR = {  # "lang": "fr" in a programme selects these
 # line (multiple) · keep (with next) · align · tab (right tab at text edge) ·
 # border {side: (colour, eighths of a pt, gap pt)} · fill
 _BOX = dict(border={'left': (GOLD, 24, 10), 'top': (PALE, 4, 6), 'bottom': (PALE, 4, 6), 'right': (PALE, 4, 10)},
-            fill=PALE, line=1.15)
+            fill=PALE, line=1.15, indent=(13, 10.5))  # indents = border gap + rule, so the box lines up with the tables
 STYLES = {
     'Normal':            dict(size=10.5, color=INK),
     'Heading 1':         dict(size=20, bold=True, color=INK, after=8, keep=True, border={'bottom': (GOLD, 12, 6)}),
     'Heading 2':         dict(size=17, bold=True, color=INK, before=18, after=6, keep=True),
-    'Prog Kicker':       dict(size=8.5, bold=True, color=GOLD_TXT, caps=True, track=1.2, after=2, keep=True, tab=True),
+    'Prog Kicker':       dict(size=8.5, bold=True, color=GOLD_TXT, caps=True, track=1.2, after=2, keep=True, tab=True, new_page=True),
     'Prog Cover Kicker': dict(size=9, bold=True, color=GOLD, caps=True, track=2, before=245, after=8),
     'Prog Cover Title':  dict(size=36, bold=True, color=CREAM, after=8, line=0.95),
     'Prog Cover Sub':    dict(size=13, color=CREAM_MUTE, after=22, border={'bottom': (GOLD, 12, 18)}),
@@ -161,7 +161,9 @@ def make_styles(doc):
         pf = st.paragraph_format
         pf.space_before, pf.space_after = Pt(s.get('before', 0)), Pt(s.get('after', 6))
         if 'line' in s: pf.line_spacing = s['line']
+        if 'indent' in s: pf.left_indent, pf.right_indent = (Pt(x) for x in s['indent'])
         if s.get('keep'): pf.keep_with_next = True
+        if s.get('new_page'): pf.page_break_before = True
         if 'align' in s: pf.alignment = ALIGN[s['align']]
         if s.get('tab'): right_tab(pf)
         pPr = st.element.get_or_add_pPr()
@@ -392,6 +394,37 @@ def author_block(doc):
     p = who.add_paragraph(style='Prog Cover Site'); p.add_run(SITE)
 
 
+# ---------- checks ----------
+
+def check(g):
+    """Hours rules shared by every programme: chapter sums, 3 h sessions, buffer size, stated duration."""
+    errors, ends, run = [], set(), 0
+    for ph in g['phases']:
+        s = sum(c['hours'] for c in ph['chapters'])
+        if ph['hours'] is not None and abs(s - ph['hours']) > 1e-9:
+            errors.append(f"phase '{ph['name']}': chapters add up to {s:g} h, phase says {ph['hours']:g} h")
+        for c in ph['chapters']:
+            run += c['hours']; ends.add(round(run, 2))
+    if run % 3:
+        errors.append(f'{run:g} h of chapters is not a whole number of 3 h sessions')
+    split = [f'{x} h' for x in range(3, int(run), 3) if x not in ends]
+    if split:
+        errors.append('a 3 h session ends mid-chapter at ' + ', '.join(split) + ' (pair the 1.5 h chapters)')
+    buffer = g.get('buffer') or 0
+    want = 3 if run <= 24 else 6 if run <= 45 else 9
+    if buffer != want:
+        errors.append(f'buffer is {buffer:g} h; the rule gives {want} h for {run:g} h of chapters')
+    total = run + buffer
+    if g.get('hours') not in (None, total):
+        errors.append(f"cover hours {g['hours']} differ from the table total {total:g}")
+    for f in g.get('facts', []):
+        m = re.match(r'(\d+(?:[.,]\d+)?)\s*h\b', f['value'])
+        if f['label'] in ('Duration', 'Durée') and (not m or float(m[1].replace(',', '.')) != total):
+            errors.append(f"'{f['label']}' fact does not start with the total ({total:g} h)")
+    if errors:
+        raise SystemExit(f"{g['slug']}:\n  " + '\n  '.join(errors))
+
+
 # ---------- the document ----------
 
 def build_doc(g):
@@ -417,7 +450,9 @@ def build_doc(g):
     if g.get('audience_line'):
         P(doc, 'Prog Cover Line', ('Prog Cover Label', L['for']), '   ' + g['audience_line'])
     if g.get('certifications'):
-        P(doc, 'Prog Cover Line', ('Prog Cover Label', L['certs']), '   ' + '  ·  '.join(g['certifications']))
+        # no-break spaces and hyphens inside each name: lines break only between certifications
+        certs = (c.replace(' ', '\u00a0').replace('-', '\u2011') for c in g['certifications'])
+        P(doc, 'Prog Cover Line', ('Prog Cover Label', L['certs']), '   ' + '  ·  '.join(certs))
     author_block(doc)
     page_break(doc)
 
@@ -444,12 +479,11 @@ def build_doc(g):
         P(doc, 'Heading 2', L['facts'])
         table(doc, [4.2, WIDTH - 4.2], None,
               [[('Prog Table Key', [f['label']]), ('Prog Table Text', [f['value']])] for f in g['facts']])
-        spacer(doc)
 
-    # phases
+    # phases: each starts on a new page through the Prog Kicker style, so no spacer is left
+    # before it (an empty paragraph there could spill onto a blank page)
     n = 0
     for i, ph in enumerate(g['phases'], 1):
-        page_break(doc)
         P(doc, 'Prog Kicker', f"{L['phase']} {i:02d}\t{hrs(ph['hours'])}")
         P(doc, 'Heading 1', ph['name'])
         if ph.get('intro'): P(doc, 'Prog Intro', ph['intro'])
@@ -462,13 +496,13 @@ def build_doc(g):
                          ('Prog Table Text', parts), ('Prog Table Muted', [c['format']]),
                          ('Prog Table Hours', [hrs(c['hours'])])])
         table(doc, [1.0, 3.9, 8.6, 2.0, 1.5], L['chapter_cols'], rows)
-        spacer(doc)
+        pr = ph.get('project')
+        if ph.get('math') or pr: spacer(doc)
         if ph.get('math'):
             P(doc, 'Prog Box Tag', L['maths_box'])
             last = P(doc, 'Prog Box Text', ph['math'])
             last.paragraph_format.keep_with_next = False
-            spacer(doc)
-        pr = ph.get('project')
+            if pr: spacer(doc)
         if pr:
             n += 1
             single = sum(1 for q in g['phases'] if q.get('project')) == 1
@@ -478,11 +512,9 @@ def build_doc(g):
             if pr.get('stack'): last = P(doc, 'Prog Box Text', ('Prog Label', L['stack']), '  ' + pr['stack'])
             if pr.get('deliverable'): last = P(doc, 'Prog Box Text', ('Prog Label', L['deliverable']), '  ' + pr['deliverable'])
             last.paragraph_format.keep_with_next = False
-            spacer(doc)
 
     pf = g.get('portfolio')
     if pf:
-        page_break(doc)
         P(doc, 'Prog Kicker', L['portfolio_kicker'])
         P(doc, 'Heading 1', L['portfolio'])
         P(doc, 'Prog Intro', pf['intro'])
@@ -495,6 +527,8 @@ def build_doc(g):
         P(doc, 'Heading 2', L['notes'])
         for note in g['notes']:
             P(doc, 'Prog Bullet', note)
+    if doc.element.body[-2].tag == qn('w:tbl'):  # Word needs a paragraph after a closing table
+        spacer(doc)
     return doc
 
 
@@ -508,6 +542,7 @@ def load_built():
 
 def build(path, force=False, out=None):
     g = json.loads(path.read_text(encoding='utf-8'))
+    check(g)
     target = out or OUT / g['file']
     built = load_built()
     if out is None and target.exists() and not force and built.get(g['file']) != sha(target):
