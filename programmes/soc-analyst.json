@@ -9,13 +9,34 @@
  ],
  "overview": "This programme prepares participants for the work of a security operations centre analyst and for the Cisco CCNA Cybersecurity exam (200-201 CBROPS). They learn how a SOC works, analyse Windows and Linux systems, review network protocols and security infrastructure from the analyst's side, monitor traffic, apply cryptography, protect endpoints and analyse malware. They then work with security data in a SIEM, detect attacks with MITRE ATT&CK and Sigma rules, use threat intelligence and AI-assisted triage, investigate incidents following NIST SP 800-61 Rev. 3 and apply security procedures. Every chapter ends with a lab, and the programme closes with a final project: a SOC simulation on a captured attack.",
  "facts": [
-  {"label": "Audience", "value": "IT and network staff moving into security operations"},
-  {"label": "Prerequisites", "value": "Networking basics (course: Introduction to Networks (CCNA 1), or Networking for Cloud & DevOps); Linux command line helps. Networking is recapped, not taught"},
-  {"label": "Duration", "value": "57 h: 48 h of chapters + 9 h buffer"},
-  {"label": "Format", "value": "Short lectures followed by guided labs on captured traffic and logs; one attack scenario followed through the course"},
-  {"label": "Lab environment", "value": "One laptop per participant (16 GB RAM) with the Cisco CyberOps workstation and Kali Linux virtual machines; a Security Onion server per team provided by the organiser; isolated lab network; no cloud account or cost"},
-  {"label": "Assessment", "value": "A lab validated at the end of each phase and a final SOC simulation with an incident report; certificate of completion for participants who complete both"},
-  {"label": "Outcome", "value": "Participants can triage alerts, investigate network and host evidence, map an attack to MITRE ATT&CK, write an incident report and sit the 200-201 CBROPS exam"}
+  {
+   "label": "Audience",
+   "value": "IT and network staff moving into security operations"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Networking basics (course: Introduction to Networks (CCNA 1), or Networking for Cloud & DevOps); Linux command line helps. Networking is recapped, not taught"
+  },
+  {
+   "label": "Duration",
+   "value": "57 h: 48 h of chapters + 9 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by guided labs on captured traffic and logs; one attack scenario followed through the course"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant (16 GB RAM) with an analyst workstation and Kali Linux VMs prepared by the trainer; one Security Onion server per team (4 cores, 24 GB RAM), provided by the organiser; isolated lab network; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated at the end of each phase and a final SOC simulation with an incident report; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can triage alerts, investigate network and host evidence, map an attack to MITRE ATT&CK, write an incident report and sit the 200-201 CBROPS exam"
+  }
  ],
  "buffer": 9,
  "phases": [
@@ -25,10 +46,34 @@
    "focus": "The SOC, security concepts, Windows and Linux for analysts",
    "intro": "Participants learn what a SOC does, how its tiers work and the security concepts analysts use every day, then examine Windows and Linux from the analyst's side: processes, registry, services, permissions and the logs that record what happened. Validated lab: a suspicious process and the user who started it traced through Windows event logs and Linux logs.",
    "chapters": [
-    {"id": "1.1", "title": "The SOC & Threat Landscape", "content": "Threats, cybercrime, SOC roles and tiers", "format": "Lecture + Workshop", "hours": 1.5},
-    {"id": "1.2", "title": "Security Concepts", "content": "CIA triad, defence in depth, access control models, CVSS, risk", "format": "Lecture + Workshop", "hours": 1.5},
-    {"id": "1.3", "title": "Windows for Analysts", "content": "Architecture, processes, registry, event logs, security tools", "format": "Lecture + Lab", "hours": 3},
-    {"id": "1.4", "title": "Linux for Analysts", "content": "Logs, permissions, services, hardening", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "The SOC & Threat Landscape",
+     "content": "Threats, cybercrime, SOC roles and tiers",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Security Concepts",
+     "content": "CIA triad, defence in depth, access control models, CVSS, risk, attack surface, deterministic vs probabilistic analysis",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Windows for Analysts",
+     "content": "Architecture, processes, registry, event logs, security tools",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.4",
+     "title": "Linux for Analysts",
+     "content": "Logs, permissions, services, hardening",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -39,10 +84,34 @@
    "focus": "Protocols, security infrastructure, attacks, tcpdump, Wireshark, NetFlow",
    "intro": "Participants review the protocols an analyst reads every day, see how firewalls, IPS and proxies protect the network, study the common attacks on networks and applications, then capture and analyse traffic with tcpdump, Wireshark and NetFlow. Validated lab: a packet capture in which each participant identifies a scan, a brute-force attempt and data exfiltration.",
    "chapters": [
-    {"id": "2.1", "title": "Network Protocols Review", "content": "Protocols seen from the analyst's side (recap of Introduction to Networks or Networking for Cloud & DevOps)", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "2.2", "title": "Network Security Infrastructure", "content": "Firewalls, IPS, proxies, segmentation", "format": "Lecture + Workshop", "hours": 1.5},
-    {"id": "2.3", "title": "Attacks on Networks & Applications", "content": "Tools, common threats and attacks", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.4", "title": "Network Monitoring", "content": "tcpdump, Wireshark, NetFlow, attacks on protocols and services", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Network Protocols Review",
+     "content": "Protocols seen from the analyst's side (recap of Introduction to Networks or Networking for Cloud & DevOps)",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Network Security Infrastructure",
+     "content": "Firewalls, IPS, proxies, segmentation",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Attacks on Networks & Applications",
+     "content": "Tools, common threats and attacks",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.4",
+     "title": "Network Monitoring",
+     "content": "tcpdump, Wireshark, NetFlow, attacks on protocols and services, data types (full packet capture, session, transaction, statistical, metadata, alert), 5-tuple, regular expressions",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -53,9 +122,27 @@
    "focus": "Cryptography and PKI, endpoint protection, vulnerabilities, malware analysis",
    "intro": "Participants see how cryptography and certificates protect data and how attackers hide in encrypted traffic, analyse endpoints and assess vulnerabilities, then examine malware safely with hashes, static analysis and a sandbox to extract indicators of compromise. Validated lab: a malware sample analysed in a sandbox, its indicators of compromise extracted and searched for in the endpoint logs.",
    "chapters": [
-    {"id": "3.1", "title": "Cryptography & PKI", "content": "Integrity, confidentiality, certificates", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.2", "title": "Endpoint Protection & Vulnerabilities", "content": "EDR, host-based analysis, vulnerability assessment", "format": "Lecture + Lab", "hours": 3},
-    {"id": "3.3", "title": "Malware Analysis Basics", "content": "Hashes, static and sandbox analysis, indicators of compromise", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "3.1",
+     "title": "Cryptography & PKI",
+     "content": "Integrity, confidentiality, certificates",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.2",
+     "title": "Endpoint Protection & Vulnerabilities",
+     "content": "EDR, host-based analysis, vulnerability assessment",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "3.3",
+     "title": "Malware Analysis Basics",
+     "content": "Hashes, static and sandbox analysis, indicators of compromise",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -66,10 +153,34 @@
    "focus": "SIEM and SOAR, Security Onion, MITRE ATT&CK, Sigma, threat intelligence, AI",
    "intro": "Participants bring log sources into a SIEM, work in Security Onion, triage alerts as true or false positives, map attacks to MITRE ATT&CK and write Sigma detection rules, enrich alerts with threat intelligence, and see where AI-assisted triage helps and where it adds risk. Validated lab: a Sigma rule written for an attack technique, converted for the SIEM and tested against the course attack.",
    "chapters": [
-    {"id": "4.1", "title": "Security Data & SIEM", "content": "Log sources, SIEM and SOAR, Security Onion, Wazuh or Elastic", "format": "Lecture + Lab", "hours": 3},
-    {"id": "4.2", "title": "Alert Analysis & Detection", "content": "MITRE ATT&CK, Sigma rules, true and false positives", "format": "Lecture + Lab", "hours": 3},
-    {"id": "4.3", "title": "Threat Intelligence", "content": "Sources, sharing, frameworks", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "4.4", "title": "AI in Security Operations", "content": "AI-assisted triage and detection, risks", "format": "Lecture + Workshop", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Security Data & SIEM",
+     "content": "Log sources, SIEM and SOAR, Security Onion (Elastic, Zeek, Suricata), other SIEMs such as Wazuh",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Alert Analysis & Detection",
+     "content": "MITRE ATT&CK, Sigma rules, true and false positives",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "4.3",
+     "title": "Threat Intelligence",
+     "content": "Sources, sharing, frameworks",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.4",
+     "title": "AI in Security Operations",
+     "content": "AI-assisted triage and detection, risks",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -80,8 +191,20 @@
    "focus": "NIST SP 800-61 Rev. 3, evidence, kill chain, diamond model, playbooks",
    "intro": "Participants investigate incidents following NIST SP 800-61 Rev. 3, handle evidence so it stays usable, reconstruct attacks with the kill chain and the diamond model, then work with the playbooks, asset management and compliance rules that frame SOC work. Validated lab: an incident timeline and a playbook step completed for the course attack.",
    "chapters": [
-    {"id": "5.1", "title": "Forensics & Incident Response", "content": "NIST SP 800-61 Rev. 3, evidence handling, kill chain, diamond model", "format": "Lecture + Lab", "hours": 3},
-    {"id": "5.2", "title": "Security Policies & Procedures", "content": "Incident handling playbooks, asset management, compliance", "format": "Lecture + Workshop", "hours": 3}
+    {
+     "id": "5.1",
+     "title": "Forensics & Incident Response",
+     "content": "NIST SP 800-61 Rev. 3, evidence handling, kill chain, diamond model, evidence types and chain of custody",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "5.2",
+     "title": "Security Policies & Procedures",
+     "content": "Incident handling playbooks, asset management, compliance (PCI DSS, HIPAA, SOX), CSIRT/PSIRT/CERT, SOC metrics (time to detect, contain, respond)",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -92,15 +215,33 @@
    "focus": "A SOC simulation on a captured attack",
    "intro": "Teams of two or three work a shift in a simulated SOC: they investigate the alerts of a captured attack, reusing the phase labs, then brief the group as they would a SOC manager.",
    "chapters": [
-    {"id": "6.1", "title": "Triage & Investigation", "content": "Triage the alerts in Security Onion and the SIEM, investigate network and host evidence", "format": "Project", "hours": 3},
-    {"id": "6.2", "title": "Timeline & Report", "content": "Attack timeline mapped to MITRE ATT&CK, indicators of compromise, incident report", "format": "Project", "hours": 1.5},
-    {"id": "6.3", "title": "Debrief & Review", "content": "Present the findings and recommendations; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "6.1",
+     "title": "Triage & Investigation",
+     "content": "Triage the alerts in Security Onion, investigate network and host evidence",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "6.2",
+     "title": "Timeline & Report",
+     "content": "Attack timeline mapped to MITRE ATT&CK, indicators of compromise, incident report",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "6.3",
+     "title": "Debrief & Review",
+     "content": "Present the findings and recommendations; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {
     "title": "SOC Simulation",
     "brief": "The alerts of a captured attack investigated end to end: triage of true and false positives, network and host evidence, an attack timeline mapped to MITRE ATT&CK, indicators of compromise and an incident report with recommendations.",
-    "stack": "Security Onion, SIEM (Wazuh or Elastic), Wireshark, Zeek, Suricata, Sigma, MITRE ATT&CK Navigator",
+    "stack": "Security Onion (Elastic, Zeek, Suricata), Wireshark, Sigma, MITRE ATT&CK Navigator",
     "deliverable": "Incident report with timeline and indicators, debrief presentation"
    }
   }

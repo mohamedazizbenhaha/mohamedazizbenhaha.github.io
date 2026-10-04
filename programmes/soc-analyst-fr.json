@@ -4,15 +4,15 @@
  "lang": "fr",
  "title": "Analyste SOC (CCNA Cybersecurity)",
  "subtitle": "Surveiller, détecter, enquêter et répondre dans un centre opérationnel de sécurité",
- "audience_line": "Personnels IT et réseau qui se tournent vers les opérations de sécurité",
+ "audience_line": "Professionnels IT et réseau qui évoluent vers les opérations de sécurité",
  "certifications": [
   "Cisco CCNA Cybersecurity (200-201 CBROPS v1.2)"
  ],
- "overview": "Ce programme prépare les participants au métier d’analyste dans un centre opérationnel de sécurité (SOC) et à l’examen Cisco CCNA Cybersecurity (200-201 CBROPS). Ils analysent les systèmes Windows et Linux, le réseau et son infrastructure de sécurité du point de vue de l’analyste, la cryptographie, les terminaux et les logiciels malveillants, puis détectent les attaques dans un SIEM avec MITRE ATT&CK et Sigma, utilisent le renseignement sur les menaces et le tri assisté par l’IA, et enquêtent sur les incidents selon la NIST SP 800-61 Rév. 3. Le programme s’achève par une simulation de SOC sur une attaque capturée.",
+ "overview": "Ce programme prépare les participants au métier d’analyste dans un centre opérationnel de sécurité (SOC) et à l’examen Cisco CCNA Cybersecurity (200-201 CBROPS). Ils découvrent le fonctionnement d’un SOC, analysent Windows, Linux, le réseau, la cryptographie, les terminaux et les logiciels malveillants du point de vue de l’analyste, détectent les attaques dans un SIEM avec MITRE ATT&CK et Sigma, utilisent le renseignement sur les menaces et le tri assisté par l’IA, enquêtent selon la NIST SP 800-61 Rev. 3 et appliquent les procédures de sécurité. Chaque chapitre se termine par un TP, et le programme s’achève par une simulation de SOC sur une attaque capturée.",
  "facts": [
   {
    "label": "Public",
-   "value": "Personnels IT et réseau qui se tournent vers les opérations de sécurité"
+   "value": "Professionnels IT et réseau qui évoluent vers les opérations de sécurité"
   },
   {
    "label": "Prérequis",
@@ -24,11 +24,11 @@
   },
   {
    "label": "Format",
-   "value": "Cours courts suivis de TP guidés sur du trafic et des journaux capturés ; un même scénario d’attaque suivi tout au long du cours"
+   "value": "Cours courts et TP guidés sur du trafic et des journaux capturés ; un scénario d’attaque suivi tout au long du cours"
   },
   {
    "label": "Environnement de TP",
-   "value": "Un portable par participant (16 Go de RAM) avec les machines virtuelles Cisco CyberOps Workstation et Kali Linux ; un serveur Security Onion par équipe fourni par l’organisateur ; réseau de TP isolé ; ni compte cloud ni coût"
+   "value": "Un portable par participant (16 Go de RAM) avec une station d’analyste et une VM Kali Linux préparées par le formateur ; un serveur Security Onion par équipe (4 cœurs, 24 Go de RAM), fourni par l’organisateur ; réseau de TP isolé ; ni compte cloud ni coût"
   },
   {
    "label": "Évaluation",
@@ -42,7 +42,7 @@
  "buffer": 9,
  "phases": [
   {
-   "name": "Fondamentaux du SOC et systèmes",
+   "name": "Fondamentaux et systèmes",
    "hours": 9,
    "focus": "Le SOC, notions de sécurité, Windows et Linux pour l’analyste",
    "intro": "Les participants découvrent ce que fait un SOC, comment fonctionnent ses niveaux et les notions de sécurité utilisées chaque jour par l’analyste, puis examinent Windows et Linux du point de vue de l’analyste : processus, registre, services, droits et journaux qui enregistrent ce qui s’est passé. TP validé : un processus suspect et l’utilisateur qui l’a lancé retrouvés dans les journaux d’événements Windows et les journaux Linux.",
@@ -57,7 +57,7 @@
     {
      "id": "1.2",
      "title": "Notions de sécurité",
-     "content": "Triade CIA, défense en profondeur, modèles de contrôle d’accès, CVSS, risque",
+     "content": "Triade DIC (disponibilité, intégrité, confidentialité), défense en profondeur, modèles de contrôle d’accès, CVSS, risque, surface d’attaque, analyse déterministe et probabiliste",
      "format": "Cours + atelier",
      "hours": 1.5
     },
@@ -82,7 +82,7 @@
   {
    "name": "Sécurité et surveillance du réseau",
    "hours": 9,
-   "focus": "Protocoles, infrastructure de sécurité, attaques, tcpdump, Wireshark, NetFlow",
+   "focus": "Protocoles, infrastructure de sécurité, attaques, Wireshark, NetFlow",
    "intro": "Les participants revoient les protocoles qu’un analyste lit chaque jour, voient comment pare-feu, IPS et proxys protègent le réseau, étudient les attaques courantes contre les réseaux et les applications, puis capturent et analysent le trafic avec tcpdump, Wireshark et NetFlow. TP validé : une capture de paquets dans laquelle chaque participant identifie un balayage, une tentative de force brute et une exfiltration de données.",
    "chapters": [
     {
@@ -109,7 +109,7 @@
     {
      "id": "2.4",
      "title": "Surveillance du réseau",
-     "content": "tcpdump, Wireshark, NetFlow, attaques contre les protocoles et les services",
+     "content": "tcpdump, Wireshark, NetFlow, attaques contre les protocoles et les services, types de données (capture complète, session, transaction, statistiques, métadonnées, alertes), 5-tuple, expressions régulières",
      "format": "Cours + TP",
      "hours": 3
     }
@@ -118,9 +118,9 @@
    "project": null
   },
   {
-   "name": "Cryptographie, terminaux et logiciels malveillants",
+   "name": "Cryptographie et terminaux",
    "hours": 9,
-   "focus": "Cryptographie et PKI, protection des terminaux, vulnérabilités, analyse de logiciels malveillants",
+   "focus": "Cryptographie, terminaux, vulnérabilités, logiciels malveillants",
    "intro": "Les participants voient comment la cryptographie et les certificats protègent les données et comment les attaquants se cachent dans le trafic chiffré, analysent les terminaux et évaluent les vulnérabilités, puis examinent sans risque des logiciels malveillants par empreintes, analyse statique et bac à sable pour en extraire des indicateurs de compromission. TP validé : un échantillon analysé en bac à sable, ses indicateurs de compromission extraits et recherchés dans les journaux des terminaux.",
    "chapters": [
     {
@@ -149,15 +149,15 @@
    "project": null
   },
   {
-   "name": "Détection et renseignement sur les menaces",
+   "name": "Détection et renseignement",
    "hours": 9,
-   "focus": "SIEM et SOAR, Security Onion, MITRE ATT&CK, Sigma, renseignement, IA",
+   "focus": "SIEM, Security Onion, ATT&CK, Sigma, renseignement, IA",
    "intro": "Les participants intègrent des sources de journaux dans un SIEM, travaillent dans Security Onion, trient les alertes en vrais et faux positifs, relient les attaques à MITRE ATT&CK et écrivent des règles de détection Sigma, enrichissent les alertes avec le renseignement sur les menaces, et voient où le tri assisté par l’IA aide et où il ajoute des risques. TP validé : une règle Sigma écrite pour une technique d’attaque, convertie pour le SIEM et testée sur l’attaque du cours.",
    "chapters": [
     {
      "id": "4.1",
      "title": "Données de sécurité et SIEM",
-     "content": "Sources de journaux, SIEM et SOAR, Security Onion, Wazuh ou Elastic",
+     "content": "Sources de journaux, SIEM et SOAR, Security Onion (Elastic, Zeek, Suricata), autres SIEM comme Wazuh",
      "format": "Cours + TP",
      "hours": 3
     },
@@ -187,22 +187,22 @@
    "project": null
   },
   {
-   "name": "Réponse aux incidents et procédures",
+   "name": "Réponse aux incidents",
    "hours": 6,
-   "focus": "NIST SP 800-61 Rév. 3, preuves, kill chain, modèle en diamant, procédures",
-   "intro": "Les participants enquêtent sur des incidents selon la NIST SP 800-61 Rév. 3, manipulent les preuves pour qu’elles restent exploitables, reconstituent les attaques avec la kill chain et le modèle en diamant, puis travaillent avec les procédures, la gestion des actifs et les règles de conformité qui encadrent le travail du SOC. TP validé : une chronologie d’incident et une étape de procédure réalisées pour l’attaque du cours.",
+   "focus": "NIST SP 800-61 Rev. 3, preuves, kill chain, procédures",
+   "intro": "Les participants enquêtent sur des incidents selon la NIST SP 800-61 Rev. 3, manipulent les preuves pour qu’elles restent exploitables, reconstituent les attaques avec la kill chain et le modèle en diamant, puis travaillent avec les procédures, la gestion des actifs et les règles de conformité qui encadrent le travail du SOC. TP validé : une chronologie d’incident et une étape de procédure réalisées pour l’attaque du cours.",
    "chapters": [
     {
      "id": "5.1",
      "title": "Investigation numérique et réponse aux incidents",
-     "content": "NIST SP 800-61 Rév. 3, gestion des preuves, kill chain, modèle en diamant",
+     "content": "NIST SP 800-61 Rev. 3, gestion des preuves, kill chain, modèle en diamant, types de preuves et chaîne de traçabilité",
      "format": "Cours + TP",
      "hours": 3
     },
     {
      "id": "5.2",
      "title": "Politiques et procédures de sécurité",
-     "content": "Procédures de traitement des incidents (playbooks), gestion des actifs, conformité",
+     "content": "Procédures de traitement des incidents (playbooks), gestion des actifs, conformité (PCI DSS, HIPAA, SOX), CSIRT/PSIRT/CERT, indicateurs du SOC (délais de détection, de confinement, de réponse)",
      "format": "Cours + atelier",
      "hours": 3
     }
@@ -219,7 +219,7 @@
     {
      "id": "6.1",
      "title": "Tri et enquête",
-     "content": "Trier les alertes dans Security Onion et le SIEM, enquêter sur les éléments réseau et hôte",
+     "content": "Trier les alertes dans Security Onion, enquêter sur les éléments réseau et hôte",
      "format": "Projet",
      "hours": 3
     },
@@ -242,7 +242,7 @@
    "project": {
     "title": "Simulation de SOC",
     "brief": "Les alertes d’une attaque capturée étudiées de bout en bout : tri des vrais et faux positifs, éléments réseau et hôte, chronologie de l’attaque reliée à MITRE ATT&CK, indicateurs de compromission et rapport d’incident avec recommandations.",
-    "stack": "Security Onion, SIEM (Wazuh ou Elastic), Wireshark, Zeek, Suricata, Sigma, MITRE ATT&CK Navigator",
+    "stack": "Security Onion (Elastic, Zeek, Suricata), Wireshark, Sigma, MITRE ATT&CK Navigator",
     "deliverable": "Rapport d’incident avec chronologie et indicateurs, présentation du compte rendu"
    }
   }

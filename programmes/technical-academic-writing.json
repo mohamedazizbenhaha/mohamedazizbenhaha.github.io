@@ -7,13 +7,34 @@
  "certifications": [],
  "overview": "This free course helps participants write technical and academic documents that are clear, honest and well sourced. They manage references with Zotero, read and summarise papers, learn the rules of publication ethics and how to avoid plagiarism, then apply the principles of clear, precise and concise writing, use the passive voice deliberately, and design figures that support the text. The course closes with a final project in which each participant writes a short paper section with citations and a figure and reviews a peer's work.",
  "facts": [
-  {"label": "Audience", "value": "Students, researchers and engineers who write reports and papers"},
-  {"label": "Prerequisites", "value": "None. Participants bring a writing project of their own if they have one"},
-  {"label": "Duration", "value": "18 h: 15 h of chapters + 3 h buffer"},
-  {"label": "Format", "value": "Free course: short lectures, each followed by writing exercises and peer feedback"},
-  {"label": "Lab environment", "value": "One laptop per participant with Zotero, a word processor and a plotting tool; no account or cost"},
-  {"label": "Assessment", "value": "Exercises reviewed in each phase and a final paper section reviewed by a peer; certificate of completion for participants who complete both"},
-  {"label": "Outcome", "value": "Participants can manage and cite sources with Zotero, summarise papers, avoid plagiarism, and write clear sections with effective figures"}
+  {
+   "label": "Audience",
+   "value": "Students, researchers and engineers who write reports and papers"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None. Participants bring a writing project of their own if they have one"
+  },
+  {
+   "label": "Duration",
+   "value": "18 h: 15 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Free course: short lectures, each followed by writing exercises and peer feedback"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant with Zotero 7 and its word-processor plugin, a word processor, a spreadsheet or Python (Matplotlib); no account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "Exercises reviewed in each phase and a final paper section reviewed by a peer; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can manage and cite sources with Zotero, summarise papers, avoid plagiarism, and write clear sections with effective figures"
+  }
  ],
  "buffer": 3,
  "phases": [
@@ -23,9 +44,27 @@
    "focus": "Zotero, reading and summarising papers, publication ethics, plagiarism",
    "intro": "Participants build a reference library in Zotero and cite from it, learn to read and summarise papers efficiently, and study publication ethics and how to avoid plagiarism. Validated exercise: a one-page summary of a paper with correctly generated citations.",
    "chapters": [
-    {"id": "1.1", "title": "Reference Management", "content": "Zotero: installation, library, citations, exercise", "format": "Lecture + Lab", "hours": 3},
-    {"id": "1.2", "title": "Reading & Summarising", "content": "Summarising papers", "format": "Lecture + Workshop", "hours": 1.5},
-    {"id": "1.3", "title": "Ethics", "content": "Publication ethics, avoiding plagiarism", "format": "Lecture + Workshop", "hours": 1.5}
+    {
+     "id": "1.1",
+     "title": "Reference Management",
+     "content": "Zotero: installation, library, citations, exercise",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Reading & Summarising",
+     "content": "Summarising papers",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Ethics",
+     "content": "Publication ethics, avoiding plagiarism",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -36,9 +75,27 @@
    "focus": "Clarity, precision, concision, voice and style, figures",
    "intro": "Participants apply the rules of academic writing for clarity, precision and concision, choose between active and passive voice on purpose, and design figures that make one point each. Validated exercise: a paragraph rewritten for clarity and a figure redesigned from a cluttered original.",
    "chapters": [
-    {"id": "2.1", "title": "Writing Rules", "content": "Academic writing rules; clarity, precision, concision", "format": "Lecture + Workshop", "hours": 3},
-    {"id": "2.2", "title": "Style", "content": "Passive voice and style", "format": "Lecture + Workshop", "hours": 1.5},
-    {"id": "2.3", "title": "Data Visualisation", "content": "Essentials for papers", "format": "Lecture + Workshop", "hours": 1.5}
+    {
+     "id": "2.1",
+     "title": "Writing Rules",
+     "content": "Academic writing rules; clarity, precision, concision",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Style",
+     "content": "Passive voice and style",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Data Visualisation",
+     "content": "Essentials for papers",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": null
@@ -49,14 +106,26 @@
    "focus": "A short paper section, written and peer-reviewed",
    "intro": "Each participant writes a short section of a paper or report, reusing the course exercises, and reviews a peer's section.",
    "chapters": [
-    {"id": "3.1", "title": "Write", "content": "A short paper section with Zotero citations and a figure", "format": "Project", "hours": 1.5},
-    {"id": "3.2", "title": "Peer Review", "content": "Review a peer's section, revise one's own; feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "3.1",
+     "title": "Write",
+     "content": "A short paper section with Zotero citations and a figure",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Peer Review",
+     "content": "Review a peer's section, revise one's own; feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {
     "title": "Paper Section with Peer Review",
     "brief": "A short paper or report section with citations managed in Zotero and one figure, reviewed by a peer and revised.",
-    "stack": "Zotero, a word processor, a plotting tool",
+    "stack": "Zotero 7 with its word-processor plugin, a word processor, a spreadsheet or Python (Matplotlib)",
     "deliverable": "Revised section, peer-review notes"
    }
   }

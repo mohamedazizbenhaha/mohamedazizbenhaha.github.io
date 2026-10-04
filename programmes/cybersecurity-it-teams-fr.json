@@ -6,15 +6,36 @@
  "subtitle": "Comprendre les menaces et mettre en place les défenses essentielles",
  "audience_line": "Administrateurs système et réseau, équipes de support et responsables IT",
  "certifications": [],
- "overview": "Ce programme donne aux équipes IT les connaissances en sécurité dont elles ont besoin au quotidien. Les participants apprennent comment opèrent les attaquants, puis sécurisent les réseaux, les postes et serveurs Windows et Linux, les accès et les données, mènent les opérations de sécurité de base qui permettent de survivre à un rançongiciel, et répondent à un incident selon la NIST SP 800-61 Rév. 3. Ils terminent par la gouvernance : politiques, ISO/IEC 27001:2022, NIST CSF 2.0, RGPD et loi organique tunisienne 2004-63 sur la protection des données personnelles. Chaque chapitre se termine par un TP ou un exercice, et le programme s’achève par un projet final où les équipes évaluent une petite entreprise et présentent un plan de durcissement.",
+ "overview": "Ce programme donne aux équipes IT les connaissances en sécurité dont elles ont besoin au quotidien. Les participants apprennent comment opèrent les attaquants, puis sécurisent les réseaux, les postes et serveurs Windows et Linux, les accès et les données, mènent les opérations de sécurité de base qui permettent de se relever d’un rançongiciel, et répondent à un incident selon la NIST SP 800-61 Rev. 3. Ils terminent par la gouvernance : politiques, ISO/IEC 27001:2022, NIST CSF 2.0, RGPD et loi organique tunisienne 2004-63 sur la protection des données personnelles. Chaque chapitre se termine par un TP ou un exercice, et le programme s’achève par un projet final où les équipes évaluent une petite entreprise et présentent un plan de durcissement.",
  "facts": [
-  {"label": "Public", "value": "Administrateurs système et réseau, équipes de support et responsables IT"},
-  {"label": "Prérequis", "value": "Aucun en sécurité. Une expérience de l’administration IT au quotidien (utilisateurs, réseaux, Windows ou Linux) est attendue"},
-  {"label": "Durée", "value": "27 h : 24 h de chapitres + 3 h de réserve"},
-  {"label": "Format", "value": "Cours courts suivis de TP et d’exercices sur des scénarios d’entreprise réalistes"},
-  {"label": "Environnement de TP", "value": "En local : un portable par participant (16 Go de RAM) avec des machines virtuelles Windows Server d’évaluation et Linux et un pare-feu pfSense, préparés par le formateur ; ni compte cloud ni coût"},
-  {"label": "Évaluation", "value": "Un TP ou un exercice validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"},
-  {"label": "Résultat", "value": "Les participants savent reconnaître les attaques courantes, durcir réseaux, postes et accès, préparer sauvegardes et première réponse à incident, et relier les contrôles à l’ISO/IEC 27001 et au NIST CSF"}
+  {
+   "label": "Public",
+   "value": "Administrateurs système et réseau, équipes de support et responsables IT"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aucun en sécurité. Une expérience de l’administration IT au quotidien (utilisateurs, réseaux, Windows ou Linux) est attendue"
+  },
+  {
+   "label": "Durée",
+   "value": "27 h : 24 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Cours courts suivis de TP et d’exercices sur des scénarios d’entreprise réalistes"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "En local : un portable par participant (16 Go de RAM) avec des machines virtuelles Windows Server d’évaluation et Linux et un pare-feu pfSense, préparés par le formateur ; ni compte cloud ni coût"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP ou un exercice validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent reconnaître les attaques courantes, durcir réseaux, postes et accès, préparer sauvegardes et première réponse à incident, et relier les contrôles à l’ISO/IEC 27001 et au NIST CSF"
+  }
  ],
  "buffer": 3,
  "phases": [
@@ -24,8 +45,20 @@
    "focus": "Acteurs de la menace, kill chain, attaques courantes, segmentation, pare-feu, sans-fil",
    "intro": "Les participants apprennent qui attaque, comment se déroule une attaque et quelles techniques sont les plus courantes, de l’hameçonnage aux attaques réseau et applicatives, puis réduisent la surface d’attaque du réseau par la segmentation, les règles de pare-feu et un sans-fil sécurisé. TP validé : un réseau segmenté sur pfSense où seuls les flux autorisés passent entre utilisateurs, serveurs et invités.",
    "chapters": [
-    {"id": "1.1", "title": "Paysage des menaces et attaques", "content": "Acteurs de la menace, kill chain, logiciels malveillants, hameçonnage et ingénierie sociale, attaques réseau et applicatives", "format": "Cours + atelier", "hours": 3},
-    {"id": "1.2", "title": "Sécuriser les réseaux", "content": "Segmentation, pare-feu, sécurité du sans-fil", "format": "Cours + TP", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "Paysage des menaces et attaques",
+     "content": "Acteurs de la menace, kill chain, logiciels malveillants, hameçonnage et ingénierie sociale, attaques réseau et applicatives",
+     "format": "Cours + atelier",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Sécuriser les réseaux",
+     "content": "Segmentation, pare-feu, sécurité du sans-fil",
+     "format": "Cours + TP",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -36,8 +69,20 @@
    "focus": "Durcissement Windows et Linux, correctifs, EDR, MFA, moindre privilège, chiffrement, PKI",
    "intro": "Les participants durcissent des machines Windows et Linux et les maintiennent à jour, voient ce qu’apporte la détection et réponse sur les terminaux (EDR), puis contrôlent les accès avec la MFA et le moindre privilège et protègent les données par le chiffrement et les certificats. TP validé : un serveur Windows et un serveur Linux durcis selon une liste de contrôle, avec un accès administrateur limité et journalisé.",
    "chapters": [
-    {"id": "2.1", "title": "Sécuriser les postes et serveurs", "content": "Durcissement Windows et Linux, correctifs, EDR", "format": "Cours + TP", "hours": 3},
-    {"id": "2.2", "title": "Accès et cryptographie", "content": "MFA, moindre privilège, chiffrement, bases de la PKI", "format": "Cours + TP", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Sécuriser les postes et serveurs",
+     "content": "Durcissement Windows et Linux, correctifs, EDR",
+     "format": "Cours + TP",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Accès et cryptographie",
+     "content": "MFA, moindre privilège, chiffrement, bases de la PKI",
+     "format": "Cours + TP",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -46,11 +91,29 @@
    "name": "Opérations, réponse et gouvernance",
    "hours": 6,
    "focus": "Journaux et alertes, sauvegardes et rançongiciels, réponse aux incidents, politiques et normes",
-   "intro": "Les participants collectent les journaux et alertes utiles et construisent des sauvegardes qui résistent aux rançongiciels, répondent à un incident selon l’approche NIST SP 800-61 Rév. 3, puis abordent la sécurité comme gouvernance : politiques, ISO/IEC 27001:2022, NIST CSF 2.0, RGPD, loi organique tunisienne 2004-63 et culture de sécurité. Exercice validé : un exercice sur table d’attaque par rançongiciel mené par chaque équipe, avec une restauration testée.",
+   "intro": "Les participants collectent les journaux et alertes utiles et construisent des sauvegardes qui résistent aux rançongiciels, répondent à un incident selon l’approche NIST SP 800-61 Rev. 3, puis abordent la sécurité comme gouvernance : politiques, ISO/IEC 27001:2022, NIST CSF 2.0, RGPD, loi organique tunisienne 2004-63 et culture de sécurité. Exercice validé : un exercice sur table d’attaque par rançongiciel mené par chaque équipe, avec une restauration testée.",
    "chapters": [
-    {"id": "3.1", "title": "Opérations de sécurité", "content": "Journaux, alertes, sauvegardes et résilience aux rançongiciels", "format": "Cours + TP", "hours": 1.5},
-    {"id": "3.2", "title": "Réponse aux incidents", "content": "NIST SP 800-61 Rév. 3, première réponse, communication", "format": "Cours + atelier", "hours": 1.5},
-    {"id": "3.3", "title": "Gouvernance et risques", "content": "Politiques, ISO/IEC 27001:2022, NIST CSF 2.0, RGPD et loi organique tunisienne 2004-63, culture de sécurité", "format": "Cours + atelier", "hours": 3}
+    {
+     "id": "3.1",
+     "title": "Opérations de sécurité",
+     "content": "Journaux, alertes, sauvegardes et résilience aux rançongiciels",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Réponse aux incidents",
+     "content": "NIST SP 800-61 Rev. 3, première réponse, communication",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Gouvernance et risques",
+     "content": "Politiques, ISO/IEC 27001:2022, NIST CSF 2.0, RGPD et loi organique tunisienne 2004-63, culture de sécurité",
+     "format": "Cours + atelier",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -61,9 +124,27 @@
    "focus": "Une évaluation de sécurité et un plan de durcissement pour une petite entreprise",
    "intro": "Par équipes de deux ou trois, les participants évaluent la sécurité d’une petite entreprise décrite dans un cahier des charges écrit et son réseau de TP, en réutilisant les TP de phase, puis présentent un plan de durcissement comme ils le feraient devant sa direction.",
    "chapters": [
-    {"id": "4.1", "title": "Cahier des charges et évaluation", "content": "Analyser le besoin, inventorier les actifs, identifier les risques, vérifier le réseau de TP au regard des contrôles du cours", "format": "Projet", "hours": 3},
-    {"id": "4.2", "title": "Plan et politiques", "content": "Contrôles priorisés, politiques clés, liste de contrôle de réponse aux incidents", "format": "Projet", "hours": 1.5},
-    {"id": "4.3", "title": "Présentation et revue", "content": "Présenter le plan au groupe comme à la direction ; questions et retours", "format": "Projet", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Cahier des charges et évaluation",
+     "content": "Analyser le besoin, inventorier les actifs, identifier les risques, vérifier le réseau de TP au regard des contrôles du cours",
+     "format": "Projet",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Plan et politiques",
+     "content": "Contrôles priorisés, politiques clés, liste de contrôle de réponse aux incidents",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Présentation et revue",
+     "content": "Présenter le plan au groupe comme à la direction ; questions et retours",
+     "format": "Projet",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {

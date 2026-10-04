@@ -7,13 +7,34 @@
  "certifications": [],
  "overview": "This workshop helps security and IT leaders plan a move to zero trust and protect data in the cloud. Participants learn the principles of NIST SP 800-207 and the CISA Zero Trust Maturity Model, with identity at the centre, then work on cloud data security: encryption and key management, data loss prevention and data residency. They see how AI changes detection and response and how to secure AI systems themselves. The workshop closes with a final project in which each team builds a zero trust adoption roadmap for a given organisation.",
  "facts": [
-  {"label": "Audience", "value": "Security managers, architects and IT leaders planning a security strategy"},
-  {"label": "Prerequisites", "value": "None. A general IT or security background is expected (course: Cybersecurity for IT Teams helps)"},
-  {"label": "Duration", "value": "15 h: 12 h of chapters + 3 h buffer"},
-  {"label": "Format", "value": "Workshop: short lectures, each followed by group exercises on an organisation case"},
-  {"label": "Lab environment", "value": "One laptop per participant with a browser; maturity assessment templates; trainer demonstrations in cloud consoles; no account or cost for participants"},
-  {"label": "Assessment", "value": "Group exercises reviewed in each phase and a final roadmap presented to the group; certificate of completion for participants who complete both"},
-  {"label": "Outcome", "value": "Participants can assess an organisation against the CISA Zero Trust Maturity Model and build a prioritised roadmap covering identity, data and AI systems"}
+  {
+   "label": "Audience",
+   "value": "Security managers, architects and IT leaders planning a security strategy"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None. A general IT or security background is expected (course: Cybersecurity for IT Teams, recommended)"
+  },
+  {
+   "label": "Duration",
+   "value": "15 h: 12 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Workshop: short lectures, each followed by group exercises on an organisation case"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant with a browser; maturity assessment templates; trainer demonstrations in the AWS console (KMS, Macie); no account or cost for participants"
+  },
+  {
+   "label": "Assessment",
+   "value": "An exercise validated at the end of each phase and a final roadmap presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can assess an organisation against the CISA Zero Trust Maturity Model and build a prioritised roadmap covering identity, data and AI systems"
+  }
  ],
  "buffer": 3,
  "phases": [
@@ -21,9 +42,15 @@
    "name": "Zero Trust",
    "hours": 3,
    "focus": "NIST SP 800-207, CISA Zero Trust Maturity Model, identity-centric security",
-   "intro": "Participants learn what zero trust means in practice: the tenets and architecture of NIST SP 800-207, the pillars and maturity stages of the CISA model, and why identity becomes the main control. Validated exercise: the case organisation rated on the five CISA pillars.",
+   "intro": "Participants learn what zero trust means in practice: the tenets and architecture of NIST SP 800-207, the five pillars, three cross-cutting capabilities and four maturity stages of CISA ZTMM v2.0, and why identity becomes the main control. Validated exercise: the case organisation rated on the five CISA pillars.",
    "chapters": [
-    {"id": "1.1", "title": "Zero Trust Principles", "content": "NIST SP 800-207, CISA Zero Trust Maturity Model, identity-centric security", "format": "Lecture + Workshop", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "Zero Trust Principles",
+     "content": "NIST SP 800-207, CISA Zero Trust Maturity Model, identity-centric security",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -34,8 +61,20 @@
    "focus": "Encryption and keys, DLP, data residency, AI for detection, securing AI systems",
    "intro": "Participants decide how cloud data is encrypted and who holds the keys, where data loss prevention fits and how residency rules constrain the design, then look at AI on both sides: as a help for detection and response, and as a new system to secure. Validated exercise: a data protection plan for the case organisation's most sensitive data set.",
    "chapters": [
-    {"id": "2.1", "title": "Cloud Data Security", "content": "Encryption, key management, DLP, data residency", "format": "Lecture + Workshop", "hours": 3},
-    {"id": "2.2", "title": "AI in Security", "content": "AI-enabled detection and response, securing AI systems", "format": "Lecture + Workshop", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Cloud Data Security",
+     "content": "Encryption, key management, DLP, data residency",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "AI in Security",
+     "content": "AI-enabled detection and response, securing AI systems",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -46,8 +85,20 @@
    "focus": "A zero trust adoption roadmap, presented to the group",
    "intro": "Teams of two or three build a zero trust adoption roadmap for a given organisation, reusing the workshop exercises, and present it as they would to an executive committee.",
    "chapters": [
-    {"id": "3.1", "title": "Assess & Plan", "content": "Current maturity, target state, prioritised initiatives and milestones", "format": "Project", "hours": 1.5},
-    {"id": "3.2", "title": "Present & Review", "content": "Present the roadmap; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "3.1",
+     "title": "Assess & Plan",
+     "content": "Current maturity, target state, prioritised initiatives and milestones",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Present & Review",
+     "content": "Present the roadmap; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {

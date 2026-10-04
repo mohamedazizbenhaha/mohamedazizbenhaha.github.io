@@ -5,15 +5,36 @@
  "subtitle": "Understand the threats and put the essential defences in place",
  "audience_line": "System and network administrators, support staff and IT managers",
  "certifications": [],
- "overview": "This programme gives IT teams the security knowledge they need in their daily work. Participants learn how attackers operate, then secure networks, Windows and Linux endpoints, access and data, run the basic security operations that make ransomware survivable, and respond to an incident following NIST SP 800-61 Rev. 3. They finish with governance: policies, ISO/IEC 27001:2022, NIST CSF 2.0, GDPR and the Tunisian personal data protection law. Every chapter ends with a lab or exercise, and the programme closes with a final project in which teams assess a small company and present a hardening plan.",
+ "overview": "This programme gives IT teams the security knowledge they need in their daily work. Participants learn how attackers operate, then secure networks, Windows and Linux endpoints, access and data, run the basic security operations that make recovery from ransomware possible, and respond to an incident following NIST SP 800-61 Rev. 3. They finish with governance: policies, ISO/IEC 27001:2022, NIST CSF 2.0, GDPR and Tunisian Organic Law 2004-63 on personal data protection. Every chapter ends with a lab or exercise, and the programme closes with a final project in which teams assess a small company and present a hardening plan.",
  "facts": [
-  {"label": "Audience", "value": "System and network administrators, support staff and IT managers"},
-  {"label": "Prerequisites", "value": "None in security. Day-to-day IT administration experience (users, networks, Windows or Linux) is expected"},
-  {"label": "Duration", "value": "27 h: 24 h of chapters + 3 h buffer"},
-  {"label": "Format", "value": "Short lectures followed by labs and exercises on realistic company scenarios"},
-  {"label": "Lab environment", "value": "Runs locally: one laptop per participant (16 GB RAM) with Windows Server evaluation and Linux virtual machines and a pfSense firewall, prepared by the trainer; no cloud account or cost"},
-  {"label": "Assessment", "value": "A lab or exercise validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"},
-  {"label": "Outcome", "value": "Participants can recognise common attacks, harden networks, endpoints and access, prepare backups and a first incident response, and map controls to ISO/IEC 27001 and NIST CSF"}
+  {
+   "label": "Audience",
+   "value": "System and network administrators, support staff and IT managers"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "None in security. Day-to-day IT administration experience (users, networks, Windows or Linux) is expected"
+  },
+  {
+   "label": "Duration",
+   "value": "27 h: 24 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Short lectures followed by labs and exercises on realistic company scenarios"
+  },
+  {
+   "label": "Lab environment",
+   "value": "Runs locally: one laptop per participant (16 GB RAM) with Windows Server evaluation and Linux virtual machines and a pfSense firewall, prepared by the trainer; no cloud account or cost"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab or exercise validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants can recognise common attacks, harden networks, endpoints and access, prepare backups and a first incident response, and map controls to ISO/IEC 27001 and NIST CSF"
+  }
  ],
  "buffer": 3,
  "phases": [
@@ -23,8 +44,20 @@
    "focus": "Threat actors, kill chain, common attacks, segmentation, firewalls, wireless",
    "intro": "Participants learn who attacks, how an attack unfolds and which techniques are most common, from phishing to network and application attacks, then reduce the network attack surface with segmentation, firewall rules and secure wireless. Validated lab: a segmented network on pfSense where only the allowed flows pass between users, servers and guests.",
    "chapters": [
-    {"id": "1.1", "title": "Threat Landscape & Attacks", "content": "Threat actors, kill chain, malware, phishing and social engineering, network and application attacks", "format": "Lecture + Workshop", "hours": 3},
-    {"id": "1.2", "title": "Securing Networks", "content": "Segmentation, firewalls, wireless security", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "1.1",
+     "title": "Threat Landscape & Attacks",
+     "content": "Threat actors, kill chain, malware, phishing and social engineering, network and application attacks",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    },
+    {
+     "id": "1.2",
+     "title": "Securing Networks",
+     "content": "Segmentation, firewalls, wireless security",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -35,8 +68,20 @@
    "focus": "Windows and Linux hardening, patching, EDR, MFA, least privilege, encryption, PKI",
    "intro": "Participants harden Windows and Linux machines and keep them patched, see what endpoint detection and response adds, then control access with MFA and least privilege and protect data with encryption and certificates. Validated lab: a Windows and a Linux server hardened against a checklist, with administrative access limited and logged.",
    "chapters": [
-    {"id": "2.1", "title": "Securing Endpoints", "content": "Windows and Linux hardening, patching, EDR", "format": "Lecture + Lab", "hours": 3},
-    {"id": "2.2", "title": "Access & Cryptography", "content": "MFA, least privilege, encryption, PKI basics", "format": "Lecture + Lab", "hours": 3}
+    {
+     "id": "2.1",
+     "title": "Securing Endpoints",
+     "content": "Windows and Linux hardening, patching, EDR",
+     "format": "Lecture + Lab",
+     "hours": 3
+    },
+    {
+     "id": "2.2",
+     "title": "Access & Cryptography",
+     "content": "MFA, least privilege, encryption, PKI basics",
+     "format": "Lecture + Lab",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -47,9 +92,27 @@
    "focus": "Logs and alerts, backups and ransomware, incident response, policies and standards",
    "intro": "Participants collect the logs and alerts that matter and build backups that survive ransomware, respond to an incident with the NIST SP 800-61 Rev. 3 approach, then frame security as governance: policies, ISO/IEC 27001:2022, NIST CSF 2.0, GDPR, Tunisian Organic Law 2004-63 and security culture. Validated exercise: a ransomware tabletop exercise worked through by each team, with the restore tested.",
    "chapters": [
-    {"id": "3.1", "title": "Security Operations", "content": "Logs, alerts, backups and ransomware resilience", "format": "Lecture + Lab", "hours": 1.5},
-    {"id": "3.2", "title": "Incident Response", "content": "NIST SP 800-61 Rev. 3, first response, communication", "format": "Lecture + Workshop", "hours": 1.5},
-    {"id": "3.3", "title": "Governance & Risk", "content": "Policies, ISO/IEC 27001:2022, NIST CSF 2.0, GDPR and Tunisian Organic Law 2004-63, security culture", "format": "Lecture + Workshop", "hours": 3}
+    {
+     "id": "3.1",
+     "title": "Security Operations",
+     "content": "Logs, alerts, backups and ransomware resilience",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Incident Response",
+     "content": "NIST SP 800-61 Rev. 3, first response, communication",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Governance & Risk",
+     "content": "Policies, ISO/IEC 27001:2022, NIST CSF 2.0, GDPR and Tunisian Organic Law 2004-63, security culture",
+     "format": "Lecture + Workshop",
+     "hours": 3
+    }
    ],
    "math": null,
    "project": null
@@ -60,9 +123,27 @@
    "focus": "A security assessment and hardening plan for a small company",
    "intro": "Teams of two or three assess the security of a small company described in a written brief and its lab network, reusing the phase labs, then present a hardening plan as they would to its management.",
    "chapters": [
-    {"id": "4.1", "title": "Brief & Assessment", "content": "Read the brief, inventory assets, identify risks, check the lab network against the controls of the course", "format": "Project", "hours": 3},
-    {"id": "4.2", "title": "Plan & Policies", "content": "Prioritised controls, key policies, incident response checklist", "format": "Project", "hours": 1.5},
-    {"id": "4.3", "title": "Presentation & Review", "content": "Present the plan to the group as to management; questions and feedback", "format": "Project", "hours": 1.5}
+    {
+     "id": "4.1",
+     "title": "Brief & Assessment",
+     "content": "Read the brief, inventory assets, identify risks, check the lab network against the controls of the course",
+     "format": "Project",
+     "hours": 3
+    },
+    {
+     "id": "4.2",
+     "title": "Plan & Policies",
+     "content": "Prioritised controls, key policies, incident response checklist",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Presentation & Review",
+     "content": "Present the plan to the group as to management; questions and feedback",
+     "format": "Project",
+     "hours": 1.5
+    }
    ],
    "math": null,
    "project": {
