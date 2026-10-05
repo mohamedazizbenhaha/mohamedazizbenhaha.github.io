@@ -32,7 +32,7 @@ One person holding three things at once: production Cloud/DevOps engineering (CK
 
 ## Brand Commitments
 - Name as written: Mohamed Aziz Ben Haha. Personal logo: `res/logo.svg`; favicon `favicon.ico` + `res/icon-192.png` + `res/apple-touch-icon.png`.
-- Portrait: `res/portrait.jpg`. Social preview image: see `og:image` in index.html.
+- Portrait: `res/portrait.jpg`. Social preview image: `res/og-card.jpg` (1200×630), source `scripts/og/og-card.html`, rendered with Edge headless (--window-size=1200,630 --screenshot).
 
 ## Evidence on Hand
 - Roles, dates, certifications, projects, supervision, languages: `content.md`.
