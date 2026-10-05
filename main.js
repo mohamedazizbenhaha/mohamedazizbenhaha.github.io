@@ -50,7 +50,7 @@ const FR = {
   'foot.say': 'Un métier entre les mains met à l’abri du besoin.',
   'ct.copy': 'Copier l’e-mail', 'ct.fr': 'France', 'foot.top': 'Haut de page ↑',
   'skip': 'Aller au contenu',
-  'stat.longest': 'Parcours combinés phares',
+  'stat.longest': 'Parcours métiers',
   'tr.intro': 'Des programmes que je conçois et dispense pour des universités, des entreprises et des programmes publics pour l’emploi. Ouvrez une formation pour voir son plan et consulter le programme complet, ou demander une version adaptée à votre équipe : sur site en France ou en Tunisie, ou à distance.',
   'foot.rights': 'Tous droits réservés.',
   'tr.t1': 'Programmes de formation,', 'tr.t2': 'prêts à lancer.',
