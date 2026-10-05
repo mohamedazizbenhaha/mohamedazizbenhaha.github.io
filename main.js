@@ -29,7 +29,7 @@ const FR = {
   'f.all': 'Tout', 'f.ai': 'IA', 'f.iot': 'IoT & recherche', 'f.app': 'Applications', 'f.ops': 'Cloud & DevOps',
   'm1.h': 'Firmware de passerelle qualité de l’eau', 'm1.p': 'Firmware ESP32 qui lit des sondes pH, ORP, conductivité, oxygène dissous et température via Modbus RTU et deux ADC, et publie en JSON sur MQTT. Configuration sur le terrain via une application web Wi-Fi captive.',
   'm2.h': 'Réacteur MFC flottant', 'm2.p': 'CAO paramétrique générée par code pour une unité capteur flottante à pile à combustible microbienne : trois prototypes, vérifications de flottabilité, plateaux d’impression pour imprimante Bambu et suite de tests automatisée.',
-  'proj.more': 'Sous-projets', 'proj.see': 'Voir tous les sous-projets',
+  'proj.more': 'Sous-projets', 'proj.see': 'Voir les sous-projets',
   'p4.tag': 'Du langage naturel en entrée, des actions validées en sortie',
   'p4.p': 'Mon système d’exploitation personnel, chaque jour sur mon téléphone. Parti d’un carnet de musculation, il ne cesse de grandir : entraînement, notes, tâches, rappels, calendrier, courses, et bientôt l’argent. Tapez ou dictez une phrase : une IA la transforme en actions validées, annulables en un geste. Chaque module est une application à part ; elles partagent une clé de synchronisation et lisent les données des autres, sans jamais les modifier.',
   'p6.tag': 'Une IA personnelle qui s’améliore elle-même',
@@ -313,7 +313,7 @@ $('#subOpen').addEventListener('click', openSubs);
 $$('.seg').forEach(seg => {
   const w = document.createElement('div'); w.className = 'segw'; seg.before(w); w.append(seg);
   const hint = document.createElement('button'); hint.type = 'button'; hint.className = 'seg-hint'; hint.tabIndex = -1; hint.setAttribute('aria-hidden', 'true');
-  hint.innerHTML = '<svg><use href="#i-arrow"/></svg>'; w.append(hint);
+  w.append(hint);
   const upd = () => { w.classList.toggle('more', seg.scrollLeft + seg.clientWidth < seg.scrollWidth - 4); w.classList.toggle('back', seg.scrollLeft > 4) };
   seg.addEventListener('scroll', upd, { passive: true }); addEventListener('resize', upd); upd();
   hint.addEventListener('click', () => seg.scrollBy({ left: seg.clientWidth * .7, behavior: 'smooth' }));

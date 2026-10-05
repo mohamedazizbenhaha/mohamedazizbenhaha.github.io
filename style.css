@@ -418,7 +418,7 @@ a.pub:hover img{transform:scale(1.05)}
   .hero{padding-top:100px}
   .portrait{max-width:250px;margin-top:36px}
   .orbit.o2{inset:-4%}
-  .orbit span{font-size:.72rem}
+  .orbit span{font-size:.6rem;padding:.28em .65em}
   .bento>.cell,.bento>.cell.langs,.bento>.cell.big{grid-column:span 12;grid-row:auto}
   .lang-list{grid-template-columns:1fr;gap:12px;margin-top:10px}
   .lang-list li{grid-template-columns:5.5rem 1fr 4.8rem;grid-template-areas:"n b l";align-items:center;gap:14px}
@@ -448,16 +448,17 @@ a.pub:hover img{transform:scale(1.05)}
   .badge-float{padding:.4em .65em;border-radius:10px}
   .badge-float b{font-size:.92rem}.badge-float span{font-size:.6rem}
   .badge-float{left:-2%;bottom:7%}.badge-float.b2{left:auto;right:-2%;top:5%;bottom:auto}
-  .tracks button{display:inline-flex;align-items:center;gap:5px;border-color:rgba(212,160,36,.45);color:var(--gold2);background:var(--goldsoft)}
-  .tracks button::after{content:"";width:5px;height:5px;border:solid currentColor;border-width:1.6px 1.6px 0 0;rotate:45deg;margin-left:1px}
+  .tracks button{display:inline-flex;align-items:center;gap:5px}
+  .tracks button::after{content:"";width:5px;height:5px;border:solid var(--gold);border-width:1.6px 1.6px 0 0;rotate:45deg;margin-left:1px}
   .segw{display:block;position:relative;margin-bottom:28px}
   .seg{display:flex;width:100%;overflow-x:auto;scrollbar-width:none;margin-bottom:0}.seg::-webkit-scrollbar{display:none}.seg button{flex:none;white-space:nowrap}
   .segw.more .seg{-webkit-mask:linear-gradient(90deg,#000 calc(100% - 70px),transparent);mask:linear-gradient(90deg,#000 calc(100% - 70px),transparent)}
   .segw.back .seg{-webkit-mask:linear-gradient(90deg,transparent,#000 40px);mask:linear-gradient(90deg,transparent,#000 40px)}
   .segw.back.more .seg{-webkit-mask:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 70px),transparent);mask:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 70px),transparent)}
-  .seg-hint{display:grid;place-items:center;position:absolute;right:4px;top:50%;margin-top:-17px;width:34px;height:34px;border-radius:50%;background:var(--gold);color:#120d02;box-shadow:0 6px 18px -6px #000;opacity:0;pointer-events:none;transition:opacity .3s}
+  .seg-hint{display:grid;place-items:center;position:absolute;right:4px;top:50%;margin-top:-17px;width:34px;height:34px;border-radius:50%;background:rgba(40,40,48,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);box-shadow:0 6px 18px -6px #000;opacity:0;pointer-events:none;transition:opacity .3s}
   .segw.more .seg-hint{opacity:1;pointer-events:auto;animation:nudge 1.4s ease-in-out infinite}
-  .seg-hint svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+  .seg-hint::before,.sub-open::after{content:"";width:7px;height:7px;border:solid var(--gold);border-width:2px 2px 0 0;rotate:45deg;margin-left:-3px}
+  .sub-open::after{margin:0 4px 0 0}
   #experience .tabs{display:none}
   .xrows{display:block;list-style:none;border-top:1px solid var(--line)}
   .xrows li{border-bottom:1px solid var(--line)}
@@ -465,9 +466,9 @@ a.pub:hover img{transform:scale(1.05)}
   .xrow b{display:block;font:700 1.05rem/1.25 var(--display)}
   .xrow small{display:block;margin-top:3px;color:var(--dim);font-size:.85rem;font-variant-numeric:tabular-nums}
   .xrow-go{flex:none;display:inline-flex;align-items:center;gap:6px;color:var(--gold2);font-weight:700;font-size:.85rem}
-  .xrow-go svg,.sub-open svg{width:1rem;height:1rem;fill:none;stroke:currentColor;stroke-width:2}
+  .xrow-go svg{width:1rem;height:1rem;fill:none;stroke:currentColor;stroke-width:2}
   #projects>.sub,#projects>.subgrp{display:none}
-  .sub-open{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:36px;padding:16px 20px;border-radius:var(--r);border:1px solid rgba(212,160,36,.45);background:var(--goldsoft);color:var(--gold2);font:700 1.05rem var(--display)}
+  .sub-open{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:36px;padding:16px 20px;border-radius:var(--r);border:1px solid var(--line);background:var(--card);color:var(--txt);font:700 1.05rem var(--display)}
   .subs-dlg{margin-top:20px}
   .pubs:not(.open) .pub:nth-child(n+3){display:none}
   .foot-in{align-items:center;gap:14px}
