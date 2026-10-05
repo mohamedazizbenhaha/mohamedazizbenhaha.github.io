@@ -6,7 +6,7 @@ const store = { get: k => { try { return localStorage.getItem(k) } catch { retur
 
 /* ---------- copy ---------- */
 const FR = {
-  'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.train': 'Formations', 'nav.pubs': 'Publications', 'nav.hire': 'Me contacter',
+  'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.train': 'Formations', 'nav.pubs': 'Publications', 'nav.hire': 'Me contacter', 'nav.hireS': 'Contact',
   'hero.status': 'Ouvert aux missions et formations · France et Tunisie',
   'hero.pre': 'Je',
   'hero.lede': 'Ingénieur Cloud &amp; DevOps (CKA, AWS Solutions Architect &amp; SysOps) et praticien IA/ML, formateur avec <b>plus de 1 000 heures</b> dispensées en universités et en entreprises, et doctorant en machine learning pour l’IoT embarqué à <b>Sup’Com × École Centrale de Lyon</b>.',

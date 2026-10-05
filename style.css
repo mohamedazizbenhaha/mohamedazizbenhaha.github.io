@@ -389,6 +389,7 @@ a.pub:hover img{transform:scale(1.05)}
 .toast.show{transform:translate(-50%,0);visibility:visible}
 
 /* phone-only elements, shown under 720px */
+.nav-end .btn-sm .sm{display:none}
 .segw{display:contents}
 .seg-hint,.xrows,.sub-open{display:none}
 
@@ -443,11 +444,12 @@ a.pub:hover img{transform:scale(1.05)}
   .journey .dot{top:2px;left:-30px;translate:none}
   /* phone view: everything below exists only under 720px; desktop is untouched */
   .nav-end{gap:8px}
-  .nav-end .btn-sm{display:inline-flex;padding:.5em .85em;font-size:.8rem}
+  .nav-end .btn-sm{display:inline-flex;padding:.5em .95em;font-size:.8rem}
+  .nav-end .btn-sm .lg{display:none}.nav-end .btn-sm .sm{display:inline}
   .portrait{max-width:300px}
-  .badge-float{padding:.3em .55em;border-radius:8px;left:-2%;bottom:7%}
+  .badge-float{padding:.3em .55em;border-radius:8px;left:-2%;bottom:14%}
   .badge-float b{font-size:.76rem}.badge-float span{font-size:.52rem}
-  .badge-float.b2{left:auto;right:-3%;top:36%;bottom:auto}
+  .badge-float.b2{left:auto;right:-8%;top:36%;bottom:auto}
   .pm-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .pm-actions>.btn{justify-content:center;padding-left:.6em;padding-right:.6em}
   .pm-actions>a:not([href^="mailto"]){grid-column:1/-1}
