@@ -2,11 +2,11 @@
   "_doc": "WhatsApp / Meta catalogue. Run: python scripts/catalog.py. Add a programme = add its slug under items with 5 outcomes per language.",
   "base_url": "https://mohamedazizbenhaha.netlify.app",
   "price": {
-    "_doc": "Price of one in-company group = per_hour x total hours, excl. tax. Tunisia: per_hour stays under the CNFCPP ceiling for an external trainer (20% of the monthly SMIG 48 h per training hour, group of 4+; 2026: 0.2 x 554.736 = 110.947 TND). Abroad: same number in EUR, inside the French market for Cloud/DevOps trainers (600-1,100 EUR/day).",
-    "per_hour": 110,
+    "_doc": "Price of one in-company group = per_hour x total hours, excl. tax. Tunisia: 100 TND/h, set by the user under the CNFCPP ceiling for an external trainer (20% of the monthly SMIG 48 h per training hour, group of 4+; 2026: 0.2 x 554.736 = 110.947 TND). Abroad: same number in EUR, inside the French market for Cloud/DevOps trainers (600-1,100 EUR/day). User's choice 2026-10-05: 100 TND/h in Tunisia, 100 EUR/h abroad.",
+    "per_hour": 100,
     "currency": "TND",
     "abroad": {
-      "per_hour": 110,
+      "per_hour": 100,
       "currency": "EUR",
       "countries": [
         "FR",

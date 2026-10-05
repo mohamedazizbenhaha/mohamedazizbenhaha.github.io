@@ -1,7 +1,8 @@
 """
 WhatsApp / Meta catalogue: 3 images per programme and language, plus the Meta data feeds.
 
-    python scripts/catalog.py
+    python scripts/catalog.py              # all programmes in catalog/items.json
+    python scripts/catalog.py slug1 slug2  # re-render only these images (feeds are always rebuilt for all)
 
 Reads catalog/items.json (which programmes, outcomes, price rate) and programmes/<slug>[-fr].json.
 Writes catalog/img/<slug>-<lang>-<n>.jpg, catalog/feed-fr.csv (primary, French)
@@ -26,6 +27,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 CAT = ROOT / "catalog"
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 NAME = "Mohamed Aziz BEN HAHA"
+OVERFLOW = []
 
 T = {
     "en": {
@@ -198,7 +200,11 @@ def render(htmls, stems, tmp):
                 break
             time.sleep(0.5)
         time.sleep(0.5)
-        Image.open(png).convert("RGB").save(CAT / "img" / f"{stem}.jpg", quality=90)
+        im = Image.open(png).convert("RGB")
+        im.save(CAT / "img" / f"{stem}.jpg", quality=90)
+        # content that overflows the 80 px bottom margin shows as bright pixels near the edge
+        if im.convert("L").crop((0, 1035, 1080, 1080)).getextrema()[1] > 110:
+            OVERFLOW.append(stem)
 
 
 def fact(p, label):
@@ -238,6 +244,10 @@ def main():
     rate, cur, ab = pr.get("per_hour"), pr["currency"], pr.get("abroad")
     (CAT / "img").mkdir(exist_ok=True)
     primary, english, countries = [], [], []
+    only = set(sys.argv[1:])
+    unknown = only - set(cfg["items"])
+    if unknown:
+        sys.exit(f"not in catalog/items.json: {', '.join(sorted(unknown))}")
     with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as d:
         tmp = pathlib.Path(d).resolve()
         for slug, item in cfg["items"].items():
@@ -246,7 +256,8 @@ def main():
                                .read_text(encoding="utf-8"))
                 htmls, sums = pages(p, lang, item["outcomes"][lang], cnfcpp)
                 stems = [f"{slug}-{lang}-{n}" for n in (1, 2, 3)]
-                render(htmls, stems, tmp)
+                if not only or slug in only:
+                    render(htmls, stems, tmp)
                 imgs = [f"{base}/catalog/img/{s}.jpg" for s in stems]
                 pdf = f"{base}/res/programmes/pdf/{pathlib.Path(p['file']).stem}.pdf"
                 row = {"id": f"{item['code']}-{hrs(sums[2])}", "title": f"{p['title']} ({hrs(sums[2])} h)",
@@ -263,7 +274,7 @@ def main():
                 else:
                     row["override"] = "en_XX"
                     english.append(row)
-                print(f"  {slug} {lang}: 3 images")
+                print(f"  {slug} {lang}: {'3 images' if not only or slug in only else 'feed only'}")
     cols = ["id", "title", "description", "availability", "condition", "price", "link",
             "image_link", "additional_image_link", "brand"]
     for name, rows, c in (("feed-fr.csv", primary, cols),
@@ -274,6 +285,8 @@ def main():
             w.writeheader()
             w.writerows(rows)
     print(f"feeds: {len(primary)} items")
+    if OVERFLOW:
+        print("OVERFLOW (text runs into the bottom margin, shorten or tighten):", ", ".join(OVERFLOW))
     if rate is None:
         print("WARNING: price.per_hour is null, so the price column is empty and Meta will reject the feed.")
 
