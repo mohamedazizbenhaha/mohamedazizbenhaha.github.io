@@ -445,9 +445,12 @@ a.pub:hover img{transform:scale(1.05)}
   .nav-end{gap:8px}
   .nav-end .btn-sm{display:inline-flex;padding:.5em .85em;font-size:.8rem}
   .portrait{max-width:300px}
-  .badge-float{padding:.4em .65em;border-radius:10px}
-  .badge-float b{font-size:.92rem}.badge-float span{font-size:.6rem}
-  .badge-float{left:-2%;bottom:7%}.badge-float.b2{left:auto;right:-2%;top:5%;bottom:auto}
+  .badge-float{padding:.3em .55em;border-radius:8px;left:-2%;bottom:7%}
+  .badge-float b{font-size:.76rem}.badge-float span{font-size:.52rem}
+  .badge-float.b2{left:auto;right:-3%;top:36%;bottom:auto}
+  .pm-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .pm-actions>.btn{justify-content:center;padding-left:.6em;padding-right:.6em}
+  .pm-actions>a:not([href^="mailto"]){grid-column:1/-1}
   .tracks button{display:inline-flex;align-items:center;gap:5px}
   .tracks button::after{content:"";width:5px;height:5px;border:solid var(--gold);border-width:1.6px 1.6px 0 0;rotate:45deg;margin-left:1px}
   .segw{display:block;position:relative;margin-bottom:28px}
