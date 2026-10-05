@@ -55,7 +55,7 @@ const FR = {
   'pub.wt': 'Titre provisoire · thèse GreenWaterGuard',
   'c1': 'Introduction à l’intelligence artificielle', 'c2': 'Atelier Big Data', 'c3': 'Rédaction académique', 'c4': 'Gestion d’infrastructure cloud', 'c5': 'Virtualisation',
   'ct.t1': 'Travaillons', 'ct.t2': 'ensemble.',
-  'ct.p': 'Missions en France ou en Tunisie, sur site ou à distance : Cloud et DevOps, projets IA/ML, formation d’équipes, recherche. Dites-moi ce que vous construisez, je réponds en français, en anglais ou en arabe.',
+  'ct.p': 'Missions en France ou en Tunisie, sur site ou à distance : Cloud et DevOps, projets IA/ML, formation d’équipes, recherche.',
   'foot.say': 'Un métier entre les mains met à l’abri du besoin.',
   'ct.copy': 'Copier l’e-mail', 'ct.fr': 'France', 'foot.top': 'Haut de page ↑',
   'skip': 'Aller au contenu',
