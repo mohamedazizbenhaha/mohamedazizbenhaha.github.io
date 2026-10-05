@@ -1,26 +1,75 @@
 {
   "_doc": "WhatsApp / Meta catalogue. Run: python scripts/catalog.py. Add a programme = add its slug under items with 5 outcomes per language.",
   "base_url": "https://mohamedazizbenhaha.netlify.app",
-  "currency": "TND",
-  "rate_per_hour": null,
+  "price": {
+    "_doc": "Price of one in-company group = per_hour x total hours, excl. tax. Tunisia: per_hour stays under the CNFCPP ceiling for an external trainer (20% of the monthly SMIG 48 h per training hour, group of 4+; 2026: 0.2 x 554.736 = 110.947 TND). Abroad: same number in EUR, inside the French market for Cloud/DevOps trainers (600-1,100 EUR/day).",
+    "per_hour": 110,
+    "currency": "TND",
+    "abroad": {
+      "per_hour": 110,
+      "currency": "EUR",
+      "countries": [
+        "FR",
+        "BE",
+        "LU",
+        "DE",
+        "NL",
+        "IT",
+        "ES",
+        "PT",
+        "IE",
+        "AT"
+      ]
+    }
+  },
   "cnfcpp": true,
   "items": {
     "devops-engineering": {
       "code": "DEVOPS-ENG",
       "outcomes": {
         "en": [
-          ["Work as a team in Git:", "protected branches, reviewed pull requests, tagged releases"],
-          ["Build CI/CD pipelines", "with Jenkins and GitHub Actions, automated tests, SonarQube quality gates and Nexus artifacts"],
-          ["Provision AWS infrastructure", "with Terraform and configure servers with Ansible"],
-          ["Monitor applications", "with Prometheus, Grafana and Loki: metrics, dashboards, logs and alerts"],
-          ["Run one complete delivery chain,", "from a developer’s commit to a monitored application on AWS"]
+          [
+            "Work as a team in Git:",
+            "protected branches, reviewed pull requests, tagged releases"
+          ],
+          [
+            "Build CI/CD pipelines",
+            "with Jenkins and GitHub Actions, automated tests, SonarQube quality gates and Nexus artifacts"
+          ],
+          [
+            "Provision AWS infrastructure",
+            "with Terraform and configure servers with Ansible"
+          ],
+          [
+            "Monitor applications",
+            "with Prometheus, Grafana and Loki: metrics, dashboards, logs and alerts"
+          ],
+          [
+            "Run one complete delivery chain,",
+            "from a developer’s commit to a monitored application on AWS"
+          ]
         ],
         "fr": [
-          ["Travailler en équipe avec Git :", "branches protégées, pull requests relues, versions étiquetées"],
-          ["Construire des chaînes CI/CD", "avec Jenkins et GitHub Actions, tests automatisés, seuils de qualité SonarQube et artefacts Nexus"],
-          ["Provisionner une infrastructure AWS", "avec Terraform et configurer les serveurs avec Ansible"],
-          ["Superviser les applications", "avec Prometheus, Grafana et Loki : métriques, tableaux de bord, journaux et alertes"],
-          ["Exploiter une chaîne de livraison complète,", "du commit d’un développeur à une application supervisée sur AWS"]
+          [
+            "Travailler en équipe avec Git :",
+            "branches protégées, pull requests relues, versions étiquetées"
+          ],
+          [
+            "Construire des chaînes CI/CD",
+            "avec Jenkins et GitHub Actions, tests automatisés, seuils de qualité SonarQube et artefacts Nexus"
+          ],
+          [
+            "Provisionner une infrastructure AWS",
+            "avec Terraform et configurer les serveurs avec Ansible"
+          ],
+          [
+            "Superviser les applications",
+            "avec Prometheus, Grafana et Loki : métriques, tableaux de bord, journaux et alertes"
+          ],
+          [
+            "Exploiter une chaîne de livraison complète,",
+            "du commit d’un développeur à une application supervisée sur AWS"
+          ]
         ]
       }
     }

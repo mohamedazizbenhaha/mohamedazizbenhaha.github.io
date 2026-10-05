@@ -7,8 +7,8 @@
 
 ## WhatsApp / Meta catalogue (2026-10-05, on `redesign`, test item = DevOps Engineering)
 - B2B only (companies + training centres), price on quote, dark & gold cards, logo + name one block, PhD in the byline, CNFCPP (TFP) badge (see memory).
-- Template: `python scripts/catalog.py` (run from PowerShell; needs Edge + internet for fonts). Input `catalog/items.json`: which programmes (slug, code, 5 outcomes EN + FR), `rate_per_hour`, `currency`. Output: `catalog/img/<slug>-<lang>-<1..3>.jpg` (cover, programme with buffer row, team outcomes), `catalog/feed.csv` (primary, French) + `catalog/feed-en.csv` (English language feed, `override=en_XX`, same ids).
-- Meta requires a price in a data feed: while `rate_per_hour` is null the price column is empty and Commerce Manager rejects the items. Price = rate × total hours, per in-company group.
+- Template: `python scripts/catalog.py` (run from PowerShell; needs Edge + internet for fonts). Input `catalog/items.json`: programmes (slug, code, 5 outcomes EN + FR) and `price`. Output: `catalog/img/<slug>-<lang>-<1..3>.jpg` (cover, programme with buffer row and right-aligned total, team outcomes), `catalog/feed-fr.csv` (primary, French, price in TND), `catalog/feed-en.csv` (English language feed, `override=en_XX`), `catalog/feed-countries.csv` (country feed: EUR price for FR, BE, LU, DE, NL, IT, ES, PT, IE, AT).
+- Price (proposed 2026-10-05, user to confirm): one in-company group, excl. tax, 110 per hour × total hours: 110 TND in Tunisia (just under the CNFCPP ceiling for an external trainer, 20% of the monthly SMIG 48 h per hour, group of 4+: 0.2 × 554.736 = 110.947 TND in 2026; follow the SMIG each year) and 110 EUR abroad (770 EUR/day, inside the 600-1,100 EUR/day French range for Cloud/DevOps trainers). DevOps 81 h = 8,910 TND / 8,910 EUR. Unverified: whether WhatsApp shows the country-feed price and the English language feed.
 - The feed URLs point at production, so they work only after a merge to `main` (user's word).
 - Next: the user reviews DevOps; then add the other 38 slugs to `items.json` (write 5 outcomes per language from each programme JSON).
 

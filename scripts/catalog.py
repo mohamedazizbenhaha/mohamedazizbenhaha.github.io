@@ -4,8 +4,9 @@ WhatsApp / Meta catalogue: 3 images per programme and language, plus the Meta da
     python scripts/catalog.py
 
 Reads catalog/items.json (which programmes, outcomes, price rate) and programmes/<slug>[-fr].json.
-Writes catalog/img/<slug>-<lang>-<n>.jpg, catalog/feed.csv (primary, French)
-and catalog/feed-en.csv (English language feed, same ids).
+Writes catalog/img/<slug>-<lang>-<n>.jpg, catalog/feed-fr.csv (primary, French)
+catalog/feed-en.csv (English language feed, same ids)
+and catalog/feed-countries.csv (country feed: price in EUR outside Tunisia).
 Needs Microsoft Edge (headless) and internet access for the Google fonts.
 """
 
@@ -47,7 +48,7 @@ T = {
         ],
         "cnfcpp_txt": " Eligible for CNFCPP (TFP) refund.",
         "sumtxt": "{t} h: {m} h of modules + {b} h buffer for catch-up, revision and extra lab time",
-        "price_on": "Indicative price for one in-company group; final quote on request.",
+        "price_on": "Indicative price excl. tax for one in-company group; final quote on request.",
         "price_off": "Price on quote.",
         "facts": {"aud": "Audience", "pre": "Prerequisites", "fmt": "Format", "ass": "Assessment", "out": "Outcome"},
     },
@@ -71,7 +72,7 @@ T = {
         ],
         "cnfcpp_txt": " Éligible au remboursement CNFCPP (TFP).",
         "sumtxt": "{t} h : {m} h de modules + {b} h de réserve pour rattrapage, révision et TP supplémentaires",
-        "price_on": "Prix indicatif pour un groupe intra-entreprise ; devis final sur demande.",
+        "price_on": "Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande.",
         "price_off": "Prix sur devis.",
         "facts": {"aud": "Public", "pre": "Prérequis", "fmt": "Format", "ass": "Évaluation", "out": "Résultat"},
     },
@@ -96,7 +97,7 @@ h2{font:800 66px/1 'Bricolage Grotesque';letter-spacing:-.025em;margin-top:44px}
 .m b{font:700 27px/1.2 Manrope}.m p{font:500 18px/1.35 Manrope;color:#a9a6a0;margin-top:3px}
 .m em{font:800 30px 'Bricolage Grotesque';color:#f2c45a;font-style:normal;text-align:right}
 .m.buf b,.m.buf em{color:#a9a6a0}
-.tot{font:600 20px Manrope;color:#a9a6a0;margin-top:16px}.tot b{color:#ece9e2}
+.tot{font:600 20px Manrope;color:#a9a6a0;margin-top:16px;text-align:right}.tot b{color:#ece9e2}
 .out{margin-top:34px;display:flex;flex-direction:column;gap:20px}
 .o{display:grid;grid-template-columns:60px 1fr;align-items:start}
 .o i{font:800 26px/1.4 'Bricolage Grotesque';color:#d4a024;font-style:normal}
@@ -233,9 +234,10 @@ def description(p, lang, sums, cnfcpp, priced):
 
 def main():
     cfg = json.loads((CAT / "items.json").read_text(encoding="utf-8"))
-    base, rate, cur, cnfcpp = cfg["base_url"].rstrip("/"), cfg["rate_per_hour"], cfg["currency"], cfg["cnfcpp"]
+    base, cnfcpp, pr = cfg["base_url"].rstrip("/"), cfg["cnfcpp"], cfg["price"]
+    rate, cur, ab = pr.get("per_hour"), pr["currency"], pr.get("abroad")
     (CAT / "img").mkdir(exist_ok=True)
-    primary, english = [], []
+    primary, english, countries = [], [], []
     with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as d:
         tmp = pathlib.Path(d).resolve()
         for slug, item in cfg["items"].items():
@@ -255,20 +257,25 @@ def main():
                                 "image_link": imgs[0], "additional_image_link": ",".join(imgs[1:]),
                                 "brand": NAME})
                     primary.append(row)
+                    if ab and ab.get("per_hour") is not None:
+                        countries += [{"id": row["id"], "override": c, "price": f"{ab['per_hour'] * sums[2]:.2f} {ab['currency']}"}
+                                      for c in ab["countries"]]
                 else:
                     row["override"] = "en_XX"
                     english.append(row)
                 print(f"  {slug} {lang}: 3 images")
     cols = ["id", "title", "description", "availability", "condition", "price", "link",
             "image_link", "additional_image_link", "brand"]
-    for name, rows, c in (("feed.csv", primary, cols), ("feed-en.csv", english, ["id", "override", "title", "description", "link"])):
+    for name, rows, c in (("feed-fr.csv", primary, cols),
+                          ("feed-en.csv", english, ["id", "override", "title", "description", "link"]),
+                          ("feed-countries.csv", countries, ["id", "override", "price"])):
         with open(CAT / name, "w", encoding="utf-8", newline="") as f:
             w = csv.DictWriter(f, fieldnames=c)
             w.writeheader()
             w.writerows(rows)
     print(f"feeds: {len(primary)} items")
     if rate is None:
-        print("WARNING: rate_per_hour is null, so the price column is empty and Meta will reject the feed.")
+        print("WARNING: price.per_hour is null, so the price column is empty and Meta will reject the feed.")
 
 
 if __name__ == "__main__":
