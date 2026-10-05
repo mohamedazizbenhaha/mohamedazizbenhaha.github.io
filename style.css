@@ -436,7 +436,7 @@ a.pub:hover img{transform:scale(1.05)}
   .journey::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,#2a2a33,var(--gold))}
   .journey li{align-items:flex-start;text-align:left}
   .journey .dot{top:2px;left:-30px;translate:none}
-  .seg{display:flex;width:100%;overflow-x:auto;scrollbar-width:none}.seg button{flex:none;white-space:nowrap}
+  .seg{display:flex;flex-wrap:wrap;width:100%;border-radius:26px}.seg button{flex:1 1 auto;white-space:nowrap;padding:.6em 1em;text-align:center}
 }
 @media(prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
