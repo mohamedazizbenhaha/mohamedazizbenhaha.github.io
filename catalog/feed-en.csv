@@ -20,3 +20,738 @@ Prepares the core topics of HashiCorp Terraform Associate, GitHub Actions and LP
 Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
 
 Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/DevOps-Engineering-81h.pdf
+AWS-AIF-33,en_XX,AWS AI Practitioner & Generative AI (33 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can choose the right AWS AI service for a use case, build a guarded RAG assistant with Bedrock, estimate its cost and sit the AIF-C01 exam.
+
+Programme (33 h: 27 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 AI & ML on AWS (6 h): AI and ML concepts, the ML lifecycle, ready-made AI services
+02 Generative AI & Amazon Bedrock (6 h): Foundation models, prompting, Bedrock knowledge bases, agents and customisation
+03 Tools, Responsible AI & Exam Preparation (9 h): SageMaker Canvas and JumpStart, Amazon Q, responsible AI, security, AIF-C01
+Final Project (6 h): A generative AI assistant on Bedrock, presented to the group
+
+For: IT professionals, developers, analysts and managers working with AI on AWS
+Prerequisites: None in AI. Familiarity with core AWS services helps (course: AWS Cloud Practitioner) but is not required
+Format: Short lectures followed by guided labs in the AWS console; exam practice
+Assessment: A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of AWS Certified AI Practitioner.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-AI-Practitioner-and-Generative-AI-33h.pdf
+AWS-CLF-33,en_XX,AWS Cloud Practitioner (33 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can explain and choose the core AWS services, deploy a simple highly available web application, estimate its cost and sit the CLF-C02 exam.
+
+Programme (33 h: 27 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Cloud Concepts & Security (6 h): Cloud models, pricing and global infrastructure, IAM
+02 Core Services (9 h): VPC, Route 53, CloudFront, EC2, Lambda, containers, storage, databases
+03 Architecture, Operations & Exam Preparation (6 h): Well-Architected Framework, load balancing, Auto Scaling, CloudWatch, CLF-C02 practice
+Final Project (6 h): A highly available web application and its cost estimate
+
+For: IT staff, developers, students and managers starting with AWS
+Prerequisites: None. Basic IT literacy; networking or Linux basics help but are not required
+Format: Short lectures followed by guided labs in the AWS console and CLI; exam practice
+Assessment: A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of AWS Certified Cloud Practitioner.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-Cloud-Practitioner-33h.pdf
+AWS-SEC-33,en_XX,AWS Cloud Security (33 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can apply least privilege across accounts, protect networks and data, detect threats and misconfigurations, and respond to an incident on AWS with automated remediation.
+
+Programme (33 h: 27 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Identity & Governance (6 h): Shared responsibility, IAM policies and evaluation, Organizations, federation
+02 Infrastructure & Data Protection (6 h): VPC security, WAF, Shield, Network Firewall, KMS, Secrets Manager, Macie
+03 Detection, Response & Exam Overview (9 h): CloudTrail, Config, GuardDuty, Security Hub CSPM, Inspector, incident response, SCS-C03
+Final Project (6 h): A deliberately insecure account, secured and reported
+
+For: Security, cloud and operations engineers responsible for AWS environments
+Prerequisites: Core AWS services (course: AWS Cloud Practitioner), or equivalent hands-on use. Core services are not taught again
+Format: Short lectures followed by guided labs; incident simulations
+Assessment: A lab validated at the end of each phase and a final project with a findings report; certificate of completion for participants who complete both
+
+Prepares the core topics of AWS Certified Security – Specialty.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-Cloud-Security-33h.pdf
+AWS-SOA-33,en_XX,AWS CloudOps Engineer (33 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can deploy a workload with CloudFormation through a pipeline, monitor it, automate its remediation and patching, test its backup and recovery, report its cost and sit the SOA-C03 exam.
+
+Programme (33 h: 27 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Monitoring & Automation (6 h): CloudWatch, X-Ray, performance tuning, EventBridge, Systems Manager
+02 Reliability & Deployment (6 h): Auto Scaling, load balancing, AWS Backup, DR, CloudFormation, CI/CD, ECS and EKS
+03 Security, Networking & Exam Preparation (9 h): IAM operations, Config, Security Hub CSPM, cost controls, VPC troubleshooting, SOA-C03
+Final Project (6 h): A workload operated end to end
+
+For: System administrators and operations engineers running workloads on AWS
+Prerequisites: Core AWS services (course: AWS Cloud Practitioner) and the Linux command line (course: Linux & Bash Scripting), or equivalent. Core services are not taught again
+Format: Short lectures followed by guided labs; exam practice
+Assessment: A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of AWS Certified CloudOps Engineer – Associate.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-CloudOps-Engineer-33h.pdf
+AWS-DEA-27,en_XX,AWS Data Engineering (27 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can build an orchestrated pipeline that ingests, catalogues, transforms, governs and serves data on AWS, and explain its design choices.
+
+Programme (27 h: 24 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Data Lakes & Ingestion (6 h): Lake, warehouse and lakehouse, S3 formats and Iceberg, batch and streaming ingestion
+02 Processing & Warehousing (6 h): AWS Glue, EMR, Amazon Redshift Serverless
+03 Governance, Orchestration & Analytics (6 h): Lake Formation, data quality, Step Functions, MWAA, Athena, Flink, QuickSight
+Final Project (6 h): An end-to-end data pipeline, presented to the group
+
+For: Data analysts, developers and engineers building data pipelines on AWS
+Prerequisites: Core AWS services (course: AWS Cloud Practitioner); Python and SQL (course: Python for Data Science), or equivalent. These are used, not taught
+Format: Short lectures followed by guided labs on a shared dataset; exam practice
+Assessment: A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of AWS Certified Data Engineer – Associate.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-Data-Engineering-27h.pdf
+AWS-SRVLS-18,en_XX,AWS Serverless & Automation Projects (18 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants leave with six working AWS projects in Git, combined into one documented architecture they can explain, rebuild and cost.
+
+Programme (18 h: 15 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Containers & Infrastructure as Code (6 h): Terraform web stack, CI/CD to ECS Fargate with OIDC
+02 Serverless & Security Automation (6 h): Serverless API, event-driven pipeline, incident automation, image scanning gates
+Final Project (3 h): One documented portfolio architecture
+
+For: Engineers with AWS architecture basics who want hands-on portfolio projects
+Prerequisites: AWS architecture (course: AWS Solutions Architect Associate); Terraform and GitHub Actions basics (course: DevOps Engineering). These are used, not taught
+Format: Project labs from provided starter repositories, each with a short design briefing
+Assessment: Each project validated when it runs, and a final portfolio project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-Serverless-and-Automation-Projects-18h.pdf
+AWS-SAA-36,en_XX,AWS Solutions Architect Associate (36 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can design and build a multi-tier, multi-AZ architecture on AWS, justify its cost, resilience and security trade-offs, and sit the SAA-C03 exam.
+
+Programme (36 h: 30 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Resilient & Connected Architectures (6 h): Multi-AZ and multi-Region design, backup, VPC design and hybrid connectivity
+02 Compute, Storage & Data (6 h): EC2 and Auto Scaling, S3 and file storage, data transfer, database patterns
+03 Decoupling & Security (6 h): SQS, SNS, EventBridge, Step Functions, IAM strategy, KMS, WAF, Organizations
+04 Serverless & Exam Preparation (6 h): Lambda, API Gateway, ECS and EKS, Fargate, SAA-C03 scenarios
+Final Project (6 h): A multi-tier architecture, defended in an architecture review
+
+For: Engineers and architects who design workloads on AWS
+Prerequisites: Core AWS services (course: AWS Cloud Practitioner), or equivalent hands-on use. Core services are not taught again
+Format: Design discussions and short lectures followed by guided labs; scenario-based exam practice
+Assessment: A lab validated at the end of each phase, scenario practice questions and a final architecture review; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of AWS Certified Solutions Architect – Associate.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-Solutions-Architect-Associate-36h.pdf
+AZ-104-42,en_XX,Azure Administrator (42 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can build and govern an Azure environment with identities, policies, networks, storage, virtual machines, monitoring and backup, and sit the AZ-104 exam.
+
+Programme (42 h: 36 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Identity & Governance (9 h): Subscriptions and Resource Manager, Microsoft Entra ID, RBAC, Azure Policy, cost
+02 Networking (6 h): VNets, peering, routes, NSGs, Bastion, private endpoints, DNS, load balancing
+03 Storage & Compute (9 h): Storage accounts, virtual machines and scale sets, Bicep, App Service, containers
+04 Monitoring, Backup & Exam Preparation (6 h): Azure Monitor, Log Analytics, Network Watcher, Azure Backup, Site Recovery, AZ-104
+Final Project (6 h): A company's Azure environment, presented to the group
+
+For: System administrators and IT engineers who run Microsoft Azure environments
+Prerequisites: None in Azure. Working knowledge of operating systems, IP networking and the command line is expected
+Format: Short lectures followed by guided labs in the Azure portal, Azure CLI and PowerShell; exam practice
+Assessment: A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of Microsoft Certified: Azure Administrator Associate.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Azure-Administrator-42h.pdf
+AZ-400-45,en_XX,Azure DevOps Engineer (45 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can take an application from a planned backlog item to a monitored canary release on AKS through secure pipelines, and sit the AZ-400 exam.
+
+Programme (45 h: 39 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Planning & Source Control (6 h): Azure Boards, GitHub Projects, flow metrics, Azure Repos and GitHub, branch policies
+02 Continuous Integration (9 h): YAML pipelines, templates, container builds to ACR, Azure Artifacts, GitHub Actions
+03 Infrastructure & Deployment (9 h): Bicep and Terraform, configuration management, AKS, release strategies
+04 Security, Monitoring & Exam Preparation (9 h): Key Vault, workload identity federation, Advanced Security, Application Insights, AZ-400
+Final Project (6 h): A complete Azure DevOps project, presented to the group
+
+For: Azure administrators and developers who build delivery pipelines on Azure
+Prerequisites: Azure administration (course: Azure Administrator) or CI/CD basics (course: DevOps Engineering); not taught again. The Expert certification also requires Azure Administrator or Azure Developer Associate
+Format: Short lectures followed by guided labs; one application carried through every phase; exam practice
+Assessment: A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of Microsoft Certified: DevOps Engineer Expert.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Azure-DevOps-Engineer-45h.pdf
+BLOCKCHAIN-12,en_XX,Blockchain for Business (12 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can explain how a blockchain works, judge whether a business process needs one, and outline the participants, permissions and smart contracts of a suitable network.
+
+Programme (12 h: 9 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Blockchain Fundamentals (3 h): Origins, Bitcoin, distributed ledgers, consensus, smart contracts
+02 Business Value & Use Cases (3 h): Information, interaction and innovation frictions, sector use cases, when not to use it
+Final Project (3 h): A use-case assessment, presented to the group
+
+For: Managers, consultants and IT professionals evaluating blockchain projects
+Prerequisites: None. No programming or cryptography background needed
+Format: Workshop: short lectures, each followed by group exercises on business cases
+Assessment: Group exercises reviewed in each phase and a final use-case assessment presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Blockchain-for-Business-12h.pdf
+CCNA-1-39,en_XX,Introduction to Networks (CCNA 1) (39 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can build a small switched and routed network, plan IPv4 and IPv6 addressing with subnetting and VLSM, secure Cisco devices and troubleshoot basic connectivity.
+
+Programme (39 h: 33 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Network Fundamentals (6 h): Network types, reference models, first device configuration
+02 From Links to Packets (6 h): Media, Ethernet and switching, IP packets, ARP and Neighbor Discovery
+03 Routers & IP Addressing (9 h): Router configuration, IPv4, subnetting and VLSM, IPv6
+04 Transport, Services & Security (6 h): ICMP, TCP and UDP, DNS, DHCP, HTTP, securing a small network
+Final Project (6 h): A small business network, documented and presented
+
+For: Students, technicians and IT staff starting the CCNA path
+Prerequisites: None. Basic computer use; comfort with binary numbers helps and is reviewed in the course
+Format: Short lectures followed by guided labs on simulated Cisco devices
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Prepares the core topics of CCNA, course 1 of 3.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Introduction-to-Networks-CCNA-1-39h.pdf
+CCNA-2-42,en_XX,"Switching, Routing & Wireless Essentials (CCNA 2) (42 h)","In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can build a redundant, secured campus LAN with VLANs, inter-VLAN routing, wireless access and static routing, and troubleshoot it.
+
+Programme (42 h: 36 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Switching & VLANs (9 h): Switch configuration, VLANs and trunks, inter-VLAN routing
+02 Redundancy & Address Services (9 h): STP, EtherChannel, DHCPv4, SLAAC and DHCPv6, HSRP
+03 LAN Security & Wireless (6 h): Layer 2 attack mitigation, WLAN with a controller, WPA2 and WPA3
+04 Routing (6 h): Routing table, static and default routes, troubleshooting, skills integration
+Final Project (6 h): A campus network, built and presented
+
+For: Participants who completed CCNA 1 or have equivalent networking experience
+Prerequisites: Introduction to Networks (CCNA 1), or equivalent: IOS configuration, IPv4 and IPv6 addressing, subnetting. These topics are not taught again
+Format: Short lectures followed by guided labs on simulated Cisco devices
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Prepares the core topics of CCNA, course 2 of 3.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Switching-Routing-Wireless-Essentials-CCNA-2-42h.pdf
+CCNA-3-42,en_XX,"Enterprise Networking, Security & Automation (CCNA 3) (42 h)","In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can build, secure and manage a multi-site network with OSPF, ACLs and NAT, read device data through a REST API with Python, and sit the CCNA 200-301 exam.
+
+Programme (42 h: 36 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 OSPF (6 h): Single-area OSPFv2 configuration, tuning and troubleshooting
+02 Security, ACLs & NAT (9 h): Threats, access control lists, NAT and PAT
+03 WAN, VPN & Network Management (6 h): WAN and SD-WAN, VPNs and IPsec, QoS, management protocols
+04 Design, Automation & CCNA Review (9 h): Scalable design, troubleshooting, SDN, automation, practice exam
+Final Project (6 h): An enterprise branch network, documented and tested
+
+For: Participants who completed CCNA 2 and are preparing the CCNA exam
+Prerequisites: Switching, Routing & Wireless Essentials (CCNA 2), or equivalent: VLANs, inter-VLAN and static routing. These topics are not taught again; no prior Python needed
+Format: Short lectures followed by guided labs on simulated Cisco devices; one timed practice exam
+Assessment: A lab validated at the end of each phase, a timed practice exam and a final project presented to the group; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of CCNA, course 3 of 3.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Enterprise-Networking-Security-Automation-CCNA-3-42h.pdf
+CLASSIC-AI-90,en_XX,Classical AI (90 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Students can formulate AI problems, implement and compare search, logic and probabilistic algorithms, and justify which method fits a problem.
+
+Programme (90 h: 81 h of modules + 9 h buffer for catch-up, revision and extra lab time)
+01 Introduction & Intelligent Agents (9 h): What AI is, agents and environments, rationality
+02 Search & Problem Solving (18 h): Uninformed and heuristic search, local search, evolutionary methods, CSPs
+03 Game Playing (6 h): Minimax, alpha-beta pruning, evaluation functions, Monte Carlo tree search
+04 Knowledge Representation & Logic (15 h): Propositional and first-order logic, inference, knowledge engineering
+05 Probabilistic Reasoning (15 h): Probability, Bayesian networks, exact and approximate inference
+06 Reasoning over Time (9 h): Markov processes, hidden Markov models, filtering, smoothing, Viterbi
+Final Project (9 h): A capstone AI system, proposed, developed and presented
+
+For: University students in computer science and engineering
+Prerequisites: Python programming (course: Python Programming Fundamentals), or equivalent; discrete mathematics and basic probability
+Format: Lectures that derive each algorithm, followed by implementation mini-projects in Python
+Assessment: Six mini-projects and a capstone project presented to the class; certificate of completion for students who complete both; grading follows the host institution's rules
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Classical-AI-90h.pdf
+CYBER-IT-27,en_XX,Cybersecurity for IT Teams (27 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can recognise common attacks, harden networks, endpoints and access, prepare backups and a first incident response, and map controls to ISO/IEC 27001 and NIST CSF.
+
+Programme (27 h: 24 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Threats & Network Security (6 h): Threat actors, kill chain, common attacks, segmentation, firewalls, wireless
+02 Endpoints & Access (6 h): Windows and Linux hardening, patching, EDR, MFA, least privilege, encryption, PKI
+03 Operations, Response & Governance (6 h): Logs and alerts, backups and ransomware, incident response, policies and standards
+Final Project (6 h): A security assessment and hardening plan for a small company
+
+For: System and network administrators, support staff and IT managers
+Prerequisites: None in security. Day-to-day IT administration experience (users, networks, Windows or Linux) is expected
+Format: Short lectures followed by labs and exercises on realistic company scenarios
+Assessment: A lab or exercise validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Cybersecurity-for-IT-Teams-27h.pdf
+SPARK-KAFKA-33,en_XX,Data Engineering with Spark & Kafka (33 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can build, tune and schedule batch and streaming pipelines with Spark and Kafka that write reliable lakehouse tables and pass data quality checks.
+
+Programme (33 h: 27 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Spark Foundations (6 h): From Hadoop to the lakehouse, Spark architecture, DataFrames and Spark SQL
+02 Lakehouse Tables & Performance (6 h): Parquet, Delta Lake and Iceberg, partitioning, joins, adaptive query execution
+03 Streaming, Integration & Orchestration (9 h): Kafka on KRaft, Structured Streaming, Kafka Connect, Schema Registry, Airflow
+Final Project (6 h): Real-time order analytics, presented to the group
+
+For: Data analysts, developers and engineers moving into data engineering
+Prerequisites: Python, pandas and SQL (course: Python for Data Science), or equivalent. These are used, not taught
+Format: Short lectures followed by guided labs on one dataset carried through every phase
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Data-Engineering-with-Spark-and-Kafka-33h.pdf
+DEVSECOPS-57,en_XX,DevSecOps (57 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can add and tune security gates for code, dependencies, the running application, images, infrastructure code, secrets and Kubernetes runtime, and report the residual risk.
+
+Programme (57 h: 48 h of modules + 9 h buffer for catch-up, revision and extra lab time)
+01 Foundations & Application Security (12 h): Shift-left, threat modelling, SAST, SCA and licences, DAST
+02 Container & Supply Chain Security (9 h): Image scanning and hardening, SBOM, signing, SLSA provenance, admission
+03 Infrastructure & Secrets (12 h): IaC scanning, policy as code, HashiCorp Vault, secret scanning
+04 Kubernetes & Runtime Security (6 h): Pod Security Standards, RBAC hardening, NetworkPolicies, Falco
+Final Project (9 h): A secure end-to-end pipeline and its security report
+
+For: DevOps engineers and developers who own a delivery pipeline
+Prerequisites: CI/CD, Terraform and Kubernetes delivery (course: DevOps Engineering, which builds on Docker & Kubernetes), or equivalent. Pipeline building is not taught again
+Format: Short lectures followed by guided labs; one application and pipeline carried through every phase
+Assessment: A lab validated at the end of each phase and a final project with a security report presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/DevSecOps-57h.pdf
+DOCKER-K8S-57,en_XX,Docker & Kubernetes (57 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can containerise a multi-service application, deploy it on Kubernetes with Helm, routing, TLS, autoscaling and monitoring, and deliver it from Git with Argo CD.
+
+Programme (57 h: 48 h of modules + 9 h buffer for catch-up, revision and extra lab time)
+01 Docker (15 h): Images, containers, storage, networking, Compose and security
+02 Kubernetes (18 h): Workloads, services, configuration, storage, routing, scaling, Helm, security
+03 GitOps (9 h): Argo CD, the pull model, environments with Kustomize and Helm
+Final Project (6 h): A multi-service application, from Compose to GitOps
+
+For: Developers, system administrators and DevOps engineers starting with containers
+Prerequisites: Linux command line (course: Linux & Bash Scripting, or equivalent). No prior container experience needed
+Format: Short lectures followed by guided labs; one application carried through every phase
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Docker-and-Kubernetes-57h.pdf
+PROXMOX-36,en_XX,Enterprise Virtualization: KVM & Proxmox VE (36 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can deploy and operate a Proxmox VE cluster with shared storage, high availability, tested backups and migrated workloads, and choose a platform for their organisation.
+
+Programme (36 h: 30 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 KVM & Proxmox VE Foundations (9 h): KVM and libvirt, Proxmox VE networking and storage
+02 Virtual Machines & Containers (6 h): VMs, templates and cloud-init, LXC containers and automation
+03 Clustering, Operations & Migration (9 h): High availability, access control, backups, migration, platform choice
+Final Project (6 h): A three-node highly available cluster, presented to the group
+
+For: System administrators who run or plan a virtualization platform
+Prerequisites: Linux administration (course: Linux & Bash Scripting, or RHCSA Part 1: Red Hat System Administration I) and basic IP networking. Linux basics are not taught again
+Format: Short lectures followed by guided labs
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Enterprise-Virtualization-36h.pdf
+CKA-36,en_XX,Kubernetes Administration (CKA) (36 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can install, secure, upgrade, back up and troubleshoot a Kubernetes cluster from the command line and sit the CKA exam.
+
+Programme (36 h: 30 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Cluster Installation & Lifecycle (6 h): kubeadm, highly available control plane, upgrades, etcd backup
+02 Security & Scheduling (6 h): RBAC, ServiceAccounts, security contexts, scheduling controls
+03 Networking, Storage & Extensions (6 h): CNI, Services and DNS, NetworkPolicies, Gateway API, storage, Helm, CRDs
+04 Troubleshooting & Exam Preparation (6 h): Node, pod and network troubleshooting, timed mock exam
+Final Project (6 h): A highly available cluster, built, secured, upgraded and repaired
+
+For: Engineers who run Kubernetes clusters and are preparing the CKA exam
+Prerequisites: Kubernetes user level (course: Docker & Kubernetes): Pods, Deployments, Services, Helm. Using Kubernetes is not taught again; this course is about running it
+Format: Short lectures followed by guided labs at the command line; one timed mock exam
+Assessment: A lab validated at the end of each phase, a timed mock exam and a final project presented to the group; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of Certified Kubernetes Administrator.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Kubernetes-Administration-CKA-36h.pdf
+EX294-42,en_XX,Linux Automation with Ansible (EX294) (42 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can automate RHEL administration with idempotent playbooks, roles, collections and Vault kept in Git, and sit the EX294 exam.
+
+Programme (42 h: 36 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Ansible Foundations (6 h): Control node, tooling, Git, inventories and ad hoc commands
+02 Writing Playbooks (9 h): Plays, handlers, variables, facts and task control
+03 Templates, Secrets & Roles (6 h): Jinja2 templates, Ansible Vault, roles and content collections
+04 Administration Tasks & Exam Practice (9 h): RHEL system roles, troubleshooting, automated administration, mock exam
+Final Project (6 h): A three-tier environment automated from Git, presented to the group
+
+For: RHEL administrators who want to automate their daily work and prepare EX294
+Prerequisites: RHCSA level (course: RHCSA Part 2: Red Hat System Administration II, or RHCSA Rapid Track): the administration tasks themselves are not taught again, only their automation
+Format: Short lectures followed by guided labs; one timed mock exam
+Assessment: A lab validated at the end of each phase, a timed mock EX294 exam and a final project presented to the group; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of Red Hat Certified Advanced System Administrator in Ansible; with RHCSA, earns RHCE in Ansible.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Linux-Automation-with-Ansible-42h.pdf
+LINUX-BASH-39,en_XX,Linux & Bash Scripting (39 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can use and manage a Linux system from the command line and write, debug and schedule robust Bash scripts that automate backups, user provisioning and health reports.
+
+Programme (39 h: 33 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Linux Essentials (9 h): The shell, the filesystem, permissions and text processing
+02 System Administration Basics (6 h): Processes, services, scheduling, packages and networking
+03 Bash Scripting (12 h): Bash syntax, control flow, functions and robust scripts
+Final Project (6 h): An automation toolkit, presented to the group
+
+For: Students, developers and IT staff starting with Linux
+Prerequisites: None. Basic computer use; no prior Linux or programming experience needed
+Format: Short lectures followed by guided labs at the command line
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Linux-Bash-Scripting-39h.pdf
+LINUX-NETSVC-36,en_XX,Linux Network Services (RHEL 10) (36 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can deploy, secure and troubleshoot DNS, web, mail, database and network storage services on RHEL 10.
+
+Programme (36 h: 30 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 systemd & Advanced Networking (9 h): Custom units, IPv6, bonds, bridges and VLANs
+02 Firewall & DNS (6 h): Rich rules, NAT and port forwarding, caching and authoritative DNS
+03 Application & Storage Services (9 h): Apache and Nginx with TLS, Postfix, MariaDB, iSCSI, NFS and SMB
+Final Project (6 h): A small company's infrastructure, presented to the group
+
+For: RHEL administrators who run network and application services
+Prerequisites: RHCSA level (course: RHCSA Part 2: Red Hat System Administration II, or RHCSA Rapid Track): SELinux, firewalld and storage basics are not taught again
+Format: Short lectures followed by guided labs on RHEL 10
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Linux-Network-Services-36h.pdf
+LLM-AGENTS-27,en_XX,LLMs & AI Agents (27 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can build a RAG and tool-using agent application, reduce its exposure to prompt injection, measure its quality and cost, and deploy it as a containerised API.
+
+Programme (27 h: 24 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 LLM Foundations (6 h): Transformers and training, prompting, structured output, APIs and open models
+02 RAG & Agents (6 h): Embeddings, vector stores, retrieval and reranking, tool use, agent frameworks
+03 MCP, Security & Evaluation (6 h): Model Context Protocol, prompt injection and guardrails, evaluation, tracing, deployment
+Final Project (6 h): An agent application, evaluated and deployed
+
+For: Developers who want to build applications with large language models
+Prerequisites: Python programming (course: Python Programming Fundamentals), or equivalent; basic Docker use helps (course: Docker & Kubernetes). No machine learning background needed
+Format: Short lectures followed by guided labs; one application carried through every phase
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/LLMs-and-AI-Agents-27h.pdf
+ML-DL-75,en_XX,Machine Learning & Deep Learning (75 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can frame a machine learning problem, build and compare classical and deep learning models, evaluate them without leakage, explain their predictions and track the experiments.
+
+Programme (75 h: 66 h of modules + 9 h buffer for catch-up, revision and extra lab time)
+01 Supervised Learning (24 h): Regression, classification, trees, ensembles, SVMs, evaluation, pipelines
+02 Unsupervised Learning (12 h): Clustering, mixture models, PCA, manifold learning, anomalies, recommenders
+03 Deep Learning (15 h): Neural networks from scratch, backpropagation, PyTorch, CNNs, attention and Transformers
+04 Responsible AI (6 h): Explainability, fairness, the EU AI Act, model cards
+Final Project (9 h): An end-to-end machine learning project, presented to the group
+
+For: Developers, analysts and engineers who want to build machine learning models
+Prerequisites: Python, NumPy and pandas (course: Python for Data Science), or equivalent; secondary-school algebra. The mathematics needed is taught in the course
+Format: Lectures that derive each method, followed by labs in Jupyter; the mathematics is taught where it is used
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Machine-Learning-and-Deep-Learning-75h.pdf
+AWS-MLA-45,en_XX,Machine Learning Engineer on AWS (45 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can build an automated pipeline from data preparation to a monitored endpoint on SageMaker AI, secure it, and sit the MLA-C01 exam.
+
+Programme (45 h: 39 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 ML Infrastructure & Data Preparation (9 h): SageMaker AI infrastructure, ingestion, Data Wrangler, Feature Store, bias checks
+02 Model Development (6 h): Built-in algorithms, script mode, distributed training, tuning, evaluation
+03 Deployment & MLOps (9 h): Endpoints, autoscaling, SageMaker Pipelines, Model Registry, CI/CD, monitoring
+04 Security, Generative AI & Exam Preparation (9 h): Least privilege, VPC isolation, encryption, Bedrock in production, MLA-C01
+Final Project (6 h): A production ML system on SageMaker AI, presented to the group
+
+For: Data scientists and engineers who put machine learning models into production on AWS
+Prerequisites: Machine learning (course: Machine Learning & Deep Learning) and AWS AI services (course: AWS AI Practitioner & Generative AI), with core AWS services (course: AWS Cloud Practitioner), or equivalent. ML theory is not taught again
+Format: Short lectures followed by guided labs in SageMaker Studio; one model carried through every phase; exam practice
+Assessment: A lab validated at the end of each phase, practice exam questions and a final project presented to the group; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of AWS Certified Machine Learning Engineer – Associate.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Machine-Learning-Engineer-on-AWS-45h.pdf
+NETSEC-51,en_XX,Network Security (51 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can harden network devices, deploy AAA, ACLs, firewalls, IPS, Layer 2 protections and VPNs, and prove the result with security tests.
+
+Programme (51 h: 45 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Securing Network Devices (12 h): Threats and mitigation, secure management, AAA, ACLs
+02 Firewalls & IPS (12 h): Stateful and zone-based firewalls, NGFW, pfSense or OPNsense, Suricata, IPS
+03 Endpoint, Layer 2 & Cryptography (6 h): Endpoint protection, Layer 2 attacks and mitigation, integrity, authenticity, PKI
+04 VPNs, Zero Trust & Testing (9 h): Site-to-site IPsec, remote access with SSL and WireGuard, ZTNA, security testing
+Final Project (6 h): A secured branch network, validated by tests
+
+For: Network administrators and engineers responsible for securing networks
+Prerequisites: Switching and routing (course: Switching, Routing & Wireless Essentials (CCNA 2)), or equivalent. These are not taught again
+Format: Short lectures followed by guided labs on simulated Cisco devices and open-source firewalls
+Assessment: A lab validated at the end of each phase and a final project with validation tests; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Network-Security-51h.pdf
+NET-CLOUD-18,en_XX,Networking for Cloud & DevOps (18 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can read a network path from client to service, plan subnets, and find and fix DNS, TLS, routing, firewall and load-balancer faults with standard tools.
+
+Programme (18 h: 15 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Network Foundations (6 h): TCP/IP, IPv4 addressing and subnetting, DNS, HTTP and TLS
+02 Routing, Traffic & Troubleshooting (6 h): Routing, NAT, firewalls, load balancing and diagnostic tools
+Final Project (3 h): Diagnose and repair a broken multi-tier deployment
+
+For: Developers, DevOps and cloud engineers without a networking background
+Prerequisites: None. Comfort with a Linux terminal helps (course: Linux & Bash Scripting). No networking knowledge needed
+Format: Workshop: short lectures, each followed by hands-on exercises at the command line
+Assessment: Exercises validated during each phase and a final troubleshooting project; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Networking-for-Cloud-and-DevOps-18h.pdf
+NLP-27,en_XX,NLP: from Text Processing to Transformers (27 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can build, fine-tune and evaluate NLP models for classification and extraction on English, French and Arabic text, and judge when an LLM is the better tool.
+
+Programme (27 h: 24 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Text Processing & Representation (6 h): NLP tasks, tokenisation, normalisation, bag of words, TF-IDF, word embeddings
+02 Classical NLP Tasks (6 h): Classification and sentiment, named entities and relations, topic modelling
+03 Transformers & LLMs (6 h): BERT fine-tuning, multilingual NLP, LLMs for NLP tasks
+Final Project (6 h): A multilingual NLP application, presented to the group
+
+For: Data scientists and developers who work with text data
+Prerequisites: Python and pandas (course: Python for Data Science) and deep learning basics (course: Machine Learning & Deep Learning, deep learning phase), or equivalent. These are used, not taught
+Format: Short lectures followed by guided labs in Jupyter on English, French and Arabic corpora
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/NLP-from-Text-Processing-to-Transformers-27h.pdf
+PY-DATA-21,en_XX,Python for Data Science (21 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can load, clean, query, analyse and visualise a real dataset with Python, pandas and SQL, and report their findings in a reproducible notebook.
+
+Programme (21 h: 18 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Tools & NumPy (6 h): Python for data work, Jupyter and reproducibility, NumPy arrays
+02 Pandas, SQL & Visualisation (9 h): DataFrames, cleaning and reshaping, SQL queries from Python, charts
+Final Project (3 h): An exploratory data analysis report on a real dataset
+
+For: Analysts, students and developers who work with data
+Prerequisites: Python basics (course: Python Programming Fundamentals, or equivalent): variables, data structures, functions. These are not taught again
+Format: Short lectures with live coding in Jupyter, each followed by exercises on real datasets
+Assessment: Exercises validated at the end of each phase and a final analysis report presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Python-for-Data-Science-21h.pdf
+PY-FUND-27,en_XX,Python Programming Fundamentals (27 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can write, organise and test Python programs that use data structures, functions, files, error handling and classes.
+
+Programme (27 h: 24 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Python Basics (6 h): Setup, variables, types, operators, input and output, conditions and loops
+02 Data Structures & Functions (6 h): Lists, tuples, dictionaries, sets, comprehensions, functions, modules, pytest
+03 Files, Errors & Objects (6 h): File input and output, exceptions, JSON and CSV, classes, inheritance, dataclasses
+Final Project (6 h): A tested command-line application, presented to the group
+
+For: Beginners, students and professionals learning to program with Python
+Prerequisites: None. Basic computer use; no programming experience needed
+Format: Short lectures with live coding, each followed by guided exercises
+Assessment: Exercises validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Python-Programming-Fundamentals-27h.pdf
+RHCSA-1-42,en_XX,RHCSA Part 1: Red Hat System Administration I (42 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can install a RHEL 10 server and manage its users, permissions, services, SSH access, logs, network settings and software.
+
+Programme (42 h: 36 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Command Line Foundations (6 h): RHEL 10, help, text files and managing files
+02 Users, Groups & Permissions (6 h): Local accounts, sudo, file permissions and special permissions
+03 Processes & Services (6 h): Process control, systemd units and boot targets
+04 Remote Access & Logging (6 h): OpenSSH, archives and transfers, logs and time
+05 Networking, Software & Filesystems (6 h): NetworkManager, dnf and Flatpak, mounting and disk usage
+Final Project (6 h): A documented RHEL 10 server, graded against a checklist
+
+For: IT staff, technicians and students starting Linux system administration
+Prerequisites: None. Basic computer use; no prior Linux experience needed
+Format: Short lectures followed by guided labs on RHEL 10
+Assessment: A lab validated at the end of each phase and a final project graded against a checklist; certificate of completion for participants who complete both
+
+Prepares the core topics of RHCSA, first half of the objectives.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/RHCSA-Part-1-42h.pdf
+RHCSA-2-42,en_XX,RHCSA Part 2: Red Hat System Administration II (42 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can automate, secure and troubleshoot a RHEL 10 server with SELinux enforcing, manage its storage and boot process, and sit the EX200 exam.
+
+Programme (42 h: 36 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Scripting & System Tuning (6 h): Admin scripts, regular expressions, scheduling and tuning
+02 SELinux & Storage (9 h): SELinux contexts and booleans, partitions, filesystems and LVM
+03 Access Control, Network Storage & Boot (6 h): ACLs, NFS and autofs, the boot process and recovery
+04 Firewall, Containers & Mock Exam (9 h): firewalld, Podman containers as services, mock EX200 exam
+Final Project (6 h): A production-ready RHEL 10 host that survives a broken boot
+
+For: Administrators who completed RHCSA Part 1 or have equivalent RHEL experience
+Prerequisites: First half of the RHCSA objectives (course: RHCSA Part 1: Red Hat System Administration I) or equivalent RHEL experience with users, permissions, services, SSH and networking. These topics are not taught again
+Format: Short lectures followed by guided labs on RHEL 10; one timed mock exam
+Assessment: A lab validated at the end of each phase, a timed mock EX200 exam and a final project graded against a checklist; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of RHCSA, second half of the objectives.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/RHCSA-Part-2-42h.pdf
+RHCSA-RT-48,en_XX,RHCSA Rapid Track (48 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can carry out the RHCSA objectives on RHEL 10 under timed conditions and are ready to sit the EX200 exam.
+
+Programme (48 h: 42 h of modules + 6 h buffer for catch-up, revision and extra lab time)
+01 Core Administration (9 h): Essentials recap, system operation, networking and SSH
+02 Software, Automation & Firewall (6 h): dnf and Flatpak, archives, scheduling, shell scripts, firewalld
+03 Security & Storage (9 h): SELinux, partitions and LVM, NFS and autofs, ACLs
+04 Boot, Containers & Mock Exams (12 h): Boot recovery, Podman, two timed EX200 mock exams
+Final Project (6 h): A full RHCSA-style server build from a bare virtual machine
+
+For: Linux users and administrators preparing the RHCSA exam in one course
+Prerequisites: Working Linux experience: command line, files, users, permissions, services, vim; recapped quickly, not taught. Beginners take RHCSA Part 1: Red Hat System Administration I and RHCSA Part 2: Red Hat System Administration II instead
+Format: Short lectures followed by guided labs on RHEL 10; two timed mock exams
+Assessment: A lab validated at the end of each phase, two timed mock EX200 exams and a final project graded against a task list; certificate of completion for participants who complete the labs and the project
+
+Prepares the core topics of RHCSA.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/RHCSA-Rapid-Track-48h.pdf
+SOC-CBROPS-57,en_XX,SOC Analyst (CCNA Cybersecurity) (57 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can triage alerts, investigate network and host evidence, map an attack to MITRE ATT&CK, write an incident report and sit the 200-201 CBROPS exam.
+
+Programme (57 h: 48 h of modules + 9 h buffer for catch-up, revision and extra lab time)
+01 SOC Foundations & Operating Systems (9 h): The SOC, security concepts, Windows and Linux for analysts
+02 Network Security & Monitoring (9 h): Protocols, security infrastructure, attacks, tcpdump, Wireshark, NetFlow
+03 Cryptography, Endpoints & Malware (9 h): Cryptography and PKI, endpoint protection, vulnerabilities, malware analysis
+04 Detection & Threat Intelligence (9 h): SIEM and SOAR, Security Onion, MITRE ATT&CK, Sigma, threat intelligence, AI
+05 Incident Response & Policies (6 h): NIST SP 800-61 Rev. 3, evidence, kill chain, diamond model, playbooks
+Final Project (6 h): A SOC simulation on a captured attack
+
+For: IT and network staff moving into security operations
+Prerequisites: Networking basics (course: Introduction to Networks (CCNA 1), or Networking for Cloud & DevOps); Linux command line helps. Networking is recapped, not taught
+Format: Short lectures followed by guided labs on captured traffic and logs; one attack scenario followed through the course
+Assessment: A lab validated at the end of each phase and a final SOC simulation with an incident report; certificate of completion for participants who complete both
+
+Prepares the core topics of Cisco CCNA Cybersecurity.
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/SOC-Analyst-CCNA-Cybersecurity-57h.pdf
+SYS-DESIGN-21,en_XX,System Design Fundamentals (21 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can turn requirements into a system design with APIs, data model, caching, messaging and a scaling plan, and argue its trade-offs.
+
+Programme (21 h: 18 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Foundations, APIs & Caching (6 h): Scalability, CAP and consistency, API styles, authentication, caching, CDNs
+02 Data, Messaging & Architecture (6 h): SQL vs NoSQL, replication, sharding, queues and Kafka, architecture styles, resilience
+03 Case Studies (3 h): URL shortener, chat application, payment system, news feed
+Final Project (3 h): A system designed for a brief, defended in peer review
+
+For: Developers and engineers who design or review software systems
+Prerequisites: Programming in any language (course: Python Programming Fundamentals), or equivalent, and basic knowledge of databases and HTTP
+Format: Workshop: short lectures, each followed by design exercises in small groups; case studies and peer review
+Assessment: Design exercises reviewed in each phase and a final design defended in a peer review; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/System-Design-Fundamentals-21h.pdf
+TECH-WRITING-18,en_XX,Technical & Academic Writing (18 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can manage and cite sources with Zotero, summarise papers, avoid plagiarism, and write clear sections with effective figures.
+
+Programme (18 h: 15 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Sources & Ethics (6 h): Zotero, reading and summarising papers, publication ethics, plagiarism
+02 Writing & Figures (6 h): Clarity, precision, concision, voice and style, figures
+Final Project (3 h): A short paper section, written and peer-reviewed
+
+For: Students, researchers and engineers who write reports and papers
+Prerequisites: None. Participants bring a writing project of their own if they have one
+Format: Free course: short lectures, each followed by writing exercises and peer feedback
+Assessment: Exercises reviewed in each phase and a final paper section reviewed by a peer; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Technical-and-Academic-Writing-18h.pdf
+ZERO-TRUST-15,en_XX,Zero Trust & Cloud Security (15 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can assess an organisation against the CISA Zero Trust Maturity Model and build a prioritised roadmap covering identity, data and AI systems.
+
+Programme (15 h: 12 h of modules + 3 h buffer for catch-up, revision and extra lab time)
+01 Zero Trust (3 h): NIST SP 800-207, CISA Zero Trust Maturity Model, identity-centric security
+02 Cloud Data & AI Security (6 h): Encryption and keys, DLP, data residency, AI for detection, securing AI systems
+Final Project (3 h): A zero trust adoption roadmap, presented to the group
+
+For: Security managers, architects and IT leaders planning a security strategy
+Prerequisites: None. A general IT or security background is expected (course: Cybersecurity for IT Teams, recommended)
+Format: Workshop: short lectures, each followed by group exercises on an organisation case
+Assessment: An exercise validated at the end of each phase and a final roadmap presented to the group; certificate of completion for participants who complete both
+
+Indicative price excl. tax for one in-company group; final quote on request. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Zero-Trust-and-Cloud-Security-15h.pdf

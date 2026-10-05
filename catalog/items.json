@@ -72,6 +72,1868 @@
           ]
         ]
       }
+    },
+    "aws-ai-practitioner-genai": {
+      "code": "AWS-AIF",
+      "outcomes": {
+        "en": [
+          [
+            "Process documents, text and speech",
+            "with Textract, Comprehend, Translate and Polly, without training a model"
+          ],
+          [
+            "Write effective prompts",
+            "and choose a foundation model in the Amazon Bedrock playgrounds"
+          ],
+          [
+            "Build a RAG assistant",
+            "with Bedrock Knowledge Bases that answers over company documents with cited sources"
+          ],
+          [
+            "Guard the assistant",
+            "with Bedrock Guardrails: denied topics blocked, personal data masked"
+          ],
+          [
+            "Pick the right AWS AI service for a use case,",
+            "estimate its cost and sit the AIF-C01 exam"
+          ]
+        ],
+        "fr": [
+          [
+            "Traiter documents, texte et voix",
+            "avec Textract, Comprehend, Translate et Polly, sans entraîner de modèle"
+          ],
+          [
+            "Rédiger des prompts efficaces",
+            "et choisir un modèle de fondation dans les playgrounds d’Amazon Bedrock"
+          ],
+          [
+            "Construire un assistant RAG",
+            "avec les Knowledge Bases de Bedrock, qui répond sur les documents de l’entreprise en citant ses sources"
+          ],
+          [
+            "Protéger l’assistant",
+            "avec Bedrock Guardrails : sujets interdits bloqués, données personnelles masquées"
+          ],
+          [
+            "Choisir le bon service d’IA AWS pour un cas d’usage,",
+            "en estimer le coût et se présenter à l’examen AIF-C01"
+          ]
+        ]
+      }
+    },
+    "aws-cloud-practitioner": {
+      "code": "AWS-CLF",
+      "outcomes": {
+        "en": [
+          [
+            "Secure an AWS account:",
+            "MFA on every user, IAM groups and least-privilege roles, a budget with an alert"
+          ],
+          [
+            "Build a VPC",
+            "with public and private subnets, a web server on EC2 and its images on S3"
+          ],
+          [
+            "Choose the right service",
+            "for compute, storage and databases: EC2, Lambda, S3, EBS, RDS, DynamoDB"
+          ],
+          [
+            "Make an application scale and heal",
+            "with Elastic Load Balancing, Auto Scaling and CloudWatch alarms"
+          ],
+          [
+            "Deploy a highly available web application,",
+            "estimate its monthly cost and sit the CLF-C02 exam"
+          ]
+        ],
+        "fr": [
+          [
+            "Sécuriser un compte AWS :",
+            "MFA pour chaque utilisateur, groupes IAM et rôles à moindre privilège, budget avec alerte"
+          ],
+          [
+            "Construire un VPC",
+            "avec sous-réseaux publics et privés, un serveur web sur EC2 et ses images sur S3"
+          ],
+          [
+            "Choisir le bon service",
+            "de calcul, de stockage et de base de données : EC2, Lambda, S3, EBS, RDS, DynamoDB"
+          ],
+          [
+            "Rendre une application élastique et résiliente",
+            "avec Elastic Load Balancing, Auto Scaling et les alarmes CloudWatch"
+          ],
+          [
+            "Déployer une application web hautement disponible,",
+            "estimer son coût mensuel et se présenter à l’examen CLF-C02"
+          ]
+        ]
+      }
+    },
+    "aws-cloud-security": {
+      "code": "AWS-SEC",
+      "outcomes": {
+        "en": [
+          [
+            "Apply least privilege across accounts",
+            "with IAM policies, Organizations, SCPs and IAM Identity Center"
+          ],
+          [
+            "Protect the network",
+            "with security groups, network ACLs, Network Firewall, WAF and Shield"
+          ],
+          [
+            "Protect data",
+            "with KMS customer managed keys, Secrets Manager rotation, ACM certificates and Macie"
+          ],
+          [
+            "Detect threats and misconfigurations",
+            "with CloudTrail, Config, GuardDuty, Security Hub CSPM and Inspector"
+          ],
+          [
+            "Respond to an incident automatically:",
+            "a GuardDuty finding, an EventBridge rule and a Lambda that isolates the instance"
+          ]
+        ],
+        "fr": [
+          [
+            "Appliquer le moindre privilège sur plusieurs comptes",
+            "avec les politiques IAM, Organizations, les SCP et IAM Identity Center"
+          ],
+          [
+            "Protéger le réseau",
+            "avec groupes de sécurité, ACL réseau, Network Firewall, WAF et Shield"
+          ],
+          [
+            "Protéger les données",
+            "avec des clés KMS gérées par le client, la rotation Secrets Manager, les certificats ACM et Macie"
+          ],
+          [
+            "Détecter menaces et erreurs de configuration",
+            "avec CloudTrail, Config, GuardDuty, Security Hub CSPM et Inspector"
+          ],
+          [
+            "Répondre automatiquement à un incident :",
+            "alerte GuardDuty, règle EventBridge et fonction Lambda qui isole l’instance"
+          ]
+        ]
+      }
+    },
+    "aws-cloudops-engineer": {
+      "code": "AWS-SOA",
+      "outcomes": {
+        "en": [
+          [
+            "Monitor a workload",
+            "with CloudWatch metrics, logs, Logs Insights, alarms, dashboards and X-Ray traces"
+          ],
+          [
+            "Automate remediation",
+            "with EventBridge rules and Systems Manager runbooks, with Session Manager instead of SSH"
+          ],
+          [
+            "Deploy as code",
+            "with CloudFormation, StackSets and drift detection, through a CodePipeline pipeline"
+          ],
+          [
+            "Test backup and recovery",
+            "with AWS Backup, Auto Scaling and multi-AZ designs against RTO and RPO"
+          ],
+          [
+            "Troubleshoot and keep control:",
+            "Reachability Analyzer, Flow Logs, Config rules, Cost Explorer and Budgets"
+          ]
+        ],
+        "fr": [
+          [
+            "Superviser une charge de travail",
+            "avec les métriques, journaux, Logs Insights, alarmes et tableaux de bord CloudWatch et les traces X-Ray"
+          ],
+          [
+            "Automatiser la remédiation",
+            "avec les règles EventBridge et les runbooks Systems Manager, Session Manager à la place de SSH"
+          ],
+          [
+            "Déployer en code",
+            "avec CloudFormation, StackSets et la détection de dérive, via un pipeline CodePipeline"
+          ],
+          [
+            "Tester sauvegarde et reprise",
+            "avec AWS Backup, Auto Scaling et une conception multi-AZ, selon le RTO et le RPO"
+          ],
+          [
+            "Dépanner et garder le contrôle :",
+            "Reachability Analyzer, Flow Logs, règles Config, Cost Explorer et Budgets"
+          ]
+        ]
+      }
+    },
+    "aws-data-engineering": {
+      "code": "AWS-DEA",
+      "outcomes": {
+        "en": [
+          [
+            "Design an S3 data lake",
+            "with partitioned Parquet and Apache Iceberg tables"
+          ],
+          [
+            "Ingest batch and streaming data",
+            "with Kinesis Data Streams, Amazon Data Firehose, DMS and AppFlow"
+          ],
+          [
+            "Transform and load",
+            "with AWS Glue crawlers, the Data Catalog and ETL jobs, into Redshift Serverless"
+          ],
+          [
+            "Govern the data",
+            "with Lake Formation permissions, Glue Data Quality rules and lineage"
+          ],
+          [
+            "Orchestrate and analyse the pipeline",
+            "with Step Functions, Amazon MWAA, Athena and QuickSight"
+          ]
+        ],
+        "fr": [
+          [
+            "Concevoir un data lake S3",
+            "avec des tables Parquet partitionnées et Apache Iceberg"
+          ],
+          [
+            "Ingérer des données par lots et en flux",
+            "avec Kinesis Data Streams, Amazon Data Firehose, DMS et AppFlow"
+          ],
+          [
+            "Transformer et charger",
+            "avec les crawlers, le Data Catalog et les jobs ETL d’AWS Glue, vers Redshift Serverless"
+          ],
+          [
+            "Gouverner les données",
+            "avec les permissions Lake Formation, les règles Glue Data Quality et le lignage"
+          ],
+          [
+            "Orchestrer et analyser le pipeline",
+            "avec Step Functions, Amazon MWAA, Athena et QuickSight"
+          ]
+        ]
+      }
+    },
+    "aws-serverless-projects": {
+      "code": "AWS-SRVLS",
+      "outcomes": {
+        "en": [
+          [
+            "Provision a scalable web stack",
+            "with Terraform, answering behind its load balancer"
+          ],
+          [
+            "Deliver containers to ECS Fargate",
+            "through GitHub Actions, authenticated to AWS with OIDC instead of stored keys"
+          ],
+          [
+            "Build a serverless API",
+            "with Lambda, API Gateway and DynamoDB, and an image pipeline triggered by S3 events"
+          ],
+          [
+            "Automate incident response",
+            "from GuardDuty and CloudWatch through EventBridge, and stop images with critical vulnerabilities"
+          ],
+          [
+            "Leave with six working projects in Git,",
+            "combined into one documented architecture they can rebuild and cost"
+          ]
+        ],
+        "fr": [
+          [
+            "Provisionner une application web élastique",
+            "avec Terraform, servie derrière son répartiteur de charge"
+          ],
+          [
+            "Livrer des conteneurs sur ECS Fargate",
+            "via GitHub Actions, authentifié sur AWS par OIDC, sans clés stockées"
+          ],
+          [
+            "Construire une API serverless",
+            "avec Lambda, API Gateway et DynamoDB, et une chaîne d’images déclenchée par S3"
+          ],
+          [
+            "Automatiser la réponse aux incidents",
+            "de GuardDuty et CloudWatch via EventBridge, et bloquer les images aux vulnérabilités critiques"
+          ],
+          [
+            "Repartir avec six projets fonctionnels dans Git,",
+            "réunis en une architecture documentée, reconstructible et chiffrée"
+          ]
+        ]
+      }
+    },
+    "aws-solutions-architect": {
+      "code": "AWS-SAA",
+      "outcomes": {
+        "en": [
+          [
+            "Design resilient networks:",
+            "multi-AZ and multi-Region workloads, VPCs joined by Transit Gateway, private endpoints"
+          ],
+          [
+            "Choose compute, storage and databases:",
+            "EC2 families, S3 lifecycle rules, Aurora replicas, DynamoDB keys, ElastiCache"
+          ],
+          [
+            "Decouple applications",
+            "with SQS, SNS and Step Functions so one failure does not stop the whole flow"
+          ],
+          [
+            "Secure the architecture",
+            "with an IAM strategy, KMS encryption, WAF, Shield and Organizations"
+          ],
+          [
+            "Build serverless and container services",
+            "with Lambda, API Gateway and Fargate, then sit the SAA-C03 exam"
+          ]
+        ],
+        "fr": [
+          [
+            "Concevoir des réseaux résilients :",
+            "charges multi-AZ et multi-Région, VPC reliés par Transit Gateway, points de terminaison privés"
+          ],
+          [
+            "Choisir calcul, stockage et bases de données :",
+            "familles EC2, cycle de vie S3, réplicas Aurora, clés DynamoDB, ElastiCache"
+          ],
+          [
+            "Découpler les applications",
+            "avec SQS, SNS et Step Functions pour qu’une panne n’arrête pas tout le flux"
+          ],
+          [
+            "Sécuriser l’architecture",
+            "avec une stratégie IAM, le chiffrement KMS, WAF, Shield et Organizations"
+          ],
+          [
+            "Construire des services serverless et conteneurisés",
+            "avec Lambda, API Gateway et Fargate, puis passer l’examen SAA-C03"
+          ]
+        ]
+      }
+    },
+    "azure-administrator": {
+      "code": "AZ-104",
+      "outcomes": {
+        "en": [
+          [
+            "Govern Azure",
+            "with Microsoft Entra ID, RBAC, Azure Policy, management groups and budgets"
+          ],
+          [
+            "Build networks:",
+            "peered VNets, NSGs, Azure Bastion, private endpoints, Azure DNS and load balancers"
+          ],
+          [
+            "Deploy compute",
+            "with Bicep: zone-redundant VM scale sets, App Service with deployment slots, Container Apps"
+          ],
+          [
+            "Monitor and protect workloads",
+            "with Azure Monitor, KQL in Log Analytics, Azure Backup and Site Recovery"
+          ],
+          [
+            "Build a company’s Azure environment",
+            "from a written brief, then sit the AZ-104 exam"
+          ]
+        ],
+        "fr": [
+          [
+            "Gouverner Azure",
+            "avec Microsoft Entra ID, RBAC, Azure Policy, les groupes d’administration et les budgets"
+          ],
+          [
+            "Construire les réseaux :",
+            "VNet appairés, NSG, Azure Bastion, points de terminaison privés, Azure DNS et répartiteurs de charge"
+          ],
+          [
+            "Déployer le calcul",
+            "avec Bicep : groupes de VM identiques redondants, App Service avec emplacements, Container Apps"
+          ],
+          [
+            "Superviser et protéger les charges",
+            "avec Azure Monitor, KQL dans Log Analytics, Azure Backup et Site Recovery"
+          ],
+          [
+            "Construire l’environnement Azure d’une entreprise",
+            "à partir d’un cahier des charges, puis passer l’examen AZ-104"
+          ]
+        ]
+      }
+    },
+    "azure-devops-engineer": {
+      "code": "AZ-400",
+      "outcomes": {
+        "en": [
+          [
+            "Plan and review the work",
+            "with Azure Boards, GitHub Projects, pull requests and branch policies"
+          ],
+          [
+            "Build CI pipelines",
+            "in YAML with templates, images in Azure Container Registry and packages in Azure Artifacts"
+          ],
+          [
+            "Provision and deploy",
+            "with Bicep and Terraform to AKS, with approvals, blue-green and canary releases"
+          ],
+          [
+            "Remove secrets from pipelines",
+            "with Key Vault, workload identity federation and GitHub Advanced Security"
+          ],
+          [
+            "Monitor the application",
+            "with Application Insights, KQL and alerts, then sit the AZ-400 exam"
+          ]
+        ],
+        "fr": [
+          [
+            "Planifier et relire le travail",
+            "avec Azure Boards, GitHub Projects, pull requests et stratégies de branche"
+          ],
+          [
+            "Construire des pipelines CI",
+            "en YAML avec templates, images dans Azure Container Registry et paquets dans Azure Artifacts"
+          ],
+          [
+            "Provisionner et déployer",
+            "avec Bicep et Terraform vers AKS, avec approbations, livraisons blue-green et canary"
+          ],
+          [
+            "Retirer les secrets des pipelines",
+            "avec Key Vault, l’identité fédérée de charge de travail et GitHub Advanced Security"
+          ],
+          [
+            "Superviser l’application",
+            "avec Application Insights, KQL et des alertes, puis passer l’examen AZ-400"
+          ]
+        ]
+      }
+    },
+    "blockchain-for-business": {
+      "code": "BLOCKCHAIN",
+      "outcomes": {
+        "en": [
+          [
+            "Explain how a blockchain works:",
+            "shared ledgers, permissions, consensus and smart contracts"
+          ],
+          [
+            "Trace a transaction",
+            "in a public block explorer"
+          ],
+          [
+            "Tell public from permissioned networks",
+            "and know who plays which role"
+          ],
+          [
+            "Judge whether a process needs a blockchain",
+            "with a decision checklist, or when a database is the better choice"
+          ],
+          [
+            "Outline a suitable network:",
+            "its participants, permissions and smart contracts, for a steering committee"
+          ]
+        ],
+        "fr": [
+          [
+            "Expliquer le fonctionnement d’une blockchain :",
+            "registres partagés, permissions, consensus et contrats intelligents"
+          ],
+          [
+            "Suivre une transaction",
+            "dans un explorateur de blocs public"
+          ],
+          [
+            "Distinguer réseaux publics et à permissions",
+            "et savoir qui joue quel rôle"
+          ],
+          [
+            "Juger si un processus a besoin d’une blockchain",
+            "avec une grille de décision, ou si une base de données suffit"
+          ],
+          [
+            "Esquisser un réseau adapté :",
+            "participants, permissions et contrats intelligents, pour un comité de pilotage"
+          ]
+        ]
+      }
+    },
+    "ccna-1-introduction-networks": {
+      "code": "CCNA-1",
+      "outcomes": {
+        "en": [
+          [
+            "Configure Cisco switches and routers:",
+            "hostname, passwords, management address, saved configuration"
+          ],
+          [
+            "Follow data from cable to packet:",
+            "Ethernet frames, MAC tables, ARP and IPv6 neighbor discovery"
+          ],
+          [
+            "Plan IPv4 and IPv6 addressing",
+            "with subnetting and VLSM, implemented in dual stack"
+          ],
+          [
+            "Run network services",
+            "with DHCP, DNS and HTTP, and manage every device over SSH only"
+          ],
+          [
+            "Build and troubleshoot a small business network",
+            "from a written brief"
+          ]
+        ],
+        "fr": [
+          [
+            "Configurer commutateurs et routeurs Cisco :",
+            "nom d’hôte, mots de passe, adresse d’administration, configuration sauvegardée"
+          ],
+          [
+            "Suivre les données du câble au paquet :",
+            "trames Ethernet, tables MAC, ARP et découverte de voisins IPv6"
+          ],
+          [
+            "Planifier l’adressage IPv4 et IPv6",
+            "avec sous-réseaux et VLSM, en double pile"
+          ],
+          [
+            "Mettre en place les services réseau",
+            "DHCP, DNS et HTTP, et administrer chaque équipement uniquement en SSH"
+          ],
+          [
+            "Construire et dépanner le réseau d’une petite entreprise",
+            "à partir d’un cahier des charges"
+          ]
+        ]
+      }
+    },
+    "ccna-2-switching-routing-wireless": {
+      "code": "CCNA-2",
+      "outcomes": {
+        "en": [
+          [
+            "Segment the LAN",
+            "with VLANs and 802.1Q trunks, routed by router-on-a-stick and layer 3 switches"
+          ],
+          [
+            "Keep the LAN running through failures",
+            "with Rapid PVST+, EtherChannel and HSRP"
+          ],
+          [
+            "Address hosts automatically",
+            "with DHCPv4, SLAAC and DHCPv6"
+          ],
+          [
+            "Secure ports and wireless",
+            "with DHCP snooping, port security and a controller-managed WLAN with WPA2 and WPA3"
+          ],
+          [
+            "Route between sites",
+            "with IPv4 and IPv6 static, default and floating static routes, and troubleshoot them"
+          ]
+        ],
+        "fr": [
+          [
+            "Segmenter le LAN",
+            "avec VLAN et trunks 802.1Q, routés par router-on-a-stick et commutateurs de niveau 3"
+          ],
+          [
+            "Maintenir le LAN en cas de panne",
+            "avec Rapid PVST+, EtherChannel et HSRP"
+          ],
+          [
+            "Adresser les hôtes automatiquement",
+            "avec DHCPv4, SLAAC et DHCPv6"
+          ],
+          [
+            "Sécuriser ports et sans-fil",
+            "avec DHCP snooping, port security et un WLAN géré par contrôleur en WPA2 et WPA3"
+          ],
+          [
+            "Router entre sites",
+            "avec des routes statiques, par défaut et flottantes en IPv4 et IPv6, et les dépanner"
+          ]
+        ]
+      }
+    },
+    "ccna-3-enterprise-networking": {
+      "code": "CCNA-3",
+      "outcomes": {
+        "en": [
+          [
+            "Route multiple sites",
+            "with single-area OSPFv2, DR and BDR election, cost tuning and a default route"
+          ],
+          [
+            "Enforce a security policy",
+            "with standard, extended and named ACLs"
+          ],
+          [
+            "Connect private addressing to the internet",
+            "with static NAT, dynamic NAT and PAT"
+          ],
+          [
+            "Manage the network",
+            "with NTP, syslog, SNMP, CDP and LLDP, and back up configurations"
+          ],
+          [
+            "Read device data through a REST API",
+            "with a short Python script, then sit the CCNA 200-301 exam"
+          ]
+        ],
+        "fr": [
+          [
+            "Router plusieurs sites",
+            "avec OSPFv2 en zone unique, élection DR et BDR, réglage des coûts et route par défaut"
+          ],
+          [
+            "Appliquer une politique de sécurité",
+            "avec des ACL standard, étendues et nommées"
+          ],
+          [
+            "Relier l’adressage privé à Internet",
+            "avec NAT statique, NAT dynamique et PAT"
+          ],
+          [
+            "Administrer le réseau",
+            "avec NTP, syslog, SNMP, CDP et LLDP, et sauvegarder les configurations"
+          ],
+          [
+            "Interroger les équipements via une API REST",
+            "avec un court script Python, puis passer l’examen CCNA 200-301"
+          ]
+        ]
+      }
+    },
+    "classical-ai": {
+      "code": "CLASSIC-AI",
+      "outcomes": {
+        "en": [
+          [
+            "Formulate problems as state spaces",
+            "and design agents for their environment"
+          ],
+          [
+            "Solve them with search:",
+            "uninformed and heuristic search, local search, genetic algorithms, particle swarms, CSP"
+          ],
+          [
+            "Build game-playing agents",
+            "with minimax, alpha-beta pruning and Monte Carlo tree search"
+          ],
+          [
+            "Reason with logic",
+            "in propositional and first-order logic: resolution, DPLL, forward and backward chaining"
+          ],
+          [
+            "Reason under uncertainty",
+            "with Bayesian networks and hidden Markov models: filtering, smoothing, Viterbi"
+          ]
+        ],
+        "fr": [
+          [
+            "Formuler un problème en espace d’états",
+            "et concevoir des agents adaptés à leur environnement"
+          ],
+          [
+            "Le résoudre par la recherche :",
+            "non informée et heuristique, locale, algorithmes génétiques, essaims particulaires, CSP"
+          ],
+          [
+            "Construire des agents de jeu",
+            "avec minimax, élagage alpha-bêta et recherche arborescente Monte-Carlo"
+          ],
+          [
+            "Raisonner en logique",
+            "propositionnelle et du premier ordre : résolution, DPLL, chaînage avant et arrière"
+          ],
+          [
+            "Raisonner dans l’incertain",
+            "avec réseaux bayésiens et modèles de Markov cachés : filtrage, lissage, Viterbi"
+          ]
+        ]
+      }
+    },
+    "cybersecurity-it-teams": {
+      "code": "CYBER-IT",
+      "outcomes": {
+        "en": [
+          [
+            "Recognise common attacks",
+            "and how they unfold, from phishing to network and application attacks"
+          ],
+          [
+            "Segment the network",
+            "on pfSense with firewall rules and secure wireless"
+          ],
+          [
+            "Harden Windows and Linux servers",
+            "against a checklist, with MFA, least privilege and logged admin access"
+          ],
+          [
+            "Prepare for ransomware:",
+            "backups that survive it, a tested restore and an NIST SP 800-61 incident response"
+          ],
+          [
+            "Map controls to ISO/IEC 27001 and NIST CSF 2.0,",
+            "with GDPR and Tunisian Organic Law 2004-63"
+          ]
+        ],
+        "fr": [
+          [
+            "Reconnaître les attaques courantes",
+            "et leur déroulement, du phishing aux attaques réseau et applicatives"
+          ],
+          [
+            "Segmenter le réseau",
+            "sur pfSense avec des règles de pare-feu et un sans-fil sécurisé"
+          ],
+          [
+            "Durcir des serveurs Windows et Linux",
+            "selon une grille, avec MFA, moindre privilège et accès d’administration journalisés"
+          ],
+          [
+            "Se préparer aux rançongiciels :",
+            "sauvegardes qui y résistent, restauration testée, réponse à incident selon NIST SP 800-61"
+          ],
+          [
+            "Relier les contrôles à l’ISO/IEC 27001 et au NIST CSF 2.0,",
+            "avec le RGPD et la loi organique tunisienne 2004-63"
+          ]
+        ]
+      }
+    },
+    "data-engineering-spark-kafka": {
+      "code": "SPARK-KAFKA",
+      "outcomes": {
+        "en": [
+          [
+            "Transform data with Spark:",
+            "DataFrames, Spark SQL and user-defined functions on object storage"
+          ],
+          [
+            "Write reliable lakehouse tables",
+            "with Delta Lake or Iceberg: merges, time travel, schema evolution"
+          ],
+          [
+            "Make Spark jobs faster",
+            "with partitioning, caching, the right joins and the Spark UI"
+          ],
+          [
+            "Process event streams",
+            "with Kafka on KRaft and Spark Structured Streaming, windows and watermarks"
+          ],
+          [
+            "Integrate and schedule pipelines",
+            "with Kafka Connect, Schema Registry, Airflow and data quality checks"
+          ]
+        ],
+        "fr": [
+          [
+            "Transformer des données avec Spark :",
+            "DataFrames, Spark SQL et fonctions utilisateur sur stockage objet"
+          ],
+          [
+            "Écrire des tables lakehouse fiables",
+            "avec Delta Lake ou Iceberg : merge, voyage dans le temps, évolution de schéma"
+          ],
+          [
+            "Accélérer les jobs Spark",
+            "par le partitionnement, le cache, les bonnes jointures et la Spark UI"
+          ],
+          [
+            "Traiter des flux d’événements",
+            "avec Kafka en KRaft et Spark Structured Streaming, fenêtres et watermarks"
+          ],
+          [
+            "Intégrer et planifier les pipelines",
+            "avec Kafka Connect, Schema Registry, Airflow et des contrôles de qualité"
+          ]
+        ]
+      }
+    },
+    "devsecops": {
+      "code": "DEVSECOPS",
+      "outcomes": {
+        "en": [
+          [
+            "Add security gates to the pipeline:",
+            "STRIDE threat model, static analysis, dependency checks and ZAP scans"
+          ],
+          [
+            "Secure the supply chain",
+            "with SBOMs, Cosign signatures, SLSA provenance and admission policies"
+          ],
+          [
+            "Scan infrastructure code",
+            "with Checkov and Trivy, and enforce rules with OPA Gatekeeper or Kyverno"
+          ],
+          [
+            "Remove secrets from code",
+            "with HashiCorp Vault dynamic secrets and gitleaks"
+          ],
+          [
+            "Harden Kubernetes and detect attacks",
+            "with Pod Security Standards, RBAC, NetworkPolicies and Falco"
+          ]
+        ],
+        "fr": [
+          [
+            "Ajouter des contrôles de sécurité au pipeline :",
+            "modèle de menaces STRIDE, analyse statique, dépendances et scans ZAP"
+          ],
+          [
+            "Sécuriser la chaîne d’approvisionnement",
+            "avec SBOM, signatures Cosign, provenance SLSA et politiques d’admission"
+          ],
+          [
+            "Analyser l’infrastructure en code",
+            "avec Checkov et Trivy, et imposer des règles avec OPA Gatekeeper ou Kyverno"
+          ],
+          [
+            "Retirer les secrets du code",
+            "avec les secrets dynamiques de HashiCorp Vault et gitleaks"
+          ],
+          [
+            "Durcir Kubernetes et détecter les attaques",
+            "avec Pod Security Standards, RBAC, NetworkPolicies et Falco"
+          ]
+        ]
+      }
+    },
+    "docker-kubernetes": {
+      "code": "DOCKER-K8S",
+      "outcomes": {
+        "en": [
+          [
+            "Build small, secure images",
+            "with multi-stage Dockerfiles, non-root users and Trivy scans"
+          ],
+          [
+            "Run multi-container applications",
+            "with Docker Compose, volumes and container networks"
+          ],
+          [
+            "Deploy on Kubernetes",
+            "with Helm, the Gateway API, cert-manager TLS and the Horizontal Pod Autoscaler"
+          ],
+          [
+            "Monitor the cluster",
+            "with Prometheus and Grafana, with resource limits and network policies"
+          ],
+          [
+            "Deliver from Git",
+            "with Argo CD and Kustomize overlays, from development to production"
+          ]
+        ],
+        "fr": [
+          [
+            "Construire des images légères et sûres",
+            "avec des Dockerfiles multi-étapes, sans root, analysées par Trivy"
+          ],
+          [
+            "Exécuter des applications multiconteneurs",
+            "avec Docker Compose, volumes et réseaux de conteneurs"
+          ],
+          [
+            "Déployer sur Kubernetes",
+            "avec Helm, la Gateway API, TLS par cert-manager et l’Horizontal Pod Autoscaler"
+          ],
+          [
+            "Superviser le cluster",
+            "avec Prometheus et Grafana, limites de ressources et network policies"
+          ],
+          [
+            "Livrer depuis Git",
+            "avec Argo CD et les overlays Kustomize, du développement à la production"
+          ]
+        ]
+      }
+    },
+    "enterprise-virtualization": {
+      "code": "PROXMOX",
+      "outcomes": {
+        "en": [
+          [
+            "Install Proxmox VE",
+            "with VLAN-aware bridges, bonds, ZFS, NFS, iSCSI and Ceph storage"
+          ],
+          [
+            "Create VMs and containers",
+            "with VirtIO, cloud-init templates, snapshots, clones and LXC"
+          ],
+          [
+            "Automate the platform",
+            "through its API, pvesh and Ansible playbooks"
+          ],
+          [
+            "Run a highly available cluster",
+            "with quorum, live migration and Proxmox Backup Server"
+          ],
+          [
+            "Migrate workloads from VMware ESXi",
+            "and choose a platform for the organisation"
+          ]
+        ],
+        "fr": [
+          [
+            "Installer Proxmox VE",
+            "avec ponts VLAN, agrégation de liens, stockage ZFS, NFS, iSCSI et Ceph"
+          ],
+          [
+            "Créer VM et conteneurs",
+            "avec VirtIO, modèles cloud-init, instantanés, clones et LXC"
+          ],
+          [
+            "Automatiser la plateforme",
+            "via son API, pvesh et des playbooks Ansible"
+          ],
+          [
+            "Exploiter un cluster hautement disponible",
+            "avec quorum, migration à chaud et Proxmox Backup Server"
+          ],
+          [
+            "Migrer des charges depuis VMware ESXi",
+            "et choisir une plateforme pour l’organisation"
+          ]
+        ]
+      }
+    },
+    "kubernetes-administration-cka": {
+      "code": "CKA",
+      "outcomes": {
+        "en": [
+          [
+            "Install a highly available cluster",
+            "with kubeadm, upgrade it and restore etcd from a snapshot"
+          ],
+          [
+            "Secure access",
+            "with least-privilege RBAC, ServiceAccounts and security contexts"
+          ],
+          [
+            "Control scheduling",
+            "with taints, tolerations, affinity, resource requests and priority classes"
+          ],
+          [
+            "Configure networking and storage:",
+            "CNI, CoreDNS, NetworkPolicies, Gateway API, dynamic volumes, Helm"
+          ],
+          [
+            "Troubleshoot nodes, pods and networks",
+            "from the command line, then sit the CKA exam"
+          ]
+        ],
+        "fr": [
+          [
+            "Installer un cluster hautement disponible",
+            "avec kubeadm, le mettre à niveau et restaurer etcd"
+          ],
+          [
+            "Sécuriser les accès",
+            "avec RBAC à moindre privilège, ServiceAccounts et contextes de sécurité"
+          ],
+          [
+            "Contrôler l’ordonnancement",
+            "avec taints, tolerations, affinité, requêtes de ressources et classes de priorité"
+          ],
+          [
+            "Configurer réseau et stockage :",
+            "CNI, CoreDNS, NetworkPolicies, Gateway API, volumes dynamiques, Helm"
+          ],
+          [
+            "Dépanner nœuds, pods et réseau",
+            "en ligne de commande, puis passer l’examen CKA"
+          ]
+        ]
+      }
+    },
+    "linux-automation-ansible": {
+      "code": "EX294",
+      "outcomes": {
+        "en": [
+          [
+            "Set up an Ansible workspace",
+            "with ansible-navigator, execution environments, VS Code and Git"
+          ],
+          [
+            "Write idempotent playbooks",
+            "with variables, facts, loops, conditions, handlers and error handling"
+          ],
+          [
+            "Template and protect configuration",
+            "with Jinja2 and Ansible Vault"
+          ],
+          [
+            "Organise automation in roles",
+            "with content collections and the RHEL system roles"
+          ],
+          [
+            "Automate RHEL administration:",
+            "packages, services, firewall, storage, users and SELinux, then sit EX294"
+          ]
+        ],
+        "fr": [
+          [
+            "Préparer un poste Ansible",
+            "avec ansible-navigator, environnements d’exécution, VS Code et Git"
+          ],
+          [
+            "Écrire des playbooks idempotents",
+            "avec variables, facts, boucles, conditions, handlers et gestion des erreurs"
+          ],
+          [
+            "Générer et protéger la configuration",
+            "avec Jinja2 et Ansible Vault"
+          ],
+          [
+            "Organiser l’automatisation en rôles",
+            "avec les collections de contenu et les rôles système RHEL"
+          ],
+          [
+            "Automatiser l’administration RHEL :",
+            "paquets, services, pare-feu, stockage, comptes et SELinux, puis passer l’EX294"
+          ]
+        ]
+      }
+    },
+    "linux-bash-scripting": {
+      "code": "LINUX-BASH",
+      "outcomes": {
+        "en": [
+          [
+            "Work efficiently at the command line:",
+            "help, filesystem, pipelines and text processing"
+          ],
+          [
+            "Control who reads and changes files",
+            "with owners, groups and permissions"
+          ],
+          [
+            "Run the system:",
+            "processes, services, logs, cron jobs, packages and passwordless SSH"
+          ],
+          [
+            "Write robust Bash scripts",
+            "with options, input checks, strict mode, traps, logging and ShellCheck"
+          ],
+          [
+            "Automate routine work:",
+            "backups, user provisioning and health reports"
+          ]
+        ],
+        "fr": [
+          [
+            "Travailler efficacement en ligne de commande :",
+            "aide, système de fichiers, pipelines et traitement de texte"
+          ],
+          [
+            "Contrôler qui lit et modifie les fichiers",
+            "avec propriétaires, groupes et droits"
+          ],
+          [
+            "Exploiter le système :",
+            "processus, services, journaux, tâches cron, paquets et SSH sans mot de passe"
+          ],
+          [
+            "Écrire des scripts Bash robustes",
+            "avec options, contrôle des entrées, mode strict, traps, journalisation et ShellCheck"
+          ],
+          [
+            "Automatiser les tâches courantes :",
+            "sauvegardes, création de comptes et rapports d’état"
+          ]
+        ]
+      }
+    },
+    "linux-network-services": {
+      "code": "LINUX-NETSVC",
+      "outcomes": {
+        "en": [
+          [
+            "Write and override systemd units",
+            "for the services the team deploys"
+          ],
+          [
+            "Configure resilient networking",
+            "with NetworkManager: dual-stack IPv6, bonds, bridges and VLANs"
+          ],
+          [
+            "Filter and resolve:",
+            "firewalld rich rules and port forwarding, unbound caching and BIND zones"
+          ],
+          [
+            "Deploy web, mail and database services:",
+            "Apache with TLS behind Nginx, Postfix and MariaDB with backups"
+          ],
+          [
+            "Share storage",
+            "over iSCSI, NFS and SMB on RHEL 10"
+          ]
+        ],
+        "fr": [
+          [
+            "Écrire et surcharger des unités systemd",
+            "pour les services déployés"
+          ],
+          [
+            "Configurer un réseau résilient",
+            "avec NetworkManager : IPv6 double pile, agrégation de liens, ponts et VLAN"
+          ],
+          [
+            "Filtrer et résoudre :",
+            "règles riches firewalld et redirection de ports, cache unbound et zones BIND"
+          ],
+          [
+            "Déployer web, courrier et base de données :",
+            "Apache en TLS derrière Nginx, Postfix et MariaDB avec sauvegardes"
+          ],
+          [
+            "Partager le stockage",
+            "en iSCSI, NFS et SMB sur RHEL 10"
+          ]
+        ]
+      }
+    },
+    "llms-ai-agents": {
+      "code": "LLM-AGENTS",
+      "outcomes": {
+        "en": [
+          [
+            "Get structured output from LLMs,",
+            "with hosted APIs and open models running locally"
+          ],
+          [
+            "Build RAG over company documents:",
+            "embeddings, chunking, hybrid retrieval, reranking and cited sources"
+          ],
+          [
+            "Build agents that act",
+            "with tool calling, LangGraph or CrewAI, and the Model Context Protocol"
+          ],
+          [
+            "Defend against prompt injection",
+            "and the OWASP risks for LLM applications"
+          ],
+          [
+            "Measure quality and cost",
+            "with evaluation sets and LLM-as-judge, then ship the app as a container API"
+          ]
+        ],
+        "fr": [
+          [
+            "Obtenir une sortie structurée des LLM,",
+            "avec des API hébergées et des modèles ouverts en local"
+          ],
+          [
+            "Construire un RAG sur les documents de l’entreprise :",
+            "embeddings, découpage, recherche hybride, reclassement et sources citées"
+          ],
+          [
+            "Construire des agents qui agissent",
+            "avec l’appel d’outils, LangGraph ou CrewAI, et le Model Context Protocol"
+          ],
+          [
+            "Se défendre contre l’injection de prompt",
+            "et les risques OWASP des applications LLM"
+          ],
+          [
+            "Mesurer qualité et coût",
+            "avec jeux d’évaluation et LLM-as-judge, puis livrer l’application comme API conteneurisée"
+          ]
+        ]
+      }
+    },
+    "machine-learning-deep-learning": {
+      "code": "ML-DL",
+      "outcomes": {
+        "en": [
+          [
+            "Build supervised models",
+            "from their mathematics: regressions, trees, ensembles and SVMs in scikit-learn"
+          ],
+          [
+            "Evaluate without leakage",
+            "with cross-validation, hyperparameter search, pipelines and MLflow tracking"
+          ],
+          [
+            "Find structure without labels:",
+            "clustering, Gaussian mixtures, PCA, t-SNE, UMAP and anomaly detection"
+          ],
+          [
+            "Train deep networks in PyTorch:",
+            "CNNs and transfer learning, recurrent networks, attention and Transformers"
+          ],
+          [
+            "Explain and document models",
+            "with SHAP, fairness reports and model cards under the EU AI Act"
+          ]
+        ],
+        "fr": [
+          [
+            "Construire des modèles supervisés",
+            "à partir de leurs mathématiques : régressions, arbres, ensembles et SVM avec scikit-learn"
+          ],
+          [
+            "Évaluer sans fuite de données",
+            "avec validation croisée, recherche d’hyperparamètres, pipelines et suivi MLflow"
+          ],
+          [
+            "Trouver une structure sans étiquettes :",
+            "clustering, modèles de mélange, ACP, t-SNE, UMAP et détection d’anomalies"
+          ],
+          [
+            "Entraîner des réseaux profonds avec PyTorch :",
+            "CNN et transfert, réseaux récurrents, attention et Transformers"
+          ],
+          [
+            "Expliquer et documenter les modèles",
+            "avec SHAP, rapports d’équité et model cards selon le règlement européen sur l’IA"
+          ]
+        ]
+      }
+    },
+    "ml-engineer-aws": {
+      "code": "AWS-MLA",
+      "outcomes": {
+        "en": [
+          [
+            "Prepare data for ML",
+            "with Glue, Data Wrangler, Feature Store and Clarify bias reports"
+          ],
+          [
+            "Train and tune models",
+            "on SageMaker AI with built-in algorithms, script mode and automatic tuning"
+          ],
+          [
+            "Deploy the right endpoint:",
+            "real-time, serverless, asynchronous or batch transform, with autoscaling"
+          ],
+          [
+            "Automate MLOps",
+            "with SageMaker Pipelines, the Model Registry, CI/CD and Model Monitor drift alerts"
+          ],
+          [
+            "Secure ML workloads",
+            "with least-privilege IAM, VPC isolation and encryption, then sit the MLA-C01 exam"
+          ]
+        ],
+        "fr": [
+          [
+            "Préparer les données pour le ML",
+            "avec Glue, Data Wrangler, Feature Store et les rapports de biais Clarify"
+          ],
+          [
+            "Entraîner et optimiser des modèles",
+            "sur SageMaker AI avec algorithmes intégrés, script mode et optimisation automatique"
+          ],
+          [
+            "Déployer le bon endpoint :",
+            "temps réel, serverless, asynchrone ou batch transform, avec mise à l’échelle automatique"
+          ],
+          [
+            "Automatiser le MLOps",
+            "avec SageMaker Pipelines, le Model Registry, la CI/CD et les alertes de dérive Model Monitor"
+          ],
+          [
+            "Sécuriser les charges de ML",
+            "avec IAM à moindre privilège, isolation VPC et chiffrement, puis passer l’examen MLA-C01"
+          ]
+        ]
+      }
+    },
+    "network-security": {
+      "code": "NETSEC",
+      "outcomes": {
+        "en": [
+          [
+            "Secure device management",
+            "with SSH, AAA through RADIUS or TACACS+, NTP and syslog"
+          ],
+          [
+            "Enforce the security policy",
+            "with ACLs, zone-based firewalls and next-generation firewall features"
+          ],
+          [
+            "Deploy pfSense or OPNsense",
+            "with VLANs, NAT and Suricata IPS"
+          ],
+          [
+            "Block Layer 2 attacks",
+            "with port security, DHCP snooping and dynamic ARP inspection, and run a lab PKI"
+          ],
+          [
+            "Connect sites and users securely",
+            "with IPsec, SSL VPN and WireGuard, and prove it with Nmap"
+          ]
+        ],
+        "fr": [
+          [
+            "Sécuriser l’administration des équipements",
+            "avec SSH, AAA via RADIUS ou TACACS+, NTP et syslog"
+          ],
+          [
+            "Appliquer la politique de sécurité",
+            "avec ACL, pare-feu par zones et fonctions de pare-feu nouvelle génération"
+          ],
+          [
+            "Déployer pfSense ou OPNsense",
+            "avec VLAN, NAT et l’IPS Suricata"
+          ],
+          [
+            "Bloquer les attaques de niveau 2",
+            "avec port security, DHCP snooping et inspection ARP dynamique, et gérer une PKI de lab"
+          ],
+          [
+            "Relier sites et utilisateurs en sécurité",
+            "avec IPsec, VPN SSL et WireGuard, et le prouver avec Nmap"
+          ]
+        ]
+      }
+    },
+    "networking-cloud-devops": {
+      "code": "NET-CLOUD",
+      "outcomes": {
+        "en": [
+          [
+            "Plan subnets",
+            "for a three-tier application"
+          ],
+          [
+            "Trace a request",
+            "from DNS lookup to TLS handshake to HTTP response"
+          ],
+          [
+            "Follow traffic",
+            "across routers, NAT, firewalls, load balancers, reverse proxies and CDNs"
+          ],
+          [
+            "Troubleshoot layer by layer",
+            "with the standard Linux tools and packet captures"
+          ],
+          [
+            "Find and fix real faults",
+            "in a multi-tier web deployment"
+          ]
+        ],
+        "fr": [
+          [
+            "Planifier des sous-réseaux",
+            "pour une application à trois niveaux"
+          ],
+          [
+            "Suivre une requête",
+            "de la résolution DNS à la négociation TLS et à la réponse HTTP"
+          ],
+          [
+            "Suivre le trafic",
+            "à travers routeurs, NAT, pare-feu, répartiteurs de charge, proxys inverses et CDN"
+          ],
+          [
+            "Dépanner couche par couche",
+            "avec les outils Linux standard et des captures de paquets"
+          ],
+          [
+            "Trouver et corriger de vraies pannes",
+            "dans un déploiement web multiniveau"
+          ]
+        ]
+      }
+    },
+    "nlp-text-to-transformers": {
+      "code": "NLP",
+      "outcomes": {
+        "en": [
+          [
+            "Clean and represent text",
+            "with spaCy, NLTK, TF-IDF, word2vec and GloVe"
+          ],
+          [
+            "Classify text and extract entities",
+            "with classical and neural models, evaluated on held-out data"
+          ],
+          [
+            "Find the topics of a corpus",
+            "with LDA and BERTopic"
+          ],
+          [
+            "Fine-tune BERT-family models",
+            "with Hugging Face, for Arabic, French and English text"
+          ],
+          [
+            "Judge when an LLM is the better tool,",
+            "with zero- and few-shot results compared on accuracy and cost"
+          ]
+        ],
+        "fr": [
+          [
+            "Nettoyer et représenter le texte",
+            "avec spaCy, NLTK, TF-IDF, word2vec et GloVe"
+          ],
+          [
+            "Classer le texte et extraire les entités",
+            "avec des modèles classiques et neuronaux, évalués sur un jeu de test"
+          ],
+          [
+            "Trouver les thèmes d’un corpus",
+            "avec LDA et BERTopic"
+          ],
+          [
+            "Affiner des modèles de la famille BERT",
+            "avec Hugging Face, sur des textes en arabe, en français et en anglais"
+          ],
+          [
+            "Juger quand un LLM est le meilleur outil,",
+            "en comparant zero-shot et few-shot sur la précision et le coût"
+          ]
+        ]
+      }
+    },
+    "python-data-science": {
+      "code": "PY-DATA",
+      "outcomes": {
+        "en": [
+          [
+            "Work in reproducible notebooks",
+            "with JupyterLab and Colab"
+          ],
+          [
+            "Compute with NumPy",
+            "through vectorisation, broadcasting and linear algebra"
+          ],
+          [
+            "Clean, merge and reshape data",
+            "with pandas"
+          ],
+          [
+            "Query SQLite and PostgreSQL",
+            "with SQL and bring the results into pandas"
+          ],
+          [
+            "Show the findings",
+            "in clear charts with Matplotlib, Seaborn and Plotly"
+          ]
+        ],
+        "fr": [
+          [
+            "Travailler dans des notebooks reproductibles",
+            "avec JupyterLab et Colab"
+          ],
+          [
+            "Calculer avec NumPy",
+            "par vectorisation, broadcasting et algèbre linéaire"
+          ],
+          [
+            "Nettoyer, fusionner et remodeler les données",
+            "avec pandas"
+          ],
+          [
+            "Interroger SQLite et PostgreSQL",
+            "en SQL et ramener les résultats dans pandas"
+          ],
+          [
+            "Présenter les résultats",
+            "dans des graphiques clairs avec Matplotlib, Seaborn et Plotly"
+          ]
+        ]
+      }
+    },
+    "python-fundamentals": {
+      "code": "PY-FUND",
+      "outcomes": {
+        "en": [
+          [
+            "Write Python programs",
+            "with variables, types, conditions and loops, in VS Code"
+          ],
+          [
+            "Store and transform data",
+            "with lists, tuples, dictionaries, sets and comprehensions"
+          ],
+          [
+            "Organise and test code",
+            "in functions, modules and packages, with venv, pip and pytest"
+          ],
+          [
+            "Read and write files",
+            "as JSON and CSV, with errors handled by exceptions"
+          ],
+          [
+            "Model programs with classes,",
+            "inheritance and dataclasses, in a tested command-line application"
+          ]
+        ],
+        "fr": [
+          [
+            "Écrire des programmes Python",
+            "avec variables, types, conditions et boucles, dans VS Code"
+          ],
+          [
+            "Stocker et transformer des données",
+            "avec listes, tuples, dictionnaires, ensembles et compréhensions"
+          ],
+          [
+            "Organiser et tester le code",
+            "en fonctions, modules et paquets, avec venv, pip et pytest"
+          ],
+          [
+            "Lire et écrire des fichiers",
+            "JSON et CSV, avec gestion des erreurs par exceptions"
+          ],
+          [
+            "Modéliser avec des classes,",
+            "l’héritage et les dataclasses, dans une application en ligne de commande testée"
+          ]
+        ]
+      }
+    },
+    "rhcsa-part-1": {
+      "code": "RHCSA-1",
+      "outcomes": {
+        "en": [
+          [
+            "Install and register RHEL 10",
+            "and manage files from the command line"
+          ],
+          [
+            "Manage users and groups",
+            "with password ageing, sudo rights and standard and special permissions"
+          ],
+          [
+            "Control processes and services",
+            "with signals, priorities, systemd units and boot targets"
+          ],
+          [
+            "Administer remotely",
+            "with key-only SSH, rsync archives, a persistent journal and time sync"
+          ],
+          [
+            "Configure network and software:",
+            "static IPv4 and IPv6, dnf repositories, Flatpak and mounts"
+          ]
+        ],
+        "fr": [
+          [
+            "Installer et enregistrer RHEL 10",
+            "et gérer les fichiers en ligne de commande"
+          ],
+          [
+            "Gérer utilisateurs et groupes",
+            "avec vieillissement des mots de passe, sudo et droits standard et spéciaux"
+          ],
+          [
+            "Contrôler processus et services",
+            "avec signaux, priorités, unités systemd et cibles de démarrage"
+          ],
+          [
+            "Administrer à distance",
+            "avec SSH par clé, archives rsync, journal persistant et synchronisation de l’heure"
+          ],
+          [
+            "Configurer réseau et logiciels :",
+            "IPv4 et IPv6 statiques, dépôts dnf, Flatpak et montages"
+          ]
+        ]
+      }
+    },
+    "rhcsa-part-2": {
+      "code": "RHCSA-2",
+      "outcomes": {
+        "en": [
+          [
+            "Automate routine work",
+            "with Bash scripts, regular expressions, cron and systemd timers"
+          ],
+          [
+            "Keep SELinux enforcing",
+            "and fix denials with contexts, booleans and port labels"
+          ],
+          [
+            "Manage storage",
+            "with partitions, swap, LVM volumes grown online, NFS and autofs"
+          ],
+          [
+            "Recover a system that does not boot",
+            "and reset a lost root password"
+          ],
+          [
+            "Run rootless Podman containers",
+            "as systemd services behind firewalld, then sit the EX200 exam"
+          ]
+        ],
+        "fr": [
+          [
+            "Automatiser les tâches courantes",
+            "avec scripts Bash, expressions régulières, cron et timers systemd"
+          ],
+          [
+            "Garder SELinux en mode enforcing",
+            "et corriger les refus avec contextes, booléens et étiquettes de port"
+          ],
+          [
+            "Gérer le stockage",
+            "avec partitions, swap, volumes LVM étendus à chaud, NFS et autofs"
+          ],
+          [
+            "Remettre en service un système qui ne démarre plus",
+            "et réinitialiser un mot de passe root perdu"
+          ],
+          [
+            "Exécuter des conteneurs Podman sans root",
+            "comme services systemd derrière firewalld, puis passer l’EX200"
+          ]
+        ]
+      }
+    },
+    "rhcsa-rapid-track": {
+      "code": "RHCSA-RT",
+      "outcomes": {
+        "en": [
+          [
+            "Operate a RHEL 10 server:",
+            "users, permissions, services, journal, static networking and key-only SSH"
+          ],
+          [
+            "Install, schedule and script",
+            "with dnf, Flatpak, cron, systemd timers and short shell scripts"
+          ],
+          [
+            "Secure and extend storage",
+            "with SELinux, LVM, swap, automounted NFS and ACLs"
+          ],
+          [
+            "Recover the boot",
+            "and run rootless Podman containers as systemd services"
+          ],
+          [
+            "Pass two timed mock EX200 exams",
+            "and be ready to sit the real one"
+          ]
+        ],
+        "fr": [
+          [
+            "Exploiter un serveur RHEL 10 :",
+            "comptes, droits, services, journal, réseau statique et SSH par clé"
+          ],
+          [
+            "Installer, planifier et scripter",
+            "avec dnf, Flatpak, cron, timers systemd et courts scripts shell"
+          ],
+          [
+            "Sécuriser et étendre le stockage",
+            "avec SELinux, LVM, swap, NFS en montage automatique et ACL"
+          ],
+          [
+            "Récupérer le démarrage",
+            "et exécuter des conteneurs Podman sans root comme services systemd"
+          ],
+          [
+            "Réussir deux examens blancs EX200 chronométrés",
+            "et être prêt pour le vrai"
+          ]
+        ]
+      }
+    },
+    "soc-analyst": {
+      "code": "SOC-CBROPS",
+      "outcomes": {
+        "en": [
+          [
+            "Investigate Windows and Linux hosts",
+            "through processes, registry, services and logs"
+          ],
+          [
+            "Analyse network traffic",
+            "with tcpdump, Wireshark and NetFlow: scans, brute force, exfiltration"
+          ],
+          [
+            "Analyse malware safely",
+            "in a sandbox and hunt its indicators of compromise"
+          ],
+          [
+            "Triage alerts in Security Onion,",
+            "map attacks to MITRE ATT&CK and write Sigma rules"
+          ],
+          [
+            "Respond to incidents",
+            "following NIST SP 800-61 Rev. 3, with a timeline and a report"
+          ]
+        ],
+        "fr": [
+          [
+            "Enquêter sur des hôtes Windows et Linux",
+            "via processus, registre, services et journaux"
+          ],
+          [
+            "Analyser le trafic réseau",
+            "avec tcpdump, Wireshark et NetFlow : scans, force brute, exfiltration"
+          ],
+          [
+            "Analyser un logiciel malveillant en sécurité",
+            "dans une sandbox et rechercher ses indicateurs de compromission"
+          ],
+          [
+            "Trier les alertes dans Security Onion,",
+            "relier les attaques à MITRE ATT&CK et écrire des règles Sigma"
+          ],
+          [
+            "Répondre aux incidents",
+            "selon NIST SP 800-61 Rev. 3, avec chronologie et rapport"
+          ]
+        ]
+      }
+    },
+    "system-design-fundamentals": {
+      "code": "SYS-DESIGN",
+      "outcomes": {
+        "en": [
+          [
+            "Estimate capacity",
+            "and reason about latency, throughput, CAP and consistency"
+          ],
+          [
+            "Design APIs and caching",
+            "with authentication, caches and CDNs"
+          ],
+          [
+            "Scale data stores",
+            "with replication, sharding and indexes"
+          ],
+          [
+            "Decouple services",
+            "with queues, publish/subscribe and Kafka, with retries and circuit breakers"
+          ],
+          [
+            "Defend a design and its trade-offs",
+            "on classic cases: URL shortener, chat, payments, news feed"
+          ]
+        ],
+        "fr": [
+          [
+            "Estimer la capacité",
+            "et raisonner sur latence, débit, CAP et cohérence"
+          ],
+          [
+            "Concevoir API et cache",
+            "avec authentification, caches et CDN"
+          ],
+          [
+            "Faire monter en charge les données",
+            "avec réplication, partitionnement et index"
+          ],
+          [
+            "Découpler les services",
+            "avec files, publication/abonnement et Kafka, nouvelles tentatives et disjoncteurs"
+          ],
+          [
+            "Défendre une conception et ses compromis",
+            "sur des cas classiques : raccourcisseur d’URL, messagerie, paiement, fil d’actualité"
+          ]
+        ]
+      }
+    },
+    "technical-academic-writing": {
+      "code": "TECH-WRITING",
+      "outcomes": {
+        "en": [
+          [
+            "Manage and cite sources",
+            "with a Zotero reference library"
+          ],
+          [
+            "Read and summarise papers",
+            "efficiently"
+          ],
+          [
+            "Avoid plagiarism",
+            "and follow publication ethics"
+          ],
+          [
+            "Write with clarity, precision and concision,",
+            "choosing active or passive voice on purpose"
+          ],
+          [
+            "Design figures that make one point each,",
+            "and review a peer’s section"
+          ]
+        ],
+        "fr": [
+          [
+            "Gérer et citer ses sources",
+            "avec une bibliothèque Zotero"
+          ],
+          [
+            "Lire et résumer des articles",
+            "efficacement"
+          ],
+          [
+            "Éviter le plagiat",
+            "et respecter l’éthique de publication"
+          ],
+          [
+            "Écrire avec clarté, précision et concision,",
+            "en choisissant la voix active ou passive à dessein"
+          ],
+          [
+            "Concevoir des figures qui font passer un seul message,",
+            "et relire la section d’un pair"
+          ]
+        ]
+      }
+    },
+    "zero-trust-cloud-security": {
+      "code": "ZERO-TRUST",
+      "outcomes": {
+        "en": [
+          [
+            "Apply zero trust in practice:",
+            "NIST SP 800-207 tenets, with identity as the main control"
+          ],
+          [
+            "Assess the organisation",
+            "against the five pillars of the CISA Zero Trust Maturity Model v2.0"
+          ],
+          [
+            "Protect cloud data:",
+            "encryption and key ownership, data loss prevention and residency rules"
+          ],
+          [
+            "Use and secure AI:",
+            "as a help for detection and response, and as a new system to protect"
+          ],
+          [
+            "Build a prioritised zero trust roadmap",
+            "for an executive committee"
+          ]
+        ],
+        "fr": [
+          [
+            "Appliquer le zero trust en pratique :",
+            "principes NIST SP 800-207, l’identité comme contrôle principal"
+          ],
+          [
+            "Évaluer l’organisation",
+            "selon les cinq piliers du modèle de maturité Zero Trust v2.0 de la CISA"
+          ],
+          [
+            "Protéger les données dans le cloud :",
+            "chiffrement et détention des clés, prévention des fuites et localisation des données"
+          ],
+          [
+            "Utiliser et sécuriser l’IA :",
+            "aide à la détection et à la réponse, et nouveau système à protéger"
+          ],
+          [
+            "Construire une feuille de route zero trust priorisée",
+            "pour un comité de direction"
+          ]
+        ]
+      }
     }
   }
 }

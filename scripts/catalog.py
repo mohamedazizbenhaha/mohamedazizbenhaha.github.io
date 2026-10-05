@@ -108,6 +108,22 @@ h2{font:800 66px/1 'Bricolage Grotesque';letter-spacing:-.025em;margin-top:44px}
 .brand .n{font:700 28px Manrope}.brand .r{font:500 21px Manrope;color:#8d8a84;margin-top:2px}
 .brand .sep{width:1.5px;height:62px;background:#3a3730}"""
 
+# Long titles or many rows push the brand into the bottom margin: tighten step by step, only when needed
+# (row padding, then heading size, then outcome spacing), so cards that already fit render unchanged.
+FIT = """<script>document.fonts.ready.then(()=>{
+const ok=()=>document.querySelector('.brand').getBoundingClientRect().bottom<=1000;
+const set=(sel,prop,v)=>document.querySelectorAll(sel).forEach(e=>e.style[prop]=v);
+const steps=[];
+for(let p=12;p>=7;p--)steps.push(()=>set('.m','padding',p+'px 0'));
+steps.push(()=>set('.m','gridTemplateColumns','58px 1fr 80px'));
+steps.push(()=>{set('.m p','fontSize','16px');set('.m b','fontSize','25px')});
+steps.push(()=>{set('h2','marginTop','30px');set('.mods,.out','marginTop','22px')});
+for(let s=60;s>=54;s-=6)steps.push(()=>set('h2','fontSize',s+'px'));
+for(let g=16;g>=8;g-=4)steps.push(()=>set('.out','gap',g+'px'));
+for(let s=24;s>=21;s--)steps.push(()=>set('.o div','fontSize',s+'px'));
+for(const f of steps){if(ok())break;f()}
+});</script>"""
+
 
 def esc(s):
     return html.escape(s, quote=False)
@@ -132,11 +148,18 @@ def certs_short(p, t):
     return out[0] if len(out) == 1 else ", ".join(out[:-1]) + f" {t['and']} " + out[-1]
 
 
+def glue(s):
+    # keep "(RHEL 10)" and "sans-fil :" on one line
+    s = re.sub(r"\([^)]*\)", lambda m: m.group(0).replace(" ", "\u00a0"), s)
+    return re.sub(r" ([:;!?])", "\u00a0\\1", s)
+
+
 def title_lines(title):
     w = title.split()
     if len(w) == 1:
         return title, ""
-    best = min(range(1, len(w)), key=lambda i: abs(len(" ".join(w[:i])) - len(" ".join(w[i:]))))
+    cuts = [i for i in range(1, len(w)) if " ".join(w[:i]).count("(") == " ".join(w[:i]).count(")") and re.search(r"\w", w[i])]
+    best = min(cuts or range(1, len(w)), key=lambda i: abs(len(" ".join(w[:i])) - len(" ".join(w[i:]))))
     return " ".join(w[:best]), " ".join(w[best:])
 
 
@@ -155,14 +178,14 @@ def pages(p, lang, outcomes, cnfcpp):
     n_mod = sum(1 for ph in core if not is_project(ph))
     has_proj = any(is_project(ph) for ph in core)
     l1, l2 = title_lines(p["title"])
-    size = max(72, min(120, int(120 * 11 / max(len(l1), len(l2), 1))))
+    size = max(58, min(120,int(120 * 11 / max(len(l1), len(l2), 1))))
     facts = "".join(f"<div class=f><b>{a}</b>{b}</div>" for a, b in [
         (f"{hrs(total)} h", t["total"]),
         (str(n_mod), t["mods"] if has_proj else t["mods_only"]),
         (t["site"], t["remote"])])
     cs = certs_short(p, t)
     cert = f"<div class=c>{t['prep']} {esc(cs)}</div>" if cs else ""
-    one = (f"{top}<h1 style='font-size:{size}px'>{esc(l1)}<br><span>{esc(l2)}</span></h1>"
+    one = (f"{top}<h1 style='font-size:{size}px'>{esc(glue(l1))}<br><span>{esc(glue(l2))}</span></h1>"
            f"<div class=sub>{esc(p['subtitle'])}.</div><div class=facts>{facts}</div>{cert}{brand}")
     rows, k = "", 0
     for ph in core:
@@ -176,13 +199,14 @@ def pages(p, lang, outcomes, cnfcpp):
     if buf:
         rows += (f"<div class='m buf'><i>+</i><div><b>{t['buffer']}</b><p>{t['buffer_focus']}</p></div>"
                  f"<em>{hrs(buf)} h</em></div>")
-    two = (f"{top}<h2>{esc(p['title'])}<br><span>{t['programme']}</span></h2><div class=mods>{rows}</div>"
+    two = (f"{top}<h2>{esc(glue(p['title']))}<br><span>{t['programme']}</span></h2><div class=mods>{rows}</div>"
            f"<div class=tot>{t['sum'].format(m=hrs(mods), b=hrs(buf), t=hrs(total))}</div>{brand}")
-    outs = "".join(f"<div class=o><i>{i:02d}</i><div>{esc(a)} <span>{esc(b)}</span></div></div>"
+    keep = lambda s: re.sub(r"(\S+-\S+)", r"<b style='font:inherit;white-space:nowrap'>\1</b>", esc(glue(s)))
+    outs = "".join(f"<div class=o><i>{i:02d}</i><div>{keep(a)} <span>{keep(b)}</span></div></div>"
                    for i, (a, b) in enumerate(outcomes, 1))
     h1, h2 = t["outcomes"]
     three = f"{top}<h2>{h1}<br><span>{h2}</span></h2><div class=out>{outs}</div>{brand}"
-    wrap = lambda body: f"<!doctype html><meta charset=utf-8>{FONT}<style>{CSS}</style>{body}"
+    wrap = lambda body: f"<!doctype html><meta charset=utf-8>{FONT}<style>{CSS}</style>{body}{FIT}"
     return [wrap(one), wrap(two), wrap(three)], (mods, buf, total)
 
 

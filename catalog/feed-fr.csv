@@ -20,3 +20,738 @@ Prépare les thèmes principaux de HashiCorp Terraform Associate, GitHub Actions
 Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
 
 Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,8100.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Ingenierie-DevOps-81h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/devops-engineering-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/devops-engineering-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/devops-engineering-fr-3.jpg",Mohamed Aziz BEN HAHA
+AWS-AIF-33,AWS AI Practitioner et IA générative (33 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent choisir le bon service d’IA AWS pour un cas d’usage, construire un assistant RAG protégé avec Bedrock, en estimer le coût et se présenter à l’examen AIF-C01.
+
+Programme (33 h : 27 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 IA et ML sur AWS (6 h) : Notions d’IA et de ML, cycle de vie du ML, services d’IA prêts à l’emploi
+02 IA générative et Amazon Bedrock (6 h) : Modèles de fondation, prompts, bases de connaissances, agents et personnalisation Bedrock
+03 Outils, IA responsable et préparation à l’examen (9 h) : SageMaker Canvas et JumpStart, Amazon Q, IA responsable, sécurité, AIF-C01
+Projet final (6 h) : Un assistant d’IA générative sur Bedrock, présenté au groupe
+
+Public : Professionnels de l’IT, développeurs, analystes et managers qui travaillent avec l’IA sur AWS
+Prérequis : Aucun en IA. Connaître les services AWS essentiels aide (cours : AWS Cloud Practitioner) sans être nécessaire
+Format : Cours courts suivis de TP guidés dans la console AWS ; entraînement à l’examen
+Évaluation : Un TP validé par phase, des questions d’entraînement et un projet final présenté au groupe ; attestation de formation si les TP et le projet sont validés
+
+Prépare les thèmes principaux de AWS Certified AI Practitioner.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3300.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-AI-Practitioner-et-IA-generative-33h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-ai-practitioner-genai-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/aws-ai-practitioner-genai-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-ai-practitioner-genai-fr-3.jpg",Mohamed Aziz BEN HAHA
+AWS-CLF-33,AWS Cloud Practitioner (33 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent expliquer et choisir les services AWS essentiels, déployer une application web simple et hautement disponible, en estimer le coût et se présenter à l’examen CLF-C02.
+
+Programme (33 h : 27 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Concepts du cloud et sécurité (6 h) : Modèles du cloud, tarification et infrastructure mondiale, IAM
+02 Services essentiels (9 h) : VPC, Route 53, CloudFront, EC2, Lambda, conteneurs, stockage, bases de données
+03 Architecture, exploitation et préparation à l’examen (6 h) : Well-Architected Framework, répartition de charge, Auto Scaling, CloudWatch, entraînement CLF-C02
+Projet final (6 h) : Une application web hautement disponible et son estimation de coût
+
+Public : Professionnels de l’IT, développeurs, étudiants et managers qui débutent avec AWS
+Prérequis : Aucun. Culture informatique de base ; des notions de réseau ou de Linux aident sans être nécessaires
+Format : Cours courts suivis de TP guidés dans la console et la CLI AWS ; entraînement à l’examen
+Évaluation : Un TP validé à la fin de chaque phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet
+
+Prépare les thèmes principaux de AWS Certified Cloud Practitioner.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3300.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-Cloud-Practitioner-33h-FR.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-cloud-practitioner-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/aws-cloud-practitioner-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-cloud-practitioner-fr-3.jpg",Mohamed Aziz BEN HAHA
+AWS-SEC-33,Sécurité du cloud AWS (33 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent appliquer le moindre privilège sur plusieurs comptes, protéger réseaux et données, détecter menaces et erreurs de configuration, et répondre à un incident sur AWS avec une remédiation automatisée.
+
+Programme (33 h : 27 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Identité et gouvernance (6 h) : Responsabilité partagée, politiques IAM et évaluation, Organizations, fédération
+02 Protection de l’infrastructure et des données (6 h) : Sécurité VPC, WAF, Shield, Network Firewall, KMS, Secrets Manager, Macie
+03 Détection, réponse et présentation de l’examen (9 h) : CloudTrail, Config, GuardDuty, Security Hub CSPM, Inspector, réponse aux incidents, SCS-C03
+Projet final (6 h) : Un compte volontairement non sécurisé, sécurisé et documenté
+
+Public : Ingénieurs sécurité, cloud et exploitation responsables d’environnements AWS
+Prérequis : Services AWS essentiels (cours : AWS Cloud Practitioner), ou pratique équivalente. Ces services ne sont pas réenseignés
+Format : Cours courts suivis de TP guidés ; simulations d’incidents
+Évaluation : Un TP validé à la fin de chaque phase et un projet final avec rapport de constats ; attestation de formation pour les participants qui valident les deux
+
+Prépare les thèmes principaux de AWS Certified Security – Specialty.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3300.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Securite-du-cloud-AWS-33h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-cloud-security-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/aws-cloud-security-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-cloud-security-fr-3.jpg",Mohamed Aziz BEN HAHA
+AWS-SOA-33,AWS CloudOps Engineer (33 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent déployer une charge de travail avec CloudFormation via un pipeline, la superviser, automatiser sa remédiation et ses correctifs, tester sa sauvegarde et sa reprise, rendre compte de son coût et se présenter à l’examen SOA-C03.
+
+Programme (33 h : 27 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Supervision et automatisation (6 h) : CloudWatch, X-Ray, optimisation des performances, EventBridge, Systems Manager
+02 Fiabilité et déploiement (6 h) : Auto Scaling, répartition de charge, AWS Backup, reprise, CloudFormation, CI/CD, ECS et EKS
+03 Sécurité, réseau et préparation à l’examen (9 h) : Opérations IAM, Config, Security Hub CSPM, maîtrise des coûts, dépannage VPC, SOA-C03
+Projet final (6 h) : Une charge de travail exploitée de bout en bout
+
+Public : Administrateurs système et ingénieurs d’exploitation qui exploitent des charges de travail sur AWS
+Prérequis : Services AWS essentiels (cours : AWS Cloud Practitioner) et ligne de commande Linux (cours : Linux et scripting Bash), ou équivalent. Ces services ne sont pas réenseignés
+Format : Cours courts suivis de TP guidés ; entraînement à l’examen
+Évaluation : Un TP validé à la fin de chaque phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet
+
+Prépare les thèmes principaux de AWS Certified CloudOps Engineer – Associate.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3300.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-CloudOps-Engineer-33h-FR.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-cloudops-engineer-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/aws-cloudops-engineer-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-cloudops-engineer-fr-3.jpg",Mohamed Aziz BEN HAHA
+AWS-DEA-27,Ingénierie des données sur AWS (27 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent construire un pipeline orchestré qui ingère, catalogue, transforme, gouverne et met à disposition des données sur AWS, et expliquer ses choix de conception.
+
+Programme (27 h : 24 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Data lakes et ingestion (6 h) : Lake, entrepôt et lakehouse, formats S3 et Iceberg, ingestion par lots et en flux
+02 Traitement et entreposage (6 h) : AWS Glue, EMR, Amazon Redshift Serverless
+03 Gouvernance, orchestration et analyse (6 h) : Lake Formation, qualité des données, Step Functions, MWAA, Athena, Flink, QuickSight
+Projet final (6 h) : Un pipeline de données de bout en bout, présenté au groupe
+
+Public : Analystes de données, développeurs et ingénieurs qui construisent des pipelines de données sur AWS
+Prérequis : Services AWS essentiels (cours : AWS Cloud Practitioner) ; Python et SQL (cours : Python pour la data science), ou équivalent. Ces notions sont utilisées, pas enseignées
+Format : Cours courts suivis de TP guidés sur un jeu de données commun ; entraînement à l’examen
+Évaluation : Un TP validé à la fin de chaque phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet
+
+Prépare les thèmes principaux de AWS Certified Data Engineer – Associate.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,2700.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Ingenierie-des-donnees-sur-AWS-27h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-data-engineering-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/aws-data-engineering-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-data-engineering-fr-3.jpg",Mohamed Aziz BEN HAHA
+AWS-SRVLS-18,Projets AWS serverless et automatisation (18 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants repartent avec six projets AWS fonctionnels dans Git, réunis en une architecture documentée qu’ils savent expliquer, reconstruire et chiffrer.
+
+Programme (18 h : 15 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Conteneurs et infrastructure en code (6 h) : Application web avec Terraform, CI/CD vers ECS Fargate avec OIDC
+02 Serverless et automatisation de la sécurité (6 h) : API serverless, chaîne événementielle, automatisation des incidents, contrôles d’images
+Projet final (3 h) : Une architecture de portfolio documentée
+
+Public : Ingénieurs ayant des bases d’architecture AWS qui veulent des projets de portfolio concrets
+Prérequis : Architecture AWS (cours : AWS Solutions Architect Associate) ; bases de Terraform et de GitHub Actions (cours : Ingénierie DevOps). Ces outils sont utilisés, pas enseignés
+Format : Projets pratiques à partir de dépôts de départ fournis, chacun précédé d’une courte présentation de la conception
+Évaluation : Chaque projet validé quand il fonctionne, et un projet final de portfolio présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,1800.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Projets-AWS-serverless-et-automatisation-18h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-serverless-projects-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/aws-serverless-projects-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-serverless-projects-fr-3.jpg",Mohamed Aziz BEN HAHA
+AWS-SAA-36,AWS Solutions Architect Associate (36 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent concevoir et construire une architecture multiniveau sur plusieurs zones de disponibilité, en justifier les compromis (coût, résilience, sécurité) et se présenter à l’examen SAA-C03.
+
+Programme (36 h : 30 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Résilience et réseau (6 h) : Multi-AZ, multi-Région, sauvegarde, VPC, connectivité hybride
+02 Calcul, stockage et données (6 h) : EC2, Auto Scaling, S3, transfert de données, bases de données
+03 Découplage et sécurité (6 h) : SQS, SNS, EventBridge, Step Functions, IAM, KMS, WAF
+04 Serverless et préparation à l’examen (6 h) : Lambda, API Gateway, ECS et EKS, Fargate, scénarios SAA-C03
+Projet final (6 h) : Une architecture multiniveau, défendue en revue d’architecture
+
+Public : Ingénieurs et architectes qui conçoivent des charges de travail sur AWS
+Prérequis : Services AWS essentiels (cours : AWS Cloud Practitioner), ou pratique équivalente. Ces services ne sont pas réenseignés
+Format : Discussions de conception, cours courts et TP guidés ; entraînement sur scénarios d’examen
+Évaluation : Un TP validé par phase, des questions d’entraînement sur scénarios et une revue d’architecture finale ; attestation de formation pour les participants qui valident les TP et le projet
+
+Prépare les thèmes principaux de AWS Certified Solutions Architect – Associate.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3600.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/AWS-Solutions-Architect-Associate-36h-FR.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-solutions-architect-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/aws-solutions-architect-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/aws-solutions-architect-fr-3.jpg",Mohamed Aziz BEN HAHA
+AZ-104-42,Azure Administrator (42 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent construire et gouverner un environnement Azure avec identités, stratégies, réseaux, stockage, machines virtuelles, supervision et sauvegarde, et se présenter à l’examen AZ-104.
+
+Programme (42 h : 36 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Identité et gouvernance (9 h) : Resource Manager, Microsoft Entra ID, RBAC, Azure Policy, coûts
+02 Réseau (6 h) : VNet, NSG, Bastion, points de terminaison privés, DNS
+03 Stockage et calcul (9 h) : Stockage, VM et groupes identiques, Bicep, App Service, conteneurs
+04 Supervision et sauvegarde (6 h) : Azure Monitor, Network Watcher, Azure Backup, AZ-104
+Projet final (6 h) : L’environnement Azure d’une entreprise, présenté au groupe
+
+Public : Administrateurs système et ingénieurs IT qui exploitent Microsoft Azure
+Prérequis : Aucun sur Azure. Une bonne connaissance des systèmes d’exploitation, des réseaux IP et de la ligne de commande est attendue
+Format : Cours courts et TP guidés (portail, Azure CLI, PowerShell) ; entraînement à l’examen
+Évaluation : Un TP validé par phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet
+
+Prépare les thèmes principaux de Microsoft Certified: Azure Administrator Associate.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,4200.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Azure-Administrator-42h-FR.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/azure-administrator-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/azure-administrator-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/azure-administrator-fr-3.jpg",Mohamed Aziz BEN HAHA
+AZ-400-45,Azure DevOps Engineer (45 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent faire passer une application du backlog à une livraison canary supervisée sur AKS via des pipelines sécurisés, et se présenter à l’examen AZ-400.
+
+Programme (45 h : 39 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Planification et code source (6 h) : Azure Boards, GitHub Projects, Azure Repos et GitHub, stratégies de branche
+02 Intégration continue (9 h) : Pipelines YAML, templates, ACR, Azure Artifacts, GitHub Actions
+03 Infrastructure et déploiement (9 h) : Bicep et Terraform, gestion de configuration, AKS, stratégies de livraison
+04 Sécurité et supervision (9 h) : Key Vault, identité fédérée, Advanced Security, Application Insights, préparation AZ-400
+Projet final (6 h) : Un projet Azure DevOps complet, présenté au groupe
+
+Public : Administrateurs Azure et développeurs qui construisent des chaînes de livraison sur Azure
+Prérequis : Administration Azure (cours : Azure Administrator) ou bases de la CI/CD (cours : Ingénierie DevOps) ; non réenseignées. La certification Expert exige aussi Azure Administrator ou Azure Developer Associate
+Format : Cours courts suivis de TP guidés ; une même application reprise dans toutes les phases ; entraînement à l’examen
+Évaluation : Un TP validé par phase, des questions d’entraînement à l’examen et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet
+
+Prépare les thèmes principaux de Microsoft Certified: DevOps Engineer Expert.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,4500.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Azure-DevOps-Engineer-45h-FR.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/azure-devops-engineer-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/azure-devops-engineer-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/azure-devops-engineer-fr-3.jpg",Mohamed Aziz BEN HAHA
+BLOCKCHAIN-12,La blockchain pour l’entreprise (12 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent expliquer le fonctionnement d’une blockchain, juger si un processus métier en a besoin, et esquisser les participants, permissions et contrats intelligents d’un réseau adapté.
+
+Programme (12 h : 9 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux de la blockchain (3 h) : Origines, Bitcoin, registres distribués, consensus, contrats intelligents
+02 Valeur métier et cas d’usage (3 h) : Frictions d’information, d’interaction et d’innovation, cas d’usage sectoriels, quand s’en passer
+Projet final (3 h) : L’évaluation d’un cas d’usage, présentée au groupe
+
+Public : Managers, consultants et professionnels de l’IT qui évaluent des projets blockchain
+Prérequis : Aucun. Aucune connaissance en programmation ou en cryptographie n’est nécessaire
+Format : Atelier : cours courts, chacun suivi d’exercices de groupe sur des cas métier
+Évaluation : Exercices de groupe revus dans chaque phase et une évaluation finale d’un cas d’usage présentée au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,1200.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/La-blockchain-pour-l-entreprise-12h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/blockchain-for-business-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/blockchain-for-business-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/blockchain-for-business-fr-3.jpg",Mohamed Aziz BEN HAHA
+CCNA-1-39,Introduction aux réseaux (CCNA 1) (39 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent construire un petit réseau commuté et routé, planifier l’adressage IPv4 et IPv6 avec sous-réseaux et VLSM, sécuriser des équipements Cisco et dépanner la connectivité de base.
+
+Programme (39 h : 33 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux des réseaux (6 h) : Types de réseaux, modèles de référence, première configuration d’équipements
+02 Du lien au paquet (6 h) : Supports, Ethernet et commutation, paquets IP, ARP et découverte de voisins
+03 Routeurs et adressage IP (9 h) : Configuration du routeur, IPv4, sous-réseaux et VLSM, IPv6
+04 Transport, services et sécurité (6 h) : ICMP, TCP et UDP, DNS, DHCP, HTTP, sécurisation d’un petit réseau
+Projet final (6 h) : Le réseau d’une petite entreprise, documenté et présenté
+
+Public : Étudiants, techniciens et professionnels de l’IT qui commencent le parcours CCNA
+Prérequis : Aucun. Usage courant d’un ordinateur ; l’aisance avec le binaire aide, et il est revu pendant le cours
+Format : Cours courts suivis de TP guidés sur des équipements Cisco simulés
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prépare les thèmes principaux de CCNA, cours 1 sur 3.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3900.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Introduction-aux-reseaux-CCNA-1-39h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/ccna-1-introduction-networks-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/ccna-1-introduction-networks-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/ccna-1-introduction-networks-fr-3.jpg",Mohamed Aziz BEN HAHA
+CCNA-2-42,"Commutation, routage et sans-fil : notions essentielles (CCNA 2) (42 h)","Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent construire un LAN de campus redondant et sécurisé avec VLAN, routage inter-VLAN, accès sans fil et routage statique, et le dépanner.
+
+Programme (42 h : 36 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Commutation et VLAN (9 h) : Configuration des commutateurs, VLAN et trunks, routage inter-VLAN
+02 Redondance et services d’adressage (9 h) : STP, EtherChannel, DHCPv4, SLAAC et DHCPv6, HSRP
+03 Sécurité du LAN et sans-fil (6 h) : Parades aux attaques de niveau 2, WLAN avec contrôleur, WPA2 et WPA3
+04 Routage (6 h) : Table de routage, routes statiques et par défaut, dépannage, intégration des compétences
+Projet final (6 h) : Un réseau de campus, construit et présenté
+
+Public : Participants ayant suivi le CCNA 1 ou disposant d’une expérience réseau équivalente
+Prérequis : Introduction aux réseaux (CCNA 1), ou équivalent : configuration IOS, adressage IPv4 et IPv6, sous-réseaux. Ces sujets ne sont pas réenseignés
+Format : Cours courts suivis de TP guidés sur des équipements Cisco simulés
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prépare les thèmes principaux de CCNA, cours 2 sur 3.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,4200.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Commutation-routage-et-sans-fil-CCNA-2-42h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/ccna-2-switching-routing-wireless-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/ccna-2-switching-routing-wireless-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/ccna-2-switching-routing-wireless-fr-3.jpg",Mohamed Aziz BEN HAHA
+CCNA-3-42,"Réseaux d’entreprise, sécurité et automatisation (CCNA 3) (42 h)","Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent construire, sécuriser et administrer un réseau multisite (OSPF, ACL, NAT), l’interroger via une API REST en Python, et passer l’examen CCNA 200-301.
+
+Programme (42 h : 36 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 OSPF (6 h) : Configuration, réglage et dépannage d’OSPFv2 en zone unique
+02 Sécurité, ACL et NAT (9 h) : Menaces, listes de contrôle d’accès, NAT et PAT
+03 WAN, VPN et administration du réseau (6 h) : WAN et SD-WAN, VPN et IPsec, QoS, protocoles d’administration
+04 Conception, automatisation et révision CCNA (9 h) : Conception évolutive, dépannage, SDN, automatisation, examen blanc
+Projet final (6 h) : Le réseau d’un site distant d’entreprise, documenté et testé
+
+Public : Participants ayant suivi le CCNA 2 et qui préparent l’examen CCNA
+Prérequis : Commutation, routage et sans-fil : notions essentielles (CCNA 2), ou équivalent ; ces sujets ne sont pas réenseignés. Python non requis
+Format : Cours courts suivis de TP guidés sur équipements Cisco simulés ; un examen blanc
+Évaluation : Un TP validé par phase, un examen blanc et un projet final présenté au groupe ; attestation de formation pour qui valide les TP et le projet
+
+Prépare les thèmes principaux de CCNA, cours 3 sur 3.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,4200.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Reseaux-d-entreprise-securite-et-automatisation-CCNA-3-42h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/ccna-3-enterprise-networking-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/ccna-3-enterprise-networking-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/ccna-3-enterprise-networking-fr-3.jpg",Mohamed Aziz BEN HAHA
+CLASSIC-AI-90,Intelligence artificielle classique (90 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les étudiants savent formuler un problème d’IA, implémenter et comparer des algorithmes de recherche, de logique et probabilistes, et choisir la méthode adaptée.
+
+Programme (90 h : 81 h de modules + 9 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Introduction et agents intelligents (9 h) : Ce qu’est l’IA, agents et environnements, rationalité
+02 Recherche et résolution de problèmes (18 h) : Recherche non informée et heuristique, recherche locale, méthodes évolutionnaires, CSP
+03 Jeux et recherche adversariale (6 h) : Minimax, élagage alpha-bêta, fonctions d’évaluation, recherche arborescente Monte-Carlo
+04 Représentation des connaissances et logique (15 h) : Logique propositionnelle et du premier ordre, inférence, ingénierie des connaissances
+05 Raisonnement probabiliste (15 h) : Probabilités, réseaux bayésiens, inférence exacte et approchée
+06 Raisonnement dans le temps (9 h) : Processus de Markov, modèles de Markov cachés, filtrage, lissage, Viterbi
+Projet final (9 h) : Un système d’IA de synthèse, proposé, développé et présenté
+
+Public : Étudiants universitaires en informatique et en ingénierie
+Prérequis : Programmation Python (cours : Fondamentaux de la programmation Python), ou équivalent ; mathématiques discrètes et bases de probabilités
+Format : Cours qui établissent chaque algorithme, suivis de mini-projets d’implémentation en Python
+Évaluation : Six mini-projets et un projet de synthèse présenté à la classe ; attestation de formation si les deux sont validés ; notation selon les règles de l’établissement
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,9000.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Intelligence-artificielle-classique-90h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/classical-ai-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/classical-ai-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/classical-ai-fr-3.jpg",Mohamed Aziz BEN HAHA
+CYBER-IT-27,Cybersécurité pour les équipes IT (27 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent reconnaître les attaques courantes, durcir réseaux, postes et accès, préparer sauvegardes et première réponse à incident, et relier les contrôles à l’ISO/IEC 27001 et au NIST CSF.
+
+Programme (27 h : 24 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Menaces et sécurité réseau (6 h) : Acteurs de la menace, kill chain, attaques courantes, segmentation, pare-feu, sans-fil
+02 Postes et accès (6 h) : Durcissement Windows et Linux, correctifs, EDR, MFA, moindre privilège, chiffrement, PKI
+03 Opérations, réponse et gouvernance (6 h) : Journaux et alertes, sauvegardes et rançongiciels, réponse aux incidents, politiques et normes
+Projet final (6 h) : Une évaluation de sécurité et un plan de durcissement pour une petite entreprise
+
+Public : Administrateurs système et réseau, équipes de support et responsables IT
+Prérequis : Aucun en sécurité. Une expérience de l’administration IT au quotidien (utilisateurs, réseaux, Windows ou Linux) est attendue
+Format : Cours courts suivis de TP et d’exercices sur des scénarios d’entreprise réalistes
+Évaluation : Un TP ou un exercice validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,2700.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Cybersecurite-pour-les-equipes-IT-27h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/cybersecurity-it-teams-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/cybersecurity-it-teams-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/cybersecurity-it-teams-fr-3.jpg",Mohamed Aziz BEN HAHA
+SPARK-KAFKA-33,Ingénierie des données avec Spark et Kafka (33 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent construire, optimiser et planifier des pipelines par lots et en flux avec Spark et Kafka, qui écrivent des tables lakehouse fiables et passent des contrôles de qualité des données.
+
+Programme (33 h : 27 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux de Spark (6 h) : De Hadoop au lakehouse, architecture de Spark, DataFrames et Spark SQL
+02 Tables lakehouse et performances (6 h) : Parquet, Delta Lake et Iceberg, partitionnement, jointures, exécution adaptative
+03 Flux, intégration et orchestration (9 h) : Kafka en KRaft, Structured Streaming, Kafka Connect, Schema Registry, Airflow
+Projet final (6 h) : Analyse des commandes en temps réel, présentée au groupe
+
+Public : Analystes de données, développeurs et ingénieurs qui se tournent vers l’ingénierie des données
+Prérequis : Python, pandas et SQL (cours : Python pour la data science), ou équivalent. Ces notions sont utilisées, pas enseignées
+Format : Cours courts suivis de TP guidés sur un même jeu de données repris dans toutes les phases
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3300.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Ingenierie-des-donnees-avec-Spark-et-Kafka-33h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/data-engineering-spark-kafka-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/data-engineering-spark-kafka-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/data-engineering-spark-kafka-fr-3.jpg",Mohamed Aziz BEN HAHA
+DEVSECOPS-57,DevSecOps (57 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent placer et régler des contrôles de sécurité du code jusqu’à l’exécution sur Kubernetes, et rendre compte du risque résiduel.
+
+Programme (57 h : 48 h de modules + 9 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux et sécurité applicative (12 h) : Shift-left, modélisation des menaces, SAST, SCA et licences, DAST
+02 Conteneurs et chaîne d’approvisionnement (9 h) : Analyse et durcissement des images, SBOM, signature, SLSA, admission
+03 Infrastructure et secrets (12 h) : Analyse de l’IaC, politiques en code, HashiCorp Vault, détection de secrets
+04 Kubernetes et exécution (6 h) : Pod Security Standards, durcissement RBAC, NetworkPolicies, Falco
+Projet final (9 h) : Chaîne de livraison sécurisée et rapport de sécurité
+
+Public : Ingénieurs DevOps et développeurs responsables d’une chaîne de livraison
+Prérequis : Intégration et livraison continues, Terraform et déploiement sur Kubernetes (cours : Ingénierie DevOps, qui prolonge Docker et Kubernetes), ou équivalent. La construction de pipelines n’est pas réenseignée
+Format : Cours courts suivis de TP guidés ; une même application et une même chaîne dans toutes les phases
+Évaluation : Un TP validé par phase et un projet final avec rapport de sécurité ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,5700.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/DevSecOps-57h-FR.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/devsecops-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/devsecops-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/devsecops-fr-3.jpg",Mohamed Aziz BEN HAHA
+DOCKER-K8S-57,Docker et Kubernetes (57 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent conteneuriser une application multiservice, la déployer sur Kubernetes avec Helm, routage, TLS, mise à l’échelle automatique et supervision, et la livrer depuis Git avec Argo CD.
+
+Programme (57 h : 48 h de modules + 9 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Docker (15 h) : Images, conteneurs, stockage, réseau, Compose et sécurité
+02 Kubernetes (18 h) : Charges de travail, services, configuration, stockage, routage, mise à l’échelle, Helm, sécurité
+03 GitOps (9 h) : Argo CD, modèle pull, environnements avec Kustomize et Helm
+Projet final (6 h) : Une application multiservice, de Compose au GitOps
+
+Public : Développeurs, administrateurs système et ingénieurs DevOps qui débutent avec les conteneurs
+Prérequis : Ligne de commande Linux (cours : Linux et scripting Bash, ou équivalent). Aucune expérience des conteneurs n’est nécessaire
+Format : Cours courts suivis de TP guidés ; une même application reprise dans toutes les phases
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,5700.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Docker-et-Kubernetes-57h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/docker-kubernetes-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/docker-kubernetes-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/docker-kubernetes-fr-3.jpg",Mohamed Aziz BEN HAHA
+PROXMOX-36,Virtualisation d’entreprise : KVM et Proxmox VE (36 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent déployer et exploiter un cluster Proxmox VE avec stockage partagé, haute disponibilité, sauvegardes testées et charges de travail migrées, et choisir une plateforme pour leur organisation.
+
+Programme (36 h : 30 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux de KVM et Proxmox VE (9 h) : KVM et libvirt, réseau et stockage Proxmox VE
+02 Machines virtuelles et conteneurs (6 h) : VM, modèles et cloud-init, conteneurs LXC et automatisation
+03 Cluster, exploitation et migration (9 h) : Haute disponibilité, contrôle d’accès, sauvegardes, migration, choix d’une plateforme
+Projet final (6 h) : Un cluster hautement disponible de trois nœuds, présenté au groupe
+
+Public : Administrateurs système qui exploitent ou préparent une plateforme de virtualisation
+Prérequis : Administration Linux (cours : Linux et scripting Bash, ou RHCSA partie 1 : administration système Red Hat I) et bases des réseaux IP. Les bases de Linux ne sont pas réenseignées
+Format : Cours courts suivis de TP guidés
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3600.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Virtualisation-d-entreprise-36h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/enterprise-virtualization-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/enterprise-virtualization-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/enterprise-virtualization-fr-3.jpg",Mohamed Aziz BEN HAHA
+CKA-36,Administration Kubernetes (CKA) (36 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent installer, sécuriser, mettre à niveau, sauvegarder et dépanner un cluster Kubernetes en ligne de commande, et se présenter à l’examen CKA.
+
+Programme (36 h : 30 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Installation et cycle de vie du cluster (6 h) : kubeadm, plan de contrôle hautement disponible, mises à niveau, sauvegarde d’etcd
+02 Sécurité et ordonnancement (6 h) : RBAC, ServiceAccounts, contextes de sécurité, contrôle de l’ordonnancement
+03 Réseau, stockage et extensions (6 h) : CNI, Services et DNS, NetworkPolicies, Gateway API, stockage, Helm, CRD
+04 Dépannage et préparation à l’examen (6 h) : Dépannage des nœuds, des pods et du réseau, examen blanc chronométré
+Projet final (6 h) : Un cluster hautement disponible, construit, sécurisé, mis à niveau et réparé
+
+Public : Ingénieurs qui exploitent des clusters Kubernetes et préparent l’examen CKA
+Prérequis : Niveau utilisateur de Kubernetes (cours : Docker et Kubernetes) : Pods, Deployments, Services, Helm. L’utilisation de Kubernetes n’est pas réenseignée ; ce cours porte sur son exploitation
+Format : Cours courts suivis de TP guidés en ligne de commande ; un examen blanc chronométré
+Évaluation : Un TP validé par phase, un examen blanc et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet
+
+Prépare les thèmes principaux de Certified Kubernetes Administrator.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3600.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Administration-Kubernetes-CKA-36h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/kubernetes-administration-cka-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/kubernetes-administration-cka-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/kubernetes-administration-cka-fr-3.jpg",Mohamed Aziz BEN HAHA
+EX294-42,Automatisation Linux avec Ansible (EX294) (42 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent automatiser l’administration RHEL avec des playbooks idempotents, des rôles, des collections et Vault conservés dans Git, et se présenter à l’examen EX294.
+
+Programme (42 h : 36 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux d’Ansible (6 h) : Nœud de contrôle, outillage, Git, inventaires et commandes ad hoc
+02 Écriture de playbooks (9 h) : Plays, handlers, variables, facts et contrôle des tâches
+03 Templates, secrets et rôles (6 h) : Templates Jinja2, Ansible Vault, rôles et collections de contenu
+04 Tâches d’administration et préparation à l’examen (9 h) : Rôles système RHEL, dépannage, administration automatisée, examen blanc
+Projet final (6 h) : Un environnement à trois niveaux automatisé depuis Git, présenté au groupe
+
+Public : Administrateurs RHEL qui veulent automatiser leur travail quotidien et préparer l’EX294
+Prérequis : Niveau RHCSA (cours : RHCSA partie 2 : administration système Red Hat II, ou RHCSA en parcours accéléré). Seule l’automatisation des tâches d’administration est enseignée, pas les tâches elles-mêmes
+Format : Cours courts suivis de TP guidés ; un examen blanc chronométré
+Évaluation : Un TP validé à la fin de chaque phase, un examen blanc EX294 chronométré et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les TP et le projet
+
+Prépare les thèmes principaux de Red Hat Certified Advanced System Administrator in Ansible ; avec le RHCSA, donne le RHCE in Ansible.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,4200.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Automatisation-Linux-avec-Ansible-42h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/linux-automation-ansible-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/linux-automation-ansible-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/linux-automation-ansible-fr-3.jpg",Mohamed Aziz BEN HAHA
+LINUX-BASH-39,Linux et scripting Bash (39 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent utiliser et gérer un système Linux en ligne de commande et écrire, déboguer et planifier des scripts Bash robustes qui automatisent sauvegardes, création de comptes et rapports d’état.
+
+Programme (39 h : 33 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux de Linux (9 h) : Le shell, le système de fichiers, les droits et le traitement de texte
+02 Bases de l’administration système (6 h) : Processus, services, planification, paquets et réseau
+03 Scripting Bash (12 h) : Syntaxe Bash, structures de contrôle, fonctions et scripts robustes
+Projet final (6 h) : Une boîte à outils d’automatisation, présentée au groupe
+
+Public : Étudiants, développeurs et professionnels de l’IT qui débutent sous Linux
+Prérequis : Aucun. Usage courant d’un ordinateur ; aucune expérience préalable de Linux ou de la programmation n’est nécessaire
+Format : Cours courts suivis de TP guidés en ligne de commande
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3900.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Linux-et-scripting-Bash-39h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/linux-bash-scripting-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/linux-bash-scripting-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/linux-bash-scripting-fr-3.jpg",Mohamed Aziz BEN HAHA
+LINUX-NETSVC-36,Services réseau Linux (RHEL 10) (36 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent déployer, sécuriser et dépanner des services DNS, web, courrier, base de données et stockage réseau sur RHEL 10.
+
+Programme (36 h : 30 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 systemd et réseau avancé (9 h) : Unités personnalisées, IPv6, agrégation de liens, ponts et VLAN
+02 Pare-feu et DNS (6 h) : Règles riches, NAT et redirection de ports, DNS cache et faisant autorité
+03 Services applicatifs et stockage (9 h) : Apache et Nginx avec TLS, Postfix, MariaDB, iSCSI, NFS et SMB
+Projet final (6 h) : L’infrastructure d’une petite entreprise, présentée au groupe
+
+Public : Administrateurs RHEL qui exploitent des services réseau et applicatifs
+Prérequis : Niveau RHCSA (cours : RHCSA partie 2 : administration système Red Hat II, ou RHCSA en parcours accéléré) : les bases de SELinux, firewalld et du stockage ne sont pas réenseignées
+Format : Cours courts suivis de TP guidés sur RHEL 10
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,3600.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Services-reseau-Linux-36h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/linux-network-services-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/linux-network-services-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/linux-network-services-fr-3.jpg",Mohamed Aziz BEN HAHA
+LLM-AGENTS-27,LLM et agents d’IA (27 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent construire une application d’agent avec RAG et outils, réduire son exposition à l’injection de prompt, mesurer sa qualité et son coût, et la déployer comme API conteneurisée.
+
+Programme (27 h : 24 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux des LLM (6 h) : Transformers et entraînement, prompts, sortie structurée, API et modèles ouverts
+02 RAG et agents (6 h) : Embeddings, bases vectorielles, recherche et reclassement, outils, frameworks d’agents
+03 MCP, sécurité et évaluation (6 h) : Model Context Protocol, injection de prompt et garde-fous, évaluation, traçage, déploiement
+Projet final (6 h) : Une application d’agent, évaluée et déployée
+
+Public : Développeurs qui veulent construire des applications avec des grands modèles de langage
+Prérequis : Programmation Python (cours : Fondamentaux de la programmation Python), ou équivalent ; des bases de Docker aident (cours : Docker et Kubernetes). Aucune connaissance en machine learning n’est nécessaire
+Format : Cours courts suivis de TP guidés ; une même application reprise dans toutes les phases
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,2700.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/LLM-et-agents-d-IA-27h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/llms-ai-agents-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/llms-ai-agents-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/llms-ai-agents-fr-3.jpg",Mohamed Aziz BEN HAHA
+ML-DL-75,Machine learning et deep learning (75 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent poser un problème de ML, comparer modèles classiques et de deep learning, les évaluer sans fuite de données, expliquer leurs prédictions et suivre les expériences.
+
+Programme (75 h : 66 h de modules + 9 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Apprentissage supervisé (24 h) : Régression, classification, arbres, ensembles, SVM, évaluation, pipelines
+02 Apprentissage non supervisé (12 h) : Clustering, modèles de mélange, ACP, apprentissage de variétés, anomalies, recommandation
+03 Deep learning (15 h) : Réseaux de neurones à la main, rétropropagation, PyTorch, CNN, attention et Transformers
+04 IA responsable (6 h) : Explicabilité, équité, règlement européen sur l’IA, model cards
+Projet final (9 h) : Un projet de machine learning de bout en bout, présenté au groupe
+
+Public : Développeurs, analystes et ingénieurs qui veulent construire des modèles de machine learning
+Prérequis : Python, NumPy et pandas (cours : Python pour la data science), ou équivalent ; algèbre du lycée. Les mathématiques nécessaires sont enseignées dans le cours
+Format : Cours qui établissent chaque méthode, suivis de TP dans Jupyter ; les mathématiques sont enseignées là où elles servent
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,7500.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Machine-learning-et-deep-learning-75h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/machine-learning-deep-learning-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/machine-learning-deep-learning-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/machine-learning-deep-learning-fr-3.jpg",Mohamed Aziz BEN HAHA
+AWS-MLA-45,Ingénierie du machine learning sur AWS (45 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent construire un pipeline automatisé de la préparation des données à un endpoint supervisé sur SageMaker AI, le sécuriser, et se présenter à l’examen MLA-C01.
+
+Programme (45 h : 39 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Infrastructure de ML et préparation des données (9 h) : Infrastructure SageMaker AI, ingestion, Data Wrangler, Feature Store, contrôle des biais
+02 Développement des modèles (6 h) : Algorithmes intégrés, script mode, entraînement distribué, optimisation, évaluation
+03 Déploiement et MLOps (9 h) : Endpoints, mise à l’échelle automatique, SageMaker Pipelines, Model Registry, CI/CD, supervision
+04 Sécurité, IA générative et préparation à l’examen (9 h) : Moindre privilège, isolation VPC, chiffrement, Bedrock en production, MLA-C01
+Projet final (6 h) : Un système de ML en production sur SageMaker AI, présenté au groupe
+
+Public : Data scientists et ingénieurs qui mettent des modèles de machine learning en production sur AWS
+Prérequis : Machine learning (cours : Machine learning et deep learning) et services d’IA AWS (cours : AWS AI Practitioner et IA générative), avec les services AWS essentiels (cours : AWS Cloud Practitioner), ou équivalent
+Format : Cours courts suivis de TP guidés dans SageMaker Studio ; un même modèle repris dans toutes les phases ; entraînement à l’examen
+Évaluation : Un TP validé par phase, des questions d’entraînement et un projet final présenté au groupe ; attestation de formation si les TP et le projet sont validés
+
+Prépare les thèmes principaux de AWS Certified Machine Learning Engineer – Associate.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,4500.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Ingenierie-du-machine-learning-sur-AWS-45h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/ml-engineer-aws-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/ml-engineer-aws-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/ml-engineer-aws-fr-3.jpg",Mohamed Aziz BEN HAHA
+NETSEC-51,Sécurité des réseaux (51 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent durcir les équipements réseau, déployer AAA, ACL, pare-feu, IPS, protections de niveau 2 et VPN, et prouver le résultat par des tests de sécurité.
+
+Programme (51 h : 45 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Sécuriser les équipements réseau (12 h) : Menaces et parades, administration sécurisée, AAA, ACL
+02 Pare-feu et IPS (12 h) : Pare-feu à états et par zones, NGFW, pfSense ou OPNsense, Suricata, IPS
+03 Terminaux, niveau 2 et cryptographie (6 h) : Protection des terminaux, attaques de niveau 2 et parades, intégrité, authenticité, PKI
+04 VPN, zero trust et tests (9 h) : IPsec site à site, accès distant SSL et WireGuard, ZTNA, tests de sécurité
+Projet final (6 h) : Le réseau sécurisé d’une agence, validé par des tests
+
+Public : Administrateurs et ingénieurs réseau chargés de sécuriser les réseaux
+Prérequis : Commutation et routage (cours : Commutation, routage et sans-fil : notions essentielles (CCNA 2)), ou équivalent. Ces sujets ne sont pas réenseignés
+Format : Cours courts suivis de TP guidés sur des équipements Cisco simulés et des pare-feu open source
+Évaluation : Un TP validé à la fin de chaque phase et un projet final avec tests de validation ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,5100.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Securite-des-reseaux-51h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/network-security-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/network-security-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/network-security-fr-3.jpg",Mohamed Aziz BEN HAHA
+NET-CLOUD-18,Réseaux pour le cloud et le DevOps (18 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent suivre le chemin réseau du client au service, planifier des sous-réseaux, et trouver et corriger des pannes DNS, TLS, de routage, de pare-feu et de répartiteur de charge avec les outils standard.
+
+Programme (18 h : 15 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux des réseaux (6 h) : TCP/IP, adressage IPv4 et sous-réseaux, DNS, HTTP et TLS
+02 Routage, trafic et dépannage (6 h) : Routage, NAT, pare-feu, répartition de charge et outils de diagnostic
+Projet final (3 h) : Diagnostiquer et réparer un déploiement multiniveau en panne
+
+Public : Développeurs, ingénieurs DevOps et cloud sans formation en réseau
+Prérequis : Aucun. L’aisance dans un terminal Linux aide (cours : Linux et scripting Bash). Aucune connaissance réseau nécessaire
+Format : Atelier : cours courts, chacun suivi d’exercices pratiques en ligne de commande
+Évaluation : Exercices validés dans chaque phase et un projet final de dépannage ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,1800.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Reseaux-pour-le-cloud-et-le-DevOps-18h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/networking-cloud-devops-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/networking-cloud-devops-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/networking-cloud-devops-fr-3.jpg",Mohamed Aziz BEN HAHA
+NLP-27,NLP : du traitement de texte aux Transformers (27 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent construire, affiner et évaluer des modèles de NLP de classification et d’extraction sur des textes en français, en anglais et en arabe, et juger quand un LLM est le meilleur outil.
+
+Programme (27 h : 24 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Traitement et représentation du texte (6 h) : Tâches de NLP, segmentation, normalisation, sacs de mots, TF-IDF, plongements lexicaux
+02 Tâches classiques du NLP (6 h) : Classification et sentiment, entités nommées et relations, modélisation thématique
+03 Transformers et LLM (6 h) : Affinage de BERT, NLP multilingue, LLM pour les tâches de NLP
+Projet final (6 h) : Une application de NLP multilingue, présentée au groupe
+
+Public : Data scientists et développeurs qui travaillent avec des données textuelles
+Prérequis : Python et pandas (cours : Python pour la data science) et bases du deep learning (cours : Machine learning et deep learning, phase deep learning), ou équivalent. Ces notions sont utilisées, pas enseignées
+Format : Cours courts suivis de TP guidés dans Jupyter sur des corpus en français, en anglais et en arabe
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,2700.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/NLP-du-traitement-de-texte-aux-Transformers-27h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/nlp-text-to-transformers-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/nlp-text-to-transformers-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/nlp-text-to-transformers-fr-3.jpg",Mohamed Aziz BEN HAHA
+PY-DATA-21,Python pour la data science (21 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent charger, nettoyer, interroger, analyser et visualiser un jeu de données réel avec Python, pandas et SQL, et présenter leurs résultats dans un notebook reproductible.
+
+Programme (21 h : 18 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Outils et NumPy (6 h) : Python pour les données, Jupyter et reproductibilité, tableaux NumPy
+02 Pandas, SQL et visualisation (9 h) : DataFrames, nettoyage et remodelage, requêtes SQL depuis Python, graphiques
+Projet final (3 h) : Un rapport d’analyse exploratoire sur un jeu de données réel
+
+Public : Analystes, étudiants et développeurs qui travaillent avec des données
+Prérequis : Bases de Python (cours : Fondamentaux de la programmation Python, ou équivalent) : variables, structures de données, fonctions. Ces notions ne sont pas réenseignées
+Format : Cours courts avec programmation en direct dans Jupyter, chacun suivi d’exercices sur des jeux de données réels
+Évaluation : Exercices validés à la fin de chaque phase et un rapport d’analyse final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,2100.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Python-pour-la-data-science-21h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/python-data-science-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/python-data-science-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/python-data-science-fr-3.jpg",Mohamed Aziz BEN HAHA
+PY-FUND-27,Fondamentaux de la programmation Python (27 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent écrire, organiser et tester des programmes Python qui utilisent structures de données, fonctions, fichiers, gestion des erreurs et classes.
+
+Programme (27 h : 24 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Bases de Python (6 h) : Installation, variables, types, opérateurs, entrées et sorties, conditions et boucles
+02 Structures de données et fonctions (6 h) : Listes, tuples, dictionnaires, ensembles, compréhensions, fonctions, modules, pytest
+03 Fichiers, erreurs et objets (6 h) : Lecture et écriture de fichiers, exceptions, JSON et CSV, classes, héritage, dataclasses
+Projet final (6 h) : Une application en ligne de commande testée, présentée au groupe
+
+Public : Débutants, étudiants et professionnels qui apprennent à programmer avec Python
+Prérequis : Aucun. Usage courant d’un ordinateur ; aucune expérience de la programmation n’est nécessaire
+Format : Cours courts avec programmation en direct, chacun suivi d’exercices guidés
+Évaluation : Exercices validés à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,2700.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Fondamentaux-de-la-programmation-Python-27h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/python-fundamentals-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/python-fundamentals-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/python-fundamentals-fr-3.jpg",Mohamed Aziz BEN HAHA
+RHCSA-1-42,RHCSA partie 1 : administration système Red Hat I (42 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent installer un serveur RHEL 10 et en gérer les utilisateurs, les droits, les services, l’accès SSH, les journaux, le réseau et les logiciels.
+
+Programme (42 h : 36 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Bases de la ligne de commande (6 h) : RHEL 10, aide, fichiers texte et gestion des fichiers
+02 Utilisateurs, groupes et droits (6 h) : Comptes locaux, sudo, droits sur les fichiers et droits spéciaux
+03 Processus et services (6 h) : Contrôle des processus, unités systemd et cibles de démarrage
+04 Accès distant et journalisation (6 h) : OpenSSH, archives et transferts, journaux et heure
+05 Réseau, logiciels et systèmes de fichiers (6 h) : NetworkManager, dnf et Flatpak, montages et occupation disque
+Projet final (6 h) : Un serveur RHEL 10 documenté, noté selon une grille de contrôle
+
+Public : Professionnels de l’IT, techniciens et étudiants qui débutent en administration Linux
+Prérequis : Aucun. Usage courant d’un ordinateur ; aucune expérience préalable de Linux n’est nécessaire
+Format : Cours courts suivis de TP guidés sur RHEL 10
+Évaluation : Un TP validé à la fin de chaque phase et un projet final noté selon une grille de contrôle ; attestation de formation pour les participants qui valident les deux
+
+Prépare les thèmes principaux de RHCSA, première moitié des objectifs.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,4200.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/RHCSA-partie-1-42h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/rhcsa-part-1-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/rhcsa-part-1-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/rhcsa-part-1-fr-3.jpg",Mohamed Aziz BEN HAHA
+RHCSA-2-42,RHCSA partie 2 : administration système Red Hat II (42 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent automatiser, sécuriser et dépanner un serveur RHEL 10 avec SELinux en mode enforcing, en gérer le stockage et le démarrage, et se présenter à l’examen EX200.
+
+Programme (42 h : 36 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Scripts et optimisation du système (6 h) : Scripts d’administration, expressions régulières, planification et optimisation
+02 SELinux et stockage (9 h) : Contextes et booléens SELinux, partitions, systèmes de fichiers et LVM
+03 Contrôle d’accès, stockage réseau et démarrage (6 h) : ACL, NFS et autofs, processus de démarrage et dépannage
+04 Pare-feu, conteneurs et examen blanc (9 h) : firewalld, conteneurs Podman en tant que services, examen blanc EX200
+Projet final (6 h) : Un serveur RHEL 10 prêt pour la production, remis en service après une panne de démarrage
+
+Public : Administrateurs ayant suivi RHCSA partie 1 ou disposant d’une expérience équivalente de RHEL
+Prérequis : Première moitié des objectifs RHCSA (cours : RHCSA partie 1 : administration système Red Hat I) ou expérience équivalente de RHEL ; ces sujets ne sont pas réenseignés
+Format : Cours courts suivis de TP guidés sur RHEL 10 ; un examen blanc chronométré
+Évaluation : Un TP validé par phase, un examen blanc EX200 chronométré et un projet final noté selon une grille ; attestation de formation pour les participants qui valident les TP et le projet
+
+Prépare les thèmes principaux de RHCSA, seconde moitié des objectifs.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,4200.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/RHCSA-partie-2-42h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/rhcsa-part-2-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/rhcsa-part-2-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/rhcsa-part-2-fr-3.jpg",Mohamed Aziz BEN HAHA
+RHCSA-RT-48,RHCSA en parcours accéléré (48 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent réaliser les tâches des objectifs RHCSA sur RHEL 10 en temps limité et sont prêts à passer l’examen EX200.
+
+Programme (48 h : 42 h de modules + 6 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Administration de base (9 h) : Rappel des fondamentaux, exploitation du système, réseau et SSH
+02 Logiciels, automatisation et pare-feu (6 h) : dnf et Flatpak, archives, planification, scripts shell, firewalld
+03 Sécurité et stockage (9 h) : SELinux, partitions et LVM, NFS et autofs, ACL
+04 Démarrage, conteneurs et examens blancs (12 h) : Récupération du démarrage, Podman, deux examens blancs EX200 chronométrés
+Projet final (6 h) : Construction complète d’un serveur de type RHCSA à partir d’une machine virtuelle vierge
+
+Public : Utilisateurs et administrateurs Linux qui préparent l’examen RHCSA en un seul cours
+Prérequis : Expérience pratique de Linux : ligne de commande, fichiers, utilisateurs, droits, services, vim ; rappelés rapidement, pas enseignés. Les débutants suivent plutôt RHCSA partie 1 : administration système Red Hat I et RHCSA partie 2 : administration système Red Hat II
+Format : Cours courts suivis de TP guidés sur RHEL 10 ; deux examens blancs chronométrés
+Évaluation : Un TP validé à la fin de chaque phase, deux examens blancs EX200 chronométrés et un projet final noté selon une liste de tâches ; attestation de formation pour les participants qui valident les TP et le projet
+
+Prépare les thèmes principaux de RHCSA.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,4800.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/RHCSA-en-parcours-accelere-48h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/rhcsa-rapid-track-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/rhcsa-rapid-track-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/rhcsa-rapid-track-fr-3.jpg",Mohamed Aziz BEN HAHA
+SOC-CBROPS-57,Analyste SOC (CCNA Cybersecurity) (57 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent trier des alertes, enquêter sur des éléments réseau et hôte, relier une attaque à MITRE ATT&CK, rédiger un rapport d’incident et se présenter à l’examen 200-201 CBROPS.
+
+Programme (57 h : 48 h de modules + 9 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux et systèmes (9 h) : Le SOC, notions de sécurité, Windows et Linux pour l’analyste
+02 Sécurité et surveillance du réseau (9 h) : Protocoles, infrastructure de sécurité, attaques, Wireshark, NetFlow
+03 Cryptographie et terminaux (9 h) : Cryptographie, terminaux, vulnérabilités, logiciels malveillants
+04 Détection et renseignement (9 h) : SIEM, Security Onion, ATT&CK, Sigma, renseignement, IA
+05 Réponse aux incidents (6 h) : NIST SP 800-61 Rev. 3, preuves, kill chain, procédures
+Projet final (6 h) : Une simulation de SOC sur une attaque capturée
+
+Public : Professionnels IT et réseau qui évoluent vers les opérations de sécurité
+Prérequis : Bases des réseaux (cours : Introduction aux réseaux (CCNA 1), ou Réseaux pour le cloud et le DevOps) ; la ligne de commande Linux aide. Le réseau est rappelé, pas enseigné
+Format : Cours courts et TP guidés sur du trafic et des journaux capturés ; un scénario d’attaque suivi tout au long du cours
+Évaluation : Un TP validé à la fin de chaque phase et une simulation de SOC finale avec rapport d’incident ; attestation de formation pour les participants qui valident les deux
+
+Prépare les thèmes principaux de Cisco CCNA Cybersecurity.
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,5700.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Analyste-SOC-CCNA-Cybersecurity-57h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/soc-analyst-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/soc-analyst-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/soc-analyst-fr-3.jpg",Mohamed Aziz BEN HAHA
+SYS-DESIGN-21,Fondamentaux de la conception de systèmes (21 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent transformer des exigences en conception de système avec API, modèle de données, cache, messagerie et plan de montée en charge, et en défendre les compromis.
+
+Programme (21 h : 18 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Fondamentaux, API et cache (6 h) : Évolutivité, CAP et cohérence, styles d’API, authentification, cache, CDN
+02 Données, messagerie et architecture (6 h) : SQL et NoSQL, réplication, partitionnement, files et Kafka, styles d’architecture, résilience
+03 Études de cas (3 h) : Raccourcisseur d’URL, messagerie instantanée, système de paiement, fil d’actualité
+Projet final (3 h) : Un système conçu pour un cahier des charges, défendu en revue par les pairs
+
+Public : Développeurs et ingénieurs qui conçoivent ou relisent des systèmes logiciels
+Prérequis : Programmation dans un langage (cours : Fondamentaux de la programmation Python), ou équivalent, et notions de bases de données et de HTTP
+Format : Atelier : cours courts, chacun suivi d’exercices de conception en petits groupes ; études de cas et revue par les pairs
+Évaluation : Exercices de conception revus dans chaque phase et une conception finale défendue en revue par les pairs ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,2100.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Fondamentaux-de-la-conception-de-systemes-21h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/system-design-fundamentals-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/system-design-fundamentals-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/system-design-fundamentals-fr-3.jpg",Mohamed Aziz BEN HAHA
+TECH-WRITING-18,Rédaction technique et académique (18 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent gérer et citer leurs sources avec Zotero, résumer des articles, éviter le plagiat, et rédiger des sections claires avec des figures efficaces.
+
+Programme (18 h : 15 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Sources et éthique (6 h) : Zotero, lecture et résumé d’articles, éthique de publication, plagiat
+02 Écriture et figures (6 h) : Clarté, précision, concision, voix et style, figures
+Projet final (3 h) : Une courte section d’article, rédigée et relue par un pair
+
+Public : Étudiants, chercheurs et ingénieurs qui rédigent des rapports et des articles
+Prérequis : Aucun. Les participants apportent un projet d’écriture personnel s’ils en ont un
+Format : Cours gratuit : exposés courts, chacun suivi d’exercices d’écriture et de retours entre pairs
+Évaluation : Exercices revus dans chaque phase et une section d’article finale relue par un pair ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,1800.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Redaction-technique-et-academique-18h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/technical-academic-writing-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/technical-academic-writing-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/technical-academic-writing-fr-3.jpg",Mohamed Aziz BEN HAHA
+ZERO-TRUST-15,Zero Trust et sécurité du cloud (15 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent évaluer une organisation selon le modèle de maturité Zero Trust de la CISA et construire une feuille de route priorisée couvrant identité, données et systèmes d’IA.
+
+Programme (15 h : 12 h de modules + 3 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Zero Trust (3 h) : NIST SP 800-207, modèle de maturité Zero Trust de la CISA, sécurité centrée sur l’identité
+02 Données dans le cloud et sécurité de l’IA (6 h) : Chiffrement et clés, DLP, localisation des données, IA pour la détection, sécurité des systèmes d’IA
+Projet final (3 h) : Une feuille de route d’adoption du zero trust, présentée au groupe
+
+Public : Responsables sécurité, architectes et dirigeants IT qui définissent une stratégie de sécurité
+Prérequis : Aucun. Une culture générale en IT ou en sécurité est attendue (cours : Cybersécurité pour les équipes IT, recommandé)
+Format : Atelier : cours courts, chacun suivi d’exercices de groupe sur le cas d’une organisation
+Évaluation : Un exercice validé à la fin de chaque phase et une feuille de route finale présentée au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prix indicatif HT pour un groupe intra-entreprise ; devis final sur demande. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,1500.00 TND,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Zero-Trust-et-securite-du-cloud-15h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/zero-trust-cloud-security-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/zero-trust-cloud-security-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/zero-trust-cloud-security-fr-3.jpg",Mohamed Aziz BEN HAHA
