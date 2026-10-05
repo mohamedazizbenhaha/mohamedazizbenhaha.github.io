@@ -50,7 +50,7 @@ const FR = {
   'cert.t1': 'Certifié,', 'cert.t2': 'pas seulement curieux.',
   'edu.h': 'Formation', 'edu.phd': 'Doctorat, Machine Learning (cotutelle)', 'edu.eng': 'Diplôme d’ingénieur, Cloud Computing &amp; DevOps', 'edu.med': 'Médecine',
   'pub.t1': 'La recherche,', 'pub.t2': 'publiée.', 'pub.s1': 'Publié', 'pub.s2': 'En évaluation', 'pub.s3': 'En préparation',
-  'pub.p3': 'Revue : biocapteurs à piles à combustible microbiennes et apprentissage automatique pour la surveillance de la qualité de l’eau',
+  'pub.p3': 'Biocapteurs à piles à combustible microbiennes et apprentissage automatique pour la surveillance de la qualité de l’eau',
   'pub.p4': 'Un réacteur ouvert à pile à combustible microbienne imprimé en 3D, pour l’unité de laboratoire et l’unité flottante',
   'pub.wt': 'Titre provisoire · thèse GreenWaterGuard',
   'c1': 'Introduction à l’intelligence artificielle', 'c2': 'Atelier Big Data', 'c3': 'Rédaction académique', 'c4': 'Gestion d’infrastructure cloud', 'c5': 'Virtualisation',
