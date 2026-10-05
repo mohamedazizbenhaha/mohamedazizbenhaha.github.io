@@ -394,8 +394,8 @@ function artLoop(c, draw) {
     x.font = '600 10.5px ui-monospace, Consolas, monospace'; x.textAlign = 'right'; x.fillStyle = '#9d978a';
     x.fillText('version ', W - 14 - x.measureText('v' + ver).width, 22); x.fillStyle = GOLD2; x.fillText('v' + ver, W - 14, 22);
     x.textAlign = 'left';
-    if (stranger > .5 && stranger < 1) { x.fillStyle = `rgba(200,110,100,${1 - clamp((stranger - .85) / .15)})`; x.textAlign = 'right'; x.fillText('unknown ✗', W - 14, H - 14) }
-    else if (owner > .3 && p < 9) { x.fillStyle = `rgba(243,239,230,${1 - clamp((p - 8.4) / .6)})`; x.textAlign = 'right'; x.fillText('owner ✓', W - 14, H - 14) }
+    if (stranger > .5 && stranger < 1) { x.fillStyle = `rgba(200,110,100,${1 - clamp((stranger - .85) / .15)})`; x.fillText('unknown ✗', 14, 22) }
+    else if (owner > .3 && p < 9) { x.fillStyle = `rgba(243,239,230,${1 - clamp((p - 8.4) / .6)})`; x.fillText('owner ✓', 14, 22) }
     x.textAlign = 'left'; logs.forEach((l, i) => { const age = t - l.t; x.fillStyle = `rgba(157,151,138,${clamp(age / .3) * (1 - clamp((age - 5) / 1))})`; x.fillText(l.s, 14, H - 14 - (logs.length - 1 - i) * 14) });
   });
 })();
