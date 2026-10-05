@@ -46,7 +46,6 @@ const FR = {
   'm7.p': 'Les encadrants proposent des sujets de thèse ; les étudiants postulent ou proposent le leur. Chaque candidature est suivie, de « en attente » à « acceptée ».',
   'm8.p': 'Une application Windows gratuite pour les étudiants : indiquez un dossier, posez vos questions, obtenez des réponses qui citent vos propres fichiers, page et passage, vérifiées phrase par phrase. Modèles locaux, cloud en option.',
   'm9.p': 'Le système de recherche sur lequel je mène ma thèse : un espace par article avec synchronisation de la bibliographie, notes de concepts, audit des citations et relecture critique, un cahier de laboratoire aux données non modifiables, et le rapport annuel.', 'p5.tag': 'Des sondes industrielles vers MQTT, configurées depuis un téléphone',
-  'a4.q': '« Acheter du lait et appeler la banque demain à 10 h »',
   'edu.now': '2024 → aujourd’hui',
   'ct.mail': 'M’écrire', 'ct.scan': 'Scannez pour m’ajouter à vos contacts', 'ct.vcf': 'Ajouter aux contacts',
   'cert.t1': 'Certifié,', 'cert.t2': 'pas seulement curieux.',
@@ -286,6 +285,29 @@ const TABS = [
 ];
 const sizeTabs = () => TABS.forEach(t => t.size());
 let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { TABS.forEach(t => t.render()); sizeTabs(); fitMotto(); fitName() }, 150) });
+
+/* ---------- Life OS card: a sentence types itself, then becomes actions for the right module ---------- */
+const LIFE = {
+  en: [['Buy milk and call the bank tomorrow at 10', [['Groceries', 'milk'], ['Reminder', 'call the bank · 10:00']]],
+       ['Leg day done: squats 3×8 at 100 kg', [['LifeFit', 'squats 3×8 · 100 kg']]],
+       ['Spent 12 € on lunch', [['LifeWallet', '−12 € · food']]],
+       ['Idea for chapter 3: compare both sensors', [['LifeNotes', 'chapter 3 idea'], ['Task', 'compare sensors']]]],
+  fr: [['Acheter du lait et appeler la banque demain à 10 h', [['Courses', 'lait'], ['Rappel', 'appeler la banque · 10:00']]],
+       ['Séance jambes finie : squats 3×8 à 100 kg', [['LifeFit', 'squats 3×8 · 100 kg']]],
+       ['Dépensé 12 € pour le déjeuner', [['LifeWallet', '−12 € · repas']]],
+       ['Idée pour le chapitre 3 : comparer les deux capteurs', [['LifeNotes', 'idée chapitre 3'], ['Tâche', 'comparer les capteurs']]]]
+};
+(async () => {
+  const box = $('#lifeArt'), typed = $('.typed', box), acts = $('.acts', box), wait = ms => new Promise(r => setTimeout(r, ms));
+  for (let k = 0; ; k++) {
+    const [t, a] = LIFE[lang][k % LIFE.en.length];
+    acts.innerHTML = ''; typed.textContent = '';
+    for (const ch of t) { typed.textContent += ch; await wait(45) }
+    await wait(350);
+    for (const [m, v] of a) { acts.insertAdjacentHTML('beforeend', `<b><i>+ ${m}</i>${v}</b>`); await wait(300) }
+    await wait(2200);
+  }
+})();
 
 /* ---------- rotating roles ---------- */
 let rotTimer;
