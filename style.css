@@ -154,7 +154,7 @@ em{font-style:normal;color:var(--gold)}
 .pm-phases li.buf::before{content:"+"}
 .pm-phases b em{font-style:normal;font-weight:600;color:var(--dim)}
 .pm-phases i{grid-column:3;grid-row:1;font-style:normal;text-align:right;color:var(--gold2);font-weight:700;font-variant-numeric:tabular-nums}
-.tracks li{padding:0;border:0;background:none}
+.tags.tracks li{padding:0;border:0;background:none;border-radius:0}
 .tracks button{padding:.2em .6em;border-radius:6px;background:rgba(255,255,255,.04);border:1px solid #2a2a33;font:700 .74rem var(--body,inherit);color:#d8d3c8;letter-spacing:.02em;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
 .tracks button:hover{border-color:var(--gold);color:var(--gold2);background:var(--goldsoft)}
 .pm-courses li:not(.buf){display:block;padding:0}
@@ -201,6 +201,7 @@ em{font-style:normal;color:var(--gold)}
 .tally>span{color:var(--mute);font-size:.92rem;margin-top:6px}
 .tags{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:18px}
 .tags li{padding:.2em .6em;border-radius:6px;background:rgba(255,255,255,.04);border:1px solid #2a2a33;font-size:.74rem;font-weight:700;color:#d8d3c8;letter-spacing:.02em}
+.tags.tracks li{padding:0;border:0;background:none;border-radius:0}
 .cell.big{display:flex;flex-direction:column;background:radial-gradient(120% 90% at 100% 0,rgba(212,160,36,.12),transparent 50%),var(--card)}
 .cell.big h3{font-size:clamp(1.8rem,3.4vw,2.6rem)}
 .cell.big p{font-size:1.05rem;max-width:52ch}
