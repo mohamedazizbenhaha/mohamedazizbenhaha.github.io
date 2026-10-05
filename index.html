@@ -55,7 +55,7 @@
     <a href="#projects" data-i18n="nav.proj">Projects</a>
     <a href="#certs" data-i18n="nav.certs">Certifications</a>
     <a href="#training" data-i18n="nav.train">Training</a>
-    <a href="#courses" data-i18n="nav.courses">Free courses</a>
+    <a href="#publications" data-i18n="nav.pubs">Publications</a>
   </nav>
   <div class="nav-end">
     <button class="lang" id="lang" type="button" aria-label="Passer en français"><span class="on">EN</span><span>FR</span></button>
@@ -283,17 +283,42 @@
   <div class="more-wrap"><button class="read" id="moreProgs" type="button" aria-expanded="false" aria-controls="progs"><span class="more-label">Show more</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 6l5 5 5-5M7 13l5 5 5-5"/></svg></button></div>
 </section>
 
-<!-- COURSES -->
-<section class="section" id="courses">
-  <h2 class="title reveal"><span data-i18n="course.t1">Free courses,</span> <em data-i18n="course.t2">open to anyone.</em></h2>
-  <div class="courses" id="courses-grid">
-    <a class="course reveal" href="https://classroom.google.com/c/NzU2NjkwNTI4NDIw?cjc=qdjfjfb" target="_blank" rel="noopener"><img src="res/intro ai.png" width="750" height="421" alt="" loading="lazy"><div><h3 data-i18n="c1">Introduction to Artificial Intelligence</h3><p>Search · PLA · MLP · ANN · SVM · Optimization</p><div class="cprog" style="--p:40%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 40%</small></div></div><svg><use href="#i-ext"/></svg></a>
-    <a class="course reveal" href="https://classroom.google.com/c/NjI3NzI2ODQ1MDI5?cjc=7awlk3u" target="_blank" rel="noopener"><img src="res/intro BD.png" width="750" height="420" alt="" loading="lazy"><div><h3 data-i18n="c2">Big Data Workshop</h3><p>Hadoop · Spark · Kafka · HBase</p><div class="cprog" style="--p:95%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 95%</small></div></div><svg><use href="#i-ext"/></svg></a>
-    <a class="course reveal" href="https://classroom.google.com/c/NzM2NDYyODY0MTcx?cjc=yt3a3ms" target="_blank" rel="noopener"><img src="res/academic writing.PNG" width="1305" height="734" alt="" loading="lazy"><div><h3 data-i18n="c3">Academic Writing</h3><p>PhD · Zotero · Summaries · Data visualization · Ethics</p><div class="cprog" style="--p:100%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 100%</small></div></div><svg><use href="#i-ext"/></svg></a>
-    <a class="course reveal" href="https://classroom.google.com/c/NjQzMjE4MjAzNDcx?cjc=frtavqz" target="_blank" rel="noopener"><img src="res/Cloud infra.png" width="750" height="421" alt="" loading="lazy"><div><h3 data-i18n="c4">Cloud Infrastructure Management</h3><p>IaaS · AWS · HPE · Azure</p><div class="cprog" style="--p:100%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 100%</small></div></div><svg><use href="#i-ext"/></svg></a>
-    <a class="course reveal" href="https://classroom.google.com/c/NjYyNzgzODg0MzI5?cjc=oeg35dl" target="_blank" rel="noopener"><img src="res/intro virtualization.png" width="750" height="422" alt="" loading="lazy"><div><h3 data-i18n="c5">Virtualization</h3><p>VM · Docker · Kubernetes</p><div class="cprog" style="--p:60%"><i></i><small><span data-i18n="c.prog">Course progress</span> · 60%</small></div></div><svg><use href="#i-ext"/></svg></a>
-  </div>
-  <div class="more-wrap"><button class="read" id="moreCourses" type="button" aria-expanded="false" aria-controls="courses-grid"><span class="more-label">Show more</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 6l5 5 5-5M7 13l5 5 5-5"/></svg></button></div>
+<!-- PUBLICATIONS -->
+<section class="section" id="publications">
+  <h2 class="title reveal"><span data-i18n="pub.t1">Research,</span> <em data-i18n="pub.t2">in print.</em></h2>
+  <ol class="pubs">
+    <li class="pub reveal">
+      <div class="pub-st"><span class="st st-ok" data-i18n="pub.s1">Published</span><b>2026</b></div>
+      <div class="pub-txt">
+        <h3>A Systematic Review of Industrial IoT Anomaly Detection and the Forensic Interpretability Gap</h3>
+        <p class="pub-au"><b>M. A. BEN HAHA</b>, A. Bohli, N. Haddour, R. Bouallegue</p>
+        <p class="pub-ve"><i>Electronics</i> 15(11):2240 · MDPI</p>
+      </div>
+      <a class="pub-go" href="https://doi.org/10.3390/electronics15112240" target="_blank" rel="noopener">DOI<svg><use href="#i-ext"/></svg></a>
+    </li>
+    <li class="pub reveal">
+      <div class="pub-st"><span class="st st-rev" data-i18n="pub.s2">Under review</span><b>2026</b></div>
+      <div class="pub-txt">
+        <h3>Auditing a Wastewater Anomaly Detection Benchmark Before Model Selection: Label Recovery, Feature Dimensionality and Comparison-Window Integrity</h3>
+        <p class="pub-au"><b>M. A. BEN HAHA</b>, A. Bohli, N. Haddour, R. Bouallegue</p>
+        <p class="pub-ve"><i>Journal of Hydroinformatics</i> · IWA Publishing</p>
+      </div>
+    </li>
+    <li class="pub reveal">
+      <div class="pub-st"><span class="st st-prep" data-i18n="pub.s3">In preparation</span></div>
+      <div class="pub-txt">
+        <h3 data-i18n="pub.p3">Survey: microbial fuel cell biosensors and machine learning for water-quality monitoring</h3>
+        <p class="pub-ve" data-i18n="pub.wt">Working title · GreenWaterGuard PhD</p>
+      </div>
+    </li>
+    <li class="pub reveal">
+      <div class="pub-st"><span class="st st-prep" data-i18n="pub.s3">In preparation</span></div>
+      <div class="pub-txt">
+        <h3 data-i18n="pub.p4">An open, 3D-printed microbial fuel cell reactor for laboratory and floating field units</h3>
+        <p class="pub-ve" data-i18n="pub.wt">Working title · GreenWaterGuard PhD</p>
+      </div>
+    </li>
+  </ol>
 </section>
 
 <!-- MOTTO -->

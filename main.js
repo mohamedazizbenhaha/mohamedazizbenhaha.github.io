@@ -6,7 +6,7 @@ const store = { get: k => { try { return localStorage.getItem(k) } catch { retur
 
 /* ---------- copy ---------- */
 const FR = {
-  'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.train': 'Formations', 'nav.courses': 'Cours gratuits', 'nav.hire': 'Me contacter',
+  'nav.about': 'Profil', 'nav.exp': 'Expérience', 'nav.proj': 'Projets', 'nav.certs': 'Certifications', 'nav.train': 'Formations', 'nav.pubs': 'Publications', 'nav.hire': 'Me contacter',
   'hero.status': 'Ouvert aux missions et formations · France et Tunisie',
   'hero.pre': 'Je',
   'hero.lede': 'Ingénieur Cloud &amp; DevOps (CKA, AWS Solutions Architect &amp; SysOps) et praticien IA/ML, formateur avec <b>plus de 1 000 heures</b> dispensées en universités et en entreprises, et doctorant en machine learning pour l’IoT embarqué à <b>Sup’Com × École Centrale de Lyon</b>.',
@@ -29,7 +29,6 @@ const FR = {
   'f.all': 'Tout', 'f.ai': 'IA', 'f.iot': 'IoT & recherche', 'f.app': 'Applications', 'f.ops': 'Cloud & DevOps',
   'm1.h': 'Firmware de passerelle qualité de l’eau', 'm1.p': 'Firmware ESP32 qui lit des sondes pH, ORP, conductivité, oxygène dissous et température via Modbus RTU et deux ADC, et publie en JSON sur MQTT. Configuration sur le terrain via une application web Wi-Fi captive.',
   'm2.h': 'Réacteur MFC flottant', 'm2.p': 'CAO paramétrique générée par code pour une unité capteur flottante à pile à combustible microbienne : trois prototypes, vérifications de flottabilité, plateaux d’impression pour imprimante Bambu et suite de tests automatisée.',
-  'c.prog': 'Avancement du cours',
   'proj.more': 'Sous-projets',
   'p4.tag': 'Du langage naturel en entrée, des actions validées en sortie',
   'p4.p': 'Mon système d’exploitation personnel, chaque jour sur mon téléphone. Parti d’un carnet de musculation, il ne cesse de grandir : entraînement, notes, tâches, rappels, calendrier, courses, et bientôt l’argent. Tapez ou dictez une phrase : une IA la transforme en actions validées, annulables en un geste. Chaque module est une application à part ; elles partagent une clé de synchronisation et lisent les données des autres, sans jamais les modifier.',
@@ -50,7 +49,10 @@ const FR = {
   'ct.mail': 'M’écrire', 'ct.scan': 'Scannez pour m’ajouter à vos contacts', 'ct.vcf': 'Ajouter aux contacts',
   'cert.t1': 'Certifié,', 'cert.t2': 'pas seulement curieux.',
   'edu.h': 'Formation', 'edu.phd': 'Doctorat, Machine Learning (cotutelle)', 'edu.eng': 'Diplôme d’ingénieur, Cloud Computing &amp; DevOps', 'edu.med': 'Médecine',
-  'course.t1': 'Cours gratuits,', 'course.t2': 'ouverts à tous.',
+  'pub.t1': 'La recherche,', 'pub.t2': 'publiée.', 'pub.s1': 'Publié', 'pub.s2': 'En évaluation', 'pub.s3': 'En préparation',
+  'pub.p3': 'Revue : biocapteurs à piles à combustible microbiennes et apprentissage automatique pour la surveillance de la qualité de l’eau',
+  'pub.p4': 'Un réacteur ouvert à pile à combustible microbienne imprimé en 3D, pour l’unité de laboratoire et l’unité flottante',
+  'pub.wt': 'Titre provisoire · thèse GreenWaterGuard',
   'c1': 'Introduction à l’intelligence artificielle', 'c2': 'Atelier Big Data', 'c3': 'Rédaction académique', 'c4': 'Gestion d’infrastructure cloud', 'c5': 'Virtualisation',
   'ct.t1': 'Travaillons', 'ct.t2': 'ensemble.',
   'ct.p': 'Missions en France ou en Tunisie, sur site ou à distance : Cloud et DevOps, projets IA/ML, formation d’équipes, recherche. Dites-moi ce que vous construisez, je réponds en français, en anglais ou en arabe.',
@@ -519,13 +521,12 @@ $$('.orbit').forEach(o => {
   s.forEach((el, i) => { const a = (i / s.length) * Math.PI * 2 - Math.PI / 2; el.style.left = 50 + 50 * Math.cos(a) + '%'; el.style.top = 50 + 50 * Math.sin(a) + '%' });
 });
 
-/* ---------- Show more / Show less: courses (first row) and programmes (first 3 of the filtered rows) ---------- */
-const MORE = [[$('#courses-grid'), $('#moreCourses')], [$('#progs'), $('#moreProgs')]];
+/* ---------- Show more / Show less: programmes (first 3 of the filtered rows) ---------- */
+const MORE = [[$('#progs'), $('#moreProgs')]];
 function setMoreLabel() { MORE.forEach(([g, b]) => { $('.more-label', b).textContent = UI[lang][g.classList.contains('open') ? 'less' : 'more'] }) }
 MORE.forEach(([g, b]) => b.addEventListener('click', () => {
   const open = g.classList.toggle('open'); b.setAttribute('aria-expanded', open); setMoreLabel();
-  if (open) $$('.course', g).forEach(c => c.classList.add('in'));
-  else g.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+  if (!open) g.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
 }));
 
 /* ---------- contact modal (Hire me, Contact) ---------- */
@@ -565,7 +566,7 @@ $('#year').textContent = new Date().getFullYear();
   const T = sel => pg($(sel)).t, nth = (sel, i) => pg($$(sel)[i]);
   function place() {
     const top = $('.hero').offsetHeight, W = box.clientWidth || innerWidth, k = innerWidth < 700 ? .6 : 1;
-    const proj = $$('#projects article'), tally = pg($('.tally')), card3 = pg($$('#courses-grid > *')[2]);
+    const proj = $$('#projects article'), tally = pg($('.tally')), card3 = pg($$('#publications .pub')[1]);
     const L = [
       [1, 303, W * .22, T('#about') + 28, 160],
       [0, 292, W * .86, T('#about') + 731, -41],
