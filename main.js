@@ -560,11 +560,12 @@ $$('.orbit').forEach(o => {
   s.forEach((el, i) => { const a = (i / s.length) * Math.PI * 2 - Math.PI / 2; el.style.left = 50 + 50 * Math.cos(a) + '%'; el.style.top = 50 + 50 * Math.sin(a) + '%' });
 });
 
-/* ---------- Show more / Show less: programmes (first 3 of the filtered rows) ---------- */
-const MORE = [[$('#progs'), $('#moreProgs')]];
+/* ---------- Show more / Show less: programmes (first 3 of the filtered rows) and publications (first row) ---------- */
+const MORE = [[$('#progs'), $('#moreProgs')], [$('#pubs'), $('#morePubs')]];
 function setMoreLabel() { MORE.forEach(([g, b]) => { $('.more-label', b).textContent = UI[lang][g.classList.contains('open') ? 'less' : 'more'] }) }
 MORE.forEach(([g, b]) => b.addEventListener('click', () => {
   const open = g.classList.toggle('open'); b.setAttribute('aria-expanded', open); setMoreLabel();
+  if (open) $$('.reveal', g).forEach(c => c.classList.add('in'));
   if (!open) g.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
 }));
 
