@@ -1,7 +1,7 @@
 # START HERE (handoff, updated 2026-10-05, after the merge to main)
 
 ## State
-- **MERGED TO PRODUCTION 2026-10-05 (user's word): `redesign` fast-forwarded into `main`** → https://mohamedazizbenhaha.netlify.app (Netlify rebuilds on the push). Branch `redesign` still exists: keep using it for review, push there first, then ask before merging to `main` again. The contact QR (`res/contact-qr.svg`) was regenerated for the production .vcf URL at the merge (decoded OK with zxing-cpp). Review URL: https://deploy-preview-1--mohamedazizbenhaha.netlify.app (Deploy Preview protection in the new Netlify account may still return 401: Site configuration → Visitor access).
+- **MERGED TO PRODUCTION 2026-10-05 (user's word): `redesign` fast-forwarded into `main`** → https://mohamedazizbenhaha.netlify.app (Netlify rebuilds on the push). Branch `redesign` still exists: keep using it for review, push there first, then ask before merging to `main` again. The contact QR (`res/contact-qr.svg`) was regenerated for the production .vcf URL at the merge (decoded OK with zxing-cpp). Review URL: https://deploy-preview-2--mohamedazizbenhaha.netlify.app (Deploy Preview protection in the new Netlify account may still return 401: Site configuration → Visitor access).
 - **NEXT = MOBILE VIEW pass** (user's request 2026-10-05): see "Mobile pass" below.
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `programmes.js` (training catalogue, generated) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
