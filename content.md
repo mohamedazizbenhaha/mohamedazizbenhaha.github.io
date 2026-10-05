@@ -63,18 +63,22 @@ inside the GreenWaterGuard project (microbial fuel cell sensors for real-time wa
 - Plant disease detection from leaf photos (computer vision), now becoming a startup with support from the Ministry of Agriculture.
 - Stock management app for a veterinary practice with automatic supplier contact on stock-out (deployed).
 
-## Projects
-- **SIADGI**: local-first document Q&A with verified citations.
-  Site shows the current build (W:\SIADGI-app), no repo link (private): free Windows desktop app, point it at a folder,
-  ask questions, answers cite your own files (page and passage), checked sentence by sentence; runs locally, cloud optional.
-  Python · FastAPI · React · TypeScript · Ollama · LiteLLM · LanceDB · DuckDB · docling · MCP
-  - RAG over mixed corpora (PDF, DOCX, XLSX, CSV) with cited, verifiable answers.
-  - Text-to-SQL over DuckDB with automatic interactive Plotly charts.
-  - A simplified version is being adapted by a PFE student under my supervision.
-- **AI behavioural budgeting app** (in progress): Flutter · Python · PostgreSQL/Supabase · LangChain · Groq · NVIDIA NIM · STT/TTS
-  - Financial assistant agent with long-term memory (transaction history + conversation context).
-  - Hybrid rule-based + LLM system; personalised budget/savings/investment recommendations.
-  - Multimodal pipeline: voice input, financial entity extraction, transaction classification; detection of impulsive-spending patterns.
+## Projects (site layout decided by the user, 2026-10-05)
+Row 1: **Life OS** (big) · **Create Life** (repo my_baby, public). Row 2: **Thesis ecosystem** · **GreenWaterGuard · PhD** · **The Thesis Club** (YouTube).
+Subprojects, grouped by family. Names chosen by the user: LifeFit (was GymTracker), LifeNotes, LifeWallet; ThesisLens (was SIADGI), ThesisPilot (the PhD research system in W:\myphd\claude).
+Dropped on the user's word: Air-Canvas; the AI behavioural budgeting app (a supervised PFE: it belongs to supervision only, never to Projects).
+- **Life OS** (W:\My Systems\Life OS): PWA, tasks, reminders, notes, calendar, groceries; one typed or spoken sentence -> AI actions, validated, one-tap undo. Grew from the gym app. Modules are separate apps sharing one sync key, read-only links between them.
+  - LifeFit (W:\My Systems\Gym APP, private repo gym-tracker): training log, progress charts, AI coach, cloud sync; feeds its food list to Life OS groceries.
+  - LifeNotes: the Notes tab of Life OS.
+  - LifeWallet: in progress, spending and budget tracking.
+- **Create Life** (github.com/mohamedazizbenhaha/my_baby, public): architecture for a self-improving personal AI: local LLaMA, owner-only voice recognition, self-evolution loop on modifiable code, fixed core principles, Docker Compose, logging, Flask web UI. Wording kept plain on the site (no "immortal").
+- **Thesis ecosystem** (W:\phd matcher): microservices on Kubernetes with Helm, Next.js, PostgreSQL, Prisma.
+  - ThesisVault + ThesisVaultLibrary (public repos): the PhD library and one page per researcher (manuscript, articles, presentation, images, videos, research team).
+  - ThesisMatcher (public repo): supervisors propose subjects, students apply or propose; application status tracking; NextAuth.
+  - ThesisLens (ex SIADGI, private repo, no link): free Windows desktop app, point it at a folder, ask questions, answers cite your own files (page and passage), checked sentence by sentence; local models, cloud optional; text-to-SQL over DuckDB with Plotly charts. Python · FastAPI · React · TypeScript · Ollama · LiteLLM · LanceDB · DuckDB · docling · MCP. A simplified version is adapted by a PFE student I supervise (not shown under Projects).
+  - ThesisPilot (private repo phd-system, no link): the PhD research system on Claude Code: one space per paper (literature sync via Zotero MCP, concept notes, knowledge graph, citation audit, cold read, peer-review pass), lab notebook with write-once checksummed data, CST report.
+- **GreenWaterGuard · PhD**: see Experience/PhD. Subprojects: water-quality gateway firmware (ESP32, Modbus RTU, MQTT), floating MFC reactor (parametric CAD, 3D printing).
+- **The Thesis Club** (youtube.com/@The_Thesis_Club): podcast series "The Researcher's Path: From Idea to Thesis" and shorts on research methods.
 
 ## Certifications
 | Certificate | Issuer | Year |
@@ -96,7 +100,7 @@ Introduction to AI · Big Data workshop · Academic writing · Cloud infrastruct
 ## Site decisions (2026-10-01)
 - Experience tabs: Industry · Universities (MUST, Sup'Com, ENSTAB, TED University) · Professional training (ISAM Formation · for ANETI, Clevory, TTC, GoMyCode) · Supervision.
 - Downloads: `res/CV-Mohamed-Aziz-Ben-Haha.pdf` (main CV, FR) and `res/CV-Formateur-CNFCPP.pdf` (trainer form for companies; ID number, birth date/place and address blacked out).
-- More projects (no repo links unless public): water-quality gateway firmware (ESP32, Modbus RTU, MQTT), floating MFC reactor (parametric CAD, 3D printing), GymTracker, Life OS, ThesisVault (public repo).
+- More projects: superseded 2026-10-05 by the Projects layout above.
 - Logo strip: Centrale Lyon, Sup'Com, MUST, ENSTAB, ESPRIT, TED, Clevory, ANETI, GoMyCode, ISAM Formation, TTC, Ooredoo, PASS, IPACT, Klabs (Klabs kept on the user's word, not in the CVs).
 - Course progress: AI 40%, Big Data 95%, Academic Writing 100%, Cloud Infrastructure 100%, Virtualization 60%.
 - Pending from the user: freelance projects (Industry), more detail per teaching role, other supervised projects.
