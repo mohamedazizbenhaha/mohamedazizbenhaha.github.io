@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2890c8" stop-opacity=".05"/><stop offset="1" stop-color="#2890c8" stop-opacity=".28"/></linearGradient>
+    <radialGradient id="g" cx="70%" cy="35%" r="55%"><stop offset="0" stop-color="#d4a024" stop-opacity=".25"/><stop offset="1" stop-color="#d4a024" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="#0a0d12"/>
+  <rect y="150" width="800" height="300" fill="url(#w)"/>
+  <path d="M0 150C80 140 160 160 240 150S400 140 480 150S640 160 800 148" fill="none" stroke="#8fd3ff" stroke-opacity=".5" stroke-width="2"/>
+  <rect width="800" height="450" fill="url(#g)"/>
+  <!-- electrode + biofilm -->
+  <rect x="60" y="370" width="360" height="16" rx="3" fill="#26262f"/>
+  <g fill="#f2c45a">
+    <ellipse cx="80" cy="362" rx="9" ry="6"/><ellipse cx="102" cy="360" rx="10" ry="7"/><ellipse cx="126" cy="363" rx="9" ry="6"/><ellipse cx="150" cy="359" rx="10" ry="7"/><ellipse cx="175" cy="362" rx="9" ry="6"/><ellipse cx="199" cy="360" rx="10" ry="7"/><ellipse cx="224" cy="363" rx="9" ry="6"/><ellipse cx="248" cy="359" rx="10" ry="7"/><ellipse cx="273" cy="362" rx="9" ry="6"/><ellipse cx="297" cy="360" rx="10" ry="7"/><ellipse cx="322" cy="363" rx="9" ry="6"/><ellipse cx="346" cy="359" rx="10" ry="7"/><ellipse cx="371" cy="362" rx="9" ry="6"/><ellipse cx="396" cy="360" rx="10" ry="7"/>
+  </g>
+  <g fill="#d4a024" fill-opacity=".7">
+    <ellipse cx="92" cy="348" rx="8" ry="5"/><ellipse cx="138" cy="347" rx="8" ry="5"/><ellipse cx="186" cy="349" rx="8" ry="5"/><ellipse cx="236" cy="347" rx="8" ry="5"/><ellipse cx="285" cy="349" rx="8" ry="5"/><ellipse cx="334" cy="347" rx="8" ry="5"/><ellipse cx="383" cy="348" rx="8" ry="5"/>
+    <ellipse cx="160" cy="336" rx="7" ry="4.5"/><ellipse cx="260" cy="335" rx="7" ry="4.5"/><ellipse cx="358" cy="336" rx="7" ry="4.5"/>
+  </g>
+  <!-- signal rising from the biofilm -->
+  <path d="M240 330C250 300 300 290 330 270S420 250 470 225" fill="none" stroke="#f2c45a" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <!-- neural network -->
+  <g stroke="#d4a024" stroke-opacity=".35" stroke-width="1.5">
+    <path d="M500 140L600 100M500 140L600 170M500 140L600 240M500 220L600 100M500 220L600 170M500 220L600 240M500 300L600 100M500 300L600 170M500 300L600 240"/>
+    <path d="M600 100L700 170M600 170L700 170M600 240L700 170"/>
+  </g>
+  <g fill="#17171f" stroke="#f2c45a" stroke-width="2.5">
+    <circle cx="500" cy="140" r="13"/><circle cx="500" cy="220" r="13"/><circle cx="500" cy="300" r="13"/>
+    <circle cx="600" cy="100" r="13"/><circle cx="600" cy="170" r="13"/><circle cx="600" cy="240" r="13"/>
+  </g>
+  <circle cx="700" cy="170" r="20" fill="#f2c45a"/>
+  <path d="M690 170L698 178L712 162" fill="none" stroke="#120d02" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

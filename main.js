@@ -402,6 +402,45 @@ function artLoop(c, draw) {
   });
 })();
 
+/* GreenWaterGuard: water -> fuel cell -> ESP32 -> cloud; readings travel as packets, the on-device model answers. 12 s: clean, pollution, clears */
+(() => {
+  const RED = '#e0675a', GOLD = '#d4a024', GOLD2 = '#f2c45a', WATER = '#8fd3ff', OK = '#5ef0a0', smooth = v => v * v * (3 - 2 * v);
+  const L = { en: ['water', 'fuel cell', 'ESP32', 'cloud', 'water OK', 'pollution detected', 'on-device model'],
+              fr: ['eau', 'pile microbienne', 'ESP32', 'cloud', 'eau conforme', 'pollution détectée', 'modèle embarqué'] };
+  let P = 0;
+  const R = [['pH', () => (7.2 - P * .6).toFixed(1)], ['EC', () => (1.4 + P * .9).toFixed(1) + ' mS'], ['DO', () => (6.8 - P * 3.1).toFixed(1) + ' mg/L'], ['T', () => '18.4 °C'], ['MFC', () => Math.round(470 - P * 330) + ' mV']];
+  const mono = s => `600 ${s}px ui-monospace, Consolas, monospace`;
+  artLoop($('#phdArt'), (x, W, H, t) => {
+    const p = t % 12, l = L[lang];
+    P = smooth(clamp((p - 4) / 1.2)) * (1 - smooth(clamp((p - 8) / 1.5)));
+    const bad = P > .5, cy = H * .5, N = [W * .09, W * .33, W * .6, W * .87];
+    x.setLineDash([3, 5]); x.strokeStyle = '#3a3427'; x.lineWidth = 1.5; x.beginPath(); x.moveTo(N[0], cy); x.lineTo(N[3], cy); x.stroke(); x.setLineDash([]);
+    N.forEach((nx, i) => {
+      x.fillStyle = '#121219'; x.strokeStyle = i ? GOLD : WATER; x.lineWidth = 1.5;
+      x.beginPath(); x.arc(nx, cy, 17, 0, 7); x.fill(); x.stroke();
+      x.save(); x.translate(nx, cy);
+      if (i === 0) { x.fillStyle = bad ? '#b08455' : WATER; x.beginPath(); x.moveTo(0, -9); x.bezierCurveTo(7, 0, 7, 8, 0, 8); x.bezierCurveTo(-7, 8, -7, 0, 0, -9); x.fill() }
+      if (i === 1) { x.fillStyle = GOLD2; for (let k = 0; k < 6; k++) { x.beginPath(); x.arc(-7 + k * 2.8, 2 + Math.sin(k + t * 3), 1.6, 0, 7); x.fill() } x.fillStyle = '#3a3a46'; x.fillRect(-9, 5, 18, 3) }
+      if (i === 2) { x.strokeStyle = GOLD2; x.lineWidth = 1.3; x.strokeRect(-7, -7, 14, 14); for (let k = -4; k <= 4; k += 4) { x.beginPath(); x.moveTo(k, -7); x.lineTo(k, -10); x.moveTo(k, 7); x.lineTo(k, 10); x.stroke() } }
+      if (i === 3) { x.strokeStyle = GOLD2; x.lineWidth = 1.4; x.beginPath(); x.arc(-4, 2, 5, Math.PI * .5, Math.PI * 1.5); x.arc(1, -2, 6, Math.PI, 0); x.arc(6, 2, 4, -Math.PI * .5, Math.PI * .5); x.closePath(); x.stroke() }
+      x.restore();
+      x.font = mono(9); x.textAlign = 'center'; x.fillStyle = '#9d978a'; x.fillText(l[i], nx, cy + 30);
+    });
+    for (let i = 0; i < 4; i++) { const q = (t * .6 + i / 4) % 1; x.fillStyle = bad ? 'rgba(176,132,85,.9)' : 'rgba(143,211,255,.9)'; x.beginPath(); x.arc(lerp(N[0] + 18, N[1] - 18, q), cy, 2, 0, 7); x.fill() }
+    R.forEach(([k, f], i) => {
+      const q = (t * .22 + i / R.length) % 1, px = lerp(N[1], N[3], q), hot = bad && (k === 'MFC' || k === 'DO');
+      x.font = mono(9.5); const s = `${k} ${f()}`, w = x.measureText(s).width + 10, py = cy - 26 - (i % 2) * 16;
+      x.globalAlpha = clamp(q / .08) * clamp((1 - q) / .08);
+      x.fillStyle = 'rgba(18,18,25,.92)'; x.strokeStyle = hot ? RED : '#4a3e26'; x.lineWidth = 1;
+      x.beginPath(); x.roundRect(px - w / 2, py - 10, w, 14, 7); x.fill(); x.stroke();
+      x.fillStyle = hot ? RED : GOLD2; x.textAlign = 'center'; x.fillText(s, px, py + 1);
+      x.globalAlpha = 1;
+    });
+    x.font = '700 11px Manrope, sans-serif'; x.textAlign = 'right'; x.fillStyle = bad ? RED : OK; x.fillText(bad ? l[5] : l[4], W - 12, H - 12);
+    x.textAlign = 'left'; x.font = mono(9); x.fillStyle = '#9d978a'; x.fillText(l[6], 12, H - 12);
+  });
+})();
+
 /* Thesis ecosystem: a dot travels the four tools; the stops add pages, ThesisVault adds the cover and the cap */
 (() => {
   const D = 'M42 58 C 72 26, 102 26, 132 58 S 192 90, 222 58 S 282 26, 312 58', NS = 'http://www.w3.org/2000/svg';
