@@ -8,7 +8,7 @@
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `programmes.js` (training catalogue, generated) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
 ## Next session: start here
-- **The training part is closed** (2026-10-05, last commit 3074ad1 on `redesign`, pushed, tree clean). Ask the user which part to fix next.
+- **The training part and its follow-ups are closed** (2026-10-05, last commit 3458b5f on `redesign`, pushed, tree clean). Ask the user which part to fix next.
 - Done 2026-10-05 (user's word): retired 130 h .docx deleted; content checks verified on vendor pages and applied (EN+FR, docs + PDFs rebuilt): EX294 = "Red Hat Certified Advanced System Administrator in Ansible", with RHCSA earns RHCE in Ansible, official course AU294 on RHEL 10 / AAP 2.6 (matches our labs); Security Hub CSPM correct (renamed June 2025), now used everywhere; Bedrock Knowledge Bases on S3 Vectors correct (GA Dec 2025); Quick Suite renamed **Amazon Quick** (2026): "Amazon Quick (formerly Quick Suite)"; Security Onion standalone minimum 4 cores / 24 GB / 200 GB disk (disk added).
 - At merge to `main` (needs the user's word): regenerate `res/contact-qr.svg` with the production .vcf URL (recipe in Round 5 notes). Not before: production still runs the old site, the QR would 404.
 - Phone view: the user wants it as a separate pass after the desktop parts are finished (known: training filter bar scrolls sideways, selected button can sit off-screen).
