@@ -1,5 +1,5 @@
 {
-  "_doc": "WhatsApp / Meta catalogue. Run: python scripts/catalog.py. Add a programme = add its slug under items with 5 outcomes per language.",
+  "_doc": "WhatsApp / Meta catalogue. Run: python scripts/catalog.py. Add a programme = add its slug under items with 5 outcomes per language. \"compact\": true forces the smaller logo block on all cards of that course (crowded courses get it automatically).",
   "base_url": "https://mohamedazizbenhaha.netlify.app",
   "price": {
     "_doc": "Price of one in-company group = per_hour x total hours, excl. tax. Tunisia: 100 TND/h, set by the user under the CNFCPP ceiling for an external trainer (20% of the monthly SMIG 48 h per training hour, group of 4+; 2026: 0.2 x 554.736 = 110.947 TND). Abroad: same number in EUR, inside the French market for Cloud/DevOps trainers (600-1,100 EUR/day). User's choice 2026-10-05: 100 TND/h in Tunisia, 100 EUR/h abroad.",
@@ -369,6 +369,7 @@
     },
     "aws-solutions-architect": {
       "code": "AWS-SAA",
+      "compact": true,
       "outcomes": {
         "en": [
           [
@@ -418,6 +419,7 @@
     },
     "azure-administrator": {
       "code": "AZ-104",
+      "compact": true,
       "outcomes": {
         "en": [
           [
@@ -565,6 +567,7 @@
     },
     "ccna-1-introduction-networks": {
       "code": "CCNA-1",
+      "compact": true,
       "outcomes": {
         "en": [
           [
@@ -859,6 +862,7 @@
     },
     "devsecops": {
       "code": "DEVSECOPS",
+      "compact": true,
       "outcomes": {
         "en": [
           [
@@ -1006,6 +1010,7 @@
     },
     "kubernetes-administration-cka": {
       "code": "CKA",
+      "compact": true,
       "outcomes": {
         "en": [
           [
@@ -1055,6 +1060,7 @@
     },
     "linux-automation-ansible": {
       "code": "EX294",
+      "compact": true,
       "outcomes": {
         "en": [
           [

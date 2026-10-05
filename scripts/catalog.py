@@ -105,13 +105,13 @@ h2{font:800 66px/1 'Bricolage Grotesque';letter-spacing:-.025em;margin-top:44px}
 .o{display:grid;grid-template-columns:60px 1fr;align-items:start}
 .o i{font:800 26px/1.4 'Bricolage Grotesque';color:#d4a024;font-style:normal}
 .o div{font:600 26px/1.35 Manrope}.o span{color:#a9a6a0;font-weight:500}
-.brand{position:absolute;left:90px;bottom:80px;display:flex;align-items:center;gap:22px}
+.brand{position:absolute;left:90px;bottom:70px;display:flex;align-items:center;gap:22px}
 .brand .n{font:700 28px Manrope}.brand .r{font:500 21px Manrope;color:#8d8a84;margin-top:2px}
 .brand .sep{width:1.5px;height:62px;background:#3a3730}.brand .logo{height:66px;width:auto;flex:none}
 .sm .brand{gap:18px}.sm .brand .logo{height:52px}.sm .brand .sep{height:48px}
 .sm .brand .n{font-size:23px}.sm .brand .r{font-size:17px}"""
 
-# The brand is pinned at the same height on every card. A page-2 title that wraps puts "Programme" on its
+# The brand is pinned at the same height on every card (70 px from the bottom). A page-2 title that wraps puts "Programme" on its
 # last line; content that would reach the brand is tightened step by step, only when needed
 # (row padding, then heading size, then outcome spacing), so cards that already fit render unchanged.
 FIT = """<script>document.fonts.ready.then(()=>{
@@ -304,10 +304,12 @@ def main():
             # a crowded course gets the compact brand on all its cards, in both languages
             todo = not only or slug in only
             built = {}
-            for small in (False, True):
+            for small in ((True,) if item.get("compact") else (False, True)):
                 built = {lang: pages(progs[lang], lang, item["outcomes"][lang], cnfcpp, small) for lang in ("fr", "en")}
                 if not todo:
                     break
+                if item.get("compact"):
+                    SMALL.append(slug)
                 tight = [render(built[lang][0], [f"{slug}-{lang}-{n}" for n in (1, 2, 3)], tmp) for lang in ("fr", "en")]
                 if small or not any(tight):
                     break
