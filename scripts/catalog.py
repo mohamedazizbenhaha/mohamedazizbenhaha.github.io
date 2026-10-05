@@ -28,6 +28,7 @@ CAT = ROOT / "catalog"
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 NAME = "Mohamed Aziz BEN HAHA"
 OVERFLOW = []
+SMALL = []
 
 T = {
     "en": {
@@ -106,7 +107,9 @@ h2{font:800 66px/1 'Bricolage Grotesque';letter-spacing:-.025em;margin-top:44px}
 .o div{font:600 26px/1.35 Manrope}.o span{color:#a9a6a0;font-weight:500}
 .brand{position:absolute;left:90px;bottom:80px;display:flex;align-items:center;gap:22px}
 .brand .n{font:700 28px Manrope}.brand .r{font:500 21px Manrope;color:#8d8a84;margin-top:2px}
-.brand .sep{width:1.5px;height:62px;background:#3a3730}"""
+.brand .sep{width:1.5px;height:62px;background:#3a3730}.brand .logo{height:66px;width:auto;flex:none}
+.sm .brand{gap:18px}.sm .brand .logo{height:52px}.sm .brand .sep{height:48px}
+.sm .brand .n{font-size:23px}.sm .brand .r{font-size:17px}"""
 
 # The brand is pinned at the same height on every card. A page-2 title that wraps puts "Programme" on its
 # last line; content that would reach the brand is tightened step by step, only when needed
@@ -130,8 +133,9 @@ for(let p=6;p>=5;p--)steps.push(()=>set('.m','padding',p+'px 0'));
 steps.push(()=>{set('.m p','fontSize','15px');set('.m b','fontSize','23px')});
 for(let g=16;g>=8;g-=4)steps.push(()=>set('.out','gap',g+'px'));
 for(let s=24;s>=21;s--)steps.push(()=>set('.o div','fontSize',s+'px'));
-for(const f of steps){if(ok())break;f()}
+let n=0;for(const f of steps){if(ok())break;f();n++}
 if(!ok())document.body.insertAdjacentHTML('beforeend','<i style="position:absolute;left:0;right:0;bottom:0;height:30px;background:#fff"></i>');
+if(n)document.body.insertAdjacentHTML('beforeend','<i style="position:fixed;left:0;top:1080px;width:1080px;height:10px;background:#fff"></i>');
 });</script>"""
 
 
@@ -178,10 +182,10 @@ def title_lines(title):
     return " ".join(w[:best]), " ".join(w[best:])
 
 
-def pages(p, lang, outcomes, cnfcpp):
+def pages(p, lang, outcomes, cnfcpp, small=False):
     t = T[lang]
     logo = (ROOT / "res/logo.svg").read_text(encoding="utf-8").replace(
-        "<svg ", '<svg style="height:66px;width:auto;flex:none" ', 1)
+        "<svg ", '<svg class=logo ', 1)
     brand = (f"<div class=brand>{logo}<div class=sep></div><div><div class=n>{NAME}</div>"
              f"<div class=r>{t['role']}</div></div></div>")
     badge = f"<div class=badge>{t['badge']}</div>" if cnfcpp else ""
@@ -220,17 +224,19 @@ def pages(p, lang, outcomes, cnfcpp):
                    for i, (a, b) in enumerate(outcomes, 1))
     h1, h2 = t["outcomes"]
     three = f"{top}<h2>{h1}<br><span>{h2}</span></h2><div class=out>{outs}</div>{brand}"
-    wrap = lambda body: f"<!doctype html><meta charset=utf-8>{FONT}<style>{CSS}</style>{body}{FIT}"
+    wrap = lambda body: f"<!doctype html><meta charset=utf-8>{FONT}<style>{CSS}</style><body{' class=sm' if small else ''}>{body}{FIT}"
     return [wrap(one), wrap(two), wrap(three)], (mods, buf, total)
 
 
 def render(htmls, stems, tmp):
+    """Screenshots the cards; returns True when any of them needed tightening."""
+    tight = False
     for h, stem in zip(htmls, stems):
         src = tmp / f"{stem}.html"
         png = tmp / f"{stem}.png"
         src.write_text(h, encoding="utf-8")
         subprocess.run([EDGE, "--headless=new", "--disable-gpu", "--hide-scrollbars",
-                        f"--user-data-dir={tmp / 'prof'}", "--window-size=1080,1080",
+                        f"--user-data-dir={tmp / 'prof'}", "--window-size=1080,1090",
                         "--virtual-time-budget=6000", f"--screenshot={png}", src.as_uri()],
                        capture_output=True)
         for _ in range(60):  # msedge.exe can hand off to a running browser and return before the file exists
@@ -238,11 +244,15 @@ def render(htmls, stems, tmp):
                 break
             time.sleep(0.5)
         time.sleep(0.5)
-        im = Image.open(png).convert("RGB")
+        full = Image.open(png).convert("RGB")
+        if full.convert("L").getpixel((540, 1085)) > 200:  # FIT had to tighten this card
+            tight = True
+        im = full.crop((0, 0, 1080, 1080))
         im.save(CAT / "img" / f"{stem}.jpg", quality=90)
         # content that reaches the brand even after FIT shows as a white bar in the bottom margin
         if im.convert("L").crop((0, 1035, 1080, 1080)).getextrema()[1] > 110:
             OVERFLOW.append(stem)
+    return tight
 
 
 def fact(p, label):
@@ -289,13 +299,24 @@ def main():
     with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as d:
         tmp = pathlib.Path(d).resolve()
         for slug, item in cfg["items"].items():
+            progs = {lang: json.loads((ROOT / "programmes" / f"{slug}{'-fr' if lang == 'fr' else ''}.json")
+                                      .read_text(encoding="utf-8")) for lang in ("fr", "en")}
+            # a crowded course gets the compact brand on all its cards, in both languages
+            todo = not only or slug in only
+            built = {}
+            for small in (False, True):
+                built = {lang: pages(progs[lang], lang, item["outcomes"][lang], cnfcpp, small) for lang in ("fr", "en")}
+                if not todo:
+                    break
+                tight = [render(built[lang][0], [f"{slug}-{lang}-{n}" for n in (1, 2, 3)], tmp) for lang in ("fr", "en")]
+                if small or not any(tight):
+                    break
+                OVERFLOW[:] = [o for o in OVERFLOW if not o.startswith(slug + "-")]  # first pass is redone
+                SMALL.append(slug)
             for lang in ("fr", "en"):
-                p = json.loads((ROOT / "programmes" / f"{slug}{'-fr' if lang == 'fr' else ''}.json")
-                               .read_text(encoding="utf-8"))
-                htmls, sums = pages(p, lang, item["outcomes"][lang], cnfcpp)
+                p = progs[lang]
+                htmls, sums = built[lang]
                 stems = [f"{slug}-{lang}-{n}" for n in (1, 2, 3)]
-                if not only or slug in only:
-                    render(htmls, stems, tmp)
                 imgs = [f"{base}/catalog/img/{s}.jpg" for s in stems]
                 pdf = f"{base}/res/programmes/pdf/{pathlib.Path(p['file']).stem}.pdf"
                 row = {"id": f"{item['code']}-{hrs(sums[2])}", "title": f"{p['title']} ({hrs(sums[2])} h)",
@@ -323,6 +344,8 @@ def main():
             w.writeheader()
             w.writerows(rows)
     print(f"feeds: {len(primary)} items")
+    if SMALL:
+        print("compact brand (crowded course):", ", ".join(SMALL))
     if OVERFLOW:
         print("OVERFLOW (text runs into the bottom margin, shorten or tighten):", ", ".join(OVERFLOW))
     if rate is None:
