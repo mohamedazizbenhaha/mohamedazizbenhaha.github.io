@@ -9,7 +9,7 @@ Repo: `mohamedazizbenhaha/mohamedazizbenhaha.github.io` (**public** — everythi
 - Preview: `preview_start resume` (port 8770).
 - Gates before any commit: `python scripts/run_gates.py` (secrets + broken local links).
   The pre-commit hook runs the secrets check; fresh clone: `git config core.hooksPath .githooks`.
-- Review: push to branch `redesign` (no need to ask) → https://deploy-preview-3--mohamedazizbenhaha.netlify.app
+- Review: push to branch `redesign` (no need to ask) → https://deploy-preview-4--mohamedazizbenhaha.netlify.app
 - Production: merge/push to `main`. **Ask first**: it publishes.
 
 ## Stack
