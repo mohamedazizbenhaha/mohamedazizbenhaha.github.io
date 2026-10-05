@@ -29,7 +29,7 @@ const FR = {
   'f.all': 'Tout', 'f.ai': 'IA', 'f.iot': 'IoT & recherche', 'f.app': 'Applications', 'f.ops': 'Cloud & DevOps',
   'm1.h': 'Firmware de passerelle qualité de l’eau', 'm1.p': 'Firmware ESP32 qui lit des sondes pH, ORP, conductivité, oxygène dissous et température via Modbus RTU et deux ADC, et publie en JSON sur MQTT. Configuration sur le terrain via une application web Wi-Fi captive.',
   'm2.h': 'Réacteur MFC flottant', 'm2.p': 'CAO paramétrique générée par code pour une unité capteur flottante à pile à combustible microbienne : trois prototypes, vérifications de flottabilité, plateaux d’impression pour imprimante Bambu et suite de tests automatisée.',
-  'proj.more': 'Sous-projets',
+  'proj.more': 'Sous-projets', 'proj.see': 'Voir tous les sous-projets',
   'p4.tag': 'Du langage naturel en entrée, des actions validées en sortie',
   'p4.p': 'Mon système d’exploitation personnel, chaque jour sur mon téléphone. Parti d’un carnet de musculation, il ne cesse de grandir : entraînement, notes, tâches, rappels, calendrier, courses, et bientôt l’argent. Tapez ou dictez une phrase : une IA la transforme en actions validées, annulables en un geste. Chaque module est une application à part ; elles partagent une clé de synchronisation et lisent les données des autres, sans jamais les modifier.',
   'p6.tag': 'Une IA personnelle qui s’améliore elle-même',
@@ -70,7 +70,7 @@ const ROLES = {
   en: ['build AI systems & cloud infrastructure', 'train and deploy ML models', 'design high-availability platforms', 'automate everything, CI/CD to IaC', 'teach Cloud, DevOps & AI'],
   fr: ['construis des systèmes d’IA et des infrastructures cloud', 'entraîne et déploie des modèles de ML', 'conçois des plateformes haute disponibilité', 'automatise tout, de la CI/CD à l’IaC', 'enseigne le Cloud, le DevOps et l’IA']
 };
-const UI = { en: { subj: 'Contact from your website', copied: 'Email copied', more: 'Show more', less: 'Show less' }, fr: { subj: 'Prise de contact depuis votre site', copied: 'E-mail copié', more: 'Voir plus', less: 'Voir moins' } };
+const UI = { en: { subj: 'Contact from your website', copied: 'Email copied', more: 'Show more', less: 'Show less', det: 'Details' }, fr: { subj: 'Prise de contact depuis votre site', copied: 'E-mail copié', more: 'Voir plus', less: 'Voir moins', det: 'Détails' } };
 
 /* Each entry: [org, role{en,fr}, dates, points{en[],fr[]}, stack] */
 const EXP = {
@@ -190,7 +190,7 @@ function openTrack(i) {
 }
 $('#tracks').addEventListener('click', e => { const b = e.target.closest('[data-t]'); if (b) openTrack(+b.dataset.t) });
 $('#progBody').addEventListener('click', e => { const b = e.target.closest('[data-n],[data-t]'); if (b) b.dataset.t ? openTrack(+b.dataset.t) : openProg(+b.dataset.n, +progDlg.dataset.k.slice(1)) });
-const reopenDlg = () => { const k = progDlg.dataset.k; if (!progDlg.open || !k) return; const [a, b] = k.slice(1).split(':'); k[0] === 't' ? openTrack(+a) : openProg(+a, b == null ? null : +b) };
+const reopenDlg = () => { const k = progDlg.dataset.k; if (!progDlg.open || !k) return; if (k[0] === 'x') return openExp(...k.slice(1).split(':')); if (k[0] === 's') return openSubs(); const [a, b] = k.slice(1).split(':'); k[0] === 't' ? openTrack(+a) : openProg(+a, b == null ? null : +b) };
 $('#progs').addEventListener('click', e => { const b = e.target.closest('[data-p]'); if (b) openProg(PROGS[pgroup][+b.dataset.p].n, null) });
 
 /* ---------- dialogs: close button, backdrop click ---------- */
@@ -239,7 +239,7 @@ function applyLang() {
   const [en, fr] = $$('#lang span');
   en.classList.toggle('on', lang === 'en'); fr.classList.toggle('on', lang === 'fr');
   $('#lang').setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
-  TABS.forEach(t => t.render()); sizeTabs(); renderProgs(); renderTracks(); reopenDlg(); setMailSubjects(); fitMotto(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
+  TABS.forEach(t => t.render()); sizeTabs(); renderXrows(); renderProgs(); renderTracks(); reopenDlg(); setMailSubjects(); fitMotto(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
 }
 $('#lang').addEventListener('click', () => { lang = lang === 'en' ? 'fr' : 'en'; store.set('lang', lang); applyLang() });
 
@@ -286,6 +286,41 @@ const TABS = [
     ([org, role, dates, pts, stack]) => `<h3>${pick(role)} <span>@ ${pick(org)}</span></h3><p class="meta">${pick(dates)}</p><ul class="pts">${pick(pts).map(p => `<li>${p}</li>`).join('')}</ul><ul class="chips">${stack.map(s => `<li>${s}</li>`).join('')}</ul>`)
 ];
 const sizeTabs = () => TABS.forEach(t => t.size());
+
+/* ---------- phone view (CSS shows these under 720px only) ---------- */
+/* Experience: one row per entry (place + dates), details in the dialog */
+const xGroup = () => $('#experience .seg [aria-selected=true]').dataset.group;
+function renderXrows() {
+  $('#xrows').innerHTML = EXP[xGroup()].map((e, i) => `<li><button type="button" class="xrow" data-i="${i}" aria-haspopup="dialog"><span><b>${pick(e[0])}</b><small>${pick(e[2]).split(' · ')[0]}</small></span><span class="xrow-go">${UI[lang].det}<svg><use href="#i-arrow"/></svg></span></button></li>`).join('');
+}
+function openExp(g, i) {
+  const [org, role, dates, pts, stack] = EXP[g][+i];
+  $('#progBody').innerHTML = `<div class="xp"><p class="pm-kicker">${pick(dates)}</p><h2 id="pTitle">${pick(role)} <span>@ ${pick(org)}</span></h2><ul class="pts">${pick(pts).map(p => `<li>${p}</li>`).join('')}</ul><ul class="chips">${stack.map(s => `<li>${s}</li>`).join('')}</ul></div>`;
+  showDlg('x' + g + ':' + i);
+}
+$('#xrows').addEventListener('click', e => { const b = e.target.closest('[data-i]'); if (b) openExp(xGroup(), b.dataset.i) });
+$$('#experience .seg button').forEach(b => b.addEventListener('click', renderXrows));
+/* Projects: the subproject groups, in the dialog */
+function openSubs() {
+  const box = document.createElement('div'); box.className = 'subs-dlg';
+  $$('#projects .subgrp').forEach(g => box.append(g.cloneNode(true)));
+  $$('.reveal', box).forEach(el => el.classList.remove('reveal'));
+  $('#progBody').innerHTML = `<h2 id="pTitle">${$('#projects .sub').textContent}</h2>`; $('#progBody').append(box);
+  showDlg('s');
+}
+$('#subOpen').addEventListener('click', openSubs);
+/* Filter bars: a fading edge and an arrow while more buttons sit off-screen; the chosen button scrolls into view */
+$$('.seg').forEach(seg => {
+  const w = document.createElement('div'); w.className = 'segw'; seg.before(w); w.append(seg);
+  const hint = document.createElement('button'); hint.type = 'button'; hint.className = 'seg-hint'; hint.tabIndex = -1; hint.setAttribute('aria-hidden', 'true');
+  hint.innerHTML = '<svg><use href="#i-arrow"/></svg>'; w.append(hint);
+  const upd = () => { w.classList.toggle('more', seg.scrollLeft + seg.clientWidth < seg.scrollWidth - 4); w.classList.toggle('back', seg.scrollLeft > 4) };
+  seg.addEventListener('scroll', upd, { passive: true }); addEventListener('resize', upd); upd();
+  hint.addEventListener('click', () => seg.scrollBy({ left: seg.clientWidth * .7, behavior: 'smooth' }));
+  $$('button', seg).forEach(b => b.addEventListener('click', () => {
+    if (seg.scrollWidth > seg.clientWidth) seg.scrollTo({ left: b.offsetLeft - (seg.clientWidth - b.offsetWidth) / 2, behavior: 'smooth' });
+  }));
+});
 let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { TABS.forEach(t => t.render()); sizeTabs(); fitMotto(); fitName() }, 150) });
 
 /* ---------- Life OS card: a sentence types itself, then becomes actions for the right module ---------- */
