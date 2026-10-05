@@ -71,7 +71,7 @@ Dropped on the user's word: Air-Canvas; the AI behavioural budgeting app (a supe
   - LifeFit (W:\My Systems\Gym APP, private repo gym-tracker): training log, progress charts, AI coach, cloud sync; feeds its food list to Life OS groceries.
   - LifeNotes: the Notes tab of Life OS.
   - LifeWallet: in progress, spending and budget tracking.
-- **Create Life** (github.com/mohamedazizbenhaha/my_baby, public): architecture for a self-improving personal AI: local LLaMA, owner-only voice recognition, self-evolution loop on modifiable code, fixed core principles, Docker Compose, logging, Flask web UI. Wording kept plain on the site (no "immortal").
+- **Create Life** (repo my_baby, public; no link on the site, user 2026-10-05: only YouTube is linked in Projects): architecture for a self-improving personal AI: local LLaMA, owner-only voice recognition, self-evolution loop on modifiable code, fixed core principles, Docker Compose, logging, Flask web UI. Wording kept plain on the site (no "immortal").
 - **Thesis ecosystem** (W:\phd matcher): microservices on Kubernetes with Helm, Next.js, PostgreSQL, Prisma.
   - ThesisVault + ThesisVaultLibrary (public repos): the PhD library and one page per researcher (manuscript, articles, presentation, images, videos, research team).
   - ThesisMatcher (public repo): supervisors propose subjects, students apply or propose; application status tracking; NextAuth.
