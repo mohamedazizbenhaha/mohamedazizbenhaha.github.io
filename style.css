@@ -435,8 +435,8 @@ a.pub:hover img{transform:scale(1.05)}
   .pm-head{flex-direction:column;align-items:flex-start;gap:10px}
   .foot-in{flex-direction:column;align-items:flex-start}
   .contact-grid,.hl-3,.minis,.journey{grid-template-columns:1fr}
-  #contactDlg .modal-in{padding-top:64px}
-  #contactDlg .qr{order:-1}
+  #contactDlg .qr{order:-1;padding:0 0 14px;border:0;background:none}
+  #contactDlg .qr p{order:-1;align-self:stretch;min-height:40px;display:flex;align-items:center;padding-right:52px;margin-top:-12px;text-align:left;font:700 1.05rem/1.25 var(--display)}
   .qr img{max-width:200px}
   .qr .btn{background:var(--txt);color:#000;border-color:var(--txt);justify-content:center;padding:.85em 1.4em;font-size:.98rem}
   .journey{padding-top:0;padding-left:30px;gap:28px}
