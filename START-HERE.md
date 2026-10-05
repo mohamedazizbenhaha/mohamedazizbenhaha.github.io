@@ -1,4 +1,4 @@
-# START HERE (handoff, updated 2026-10-05: WhatsApp catalogue, all 39 generated, waiting for review)
+# START HERE (handoff, updated 2026-10-06: WhatsApp catalogue done, next = make it live)
 
 ## State
 - **MERGED TO PRODUCTION 2026-10-05 (user's word): `redesign` fast-forwarded into `main`** → https://mohamedazizbenhaha.netlify.app (Netlify rebuilds on the push). Branch `redesign` still exists: keep using it for review, push there first, then ask before merging to `main` again. The contact QR (`res/contact-qr.svg`) was regenerated for the production .vcf URL at the merge (decoded OK with zxing-cpp). Review URL: https://deploy-preview-3--mohamedazizbenhaha.netlify.app (Deploy Preview protection in the new Netlify account may still return 401: Site configuration → Visitor access).
@@ -6,7 +6,7 @@
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `programmes.js` (training catalogue, generated) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
 ## WhatsApp / Meta catalogue (NEXT SESSION STARTS HERE)
-**State 2026-10-05 (later):** all 39 items generated and pushed to `redesign`; DevOps was approved earlier, the other 38 wait for the user's review. Not on `main` yet: merging needs the user's word (the feeds point at production URLs).
+**State 2026-10-06: CLOSED.** All 39 items (234 images + 3 feeds) reviewed by the user, last fixes applied (brand block same height per course, compact block for crowded/listed courses, brand 70 px from the bottom), pushed to `redesign` (tree clean). **Next session: make it live** = merge `redesign` into `main` on the user's word (the feeds and images point at production URLs, so nothing works in Meta before the merge), check the URLs answer 200, then guide the Commerce Manager setup (step 4 under "Original plan").
 - Rules (also in memory): B2B only (companies + training centres), dark & gold cards, logo + name one block at the bottom, PhD in the byline, white logo and white CNFCPP (TFP) badge, hours only, same text across any design options.
 - Template: `python scripts/catalog.py [slug ...]` (run from PowerShell; needs Edge + internet for fonts). With slugs it re-renders only those images; feeds are always rebuilt for every item. It prints `OVERFLOW: ...` for any card whose text runs into the bottom margin.
 - Input `catalog/items.json`: `price` (per hour × total hours, one in-company group, excl. tax; **user's choice: 100 TND/h in Tunisia, 100 EUR/h abroad**; DevOps 81 h = 8,100) and `items` (slug → `code` + 5 `outcomes` per language as [bold start, rest]).
@@ -15,7 +15,7 @@
 - Price basis: CNFCPP refunds in-company training by an external trainer up to 20% of the monthly SMIG 48 h per hour (group of 4+): 0.2 × 554.736 = 110.947 TND in 2026. Abroad: Cloud/DevOps trainers 600-1,100 EUR/day in France. Raise with the SMIG each January.
 - Unverified: whether WhatsApp shows the country-feed price and the English language feed (the DevOps test will tell).
 
-### Done 2026-10-05: all 39 programmes generated (on `redesign`, waiting for the user's review)
+### Done 2026-10-05/06: all 39 programmes generated and reviewed (on `redesign`)
 - `catalog/items.json` now holds all 39 items (code + 5 outcomes EN/FR, written from each programme's phases and validated labs only). Codes: AWS-AIF, AWS-CLF, AWS-SEC, AWS-SOA, AWS-DEA, AWS-SRVLS, AWS-SAA, AZ-104, AZ-400, BLOCKCHAIN, CCNA-1/2/3, CLASSIC-AI, CYBER-IT, SPARK-KAFKA, DEVSECOPS, DOCKER-K8S, PROXMOX, CKA, EX294, LINUX-BASH, LINUX-NETSVC, LLM-AGENTS, ML-DL, AWS-MLA, NETSEC, NET-CLOUD, NLP, PY-DATA, PY-FUND, RHCSA-1/2/RT, SOC-CBROPS, SYS-DESIGN, TECH-WRITING, ZERO-TRUST.
 - `scripts/catalog.py` changes: an in-page fit step (`FIT`) tightens only cards that would run into the bottom margin (row padding, narrower number/hours columns, smaller row text, then heading margin/size, then outcome spacing); cards that already fit render exactly as before (DevOps unchanged). `glue()` keeps "(RHEL 10)"-style groups and French " :" on one line; cover titles never split inside parentheses or before punctuation; cover title minimum size 58 px (was 72) so CCNA 3 stays on two lines; hyphenated words in outcomes never break (t-SNE).
 - Brand block (logo + name) is pinned at the same height on every card (`position:absolute; bottom:80px`; logo rows 940-989 px on all 234 images, user's request 2026-10-05). On page 2 a title that wraps puts "Programme" on its last line (and shrinks to 50 px at most to stay on two lines); only FR CCNA 2 keeps three lines. If a card cannot fit, `FIT` paints a white bar in the bottom margin and the script prints OVERFLOW.
