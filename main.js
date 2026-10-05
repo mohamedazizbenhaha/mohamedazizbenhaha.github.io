@@ -350,12 +350,14 @@ function artLoop(c, draw) {
     const stranger = clamp((p - 1) / 2.5), owner = clamp((p - 5) / 3);
     const voice = (prog, rgb, bounce) => {
       if (prog <= 0 || prog >= 1) return;
-      const reach = cx - base - 12, head = bounce ? (prog < .6 ? lerp(0, reach, prog / .6) : lerp(reach, reach * .55, (prog - .6) / .4)) : lerp(0, reach + 4, prog);
+      const sx = W - 6, sy = H - 6, len0 = Math.hypot(cx - sx, cy - sy), ux = (cx - sx) / len0, uy = (cy - sy) / len0;
+      const reach = len0 - base - 12, head = bounce ? (prog < .6 ? lerp(0, reach, prog / .6) : lerp(reach, reach * .55, (prog - .6) / .4)) : lerp(0, reach + 4, prog);
       const a = bounce && prog > .6 ? 1 - (prog - .6) / .4 : 1, x0 = Math.max(0, head - 150);
       x.beginPath();
-      for (let px = x0; px <= head; px += 2) {
-        const y = cy + Math.sin(px * .11 - t * 10) * Math.sin(px * .03 + t) * 20 * clamp((px - (head - 150)) / 60);
-        px === x0 ? x.moveTo(px, y) : x.lineTo(px, y);
+      for (let d = x0; d <= head; d += 2) {
+        const o = Math.sin(d * .11 - t * 10) * Math.sin(d * .03 + t) * 20 * clamp((d - (head - 150)) / 60);
+        const px = sx + ux * d - uy * o, py = sy + uy * d + ux * o;
+        d === x0 ? x.moveTo(px, py) : x.lineTo(px, py);
       }
       x.strokeStyle = `rgba(${rgb},${a})`; x.lineWidth = 2; x.stroke();
     };
@@ -382,7 +384,7 @@ function artLoop(c, draw) {
       const a = t - waves[i].t; if (a > 1.6) { waves.splice(i, 1); continue }
       x.strokeStyle = `rgba(242,196,90,${.8 * (1 - a / 1.6)})`; x.lineWidth = 2.5 * (1 - a / 1.6) + .5; x.beginPath(); x.arc(cx, cy, base + a * 200, 0, 7); x.stroke();
     }
-    if (block > 0) { x.strokeStyle = `rgba(200,80,70,${.7 * block})`; x.lineWidth = 2; x.beginPath(); x.arc(cx, cy, base + 30, Math.PI * .8, Math.PI * 1.2); x.stroke() }
+    if (block > 0) { x.strokeStyle = `rgba(200,80,70,${.7 * block})`; x.lineWidth = 2; x.beginPath(); const ba = Math.atan2(H - 6 - cy, W - 6 - cx); x.arc(cx, cy, base + 30, ba - .65, ba + .65); x.stroke() }
     x.strokeStyle = 'rgba(212,160,36,.18)'; x.lineWidth = 2; x.beginPath(); x.arc(cx, cy, base + 34, 0, 7); x.stroke();
     x.strokeStyle = GOLD2; x.beginPath(); x.arc(cx, cy, base + 34, -Math.PI / 2, -Math.PI / 2 + fill * Math.PI * 2); x.stroke();
     ring(x, cx, cy, base, 6 + 16 * Math.max(flare, listening * .9) + 4 * fill, t, .45 + .55 * Math.max(flare, listening, fill * .6));
@@ -392,9 +394,9 @@ function artLoop(c, draw) {
     x.font = '600 10.5px ui-monospace, Consolas, monospace'; x.textAlign = 'right'; x.fillStyle = '#9d978a';
     x.fillText('version ', W - 14 - x.measureText('v' + ver).width, 22); x.fillStyle = GOLD2; x.fillText('v' + ver, W - 14, 22);
     x.textAlign = 'left';
-    if (stranger > .5 && stranger < 1) { x.fillStyle = `rgba(200,110,100,${1 - clamp((stranger - .85) / .15)})`; x.fillText('unknown ✗', 14, 22) }
-    else if (owner > .3 && p < 9) { x.fillStyle = `rgba(243,239,230,${1 - clamp((p - 8.4) / .6)})`; x.fillText('owner ✓', 14, 22) }
-    logs.forEach((l, i) => { const age = t - l.t; x.fillStyle = `rgba(157,151,138,${clamp(age / .3) * (1 - clamp((age - 5) / 1))})`; x.fillText(l.s, 14, H - 14 - (logs.length - 1 - i) * 14) });
+    if (stranger > .5 && stranger < 1) { x.fillStyle = `rgba(200,110,100,${1 - clamp((stranger - .85) / .15)})`; x.textAlign = 'right'; x.fillText('unknown ✗', W - 14, H - 14) }
+    else if (owner > .3 && p < 9) { x.fillStyle = `rgba(243,239,230,${1 - clamp((p - 8.4) / .6)})`; x.textAlign = 'right'; x.fillText('owner ✓', W - 14, H - 14) }
+    x.textAlign = 'left'; logs.forEach((l, i) => { const age = t - l.t; x.fillStyle = `rgba(157,151,138,${clamp(age / .3) * (1 - clamp((age - 5) / 1))})`; x.fillText(l.s, 14, H - 14 - (logs.length - 1 - i) * 14) });
   });
 })();
 
