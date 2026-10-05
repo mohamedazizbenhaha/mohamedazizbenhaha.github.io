@@ -1,14 +1,22 @@
-# START HERE (handoff, updated 2026-10-05)
+# START HERE (handoff, updated 2026-10-05, after the merge to main)
 
 ## State
-- New site lives on branch `redesign` → PR mohamedazizbenhaha/mohamedazizbenhaha.github.io#1.
-- **Live review URL (the user opens it on their phone):** https://deploy-preview-1--mohamedazizbenhaha.netlify.app
-  **2026-10-02: the user moved to a new Netlify account** (same site name, repo linked). The preview returned 404 until a fresh push, then 401: Deploy Preview protection is on in the new account; the user must set it to public (Site configuration → Visitor access) so others can give feedback. If it is still 401, that is the cause, not the code.
-  Every push to `redesign` rebuilds it in ~1 min. Production (`main` → mohamedazizbenhaha.netlify.app) is untouched until merge; merging needs the user's word.
+- **MERGED TO PRODUCTION 2026-10-05 (user's word): `redesign` fast-forwarded into `main`** → https://mohamedazizbenhaha.netlify.app (Netlify rebuilds on the push). Branch `redesign` still exists: keep using it for review, push there first, then ask before merging to `main` again. The contact QR (`res/contact-qr.svg`) was regenerated for the production .vcf URL at the merge (decoded OK with zxing-cpp). Review URL: https://deploy-preview-1--mohamedazizbenhaha.netlify.app (Deploy Preview protection in the new Netlify account may still return 401: Site configuration → Visitor access).
+- **NEXT = MOBILE VIEW pass** (user's request 2026-10-05): see "Mobile pass" below.
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `programmes.js` (training catalogue, generated) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
+## Mobile pass (next session): what to check
+Test at 375 px and 390 px (Browser pane `resize_window` mobile preset; reload after switching), EN and FR, no sideways scroll anywhere. Known or likely issues:
+- Training filter bar scrolls sideways; the selected button can sit off-screen (known since 2026-10-05).
+- Career tracks tags in the 1,000+ hours box (`#tracks`) and their modal (`#progDlg`, track + course lists, back link); the About bento is one column on mobile.
+- Projects: Life OS typed-sentence card, the three canvas cards (`#lifeCore` Create Life, `#thesisArt`, `#phdArt`): their drawings are sized for ~380 px wide cards, check the labels and the 14 s story still fit; the three "hl-3" cards stack to 1 column; subgroup "minis" grids.
+- Publications `#pubs`: 1 column under 640 px, first 3 + Show more; the cover text (title in the JPG) must stay readable when the card is ~340 px wide.
+- Experience tabs height, motto (`fitMotto`), hero name (`fitName`), nav burger below 1180 px, contact modal and programme modals (one fixed box, no sideways scroll).
+- The user reads on a Samsung phone (Chrome) with "reduce motion" ON: animations stay on by design. "Desktop site" mode renders ~980 px.
+- Workflow: edit, `python scripts/run_gates.py`, `node --check main.js`, check in the Browser pane, push to `redesign`, send the review URL; `main` only on the user's word.
+
 ## Next session: start here
-- **Projects + Publications parts closed 2026-10-05** (user's word; last commit on `redesign`, pushed, tree clean). Ask the user which part to fix next.
+- **Projects + Publications parts closed 2026-10-05** and merged to `main`. Next: the mobile pass above, then ask the user which part comes after.
 - Done 2026-10-05, all on `redesign` (not on `main`):
   - Career tracks (1,000+ hours box): clickable tags, `TRACKS` in `main.js`, totals AI 150 / DevSecOps 140 / RHCE 130 / AWS 120 / Kubernetes 100.
   - Projects rebuilt (names, layout and facts in `content.md` > Projects): Life OS + Create Life; Thesis ecosystem + GreenWaterGuard + The Thesis Club; subprojects grouped by family. Only YouTube links out. Supervised student projects never appear here (see memory).
@@ -19,7 +27,7 @@
 - Project art (2026-10-05, user's picks from the options artifact https://claude.ai/artifact/DnUMoFg6oihmz3T8bpBdfA): Life OS = typed sentence -> module action chips (`LIFE` in `main.js`); Create Life = canvas "whole system" (gold core LLaMA, voice ring that refuses a stranger and accepts the owner, knowledge sparks fill a gauge, shockwave = code rewrite + version up, three locks = core principles, log lines); Thesis ecosystem = canvas journey Matcher -> Pilot -> Lens -> Vault building a thesis (pages, cover, cap). Canvases use `artLoop` (runs only on screen). No GitHub links in Projects: only The Thesis Club (YouTube) links out.
 - **The training part and its follow-ups are closed** (2026-10-05, last commit 3458b5f on `redesign`, pushed, tree clean). Ask the user which part to fix next.
 - Done 2026-10-05 (user's word): retired 130 h .docx deleted; content checks verified on vendor pages and applied (EN+FR, docs + PDFs rebuilt): EX294 = "Red Hat Certified Advanced System Administrator in Ansible", with RHCSA earns RHCE in Ansible, official course AU294 on RHEL 10 / AAP 2.6 (matches our labs); Security Hub CSPM correct (renamed June 2025), now used everywhere; Bedrock Knowledge Bases on S3 Vectors correct (GA Dec 2025); Quick Suite renamed **Amazon Quick** (2026): "Amazon Quick (formerly Quick Suite)"; Security Onion standalone minimum 4 cores / 24 GB / 200 GB disk (disk added).
-- At merge to `main` (needs the user's word): regenerate `res/contact-qr.svg` with the production .vcf URL (recipe in Round 5 notes). Not before: production still runs the old site, the QR would 404.
+- QR: regenerated for production at the 2026-10-05 merge (done). If the .vcf or the domain changes: same look (49-module QR, dots r .42, round eyes, LinkedIn photo `res/contact-photo.jpg` centred, error level H, border 4), URL https://mohamedazizbenhaha.netlify.app/res/mohamed-aziz-ben-haha.vcf, decode-test with zxing-cpp.
 - Phone view: the user wants it as a separate pass after the desktop parts are finished (known: training filter bar scrolls sideways, selected button can sit off-screen).
 - Logo: `res/logo.svg` (traced from the 118 px PNG) is used in the nav, footer and the Word/PDF programmes. Favicon still `my_logo_w.png`.
 - Programme pipeline after any JSON change: `build_programmes.py` → `export_pdfs.py` (Word, ~5 min for all) → `programme_index.py` → `programme_site.py`. Logo and cover tiles are embedded as SVG in the .docx (Word otherwise resamples PNGs to ~200 ppi in the PDF).
