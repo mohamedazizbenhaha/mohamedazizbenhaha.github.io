@@ -1,4 +1,4 @@
-# START HERE (handoff, updated 2026-10-06: WhatsApp catalogue done, next = make it live)
+# START HERE (handoff, updated 2026-10-06: catalogue live on main, Commerce Manager setup in progress)
 
 ## State
 - **MERGED TO PRODUCTION 2026-10-05 (user's word): `redesign` fast-forwarded into `main`** → https://mohamedazizbenhaha.netlify.app (Netlify rebuilds on the push). Branch `redesign` still exists: keep using it for review, push there first, then ask before merging to `main` again. The contact QR (`res/contact-qr.svg`) was regenerated for the production .vcf URL at the merge (decoded OK with zxing-cpp). Review URL: https://deploy-preview-3--mohamedazizbenhaha.netlify.app (Deploy Preview protection in the new Netlify account may still return 401: Site configuration → Visitor access).
@@ -6,7 +6,9 @@
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `programmes.js` (training catalogue, generated) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
 ## WhatsApp / Meta catalogue (NEXT SESSION STARTS HERE)
-**State 2026-10-06: CLOSED.** All 39 items (234 images + 3 feeds) reviewed by the user, last fixes applied (brand block same height per course, compact block for crowded/listed courses, brand 70 px from the bottom), pushed to `redesign` (tree clean). **Next session: make it live** = merge `redesign` into `main` on the user's word (the feeds and images point at production URLs, so nothing works in Meta before the merge), check the URLs answer 200, then guide the Commerce Manager setup (step 4 under "Original plan").
+**LIVE 2026-10-06 (user's word): `redesign` fast-forwarded into `main` (c245d42).** Checked on production: the 3 feeds answer 200 (text/csv) and all 195 links in them (39 PDFs + 156 images) answer 200; feed-fr.csv matches the repo. Next: Commerce Manager setup with the user, step by step (results below under "Commerce Manager log").
+
+**Earlier state 2026-10-06: CLOSED.** All 39 items (234 images + 3 feeds) reviewed by the user, last fixes applied (brand block same height per course, compact block for crowded/listed courses, brand 70 px from the bottom), pushed to `redesign` (tree clean). **Next session: make it live** = merge `redesign` into `main` on the user's word (the feeds and images point at production URLs, so nothing works in Meta before the merge), check the URLs answer 200, then guide the Commerce Manager setup (step 4 under "Original plan").
 - Rules (also in memory): B2B only (companies + training centres), dark & gold cards, logo + name one block at the bottom, PhD in the byline, white logo and white CNFCPP (TFP) badge, hours only, same text across any design options.
 - Template: `python scripts/catalog.py [slug ...]` (run from PowerShell; needs Edge + internet for fonts). With slugs it re-renders only those images; feeds are always rebuilt for every item. It prints `OVERFLOW: ...` for any card whose text runs into the bottom margin.
 - Input `catalog/items.json`: `price` (per hour × total hours, one in-company group, excl. tax; **user's choice: 100 TND/h in Tunisia, 100 EUR/h abroad**; DevOps 81 h = 8,100) and `items` (slug → `code` + 5 `outcomes` per language as [bold start, rest]).
