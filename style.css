@@ -435,8 +435,8 @@ a.pub:hover img{transform:scale(1.05)}
   .pm-head{flex-direction:column;align-items:flex-start;gap:10px}
   .foot-in{flex-direction:column;align-items:flex-start}
   .contact-grid,.hl-3,.minis,.journey{grid-template-columns:1fr}
-  .qr img,.qr p{display:none}
-  .qr{order:-1;padding:0;border:0;background:none;align-items:stretch}
+  .modal-main h2{padding-right:52px}
+  .qr img{max-width:200px}
   .qr .btn{background:var(--txt);color:#000;border-color:var(--txt);justify-content:center;padding:.85em 1.4em;font-size:.98rem}
   .journey{padding-top:0;padding-left:30px;gap:28px}
   .journey::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,#2a2a33,var(--gold))}
