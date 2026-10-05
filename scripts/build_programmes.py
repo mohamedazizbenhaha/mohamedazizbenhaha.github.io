@@ -25,7 +25,7 @@ from docx.shared import Cm, Pt, RGBColor, Twips
 ROOT = Path(__file__).resolve().parent.parent
 SRC, OUT = ROOT / 'programmes', ROOT / 'res' / 'programmes'
 BUILT = SRC / '.built.json'
-LOGO = ROOT / 'res' / 'my_logo_w.png'
+LOGO = ROOT / 'res' / 'logo.svg'  # vector, rendered large so it stays sharp in Word and PDF
 NAME, SITE = 'Mohamed Aziz BEN HAHA', 'mohamedazizbenhaha.netlify.app'
 
 # White page, gold accents. GOLD is the site's gold (rules, fills, big numbers);
@@ -269,13 +269,34 @@ def hrs(h):
     return f'{h:g}\u00a0h'.replace('.', DEC) if h is not None else '—'
 
 
+def logo_svg(color=INK):
+    return LOGO.read_text(encoding='utf-8').replace('fill="#fff"', f'fill="#{color}"').encode()
+
+
+SVG_EXT = '{96DAC541-7B7A-43D3-8B79-37D633B846F1}'
+_svg_n = iter(range(1, 10**6))
+
+
+def add_svg(inline, part, svg):
+    """Attach a vector copy to a picture: Word 2016+ draws it and exports it to PDF as vectors (sharp at any zoom);
+    older readers fall back to the PNG. Word resamples PNGs to ~200 ppi on PDF export whatever the settings."""
+    from docx.opc.constants import RELATIONSHIP_TYPE as RT
+    from docx.opc.packuri import PackURI
+    from docx.opc.part import Part
+    svg_part = Part(PackURI(f'/word/media/vector{next(_svg_n)}.svg'), 'image/svg+xml', svg, part.package)
+    rid = part.relate_to(svg_part, RT.IMAGE)
+    inline.find('.//' + qn('a:blip')).append(parse_xml(
+        f'<a:extLst {nsdecls("a", "r")}><a:ext uri="{SVG_EXT}">'
+        f'<asvg:svgBlip xmlns:asvg="http://schemas.microsoft.com/office/drawing/2016/SVG/main" r:embed="{rid}"/>'
+        f'</a:ext></a:extLst>'))
+
+
 def logo_png(color=INK):
-    """The site logo is white on transparent; recolour it for a white page."""
-    im = Image.open(LOGO).convert('RGBA')
-    solid = Image.new('RGBA', im.size, '#' + color)
-    solid.putalpha(im.getchannel('A'))
-    buf = io.BytesIO(); solid.save(buf, 'PNG'); buf.seek(0)
-    return buf
+    """The site logo (white vector) recoloured and rendered 1200 px wide: sharp at any size it is placed."""
+    import fitz
+    page = fitz.open('svg', logo_svg(color))[0]
+    pix = page.get_pixmap(matrix=fitz.Matrix(1200 / page.rect.width, 1200 / page.rect.width), alpha=True)
+    return io.BytesIO(pix.tobytes('png'))
 
 
 # The site's Nabeul tiles (main.js, ART), 100x100 line art
@@ -297,7 +318,7 @@ COVER_ROWS = [0.25, 0.20, 0.15]  # tile rows from the top, fading out
 TILE_COLS = 8  # tiles across the page; each row is 210/8 = 26.25 mm high
 
 
-def tiles_png(dpi=200):
+def tiles_png(dpi=600):
     """The cover's tile band: rows of the site's Nabeul tiles fading out, on transparent."""
     import fitz  # PyMuPDF renders the SVG
     W, s = 210, 210 / TILE_COLS
@@ -311,7 +332,7 @@ def tiles_png(dpi=200):
                      f'{TILES[(c + 2 * r) % 5]}</g>')
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}mm" height="{H:.2f}mm" viewBox="0 0 {W} {H:.2f}">{body}</svg>'
     pix = fitz.open('svg', svg.encode())[0].get_pixmap(dpi=dpi, alpha=True)
-    return io.BytesIO(pix.tobytes('png')), Cm(21), Cm(H / 10)
+    return io.BytesIO(pix.tobytes('png')), Cm(21), Cm(H / 10), svg.encode()
 
 
 def night_png():
@@ -319,9 +340,10 @@ def night_png():
     return buf
 
 
-def behind_text(p, image, width, height, name, locked, x=0, y=0):
+def behind_text(p, image, width, height, name, locked, x=0, y=0, svg=None):
     """Picture placed on the page (offsets from its top-left corner), behind the text."""
     inline = p.add_run().add_picture(image, width=width, height=height)._inline
+    if svg: add_svg(inline, p.part, svg)
     anchor = parse_xml(
         f'<wp:anchor {nsdecls("wp", "a", "pic", "r")} distT="0" distB="0" distL="0" distR="0" simplePos="0" '
         f'relativeHeight="{2 if not locked else 1}" behindDoc="1" locked="{int(locked)}" layoutInCell="1" allowOverlap="1">'
@@ -369,7 +391,7 @@ def setup(doc, title, L=LABELS):
     add(hp, ('Prog Label', L['kicker']), '\t' + title)
 
     p = sec.footer.paragraphs[0]
-    p.add_run().add_picture(logo_png(), height=Cm(0.3))
+    add_svg(p.add_run().add_picture(logo_png(), height=Cm(0.3))._inline, p.part, logo_svg())
     add(p, '  ', ('Prog Strong', NAME), '  ·  ' + SITE + '\t' + L['page'] + ' ')
     field(p, 'PAGE'); p.add_run(f" {L['of']} "); field(p, 'NUMPAGES')
 
@@ -393,7 +415,7 @@ def author_block(doc):
     logo_cell.width, who.width = Cm(1.9), Cm(9)
     who.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
     p = logo_cell.paragraphs[0]; p.style = doc.styles['Prog Cover Name']
-    p.add_run().add_picture(logo_png(CREAM), height=Cm(1.35))
+    add_svg(p.add_run().add_picture(logo_png(CREAM), height=Cm(1.35))._inline, p.part, logo_svg(CREAM))
     p = who.paragraphs[0]; p.style = doc.styles['Prog Cover Name']; p.add_run(NAME)
     p = who.add_paragraph(style='Prog Cover Site'); p.add_run(SITE)
 
@@ -438,6 +460,24 @@ def check(g):
 
 # ---------- the document ----------
 
+def keep_full_images(doc):
+    """Word's 'Do not compress images in file': without it Word resamples pictures (~200 ppi) when it saves or exports
+    to PDF, and the logo and the cover tiles look pixelated. Inserted in schema order (before forceUpgrade and later).
+    Also sets the template's defaultImageDpi to High fidelity."""
+    st = doc.settings.element
+    dpi = st.find(qn('w14:defaultImageDpi'))
+    if dpi is not None:
+        dpi.set(qn('w14:val'), '32767')  # "High fidelity": no resampling on PDF export
+    if st.find(qn('w:doNotAutoCompressPictures')) is not None:
+        return
+    el = OxmlElement('w:doNotAutoCompressPictures')
+    later = {qn(f'w:{t}') for t in ('forceUpgrade', 'captions', 'readModeInkLockDown', 'smartTagType', 'shapeDefaults',
+                                     'doNotEmbedSmartTags', 'decimalSymbol', 'listSeparator')}
+    later.add('{http://schemas.openxmlformats.org/schemaLibrary/2006/main}schemaLibrary')
+    nxt = next((c for c in st if c.tag in later), None)
+    nxt.addprevious(el) if nxt is not None else st.append(el)
+
+
 def build_doc(g):
     global DEC, FR
     fr = FR = g.get('lang') == 'fr'
@@ -445,6 +485,7 @@ def build_doc(g):
     L = {**(LABELS_FR if fr else LABELS), **g.get('labels', {})}
     buffer = g.get('buffer') or 0
     doc = Document()
+    keep_full_images(doc)
     make_styles(doc)
     setup(doc, g['title'], L)
     cp = doc.core_properties
@@ -452,8 +493,8 @@ def build_doc(g):
 
     # cover (page 1, on the black background)
     k = P(doc, 'Prog Cover Kicker', L['kicker'])
-    img, w, h = tiles_png()
-    behind_text(k, img, w, h, 'Cover tiles', locked=False)
+    img, w, h, svg = tiles_png()
+    behind_text(k, img, w, h, 'Cover tiles', locked=False, svg=svg)
     # no line break inside "(RHEL 10)", before "&" or at a hyphen ("sans-fil")
     title = re.sub(r'\([^)]*\)', lambda m: m[0].replace(' ', '\u00a0'), g['title']).replace(' &', '\u00a0&').replace('-', '\u2011')
     P(doc, 'Prog Cover Title', title)

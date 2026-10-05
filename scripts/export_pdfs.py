@@ -3,7 +3,8 @@
     python scripts/export_pdfs.py            # all programmes
     python scripts/export_pdfs.py <slug>...  # some
 
-PDFs are optimised for screen (smaller files) and are what the website offers for preview.
+PDFs are optimised for print (0): screen mode downsampled the logo and the cover tiles until they looked pixelated.
+They are what the website offers for preview.
 """
 import json, subprocess, sys
 from pathlib import Path
@@ -22,7 +23,7 @@ def main(slugs):
         name = json.loads(f.read_text(encoding='utf-8'))['file']
         src, dst = OUT / name, PDF / (Path(name).stem + '.pdf')
         ps.append(f"$d = $w.Documents.Open('{src}', $false, $true); "
-                  f"$d.ExportAsFixedFormat('{dst}', 17, $false, 1); $d.Close($false)")
+                  f"$d.ExportAsFixedFormat('{dst}', 17, $false, 0); $d.Close($false)")
     ps.append("$w.Quit()")
     subprocess.run(['powershell', '-NoProfile', '-Command', '; '.join(ps)], check=True)
     print(f'exported {len(files)} PDF(s) to {PDF.relative_to(ROOT)}')
