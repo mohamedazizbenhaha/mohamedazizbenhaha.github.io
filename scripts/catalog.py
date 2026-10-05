@@ -83,7 +83,7 @@ T = {
 FONT = ('<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800'
         '&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">')
 CSS = """*{margin:0;padding:0;box-sizing:border-box}html,body{width:1080px;height:1080px;overflow:hidden}
-body{font-family:Manrope;background:radial-gradient(1200px 700px at 85% -10%,#2a2008 0%,#07070a 55%);color:#ece9e2;padding:80px 90px;display:flex;flex-direction:column}
+body{font-family:Manrope;background:radial-gradient(1200px 700px at 85% -10%,#2a2008 0%,#07070a 55%);color:#ece9e2;padding:80px 90px;display:flex;flex-direction:column;position:relative}
 .top{display:flex;justify-content:space-between;align-items:center;gap:20px}
 .tag{font:700 20px Manrope;letter-spacing:.16em;text-transform:uppercase;color:#d4a024;white-space:nowrap}
 .badge{font:700 19px Manrope;letter-spacing:.06em;color:#fff;border:1.5px solid #fff;border-radius:999px;padding:10px 20px;white-space:nowrap}
@@ -104,24 +104,34 @@ h2{font:800 66px/1 'Bricolage Grotesque';letter-spacing:-.025em;margin-top:44px}
 .o{display:grid;grid-template-columns:60px 1fr;align-items:start}
 .o i{font:800 26px/1.4 'Bricolage Grotesque';color:#d4a024;font-style:normal}
 .o div{font:600 26px/1.35 Manrope}.o span{color:#a9a6a0;font-weight:500}
-.brand{margin-top:auto;padding-top:20px;display:flex;align-items:center;gap:22px}
+.brand{position:absolute;left:90px;bottom:80px;display:flex;align-items:center;gap:22px}
 .brand .n{font:700 28px Manrope}.brand .r{font:500 21px Manrope;color:#8d8a84;margin-top:2px}
 .brand .sep{width:1.5px;height:62px;background:#3a3730}"""
 
-# Long titles or many rows push the brand into the bottom margin: tighten step by step, only when needed
+# The brand is pinned at the same height on every card. A page-2 title that wraps puts "Programme" on its
+# last line; content that would reach the brand is tightened step by step, only when needed
 # (row padding, then heading size, then outcome spacing), so cards that already fit render unchanged.
 FIT = """<script>document.fonts.ready.then(()=>{
-const ok=()=>document.querySelector('.brand').getBoundingClientRect().bottom<=1000;
+const b=document.querySelector('.brand'),top=b.getBoundingClientRect().top-20;
+const ok=()=>[...document.body.children].every(e=>e===b||e.tagName==='SCRIPT'||e.getBoundingClientRect().bottom<=top);
+const h=document.querySelector('h2');
+if(document.querySelector('.mods')&&h.offsetHeight>parseFloat(getComputedStyle(h).fontSize)*2.2)h.querySelector('br').replaceWith(' ');
+for(let z=62;document.querySelector('.mods')&&z>=50&&h.offsetHeight>z*2.2;z-=4)h.style.fontSize=z+'px';
+if(h.offsetHeight>parseFloat(getComputedStyle(h).fontSize)*2.2)h.style.fontSize='';
 const set=(sel,prop,v)=>document.querySelectorAll(sel).forEach(e=>e.style[prop]=v);
 const steps=[];
 for(let p=12;p>=7;p--)steps.push(()=>set('.m','padding',p+'px 0'));
 steps.push(()=>set('.m','gridTemplateColumns','58px 1fr 80px'));
 steps.push(()=>{set('.m p','fontSize','16px');set('.m b','fontSize','25px')});
 steps.push(()=>{set('h2','marginTop','30px');set('.mods,.out','marginTop','22px')});
-for(let s=60;s>=54;s-=6)steps.push(()=>set('h2','fontSize',s+'px'));
+for(let s=60;s>=54;s-=6)steps.push(()=>set('h2','fontSize',Math.min(s,parseFloat(getComputedStyle(h).fontSize))+'px'));
+steps.push(()=>set('.tot','marginTop','8px'));
+for(let p=6;p>=5;p--)steps.push(()=>set('.m','padding',p+'px 0'));
+steps.push(()=>{set('.m p','fontSize','15px');set('.m b','fontSize','23px')});
 for(let g=16;g>=8;g-=4)steps.push(()=>set('.out','gap',g+'px'));
 for(let s=24;s>=21;s--)steps.push(()=>set('.o div','fontSize',s+'px'));
 for(const f of steps){if(ok())break;f()}
+if(!ok())document.body.insertAdjacentHTML('beforeend','<i style="position:absolute;left:0;right:0;bottom:0;height:30px;background:#fff"></i>');
 });</script>"""
 
 
@@ -152,6 +162,11 @@ def glue(s):
     # keep "(RHEL 10)" and "sans-fil :" on one line
     s = re.sub(r"\([^)]*\)", lambda m: m.group(0).replace(" ", "\u00a0"), s)
     return re.sub(r" ([:;!?])", "\u00a0\\1", s)
+
+
+def keep(s):
+    # escaped and glued text whose hyphenated words never break (t-SNE, sans-fil)
+    return re.sub(r"(\S+-\S+)", r"<b style='font:inherit;white-space:nowrap'>\1</b>", esc(glue(s)))
 
 
 def title_lines(title):
@@ -185,7 +200,7 @@ def pages(p, lang, outcomes, cnfcpp):
         (t["site"], t["remote"])])
     cs = certs_short(p, t)
     cert = f"<div class=c>{t['prep']} {esc(cs)}</div>" if cs else ""
-    one = (f"{top}<h1 style='font-size:{size}px'>{esc(glue(l1))}<br><span>{esc(glue(l2))}</span></h1>"
+    one = (f"{top}<h1 style='font-size:{size}px'>{keep(l1)}<br><span>{keep(l2)}</span></h1>"
            f"<div class=sub>{esc(p['subtitle'])}.</div><div class=facts>{facts}</div>{cert}{brand}")
     rows, k = "", 0
     for ph in core:
@@ -199,9 +214,8 @@ def pages(p, lang, outcomes, cnfcpp):
     if buf:
         rows += (f"<div class='m buf'><i>+</i><div><b>{t['buffer']}</b><p>{t['buffer_focus']}</p></div>"
                  f"<em>{hrs(buf)} h</em></div>")
-    two = (f"{top}<h2>{esc(glue(p['title']))}<br><span>{t['programme']}</span></h2><div class=mods>{rows}</div>"
+    two = (f"{top}<h2>{keep(p['title'])}<br><span>{t['programme']}</span></h2><div class=mods>{rows}</div>"
            f"<div class=tot>{t['sum'].format(m=hrs(mods), b=hrs(buf), t=hrs(total))}</div>{brand}")
-    keep = lambda s: re.sub(r"(\S+-\S+)", r"<b style='font:inherit;white-space:nowrap'>\1</b>", esc(glue(s)))
     outs = "".join(f"<div class=o><i>{i:02d}</i><div>{keep(a)} <span>{keep(b)}</span></div></div>"
                    for i, (a, b) in enumerate(outcomes, 1))
     h1, h2 = t["outcomes"]
@@ -226,7 +240,7 @@ def render(htmls, stems, tmp):
         time.sleep(0.5)
         im = Image.open(png).convert("RGB")
         im.save(CAT / "img" / f"{stem}.jpg", quality=90)
-        # content that overflows the 80 px bottom margin shows as bright pixels near the edge
+        # content that reaches the brand even after FIT shows as a white bar in the bottom margin
         if im.convert("L").crop((0, 1035, 1080, 1080)).getextrema()[1] > 110:
             OVERFLOW.append(stem)
 
