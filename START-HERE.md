@@ -2,7 +2,7 @@
 
 ## State
 - **MERGED TO PRODUCTION 2026-10-05 (user's word): `redesign` fast-forwarded into `main`** → https://mohamedazizbenhaha.netlify.app (Netlify rebuilds on the push). Branch `redesign` still exists: keep using it for review, push there first, then ask before merging to `main` again. The contact QR (`res/contact-qr.svg`) was regenerated for the production .vcf URL at the merge (decoded OK with zxing-cpp). Review URL: https://deploy-preview-3--mohamedazizbenhaha.netlify.app (Deploy Preview protection in the new Netlify account may still return 401: Site configuration → Visitor access).
-- **Mobile pass done and merged to `main` 2026-10-05** (favicon + Search Console file included). Next: ask the user which part comes next. After each merge, open a new draft PR from `redesign` for a fresh deploy preview (a merged PR freezes its preview).
+- **Merged to `main` 2026-10-05 (twice): mobile pass, favicon, Search Console file, then share image `res/og-card.jpg` + 1,000+ hours in meta + unused images removed.** Next: ask the user. Open: the leaked app password belongs to mohamedaziz.benhaha@gmail.com (the site contact address): confirm the user revoked it. After each merge, open a new draft PR from `redesign` for a fresh deploy preview (a merged PR freezes its preview).
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `programmes.js` (training catalogue, generated) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
 ## Mobile pass (next session): what to check
