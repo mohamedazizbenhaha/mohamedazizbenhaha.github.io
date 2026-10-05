@@ -1,0 +1,22 @@
+id,override,title,description,link
+DEVOPS-ENG-81,en_XX,DevOps Engineering (81 h),"In-company training, on-site or remote. Eligible for CNFCPP (TFP) refund.
+
+Participants can take an application from commit to production through an automated pipeline with tests, quality gates, versioned artifacts, infrastructure as code, and monitoring with alerts.
+
+Programme (81 h: 72 h of modules + 9 h buffer for catch-up, revision and extra lab time)
+01 DevOps Culture & Collaboration (9 h): DevOps principles, Git and team workflows
+02 Continuous Integration & Delivery (24 h): Jenkins, automated tests, SonarQube, Nexus, deployment strategies, GitHub Actions
+03 Infrastructure as Code (24 h): Terraform provisioning on AWS, Ansible configuration management
+04 Observability (6 h): Prometheus metrics and alerts, Grafana dashboards and Loki logs
+Final Project (9 h): End-to-end delivery chain, presented to the group
+
+For: Developers, system administrators and IT engineers moving into DevOps roles
+Prerequisites: Linux command line and Bash (course: Linux & Bash Scripting); Docker and Kubernetes basics (course: Docker & Kubernetes). This course builds on Docker & Kubernetes and does not repeat it.
+Format: Short lectures followed by guided labs; one application carried through every phase
+Assessment: A lab validated at the end of each phase and a final project presented to the group; certificate of completion for participants who complete both
+
+Prepares the core topics of HashiCorp Terraform Associate, GitHub Actions and LPI DevOps Tools Engineer 2.0.
+
+Price on quote. Send a message with your team size and preferred dates.
+
+Trainer: Mohamed Aziz BEN HAHA, PhD, Cloud & DevOps engineer (CKA, AWS)",https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/DevOps-Engineering-81h.pdf

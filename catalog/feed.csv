@@ -1,0 +1,22 @@
+id,title,description,availability,condition,price,link,image_link,additional_image_link,brand
+DEVOPS-ENG-81,Ingénierie DevOps (81 h),"Formation intra-entreprise, sur site ou à distance. Éligible au remboursement CNFCPP (TFP).
+
+Les participants savent faire passer une application du commit à la production via une chaîne automatisée : tests, seuils de qualité, artefacts versionnés, infrastructure en code, supervision et alertes.
+
+Programme (81 h : 72 h de modules + 9 h de réserve pour rattrapage, révision et TP supplémentaires)
+01 Culture DevOps et collaboration (9 h) : Principes DevOps, Git et méthodes de travail en équipe
+02 Intégration et livraison continues (24 h) : Jenkins, tests automatisés, SonarQube, Nexus, stratégies de déploiement, GitHub Actions
+03 Infrastructure en code (IaC) (24 h) : Provisionnement AWS avec Terraform, gestion de configuration avec Ansible
+04 Supervision (6 h) : Métriques et alertes Prometheus, tableaux de bord Grafana et journaux Loki
+Projet final (9 h) : Chaîne de livraison complète, présentée au groupe
+
+Public : Développeurs, administrateurs système et ingénieurs IT souhaitant évoluer vers des fonctions DevOps
+Prérequis : Ligne de commande Linux et Bash (cours : Linux et scripting Bash) ; bases de Docker et Kubernetes (cours : Docker et Kubernetes). Ce cours prolonge Docker et Kubernetes sans le répéter.
+Format : Cours courts suivis de TP guidés ; une même application reprise dans toutes les phases
+Évaluation : Un TP validé à la fin de chaque phase et un projet final présenté au groupe ; attestation de formation pour les participants qui valident les deux
+
+Prépare les thèmes principaux de HashiCorp Terraform Associate, GitHub Actions et LPI DevOps Tools Engineer 2.0.
+
+Prix sur devis. Envoyez-nous la taille de votre équipe et vos dates souhaitées.
+
+Formateur : Mohamed Aziz BEN HAHA, PhD, ingénieur Cloud & DevOps (CKA, AWS)",in stock,new,,https://mohamedazizbenhaha.netlify.app/res/programmes/pdf/Ingenierie-DevOps-81h.pdf,https://mohamedazizbenhaha.netlify.app/catalog/img/devops-engineering-fr-1.jpg,"https://mohamedazizbenhaha.netlify.app/catalog/img/devops-engineering-fr-2.jpg,https://mohamedazizbenhaha.netlify.app/catalog/img/devops-engineering-fr-3.jpg",Mohamed Aziz BEN HAHA

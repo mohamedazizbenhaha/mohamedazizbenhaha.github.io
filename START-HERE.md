@@ -5,6 +5,13 @@
 - **Merged to `main` 2026-10-05 (twice): mobile pass, favicon, Search Console file, then share image `res/og-card.jpg` + 1,000+ hours in meta + unused images removed.** Next: ask the user. The leaked app password (mohamedaziz.benhaha@gmail.com) was revoked by the user 2026-10-05. After each merge, open a new draft PR from `redesign` for a fresh deploy preview (a merged PR freezes its preview).
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `programmes.js` (training catalogue, generated) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
+## WhatsApp / Meta catalogue (2026-10-05, on `redesign`, test item = DevOps Engineering)
+- B2B only (companies + training centres), price on quote, dark & gold cards, logo + name one block, PhD in the byline, CNFCPP (TFP) badge (see memory).
+- Template: `python scripts/catalog.py` (run from PowerShell; needs Edge + internet for fonts). Input `catalog/items.json`: which programmes (slug, code, 5 outcomes EN + FR), `rate_per_hour`, `currency`. Output: `catalog/img/<slug>-<lang>-<1..3>.jpg` (cover, programme with buffer row, team outcomes), `catalog/feed.csv` (primary, French) + `catalog/feed-en.csv` (English language feed, `override=en_XX`, same ids).
+- Meta requires a price in a data feed: while `rate_per_hour` is null the price column is empty and Commerce Manager rejects the items. Price = rate × total hours, per in-company group.
+- The feed URLs point at production, so they work only after a merge to `main` (user's word).
+- Next: the user reviews DevOps; then add the other 38 slugs to `items.json` (write 5 outcomes per language from each programme JSON).
+
 ## Mobile pass (next session): what to check
 Test at 375 px and 390 px (Browser pane `resize_window` mobile preset; reload after switching), EN and FR, no sideways scroll anywhere. Known or likely issues:
 - Training filter bar scrolls sideways; the selected button can sit off-screen (known since 2026-10-05).
