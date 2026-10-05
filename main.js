@@ -309,6 +309,62 @@ const LIFE = {
   }
 })();
 
+/* ---------- project art on canvas: runs only while on screen ---------- */
+const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t, easeOut = t => 1 - Math.pow(1 - t, 3);
+function artLoop(c, draw) {
+  const x = c.getContext('2d'); let W = 0, H = 0, on = false, t0 = performance.now();
+  const fit = () => { const r = c.getBoundingClientRect(), d = devicePixelRatio || 1; W = r.width; H = r.height; c.width = W * d; c.height = H * d; x.setTransform(d, 0, 0, d, 0, 0) };
+  const frame = now => { if (!on) return; x.clearRect(0, 0, W, H); draw(x, W, H, (now - t0) / 1000); requestAnimationFrame(frame) };
+  new IntersectionObserver(([e]) => { const was = on; on = e.isIntersecting; if (on && !was) { fit(); requestAnimationFrame(frame) } }).observe(c);
+  addEventListener('resize', fit);
+}
+
+/* Thesis ecosystem: a dot travels the four tools; the stops add pages, ThesisVault adds the cover and the cap */
+(() => {
+  const D = 'M42 58 C 72 26, 102 26, 132 58 S 192 90, 222 58 S 282 26, 312 58', NS = 'http://www.w3.org/2000/svg';
+  const path = document.createElementNS(NS, 'path'); path.setAttribute('d', D);
+  const P2 = new Path2D(D), total = path.getTotalLength();
+  const STOPS = [[42, 'ThesisMatcher', { en: 'subject', fr: 'sujet' }], [132, 'ThesisPilot', { en: 'research', fr: 'recherche' }], [222, 'ThesisLens', { en: 'sources', fr: 'sources' }], [312, 'ThesisVault', { en: 'publish', fr: 'publication' }]];
+  const T = 9, TRAVEL = 6, at = i => TRAVEL * i / 3;
+  const PAGES = [[0, 0], [1, 0], [1, .25], [1, .5], [2, 0], [2, .25]];
+  const SX = 392, SY = 132, PW = 62, PH = 7, GAP = 8.5, GOLD = '#d4a024', GOLD2 = '#f2c45a';
+  artLoop($('#thesisArt'), (x, W, H, t) => {
+    const s = Math.min(W / 440, H / 150), tt = t % T, fade = 1 - clamp((tt - (T - .5)) / .5);
+    x.save(); x.translate((W - 440 * s) / 2, (H - 150 * s) / 2); x.scale(s, s);
+    x.setLineDash([5, 6]); x.strokeStyle = '#3a3427'; x.lineWidth = 2; x.stroke(P2); x.setLineDash([]);
+    STOPS.forEach(([sx, n, sub], i) => {
+      const lit = tt >= at(i) - .05;
+      x.beginPath(); x.arc(sx, 58, 10, 0, 7); x.fillStyle = '#0b0b10'; x.fill(); x.lineWidth = 2; x.strokeStyle = lit ? GOLD : '#3a3427'; x.stroke();
+      if (lit) { x.beginPath(); x.arc(sx, 58, 4, 0, 7); x.fillStyle = GOLD; x.fill() }
+      x.textAlign = 'center'; x.font = '700 11px Manrope, sans-serif'; x.fillStyle = '#f3efe6'; x.fillText(n, sx, 96);
+      x.font = '600 10px Manrope, sans-serif'; x.fillStyle = '#9d978a'; x.fillText(pick(sub), sx, 111);
+    });
+    if (tt < TRAVEL + .3) { const p = path.getPointAtLength(total * clamp(tt / TRAVEL)); x.fillStyle = GOLD2; x.shadowColor = GOLD; x.shadowBlur = 12; x.beginPath(); x.arc(p.x, p.y, 6, 0, 7); x.fill(); x.shadowBlur = 0 }
+    x.globalAlpha = fade;
+    x.fillStyle = 'rgba(212,160,36,.25)'; x.fillRect(SX - 42, SY + 1, 84, 1);
+    PAGES.forEach(([si, d], j) => {
+      const st = at(si) + d; if (tt < st) return;
+      const q = easeOut(clamp((tt - st) / .7)), px = lerp(STOPS[si][0], SX, q), py = lerp(58, SY - PH - j * GAP, q) - Math.sin(q * Math.PI) * 40, w = PW * (.4 + .6 * q);
+      x.save(); x.translate(px, py); x.rotate((1 - q) * -.5); x.fillStyle = '#e9e3d6'; x.fillRect(-w / 2, 0, w, PH); x.restore();
+    });
+    const top = SY - 11 - PAGES.length * GAP, cv = easeOut(clamp((tt - at(3) - .1) / .6)), cp = easeOut(clamp((tt - at(3) - .7) / .6));
+    if (cv > 0) {
+      const y = lerp(top - 70, top, cv);
+      x.fillStyle = GOLD; x.fillRect(SX - PW / 2 - 3, y, PW + 6, 11);
+      x.font = '800 8px "Bricolage Grotesque", sans-serif'; x.fillStyle = '#120d02'; x.textAlign = 'center'; x.fillText(lang === 'fr' ? 'THÈSE' : 'THESIS', SX, y + 8.5);
+    }
+    if (cp > 0) {
+      x.save(); x.translate(SX + 4, lerp(top - 70, top - 1, cp)); x.rotate(lerp(-.6, -.12, cp));
+      x.fillStyle = '#1b1b23'; x.strokeStyle = GOLD; x.lineWidth = 1;
+      x.beginPath(); x.moveTo(-26, -11); x.lineTo(0, -20); x.lineTo(26, -11); x.lineTo(0, -2); x.closePath(); x.fill(); x.stroke();
+      x.fillRect(-13, -8, 26, 8); x.strokeRect(-13, -8, 26, 8);
+      x.strokeStyle = GOLD2; x.beginPath(); x.moveTo(0, -12); x.lineTo(21, -9); x.lineTo(21, 4); x.stroke();
+      x.restore();
+    }
+    x.restore();
+  });
+})();
+
 /* ---------- rotating roles ---------- */
 let rotTimer;
 function restartRotator() {

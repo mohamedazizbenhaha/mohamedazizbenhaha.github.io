@@ -256,9 +256,8 @@ em{font-style:normal;color:var(--gold)}
 .proj-body .chips{margin-top:auto}
 .proj-art{position:relative;height:200px;overflow:hidden;background:#0b0b10;flex:none}
 .hl-3 .proj-art{height:150px}
-.a1{background:radial-gradient(60% 60% at 30% 30%,rgba(212,160,36,.35),transparent 70%),repeating-linear-gradient(0deg,transparent 0 22px,rgba(255,255,255,.04) 22px 23px),#0b0b10}
-.a1 span{position:absolute;padding:.4em .8em;border-radius:10px;background:#16161d;border:1px solid #3a3427;color:var(--gold2);font:700 1rem var(--display);animation:float 5s ease-in-out infinite}
-.a1 span:nth-child(1){left:14%;top:22%}.a1 span:nth-child(2){left:52%;top:44%;animation-delay:-1.5s}.a1 span:nth-child(3){left:26%;top:66%;animation-delay:-3s;color:var(--txt)}
+.a1{background:radial-gradient(70% 70% at 50% 45%,rgba(212,160,36,.13),transparent 70%),#0b0b10}
+.proj-art canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .a2{display:grid;place-items:center;background:radial-gradient(circle at 50% 60%,rgba(40,140,200,.35),transparent 60%),radial-gradient(circle at 50% 60%,rgba(212,160,36,.18),transparent 75%),#0a0d12}
 .a2 svg{width:84px;height:84px;color:#8fd3ff;stroke-width:1.2;filter:drop-shadow(0 0 24px rgba(120,200,255,.5));animation:float 6s ease-in-out infinite}
 .a2::before,.a2::after{content:"";position:absolute;width:200px;height:200px;border-radius:50%;border:1px solid rgba(143,211,255,.25);left:50%;top:50%;transform:translate(-50%,-50%) scale(.4);animation:ripple 4s var(--ease) infinite}
@@ -446,7 +445,7 @@ em{font-style:normal;color:var(--gold)}
 @media(prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
   .name .w{opacity:1;transform:none;filter:none;animation:none}
-  .badge-float,.a1 span,.a2 svg,.a6 i,.a6::after,.a7 b{animation:none}
+  .badge-float,.a2 svg,.a6 i,.a6::after,.a7 b{animation:none}
   html{scroll-behavior:auto}
 }
 
