@@ -312,12 +312,91 @@ const LIFE = {
 /* ---------- project art on canvas: runs only while on screen ---------- */
 const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t, easeOut = t => 1 - Math.pow(1 - t, 3);
 function artLoop(c, draw) {
-  const x = c.getContext('2d'); let W = 0, H = 0, on = false, t0 = performance.now();
+  const x = c.getContext('2d'); let W = 0, H = 0, on = false, t = 0, last = 0;
   const fit = () => { const r = c.getBoundingClientRect(), d = devicePixelRatio || 1; W = r.width; H = r.height; c.width = W * d; c.height = H * d; x.setTransform(d, 0, 0, d, 0, 0) };
-  const frame = now => { if (!on) return; x.clearRect(0, 0, W, H); draw(x, W, H, (now - t0) / 1000); requestAnimationFrame(frame) };
-  new IntersectionObserver(([e]) => { const was = on; on = e.isIntersecting; if (on && !was) { fit(); requestAnimationFrame(frame) } }).observe(c);
+  const frame = now => { if (!on) return; const dt = Math.min(.05, (now - last) / 1000); last = now; t += dt; x.clearRect(0, 0, W, H); draw(x, W, H, t, dt); requestAnimationFrame(frame) };
+  new IntersectionObserver(([e]) => { const was = on; on = e.isIntersecting; if (on && !was) { fit(); last = performance.now(); requestAnimationFrame(frame) } }).observe(c);
   addEventListener('resize', fit);
 }
+
+/* Create Life: the whole system. Gold core = local LLaMA; voice ring = voice ID (a stranger bounces off, the owner gets in);
+   sparks = knowledge filling the gauge; full gauge = shockwave + code rewrite (version up); three locks = core principles; log lines. 14 s story. */
+(() => {
+  const T = 14, FN = ['listen()', 'respond()', 'learn()', 'evaluate()', 'remember()'], GOLD = '#d4a024', GOLD2 = '#f2c45a';
+  let sparks = [], fill = .35, waves = [], nextSpark = 0, flare = 0, ver = 12, logs = [], said = {}, cyc = -1, now = 0;
+  const log = s => { logs.push({ s, t: now }); if (logs.length > 3) logs.shift() };
+  const core = (x, cx, cy, r, glow) => {
+    const g = x.createRadialGradient(cx, cy, 1, cx, cy, r * 2.2);
+    g.addColorStop(0, '#fff6d8'); g.addColorStop(.25, GOLD2); g.addColorStop(.55, `rgba(212,160,36,${Math.min(1, .35 * glow)})`); g.addColorStop(1, 'rgba(212,160,36,0)');
+    x.fillStyle = g; x.beginPath(); x.arc(cx, cy, r * 2.2, 0, 7); x.fill();
+  };
+  const ring = (x, cx, cy, r0, amp, t, alpha) => {
+    x.lineCap = 'round'; x.lineWidth = 2;
+    for (let i = 0; i < 64; i++) {
+      const a = i / 64 * Math.PI * 2, v = Math.abs(Math.sin(i * .7 + t * 3) * Math.sin(i * .23 - t * 1.7)), len = 3 + v * amp;
+      x.strokeStyle = `rgba(242,196,90,${clamp(alpha * (.3 + .7 * v))})`;
+      x.beginPath(); x.moveTo(cx + Math.cos(a) * r0, cy + Math.sin(a) * r0); x.lineTo(cx + Math.cos(a) * (r0 + len), cy + Math.sin(a) * (r0 + len)); x.stroke();
+    }
+  };
+  const lock = (x, px, py, s) => {
+    x.strokeStyle = GOLD2; x.lineWidth = 1.4; x.beginPath(); x.arc(px, py - s * .35, s * .38, Math.PI, 0); x.stroke();
+    x.fillStyle = GOLD; x.fillRect(px - s * .55, py - s * .35, s * 1.1, s * .85);
+  };
+  artLoop($('#lifeCore'), (x, W, H, t, dt) => {
+    now = t;
+    const cx = W * .5, cy = H * .5, base = 26, p = t % T, k = Math.floor(t / T);
+    if (k !== cyc) { cyc = k; said = {} }
+    const once = (key, cond, fn) => { if (cond && !said[key]) { said[key] = 1; fn() } };
+    const stranger = clamp((p - 1) / 2.5), owner = clamp((p - 5) / 3);
+    const voice = (prog, rgb, bounce) => {
+      if (prog <= 0 || prog >= 1) return;
+      const reach = cx - base - 12, head = bounce ? (prog < .6 ? lerp(0, reach, prog / .6) : lerp(reach, reach * .55, (prog - .6) / .4)) : lerp(0, reach + 4, prog);
+      const a = bounce && prog > .6 ? 1 - (prog - .6) / .4 : 1, x0 = Math.max(0, head - 150);
+      x.beginPath();
+      for (let px = x0; px <= head; px += 2) {
+        const y = cy + Math.sin(px * .11 - t * 10) * Math.sin(px * .03 + t) * 20 * clamp((px - (head - 150)) / 60);
+        px === x0 ? x.moveTo(px, y) : x.lineTo(px, y);
+      }
+      x.strokeStyle = `rgba(${rgb},${a})`; x.lineWidth = 2; x.stroke();
+    };
+    voice(stranger, '120,118,112', true);
+    voice(owner, '243,239,230', false);
+    once('s', stranger > .6, () => log('[voice] unknown speaker ✗ ignored'));
+    once('o', owner > .97, () => { log('[voice] owner verified ✓'); flare = 1 });
+    const block = stranger > .55 && stranger < .8 ? 1 - Math.abs((stranger - .675) / .125) : 0, listening = owner > .5 && owner < 1 ? 1 : 0;
+    if (t > nextSpark) {
+      const a = -Math.PI / 2 + (Math.random() - .5) * Math.PI * 1.1, d = W * .45;
+      sparks.push({ x: cx + Math.cos(a) * d, y: cy + Math.sin(a) * d, v: 60 + Math.random() * 40, sw: (Math.random() - .5) * 1.2 });
+      nextSpark = t + .4 + Math.random() * .4;
+    }
+    flare = Math.max(0, flare - dt * 2);
+    for (let i = sparks.length - 1; i >= 0; i--) {
+      const s = sparks[i], dx = cx - s.x, dy = cy - s.y, d = Math.hypot(dx, dy);
+      if (d < base + 6) { sparks.splice(i, 1); fill += .07; flare = Math.max(flare, .7); if (Math.random() < .35) log('[learn] new source absorbed'); continue }
+      const sp = s.v * (1 + 110 / (d + 20)) * dt;
+      s.x += (dx / d) * sp + (-dy / d) * s.sw * sp; s.y += (dy / d) * sp + (dx / d) * s.sw * sp;
+      x.fillStyle = 'rgba(243,239,230,.9)'; x.shadowColor = GOLD2; x.shadowBlur = 8; x.beginPath(); x.arc(s.x, s.y, 1.7, 0, 7); x.fill(); x.shadowBlur = 0;
+    }
+    if (fill >= 1) { fill = 0; ver++; waves.push({ t }); log(`[evolve] v${ver}: ${FN[ver % FN.length]} rewritten`); setTimeout(() => log('[core] principles intact 🔒'), 900) }
+    for (let i = waves.length - 1; i >= 0; i--) {
+      const a = t - waves[i].t; if (a > 1.6) { waves.splice(i, 1); continue }
+      x.strokeStyle = `rgba(242,196,90,${.8 * (1 - a / 1.6)})`; x.lineWidth = 2.5 * (1 - a / 1.6) + .5; x.beginPath(); x.arc(cx, cy, base + a * 200, 0, 7); x.stroke();
+    }
+    if (block > 0) { x.strokeStyle = `rgba(200,80,70,${.7 * block})`; x.lineWidth = 2; x.beginPath(); x.arc(cx, cy, base + 30, Math.PI * .8, Math.PI * 1.2); x.stroke() }
+    x.strokeStyle = 'rgba(212,160,36,.18)'; x.lineWidth = 2; x.beginPath(); x.arc(cx, cy, base + 34, 0, 7); x.stroke();
+    x.strokeStyle = GOLD2; x.beginPath(); x.arc(cx, cy, base + 34, -Math.PI / 2, -Math.PI / 2 + fill * Math.PI * 2); x.stroke();
+    ring(x, cx, cy, base, 6 + 16 * Math.max(flare, listening * .9) + 4 * fill, t, .45 + .55 * Math.max(flare, listening, fill * .6));
+    core(x, cx, cy, 9 + fill * 3 + flare * 2, 1 + flare);
+    x.strokeStyle = 'rgba(212,160,36,.12)'; x.lineWidth = 1; x.setLineDash([2, 5]); x.beginPath(); x.arc(cx, cy, base + 50, 0, 7); x.stroke(); x.setLineDash([]);
+    for (let i = 0; i < 3; i++) { const a = t * .25 + i * Math.PI * 2 / 3; lock(x, cx + Math.cos(a) * (base + 50), cy + Math.sin(a) * (base + 50) + 2, 8) }
+    x.font = '600 10.5px ui-monospace, Consolas, monospace'; x.textAlign = 'right'; x.fillStyle = '#9d978a';
+    x.fillText('version ', W - 14 - x.measureText('v' + ver).width, 22); x.fillStyle = GOLD2; x.fillText('v' + ver, W - 14, 22);
+    x.textAlign = 'left';
+    if (stranger > .5 && stranger < 1) { x.fillStyle = `rgba(200,110,100,${1 - clamp((stranger - .85) / .15)})`; x.fillText('unknown ✗', 14, 22) }
+    else if (owner > .3 && p < 9) { x.fillStyle = `rgba(243,239,230,${1 - clamp((p - 8.4) / .6)})`; x.fillText('owner ✓', 14, 22) }
+    logs.forEach((l, i) => { const age = t - l.t; x.fillStyle = `rgba(157,151,138,${clamp(age / .3) * (1 - clamp((age - 5) / 1))})`; x.fillText(l.s, 14, H - 14 - (logs.length - 1 - i) * 14) });
+  });
+})();
 
 /* Thesis ecosystem: a dot travels the four tools; the stops add pages, ThesisVault adds the cover and the cap */
 (() => {

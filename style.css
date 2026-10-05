@@ -280,10 +280,7 @@ em{font-style:normal;color:var(--gold)}
 .a5 i{position:absolute;width:40px;height:40px;border-radius:50%;border:2px solid rgba(143,211,255,.6);border-left-color:transparent;border-bottom-color:transparent;transform:rotate(45deg);animation:wave 2.4s var(--ease) infinite}
 .a5 i:nth-child(2){animation-delay:.4s}.a5 i:nth-child(3){animation-delay:.8s}
 .a5::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--gold2);box-shadow:0 0 18px var(--gold)}
-.a6{display:grid;place-items:center;background:radial-gradient(60% 60% at 50% 50%,rgba(212,160,36,.22),transparent 70%),#0b0b10}
-.a6::after{content:"";width:22px;height:22px;border-radius:50%;background:var(--gold2);box-shadow:0 0 30px var(--gold),0 0 70px rgba(212,160,36,.5);animation:float 5s ease-in-out infinite}
-.a6 i{position:absolute;left:50%;top:50%;border-radius:50%;border:1px dashed rgba(242,196,90,.45);animation:spin 18s linear infinite}
-.a6 i:nth-child(1){width:80px;height:80px;margin:-40px}.a6 i:nth-child(2){width:132px;height:132px;margin:-66px;animation-direction:reverse;animation-duration:26s;border-style:dotted}.a6 i:nth-child(3){width:184px;height:184px;margin:-92px;animation-duration:40s;border-color:rgba(242,196,90,.2)}
+.a6{background:radial-gradient(55% 70% at 50% 50%,rgba(212,160,36,.12),transparent 70%),#0b0b10}
 .a7{display:grid;place-items:center;background:radial-gradient(60% 70% at 50% 50%,rgba(231,0,19,.2),transparent 70%),repeating-linear-gradient(90deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px),#0b0b10}
 .a7 b{width:76px;height:52px;border-radius:14px;background:#e70013;box-shadow:0 10px 40px -8px rgba(231,0,19,.7);display:grid;place-items:center;animation:float 6s ease-in-out infinite}
 .a7 b::after{content:"";border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px}
@@ -445,7 +442,7 @@ em{font-style:normal;color:var(--gold)}
 @media(prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
   .name .w{opacity:1;transform:none;filter:none;animation:none}
-  .badge-float,.a2 svg,.a6 i,.a6::after,.a7 b{animation:none}
+  .badge-float,.a2 svg,.a7 b{animation:none}
   html{scroll-behavior:auto}
 }
 
