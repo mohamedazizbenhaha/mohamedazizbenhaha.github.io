@@ -28,7 +28,7 @@
   },
   {
    "label": "Environnement de TP",
-   "value": "Un portable par participant (16 Go de RAM) avec une station d’analyste et une VM Kali Linux préparées par le formateur ; un serveur Security Onion par équipe (4 cœurs, 24 Go de RAM), fourni par l’organisateur ; réseau de TP isolé ; ni compte cloud ni coût"
+   "value": "Un portable par participant (16 Go de RAM) avec une station d’analyste et une VM Kali Linux préparées par le formateur ; un serveur Security Onion par équipe (4 cœurs, 24 Go de RAM, 200 Go de disque : le minimum Security Onion en standalone), fourni par l’organisateur ; réseau de TP isolé ; ni compte cloud ni coût"
   },
   {
    "label": "Évaluation",

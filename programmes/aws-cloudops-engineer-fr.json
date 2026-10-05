@@ -92,7 +92,7 @@
   {
    "name": "Sécurité, réseau et préparation à l’examen",
    "hours": 9,
-   "focus": "Opérations IAM, Config, Security Hub, maîtrise des coûts, dépannage VPC, SOA-C03",
+   "focus": "Opérations IAM, Config, Security Hub CSPM, maîtrise des coûts, dépannage VPC, SOA-C03",
    "intro": "Les participants exploitent les contrôles de sécurité et de conformité avec IAM, Organizations, les règles Config, Security Hub CSPM et le chiffrement, gardent les coûts visibles avec Trusted Advisor, Cost Explorer et Budgets, dépannent la connectivité avec les Flow Logs et Reachability Analyzer, puis s’entraînent sur les domaines de l’examen SOA-C03. TP validé : une instance injoignable diagnostiquée avec Reachability Analyzer et corrigée, et une ressource non conforme signalée par une règle Config.",
    "chapters": [
     {

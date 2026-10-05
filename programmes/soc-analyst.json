@@ -27,7 +27,7 @@
   },
   {
    "label": "Lab environment",
-   "value": "One laptop per participant (16 GB RAM) with an analyst workstation and Kali Linux VMs prepared by the trainer; one Security Onion server per team (4 cores, 24 GB RAM), provided by the organiser; isolated lab network; no cloud account or cost"
+   "value": "One laptop per participant (16 GB RAM) with an analyst workstation and Kali Linux VMs prepared by the trainer; one Security Onion server per team (4 cores, 24 GB RAM, 200 GB disk: the Security Onion standalone minimum), provided by the organiser; isolated lab network; no cloud account or cost"
   },
   {
    "label": "Assessment",

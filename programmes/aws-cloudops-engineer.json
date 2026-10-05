@@ -91,7 +91,7 @@
   {
    "name": "Security, Networking & Exam Preparation",
    "hours": 9,
-   "focus": "IAM operations, Config, Security Hub, cost controls, VPC troubleshooting, SOA-C03",
+   "focus": "IAM operations, Config, Security Hub CSPM, cost controls, VPC troubleshooting, SOA-C03",
    "intro": "Participants operate security and compliance controls with IAM, Organizations, Config rules, Security Hub CSPM and encryption, keep costs visible with Trusted Advisor, Cost Explorer and Budgets, troubleshoot connectivity with Flow Logs and Reachability Analyzer, then practise exam questions across the SOA-C03 domains. Validated lab: an unreachable instance diagnosed with Reachability Analyzer and fixed, and a non-compliant resource flagged by a Config rule.",
    "chapters": [
     {

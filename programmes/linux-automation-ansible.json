@@ -5,7 +5,7 @@
  "subtitle": "Automate Red Hat Enterprise Linux administration with Ansible, from a Git repository",
  "audience_line": "RHEL administrators who want to automate their daily work and prepare EX294",
  "certifications": [
-  "Red Hat Certified Advanced System Administrator in Ansible (EX294)"
+  "Red Hat Certified Advanced System Administrator in Ansible (EX294); with RHCSA, earns RHCE in Ansible"
  ],
  "overview": "This programme teaches participants to automate the administration of Red Hat Enterprise Linux with Ansible, following the EX294 exam objectives. They set up a control node with ansible-navigator, execution environments, VS Code with an Ansible development container and Git, then write inventories, playbooks, variables and templates, protect secrets with Ansible Vault, organise their code in roles and content collections, and use the RHEL system roles. Every chapter ends with a lab on a small fleet of RHEL 10 machines. A timed mock EX294 exam measures readiness, and the programme closes with a final project: a three-tier environment automated from a Git repository and proved idempotent.",
  "facts": [
