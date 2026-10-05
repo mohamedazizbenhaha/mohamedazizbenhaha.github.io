@@ -142,21 +142,47 @@ $$('#training .seg button').forEach(b => b.addEventListener('click', () => {
   $$('#training .seg button').forEach(x => x.setAttribute('aria-pressed', x === b)); pgroup = b.dataset.group; renderProgs();
 }));
 const progDlg = $('#progDlg');
-function openProg(i) {
-  const c = PROGS[pgroup][i], u = PUI[lang], t = pick(c.title);
-  const mail = (s, b) => `mailto:mohamedaziz.benhaha@gmail.com?subject=${encodeURIComponent(s + t)}&body=${encodeURIComponent(b(t))}`;
+const COURSE = {}; Object.values(PROGS).flat().forEach(c => COURSE[c.n] = c);
+const mailTo = (s, b, t) => `mailto:mohamedaziz.benhaha@gmail.com?subject=${encodeURIComponent(s + t)}&body=${encodeURIComponent(b(t))}`;
+const pmActions = (u, t, pdf) => `<div class="pm-actions">${pdf ? `<a class="btn btn-gold" href="${pdf}" target="_blank" rel="noopener"><svg><use href="#i-ext"/></svg><span>${u.pdf}</span></a>` : ''}<a class="btn ${pdf ? 'btn-ghost' : 'btn-gold'}" href="${mailTo(u.bsubj, u.bbody, t)}" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg><span>${u.book}</span></a><a class="btn btn-ghost" href="${mailTo(u.subj, u.body, t)}" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg><span>${u.cust}</span></a></div>`;
+function showDlg(key) { progDlg.dataset.k = key; if (!progDlg.open) progDlg.showModal(); progDlg.scrollTop = 0; $('.pm-in', progDlg).scrollTop = 0 }
+function openProg(n, back) {
+  const c = COURSE[n], u = PUI[lang], t = pick(c.title);
   const facts = [[u.aud, pick(c.aud)], [u.pre, pick(c.pre)], ...(c.cert ? [[u.cert, pick(c.cert).join('<br>')]] : [])];
-  $('#progBody').innerHTML = `<header class="pm-head">${hrsHTML(c)}<div><p class="pm-kicker">${u.kicker}${c.opt ? ` · +${c.opt} h ${u.opt}` : ''}</p><h2 id="pTitle">${t}</h2></div></header>
+  $('#progBody').innerHTML = `${back != null ? `<button type="button" class="pm-back" data-t="${back}"><svg><use href="#i-arrow"/></svg>${pick(TRACKS[back].t)}</button>` : ''}<header class="pm-head">${hrsHTML(c)}<div><p class="pm-kicker">${u.kicker}${c.opt ? ` · +${c.opt} h ${u.opt}` : ''}</p><h2 id="pTitle">${t}</h2></div></header>
     <p class="pm-lede">${pick(c.sub)}</p>
     <dl class="pm-facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
     <h3 class="pm-sub">${u.struct}</h3>
     <ol class="pm-phases">${c.ph.map(([n, fo, h, o]) => `<li><b>${pick(n)}${o ? ` <em>(${u.opt})</em>` : ''}</b><span>${pick(fo)}</span><i>${h} h</i></li>`).join('')}${c.buf ? `<li class="buf"><b>${u.buf}</b><span>${u.bufF}</span><i>${c.buf} h</i></li>` : ''}</ol>
-    <div class="pm-actions"><a class="btn btn-gold" href="res/programmes/pdf/${c.file[lang]}.pdf" target="_blank" rel="noopener"><svg><use href="#i-ext"/></svg><span>${u.pdf}</span></a><a class="btn btn-ghost" href="${mail(u.bsubj, u.bbody)}" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg><span>${u.book}</span></a><a class="btn btn-ghost" href="${mail(u.subj, u.body)}" target="_blank" rel="noopener"><svg><use href="#i-arrow"/></svg><span>${u.cust}</span></a></div>`;
-  progDlg.dataset.p = i;
-  if (!progDlg.open) progDlg.showModal();
-  progDlg.scrollTop = 0;
+    ${pmActions(u, t, `res/programmes/pdf/${c.file[lang]}.pdf`)}`;
+  showDlg('c' + n + (back != null ? ':' + back : ''));
 }
-$('#progs').addEventListener('click', e => { const b = e.target.closest('[data-p]'); if (b) openProg(+b.dataset.p) });
+/* Career tracks (About, 1,000+ hours box): course numbers from PROGS; h is rounded up, the gap is a track project & review block */
+const TRACKS = [
+  { tag: { en: 'AI', fr: 'IA' }, h: 150, c: [27, 28, 29, 30], t: { en: 'AI: from Python to LLM agents', fr: 'IA : de Python aux agents LLM' }, s: { en: 'Programming, data, machine and deep learning, then LLM applications and agents.', fr: 'Programmation, données, machine et deep learning, puis applications LLM et agents.' } },
+  { tag: 'DevSecOps', h: 140, c: [14, 15], t: { en: 'DevSecOps engineer', fr: 'Ingénieur DevSecOps' }, s: { en: 'Build the delivery pipeline, then secure every stage of it.', fr: 'Construire la chaîne de livraison, puis sécuriser chacune de ses étapes.' } },
+  { tag: 'RHCE', h: 130, c: [2, 3, 5], t: { en: 'Red Hat Certified Engineer (RHCE)', fr: 'Red Hat Certified Engineer (RHCE)' }, s: { en: 'RHCSA in two parts, then automation with Ansible: RHCSA + EX294 earn the RHCE.', fr: 'Le RHCSA en deux parties, puis l’automatisation avec Ansible : RHCSA + EX294 donnent le RHCE.' } },
+  { tag: 'AWS', h: 120, c: [16, 17, 19, 20], t: { en: 'AWS cloud engineer', fr: 'Ingénieur cloud AWS' }, s: { en: 'From cloud basics to architecture and operations, finished with hands-on portfolio projects.', fr: 'Des bases du cloud à l’architecture et à l’exploitation, avec des projets pratiques pour finir.' } },
+  { tag: 'Kubernetes', h: 100, c: [12, 13], t: { en: 'Kubernetes administrator (CKA)', fr: 'Administrateur Kubernetes (CKA)' }, s: { en: 'Containers and Kubernetes from scratch, then cluster administration for the CKA.', fr: 'Conteneurs et Kubernetes depuis zéro, puis administration de clusters pour le CKA.' } }
+];
+const TUI = {
+  en: { kicker: 'Career track', courses: 'Courses in this track', rest: 'Track project & review', restF: 'One project across the courses, final review' },
+  fr: { kicker: 'Parcours métier', courses: 'Cours du parcours', rest: 'Projet et bilan du parcours', restF: 'Un projet transversal aux cours, bilan final' }
+};
+function renderTracks() { $('#tracks').innerHTML = TRACKS.map((k, i) => `<li><button type="button" data-t="${i}" aria-haspopup="dialog">${pick(k.tag)} · ${k.h} h</button></li>`).join('') }
+function openTrack(i) {
+  const k = TRACKS[i], u = PUI[lang], v = TUI[lang], t = pick(k.t), rest = k.h - k.c.reduce((a, n) => a + COURSE[n].h, 0);
+  $('#progBody').innerHTML = `<header class="pm-head">${hrsHTML(k)}<div><p class="pm-kicker">${v.kicker}</p><h2 id="pTitle">${t}</h2></div></header>
+    <p class="pm-lede">${pick(k.s)}</p>
+    <h3 class="pm-sub">${v.courses}</h3>
+    <ol class="pm-phases pm-courses">${k.c.map(n => { const c = COURSE[n]; return `<li><button type="button" data-n="${n}"><b>${pick(c.title)}</b><span>${pick(c.sub)}</span><i>${c.h} h</i><svg><use href="#i-arrow"/></svg></button></li>` }).join('')}${rest ? `<li class="buf"><b>${v.rest}</b><span>${v.restF}</span><i>${rest} h</i></li>` : ''}</ol>
+    ${pmActions(u, t)}`;
+  showDlg('t' + i);
+}
+$('#tracks').addEventListener('click', e => { const b = e.target.closest('[data-t]'); if (b) openTrack(+b.dataset.t) });
+$('#progBody').addEventListener('click', e => { const b = e.target.closest('[data-n],[data-t]'); if (b) b.dataset.t ? openTrack(+b.dataset.t) : openProg(+b.dataset.n, +progDlg.dataset.k.slice(1)) });
+const reopenDlg = () => { const k = progDlg.dataset.k; if (!progDlg.open || !k) return; const [a, b] = k.slice(1).split(':'); k[0] === 't' ? openTrack(+a) : openProg(+a, b == null ? null : +b) };
+$('#progs').addEventListener('click', e => { const b = e.target.closest('[data-p]'); if (b) openProg(PROGS[pgroup][+b.dataset.p].n, null) });
 
 /* ---------- dialogs: close button, backdrop click ---------- */
 $$('.modal').forEach(d => {
@@ -204,7 +230,7 @@ function applyLang() {
   const [en, fr] = $$('#lang span');
   en.classList.toggle('on', lang === 'en'); fr.classList.toggle('on', lang === 'fr');
   $('#lang').setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
-  TABS.forEach(t => t.render()); sizeTabs(); renderProgs(); if (progDlg.open) openProg(+progDlg.dataset.p); setMailSubjects(); fitMotto(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
+  TABS.forEach(t => t.render()); sizeTabs(); renderProgs(); renderTracks(); reopenDlg(); setMailSubjects(); fitMotto(); restartRotator(); $$('.count.done').forEach(el => el.textContent = fmt(+el.dataset.to) + (el.dataset.suffix || '')); setMoreLabel();
 }
 $('#lang').addEventListener('click', () => { lang = lang === 'en' ? 'fr' : 'en'; store.set('lang', lang); applyLang() });
 

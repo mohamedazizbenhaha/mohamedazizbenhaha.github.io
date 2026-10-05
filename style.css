@@ -154,6 +154,20 @@ em{font-style:normal;color:var(--gold)}
 .pm-phases li.buf::before{content:"+"}
 .pm-phases b em{font-style:normal;font-weight:600;color:var(--dim)}
 .pm-phases i{grid-column:3;grid-row:1;font-style:normal;text-align:right;color:var(--gold2);font-weight:700;font-variant-numeric:tabular-nums}
+.tracks li{padding:0;border:0;background:none}
+.tracks button{padding:.2em .6em;border-radius:6px;background:rgba(255,255,255,.04);border:1px solid #2a2a33;font:700 .74rem var(--body,inherit);color:#d8d3c8;letter-spacing:.02em;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.tracks button:hover{border-color:var(--gold);color:var(--gold2);background:var(--goldsoft)}
+.pm-courses li:not(.buf){display:block;padding:0}
+.pm-courses li:not(.buf)::before{display:none}
+.pm-courses button{counter-increment:none;display:grid;grid-template-columns:2.2rem minmax(0,1fr) 4rem 1.2rem;column-gap:12px;width:100%;padding:12px 0;text-align:left;color:inherit;font:inherit;background:none;border:0;cursor:pointer;border-radius:0}
+.pm-courses button::before{content:counter(ph,decimal-leading-zero);grid-row:span 2;color:var(--gold);font:700 .9rem var(--display);padding-top:2px}
+.pm-courses button svg{grid-column:4;grid-row:1;width:1rem;height:1rem;margin-top:3px;fill:none;stroke:var(--gold2);stroke-width:2;transition:transform .3s var(--ease)}
+.pm-courses button:hover{background:linear-gradient(90deg,var(--goldsoft),transparent 65%)}
+.pm-courses button:hover svg{transform:translateX(4px)}
+.pm-courses button:hover b{color:var(--gold2)}
+.pm-back{display:inline-flex;align-items:center;gap:.5em;margin-bottom:14px;padding:0;background:none;border:0;color:var(--gold2);font:700 .85rem var(--body);cursor:pointer}
+.pm-back svg{width:1rem;height:1rem;fill:none;stroke:currentColor;stroke-width:2;transform:scaleX(-1);transition:transform .3s var(--ease)}
+.pm-back:hover svg{transform:scaleX(-1) translateX(4px)}
 .pm-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:26px}
 .pm-note{color:var(--dim);font-size:.92rem;margin-right:8px}
 .lg-in h2{font:800 clamp(1.8rem,3.6vw,2.6rem)/1 var(--display);letter-spacing:-.03em;padding-right:48px;margin-bottom:8px}
