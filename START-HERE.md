@@ -1,4 +1,4 @@
-# START HERE (handoff, updated 2026-10-06: catalogue live on main, Commerce Manager setup in progress)
+# START HERE (handoff, updated 2026-10-06: catalogue live on main; redo Commerce Manager in a new portfolio on 2026-10-07)
 
 ## State
 - **MERGED TO PRODUCTION 2026-10-05 (user's word): `redesign` fast-forwarded into `main`** → https://mohamedazizbenhaha.netlify.app (Netlify rebuilds on the push). Branch `redesign` still exists: keep using it for review, push there first, then ask before merging to `main` again. The contact QR (`res/contact-qr.svg`) was regenerated for the production .vcf URL at the merge (decoded OK with zxing-cpp). Review URL: https://deploy-preview-4--mohamedazizbenhaha.netlify.app (Deploy Preview protection in the new Netlify account may still return 401: Site configuration → Visitor access).
@@ -6,7 +6,14 @@
 - Files: `index.html` (markup + English copy) · `style.css` · `main.js` (French copy in `FR`, experience data in `EXP`, interactions) · `programmes.js` (training catalogue, generated) · `res/` assets. Facts: `content.md`. Product brief: `PRODUCT.md`.
 
 ## WhatsApp / Meta catalogue (NEXT SESSION STARTS HERE)
-**LIVE 2026-10-06 (user's word): `redesign` fast-forwarded into `main` (c245d42).** Checked on production: the 3 feeds answer 200 (text/csv) and all 195 links in them (39 PDFs + 156 images) answer 200; feed-fr.csv matches the repo. Next: connect the catalogue in the WhatsApp Business app, then test from a foreign number (results below).
+**LIVE 2026-10-06 (user's word): `redesign` fast-forwarded into `main` (c245d42).** Checked on production: the 3 feeds answer 200 (text/csv) and all 195 links in them (39 PDFs + 156 images) answer 200; feed-fr.csv matches the repo. **Stopped 2026-10-06, resume 2026-10-07: wrong portfolio.** The catalogue was built in **The Theses Club** portfolio because the WhatsApp Business app is linked to the Facebook Page "The Theses Club". The user wants the trainings under their own name. "Med Aziz Ben Haha" is a Page/profile with **no business portfolio yet** (clicking it opens "Create a business portfolio"). A catalogue cannot change owner; partner sharing rejected (keeps Theses Club as owner, unsure the WhatsApp app accepts it). Plan for tomorrow, one step at a time with the user:
+1. WhatsApp Business app → Settings → Business tools → Facebook & Instagram: unlink Page "The Theses Club", link Page "Med Aziz Ben Haha".
+2. Business Suite → portfolio switcher → create portfolio **Mohamed Aziz BEN HAHA** (user types own name + email, user clicks Create), add the Page; check the WhatsApp account shows under Settings → WhatsApp accounts.
+3. Commerce Manager in the new portfolio: catalogue (Online products, Upload product info, name "Formations – Mohamed Aziz BEN HAHA"), the 3 scheduled feeds exactly as in the log below, default language French + country Tunisia, the 5 sets on custom label 0.
+4. WhatsApp app → Business tools → Catalogue → ⋮ → Catalogue settings → Connect catalogue → the new one; cart button = user's choice (recommended on).
+5. Test from another phone (FR number: French + TND; foreign number: English + EUR?), note results here.
+6. Only then, with the user's confirmation: delete the Theses Club copy (1606625654282845). The old "WhatsApp Product Catalog" (773813328031495, user's manual items) is not needed (user, 2026-10-06).
+The log below describes the Theses Club copy; repeat the same settings in the new portfolio.
 
 ### Commerce Manager log (2026-10-06, done with the user in the Browser pane)
 - Business portfolio **The Theses Club** (id 792521827269579) holds the WhatsApp Business **app** account "Mohamed Aziz ben Haha" and two catalogues: ours **Formations – Mohamed Aziz BEN HAHA** (id 1606625654282845, type Online products, default language French, default country Tunisia) and the app's auto-made "WhatsApp Product Catalog" (773813328031495; Commerce Manager redirects to "permissions needed", so no feed there; left untouched).
