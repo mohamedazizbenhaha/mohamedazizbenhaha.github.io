@@ -348,12 +348,14 @@ def main():
                                       for c in ab["countries"]]
                 else:
                     row["override"] = "en_XX"
+                    # Meta localises images only through image[n].url (image_link cannot be overridden)
+                    row.update({f"image[{n}].url": u for n, u in enumerate(imgs)})
                     english.append(row)
                 print(f"  {slug} {lang}: {'3 images' if todo else 'feed only'}")
     cols = ["id", "title", "description", "availability", "condition", "price", "link",
             "image_link", "additional_image_link", "brand", "custom_label_0"]
     for name, rows, c in (("feed-fr.csv", primary, cols),
-                          ("feed-en.csv", english, ["id", "override", "title", "description", "link"]),
+                          ("feed-en.csv", english, ["id", "override", "title", "description", "link", "image[0].url", "image[1].url", "image[2].url"]),
                           ("feed-countries.csv", countries, ["id", "override", "price"])):
         with open(CAT / name, "w", encoding="utf-8", newline="") as f:
             w = csv.DictWriter(f, fieldnames=c)
