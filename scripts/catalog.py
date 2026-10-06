@@ -3,6 +3,7 @@ WhatsApp / Meta catalogue: 3 images per programme and language, plus the Meta da
 
     python scripts/catalog.py              # all programmes in catalog/items.json
     python scripts/catalog.py slug1 slug2  # re-render only these images (feeds are always rebuilt for all)
+    python scripts/catalog.py --feeds      # rebuild the feeds only, no images
 
 Reads catalog/items.json (which programmes, outcomes, price rate) and programmes/<slug>[-fr].json.
 Writes catalog/img/<slug>-<lang>-<n>.jpg, catalog/feed-fr.csv (primary, French)
@@ -27,6 +28,17 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 CAT = ROOT / "catalog"
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 NAME = "Mohamed Aziz BEN HAHA"
+# custom_label_0 = the website's Training tab of each course (French labels from main.js FR), for Meta sets
+GROUP_FR = {"infra": "Infrastructure", "cloud": "Cloud et DevOps", "data": "Data et IA", "sec": "Sécurité",
+            "acad": "Académique"}
+
+
+def groups():
+    """slug -> website tab key, from the same course table and GROUPS as scripts/programme_site.py."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import programme_site as ps
+    rows = re.findall(r"^\| (\d+) \| (.+?) \| (.+?) \| `(.+?)` \|$", ps.HANDOFF.read_text(encoding="utf-8"), re.M)
+    return {slug: next(k for k, last in ps.GROUPS if int(n) <= last) for n, _, _, slug in rows}
 OVERFLOW = []
 SMALL = []
 
@@ -292,7 +304,9 @@ def main():
     rate, cur, ab = pr.get("per_hour"), pr["currency"], pr.get("abroad")
     (CAT / "img").mkdir(exist_ok=True)
     primary, english, countries = [], [], []
-    only = set(sys.argv[1:])
+    feeds_only = "--feeds" in sys.argv
+    only = set(sys.argv[1:]) - {"--feeds"}
+    group = groups()
     unknown = only - set(cfg["items"])
     if unknown:
         sys.exit(f"not in catalog/items.json: {', '.join(sorted(unknown))}")
@@ -302,7 +316,7 @@ def main():
             progs = {lang: json.loads((ROOT / "programmes" / f"{slug}{'-fr' if lang == 'fr' else ''}.json")
                                       .read_text(encoding="utf-8")) for lang in ("fr", "en")}
             # a crowded course gets the compact brand on all its cards, in both languages
-            todo = not only or slug in only
+            todo = not feeds_only and (not only or slug in only)
             built = {}
             for small in ((True,) if item.get("compact") else (False, True)):
                 built = {lang: pages(progs[lang], lang, item["outcomes"][lang], cnfcpp, small) for lang in ("fr", "en")}
@@ -327,7 +341,7 @@ def main():
                     row.update({"availability": "in stock", "condition": "new",
                                 "price": f"{rate * sums[2]:.2f} {cur}" if rate is not None else "",
                                 "image_link": imgs[0], "additional_image_link": ",".join(imgs[1:]),
-                                "brand": NAME})
+                                "brand": NAME, "custom_label_0": GROUP_FR[group[slug]]})
                     primary.append(row)
                     if ab and ab.get("per_hour") is not None:
                         countries += [{"id": row["id"], "override": c, "price": f"{ab['per_hour'] * sums[2]:.2f} {ab['currency']}"}
@@ -335,9 +349,9 @@ def main():
                 else:
                     row["override"] = "en_XX"
                     english.append(row)
-                print(f"  {slug} {lang}: {'3 images' if not only or slug in only else 'feed only'}")
+                print(f"  {slug} {lang}: {'3 images' if todo else 'feed only'}")
     cols = ["id", "title", "description", "availability", "condition", "price", "link",
-            "image_link", "additional_image_link", "brand"]
+            "image_link", "additional_image_link", "brand", "custom_label_0"]
     for name, rows, c in (("feed-fr.csv", primary, cols),
                           ("feed-en.csv", english, ["id", "override", "title", "description", "link"]),
                           ("feed-countries.csv", countries, ["id", "override", "price"])):
