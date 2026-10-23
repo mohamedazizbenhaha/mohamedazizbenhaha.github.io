@@ -5,6 +5,7 @@ Checks to pass before a commit or deploy.
 
 1. secrets  -- no plaintext credential in a tracked file (scripts/check_secrets.py)
 2. refs     -- every local src/href in the HTML/CSS/JS points at a file that exists
+3. facts    -- every number in the page text exists in content.md (scripts/check_facts.py)
 
 Exit 0 if every gate passes.
 """
@@ -37,7 +38,11 @@ def main():
     print("secrets:", "ok" if ok else "FAIL")
     r = refs()
     print("refs:", "ok" if r else "FAIL")
-    sys.exit(0 if ok and r else 1)
+    f = subprocess.run([sys.executable, str(ROOT / "scripts/check_facts.py")]).returncode == 0
+    print("facts:", "ok" if f else "FAIL")
+    t = subprocess.run([sys.executable, str(ROOT / "scripts/test_check_facts.py")], capture_output=True).returncode == 0
+    print("facts tests:", "ok" if t else "FAIL")
+    sys.exit(0 if ok and r and f and t else 1)
 
 
 if __name__ == "__main__":

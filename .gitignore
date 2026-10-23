@@ -4,3 +4,5 @@ graphify-out/
 __pycache__/
 .claude/skills/
 .impeccable/mocks/
+.claude/agents/
+.claude/autoharness/

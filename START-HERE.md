@@ -1,5 +1,12 @@
 # START HERE (handoff, updated 2026-10-06: catalogue live on main; redo Commerce Manager in a new portfolio on 2026-10-07)
 
+## Infra added 2026-10-23 (infra-only session; no content work done)
+- **Fact gate:** `scripts/check_facts.py` (wired into `python scripts/run_gates.py`, unit tests `scripts/test_check_facts.py`, 9 tests incl. mutation): every number in `index.html` text must exist in `content.md`. `scripts/facts_allow.txt` lists 3 numbers the page has but `content.md` lacks (1000 = "1,000+ hours" vs content.md "500+", 104 = AZ-104, 485 = RS-485): **content.md drift for the user to settle**, then delete the lines. For generated CVs/letters: `python scripts/check_facts.py out.html`.
+- **Reactive Resume** (outside this repo): `W:\My Systems\Toolseactive-resume` (README there). Started once on 127.0.0.1:3000, `/api/health` healthy (db, redis, S3), stopped. Import test with the real resume: PENDING (user).
+- **claude-seo** v2.5.0 @6be93f4 installed project-level in `.claude/skills/seo*` + `.claude/agents` (both gitignored, `.pinned`); paid parts (dataforseo, image-gen) not copied = BLOCKED. No audit run.
+- **autoharness** trial wired project-level only (`.claude/settings.local.json`, gitignored; `AUTOHARNESS_DISABLE_GLOBAL=1`). How to measure and uninstall: `W:\My Systems\Tools\AUTOHARNESS-TRIAL.md`. Real-session firing not yet verified.
+- Deferred as content work: the five certificate-curriculum programmes in `catalog/items.json`.
+
 ## State
 - **MERGED TO PRODUCTION 2026-10-05 (user's word): `redesign` fast-forwarded into `main`** → https://mohamedazizbenhaha.netlify.app (Netlify rebuilds on the push). Branch `redesign` still exists: keep using it for review, push there first, then ask before merging to `main` again. The contact QR (`res/contact-qr.svg`) was regenerated for the production .vcf URL at the merge (decoded OK with zxing-cpp). Review URL: https://deploy-preview-4--mohamedazizbenhaha.netlify.app (Deploy Preview protection in the new Netlify account may still return 401: Site configuration → Visitor access).
 - **Merged to `main` 2026-10-05 (twice): mobile pass, favicon, Search Console file, then share image `res/og-card.jpg` + 1,000+ hours in meta + unused images removed.** Next: ask the user. The leaked app password (mohamedaziz.benhaha@gmail.com) was revoked by the user 2026-10-05. After each merge, open a new draft PR from `redesign` for a fresh deploy preview (a merged PR freezes its preview).
