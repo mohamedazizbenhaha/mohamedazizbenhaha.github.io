@@ -6,3 +6,6 @@ __pycache__/
 .impeccable/mocks/
 .claude/agents/
 .claude/autoharness/
+
+# CV build output (PDFs are copied to res/ on purpose)
+cv/out/

@@ -1,5 +1,3 @@
 # Numbers on the site that content.md does not contain yet (found 2026-10-23).
 # Fix = add them to content.md (user's call), then delete the line here.
-1000   # "1,000+ hours" on the page; content.md still says 500+
-104    # AZ-104 certification badge, not listed in content.md
 485    # Modbus RS-485 (a standard name, not a claim)

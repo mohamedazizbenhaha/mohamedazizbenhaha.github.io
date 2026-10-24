@@ -8,6 +8,12 @@ eactive-resume` (README there). Started once on 127.0.0.1:3000, `/api/health` he
 - **autoharness** trial wired project-level only (`.claude/settings.local.json`, gitignored; `AUTOHARNESS_DISABLE_GLOBAL=1`). How to measure and uninstall: `W:\My Systems\Tools\AUTOHARNESS-TRIAL.md`. Real-session firing not yet verified.
 - Deferred as content work: the five certificate-curriculum programmes in `catalog/items.json`.
 
+## CV PDFs rebuilt 2026-10-24 (ATS-friendly, same look)
+- Source: `cv/cv-fr.html` (+ `cv/cv.css`, static fonts in `cv/fonts`, `cv/logo-cv.png`). English is generated from it: `python scripts/cv_en.py` (French -> English string pairs; it stops if a French string changed).
+- Build + ATS checks: `python scripts/build_cv.py` (5 text extractors, word/block integrity, no Type3 fonts, fact check). Copy `cv/out/cv-fr.pdf` -> `res/CV-Mohamed-Aziz-Ben-Haha.pdf`, `cv/out/cv-en.pdf` -> `res/CV-Mohamed-Aziz-Ben-Haha-EN.pdf`. The site's resume links (`data-cv`) follow the page language (main.js `applyLang`).
+- Lessons: one column only (line-by-line parsers braid columns); Google's variable Inter becomes Type3 in Chrome PDFs (missing spaces) so fonts are bundled static; no flex gaps where a space is needed.
+- Open: SIADGI figures (0.82, Llama 3.1 70B) not in content.md (facts check fails on the CV only): user to choose keep (record in content.md) or replace with ThesisLens. AZ-104 year unknown; RHCSA on the site but not in content.md. User will add more projects (keep each to ~3 bullets).
+
 ## State
 - **MERGED TO PRODUCTION 2026-10-05 (user's word): `redesign` fast-forwarded into `main`** → https://mohamedazizbenhaha.netlify.app (Netlify rebuilds on the push). Branch `redesign` still exists: keep using it for review, push there first, then ask before merging to `main` again. The contact QR (`res/contact-qr.svg`) was regenerated for the production .vcf URL at the merge (decoded OK with zxing-cpp). Review URL: https://deploy-preview-4--mohamedazizbenhaha.netlify.app (Deploy Preview protection in the new Netlify account may still return 401: Site configuration → Visitor access).
 - **Merged to `main` 2026-10-05 (twice): mobile pass, favicon, Search Console file, then share image `res/og-card.jpg` + 1,000+ hours in meta + unused images removed.** Next: ask the user. The leaked app password (mohamedaziz.benhaha@gmail.com) was revoked by the user 2026-10-05. After each merge, open a new draft PR from `redesign` for a fresh deploy preview (a merged PR freezes its preview).

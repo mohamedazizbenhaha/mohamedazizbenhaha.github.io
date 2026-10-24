@@ -235,6 +235,7 @@ const pick = v => (v && typeof v === 'object' && !Array.isArray(v)) ? v[lang] : 
 
 function applyLang() {
   document.documentElement.lang = lang;
+  $$('[data-cv]').forEach(a => a.href = `res/CV-Mohamed-Aziz-Ben-Haha${lang === 'fr' ? '' : '-EN'}.pdf`);  // resume PDF in the page language
   $$('[data-i18n]').forEach(el => { const k = el.dataset.i18n; el.innerHTML = (lang === 'fr' ? FR[k] : EN[k]) ?? EN[k] });
   const [en, fr] = $$('#lang span');
   en.classList.toggle('on', lang === 'en'); fr.classList.toggle('on', lang === 'fr');

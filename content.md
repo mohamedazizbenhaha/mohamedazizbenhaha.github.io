@@ -10,14 +10,14 @@ Public repo: no ID number, birth date or home address, ever.
 - Cloud & DevOps Engineer, specialising in AI · Professional and university trainer · PhD candidate (ML for embedded systems and IoT)
 - Email: mohamedaziz.benhaha@gmail.com
 - Phone: +216 25 713 413 (WhatsApp) · +33 6 05 72 05 98 (both public)
-- Location: Écully, Rhône, France
+- Location: 69130 Écully, Rhône, France
 - LinkedIn: linkedin.com/in/mohamed-aziz-ben-haha · Channel: The_Thesis_Club · bento.me/mohamed-aziz-ben-haha
 
 ## Profile
 - Cloud & DevOps engineer (CKA, AWS Solutions Architect, AWS SysOps).
 - PhD candidate in AI applied to embedded systems and IoT.
 - Production infrastructure (Ooredoo, freelance), DevSecOps automation, AI solutions (RAG, computer vision, predictive models).
-- Certified trainer: 500+ hours of Cloud, DevOps and AI training delivered to companies.
+- Certified trainer: 1,000+ hours of Cloud, DevOps and AI training delivered to companies.
 
 ## Education
 | Degree | School | Dates |
@@ -88,6 +88,7 @@ Dropped on the user's word: Air-Canvas; the AI behavioural budgeting app (a supe
 | Certified Kubernetes Administrator (CKA) | Linux Foundation | 2024 |
 | LPI DevOps Tools Engineer | LPI | 2024 |
 | AWS Certified Cloud Practitioner | AWS | 2024 |
+| AZ-104 Azure Administrator Associate | Microsoft | [?] |
 | AZ-900 Azure Fundamentals | Microsoft | 2024 |
 | CCNAv7 | Cisco | 2021 |
 
