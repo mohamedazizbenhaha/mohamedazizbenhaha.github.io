@@ -1940,6 +1940,55 @@
           ]
         ]
       }
+    },
+    "claude-for-engineers": {
+      "code": "CLAUDE-ENG",
+      "outcomes": {
+        "en": [
+          [
+            "Know what an LLM can and cannot do,",
+            "and delegate, describe and verify with the 4D framework"
+          ],
+          [
+            "Write reports, plans and presentations",
+            "with Claude Projects, artifacts, Cowork and the company templates"
+          ],
+          [
+            "Code with Claude Code:",
+            "explore, plan, implement, test, review and document a real repository"
+          ],
+          [
+            "Build a reusable Claude system",
+            "with CLAUDE.md, skills, subagents, MCP connectors and hooks"
+          ],
+          [
+            "Share it with the team as a plugin,",
+            "then deliver a real task end to end in the final project"
+          ]
+        ],
+        "fr": [
+          [
+            "Savoir ce qu’un LLM sait faire ou non,",
+            "et déléguer, décrire et vérifier avec le cadre 4D"
+          ],
+          [
+            "Rédiger rapports, plans et présentations",
+            "avec les Projets Claude, les artifacts, Cowork et les modèles de l’entreprise"
+          ],
+          [
+            "Coder avec Claude Code :",
+            "explorer, planifier, implémenter, tester, relire et documenter un vrai dépôt"
+          ],
+          [
+            "Construire un système Claude réutilisable",
+            "avec CLAUDE.md, skills, sous-agents, connecteurs MCP et hooks"
+          ],
+          [
+            "Le partager avec l’équipe en plugin,",
+            "puis mener une tâche réelle de bout en bout dans le projet final"
+          ]
+        ]
+      }
     }
   }
 }

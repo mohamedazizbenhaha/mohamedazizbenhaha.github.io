@@ -155,8 +155,9 @@ def esc(s):
     return html.escape(s, quote=False)
 
 
-def hrs(x):
-    return f"{x:g}"
+def hrs(x, p=None):
+    """Hours as shown; a French programme (p["lang"] == "fr") gets a decimal comma (4,5 h)."""
+    return f"{x:g}".replace(".", ",") if p and p.get("lang") == "fr" else f"{x:g}"
 
 
 def is_project(ph):
@@ -211,7 +212,7 @@ def pages(p, lang, outcomes, cnfcpp, small=False):
     l1, l2 = title_lines(p["title"])
     size = max(58, min(120,int(120 * 11 / max(len(l1), len(l2), 1))))
     facts = "".join(f"<div class=f><b>{a}</b>{b}</div>" for a, b in [
-        (f"{hrs(total)} h", t["total"]),
+        (f"{hrs(total, p)} h", t["total"]),
         (str(n_mod), t["mods"] if has_proj else t["mods_only"]),
         (t["site"], t["remote"])])
     cs = certs_short(p, t)
@@ -226,12 +227,12 @@ def pages(p, lang, outcomes, cnfcpp, small=False):
             k += 1
             num = f"{k:02d}"
         rows += (f"<div class=m><i>{num}</i><div><b>{esc(ph['name'])}</b><p>{esc(ph['focus'])}</p></div>"
-                 f"<em>{hrs(ph['hours'])} h</em></div>")
+                 f"<em>{hrs(ph['hours'], p)} h</em></div>")
     if buf:
         rows += (f"<div class='m buf'><i>+</i><div><b>{t['buffer']}</b><p>{t['buffer_focus']}</p></div>"
-                 f"<em>{hrs(buf)} h</em></div>")
+                 f"<em>{hrs(buf, p)} h</em></div>")
     two = (f"{top}<h2>{keep(p['title'])}<br><span>{t['programme']}</span></h2><div class=mods>{rows}</div>"
-           f"<div class=tot>{t['sum'].format(m=hrs(mods), b=hrs(buf), t=hrs(total))}</div>{brand}")
+           f"<div class=tot>{t['sum'].format(m=hrs(mods, p), b=hrs(buf, p), t=hrs(total, p))}</div>{brand}")
     outs = "".join(f"<div class=o><i>{i:02d}</i><div>{keep(a)} <span>{keep(b)}</span></div></div>"
                    for i, (a, b) in enumerate(outcomes, 1))
     h1, h2 = t["outcomes"]
@@ -281,16 +282,16 @@ def description(p, lang, sums, cnfcpp, priced):
         if ph.get("optional"):
             continue
         if is_project(ph):
-            rows.append(f"{ph['name']} ({hrs(ph['hours'])} h){colon}{ph['focus']}")
+            rows.append(f"{ph['name']} ({hrs(ph['hours'], p)} h){colon}{ph['focus']}")
         else:
             k += 1
-            rows.append(f"{k:02d} {ph['name']} ({hrs(ph['hours'])} h){colon}{ph['focus']}")
+            rows.append(f"{k:02d} {ph['name']} ({hrs(ph['hours'], p)} h){colon}{ph['focus']}")
     cs = certs_short(p, t)
     F = t["facts"]
     parts = [s.format(
         cnfcpp=t["cnfcpp_txt"] if cnfcpp else "",
         outcome=fact(p, F["out"]) + ".",
-        sumtxt=t["sumtxt"].format(m=hrs(mods), b=hrs(buf), t=hrs(total)) if buf else f"{hrs(total)} h",
+        sumtxt=t["sumtxt"].format(m=hrs(mods, p), b=hrs(buf, p), t=hrs(total, p)) if buf else f"{hrs(total, p)} h",
         rows="\n".join(rows),
         aud=fact(p, F["aud"]), pre=fact(p, F["pre"]), fmt=fact(p, F["fmt"]), ass=fact(p, F["ass"]),
         certs=f"{t['prep']} {cs}." if cs else "",
@@ -335,7 +336,7 @@ def main():
                 stems = [f"{slug}-{lang}-{n}" for n in (1, 2, 3)]
                 imgs = [f"{base}/catalog/img/{s}.jpg" for s in stems]
                 pdf = f"{base}/res/programmes/pdf/{pathlib.Path(p['file']).stem}.pdf"
-                row = {"id": f"{item['code']}-{hrs(sums[2])}", "title": f"{p['title']} ({hrs(sums[2])} h)",
+                row = {"id": f"{item['code']}-{hrs(sums[2])}", "title": f"{p['title']} ({hrs(sums[2], p)} h)",
                        "description": description(p, lang, sums, cnfcpp, rate is not None), "link": pdf}
                 if lang == "fr":
                     row.update({"availability": "in stock", "condition": "new",
