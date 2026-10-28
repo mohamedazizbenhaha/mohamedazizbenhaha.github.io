@@ -51,6 +51,8 @@ LABELS = {
     'final_project': 'Final project', 'page': 'Page', 'of': 'of',
     'optional': 'Optional', 'plus_optional': '+ {h} optional',
     'optional_total': 'Not included: optional phase {n}, + {h}',
+    'labs': 'Workshops and labs in this phase', 'lab_keys': ['Goal', 'Material', 'Steps', 'Result'],
+    'validation': 'Phase validation',
 }
 LABELS_FR = {  # "lang": "fr" in a programme selects these
     'kicker': 'Programme de formation', 'hours': 'Heures', 'for': 'Pour', 'certs': 'Prépare à',
@@ -66,6 +68,8 @@ LABELS_FR = {  # "lang": "fr" in a programme selects these
     'final_project': 'Projet final', 'page': 'Page', 'of': 'sur',
     'optional': 'Optionnel', 'plus_optional': '+ {h} en option',
     'optional_total': 'Non inclus : phase {n} en option, + {h}',
+    'labs': 'Ateliers et TP de cette phase', 'lab_keys': ['Objectif', 'Matériel', 'Étapes', 'Résultat'],
+    'validation': 'Validation de la phase',
 }
 
 # ---------- styles: the whole look lives here ----------
@@ -445,7 +449,7 @@ def check(g):
         errors.append('a 3 h session ends mid-chapter at ' + ', '.join(split) + ' (pair the 1.5 h chapters)')
     buffer = g.get('buffer') or 0
     want = 3 if run <= 24 else 6 if run <= 45 else 9
-    if buffer != want:
+    if buffer != want and not g.get('buffer_fixed'):  # buffer_fixed: total set by the client
         errors.append(f'buffer is {buffer:g} h; the rule gives {want} h for {run:g} h of chapters')
     total = run + buffer
     if g.get('hours') not in (None, total):
@@ -536,7 +540,8 @@ def build_doc(g):
     spacer(doc)
 
     if g.get('facts'):
-        P(doc, 'Heading 2', L['facts'])
+        h = P(doc, 'Heading 2', L['facts'])
+        if g.get('facts_new_page'): h.paragraph_format.page_break_before = True  # keeps the table whole
         table(doc, [4.2, WIDTH - 4.2], None,
               [[('Prog Table Key', [f['label']]), ('Prog Table Text', [f['value']])] for f in g['facts']])
 
@@ -559,6 +564,20 @@ def build_doc(g):
                          ('Prog Table Text', parts), ('Prog Table Muted', [c['format']]),
                          ('Prog Table Hours', [hrs(c['hours'])])])
         table(doc, [1.0, 3.9, 8.6, 2.0, 1.5], L['chapter_cols'], rows)
+        labs = ph.get('labs')
+        if labs:  # optional detail of each lab: goal, material, steps, result
+            spacer(doc)
+            P(doc, 'Heading 2', L['labs'])
+            if labs.get('goal'): P(doc, 'Prog Intro', labs['goal'])
+            for lab in labs['items']:
+                keys = zip(L['lab_keys'], ('goal', 'material', 'steps', 'result'))
+                table(doc, [4.2, WIDTH - 4.2], None,
+                      [[('Prog Table Key', [f"{lab['id']}  ·  {lab['type']}"]), ('Prog Table Strong', [lab['title']])]]
+                      + [[('Prog Table Key', [k]), ('Prog Table Text', [lab[f]])] for k, f in keys if lab.get(f)],
+                      together=True)
+                gap = spacer(doc)
+            gap.paragraph_format.keep_with_next = True  # the last lab stays with the validation line
+            if labs.get('validation'): P(doc, 'Prog Note', ('Prog Label', L['validation']), '  ' + labs['validation'])
         pr = ph.get('project')
         if ph.get('math') or pr: spacer(doc)
         if ph.get('math'):

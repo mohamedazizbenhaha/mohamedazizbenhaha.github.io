@@ -1,0 +1,476 @@
+{
+ "slug": "claude-for-engineers",
+ "file": "Claude-for-Engineers-30h.docx",
+ "title": "Claude for Engineers",
+ "subtitle": "Working with an AI assistant on code, documents, reports, presentations and plans",
+ "audience_line": "Engineering teams who want Claude to become part of their daily work",
+ "certifications": [],
+ "buffer": 3,
+ "buffer_fixed": true,
+ "labels": {
+  "portfolio_kicker": "What each participant leaves with",
+  "portfolio": "Your Claude system",
+  "portfolio_cols": [
+   "#",
+   "Component",
+   "What it does",
+   "Phase",
+   "Built in"
+  ]
+ },
+ "overview": "This programme teaches engineers to use Claude, Anthropic's AI assistant, well and safely in their daily work, from basic to intermediate level. Participants first learn what a language model can and cannot do and how to delegate to it, describe a task and check the result. They then use Claude for knowledge work (reports, documentation, plans and presentations), for software work with Claude Code, and finally turn what they learned into a personal and team system: project instructions, reusable skills, connected tools and automatic checks. Every chapter is hands-on and uses the participants' own kind of work. The programme follows the structure and vocabulary of the free official Anthropic Academy courses (academy.claude.com), which participants complete alongside it.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Engineers (software, systems, data, project or field engineers) and their team leads; mixed profiles welcome"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Daily computer use and basic command-line comfort; Git basics for the Claude Code part (phases 3 and 4). No AI background needed"
+  },
+  {
+   "label": "Duration",
+   "value": "30 h: 27 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "Intensive delivery over 5 days; short demonstrations followed by guided labs on realistic engineering tasks; each participant builds their own Claude system step by step"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant (Windows, macOS or Linux, Git, VS Code); one paid Claude seat per participant (Team or Enterprise recommended, Pro minimum) with Claude Code enabled; a sample repository and sample documents provided by the trainer, or the company's own non-confidential material"
+  },
+  {
+   "label": "Official resources",
+   "value": "Anthropic Academy free courses: AI Fluency, AI capabilities and limitations, Claude 101, Introduction to Claude Cowork, Claude Code 101, Claude Code in action, Introduction to agent skills, Introduction to subagents, Introduction to Model Context Protocol, The AI-native SDLC playbook"
+  },
+  {
+   "label": "Assessment",
+   "value": "A lab validated in each phase, the Anthropic Academy course badges, and a final project presented to the group; certificate of completion for participants who complete them"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants choose the right Claude tool for a task, write prompts and context that give reliable results, verify what Claude produces, and leave with a working, shareable Claude setup for coding, documentation, reports, presentations and planning"
+  }
+ ],
+ "phases": [
+  {
+   "name": "Foundations: How to Work with an AI",
+   "hours": 4.5,
+   "focus": "What LLMs can do, the 4D framework, prompting",
+   "intro": "What a language model is, where it fails, and the habits that make working with it productive and responsible. Anthropic Academy reference: AI capabilities and limitations; AI Fluency: Framework and foundations; Claude 101 (Meet Claude).",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Capabilities & Limits",
+     "content": "How a language model produces text (tokens, next-token prediction), what it knows and its knowledge cutoff, the context window as working memory, why it can be confidently wrong, and which tasks suit it. Live tests on engineering questions.",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "AI Fluency & Responsible Use",
+     "content": "The 4D framework: Delegation (what to give the AI and what to keep), Description (stating the task), Discernment (judging the output), Diligence (accountability, transparency). Confidential data, company policy, intellectual property and when to say no.",
+     "format": "Lecture + Workshop",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Prompting & the Claude Surfaces",
+     "content": "Chat, Cowork and Code: which one for which job; choosing a model. Prompts that work: context and goal, audience, examples, structure with headings or XML tags, asking Claude to interview you, iterating instead of restarting. Lab: rewrite three weak prompts from real work.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants know when Claude is the right tool, how to brief it, and how to check what it returns before using it.",
+    "items": [
+     {
+      "id": "1.1",
+      "type": "Workshop",
+      "title": "Find the limits",
+      "goal": "See for yourself where a language model is reliable and where it fails.",
+      "material": "Claude (chat); 12 test questions prepared by the trainer: arithmetic, recent events, company-specific facts, unit conversions, code explanation, summarising a long text.",
+      "steps": "1) Predict for each question whether Claude will get it right. 2) Ask it, then check the answer against a trusted source. 3) Classify each failure: no knowledge, outdated knowledge, reasoning slip, invented detail. 4) Group discussion: which failures matter in our engineering work.",
+      "result": "A one-page trust map of the tasks to delegate, to check, and to keep."
+     },
+     {
+      "id": "1.2",
+      "type": "Workshop",
+      "title": "Delegation map and team rules",
+      "goal": "Apply the 4D framework to the participants' own job and agree on rules for confidential data.",
+      "material": "The 4D framework sheet; the company's IT or data policy if one exists; a list of the participants' weekly tasks.",
+      "steps": "1) Each participant lists ten recurring tasks. 2) For each, decide: automate, augment (work with Claude) or keep human, and why. 3) In groups, write five rules for what may and may not be shared with Claude. 4) Compare and merge the rules.",
+      "result": "A personal delegation map and a draft team policy of five rules, reused in phase 4."
+     },
+     {
+      "id": "1.3",
+      "type": "Lab",
+      "title": "From weak prompt to reliable prompt",
+      "goal": "Write prompts that give a usable result on the first or second try.",
+      "material": "Three weak prompts from real engineering work (a bug question, an email to a client, a test plan), a prompt checklist, Claude chat.",
+      "steps": "1) Run each weak prompt and note what is wrong. 2) Rewrite it with goal, context, audience, format and an example. 3) Ask Claude to interview you before answering one of them. 4) Compare outputs and keep the best versions.",
+      "result": "The first entries of the participant's prompt library, each with a note on when to use it."
+     }
+    ],
+    "validation": "The trust map, the delegation map and three rewritten prompts are reviewed by the trainer."
+   }
+  },
+  {
+   "name": "Knowledge Work: Reports, Plans & Presentations",
+   "hours": 6,
+   "focus": "Projects, research, documents, decks, Cowork",
+   "intro": "Claude for the documents engineers write every week, with standing context so it already knows the team's style. Anthropic Academy reference: Claude 101; Introduction to Claude Cowork.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Projects & Standing Context",
+     "content": "Projects with knowledge files and instructions, personal preferences, memory; what to put in context and what to leave out. Lab: a project for the participant's team with its glossary, templates and writing rules.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Reports & Planning",
+     "content": "From notes, measurements or meeting transcripts to a structured technical report; research mode and connectors with sources; checking every figure and citation. Planning: breaking a project into tasks, estimates, risks and a schedule, then challenging the plan. Lab: a weekly report and a project plan.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Presentations & Visuals",
+     "content": "Artifacts for slides, diagrams (Mermaid, flowcharts) and small tools; Word, PowerPoint and Excel files produced by Claude or with Claude in Microsoft 365; applying the company template; analysing a spreadsheet and charting it. Lab: a 10-slide project review from the report of 2.2.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Delegating with Cowork",
+     "content": "Handing Claude a multi-step task on local files and apps: setup, a first task, global instructions, Claude in Chrome, working safely (folder access, review before sharing). Lab: tidy and summarise a folder of project documents.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants produce the reports, plans and presentations of a real project with Claude, in the team's format, and verify every fact in them.",
+    "items": [
+     {
+      "id": "2.1",
+      "type": "Lab",
+      "title": "A project for your team",
+      "goal": "Give Claude standing context so every conversation already knows the team's vocabulary and style.",
+      "material": "Claude Projects; the team's glossary, a report template and two past documents (non-confidential, or samples provided by the trainer).",
+      "steps": "1) Create a project and upload the knowledge files. 2) Write the project instructions: audience, tone, structure, units, what to avoid. 3) Set personal preferences. 4) Test the same request inside and outside the project and compare.",
+      "result": "A working team project, used for every lab of this phase."
+     },
+     {
+      "id": "2.2",
+      "type": "Lab",
+      "title": "Weekly report and project plan",
+      "goal": "Turn raw material into a checked technical report, then plan a small project with Claude.",
+      "material": "A meeting transcript, test measurements in a spreadsheet and scattered notes for a sample project.",
+      "steps": "1) Draft the weekly report from the raw material in the team project. 2) Check each number and claim against the sources; mark what Claude invented or got wrong. 3) Ask for a work breakdown, estimates, risks and a schedule for the next phase. 4) Ask Claude to criticise its own plan, then fix it.",
+      "result": "A verified two-page report and a project plan with tasks, estimates and a risk list."
+     },
+     {
+      "id": "2.3",
+      "type": "Lab",
+      "title": "Project review presentation",
+      "goal": "Build a clear presentation and its visuals from the report.",
+      "material": "The report from 2.2, the company slide template, Claude artifacts; Claude for Microsoft 365 if the company uses it.",
+      "steps": "1) Ask for a 10-slide outline and fix the storyline. 2) Generate the deck in the company template. 3) Draw an architecture or process diagram (Mermaid) and a chart from the measurements. 4) Rehearse: ask Claude for the questions the audience will ask.",
+      "result": "A 10-slide deck with one diagram and one chart, ready to present."
+     },
+     {
+      "id": "2.4",
+      "type": "Lab",
+      "title": "Hand off a folder task to Cowork",
+      "goal": "Delegate a multi-step task on files and check it safely.",
+      "material": "Claude Cowork; a folder of 20 mixed project documents provided by the trainer.",
+      "steps": "1) Give Cowork access to that folder only. 2) Ask it to sort, rename and summarise the documents into an index. 3) Review every change before accepting it. 4) Note what you would let it do alone next time and what not.",
+      "result": "A tidy folder, an index document and a short note on safe use."
+     }
+    ],
+    "validation": "The report, plan and deck are presented to a peer, who checks three facts against the sources."
+   }
+  },
+  {
+   "name": "Coding with Claude Code",
+   "hours": 6,
+   "focus": "Agent loop, plan mode, tests, review, docs",
+   "intro": "Claude Code as a coding agent in the terminal, IDE or desktop app, on a sample repository. Anthropic Academy reference: Claude Code 101.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "How a Coding Agent Works",
+     "content": "Assistant versus agent: the agent loop, tools, context window and permissions. Installing Claude Code (terminal, VS Code, JetBrains, desktop), approval modes, a first prompt on an unknown codebase: explain it, map it, find where a change goes.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "The Daily Workflow",
+     "content": "Explore, plan, code, commit: plan mode first, small verified steps, Git commits with clear messages. Managing context in long sessions (clear, compact, rewind). Lab: implement a small feature end to end.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Tests, Debugging & Code Review",
+     "content": "Giving Claude a feedback loop: tests first, run, fix. Diagnosing a bug from a log or stack trace, refactoring legacy code safely, reviewing a diff, and what a human must still review. Lab: fix a failing test suite.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Documentation from Code",
+     "content": "README, onboarding guide, API documentation, architecture decision records and diagrams generated from the code, and keeping them in sync with each change. Lab: document the sample repository for a new team member.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants use Claude Code to understand, change, test and document a codebase, and they review its work like a colleague's.",
+    "items": [
+     {
+      "id": "3.1",
+      "type": "Lab",
+      "title": "First steps in an unknown codebase",
+      "goal": "Install Claude Code and use it to understand a repository you have never seen.",
+      "material": "Claude Code (terminal, VS Code or desktop); a sample repository provided by the trainer (a small web API with tests).",
+      "steps": "1) Install and sign in. 2) Ask for an overview of the architecture and the main flows. 3) Ask where a given change should go and why. 4) Try each approval mode and note what Claude asked permission for.",
+      "result": "A written map of the repository and a note on permission settings."
+     },
+     {
+      "id": "3.2",
+      "type": "Lab",
+      "title": "A feature, end to end",
+      "goal": "Practise the explore, plan, code, commit workflow on a small feature.",
+      "material": "The sample repository and a feature ticket (a new endpoint with validation).",
+      "steps": "1) Explore the related code. 2) Ask for a plan in plan mode and correct it before coding. 3) Implement in small steps, running the tests each time. 4) Commit with a clear message. 5) Use clear, compact and rewind once each.",
+      "result": "A merged feature branch with passing tests."
+     },
+     {
+      "id": "3.3",
+      "type": "Lab",
+      "title": "Fix, refactor, review",
+      "goal": "Use tests as Claude's feedback loop and review its changes critically.",
+      "material": "A branch of the sample repository with three failing tests, one bug report with a stack trace, and one long function to refactor.",
+      "steps": "1) Let Claude run the tests and fix them one by one. 2) Diagnose the bug from the stack trace and add a test that reproduces it. 3) Refactor the long function without changing behaviour. 4) Review the full diff yourself and list what you would not accept.",
+      "result": "A green test suite, a regression test and a written review of Claude's diff."
+     },
+     {
+      "id": "3.4",
+      "type": "Lab",
+      "title": "Documentation for a new team member",
+      "goal": "Generate documentation from the code and keep it accurate.",
+      "material": "The sample repository after 3.3.",
+      "steps": "1) Generate a README, an onboarding guide and the API reference. 2) Write one architecture decision record for a past choice. 3) Add a diagram of the main flow. 4) Change the code and ask Claude to update only the affected documentation.",
+      "result": "A documented repository; a colleague checks that a newcomer could run it from the README alone."
+     }
+    ],
+    "validation": "The feature, the fixes and the documentation are checked in the repository by the trainer."
+   }
+  },
+  {
+   "name": "Building Your Claude System",
+   "hours": 6,
+   "focus": "CLAUDE.md, skills, subagents, MCP, hooks",
+   "intro": "Turning good habits into a setup that works the same way every time and can be shared with the team. Anthropic Academy reference: Claude Code in action; Introduction to agent skills; Introduction to subagents; Introduction to Model Context Protocol.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Project Memory: CLAUDE.md",
+     "content": "A short CLAUDE.md that Claude follows: commands, rules, what never to do; user versus project scope; a start-here file and handoff notes so work survives between sessions and people. Lab: CLAUDE.md for the sample repository and a personal one.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Skills",
+     "content": "Skills as reusable team know-how: SKILL.md and its description, multi-file skills with templates and scripts, when a skill triggers, sharing and troubleshooting. Lab: a report skill and a slide-deck skill in the company format.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Subagents & Connected Tools",
+     "content": "Subagents for research, review and parallel work; connecting tools through the Model Context Protocol and connectors (GitHub, issue tracker, documentation, drive); permissions and the risks of giving tools to an agent. Lab: a review subagent and one connected tool.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.4",
+     "title": "Guardrails & Automation",
+     "content": "Permission modes, hooks for rules that must never be skipped (tests before commit, no secrets in code), headless runs and scheduled routines, Claude in pull requests through the GitHub Action, verifying unsupervised work; packaging the setup as a plugin for the team. Lab: a pre-commit gate and a team plugin.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, each participant has a personal and team Claude setup that applies their rules every time, reuses their know-how and blocks the mistakes that matter.",
+    "items": [
+     {
+      "id": "4.1",
+      "type": "Lab",
+      "title": "CLAUDE.md and handoff files",
+      "goal": "Write project memory that Claude follows and that survives between sessions and people.",
+      "material": "The sample repository, the team rules from 1.2.",
+      "steps": "1) Write a short project CLAUDE.md: commands, conventions, rules, things never to do. 2) Write a personal CLAUDE.md with your preferences. 3) Add a start-here file and a handoff note template. 4) Start a new session and check that Claude obeys each rule.",
+      "result": "Two CLAUDE.md files and a handoff template, tested in a fresh session."
+     },
+     {
+      "id": "4.2",
+      "type": "Lab",
+      "title": "Two skills in the company format",
+      "goal": "Package know-how as skills that Claude uses automatically.",
+      "material": "The report and deck from phase 2, the company templates.",
+      "steps": "1) Write a report skill: SKILL.md with a precise description, the template and a checklist. 2) Write a deck skill the same way. 3) Test that each one triggers on the right requests and not on others. 4) Fix the description until it triggers reliably.",
+      "result": "A report skill and a deck skill, each tested on two requests."
+     },
+     {
+      "id": "4.3",
+      "type": "Lab",
+      "title": "A reviewer and a connected tool",
+      "goal": "Delegate work to a subagent and give Claude access to one team tool.",
+      "material": "The sample repository; a GitHub account, or the company's issue tracker or documentation space with a test project.",
+      "steps": "1) Create a review subagent with its own instructions and limited tools. 2) Run it on the diff from phase 3. 3) Connect one tool through MCP or a connector and use it to read issues or documents. 4) Review the permissions you gave and remove what is not needed.",
+      "result": "A review subagent and one working connection, with a note on the permissions granted."
+     },
+     {
+      "id": "4.4",
+      "type": "Lab",
+      "title": "Gates and a team plugin",
+      "goal": "Make the important rules impossible to skip and share the whole setup.",
+      "material": "The setup from 4.1 to 4.3.",
+      "steps": "1) Choose a permission mode for each type of work. 2) Add a hook that runs the tests before a commit and one that blocks secrets in code. 3) Run Claude headless on a small task and check its output. 4) Package CLAUDE.md, skills, subagent and hooks as a plugin and install it on a colleague's machine.",
+      "result": "A team plugin that installs and works on another participant's machine."
+     }
+    ],
+    "validation": "Each participant shows that a rule, a skill and a gate work in a fresh session."
+   }
+  },
+  {
+   "name": "Final Project",
+   "hours": 4.5,
+   "focus": "One real task, done end to end with Claude",
+   "intro": "Each participant (or pair) takes a task from their own job and completes it with their Claude system, following the AI-native workflow of the Anthropic Academy course The AI-native SDLC playbook.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Brief & Build: Code",
+     "content": "Write the intent (what, why, constraints), plan with Claude, implement and test the change with Claude Code.",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "Build: Documents",
+     "content": "Produce the documentation, the progress report and the presentation of the work with the skills built in phase 4; check every fact.",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Demo & Team Rollout",
+     "content": "Present the result and the system behind it; peer review; each team agrees which skills, rules and checks it will share and a 30-day adoption plan.",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "project": {
+    "title": "A real engineering task with your Claude system",
+    "brief": "Each participant chooses a task from their own work (a feature or fix, a tool, a study) and delivers it with Claude: the code change, its documentation, a short report and a presentation, all produced through the setup built during the programme.",
+    "stack": "Claude (Projects, Cowork, artifacts), Claude Code, Git, the participant's CLAUDE.md, skills, hooks and connected tools",
+    "deliverable": "The repository or files, the report, the slides, the participant's Claude setup (shareable as a plugin) and a 10-minute demo"
+   },
+   "labs": {
+    "goal": "Participants prove they can deliver a real task with Claude from intent to presentation, using the system they built, and leave with an adoption plan for their team.",
+    "items": [
+     {
+      "id": "5.1",
+      "type": "Project",
+      "title": "Intent, plan and code",
+      "goal": "Deliver the technical part of a real task with Claude Code.",
+      "material": "A task chosen by each participant from their own work and agreed with the trainer before the phase; their plugin from 4.4.",
+      "steps": "1) Write an intent file: what, why, constraints, how success is measured. 2) Plan with Claude in plan mode. 3) Implement and test. 4) Let the review subagent check the change, then review it yourself.",
+      "result": "A tested change or tool in a repository."
+     },
+     {
+      "id": "5.2",
+      "type": "Project",
+      "title": "Documents and presentation",
+      "goal": "Produce everything that goes with the work, using the skills.",
+      "material": "The result of 5.1, the report and deck skills, the team project.",
+      "steps": "1) Update the documentation. 2) Write the progress report with the report skill. 3) Build the presentation with the deck skill. 4) Check every fact and figure against the sources.",
+      "result": "Documentation, a report and a deck."
+     },
+     {
+      "id": "5.3",
+      "type": "Workshop",
+      "title": "Demo and team rollout",
+      "goal": "Show the result and agree how the team will keep using Claude.",
+      "material": "All deliverables, a rollout plan template.",
+      "steps": "1) A 10-minute demo per participant or pair. 2) Peer feedback on the result and on the setup. 3) The team chooses which skills, rules and gates become shared. 4) Each participant writes a 30-day adoption plan with one measurable goal.",
+      "result": "The shared team plugin contents and a 30-day plan per participant."
+     }
+    ],
+    "validation": "Final project presented and adoption plan handed in; with the phase labs and the Academy badges, this earns the certificate of completion."
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "Each lab adds a component to the participant's personal setup. At the end it works as one system, like the one used to prepare this programme, and the team can share it.",
+  "rows": [
+   {
+    "name": "Prompt library",
+    "shows": "Tested prompts for the participant's recurring tasks",
+    "phase": "1",
+    "build": "1.3"
+   },
+   {
+    "name": "Team project",
+    "shows": "Standing context: glossary, templates, writing rules",
+    "phase": "2",
+    "build": "2.1"
+   },
+   {
+    "name": "Report & plan workflow",
+    "shows": "From raw notes to a checked report and a project plan",
+    "phase": "2",
+    "build": "2.2"
+   },
+   {
+    "name": "Project CLAUDE.md",
+    "shows": "Rules and commands Claude follows in every session",
+    "phase": "4",
+    "build": "4.1"
+   },
+   {
+    "name": "Report and deck skills",
+    "shows": "Company-format documents on request",
+    "phase": "4",
+    "build": "4.2"
+   },
+   {
+    "name": "Review subagent + connected tool",
+    "shows": "Second-opinion review and live access to team tools",
+    "phase": "4",
+    "build": "4.3"
+   },
+   {
+    "name": "Gates and team plugin",
+    "shows": "Checks that cannot be skipped, installable by colleagues",
+    "phase": "4",
+    "build": "4.4"
+   }
+  ]
+ },
+ "notes": [
+  "Credit: the structure, vocabulary and recommended practice of this programme follow the free Anthropic Academy courses (academy.claude.com, © Anthropic PBC). Participants are invited to complete them and earn their badges. The exercises, examples and teaching material are the trainer's own.",
+  "This is an independent training. It is not affiliated with, sponsored or endorsed by Anthropic. Claude and Claude Code are products of Anthropic PBC.",
+  "Claude features change often: the programme is updated to the current product version before each delivery. Some features (Cowork, Research, connectors, Claude Code) need a paid plan; the organiser provides the seats.",
+  "No confidential company data is used in the labs unless the company's policy allows it with the plan in use."
+ ],
+ "facts_new_page": true
+}

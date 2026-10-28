@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / 'programmes'
 HANDOFF = Path('W:/trainings-catalog/HANDOFF.md')
 # Website tabs (keys match data-group in index.html #training): last course number of each tab
-GROUPS = [('infra', 11), ('cloud', 23), ('data', 34), ('sec', 38), ('acad', 39)]
+GROUPS = [('infra', 11), ('cloud', 23), ('data', 35), ('sec', 39), ('acad', 40)]
 
 
 def fact(g, label):

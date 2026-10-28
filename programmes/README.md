@@ -18,8 +18,8 @@ Editing in Word: change text freely; change a look everywhere by modifying its s
 the cover tiles (picture) and author block (floating table) can be dragged. Sync reports style, hand-formatting and position
 changes; fold them into the constants above, then rebuild with `--force`.
 
-Optional fields: `subtitle`, `audience_line`, `certifications`, `facts`, phase `intro`/`note`/`math`/`project`,
-`portfolio` (`{"intro", "rows": [{"name", "shows", "phase", "build"}]}`), `notes`, `buffer` (hours shown as a row before the total, added to it and to the cover), `lang` (`"fr"` = French labels and decimal comma), `hours` (cover figure, default = sum of
+Optional fields: `subtitle`, `audience_line`, `certifications`, `facts`, `facts_new_page` (true: Key facts start on a new page), phase `intro`/`note`/`math`/`project`/`labs` (`{"goal", "items": [{"id", "type", "title", "goal", "material", "steps", "result"}], "validation"}`),
+`portfolio` (`{"intro", "rows": [{"name", "shows", "phase", "build"}]}`), `notes`, `buffer_fixed` (true: the client set the total, the buffer rule is not applied), `buffer` (hours shown as a row before the total, added to it and to the cover), `lang` (`"fr"` = French labels and decimal comma), `hours` (cover figure, default = sum of
 phases), phase `optional: true` (outside the total and buffer rule, shown as "+ N h optional"), `labels` (override any fixed wording, see `LABELS`).
 
 Needs Python with python-docx, Pillow, PyMuPDF; sync also needs Microsoft Word (Windows).

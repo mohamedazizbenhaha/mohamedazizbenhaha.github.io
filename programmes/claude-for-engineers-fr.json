@@ -1,0 +1,477 @@
+{
+ "slug": "claude-for-engineers-fr",
+ "file": "Claude-pour-les-ingenieurs-30h.docx",
+ "lang": "fr",
+ "title": "Claude pour les ingénieurs",
+ "subtitle": "Travailler avec un assistant IA sur le code, les documents, les rapports, les présentations et la planification",
+ "audience_line": "Équipes d’ingénieurs qui veulent intégrer Claude à leur travail quotidien",
+ "certifications": [],
+ "buffer": 3,
+ "buffer_fixed": true,
+ "facts_new_page": true,
+ "labels": {
+  "portfolio_kicker": "Ce que chaque participant emporte",
+  "portfolio": "Votre système Claude",
+  "portfolio_cols": [
+   "#",
+   "Composant",
+   "Rôle",
+   "Phase",
+   "Construit en"
+  ]
+ },
+ "overview": "Ce programme apprend aux ingénieurs à utiliser Claude, l’assistant IA d’Anthropic, efficacement et en sécurité dans leur travail quotidien, du niveau débutant au niveau intermédiaire. Les participants apprennent d’abord ce qu’un modèle de langage sait faire ou non, et comment lui déléguer une tâche, la décrire et vérifier le résultat. Ils utilisent ensuite Claude pour le travail documentaire (rapports, documentation, plans et présentations), pour le développement logiciel avec Claude Code, puis transforment ces acquis en un système personnel et d’équipe : instructions de projet, compétences réutilisables (skills), outils connectés et contrôles automatiques. Chaque chapitre est pratique et s’appuie sur le type de travail des participants. Le programme suit la structure et le vocabulaire des cours officiels gratuits d’Anthropic Academy (academy.claude.com), que les participants suivent en parallèle.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Ingénieurs (logiciel, systèmes, données, projet ou terrain) et leurs responsables d’équipe ; profils mixtes bienvenus"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Usage quotidien d’un ordinateur et aisance de base avec la ligne de commande ; bases de Git pour la partie Claude Code (phases 3 et 4). Aucune connaissance en IA n’est nécessaire"
+  },
+  {
+   "label": "Durée",
+   "value": "30 h : 27 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Formation intensive sur 5 jours ; démonstrations courtes suivies de TP guidés sur des tâches d’ingénierie réalistes ; chaque participant construit son propre système Claude pas à pas"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant (Windows, macOS ou Linux, Git, VS Code) ; une licence Claude payante par participant (Team ou Enterprise recommandée, Pro au minimum) avec Claude Code activé ; un dépôt de code et des documents d’exemple fournis par le formateur, ou des documents non confidentiels de l’entreprise"
+  },
+  {
+   "label": "Ressources officielles",
+   "value": "Cours gratuits d’Anthropic Academy : AI Fluency, AI capabilities and limitations, Claude 101, Introduction to Claude Cowork, Claude Code 101, Claude Code in action, Introduction to agent skills, Introduction to subagents, Introduction to Model Context Protocol, The AI-native SDLC playbook"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé à chaque phase, les badges des cours d’Anthropic Academy et un projet final présenté au groupe ; attestation de formation pour les participants qui valident l’ensemble"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent choisir le bon outil Claude pour une tâche, rédiger des prompts et un contexte qui donnent des résultats fiables, vérifier ce que Claude produit, et repartent avec un système Claude fonctionnel et partageable pour le code, la documentation, les rapports, les présentations et la planification"
+  }
+ ],
+ "phases": [
+  {
+   "name": "Fondamentaux : travailler avec une IA",
+   "hours": 4.5,
+   "focus": "Ce que font les LLM, le cadre 4D, le prompting",
+   "intro": "Ce qu’est un modèle de langage, où il se trompe, et les habitudes qui rendent son usage productif et responsable. Référence Anthropic Academy : AI capabilities and limitations ; AI Fluency: Framework and foundations ; Claude 101 (Meet Claude).",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Capacités et limites",
+     "content": "Comment un modèle de langage produit du texte (tokens, prédiction du token suivant), ce qu’il sait et sa date de coupure, la fenêtre de contexte comme mémoire de travail, pourquoi il peut se tromper avec assurance, et les tâches qui lui conviennent. Tests en direct sur des questions d’ingénierie.",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Maîtrise de l’IA et usage responsable",
+     "content": "Le cadre 4D : Delegation (ce qu’on confie à l’IA et ce qu’on garde), Description (formuler la tâche), Discernment (juger le résultat), Diligence (responsabilité, transparence). Données confidentielles, politique de l’entreprise, propriété intellectuelle et quand refuser.",
+     "format": "Cours + atelier",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
+     "title": "Prompting et les interfaces de Claude",
+     "content": "Chat, Cowork et Code : lequel pour quel travail ; choisir un modèle. Des prompts qui fonctionnent : objectif et contexte, destinataire, exemples, structure avec titres ou balises XML, demander à Claude de vous interroger, itérer plutôt que recommencer. TP : réécrire trois prompts faibles issus du travail réel.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "À la fin de cette phase, les participants savent quand Claude est le bon outil, comment lui confier une tâche et comment vérifier ce qu’il rend avant de l’utiliser.",
+    "items": [
+     {
+      "id": "1.1",
+      "type": "Atelier",
+      "title": "Trouver les limites",
+      "goal": "Constater par soi-même où un modèle de langage est fiable et où il échoue.",
+      "material": "Claude (chat) ; 12 questions test préparées par le formateur : calcul, actualité récente, faits propres à l’entreprise, conversions d’unités, explication de code, résumé d’un long texte.",
+      "steps": "1) Prédire pour chaque question si Claude répondra juste. 2) La poser, puis vérifier la réponse auprès d’une source fiable. 3) Classer chaque erreur : connaissance absente, connaissance dépassée, erreur de raisonnement, détail inventé. 4) Discussion en groupe : quelles erreurs comptent dans notre travail d’ingénieur.",
+      "result": "Une carte de confiance d’une page : tâches à déléguer, à vérifier, à garder."
+     },
+     {
+      "id": "1.2",
+      "type": "Atelier",
+      "title": "Carte de délégation et règles d’équipe",
+      "goal": "Appliquer le cadre 4D au métier des participants et convenir de règles pour les données confidentielles.",
+      "material": "La fiche du cadre 4D ; la politique informatique ou données de l’entreprise si elle existe ; la liste des tâches hebdomadaires des participants.",
+      "steps": "1) Chaque participant liste dix tâches récurrentes. 2) Pour chacune, décider : automatiser, augmenter (travailler avec Claude) ou garder humaine, et pourquoi. 3) En groupe, écrire cinq règles sur ce qui peut ou non être partagé avec Claude. 4) Comparer et fusionner les règles.",
+      "result": "Une carte de délégation personnelle et un projet de charte d’équipe en cinq règles, réutilisés en phase 4."
+     },
+     {
+      "id": "1.3",
+      "type": "TP",
+      "title": "Du prompt faible au prompt fiable",
+      "goal": "Écrire des prompts qui donnent un résultat utilisable au premier ou au deuxième essai.",
+      "material": "Trois prompts faibles issus du travail réel (une question sur un bug, un e-mail à un client, un plan de test), une checklist de prompt, Claude (chat).",
+      "steps": "1) Exécuter chaque prompt faible et noter ce qui ne va pas. 2) Le réécrire avec objectif, contexte, destinataire, format et un exemple. 3) Demander à Claude de vous interroger avant de répondre à l’un d’eux. 4) Comparer les résultats et garder les meilleures versions.",
+      "result": "Les premières entrées de la bibliothèque de prompts du participant, chacune avec une note sur quand l’utiliser."
+     }
+    ],
+    "validation": "La carte de confiance, la carte de délégation et trois prompts réécrits sont relus par le formateur."
+   }
+  },
+  {
+   "name": "Travail documentaire : rapports, plans et présentations",
+   "hours": 6,
+   "focus": "Projets, recherche, documents, présentations, Cowork",
+   "intro": "Claude pour les documents que les ingénieurs écrivent chaque semaine, avec un contexte permanent pour qu’il connaisse déjà le style de l’équipe. Référence Anthropic Academy : Claude 101 ; Introduction to Claude Cowork.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Projets et contexte permanent",
+     "content": "Projets avec fichiers de connaissances et instructions, préférences personnelles, mémoire ; quoi mettre dans le contexte et quoi laisser de côté. TP : un projet pour l’équipe du participant avec son glossaire, ses modèles et ses règles de rédaction.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Rapports et planification",
+     "content": "Des notes, mesures ou transcriptions de réunion à un rapport technique structuré ; mode recherche et connecteurs avec sources ; vérifier chaque chiffre et chaque citation. Planification : découper un projet en tâches, estimations, risques et calendrier, puis remettre le plan en question. TP : un rapport hebdomadaire et un plan de projet.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Présentations et visuels",
+     "content": "Artifacts pour les diapositives, les schémas (Mermaid, logigrammes) et de petits outils ; fichiers Word, PowerPoint et Excel produits par Claude ou avec Claude dans Microsoft 365 ; appliquer le modèle de l’entreprise ; analyser un tableur et en tirer un graphique. TP : une revue de projet en 10 diapositives à partir du rapport du 2.2.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Déléguer avec Cowork",
+     "content": "Confier à Claude une tâche en plusieurs étapes sur des fichiers et applications locaux : installation, une première tâche, instructions globales, Claude dans Chrome, travailler en sécurité (accès aux dossiers, relecture avant partage). TP : ranger et résumer un dossier de documents de projet.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "À la fin de cette phase, les participants produisent avec Claude les rapports, plans et présentations d’un projet réel, au format de l’équipe, et vérifient chaque fait qu’ils contiennent.",
+    "items": [
+     {
+      "id": "2.1",
+      "type": "TP",
+      "title": "Un projet pour votre équipe",
+      "goal": "Donner à Claude un contexte permanent pour que chaque conversation connaisse déjà le vocabulaire et le style de l’équipe.",
+      "material": "Projets Claude ; le glossaire de l’équipe, un modèle de rapport et deux documents passés (non confidentiels, ou exemples fournis par le formateur).",
+      "steps": "1) Créer un projet et y déposer les fichiers de connaissances. 2) Rédiger les instructions du projet : destinataire, ton, structure, unités, ce qu’il faut éviter. 3) Définir ses préférences personnelles. 4) Tester la même demande dans et hors du projet et comparer.",
+      "result": "Un projet d’équipe opérationnel, utilisé dans tous les TP de cette phase."
+     },
+     {
+      "id": "2.2",
+      "type": "TP",
+      "title": "Rapport hebdomadaire et plan de projet",
+      "goal": "Transformer de la matière brute en rapport technique vérifié, puis planifier un petit projet avec Claude.",
+      "material": "Une transcription de réunion, des mesures d’essai dans un tableur et des notes éparses pour un projet d’exemple.",
+      "steps": "1) Rédiger le rapport hebdomadaire à partir de la matière brute dans le projet d’équipe. 2) Vérifier chaque chiffre et chaque affirmation dans les sources ; relever ce que Claude a inventé ou mal compris. 3) Demander un découpage en tâches, des estimations, des risques et un calendrier pour la phase suivante. 4) Demander à Claude de critiquer son propre plan, puis le corriger.",
+      "result": "Un rapport vérifié de deux pages et un plan de projet avec tâches, estimations et liste des risques."
+     },
+     {
+      "id": "2.3",
+      "type": "TP",
+      "title": "Présentation de revue de projet",
+      "goal": "Construire une présentation claire et ses visuels à partir du rapport.",
+      "material": "Le rapport du 2.2, le modèle de diapositives de l’entreprise, les artifacts de Claude ; Claude pour Microsoft 365 si l’entreprise l’utilise.",
+      "steps": "1) Demander un plan en 10 diapositives et corriger le fil conducteur. 2) Générer la présentation dans le modèle de l’entreprise. 3) Dessiner un schéma d’architecture ou de processus (Mermaid) et un graphique à partir des mesures. 4) Répéter : demander à Claude les questions que posera l’auditoire.",
+      "result": "Une présentation de 10 diapositives avec un schéma et un graphique, prête à être présentée."
+     },
+     {
+      "id": "2.4",
+      "type": "TP",
+      "title": "Confier une tâche de dossier à Cowork",
+      "goal": "Déléguer une tâche en plusieurs étapes sur des fichiers et la contrôler en sécurité.",
+      "material": "Claude Cowork ; un dossier de 20 documents de projet hétérogènes fourni par le formateur.",
+      "steps": "1) Donner à Cowork l’accès à ce seul dossier. 2) Lui demander de trier, renommer et résumer les documents dans un index. 3) Relire chaque modification avant de l’accepter. 4) Noter ce qu’on le laisserait faire seul la prochaine fois, et ce qu’on ne lui confierait pas.",
+      "result": "Un dossier rangé, un document d’index et une courte note sur l’usage sûr."
+     }
+    ],
+    "validation": "Le rapport, le plan et la présentation sont présentés à un pair, qui vérifie trois faits dans les sources."
+   }
+  },
+  {
+   "name": "Coder avec Claude Code",
+   "hours": 6,
+   "focus": "Boucle d’agent, mode plan, tests, revue, documentation",
+   "intro": "Claude Code comme agent de développement dans le terminal, l’IDE ou l’application de bureau, sur un dépôt d’exemple. Référence Anthropic Academy : Claude Code 101.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Comment fonctionne un agent de code",
+     "content": "Assistant ou agent : la boucle d’agent, les outils, la fenêtre de contexte et les permissions. Installer Claude Code (terminal, VS Code, JetBrains, bureau), modes d’approbation, un premier prompt sur un code inconnu : l’expliquer, le cartographier, trouver où placer une modification.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Le flux de travail quotidien",
+     "content": "Explorer, planifier, coder, committer : le mode plan d’abord, de petites étapes vérifiées, des commits Git aux messages clairs. Gérer le contexte dans les longues sessions (clear, compact, rewind). TP : réaliser une petite fonctionnalité de bout en bout.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Tests, débogage et revue de code",
+     "content": "Donner à Claude une boucle de retour : les tests d’abord, exécuter, corriger. Diagnostiquer un bug à partir d’un journal ou d’une trace d’appels, refactoriser du code ancien sans risque, relire un diff, et ce qu’un humain doit encore relire. TP : réparer une suite de tests en échec.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Documenter à partir du code",
+     "content": "README, guide d’intégration, documentation d’API, décisions d’architecture (ADR) et schémas générés à partir du code, et leur mise à jour à chaque modification. TP : documenter le dépôt d’exemple pour un nouveau membre de l’équipe.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "À la fin de cette phase, les participants utilisent Claude Code pour comprendre, modifier, tester et documenter un code, et relisent son travail comme celui d’un collègue.",
+    "items": [
+     {
+      "id": "3.1",
+      "type": "TP",
+      "title": "Premiers pas dans un code inconnu",
+      "goal": "Installer Claude Code et l’utiliser pour comprendre un dépôt jamais vu.",
+      "material": "Claude Code (terminal, VS Code ou bureau) ; un dépôt d’exemple fourni par le formateur (une petite API web avec des tests).",
+      "steps": "1) Installer et se connecter. 2) Demander une vue d’ensemble de l’architecture et des flux principaux. 3) Demander où placer une modification donnée, et pourquoi. 4) Essayer chaque mode d’approbation et noter ce pour quoi Claude a demandé la permission.",
+      "result": "Une carte écrite du dépôt et une note sur les réglages de permissions."
+     },
+     {
+      "id": "3.2",
+      "type": "TP",
+      "title": "Une fonctionnalité de bout en bout",
+      "goal": "Pratiquer le flux explorer, planifier, coder, committer sur une petite fonctionnalité.",
+      "material": "Le dépôt d’exemple et un ticket (un nouvel endpoint avec validation).",
+      "steps": "1) Explorer le code concerné. 2) Demander un plan en mode plan et le corriger avant de coder. 3) Implémenter par petites étapes en lançant les tests à chaque fois. 4) Committer avec un message clair. 5) Utiliser une fois chacun clear, compact et rewind.",
+      "result": "Une branche de fonctionnalité fusionnée, avec des tests qui passent."
+     },
+     {
+      "id": "3.3",
+      "type": "TP",
+      "title": "Réparer, refactoriser, relire",
+      "goal": "Utiliser les tests comme boucle de retour de Claude et relire ses modifications d’un œil critique.",
+      "material": "Une branche du dépôt d’exemple avec trois tests en échec, un rapport de bug avec trace d’appels et une longue fonction à refactoriser.",
+      "steps": "1) Laisser Claude lancer les tests et les corriger un par un. 2) Diagnostiquer le bug à partir de la trace et ajouter un test qui le reproduit. 3) Refactoriser la longue fonction sans changer son comportement. 4) Relire soi-même le diff complet et lister ce qu’on n’accepterait pas.",
+      "result": "Une suite de tests au vert, un test de non-régression et une revue écrite du diff de Claude."
+     },
+     {
+      "id": "3.4",
+      "type": "TP",
+      "title": "Une documentation pour un nouveau collègue",
+      "goal": "Générer la documentation à partir du code et la garder exacte.",
+      "material": "Le dépôt d’exemple après le 3.3.",
+      "steps": "1) Générer un README, un guide d’intégration et la référence de l’API. 2) Rédiger une décision d’architecture pour un choix passé. 3) Ajouter un schéma du flux principal. 4) Modifier le code et demander à Claude de mettre à jour uniquement la documentation concernée.",
+      "result": "Un dépôt documenté ; un collègue vérifie qu’un nouvel arrivant pourrait le lancer avec le seul README."
+     }
+    ],
+    "validation": "La fonctionnalité, les corrections et la documentation sont vérifiées dans le dépôt par le formateur."
+   }
+  },
+  {
+   "name": "Construire votre système Claude",
+   "hours": 6,
+   "focus": "CLAUDE.md, skills, sous-agents, MCP, hooks",
+   "intro": "Transformer les bonnes pratiques en une configuration qui fonctionne de la même façon à chaque fois et se partage avec l’équipe. Référence Anthropic Academy : Claude Code in action ; Introduction to agent skills ; Introduction to subagents ; Introduction to Model Context Protocol.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Mémoire de projet : CLAUDE.md",
+     "content": "Un CLAUDE.md court que Claude respecte : commandes, règles, ce qu’il ne faut jamais faire ; portée utilisateur ou projet ; un fichier de démarrage et des notes de passation pour que le travail survive d’une session et d’une personne à l’autre. TP : un CLAUDE.md pour le dépôt d’exemple et un personnel.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Skills",
+     "content": "Les skills comme savoir-faire réutilisable de l’équipe : SKILL.md et sa description, skills en plusieurs fichiers avec modèles et scripts, déclenchement, partage et dépannage. TP : un skill de rapport et un skill de présentation au format de l’entreprise.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Sous-agents et outils connectés",
+     "content": "Des sous-agents pour la recherche, la revue et le travail en parallèle ; connecter des outils via le Model Context Protocol et les connecteurs (GitHub, gestionnaire de tickets, documentation, drive) ; permissions et risques liés aux outils confiés à un agent. TP : un sous-agent de revue et un outil connecté.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.4",
+     "title": "Garde-fous et automatisation",
+     "content": "Modes de permission, hooks pour les règles à ne jamais contourner (tests avant commit, aucun secret dans le code), exécutions sans interface (headless) et routines planifiées, Claude dans les pull requests via la GitHub Action, vérifier un travail non supervisé ; empaqueter la configuration en plugin pour l’équipe. TP : un contrôle avant commit et un plugin d’équipe.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "À la fin de cette phase, chaque participant dispose d’une configuration Claude personnelle et d’équipe qui applique ses règles à chaque fois, réutilise son savoir-faire et bloque les erreurs qui comptent.",
+    "items": [
+     {
+      "id": "4.1",
+      "type": "TP",
+      "title": "CLAUDE.md et fichiers de passation",
+      "goal": "Écrire une mémoire de projet que Claude respecte et qui survit d’une session et d’une personne à l’autre.",
+      "material": "Le dépôt d’exemple, les règles d’équipe du 1.2.",
+      "steps": "1) Écrire un CLAUDE.md de projet court : commandes, conventions, règles, ce qu’il ne faut jamais faire. 2) Écrire un CLAUDE.md personnel avec ses préférences. 3) Ajouter un fichier de démarrage et un modèle de note de passation. 4) Ouvrir une nouvelle session et vérifier que Claude respecte chaque règle.",
+      "result": "Deux fichiers CLAUDE.md et un modèle de passation, testés dans une session neuve."
+     },
+     {
+      "id": "4.2",
+      "type": "TP",
+      "title": "Deux skills au format de l’entreprise",
+      "goal": "Empaqueter le savoir-faire en skills que Claude utilise automatiquement.",
+      "material": "Le rapport et la présentation de la phase 2, les modèles de l’entreprise.",
+      "steps": "1) Écrire un skill de rapport : SKILL.md avec une description précise, le modèle et une checklist. 2) Écrire de la même façon un skill de présentation. 3) Vérifier que chacun se déclenche sur les bonnes demandes et pas sur les autres. 4) Corriger la description jusqu’à un déclenchement fiable.",
+      "result": "Un skill de rapport et un skill de présentation, chacun testé sur deux demandes."
+     },
+     {
+      "id": "4.3",
+      "type": "TP",
+      "title": "Un relecteur et un outil connecté",
+      "goal": "Déléguer du travail à un sous-agent et donner à Claude l’accès à un outil de l’équipe.",
+      "material": "Le dépôt d’exemple ; un compte GitHub, ou le gestionnaire de tickets ou l’espace de documentation de l’entreprise avec un projet de test.",
+      "steps": "1) Créer un sous-agent de revue avec ses propres instructions et des outils limités. 2) Le lancer sur le diff de la phase 3. 3) Connecter un outil via MCP ou un connecteur et s’en servir pour lire des tickets ou des documents. 4) Revoir les permissions accordées et retirer ce qui n’est pas nécessaire.",
+      "result": "Un sous-agent de revue et une connexion fonctionnelle, avec une note sur les permissions accordées."
+     },
+     {
+      "id": "4.4",
+      "type": "TP",
+      "title": "Contrôles et plugin d’équipe",
+      "goal": "Rendre les règles importantes impossibles à contourner et partager toute la configuration.",
+      "material": "La configuration des 4.1 à 4.3.",
+      "steps": "1) Choisir un mode de permission pour chaque type de travail. 2) Ajouter un hook qui lance les tests avant un commit et un autre qui bloque les secrets dans le code. 3) Lancer Claude sans interface sur une petite tâche et vérifier le résultat. 4) Empaqueter CLAUDE.md, skills, sous-agent et hooks en plugin et l’installer sur le poste d’un collègue.",
+      "result": "Un plugin d’équipe qui s’installe et fonctionne sur le poste d’un autre participant."
+     }
+    ],
+    "validation": "Chaque participant montre qu’une règle, un skill et un contrôle fonctionnent dans une session neuve."
+   }
+  },
+  {
+   "name": "Projet final",
+   "hours": 4.5,
+   "focus": "Une tâche réelle, menée de bout en bout avec Claude",
+   "intro": "Chaque participant (ou binôme) prend une tâche de son propre travail et la réalise avec son système Claude, selon le flux de travail du cours d’Anthropic Academy The AI-native SDLC playbook.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Cadrage et réalisation : le code",
+     "content": "Écrire l’intention (quoi, pourquoi, contraintes), planifier avec Claude, implémenter et tester la modification avec Claude Code.",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "Réalisation : les documents",
+     "content": "Produire la documentation, le rapport d’avancement et la présentation du travail avec les skills construits en phase 4 ; vérifier chaque fait.",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Démonstration et déploiement en équipe",
+     "content": "Présenter le résultat et le système qui l’a produit ; revue par les pairs ; chaque équipe choisit les skills, règles et contrôles qu’elle partagera et un plan d’adoption sur 30 jours.",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Les participants prouvent qu’ils savent mener une tâche réelle avec Claude, de l’intention à la présentation, avec le système qu’ils ont construit, et repartent avec un plan d’adoption pour leur équipe.",
+    "items": [
+     {
+      "id": "5.1",
+      "type": "Projet",
+      "title": "Intention, plan et code",
+      "goal": "Réaliser la partie technique d’une tâche réelle avec Claude Code.",
+      "material": "Une tâche choisie par chaque participant dans son propre travail et validée avec le formateur avant la phase ; son plugin du 4.4.",
+      "steps": "1) Écrire un fichier d’intention : quoi, pourquoi, contraintes, comment mesurer le succès. 2) Planifier avec Claude en mode plan. 3) Implémenter et tester. 4) Faire vérifier la modification par le sous-agent de revue, puis la relire soi-même.",
+      "result": "Une modification ou un outil testé dans un dépôt."
+     },
+     {
+      "id": "5.2",
+      "type": "Projet",
+      "title": "Documents et présentation",
+      "goal": "Produire tout ce qui accompagne le travail, avec les skills.",
+      "material": "Le résultat du 5.1, les skills de rapport et de présentation, le projet d’équipe.",
+      "steps": "1) Mettre à jour la documentation. 2) Rédiger le rapport d’avancement avec le skill de rapport. 3) Construire la présentation avec le skill de présentation. 4) Vérifier chaque fait et chaque chiffre dans les sources.",
+      "result": "Documentation, rapport et présentation."
+     },
+     {
+      "id": "5.3",
+      "type": "Atelier",
+      "title": "Démonstration et déploiement en équipe",
+      "goal": "Montrer le résultat et convenir de la façon dont l’équipe continuera à utiliser Claude.",
+      "material": "Tous les livrables, un modèle de plan de déploiement.",
+      "steps": "1) Une démonstration de 10 minutes par participant ou binôme. 2) Retours des pairs sur le résultat et sur la configuration. 3) L’équipe choisit les skills, règles et contrôles qui deviennent communs. 4) Chaque participant rédige un plan d’adoption sur 30 jours avec un objectif mesurable.",
+      "result": "Le contenu du plugin d’équipe commun et un plan sur 30 jours par participant."
+     }
+    ],
+    "validation": "Projet final présenté et plan d’adoption remis ; avec les TP des phases et les badges d’Anthropic Academy, il donne droit à l’attestation de formation."
+   },
+   "project": {
+    "title": "Une tâche d’ingénierie réelle avec votre système Claude",
+    "brief": "Chaque participant choisit une tâche de son propre travail (une fonctionnalité ou un correctif, un outil, une étude) et la livre avec Claude : la modification du code, sa documentation, un court rapport et une présentation, tous produits avec la configuration construite pendant la formation.",
+    "stack": "Claude (Projets, Cowork, artifacts), Claude Code, Git, le CLAUDE.md, les skills, les hooks et les outils connectés du participant",
+    "deliverable": "Le dépôt ou les fichiers, le rapport, les diapositives, la configuration Claude du participant (partageable en plugin) et une démonstration de 10 minutes"
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "Chaque TP ajoute un composant à la configuration personnelle du participant. À la fin, l’ensemble fonctionne comme un seul système, comme celui qui a servi à préparer ce programme, et l’équipe peut le partager.",
+  "rows": [
+   {
+    "name": "Bibliothèque de prompts",
+    "shows": "Des prompts testés pour les tâches récurrentes du participant",
+    "phase": "1",
+    "build": "1.3"
+   },
+   {
+    "name": "Projet d’équipe",
+    "shows": "Contexte permanent : glossaire, modèles, règles de rédaction",
+    "phase": "2",
+    "build": "2.1"
+   },
+   {
+    "name": "Flux rapport et plan",
+    "shows": "Des notes brutes à un rapport vérifié et un plan de projet",
+    "phase": "2",
+    "build": "2.2"
+   },
+   {
+    "name": "CLAUDE.md de projet",
+    "shows": "Les règles et commandes que Claude suit à chaque session",
+    "phase": "4",
+    "build": "4.1"
+   },
+   {
+    "name": "Skills rapport et présentation",
+    "shows": "Des documents au format de l’entreprise sur simple demande",
+    "phase": "4",
+    "build": "4.2"
+   },
+   {
+    "name": "Sous-agent de revue + outil connecté",
+    "shows": "Un second avis en revue et un accès direct aux outils de l’équipe",
+    "phase": "4",
+    "build": "4.3"
+   },
+   {
+    "name": "Contrôles et plugin d’équipe",
+    "shows": "Des vérifications impossibles à contourner, installables par les collègues",
+    "phase": "4",
+    "build": "4.4"
+   }
+  ]
+ },
+ "notes": [
+  "Crédit : la structure, le vocabulaire et les pratiques recommandées de ce programme suivent les cours gratuits d’Anthropic Academy (academy.claude.com, © Anthropic PBC). Les participants sont invités à les suivre et à obtenir leurs badges. Les exercices, exemples et supports pédagogiques sont ceux du formateur.",
+  "Cette formation est indépendante. Elle n’est ni affiliée à Anthropic, ni parrainée, ni approuvée par Anthropic. Claude et Claude Code sont des produits d’Anthropic PBC.",
+  "Les fonctionnalités de Claude évoluent souvent : le programme est mis à jour selon la version du produit avant chaque réalisation de la formation. Certaines fonctionnalités (Cowork, Research, connecteurs, Claude Code) nécessitent une offre payante ; l’organisateur fournit les licences.",
+  "Aucune donnée confidentielle de l’entreprise n’est utilisée dans les TP, sauf si la politique de l’entreprise le permet avec l’offre utilisée."
+ ]
+}
