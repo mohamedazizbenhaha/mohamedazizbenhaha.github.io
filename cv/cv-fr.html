@@ -130,24 +130,35 @@
   <h2>PROJETS</h2>
   <div class="entry">
     <div class="head">
-      <h3>SIADGI — Système Intelligent d'Analyse Documentaire et de Génération d'Insights</h3>
+      <h3>Life OS — Système d'exploitation personnel</h3>
     </div>
-    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>Python · LangChain · Groq (Llama 3.1 70B) · ChromaDB · BAAI/bge-small · DuckDB · Streamlit · Plotly · Docker Compose</b></p>
+    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>PWA · LLM · Saisie vocale · Netlify Functions · Synchronisation cloud</b></p>
     <ul>
-      <li>Système RAG interrogeant en langage naturel des corpus documentaires hétérogènes (PDF, DOCX, XLSX, CSV), avec réponses citées et vérifiables.</li>
-      <li>Pipeline Text-to-SQL vers des requêtes DuckDB validées, avec génération automatique de graphiques interactifs Plotly.</li>
-      <li>RAGAS Faithfulness ≥ 0,82 sur 50 questions de test, latence end-to-end &lt; 6 secondes (95e percentile), architecture zéro coût.</li>
+      <li>Système d'exploitation personnel réunissant 7 domaines du quotidien (entraînement, notes, tâches, rappels, agenda, courses, budget) : une phrase tapée ou dictée est transformée par une IA en actions validées, avec annulation en un geste.</li>
+      <li>Architecture modulaire : 3 applications autonomes (LifeFit, LifeNotes, LifeWallet) partageant une même clé de synchronisation, chacune en lecture seule sur les données des autres.</li>
+      <li>LifeWallet : agent conversationnel de suivi des dépenses et du budget, avec extraction d'entités financières et classification automatique des transactions.</li>
     </ul>
   </div>
   <div class="entry">
     <div class="head">
-      <h3>Application de gestion budgétaire comportementale par IA — en cours</h3>
+      <h3>Create Life — IA personnelle auto-évolutive</h3>
     </div>
-    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>Flutter · Python · PostgreSQL · Supabase · LangChain · Groq (Llama 3.x) · NVIDIA NIM · STT/TTS · Plotly · Docker</b></p>
+    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>LLaMA (local) · Reconnaissance vocale · Auto-modification · Docker Compose · Flask</b></p>
     <ul>
-      <li>Agent conversationnel d'assistance financière personnalisée, avec mémoire long terme (historique transactionnel et contexte conversationnel).</li>
-      <li>Système hybride « Rule-Based + LLM » : contraintes financières explicites et raisonnement des modèles de langage.</li>
-      <li>Pipeline multimodal : saisie vocale, extraction d'entités financières et classification automatique des transactions.</li>
+      <li>Architecture ouverte pour une IA personnelle : modèle LLaMA exécuté localement (100 % hors ligne), reconnaissance vocale n'accordant sa confiance qu'à la voix de son propriétaire.</li>
+      <li>Boucle d'auto-évolution qui évalue et met à jour son propre code modifiable, avec des principes fondamentaux qu'elle ne peut jamais réécrire.</li>
+      <li>Chaque service tourne dans Docker et chaque changement est journalisé ; interface web Flask.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="head">
+      <h3>Thesis ecosystem — Outils pour tout le parcours doctoral</h3>
+    </div>
+    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>Next.js · PostgreSQL · Prisma · Kubernetes · Helm · NextAuth · FastAPI</b></p>
+    <ul>
+      <li>4 outils connectés pour étudiants et encadrants : trouver un sujet et un encadrant, publier la thèse, interroger ses propres sources et mener la recherche ; microservices déployés sur Kubernetes avec Helm, 3 dépôts open source.</li>
+      <li>ThesisVault (bibliothèque avec une page par chercheur) et ThesisMatcher (propositions de sujets, candidatures suivies de « en attente » à « acceptée », NextAuth).</li>
+      <li>ThesisLens : application de bureau RAG interrogeant vos propres fichiers en langage naturel, réponses citées à la page et au passage — RAGAS Faithfulness ≥ 0,82 sur 50 questions de test, latence &lt; 6 s (95e percentile), architecture zéro coût.</li>
     </ul>
   </div>
 </section>

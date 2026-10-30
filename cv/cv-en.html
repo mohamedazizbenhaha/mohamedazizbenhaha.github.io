@@ -130,24 +130,35 @@
   <h2>PROJECTS</h2>
   <div class="entry">
     <div class="head">
-      <h3>SIADGI — Intelligent Document Analysis and Insight Generation System</h3>
+      <h3>Life OS — Personal operating system</h3>
     </div>
-    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>Python · LangChain · Groq (Llama 3.1 70B) · ChromaDB · BAAI/bge-small · DuckDB · Streamlit · Plotly · Docker Compose</b></p>
+    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>PWA · LLM · Speech input · Netlify Functions · Cloud sync</b></p>
     <ul>
-      <li>RAG system answering natural-language questions over heterogeneous document collections (PDF, DOCX, XLSX, CSV), with cited, verifiable answers.</li>
-      <li>Text-to-SQL pipeline producing validated DuckDB queries, with automatic interactive Plotly charts.</li>
-      <li>RAGAS Faithfulness ≥ 0.82 on a 50-question test set, end-to-end latency &lt; 6 seconds (95th percentile), zero-cost architecture.</li>
+      <li>A personal operating system bringing together 7 daily areas (training, notes, tasks, reminders, calendar, groceries, budget): one typed or spoken sentence is turned by an AI into validated actions, with one-tap undo.</li>
+      <li>Modular architecture: 3 standalone apps (LifeFit, LifeNotes, LifeWallet) sharing one sync key, each read-only on the others' data.</li>
+      <li>LifeWallet: a conversational spending and budget tracker, with financial entity extraction and automatic transaction classification.</li>
     </ul>
   </div>
   <div class="entry">
     <div class="head">
-      <h3>AI-powered behavioral budgeting app — in progress</h3>
+      <h3>Create Life — Self-evolving personal AI</h3>
     </div>
-    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>Flutter · Python · PostgreSQL · Supabase · LangChain · Groq (Llama 3.x) · NVIDIA NIM · STT/TTS · Plotly · Docker</b></p>
+    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>LLaMA (local) · Voice recognition · Self-modification · Docker Compose · Flask</b></p>
     <ul>
-      <li>Conversational agent for personalized financial assistance, with long-term memory (transaction history and conversation context).</li>
-      <li>Hybrid Rule-Based + LLM system: explicit financial constraints combined with language-model reasoning.</li>
-      <li>Multimodal pipeline: voice input, financial entity extraction and automatic transaction classification.</li>
+      <li>An open architecture for a personal AI: a LLaMA model run locally (100% offline), with voice recognition that trusts only its owner's voice.</li>
+      <li>A self-evolution loop that evaluates and updates its own modifiable code, with core principles it can never rewrite.</li>
+      <li>Every service runs in Docker and every change is logged; Flask web interface.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="head">
+      <h3>Thesis ecosystem — Tools for the whole PhD journey</h3>
+    </div>
+    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>Next.js · PostgreSQL · Prisma · Kubernetes · Helm · NextAuth · FastAPI</b></p>
+    <ul>
+      <li>4 connected tools for students and supervisors: find a subject and a supervisor, publish the thesis, question your own sources and run the research; microservices deployed on Kubernetes with Helm, 3 open-source repositories.</li>
+      <li>ThesisVault (a library with a page per researcher) and ThesisMatcher (subject proposals, applications tracked from pending to accepted, NextAuth).</li>
+      <li>ThesisLens: a RAG desktop app that queries your own files in natural language, with answers cited to the page and passage — RAGAS Faithfulness ≥ 0.82 on a 50-question test set, latency &lt; 6 s (95th percentile), zero-cost architecture.</li>
     </ul>
   </div>
 </section>
