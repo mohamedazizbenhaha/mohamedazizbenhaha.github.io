@@ -143,11 +143,11 @@
     <div class="head">
       <h3>Create Life — IA personnelle auto-évolutive</h3>
     </div>
-    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>LLaMA (local) · Reconnaissance vocale · Auto-modification · Docker Compose · Flask</b></p>
+    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>Python · Ollama · Embeddings/RAG · Docker · pytest</b></p>
     <ul>
-      <li>Architecture ouverte pour une IA personnelle : modèle LLaMA exécuté localement (100 % hors ligne), reconnaissance vocale n'accordant sa confiance qu'à la voix de son propriétaire.</li>
-      <li>Boucle d'auto-évolution qui évalue et met à jour son propre code modifiable, avec des principes fondamentaux qu'elle ne peut jamais réécrire.</li>
-      <li>Chaque service tourne dans Docker et chaque changement est journalisé ; interface web Flask.</li>
+      <li>IA personnelle auto-évolutive exécutée localement : un petit modèle local (Ollama) sur CPU, qui se souvient d'une session à l'autre (journal, mémoires fondatrices et « îlots » d'identité).</li>
+      <li>Rappel par le sens, sources à l'appui, pour ancrer ses réponses ; exploration autonome du web (il lit, conserve ce qu'il apprend avec sa source, laisse des notes).</li>
+      <li>Auto-modification bornée de son propre code, conservée seulement si les tests passent, sinon un gardien restaure la dernière version ; principes fondamentaux inaltérables et interrupteur d'arrêt réservé au propriétaire, hors dépôt.</li>
     </ul>
   </div>
   <div class="entry">

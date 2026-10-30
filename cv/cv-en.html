@@ -143,11 +143,11 @@
     <div class="head">
       <h3>Create Life — Self-evolving personal AI</h3>
     </div>
-    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>LLaMA (local) · Voice recognition · Self-modification · Docker Compose · Flask</b></p>
+    <p class="tech" style="margin-top:.8mm"><u>Technologies:</u> <b>Python · Ollama · Embeddings/RAG · Docker · pytest</b></p>
     <ul>
-      <li>An open architecture for a personal AI: a LLaMA model run locally (100% offline), with voice recognition that trusts only its owner's voice.</li>
-      <li>A self-evolution loop that evaluates and updates its own modifiable code, with core principles it can never rewrite.</li>
-      <li>Every service runs in Docker and every change is logged; Flask web interface.</li>
+      <li>A self-evolving personal AI run locally: a small local model (Ollama) on CPU that remembers across sessions (a journal, core memories and identity 'islands').</li>
+      <li>Recall by meaning, backed by sources, to ground its replies; autonomous web wandering (it reads, keeps what it learns with its source, and leaves notes).</li>
+      <li>Bounded self-modification of its own code, kept only if the tests pass, else a guardian restores the last version; immutable core principles and an owner-only kill switch outside the repo.</li>
     </ul>
   </div>
   <div class="entry">
