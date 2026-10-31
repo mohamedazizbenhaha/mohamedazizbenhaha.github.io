@@ -329,13 +329,13 @@ let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(
 /* ---------- Life OS card: a sentence types itself, then becomes actions for the right module ---------- */
 const LIFE = {
   en: [['Buy milk and call the bank tomorrow at 10', [['Groceries', 'milk'], ['Reminder', 'call the bank · 10:00']]],
-       ['Leg day done: squats 3×8 at 100 kg', [['LifeFit', 'squats 3×8 · 100 kg']]],
-       ['Spent 12 € on lunch', [['LifeWallet', '−12 € · food']]],
-       ['Idea for chapter 3: compare both sensors', [['LifeNotes', 'chapter 3 idea'], ['Task', 'compare sensors']]]],
+       ['Leg day done: squats 3×8 at 100 kg', [['LifeFlex', 'squats 3×8 · 100 kg']]],
+       ['Spent 12 € on lunch', [['LifeBalance', '−12 € · food']]],
+       ['Idea for chapter 3: compare both sensors', [['LifeJournal', 'chapter 3 idea'], ['Task', 'compare sensors']]]],
   fr: [['Acheter du lait et appeler la banque demain à 10 h', [['Courses', 'lait'], ['Rappel', 'appeler la banque · 10:00']]],
-       ['Séance jambes finie : squats 3×8 à 100 kg', [['LifeFit', 'squats 3×8 · 100 kg']]],
-       ['Dépensé 12 € pour le déjeuner', [['LifeWallet', '−12 € · repas']]],
-       ['Idée pour le chapitre 3 : comparer les deux capteurs', [['LifeNotes', 'idée chapitre 3'], ['Tâche', 'comparer les capteurs']]]]
+       ['Séance jambes finie : squats 3×8 à 100 kg', [['LifeFlex', 'squats 3×8 · 100 kg']]],
+       ['Dépensé 12 € pour le déjeuner', [['LifeBalance', '−12 € · repas']]],
+       ['Idée pour le chapitre 3 : comparer les deux capteurs', [['LifeJournal', 'idée chapitre 3'], ['Tâche', 'comparer les capteurs']]]]
 };
 (async () => {
   const box = $('#lifeArt'), typed = $('.typed', box), acts = $('.acts', box), wait = ms => new Promise(r => setTimeout(r, ms));
