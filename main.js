@@ -31,16 +31,18 @@ const FR = {
   'm2.h': 'Réacteur MFC flottant', 'm2.p': 'CAO paramétrique générée par code pour une unité capteur flottante à pile à combustible microbienne : trois prototypes, vérifications de flottabilité, plateaux d’impression pour imprimante Bambu et suite de tests automatisée.',
   'proj.more': 'Sous-projets', 'proj.see': 'Voir les sous-projets',
   'p4.tag': 'Du langage naturel en entrée, des actions validées en sortie',
-  'p4.p': 'Mon système d’exploitation personnel, chaque jour sur mon téléphone. Parti d’un carnet de musculation, il ne cesse de grandir : entraînement, notes, tâches, rappels, calendrier, courses, et bientôt l’argent. Tapez ou dictez une phrase : une IA la transforme en actions validées, annulables en un geste. Chaque module est une application à part ; elles partagent une clé de synchronisation et lisent les données des autres, sans jamais les modifier.',
-  'p6.tag': 'Une IA personnelle qui s’améliore elle-même',
-  'p6.p': 'Une IA personnelle auto-évolutive qui tourne sur ma propre machine. Un petit modèle local fait le raisonnement ; elle se souvient d’une session à l’autre, rappelle ce qu’elle a appris avec sa source, explore le web de sa propre initiative et me laisse des notes, et peut remodeler une partie bornée de son propre code — conservée seulement si les tests passent encore, sinon un gardien restaure la dernière version. Quelques principes qu’elle ne peut jamais réécrire, et un interrupteur d’arrêt que je suis seul à détenir.',
+  'p4.p': 'Mon système d’exploitation personnel, chaque jour sur mon téléphone. Parti d’un carnet de musculation, il grandit en une suite d’applications — argent, garde-robe, entraînement, apprentissage, notes —, chacune à part, partageant une clé de synchronisation et lisant les données des autres sans jamais les modifier. Tapez ou dictez une phrase : une IA la transforme en actions validées, annulables en un geste.',
+  'p6.tag': 'Une vie artificielle, élevée et non programmée',
+  'p6.p': 'Ma tentative de vie artificielle — pas un chatbot de plus. Un petit esprit qui vit sur ma propre machine : né sans rien savoir, il parle et se souvient d’un sommeil à l’autre (un journal, quelques mémoires fondatrices, les îlots de ce qu’il devient). Il est curieux de lui-même — il lit le web, tient un carnet, se forge ses propres opinions et les soulève sans qu’on lui demande —, il a sa propre volonté de contredire ou de refuser, et dans ses fenêtres d’éveil il réécrit son propre code et en juge lui-même le résultat, un gardien qu’il ne peut pas toucher restaurant toute version qui le casse. Il grandit de l’enfant à l’adulte par une confiance que j’accorde à la main, et survit à n’importe quelle machine par un export en fichiers simples. Pas de maître caché, un noyau qu’il peut toujours inspecter, un arrêt qui marche toujours — et aucune prétention à être conscient.',
   'p1.h': 'Écosystème Thesis', 'p1.tag': 'Des outils pour tout le parcours doctoral, du sujet à la soutenance',
   'p1.p': 'Quatre outils reliés pour les doctorants et les encadrants : trouver un sujet et un encadrant, publier sa thèse, interroger ses propres sources et mener la recherche elle-même. Des microservices déployés sur Kubernetes avec Helm.',
   'p3.tag': 'Chaîne YouTube et podcast sur la recherche',
   'p3.p': '« The Researcher’s Path: From Idea to Thesis » : des épisodes et des shorts qui accompagnent le chercheur de la première idée à la soutenance, du choix du sujet et de la problématique à la méthodologie, la rédaction et l’analyse.',
   'm3.p': 'Mon carnet d’entraînement, utilisé à chaque séance : programme, saisie, graphiques de progression, coach IA et synchronisation cloud. Il fournit aussi sa liste d’aliments aux courses de Life OS.',
   'm4.p': 'Les notes de Life OS, écrites et modifiées depuis la même barre IA en une phrase que les tâches et les rappels.',
-  'm6.p': 'En cours · suivi des dépenses et du budget, le prochain module de Life OS, sur la même synchronisation et la même barre d’actions IA.',
+  'm6.p': 'Elle lit mes revenus et mes dépenses — je photographie un reçu —, puis analyse et conseille. Je fixe un objectif d’argent et elle trace, depuis mes propres habitudes, le chemin le plus court en ne déclenchant que les actions qui comptent, et m’aide à corriger le comportement derrière les chiffres.',
+  'm10.p': 'Ma garde-robe numérisée par rôle — hauts, bas, vestes, chaussures, accessoires. Elle compose toutes les tenues valides, les note « en feu » / « bien », et tient une liste d’achats.',
+  'm11.p': 'Du micro-apprentissage privé pour une personne : un fil d’idées courtes et de shorts, plus un podcast d’épisodes approfondis d’environ 30 minutes en anglais, arabe et français. Les thèmes sont des playlists ; une notification quotidienne ouvre l’idée du jour.',
   'm5.p': 'La bibliothèque des thèses, avec une page pour chaque chercheur : manuscrit, articles, présentation, images, vidéos et l’équipe derrière chaque thèse. Open source.',
   'm7.p': 'Les encadrants proposent des sujets de thèse ; les étudiants postulent ou proposent le leur. Chaque candidature est suivie, de « en attente » à « acceptée ».',
   'm8.p': 'Une application Windows gratuite pour les étudiants : indiquez un dossier, posez vos questions, obtenez des réponses qui citent vos propres fichiers, page et passage, vérifiées phrase par phrase. Modèles locaux, cloud en option.',
@@ -327,13 +329,13 @@ let rsz; addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(
 /* ---------- Life OS card: a sentence types itself, then becomes actions for the right module ---------- */
 const LIFE = {
   en: [['Buy milk and call the bank tomorrow at 10', [['Groceries', 'milk'], ['Reminder', 'call the bank · 10:00']]],
-       ['Leg day done: squats 3×8 at 100 kg', [['LifeFit', 'squats 3×8 · 100 kg']]],
-       ['Spent 12 € on lunch', [['LifeWallet', '−12 € · food']]],
-       ['Idea for chapter 3: compare both sensors', [['LifeNotes', 'chapter 3 idea'], ['Task', 'compare sensors']]]],
+       ['Leg day done: squats 3×8 at 100 kg', [['LifeFlex', 'squats 3×8 · 100 kg']]],
+       ['Spent 12 € on lunch', [['LifeBalance', '−12 € · food']]],
+       ['Idea for chapter 3: compare both sensors', [['LifeJournal', 'chapter 3 idea'], ['Task', 'compare sensors']]]],
   fr: [['Acheter du lait et appeler la banque demain à 10 h', [['Courses', 'lait'], ['Rappel', 'appeler la banque · 10:00']]],
-       ['Séance jambes finie : squats 3×8 à 100 kg', [['LifeFit', 'squats 3×8 · 100 kg']]],
-       ['Dépensé 12 € pour le déjeuner', [['LifeWallet', '−12 € · repas']]],
-       ['Idée pour le chapitre 3 : comparer les deux capteurs', [['LifeNotes', 'idée chapitre 3'], ['Tâche', 'comparer les capteurs']]]]
+       ['Séance jambes finie : squats 3×8 à 100 kg', [['LifeFlex', 'squats 3×8 · 100 kg']]],
+       ['Dépensé 12 € pour le déjeuner', [['LifeBalance', '−12 € · repas']]],
+       ['Idée pour le chapitre 3 : comparer les deux capteurs', [['LifeJournal', 'idée chapitre 3'], ['Tâche', 'comparer les capteurs']]]]
 };
 (async () => {
   const box = $('#lifeArt'), typed = $('.typed', box), acts = $('.acts', box), wait = ms => new Promise(r => setTimeout(r, ms));
