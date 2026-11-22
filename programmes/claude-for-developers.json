@@ -1,0 +1,515 @@
+{
+ "slug": "claude-for-developers",
+ "file": "Claude-for-Developers-30h.docx",
+ "title": "Claude for Developers",
+ "subtitle": "From client to working app: specify, design, code, deploy and hand over",
+ "audience_line": "Anyone who wants to build applications with Claude, coding basics included",
+ "certifications": [],
+ "buffer": 3,
+ "buffer_fixed": true,
+ "labels": {
+  "portfolio_kicker": "What each participant leaves with",
+  "portfolio": "Your development system",
+  "portfolio_cols": [
+   "#",
+   "Component",
+   "What it does",
+   "Phase",
+   "Built in"
+  ]
+ },
+ "overview": "This programme takes participants from what an LLM can and cannot do to an application delivered to a client. They learn the coding basics and build their own Claude system: memory, skills, connected tools, guardrails and token habits. With it they follow the whole path: client meeting, specification book, structure and plan, UI/UX, code, tests, deployment, change request and handover. They finish with a project of their own.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Beginner and junior developers, students, freelancers, entrepreneurs and technical staff"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Comfortable computer use and basic written English. No coding or AI background needed"
+  },
+  {
+   "label": "Duration",
+   "value": "30 h: 27 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "About one third explanation, two thirds practice on a guided client app, then an individual project"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant with VS Code, Git, Node and Claude Code; a paid Claude plan (Pro minimum); free GitHub and hosting accounts; a starter repository with login and database already wired"
+  },
+  {
+   "label": "Official resources",
+   "value": "Claude Academy free courses and the official Claude Code documentation"
+  },
+  {
+   "label": "Assessment",
+   "value": "A validated practice in each phase and an individual project presented live; certificate of completion"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants turn a client need into a specified, designed, tested and deployed application, and explain what Claude built"
+  }
+ ],
+ "phases": [
+  {
+   "name": "First Steps",
+   "hours": 3.0,
+   "focus": "LLMs, limits, prompting, tokens",
+   "intro": "What an LLM is, what it can and cannot do, and how to work with it.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "LLMs: What They Can & Cannot Do",
+     "content": "How an LLM is trained and writes token by token. Strengths and limits: invented facts and libraries, knowledge cutoff, limited context, flattery, bias, and what tools add. How to work with one: what to delegate, how to describe it, how to check it, who stays responsible.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Prompting, Context & Tokens",
+     "content": "Chat, Cowork or Code: which one for which job. Privacy and confidential code. Prompting: goal, context, example, constraints, definition of done; letting Claude interview you. Tokens, plan limits, /model, effort and economical habits.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants know when to trust Claude, how to brief it and what uses up their plan.",
+    "items": [
+     {
+      "id": "1.1",
+      "type": "Lab",
+      "title": "Find the limits",
+      "goal": "See for yourself when to trust an LLM and when to check.",
+      "material": "Claude; eight test questions from the trainer, code included.",
+      "steps": "1) Predict where Claude will fail. 2) Test facts, recent libraries, counting and a bug. 3) Name the cause of each failure. 4) Retry with context or a tool. 5) Sort ten development tasks.",
+      "result": "A trust map: delegate, check or keep."
+     },
+     {
+      "id": "1.2",
+      "type": "Lab",
+      "title": "Clear prompts, fewer tokens",
+      "goal": "Get a better answer for less usage.",
+      "material": "Claude; the usage screen; three weak development prompts.",
+      "steps": "1) Set privacy. 2) Rewrite the three prompts. 3) Run one task on two models, with full and reduced context. 4) Compare quality and usage.",
+      "result": "A prompt library and a \"which model, which effort\" card."
+     }
+    ],
+    "validation": "A trust map and three improved prompts."
+   }
+  },
+  {
+   "name": "Basics & System",
+   "hours": 6.0,
+   "focus": "Code, Git, memory, tokens, skills, MCP",
+   "intro": "Enough code to read and judge what Claude writes, then a Claude system that is used in every later phase.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Coding Basics",
+     "content": "How an app works: frontend, backend, database, API. Reading code: variables, types, conditions, loops, functions. Files, packages and error messages.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Claude Code & Git",
+     "content": "Terminal and editor. Git: commit, branch, undo, GitHub. The agent loop, Plan mode, Auto mode and the other permission modes, /rewind and /resume.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Project Brain & Token Optimisation",
+     "content": "/init and a short CLAUDE.md. Rules by path, Auto memory, start-here and handoff files. /context, /usage, /clear, /compact, targeted reads and short outputs. Output styles and Status line.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Skills, MCP & Plugins",
+     "content": "How Skills load and how to write one. The many skills available for each job: specification, design, code, testing, security, deployment. MCP, Plugins and the Plugin marketplace. Six checks before installing: need, source, upkeep, permissions, token cost, overlap.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants can explain simple code and have a working Claude system.",
+    "items": [
+     {
+      "id": "2.1",
+      "type": "Lab",
+      "title": "Read it before you delegate it",
+      "goal": "Understand a small program.",
+      "material": "A 50-line program with one bug.",
+      "steps": "1) Predict what it prints. 2) Run it. 3) Fix the bug without AI. 4) Change one rule. 5) Explain each block, then ask Claude to question you.",
+      "result": "A fixed program, explained line by line."
+     },
+     {
+      "id": "2.2",
+      "type": "Lab",
+      "title": "Build, break, recover",
+      "goal": "Stay in control of a coding agent.",
+      "material": "Claude Code, Git, an empty folder.",
+      "steps": "1) Plan a small feature. 2) Build and commit it. 3) Request a bad change. 4) Use /rewind, then Git, to undo. 5) Close and /resume.",
+      "result": "A versioned feature and an undo card."
+     },
+     {
+      "id": "2.3",
+      "type": "Lab",
+      "title": "Teach it once",
+      "goal": "Keep knowledge without wasting context.",
+      "material": "The project from 2.2.",
+      "steps": "1) Run /init and shorten the result. 2) Add a rule. 3) Set a style and a status line. 4) Measure the context and reduce it. 5) Restart from a handoff note.",
+      "result": "A lean project brain, tested in a fresh session."
+     },
+     {
+      "id": "2.4",
+      "type": "Lab",
+      "title": "Build your toolbox",
+      "goal": "Choose extensions on evidence.",
+      "material": "A scorecard and a selection of famous repositories.",
+      "steps": "1) Write a specification skill and test its trigger. 2) Score four repositories. 3) Install one. 4) Connect one MCP server. 5) Measure and remove what does not pay.",
+      "result": "An own skill and a justified toolbox."
+     }
+    ],
+    "validation": "A program explained without AI and a configured, versioned project."
+   }
+  },
+  {
+   "name": "Client to Plan",
+   "hours": 6.0,
+   "focus": "Client, offer, specification book, plan",
+   "intro": "No code before the need is understood, written, agreed and planned.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Client & Offer",
+     "content": "Preparing and leading the first meeting. Users, real problem, constraints, priorities and MVP. Estimate, hosting and AI costs, schedule, revisions and offer.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Specification Book",
+     "content": "Scope, roles, user stories, business rules, edge cases, security, personal data, languages and performance. Testable acceptance criteria. From the client document to SPEC.md; method kits compared.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Structure",
+     "content": "Architecture and stack choice, components, data model, roles, API contract, folders, environments and secrets. Short decision records.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Plan",
+     "content": "Milestones, small ordered tasks, a check for each, dependencies, risks and follow-up. Reviewing a plan made by Claude.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants turn a conversation with a client into documents that Claude can build from.",
+    "items": [
+     {
+      "id": "3.1",
+      "type": "Lab",
+      "title": "The first meeting",
+      "goal": "Agree on what will and will not be built.",
+      "material": "A client played by the trainer; Claude as assistant.",
+      "steps": "1) Prepare the questions. 2) Interview the client. 3) Summarise the need. 4) Cut it down to an MVP. 5) Present an estimated offer.",
+      "result": "A meeting report and an accepted offer."
+     },
+     {
+      "id": "3.2",
+      "type": "Lab",
+      "title": "Write what will be built",
+      "goal": "Produce a specification that both client and Claude understand.",
+      "material": "The meeting report and the skill from 2.4.",
+      "steps": "1) Let Claude interview you. 2) Generate the book with the skill. 3) Remove what was invented. 4) Add acceptance criteria. 5) Have the client sign and derive SPEC.md.",
+      "result": "A signed specification book and SPEC.md."
+     },
+     {
+      "id": "3.3",
+      "type": "Lab",
+      "title": "Shape the app",
+      "goal": "Decide the structure before the code.",
+      "material": "SPEC.md and the starter repository.",
+      "steps": "1) Compare two architectures. 2) Draw the chosen one. 3) Define tables and endpoints. 4) Adapt the folders and CLAUDE.md. 5) Record three decisions.",
+      "result": "A design file and a repository skeleton."
+     },
+     {
+      "id": "3.4",
+      "type": "Lab",
+      "title": "From spec to backlog",
+      "goal": "Make the work small enough to verify.",
+      "material": "SPEC.md and the design file.",
+      "steps": "1) Generate the plan. 2) Split large tasks. 3) Give each a pass or fail check. 4) Trace each requirement to a task. 5) Validate with the client.",
+      "result": "An approved backlog."
+     }
+    ],
+    "validation": "A specification book, a structure and a backlog approved by the client."
+   }
+  },
+  {
+   "name": "Code & UI/UX",
+   "hours": 3.0,
+   "focus": "UI/UX, frontend, backend, database",
+   "intro": "The app is designed and built task by task on the starter repository, with a check after each step.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "UI/UX & Frontend",
+     "content": "User journeys, wireframes, a small design system and design skills. Components, screens, forms, loading, empty and error states, responsive design and accessibility.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Backend & Database",
+     "content": "Tables, migrations, endpoints, validation, login and roles, secrets, connection to the screens. Your own MCP server: when it is useful and how little code it needs.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, the main journey of the client app works from screen to database.",
+    "items": [
+     {
+      "id": "4.1",
+      "type": "Lab",
+      "title": "Design, then build the screens",
+      "goal": "Turn the journey into usable screens.",
+      "material": "The starter repository, the backlog and a design skill.",
+      "steps": "1) Draw the journey and wireframes. 2) Choose colours, type and components. 3) Build the screens. 4) Test on phone width. 5) Correct after the client review.",
+      "result": "The main screens, approved by the client."
+     },
+     {
+      "id": "4.2",
+      "type": "Lab",
+      "title": "Make it work end to end",
+      "goal": "Connect screens, rules and data.",
+      "material": "The starter database and login; an MCP server template.",
+      "steps": "1) Add the tables. 2) Build the endpoints. 3) Enforce the roles. 4) Connect the screens. 5) Expose one function to Claude through the MCP template.",
+      "result": "A working main journey and a one-tool MCP server."
+     }
+    ],
+    "validation": "The main journey demonstrated and explained by the participant."
+   }
+  },
+  {
+   "name": "Check & Deliver",
+   "hours": 3.0,
+   "focus": "Tests, review, security, deployment",
+   "intro": "\"It looks done\" becomes \"it is proven and online\".",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Test, Review & Secure",
+     "content": "Unit and end-to-end tests, debugging from the root cause, code review against the specification, security review. Hooks, the PreToolUse hook, deny rules, prompt injection and Sandboxing (macOS, Linux, WSL2).",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "Deploy & Automate",
+     "content": "Hosting, environments, secrets, migrations, backup, rollback, monitoring. Claude in GitHub Actions and Non-interactive mode. Short demonstrations: Bare mode, Agent SDK, Agent teams, Dynamic workflows and Channels.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants prove that the app works and put it online safely.",
+    "items": [
+     {
+      "id": "5.1",
+      "type": "Lab",
+      "title": "Prove it, then protect it",
+      "goal": "Find the faults before the client does.",
+      "material": "The app, SPEC.md and one planted bug.",
+      "steps": "1) Test the acceptance criteria. 2) Reproduce and fix the bug. 3) Review against SPEC.md. 4) Run a security review. 5) Add a hook that blocks access to secrets.",
+      "result": "Green tests, a review and a tested hook."
+     },
+     {
+      "id": "5.2",
+      "type": "Lab",
+      "title": "Put it online",
+      "goal": "Release with a check and a way back.",
+      "material": "GitHub, a free hosting tier and a pipeline template.",
+      "steps": "1) Set secrets. 2) Deploy to staging. 3) Run the checks in the pipeline. 4) Approve production. 5) Roll back once. 6) Run one check with claude -p.",
+      "result": "A live app and a tested rollback."
+     }
+    ],
+    "validation": "Passing checks and a live URL."
+   }
+  },
+  {
+   "name": "Client Change, Handover & Demo",
+   "hours": 3.0,
+   "focus": "Change request, release, acceptance",
+   "intro": "The client changes their mind, then receives an app they can use and maintain.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Client Change Shipped",
+     "content": "Impact and estimate of a change. Update the specification and plan first. Build in Worktrees, review with Subagents, test and release.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "6.2",
+     "title": "Handover & Demo",
+     "content": "User guide, technical documentation, runbook, transfer of access, client training, acceptance, maintenance offer and invoice.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants ship a change safely and close a client engagement.",
+    "items": [
+     {
+      "id": "6.1",
+      "type": "Lab",
+      "title": "Version 2",
+      "goal": "Change the app without breaking it.",
+      "material": "A change request from the client.",
+      "steps": "1) Estimate the impact. 2) Update SPEC.md and the backlog. 3) Build in a worktree. 4) Review with a read-only subagent. 5) Test and deploy.",
+      "result": "Version 2 online."
+     },
+     {
+      "id": "6.2",
+      "type": "Lab",
+      "title": "Deliver to the client",
+      "goal": "Let the client take over.",
+      "material": "The live app and the acceptance criteria.",
+      "steps": "1) Generate and check the documentation. 2) Demonstrate each criterion. 3) List access to transfer. 4) Train the client on one task. 5) Sign the acceptance.",
+      "result": "A handover pack and a signed acceptance."
+     }
+    ],
+    "validation": "Version 2 online and accepted by the client."
+   }
+  },
+  {
+   "name": "Project",
+   "hours": 3.0,
+   "focus": "An app of their own, presented live",
+   "intro": "Each participant repeats the path alone on a small need of their choice.",
+   "chapters": [
+    {
+     "id": "7.1",
+     "title": "Brief & Build",
+     "content": "A real need, a short specification, a plan and a first version built with the system from the course.",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "7.2",
+     "title": "Finish & Present",
+     "content": "Checks, deployment, live presentation, questions on the code, the choices and the token use.",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants prove they can deliver an app with Claude without guidance.",
+    "items": [
+     {
+      "id": "7.1",
+      "type": "Project",
+      "title": "My own app",
+      "goal": "Go from need to working version alone.",
+      "material": "The starter repository and the participant’s Claude system.",
+      "steps": "1) Write the need and three acceptance criteria. 2) Plan. 3) Design the main screen. 4) Build the main journey. 5) Commit.",
+      "result": "A working first version."
+     },
+     {
+      "id": "7.2",
+      "type": "Project",
+      "title": "Show and defend",
+      "goal": "Deliver and explain the result.",
+      "material": "The app from 7.1.",
+      "steps": "1) Test the criteria. 2) Deploy. 3) Present in five minutes. 4) Explain one piece of code and one rejected suggestion. 5) Show the token use.",
+      "result": "An app online and a live defence."
+     }
+    ],
+    "validation": "Project online, presented and explained. With the phase practices, this earns the certificate of completion."
+   },
+   "project": {
+    "title": "My own application",
+    "brief": "A small application for a need chosen by the participant, taken from specification to deployment.",
+    "stack": "Claude Code, the participant’s system, starter repository, Git, free hosting",
+    "deliverable": "The repository, SPEC.md, the live URL and a five-minute demo"
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "The guided app and the project leave a method and a system to reuse with a real client.",
+  "rows": [
+   {
+    "name": "Prompt library",
+    "shows": "Tested prompts and a model choice card",
+    "phase": "1",
+    "build": "1.2"
+   },
+   {
+    "name": "Project brain",
+    "shows": "CLAUDE.md, rules, memory and handoff",
+    "phase": "2",
+    "build": "2.3"
+   },
+   {
+    "name": "Toolbox",
+    "shows": "An own skill, chosen extensions and a connection",
+    "phase": "2",
+    "build": "2.4"
+   },
+   {
+    "name": "Client file",
+    "shows": "Offer, specification book, structure and plan",
+    "phase": "3",
+    "build": "3.4"
+   },
+   {
+    "name": "Client app",
+    "shows": "Designed screens, backend and database",
+    "phase": "4",
+    "build": "4.2"
+   },
+   {
+    "name": "Safety net",
+    "shows": "Tests, security review and a hook",
+    "phase": "5",
+    "build": "5.1"
+   },
+   {
+    "name": "Delivery pipeline",
+    "shows": "Deployment with checks and rollback",
+    "phase": "5",
+    "build": "5.2"
+   },
+   {
+    "name": "Handover pack",
+    "shows": "Documentation, acceptance and maintenance",
+    "phase": "6",
+    "build": "6.2"
+   },
+   {
+    "name": "Own project",
+    "shows": "An application specified, built and presented alone",
+    "phase": "7",
+    "build": "7.2"
+   }
+  ]
+ },
+ "notes": [
+  "Credit: the curriculum draws on the free Claude Academy courses and the official documentation. The exercises and teaching material are the trainer’s own.",
+  "This is an independent training, not affiliated with, sponsored or endorsed by Anthropic. Claude and Claude Code are products of Anthropic PBC.",
+  "Claude changes often: features, skills and repositories are checked before each delivery. Features that need an API key, are in preview or are experimental are demonstrated by the trainer.",
+  "Both apps are small and use test data. A domain name, paid hosting or API use outside the labs are not included."
+ ]
+}

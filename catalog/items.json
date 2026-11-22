@@ -2038,6 +2038,55 @@
           ]
         ]
       }
+    },
+    "claude-for-developers": {
+      "code": "CLAUDE-DEV",
+      "outcomes": {
+        "en": [
+          [
+            "Turn a client need",
+            "into an offer, a specification book and a plan"
+          ],
+          [
+            "Build a Claude development system:",
+            "memory, skills, MCP, guardrails and fewer tokens"
+          ],
+          [
+            "Design and code an application,",
+            "from UI/UX to backend and database"
+          ],
+          [
+            "Test, secure and deploy it",
+            "with reviews, hooks, a pipeline and rollback"
+          ],
+          [
+            "Ship changes and hand over",
+            "a working, documented app to the client"
+          ]
+        ],
+        "fr": [
+          [
+            "Transformer un besoin client",
+            "en offre, cahier des charges et plan"
+          ],
+          [
+            "Construire son système Claude :",
+            "mémoire, skills, MCP, garde-fous et tokens économisés"
+          ],
+          [
+            "Concevoir et coder une application,",
+            "de l’UI/UX au backend et à la base de données"
+          ],
+          [
+            "La tester, la sécuriser et la déployer",
+            "avec revues, hooks, pipeline et retour arrière"
+          ],
+          [
+            "Livrer évolutions et application",
+            "documentée et fonctionnelle au client"
+          ]
+        ]
+      }
     }
   }
 }
