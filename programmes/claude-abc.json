@@ -56,7 +56,7 @@
  "phases": [
   {
    "name": "First Steps: Understand, Ask, Spend Less",
-   "hours": 4.5,
+   "hours": 3.0,
    "focus": "LLMs, limits, prompting, tokens",
    "intro": "What an LLM is, what it can and cannot do and how to work with it, then how to brief Claude and get more from the same subscription.",
    "chapters": [
@@ -69,15 +69,8 @@
     },
     {
      "id": "1.2",
-     "title": "Working with Claude & Prompting",
-     "content": "Chat, Claude on your files (Cowork), Code: which one for which job. Privacy settings and what never to share. Prompting: goal, context, example, format, limits; asking Claude to interview you; working in English, French or Arabic.",
-     "format": "Lecture + Lab",
-     "hours": 1.5
-    },
-    {
-     "id": "1.3",
-     "title": "Context, Models & Token Optimisation",
-     "content": "Tokens, context window, five-hour and weekly limits shared by all Claude apps. What costs most: long chats, large files, screenshots, connectors, agents. Choosing model and effort. Projects, memory and preferences so that you stop repeating yourself. Short instructions, one task per chat, batched requests.",
+     "title": "Prompting, Context & Tokens",
+     "content": "Chat, Cowork or Code: which one for which job. Privacy. Prompting: goal, context, example, format, limits; letting Claude interview you. Tokens and plan limits, choosing model and effort, projects and memory, one task per chat, and what costs most.",
      "format": "Lecture + Lab",
      "hours": 1.5
     }
@@ -97,20 +90,11 @@
      {
       "id": "1.2",
       "type": "Lab",
-      "title": "From vague to clear",
-      "goal": "Brief Claude as you would brief a capable new assistant.",
-      "material": "Claude app; three weak prompts (a difficult message, a trip plan, a topic to learn).",
-      "steps": "1) Set the privacy options. 2) Run each weak prompt. 3) Rewrite it with the five parts. 4) Let Claude interview you for one of them. 5) Check two facts in the answers.",
-      "result": "The first three entries of a personal prompt library."
-     },
-     {
-      "id": "1.3",
-      "type": "Lab",
-      "title": "Same task, fewer tokens",
-      "goal": "See what drives usage and build habits that reduce it.",
-      "material": "The usage screen; a long document; a task to run two ways.",
-      "steps": "1) Note your usage. 2) Do the task in a long chat with the whole file on a strong model. 3) Redo it in a new chat with the useful extract on a lighter model. 4) Compare quality and usage. 5) Create a project with short instructions.",
-      "result": "A personal project and a \"which model, which effort\" card."
+      "title": "Clear prompts, fewer tokens",
+      "goal": "Get a better answer for less usage.",
+      "material": "Claude; the usage screen; three weak prompts; a long document.",
+      "steps": "1) Set privacy. 2) Rewrite the three prompts with the five parts. 3) Run one task with the whole file on a strong model, then with an extract on a lighter one. 4) Compare quality and usage. 5) Create a project.",
+      "result": "A prompt library, a personal project and a \"which model, which effort\" card."
      }
     ],
     "validation": "A trust map, three improved prompts, a configured project and a one-page usage routine."
@@ -398,14 +382,21 @@
   },
   {
    "name": "Final Project",
-   "hours": 1.5,
+   "hours": 3.0,
    "focus": "One personal system, shown live",
    "intro": "Each participant assembles what they built into a system for one real part of their life or work.",
    "chapters": [
     {
      "id": "6.1",
-     "title": "Build, Demo & 30-Day Plan",
-     "content": "Choose a real need (freelance, study, family, shop, job search, content) and assemble the components built in the earlier phases. Live demonstration, token review and a 30-day plan.",
+     "title": "Brief & Build",
+     "content": "Choose a real need (freelance, study, family, shop, job search, content), plan it, then build it with a project, a skill, a connection or routine, and two deliverables.",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "6.2",
+     "title": "Demo & 30-Day Plan",
+     "content": "Live demonstration, peer review, token review, and a routine to keep up with new features without installing everything.",
      "format": "Project",
      "hours": 1.5
     }
@@ -417,10 +408,19 @@
       "id": "6.1",
       "type": "Project",
       "title": "My Claude system",
-      "goal": "Solve a real need and show the result.",
+      "goal": "Solve a real need from start to finish.",
       "material": "Everything built in phases 1 to 5.",
-      "steps": "1) Write the need and the success test. 2) Assemble the components. 3) Produce two deliverables and check them. 4) Demonstrate in five minutes, with one thing you chose not to install. 5) Write three habits for 30 days.",
-      "result": "A working system, two deliverables, a demonstration and a 30-day plan."
+      "steps": "1) Write the need and the success test. 2) Plan with Claude. 3) Assemble the components. 4) Produce two deliverables of different types. 5) Check facts, permissions and usage.",
+      "result": "A working system and two deliverables."
+     },
+     {
+      "id": "6.2",
+      "type": "Project",
+      "title": "Show it, keep it",
+      "goal": "Defend the choices and make the habit last.",
+      "material": "The system from 6.1 and a plan template.",
+      "steps": "1) Demonstrate it in five minutes. 2) Explain one thing you chose not to install. 3) Show the usage and one saving. 4) Write three habits for the next 30 days.",
+      "result": "A demonstration and a 30-day plan."
      }
     ],
     "validation": "System demonstrated, usage explained and 30-day plan handed in. With the phase practices, this earns the certificate of completion."
@@ -446,7 +446,7 @@
     "name": "Usage card",
     "shows": "The right model, effort and context for each task",
     "phase": "1",
-    "build": "1.3"
+    "build": "1.2"
    },
    {
     "name": "Morning brief",
