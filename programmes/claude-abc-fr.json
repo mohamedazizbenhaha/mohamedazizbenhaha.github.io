@@ -18,7 +18,7 @@
    "TP"
   ]
  },
- "overview": "Beaucoup paient Claude et l’utilisent comme un moteur de recherche. Ce programme mène du premier bon prompt à un système personnel qui gère e-mails, routines, documents, tableurs, présentations, images, vidéos et petites applications, en trois étapes. Demander : bien briefer Claude et maîtriser ses tokens. Créer : produire de vrais livrables, code compris, sans être développeur. Personnaliser : choisir skills, plugins, connexions et automatisations. Chaque chapitre a son TP ; les fonctions avancées sont abordées au niveau de base.",
+ "overview": "Beaucoup paient Claude et l’utilisent comme un moteur de recherche. Ce programme mène des limites des LLM à un système personnel qui gère e-mails, routines, documents, tableurs, présentations, images, vidéos et petites applications, en trois étapes. Demander : bien briefer Claude et maîtriser ses tokens. Créer : produire de vrais livrables, code compris, sans être développeur. Personnaliser : choisir skills, plugins, connexions et automatisations. Chaque chapitre a son TP ; les fonctions avancées sont abordées au niveau de base.",
  "facts": [
   {
    "label": "Public",
@@ -55,20 +55,27 @@
  ],
  "phases": [
   {
-   "name": "Premiers pas : bien demander, moins consommer",
-   "hours": 3.0,
-   "focus": "Prompts, contexte, modèles, tokens, confidentialité",
-   "intro": "Comprendre et briefer Claude, tirer plus du même abonnement : des réflexes repris à chaque phase.",
+   "name": "Premiers pas : comprendre, demander, économiser",
+   "hours": 4.5,
+   "focus": "LLM, limites, prompts, tokens",
+   "intro": "Comprendre ce qu’est un LLM, ses limites et comment travailler avec lui, puis bien briefer Claude.",
    "chapters": [
     {
      "id": "1.1",
-     "title": "Découvrir Claude et le prompting",
-     "content": "Capacités, limites, réponses inventées à vérifier. Chat, fichiers (Cowork) ou Code selon la tâche. Confidentialité. Prompting : objectif, contexte, exemple, format, limites ; se faire interviewer par Claude ; français, anglais ou arabe.",
+     "title": "Les LLM : capacités et limites",
+     "content": "Entraînement et écriture token par token. Forces et limites : faits inventés, date de coupure, contexte limité, complaisance, biais, apport des outils. Bien travailler avec un LLM : déléguer, décrire, vérifier, rester responsable.",
      "format": "Cours + TP",
      "hours": 1.5
     },
     {
      "id": "1.2",
+     "title": "Travailler avec Claude et prompting",
+     "content": "Chat, fichiers (Cowork) ou Code selon la tâche. Confidentialité. Prompting : objectif, contexte, exemple, format, limites ; se faire interviewer par Claude ; français, anglais ou arabe.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.3",
      "title": "Contexte, modèles et optimisation des tokens",
      "content": "Tokens, contexte, limites de cinq heures et hebdomadaires communes. Ce qui coûte : longues conversations, gros fichiers, captures, connecteurs, agents. Modèle et effort. Projets, mémoire, préférences. Instructions courtes, une tâche par conversation, demandes groupées.",
      "format": "Cours + TP",
@@ -76,10 +83,19 @@
     }
    ],
    "labs": {
-    "goal": "Obtenir une réponse utilisable en un ou deux essais et savoir ce qui consomme son forfait.",
+    "goal": "Savoir quand faire confiance, obtenir une réponse utilisable en un ou deux essais et savoir ce qui consomme son forfait.",
     "items": [
      {
       "id": "1.1",
+      "type": "TP",
+      "title": "Trouver les limites",
+      "goal": "Savoir quand faire confiance et quand vérifier.",
+      "material": "Claude ; huit questions tests du formateur.",
+      "steps": "1) Prédire les échecs. 2) Tester faits, sources, actualité, comptage, question personnelle. 3) Nommer chaque cause. 4) Réessayer avec contexte ou outil. 5) Classer dix de ses tâches.",
+      "result": "Une carte de confiance : déléguer, vérifier ou garder."
+     },
+     {
+      "id": "1.2",
       "type": "TP",
       "title": "Du flou au clair",
       "goal": "Briefer Claude comme un nouvel assistant compétent.",
@@ -88,7 +104,7 @@
       "result": "Les trois premières entrées d’une bibliothèque de prompts personnelle."
      },
      {
-      "id": "1.2",
+      "id": "1.3",
       "type": "TP",
       "title": "Même tâche, moins de tokens",
       "goal": "Voir ce qui consomme et prendre des habitudes qui économisent.",
@@ -97,7 +113,7 @@
       "result": "Un projet personnel et une fiche « quel modèle, quel effort »."
      }
     ],
-    "validation": "Trois prompts améliorés, un projet configuré et une fiche de consommation d’une page."
+    "validation": "Carte de confiance, trois prompts améliorés, projet configuré et fiche de consommation."
    }
   },
   {
@@ -382,21 +398,14 @@
   },
   {
    "name": "Projet final",
-   "hours": 3.0,
+   "hours": 1.5,
    "focus": "Un système personnel, présenté en direct",
    "intro": "Assembler ce qui a été construit pour répondre à un vrai besoin.",
    "chapters": [
     {
      "id": "6.1",
-     "title": "Brief et réalisation",
-     "content": "Un vrai besoin (freelance, études, famille, commerce, emploi, contenus) : projet, skill, connexion ou routine, deux livrables.",
-     "format": "Projet",
-     "hours": 1.5
-    },
-    {
-     "id": "6.2",
-     "title": "Démonstration et plan de 30 jours",
-     "content": "Démonstration en direct, revue entre pairs, bilan des tokens et routine pour suivre les nouveautés sans tout installer.",
+     "title": "Réalisation, démonstration et plan de 30 jours",
+     "content": "Un vrai besoin (freelance, études, famille, commerce, emploi, contenus) et les composants construits avant. Démonstration, bilan des tokens et plan de 30 jours.",
      "format": "Projet",
      "hours": 1.5
     }
@@ -408,19 +417,10 @@
       "id": "6.1",
       "type": "Projet",
       "title": "Mon système Claude",
-      "goal": "Répondre à un vrai besoin de bout en bout.",
+      "goal": "Répondre à un vrai besoin et le montrer.",
       "material": "Tout ce qui a été construit dans les phases 1 à 5.",
-      "steps": "1) Écrire besoin et critère de réussite. 2) Planifier. 3) Assembler. 4) Produire deux livrables différents. 5) Vérifier faits, autorisations, consommation.",
-      "result": "Un système fonctionnel et deux livrables."
-     },
-     {
-      "id": "6.2",
-      "type": "Projet",
-      "title": "Montrer et garder",
-      "goal": "Défendre ses choix et installer l’habitude.",
-      "material": "Le système du TP 6.1 et un modèle de plan.",
-      "steps": "1) Présenter en cinq minutes. 2) Justifier un outil non installé. 3) Montrer une économie de consommation. 4) Écrire trois habitudes pour 30 jours.",
-      "result": "Une démonstration et un plan de 30 jours."
+      "steps": "1) Écrire besoin et critère de réussite. 2) Assembler les composants. 3) Produire et vérifier deux livrables. 4) Présenter en cinq minutes, dont un outil non installé. 5) Écrire trois habitudes pour 30 jours.",
+      "result": "Un système, deux livrables, une démonstration et un plan de 30 jours."
      }
     ],
     "validation": "Système, consommation et plan de 30 jours présentés ; attestation avec les TP validés."
@@ -440,13 +440,13 @@
     "name": "Bibliothèque de prompts",
     "shows": "Prompts testés pour les tâches récurrentes",
     "phase": "1",
-    "build": "1.1"
+    "build": "1.2"
    },
    {
     "name": "Fiche de consommation",
     "shows": "Le bon modèle, effort et contexte pour chaque tâche",
     "phase": "1",
-    "build": "1.2"
+    "build": "1.3"
    },
    {
     "name": "Brief du matin",
