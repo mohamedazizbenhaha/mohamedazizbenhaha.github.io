@@ -1989,6 +1989,55 @@
           ]
         ]
       }
+    },
+    "claude-abc": {
+      "code": "CLAUDE-ABC",
+      "outcomes": {
+        "en": [
+          [
+            "Brief Claude and control usage",
+            "with clear prompts, projects, the right model and fewer tokens"
+          ],
+          [
+            "Delegate daily tasks:",
+            "email, agenda, reports, spreadsheets and presentations"
+          ],
+          [
+            "Edit images and videos",
+            "with Claude Design, connectors and FFmpeg, by describing the result"
+          ],
+          [
+            "Build a small application",
+            "with Claude Code, plan mode and CLAUDE.md, without being a developer"
+          ],
+          [
+            "Choose and install extensions safely:",
+            "skills, plugins, MCP connections and hooks"
+          ]
+        ],
+        "fr": [
+          [
+            "Briefer Claude et maîtriser sa consommation",
+            "avec des prompts clairs, des projets et le bon modèle"
+          ],
+          [
+            "Déléguer les tâches du quotidien :",
+            "e-mails, agenda, rapports, tableurs et présentations"
+          ],
+          [
+            "Retoucher images et vidéos",
+            "avec Claude Design, des connecteurs et FFmpeg, en décrivant le résultat"
+          ],
+          [
+            "Créer une petite application",
+            "avec Claude Code, le mode plan et CLAUDE.md, sans être développeur"
+          ],
+          [
+            "Choisir et installer des extensions en sécurité :",
+            "skills, plugins, connexions MCP et hooks"
+          ]
+        ]
+      }
     }
   }
 }

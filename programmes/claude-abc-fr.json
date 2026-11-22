@@ -1,0 +1,502 @@
+{
+ "slug": "claude-abc-fr",
+ "file": "Claude-ABC-30h-FR.docx",
+ "title": "Claude ABC",
+ "subtitle": "Demander, créer, personnaliser : Claude au quotidien et au travail",
+ "audience_line": "Toute personne abonnée à Claude qui veut en tirer le maximum",
+ "certifications": [],
+ "buffer": 3,
+ "buffer_fixed": true,
+ "labels": {
+  "portfolio_kicker": "Ce que chaque participant emporte",
+  "portfolio": "Votre système Claude personnel",
+  "portfolio_cols": [
+   "#",
+   "Composant",
+   "Rôle",
+   "Phase",
+   "TP"
+  ]
+ },
+ "overview": "Beaucoup paient Claude et l’utilisent comme un moteur de recherche. Ce programme mène du premier bon prompt à un système personnel qui gère e-mails, routines, documents, tableurs, présentations, images, vidéos et petites applications, en trois étapes. Demander : bien briefer Claude et maîtriser ses tokens. Créer : produire de vrais livrables, code compris, sans être développeur. Personnaliser : choisir skills, plugins, connexions et automatisations. Chaque chapitre a son TP ; les fonctions avancées sont abordées au niveau de base.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Adultes de tous horizons : salariés, indépendants, dirigeants, enseignants, étudiants, chercheurs d’emploi"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Usage courant d’un ordinateur, lecture d’un anglais simple à l’écran. Aucune base en code ni en IA"
+  },
+  {
+   "label": "Durée",
+   "value": "30 h : 27 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Environ un tiers d’explications et de démonstrations, deux tiers de TP guidés sur les tâches des participants"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant (Windows ou macOS) avec l’application Claude, Claude Code et Git ; une offre Claude payante (Pro au minimum) ; le reste en gratuit. Comptes et fichiers de démonstration fournis"
+  },
+  {
+   "label": "Ressources officielles",
+   "value": "Cours gratuits de Claude Academy, documentation officielle et sélection de playlists YouTube"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase et un projet final présenté en direct ; attestation de formation"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent formuler leurs demandes, maîtriser leur consommation, déléguer, créer documents et médias, développer une application simple et installer des extensions en sécurité"
+  }
+ ],
+ "phases": [
+  {
+   "name": "Premiers pas : bien demander, moins consommer",
+   "hours": 3.0,
+   "focus": "Prompts, contexte, modèles, tokens, confidentialité",
+   "intro": "Comprendre et briefer Claude, tirer plus du même abonnement : des réflexes repris à chaque phase.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Découvrir Claude et le prompting",
+     "content": "Capacités, limites, réponses inventées à vérifier. Chat, fichiers (Cowork) ou Code selon la tâche. Confidentialité. Prompting : objectif, contexte, exemple, format, limites ; se faire interviewer par Claude ; français, anglais ou arabe.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Contexte, modèles et optimisation des tokens",
+     "content": "Tokens, contexte, limites de cinq heures et hebdomadaires communes. Ce qui coûte : longues conversations, gros fichiers, captures, connecteurs, agents. Modèle et effort. Projets, mémoire, préférences. Instructions courtes, une tâche par conversation, demandes groupées.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Obtenir une réponse utilisable en un ou deux essais et savoir ce qui consomme son forfait.",
+    "items": [
+     {
+      "id": "1.1",
+      "type": "TP",
+      "title": "Du flou au clair",
+      "goal": "Briefer Claude comme un nouvel assistant compétent.",
+      "material": "Claude ; trois prompts faibles (message, voyage, sujet à apprendre).",
+      "steps": "1) Régler la confidentialité. 2) Lancer chaque prompt faible. 3) Le réécrire avec les cinq éléments. 4) Se faire interviewer par Claude pour l’un d’eux. 5) Vérifier deux faits.",
+      "result": "Les trois premières entrées d’une bibliothèque de prompts personnelle."
+     },
+     {
+      "id": "1.2",
+      "type": "TP",
+      "title": "Même tâche, moins de tokens",
+      "goal": "Voir ce qui consomme et prendre des habitudes qui économisent.",
+      "material": "L’écran de consommation ; un long document ; une tâche à réaliser de deux façons.",
+      "steps": "1) Noter sa consommation. 2) Longue conversation, fichier entier, modèle puissant. 3) Nouvelle conversation, extrait utile, modèle léger. 4) Comparer qualité et consommation. 5) Créer un projet aux instructions courtes.",
+      "result": "Un projet personnel et une fiche « quel modèle, quel effort »."
+     }
+    ],
+    "validation": "Trois prompts améliorés, un projet configuré et une fiche de consommation d’une page."
+   }
+  },
+  {
+   "name": "Vie quotidienne et travail",
+   "hours": 6.0,
+   "focus": "E-mails, routines, rapports, fichiers, slides",
+   "intro": "Les tâches qui remplissent une journée ordinaire. Claude prépare ; le participant vérifie et décide.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "E-mails, agenda et routines",
+     "content": "Connecteurs de messagerie, d’agenda et de Drive. Résumer, trier, retrouver et préparer des réponses dans son propre ton. Brief du matin, préparation de réunion, revue de la semaine, tâches planifiées, usage sur téléphone. Sécurité : validation avant envoi, e-mails ou pages web qui tentent de donner des ordres à Claude.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Recherche, rapports et fichiers",
+     "content": "Recherche web et mode Research avec sources. Lire et comparer PDF, scans et photos de documents. Créer et corriger des fichiers Word et PDF. Déléguer un travail sur un dossier : trier, renommer, extraire, résumer. Vérifier chiffres, citations et liens.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Tableurs et démarches personnelles",
+     "content": "Fichiers Excel à partir de phrases simples : formules, nettoyage, tableaux, graphiques, tableaux de bord. Claude dans Excel et Word. Budget, achats, voyages, formulaires et courriers, plans de révision, CV et préparation d’entretien. Quand consulter un professionnel (santé, droit, argent).",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Présentations",
+     "content": "Le fil narratif avant les slides. Fichiers PowerPoint, outils de slides et de design de Claude ou Claude pour PowerPoint. Modèles, graphiques, schémas, notes de l’orateur, répétition avec les questions probables.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "À la fin de cette phase, les participants confient leurs tâches numériques répétitives à Claude et gardent la main sur ce qui est envoyé ou partagé.",
+    "items": [
+     {
+      "id": "2.1",
+      "type": "TP",
+      "title": "Mon brief du matin",
+      "goal": "Transformer messagerie et agenda en cinq minutes de décisions.",
+      "material": "Compte personnel ou boîte de démonstration ; connecteurs de messagerie et d’agenda.",
+      "steps": "1) Connecter en gardant « demander avant envoi ». 2) Classer les non-lus : urgent, à répondre, à lire. 3) Préparer trois réponses. 4) Ajouter l’agenda du jour. 5) Planifier le brief. 6) Le tester sur un e-mail piégé.",
+      "result": "Un brief du matin planifié qui n’envoie jamais rien seul."
+     },
+     {
+      "id": "2.2",
+      "type": "TP",
+      "title": "Du dossier en désordre au rapport",
+      "goal": "Produire un document que l’on signerait.",
+      "material": "Une copie d’un dossier de 20 fichiers variés (factures, notes, PDF, photos).",
+      "steps": "1) Donner accès à ce seul dossier. 2) Valider le plan de classement. 3) Extraire les faits clés avec leur source. 4) Rechercher le contexte manquant. 5) Générer un rapport Word de deux pages et son PDF. 6) Vérifier cinq faits.",
+      "result": "Un dossier rangé et un rapport sourcé en Word et PDF."
+     },
+     {
+      "id": "2.3",
+      "type": "TP",
+      "title": "Kit budget et démarches",
+      "goal": "Utiliser Claude pour la paperasse du quotidien.",
+      "material": "Un relevé bancaire anonymisé, un courrier administratif, une offre d’emploi.",
+      "steps": "1) Nettoyer et catégoriser les dépenses. 2) Créer un budget mensuel avec formules et graphique. 3) Vérifier un total à la main. 4) Comprendre le courrier et y répondre. 5) Adapter un CV à l’offre sans rien inventer.",
+      "result": "Un classeur de budget, un courrier et un CV adapté."
+     },
+     {
+      "id": "2.4",
+      "type": "TP",
+      "title": "Huit slides à partir d’un rapport",
+      "goal": "Faire d’un document une présentation que l’on suit.",
+      "material": "Le rapport du TP 2.2 et un modèle de slides.",
+      "steps": "1) Valider le message et le plan. 2) Générer huit slides dans le modèle. 3) Ajouter un graphique et un schéma. 4) Alléger les slides chargées. 5) Répéter face aux questions de Claude.",
+      "result": "Une présentation modifiable avec notes de l’orateur."
+     }
+    ],
+    "validation": "Un brief du matin, un rapport vérifié, un tableur fonctionnel et une présentation."
+   }
+  },
+  {
+   "name": "Créer : images et vidéo",
+   "hours": 3.0,
+   "focus": "Design, retouche photo, montage vidéo",
+   "intro": "Claude n’est pas un générateur de photos ni de vidéos : il conçoit, rédige et pilote les outils de montage. Les participants apprennent la méthode et ses limites, avec des outils gratuits ou des offres gratuites.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Images et design",
+     "content": "Analyser et critiquer des images. Affiches, logos, infographies et publications avec Claude Design, SVG et artifacts. Connecteurs de design (Canva, Adobe). Retouche par lots via le code : redimensionner, recadrer, compresser, filigrane, conversion. Rédiger des prompts pour générateurs d’images.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Montage vidéo",
+     "content": "Script, accroche et storyboard. Montage par consignes avec FFmpeg : couper, assembler, recadrer en vertical, ajouter de la musique, compresser. Sous-titres depuis une transcription ou une transcription locale. Motion design par le code (HyperFrames, Remotion). Connecteurs de vidéo IA, leur coût et l’étiquetage des contenus IA.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "À la fin de cette phase, les participants produisent un visuel et une courte vidéo montée en décrivant ce qu’ils veulent.",
+    "items": [
+     {
+      "id": "3.1",
+      "type": "TP",
+      "title": "Une campagne visuelle",
+      "goal": "Créer et retoucher des images sans maîtriser un logiciel de design.",
+      "material": "Dix photos ; un connecteur de design avec offre gratuite ; l’application Claude de bureau.",
+      "steps": "1) Concevoir une affiche à partir d’un brief. 2) Demander une critique, puis améliorer. 3) Décliner en carré et en story. 4) Faire redimensionner et filigraner les photos par lots. 5) Tout exporter.",
+      "result": "Une affiche en trois formats et dix photos retouchées."
+     },
+     {
+      "id": "3.2",
+      "type": "TP",
+      "title": "Un reel sous-titré de 30 secondes",
+      "goal": "Monter une vraie vidéo en parlant à Claude.",
+      "material": "Séquences filmées au téléphone ; FFmpeg et un outil de transcription, installés à l’avance.",
+      "steps": "1) Écrire script et storyboard. 2) Faire analyser les séquences et proposer un montage. 3) Couper, assembler et recadrer en 9:16. 4) Ajouter sous-titres et titre. 5) Exporter et contrôler sur le téléphone.",
+      "result": "Une vidéo verticale avec sous-titres et titre."
+     }
+    ],
+    "validation": "Un visuel et une vidéo sous-titrée, évalués par le groupe."
+   }
+  },
+  {
+   "name": "Construire : Claude Code pour tous",
+   "hours": 6.0,
+   "focus": "Vibe coding, commandes, mémoire, contrôle",
+   "intro": "Le code est abordé depuis zéro. Claude l’écrit ; les participants apprennent à décrire, planifier, tester, annuler et guider, d’abord dans l’application de bureau, puis dans le terminal quand c’est utile.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Premier projet",
+     "content": "Fichiers, dossiers, HTML et scripts en dix minutes. Application de bureau et terminal. La boucle de l’agent. /init et CLAUDE.md. Mode plan : explorer, planifier, réaliser, vérifier. /model et effort. Git comme bouton de sauvegarde.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Contrôle : contexte, retour arrière, autorisations",
+     "content": "/clear, /compact, /context et /usage. /rewind pour revenir en arrière, /resume pour reprendre plus tard. Modes d’autorisation : manuel, modifications acceptées, plan, mode auto, et pourquoi ne jamais tout contourner. La barre d’état (status line) pour surveiller modèle et contexte.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Mémoire, règles et style",
+     "content": "Quoi ranger où : CLAUDE.md (personnel ou projet), mémoire automatique (auto memory), règles (rules) limitées à certains fichiers. Auditer la mémoire. Styles de sortie (output styles) : concis, explicatif ou personnel. Une note de passation pour reprendre à moindre coût.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.4",
+     "title": "Créer et déboguer une application utile",
+     "content": "Rédiger un cahier des charges simple, construire par petites étapes, tester en utilisateur, transmettre l’erreur ou une capture, demander une revue. Aucun mot de passe ni clé dans le code. Partager en artifact ou en page web.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "À la fin de cette phase, les participants créent un petit outil et maîtrisent coût, contexte, autorisations et mémoire.",
+    "items": [
+     {
+      "id": "4.1",
+      "type": "TP",
+      "title": "Ma première page web",
+      "goal": "Passer d’un dossier vide à une page qui fonctionne.",
+      "material": "Claude Code, Git, un dossier vide.",
+      "steps": "1) Décrire la page. 2) Affiner le plan en mode plan. 3) La créer et l’ouvrir. 4) Lancer /init et lire CLAUDE.md. 5) Changer de modèle pour une petite modification. 6) Enregistrer une version Git.",
+      "result": "Une page web personnelle et son premier CLAUDE.md."
+     },
+     {
+      "id": "4.2",
+      "type": "TP",
+      "title": "Casser et réparer",
+      "goal": "Garder le contrôle d’un long travail.",
+      "material": "Le projet du TP 4.1.",
+      "steps": "1) Demander une mauvaise modification, puis /rewind. 2) Lire /context et compacter avec une consigne. 3) Effacer, puis reprendre. 4) Comparer mode manuel et mode auto. 5) Configurer la barre d’état. 6) Lire /usage.",
+      "result": "Une fiche de commandes testée ligne par ligne."
+     },
+     {
+      "id": "4.3",
+      "type": "TP",
+      "title": "Le lui apprendre une seule fois",
+      "goal": "Faire retenir ses préférences sans gaspiller le contexte.",
+      "material": "Le projet et les préférences du participant.",
+      "steps": "1) Écrire un CLAUDE.md personnel de moins de 30 lignes. 2) Ajouter une règle pour un type de fichier. 3) Corriger Claude et retrouver ce que la mémoire a gardé. 4) Essayer deux styles de sortie. 5) Reprendre depuis une note de passation.",
+      "result": "Des instructions et une mémoire légères, testées en repartant de zéro."
+     },
+     {
+      "id": "4.4",
+      "type": "TP",
+      "title": "Un outil que j’utiliserai vraiment",
+      "goal": "Créer, corriger et partager une petite application.",
+      "material": "Une idée : suivi d’habitudes, devis, quiz, liste de stock ou partage de dépenses.",
+      "steps": "1) Écrire cinq lignes de besoins. 2) Planifier puis créer la première version. 3) Tester trois cas, dont une saisie erronée. 4) Corriger depuis l’erreur. 5) Demander une revue de sécurité. 6) Partager en privé.",
+      "result": "Une mini-application fonctionnelle et testée."
+     }
+    ],
+    "validation": "Un outil fonctionnel, son CLAUDE.md et une démonstration de l’annulation, de la reprise et du compactage."
+   }
+  },
+  {
+   "name": "Personnaliser : étendre et automatiser",
+   "hours": 6.0,
+   "focus": "Skills, MCP, plugins, dépôts, agents",
+   "intro": "Choisir quoi installer, créer ce qui manque et automatiser en sécurité. Les fonctions avancées sont démontrées pour que chacun sache quand elles valent la peine.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Skills",
+     "content": "Ce qu’est un skill et quand il se charge. Skills intégrés et officiels (documents, slides, tableurs, PDF). Les retrouver avec /skills. Écrire un SKILL.md avec Claude, tester son déclenchement, le partager. Skill, CLAUDE.md ou simple prompt : lequel choisir.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "MCP, plugins et dépôts populaires",
+     "content": "MCP et connecteurs. Plugins et marketplace de plugins. Collections officielles (anthropics/skills, claude-plugins-official, knowledge-work-plugins) et populaires (superpowers, mattpocock/skills, context7, impeccable, humanizer, outils de mémoire et d’économie de tokens). Six contrôles : besoin, source, maintenance, autorisations, coût en tokens, doublons. Les étoiles ne prouvent rien.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Automatisation et garde-fous",
+     "content": "Hooks, dont un hook PreToolUse qui bloque une action dangereuse. Sous-agents (subagents) de recherche et de revue. Worktrees pour le travail en parallèle. Sandboxing (macOS, Linux, WSL2). Mode non interactif (claude -p) pour automatiser en une ligne.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.4",
+     "title": "Panorama avancé",
+     "content": "À quoi sert chaque fonction, son coût, quand l’utiliser. Son propre serveur MCP. Claude dans GitHub Actions. Équipes d’agents (agent teams, expérimental) et workflows dynamiques. Channels (préversion) : écrire à Claude depuis Telegram ou Discord. Mode bare et Agent SDK, avec une clé API facturée hors abonnement.",
+     "format": "Démo + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "À la fin de cette phase, les participants ont une boîte à outils réduite et justifiée, et savent juger tout dépôt « indispensable ».",
+    "items": [
+     {
+      "id": "5.1",
+      "type": "TP",
+      "title": "Mon premier skill",
+      "goal": "Formaliser une tâche répétée chaque semaine.",
+      "material": "Un prompt de la bibliothèque et un bon exemple de son résultat.",
+      "steps": "1) Installer un skill officiel. 2) Créer un skill depuis le prompt. 3) Tester trois demandes qui doivent le déclencher et deux qui ne le doivent pas. 4) Corriger la description.",
+      "result": "Un skill personnel qui se déclenche de façon fiable."
+     },
+     {
+      "id": "5.2",
+      "type": "TP",
+      "title": "Installer, essayer ou ignorer",
+      "goal": "Choisir sur des preuves plutôt que sur le buzz.",
+      "material": "Une grille et cinq dépôts populaires choisis avec le formateur.",
+      "steps": "1) Noter chaque dépôt sur les six contrôles. 2) En faire lire un par Claude avant toute installation. 3) Installer un plugin. 4) Connecter un serveur MCP. 5) Mesurer le contexte avant et après. 6) Retirer ce qui ne sert pas.",
+      "result": "Un tableau de décision de cinq lignes et trois ajouts au maximum."
+     },
+     {
+      "id": "5.3",
+      "type": "TP",
+      "title": "Un gardien et un assistant",
+      "goal": "Automatiser sans perdre le contrôle.",
+      "material": "L’application du TP 4.4 sous Git ; un dossier de test.",
+      "steps": "1) Faire écrire un hook PreToolUse qui protège un dossier, puis l’attaquer. 2) Créer un sous-agent de revue. 3) Faire une modification dans un worktree. 4) Résumer un fichier avec claude -p. 5) Voir le sandbox bloquer une commande (poste du formateur si besoin).",
+      "result": "Un hook testé, un sous-agent de revue et une automatisation d’une ligne."
+     },
+     {
+      "id": "5.4",
+      "type": "TP",
+      "title": "Son serveur MCP et la carte du reste",
+      "goal": "Reconnaître les outils avancés et en essayer un.",
+      "material": "Un serveur de départ ; le dépôt et la clé API du formateur pour les démonstrations.",
+      "steps": "1) Faire ajouter un outil au serveur de départ et le connecter. 2) Suivre les démonstrations : Actions, équipes, workflows, channels, mode bare et SDK. 3) Associer six besoins réels à la fonction la plus simple qui y répond.",
+      "result": "Un serveur à un outil et une fiche « quand l’utiliser »."
+     }
+    ],
+    "validation": "Un skill personnel, une connexion, un hook et une décision écrite (installer ou non) pour cinq dépôts."
+   }
+  },
+  {
+   "name": "Projet final",
+   "hours": 3.0,
+   "focus": "Un système personnel, présenté en direct",
+   "intro": "Assembler ce qui a été construit pour répondre à un vrai besoin.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Brief et réalisation",
+     "content": "Un vrai besoin (freelance, études, famille, commerce, emploi, contenus) : projet, skill, connexion ou routine, deux livrables.",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "6.2",
+     "title": "Démonstration et plan de 30 jours",
+     "content": "Démonstration en direct, revue entre pairs, bilan des tokens et routine pour suivre les nouveautés sans tout installer.",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Prouver que l’on sait utiliser Claude seul, avec économie et en sécurité.",
+    "items": [
+     {
+      "id": "6.1",
+      "type": "Projet",
+      "title": "Mon système Claude",
+      "goal": "Répondre à un vrai besoin de bout en bout.",
+      "material": "Tout ce qui a été construit dans les phases 1 à 5.",
+      "steps": "1) Écrire besoin et critère de réussite. 2) Planifier. 3) Assembler. 4) Produire deux livrables différents. 5) Vérifier faits, autorisations, consommation.",
+      "result": "Un système fonctionnel et deux livrables."
+     },
+     {
+      "id": "6.2",
+      "type": "Projet",
+      "title": "Montrer et garder",
+      "goal": "Défendre ses choix et installer l’habitude.",
+      "material": "Le système du TP 6.1 et un modèle de plan.",
+      "steps": "1) Présenter en cinq minutes. 2) Justifier un outil non installé. 3) Montrer une économie de consommation. 4) Écrire trois habitudes pour 30 jours.",
+      "result": "Une démonstration et un plan de 30 jours."
+     }
+    ],
+    "validation": "Système, consommation et plan de 30 jours présentés ; attestation avec les TP validés."
+   },
+   "project": {
+    "title": "Mon système Claude personnel",
+    "brief": "Un vrai besoin pris en charge par Claude : contexte permanent, skill réutilisable, routine sûre.",
+    "stack": "Applications Claude, connecteurs, Claude Code, skills",
+    "deliverable": "Le système, deux livrables, une note de consommation et une démonstration de cinq minutes"
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "Chaque phase ajoute un composant. Ensemble, ils forment un système que le participant garde après la formation.",
+  "rows": [
+   {
+    "name": "Bibliothèque de prompts",
+    "shows": "Prompts testés pour les tâches récurrentes",
+    "phase": "1",
+    "build": "1.1"
+   },
+   {
+    "name": "Fiche de consommation",
+    "shows": "Le bon modèle, effort et contexte pour chaque tâche",
+    "phase": "1",
+    "build": "1.2"
+   },
+   {
+    "name": "Brief du matin",
+    "shows": "E-mails et agenda résumés, rien envoyé sans validation",
+    "phase": "2",
+    "build": "2.1"
+   },
+   {
+    "name": "Kit documents",
+    "shows": "Rapport, budget, courrier, CV et slides",
+    "phase": "2",
+    "build": "2.4"
+   },
+   {
+    "name": "Kit médias",
+    "shows": "Visuels, photos retouchées et vidéo sous-titrée",
+    "phase": "3",
+    "build": "3.2"
+   },
+   {
+    "name": "Mémoire configurée",
+    "shows": "CLAUDE.md léger, règles et style",
+    "phase": "4",
+    "build": "4.3"
+   },
+   {
+    "name": "Mini-application",
+    "shows": "Un petit outil créé et testé avec Claude Code",
+    "phase": "4",
+    "build": "4.4"
+   },
+   {
+    "name": "Skill personnel",
+    "shows": "Une tâche hebdomadaire toujours faite de la même façon",
+    "phase": "5",
+    "build": "5.1"
+   },
+   {
+    "name": "Boîte à outils choisie",
+    "shows": "Quelques extensions justifiées et un hook de sécurité",
+    "phase": "5",
+    "build": "5.3"
+   }
+  ]
+ },
+ "notes": [
+  "Crédit : le programme s’inspire des cours gratuits de Claude Academy, de la documentation officielle et de cours vidéo publics. Les exercices et les supports sont ceux du formateur.",
+  "Cette formation est indépendante. Elle n’est ni affiliée à Anthropic, ni parrainée, ni approuvée par Anthropic. Claude et Claude Code sont des produits d’Anthropic PBC.",
+  "Claude évolue souvent : noms, offres et fonctions sont vérifiés avant chaque réalisation. Les fonctions expérimentales ou en préversion peuvent être remplacées par une démonstration.",
+  "Les TP utilisent des copies de fichiers et aucune donnée confidentielle. Les comptes connectés peuvent être déconnectés en fin de programme."
+ ],
+ "lang": "fr"
+}
