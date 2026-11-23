@@ -2087,6 +2087,55 @@
           ]
         ]
       }
+    },
+    "genai-for-trainers": {
+      "code": "GENAI-EDU",
+      "outcomes": {
+        "en": [
+          [
+            "Research and check sources",
+            "and design an aligned course with AI"
+          ],
+          [
+            "Build a teaching system:",
+            "course workspace, skills, templates and clear rules"
+          ],
+          [
+            "Produce decks and media:",
+            "infographics, explainer videos and live demos"
+          ],
+          [
+            "Create labs, quizzes and assessments",
+            "that still work when students use AI"
+          ],
+          [
+            "Leave with a complete course",
+            "reviewed and taught live"
+          ]
+        ],
+        "fr": [
+          [
+            "Rechercher et vérifier les sources",
+            "et concevoir un cours aligné avec l’IA"
+          ],
+          [
+            "Construire son système :",
+            "espace de cours, skills, modèles et règles claires"
+          ],
+          [
+            "Produire supports et médias :",
+            "infographies, vidéos explicatives et démos"
+          ],
+          [
+            "Créer TP, quiz et évaluations",
+            "qui tiennent quand les élèves utilisent l’IA"
+          ],
+          [
+            "Repartir avec un cours complet",
+            "révisé et enseigné en direct"
+          ]
+        ]
+      }
     }
   }
 }
