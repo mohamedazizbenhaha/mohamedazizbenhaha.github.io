@@ -1,0 +1,516 @@
+{
+ "slug": "ai-for-researchers-fr",
+ "file": "L-IA-pour-les-chercheurs-30h.docx",
+ "title": "L’IA pour les chercheurs",
+ "subtitle": "Littérature, données, rédaction, relecture et communication avec un système de recherche qui se vérifie",
+ "audience_line": "Doctorants, chercheurs et encadrants de toutes disciplines qui veulent une recherche plus rapide et vérifiable avec Claude, ChatGPT ou Gemini",
+ "certifications": [],
+ "buffer": 3,
+ "buffer_fixed": true,
+ "labels": {
+  "portfolio_kicker": "Ce que chaque participant emporte",
+  "portfolio": "Votre dossier et votre système de recherche",
+  "portfolio_cols": [
+   "#",
+   "Composant",
+   "Rôle",
+   "Phase",
+   "TP"
+  ]
+ },
+ "overview": "Ce programme mène les chercheurs des capacités et limites des LLM à un système de recherche qui vérifie son propre travail. Chaque participant travaille sur son chapitre de thèse ou son article : littérature, notes, plan d’étude, analyse quantitative ou qualitative, rédaction avec sa voix, audit des citations, projets, relecture avant le vrai relecteur et communication, puis soutient son dossier.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Doctorants, chercheurs, encadrants et équipes R&D, de toutes disciplines"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aisance avec l’ordinateur, anglais écrit simple et un projet de recherche. Ni IA ni code requis"
+  },
+  {
+   "label": "Durée",
+   "value": "30 h : 27 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Un tiers d’explications, deux tiers de pratique sur la recherche du participant, puis revue et soutenance"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable, outils en ligne uniquement ; une offre Claude payante (Pro au minimum), comptes gratuits ChatGPT, Gemini, NotebookLM, Zotero et notebook en ligne ; article, jeu de données, modèles et listes de contrôle du formateur"
+  },
+  {
+   "label": "Ressources officielles",
+   "value": "Cours gratuits d’Anthropic Academy, politiques IA des éditeurs et financeurs, aide des outils"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase et un dossier de recherche soutenu en direct ; attestation de formation"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants mènent leur recherche de la littérature à la communication avec l’IA, et prouvent que chaque affirmation et référence a été vérifiée"
+  }
+ ],
+ "phases": [
+  {
+   "name": "Premiers pas",
+   "hours": 3.0,
+   "focus": "LLM, limites, prompts, tokens",
+   "intro": "Comprendre ce qu’est un LLM, ce qu’il peut et ne peut pas faire, et pourquoi la recherche exige plus de vérifications.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Les LLM en recherche : capacités et limites",
+     "content": "Entraînement et écriture token par token. Échecs typiques : références inventées, vrais DOI avec titres inventés, résultats déformés, faits dépassés, complaisance et biais. Apport de la recherche et des outils. Données non publiées et confidentialité. Le chercheur reste l’auteur et le responsable.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Prompts, contexte et tokens",
+     "content": "Claude, ChatGPT, Gemini et NotebookLM : quel outil pour quelle tâche. Confidentialité et entraînement sur vos données. Prompts : rôle, objectif, discipline, exemple, contraintes, format ; se faire interviewer par l’IA. Tokens, limites du forfait, choix du modèle, habitudes économes.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Savoir quand faire confiance à une IA, comment la briefer et ce qui consomme son forfait.",
+    "items": [
+     {
+      "id": "1.1",
+      "type": "TP",
+      "title": "Trouver les limites",
+      "goal": "Voir par soi-même quand faire confiance et quand vérifier.",
+      "material": "Claude et ChatGPT ; huit questions test du formateur, tirées des disciplines des participants.",
+      "steps": "1) Prédire où l’IA échouera. 2) Demander des références sur un sujet pointu. 3) Vérifier chacune. 4) Nommer la cause de chaque échec. 5) Classer dix tâches de recherche.",
+      "result": "Une carte de confiance : déléguer, vérifier ou garder."
+     },
+     {
+      "id": "1.2",
+      "type": "TP",
+      "title": "Prompts clairs, moins de tokens",
+      "goal": "Obtenir une meilleure réponse en consommant moins.",
+      "material": "Claude, ChatGPT ; trois prompts de recherche faibles.",
+      "steps": "1) Régler la confidentialité de chaque outil. 2) Réécrire les trois prompts. 3) Lancer une tâche dans deux outils et sur deux modèles. 4) Comparer qualité et consommation.",
+      "result": "Une bibliothèque de prompts et une fiche « quel outil, quel modèle »."
+     }
+    ],
+    "validation": "Une carte de confiance et trois prompts améliorés."
+   }
+  },
+  {
+   "name": "Bases et système",
+   "hours": 3.0,
+   "focus": "Espace, skills, contrôles, règles",
+   "intro": "Un système de recherche installé sur le projet du participant, puis utilisé à chaque phase.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Un espace de recherche",
+     "content": "Un espace par projet : stratégie, cahier de laboratoire, chaque article, chaque rapport. Un fichier de démarrage, un journal d’avancement et un journal de décisions pour reprendre toute session en quelques minutes. Projets et instructions dans Claude et ChatGPT, carnets NotebookLM. Partage avec encadrants et coauteurs, versions et sauvegardes.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Skills, contrôles automatiques et règles",
+     "content": "Skills et GPT personnalisés pour les tâches répétées. Contrôles automatiques : une tâche n’est finie que si ses contrôles passent, et une nouvelle session relit ce qu’une autre a écrit. Règles : intégrité, avis éthique, données des participants, politiques IA des éditeurs et financeurs, déclaration de l’usage de l’IA.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Chaque participant dispose d’un espace de recherche avec contrôles automatiques et règles claires.",
+    "items": [
+     {
+      "id": "2.1",
+      "type": "TP",
+      "title": "Installer ma recherche",
+      "goal": "Donner une fois à l’IA le contexte d’un vrai projet.",
+      "material": "Les fichiers du projet ; Claude, NotebookLM ; modèles d’espace du formateur.",
+      "steps": "1) Rassembler les fichiers. 2) Rédiger le fichier de démarrage. 3) Ouvrir les journaux d’avancement et de décisions. 4) Créer le projet et tester avec cinq questions. 5) Fermer et reprendre à partir du seul fichier de démarrage.",
+      "result": "Un espace de recherche qui reprend dans une nouvelle session."
+     },
+     {
+      "id": "2.2",
+      "type": "TP",
+      "title": "Un système qui se vérifie",
+      "goal": "Transformer travail et contrôles répétés en éléments réutilisables.",
+      "material": "Un modèle de skill, un modèle de liste de contrôle et la politique IA d’une revue cible.",
+      "steps": "1) Écrire un skill de recherche. 2) Écrire un contrôle automatique. 3) Le lancer sur un texte exemple. 4) Remplir la fiche de règles. 5) Rédiger la déclaration IA pour la revue cible.",
+      "result": "Un skill, un contrôle qui fonctionne et une fiche de règles."
+     }
+    ],
+    "validation": "Un espace configuré, un premier contrôle et une fiche de règles validée."
+   }
+  },
+  {
+   "name": "Littérature",
+   "hours": 6.0,
+   "focus": "Recherche, notes, revue systématique, synthèse",
+   "intro": "D’un sujet large à une littérature triée, annotée et synthétisée, et à une question de recherche précise.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Trouver les articles",
+     "content": "Moteurs pour la recherche : Semantic Scholar, Google Scholar, Consensus, Elicit, recherche approfondie. Cartes de citations et outils d’articles liés. Équations de recherche, journal des recherches, alertes.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Gestionnaire de références et notes de lecture",
+     "content": "Zotero pour la bibliothèque et les citations. Lire avec l’IA sans cesser de lire : NotebookLM fondé sur des PDF choisis, une note par article et une note par concept, chaque affirmation liée à sa page. Garder les notes à jour quand des articles sont ajoutés ou retirés.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Revues systématiques et exploratoires",
+     "content": "Protocole, critères d’inclusion et d’exclusion, diagramme PRISMA, tri des titres et résumés par l’IA avec contrôle humain, tableaux d’extraction, risque de biais, traçabilité de chaque décision.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Synthèse, lacunes et question de recherche",
+     "content": "Regrouper les résultats par thème, méthode ou conclusion, contradictions entre études, graphe de connaissances des concepts, trouver la lacune, formuler une question précise et sa contribution.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Disposer d’une base bibliographique vérifiée et d’une question de recherche qu’elle soutient.",
+    "items": [
+     {
+      "id": "3.1",
+      "type": "TP",
+      "title": "Cartographier la littérature",
+      "goal": "Trouver vite et de façon traçable les travaux importants.",
+      "material": "Semantic Scholar, un moteur de recherche IA et un outil de carte de citations.",
+      "steps": "1) Écrire la question et l’équation. 2) La lancer dans deux moteurs. 3) Suivre les citations en amont et en aval. 4) Noter chaque recherche. 5) Créer une alerte.",
+      "result": "Un premier corpus et un journal des recherches."
+     },
+     {
+      "id": "3.2",
+      "type": "TP",
+      "title": "Un coffre de notes",
+      "goal": "Transformer les PDF en notes sourcées et réutilisables.",
+      "material": "Zotero, NotebookLM ; dix articles du TP 3.1 ; un modèle de note.",
+      "steps": "1) Importer les articles dans Zotero. 2) Les charger dans un carnet. 3) Rédiger trois notes d’article avec pages. 4) Rédiger deux notes de concept. 5) Vérifier cinq affirmations dans le PDF.",
+      "result": "Une bibliothèque et un coffre de notes sourcées."
+     },
+     {
+      "id": "3.3",
+      "type": "TP",
+      "title": "Trier avec un second lecteur",
+      "goal": "Trier vite sans perdre en rigueur.",
+      "material": "Un lot de 60 références ; un modèle de tri et d’extraction.",
+      "steps": "1) Écrire les critères. 2) Trier soi-même 20 références. 3) Faire trier les 60 par l’IA. 4) Mesurer l’accord et trancher les conflits. 5) Extraire les données de cinq articles retenus.",
+      "result": "Un journal de tri, un décompte PRISMA et un tableau d’extraction."
+     },
+     {
+      "id": "3.4",
+      "type": "TP",
+      "title": "Trouver la lacune",
+      "goal": "Passer de ce que l’on sait à ce qu’il faut demander.",
+      "material": "Le coffre de notes et le tableau d’extraction.",
+      "steps": "1) Regrouper les résultats. 2) Construire une carte de concepts ou un graphe. 3) Lister contradictions et lacunes. 4) Rédiger trois questions. 5) Les faire attaquer par l’IA, puis en choisir une.",
+      "result": "Un tableau de synthèse et une question de recherche avec sa contribution."
+     }
+    ],
+    "validation": "Une bibliothèque, des notes de lecture, un journal de tri et une question de recherche."
+   }
+  },
+  {
+   "name": "Expériences et données",
+   "hours": 3.0,
+   "focus": "Plan d’étude, cahier, analyse, figures",
+   "intro": "La question devient une étude, l’étude des données, et les données des résultats vérifiés.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Plan d’étude et cahier de laboratoire",
+     "content": "Hypothèse, variables, échantillon, témoins et menaces à la validité, ou plan d’entretiens et de corpus. Cahier daté, statut de chaque entrée, données brutes intactes et traçables, plan de gestion des données.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Analyse et figures, quantitatives ou qualitatives",
+     "content": "Notebooks en ligne pour statistiques et graphiques, choisir et vérifier un test, hypothèses, tailles d’effet. Codage qualitatif d’entretiens ou de textes par l’IA avec contrôle humain. Figures et tableaux reproductibles depuis les données brutes.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Disposer d’un plan d’étude, d’un cahier tenu et d’un résultat reproductible.",
+    "items": [
+     {
+      "id": "4.1",
+      "type": "TP",
+      "title": "Planifier et consigner",
+      "goal": "Concevoir une étude solide et la consigner pour qu’on puisse s’y fier.",
+      "material": "La question de recherche ; modèles de protocole et de cahier.",
+      "steps": "1) Rédiger le protocole. 2) Demander à l’IA les menaces à la validité. 3) Réviser. 4) Écrire deux entrées de cahier. 5) Stocker des données brutes en lecture seule avec une empreinte.",
+      "result": "Un protocole et un cahier traçable."
+     },
+     {
+      "id": "4.2",
+      "type": "TP",
+      "title": "Des données brutes à la figure",
+      "goal": "Produire un résultat que chacun peut reconstruire.",
+      "material": "Un notebook en ligne ; le jeu de données du formateur ou celui du participant.",
+      "steps": "1) Décrire les données à l’IA. 2) Choisir et justifier l’analyse. 3) La lancer dans le notebook. 4) Vérifier les hypothèses. 5) Reconstruire la figure depuis les données brutes.",
+      "result": "Une analyse vérifiée et une figure reproductible."
+     }
+    ],
+    "validation": "Un protocole, des entrées de cahier et une figure reconstruite depuis les données brutes."
+   }
+  },
+  {
+   "name": "Rédaction et relecture",
+   "hours": 6.0,
+   "focus": "Rédaction, contrôles, projets, relecture",
+   "intro": "Des notes à un texte qui résiste aux contrôles, aux éditeurs et aux relecteurs.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Rédiger depuis ses notes, avec sa voix",
+     "content": "Structure des articles et chapitres de thèse, rédiger depuis le coffre de notes plutôt que de mémoire, garder la voix et l’argument de l’auteur, signaler les passages rédigés par l’IA, réviser.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "Contrôles : citations et style",
+     "content": "Audit des citations : chaque référence existe, dit ce qu’on lui prête et n’est pas rétractée. Contrôle du style : affirmations excessives, précautions empilées, remplissage, tournures typiques de l’IA. Les lancer en contrôles automatiques avant de déclarer une section finie.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Projets et soumission",
+     "content": "Projets de financement et de thèse : objectifs, méthode, impact, plan de travail, logique du budget. Choisir une revue ou une conférence, lettre d’accompagnement, déclaration IA, mise en forme, liste de soumission.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.4",
+     "title": "Le relecteur avant le relecteur",
+     "content": "Une relecture critique par l’IA dans une nouvelle session qui ne reçoit que le manuscrit, une décision sur chaque point, répondre point par point aux vrais relecteurs. Relire avec éthique : ne jamais téléverser un manuscrit que l’on évalue.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Disposer d’une section vérifiée, d’un plan de projet et d’une relecture traitée.",
+    "items": [
+     {
+      "id": "5.1",
+      "type": "TP",
+      "title": "Rédiger une section",
+      "goal": "Écrire une section fondée sur ses sources.",
+      "material": "Le coffre de notes, le résultat du TP 4.2 et un modèle de section.",
+      "steps": "1) Faire le plan. 2) Rédiger depuis les notes. 3) Signaler les passages de l’IA. 4) Les réécrire avec sa voix. 5) Relier chaque affirmation à une note.",
+      "result": "Une section rédigée, chaque affirmation sourcée."
+     },
+     {
+      "id": "5.2",
+      "type": "TP",
+      "title": "Passer les contrôles",
+      "goal": "Retirer toute affirmation non fondée et toute phrase gonflée.",
+      "material": "La section rédigée ; des outils de vérification des citations ; la liste de contrôle du style.",
+      "steps": "1) Auditer chaque référence. 2) Corriger ou retirer les échecs. 3) Lancer le contrôle du style. 4) Retirer les affirmations excessives. 5) Relancer jusqu’à réussite.",
+      "result": "Une section qui passe les contrôles de citations et de style."
+     },
+     {
+      "id": "5.3",
+      "type": "TP",
+      "title": "Se préparer à demander et à soumettre",
+      "goal": "Transformer la recherche en projet et en soumission.",
+      "material": "Un appel à projets et le guide d’une revue cible.",
+      "steps": "1) Faire le plan du projet selon l’appel. 2) Rédiger les objectifs. 3) Présélectionner trois revues avec raisons. 4) Rédiger la lettre d’accompagnement. 5) Remplir la liste de soumission.",
+      "result": "Un plan de projet et un dossier de soumission."
+     },
+     {
+      "id": "5.4",
+      "type": "TP",
+      "title": "Survivre à la relecture",
+      "goal": "Trouver les points faibles avant un relecteur.",
+      "material": "La section vérifiée ; un modèle de relecture ; une lettre de relecteur exemple.",
+      "steps": "1) Ouvrir une nouvelle session avec le seul manuscrit. 2) Demander un rapport de relecture. 3) Trancher chaque point. 4) Réviser. 5) Répondre à la lettre exemple.",
+      "result": "Une pré-relecture tranchée et une réponse aux relecteurs."
+     }
+    ],
+    "validation": "Une section d’article ou de thèse qui passe tous les contrôles, un plan de projet et une réponse aux relecteurs."
+   }
+  },
+  {
+   "name": "Communiquer",
+   "hours": 3.0,
+   "focus": "Exposés, posters, rapports, vulgarisation",
+   "intro": "La recherche atteint les comités, les conférences et le public.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Exposés, posters, rapports et soutenance",
+     "content": "Exposés de conférence, posters, rapports d’avancement pour un comité de suivi de thèse, préparation de la soutenance : structure, un message par diapositive, figures, notes de l’orateur, questions probables.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "6.2",
+     "title": "Vidéos, podcasts et résumés grand public",
+     "content": "Scripts, résumés audio et vidéo, narration, sous-titres, résumés grand public et graphiques, publications sur les réseaux. Exactitude et ce qu’il ne faut pas simplifier.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Disposer d’un exposé et d’un support de vulgarisation pour sa recherche.",
+    "items": [
+     {
+      "id": "6.1",
+      "type": "TP",
+      "title": "Présenter ses travaux",
+      "goal": "Expliquer clairement sa recherche en quelques minutes.",
+      "material": "La figure et la section ; un modèle de diaporama et de poster.",
+      "steps": "1) Écrire le message en une phrase. 2) Faire le plan. 3) Générer et retoucher le diaporama. 4) Rédiger les notes. 5) Lister dix questions probables et leurs réponses.",
+      "result": "Un diaporama de cinq minutes et une fiche de questions."
+     },
+     {
+      "id": "6.2",
+      "type": "TP",
+      "title": "L’expliquer à tous",
+      "goal": "Rendre la recherche compréhensible hors de la discipline.",
+      "material": "La section ; NotebookLM ; un outil de narration.",
+      "steps": "1) Rédiger un résumé grand public. 2) Écrire le script d’une vidéo de deux minutes. 3) Produire l’audio ou la vidéo. 4) Vérifier l’exactitude. 5) Esquisser un résumé graphique.",
+      "result": "Un résumé grand public et un support de vulgarisation."
+     }
+    ],
+    "validation": "Un court diaporama et un support de vulgarisation."
+   }
+  },
+  {
+   "name": "Projet",
+   "hours": 3.0,
+   "focus": "Un dossier de recherche relu et soutenu",
+   "intro": "Chaque participant relit et soutient le dossier de recherche construit au fil des phases.",
+   "chapters": [
+    {
+     "id": "7.1",
+     "title": "Revue en nouvelle session",
+     "content": "Une revue indépendante de tout le dossier par une session qui ne l’a pas écrit : contrôles d’abord, puis lecture critique au regard de la question de recherche. Combler les manques.",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "7.2",
+     "title": "Exposé et soutenance",
+     "content": "Un exposé de cinq minutes sur la recherche, puis des questions sur la méthode, les contrôles et l’usage de l’IA.",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Prouver que l’on sait mener sa recherche avec l’IA et montrer qu’elle a été vérifiée.",
+    "items": [
+     {
+      "id": "7.1",
+      "type": "Projet",
+      "title": "Lecture à froid",
+      "goal": "Auditer son dossier comme le ferait un regard extérieur.",
+      "material": "Le dossier du participant ; la liste de contrôle de revue.",
+      "steps": "1) Lancer tous les contrôles. 2) Ouvrir une nouvelle session avec le seul dossier. 3) Demander une lecture critique. 4) Combler les manques. 5) Mettre à jour les journaux.",
+      "result": "Un dossier de recherche relu."
+     },
+     {
+      "id": "7.2",
+      "type": "Projet",
+      "title": "Montrer et défendre",
+      "goal": "Présenter sa recherche et expliquer l’usage de l’IA.",
+      "material": "Le dossier du TP 7.1.",
+      "steps": "1) Présenter en cinq minutes. 2) Montrer un contrôle qui a trouvé une erreur. 3) Expliquer une proposition de l’IA refusée. 4) Répondre aux questions. 5) Recueillir l’avis des pairs.",
+      "result": "Un exposé donné et un dossier soutenu."
+     }
+    ],
+    "validation": "Dossier relu et soutenu en direct. Avec les TP des phases, cela donne droit à l’attestation de formation."
+   },
+   "project": {
+    "title": "Mon dossier de recherche",
+    "brief": "La recherche du participant, de la littérature à la communication, vérifiée et soutenue.",
+    "stack": "Claude, ChatGPT ou Gemini, NotebookLM, Zotero, moteurs de recherche scientifique, un notebook en ligne",
+    "deliverable": "Base bibliographique, question de recherche, protocole, une figure, une section vérifiée, un plan de projet, un diaporama et une vulgarisation"
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "Le dossier est un vrai travail sur la recherche du participant, et le système continue de servir après la formation.",
+  "rows": [
+   {
+    "name": "Bibliothèque de prompts",
+    "shows": "Prompts testés et fiche de choix d’outil",
+    "phase": "1",
+    "build": "1.2"
+   },
+   {
+    "name": "Espace de recherche",
+    "shows": "Démarrage, journaux, skills, contrôles, règles",
+    "phase": "2",
+    "build": "2.2"
+   },
+   {
+    "name": "Base bibliographique",
+    "shows": "Bibliothèque, notes sourcées, journal de tri",
+    "phase": "3",
+    "build": "3.3"
+   },
+   {
+    "name": "Question de recherche",
+    "shows": "Synthèse, lacunes et contribution",
+    "phase": "3",
+    "build": "3.4"
+   },
+   {
+    "name": "Étude et résultat",
+    "shows": "Protocole, cahier et figure reproductible",
+    "phase": "4",
+    "build": "4.2"
+   },
+   {
+    "name": "Section vérifiée",
+    "shows": "Texte sourcé qui passe tous les contrôles",
+    "phase": "5",
+    "build": "5.2"
+   },
+   {
+    "name": "Projet et soumission",
+    "shows": "Plan de projet et dossier de soumission",
+    "phase": "5",
+    "build": "5.3"
+   },
+   {
+    "name": "Exposé et vulgarisation",
+    "shows": "Diaporama, questions, support grand public",
+    "phase": "6",
+    "build": "6.2"
+   },
+   {
+    "name": "Dossier de recherche",
+    "shows": "L’ensemble relu et soutenu en direct",
+    "phase": "7",
+    "build": "7.2"
+   }
+  ]
+ },
+ "notes": [
+  "Crédit : le programme s’inspire des cours gratuits d’Anthropic Academy, AI Fluency inclus, des politiques IA des éditeurs et financeurs et de l’aide officielle de chaque outil. La méthode, les exercices et les supports sont ceux du formateur.",
+  "Cette formation est indépendante. Elle n’est ni affiliée à Anthropic, OpenAI, Google ou aux autres éditeurs d’outils, ni parrainée, ni approuvée par eux. Les noms de produits appartiennent à leurs propriétaires.",
+  "Les outils d’IA et de recherche évoluent souvent : ils sont vérifiés avant chaque réalisation. Les TP utilisent d’abord Claude et montrent la même étape dans les autres outils quand elle existe. Seuls des outils en ligne sont utilisés.",
+  "Les participants utilisent leur propre recherche ou les exemples du formateur. Aucune donnée confidentielle, inédite d’un tiers ou de participants n’est téléversée. Les offres payantes au-delà des offres gratuites ne sont pas incluses."
+ ],
+ "lang": "fr"
+}

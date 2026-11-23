@@ -2136,6 +2136,55 @@
           ]
         ]
       }
+    },
+    "ai-for-researchers": {
+      "code": "AI-RESEARCH",
+      "outcomes": {
+        "en": [
+          [
+            "Find, screen and note the literature",
+            "with AI, every source checked"
+          ],
+          [
+            "Build a research system:",
+            "workspace, skills, automatic checks and clear rules"
+          ],
+          [
+            "Design the study and analyse data,",
+            "quantitative or qualitative, reproducibly"
+          ],
+          [
+            "Write, audit citations and prepare proposals",
+            "with a referee review before the real one"
+          ],
+          [
+            "Present and explain the research",
+            "to committees, conferences and the public"
+          ]
+        ],
+        "fr": [
+          [
+            "Trouver, trier et annoter la littérature",
+            "avec l’IA, chaque source vérifiée"
+          ],
+          [
+            "Construire son système de recherche :",
+            "espace, skills, contrôles automatiques et règles"
+          ],
+          [
+            "Concevoir l’étude et analyser les données,",
+            "quantitatives ou qualitatives, de façon reproductible"
+          ],
+          [
+            "Rédiger, auditer les citations, préparer ses projets",
+            "avec une relecture avant le vrai relecteur"
+          ],
+          [
+            "Présenter et expliquer sa recherche",
+            "aux comités, aux conférences et au public"
+          ]
+        ]
+      }
     }
   }
 }
