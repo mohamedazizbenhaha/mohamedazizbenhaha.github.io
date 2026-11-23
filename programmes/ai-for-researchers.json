@@ -1,0 +1,515 @@
+{
+ "slug": "ai-for-researchers",
+ "file": "AI-for-Researchers-30h.docx",
+ "title": "AI for Researchers",
+ "subtitle": "Literature, data, writing, review and communication with a research system that checks itself",
+ "audience_line": "Doctoral students, researchers and supervisors in every field who want faster, verifiable research with Claude, ChatGPT or Gemini",
+ "certifications": [],
+ "buffer": 3,
+ "buffer_fixed": true,
+ "labels": {
+  "portfolio_kicker": "What each participant leaves with",
+  "portfolio": "Your research pack and system",
+  "portfolio_cols": [
+   "#",
+   "Component",
+   "What it does",
+   "Phase",
+   "Built in"
+  ]
+ },
+ "overview": "This programme takes researchers from what an LLM can and cannot do to a research system that checks its own work. Each participant works on their own thesis chapter or paper: literature, notes, study design, quantitative or qualitative analysis, drafting in their own voice, citation audit, proposals, referee review before the real one and communication, then defends the whole pack.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Doctoral students, researchers, supervisors and R&D teams, in every field"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Comfortable computer use, basic written English and a research project. No AI or coding needed"
+  },
+  {
+   "label": "Duration",
+   "value": "30 h: 27 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "About one third explanation, two thirds practice on the participant’s own research, then review and defence"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop, online tools only; a paid Claude plan (Pro minimum), free ChatGPT, Gemini, NotebookLM, Zotero and online notebook accounts; a sample paper, dataset, templates and checklists from the trainer"
+  },
+  {
+   "label": "Official resources",
+   "value": "Anthropic Academy free courses, publisher and funder AI policies, help of each tool"
+  },
+  {
+   "label": "Assessment",
+   "value": "A validated practice in each phase and a research pack defended live; certificate of completion"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants carry their research from literature to communication with AI, and can show that every claim and reference has been checked"
+  }
+ ],
+ "phases": [
+  {
+   "name": "First Steps",
+   "hours": 3.0,
+   "focus": "LLMs, limits, prompting, tokens",
+   "intro": "What an LLM is, what it can and cannot do, and why research needs stricter checks than daily use.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "LLMs in Research: What They Can & Cannot Do",
+     "content": "How an LLM is trained and writes token by token. Research failures: invented references, real DOIs with invented titles, distorted findings, outdated facts, flattery and bias. What search and tools add. Unpublished data and confidentiality. The researcher stays the author and is responsible.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Prompting, Context & Tokens",
+     "content": "Claude, ChatGPT, Gemini and NotebookLM: which one for which job. Privacy settings and training on your data. Prompting: role, goal, field, example, constraints, format; letting the AI interview you. Tokens, plan limits, model choice and economical habits.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants know when to trust an AI, how to brief it and what uses up their plan.",
+    "items": [
+     {
+      "id": "1.1",
+      "type": "Lab",
+      "title": "Find the limits",
+      "goal": "See for yourself when to trust an LLM and when to check.",
+      "material": "Claude and ChatGPT; eight test questions from the trainer, from the participants’ fields.",
+      "steps": "1) Predict where the AI will fail. 2) Ask for references on a niche topic. 3) Check each one. 4) Name the cause of each failure. 5) Sort ten research tasks.",
+      "result": "A trust map: delegate, check or keep."
+     },
+     {
+      "id": "1.2",
+      "type": "Lab",
+      "title": "Clear prompts, fewer tokens",
+      "goal": "Get a better answer for less usage.",
+      "material": "Claude, ChatGPT; three weak research prompts.",
+      "steps": "1) Set privacy in each tool. 2) Rewrite the three prompts. 3) Run one task in two tools and on two models. 4) Compare quality and usage.",
+      "result": "A prompt library and a \"which tool, which model\" card."
+     }
+    ],
+    "validation": "A trust map and three improved prompts."
+   }
+  },
+  {
+   "name": "Basics & System",
+   "hours": 3.0,
+   "focus": "Workspace, skills, checks, rules",
+   "intro": "A research system set up on the participant’s own project, then used in every later phase.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "A Research Workspace",
+     "content": "One space per project: strategy, lab notebook, each paper, each report. A start-here file, a progress log and a decision log so any session resumes in minutes. Projects and instructions in Claude and ChatGPT, notebooks in NotebookLM. Sharing with supervisors and co-authors, versions and backups.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Reusable Skills, Automatic Checks & Rules",
+     "content": "Skills and custom GPTs for repeated research tasks. Automatic checks: a task is not done until its checks pass, and a fresh session reviews what another wrote. Rules: research integrity, ethics approval, participant data, publisher and funder AI policies, disclosing AI use.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, each participant has a research workspace with automatic checks and clear rules.",
+    "items": [
+     {
+      "id": "2.1",
+      "type": "Lab",
+      "title": "Set up my research",
+      "goal": "Give the AI the context of a real project once.",
+      "material": "The participant’s project files; Claude, NotebookLM; workspace templates from the trainer.",
+      "steps": "1) Gather the project files. 2) Write the start-here file. 3) Start the progress and decision logs. 4) Create the project and test with five questions. 5) Close and resume from the start-here file only.",
+      "result": "A research workspace that resumes in a fresh session."
+     },
+     {
+      "id": "2.2",
+      "type": "Lab",
+      "title": "A system that checks itself",
+      "goal": "Turn repeated work and checks into reusable parts.",
+      "material": "A skill template, a checklist template and the AI policy of a target journal.",
+      "steps": "1) Write one research skill. 2) Write one automatic check. 3) Run it on a sample text. 4) Fill the rules sheet. 5) Write the AI disclosure for the target journal.",
+      "result": "A skill, a working check and a rules sheet."
+     }
+    ],
+    "validation": "A configured workspace, a first check and a signed-off rules sheet."
+   }
+  },
+  {
+   "name": "Literature",
+   "hours": 6.0,
+   "focus": "Search, notes, systematic review, synthesis",
+   "intro": "From a broad topic to a screened, noted and synthesised literature and a precise research question.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Finding Papers",
+     "content": "Search engines for research: Semantic Scholar, Google Scholar, Consensus, Elicit, deep research modes. Citation maps and related-paper tools. Search strings, keeping a search log, alerts for new work.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Reference Manager & Reading Notes",
+     "content": "Zotero for the library and the citations. Reading with AI without replacing reading: NotebookLM grounded on chosen PDFs, one note per paper and one note per concept, each claim linked to its page. Keeping notes in sync when papers are added or removed.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Systematic & Scoping Reviews",
+     "content": "Protocol, inclusion and exclusion criteria, PRISMA flow, screening titles and abstracts with AI and a human check, data extraction tables, risk of bias, recording every decision.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Synthesis, Gaps & Research Question",
+     "content": "Grouping findings by theme, method or result, contradictions between studies, a knowledge graph of concepts, finding the gap, writing a precise research question and its contribution.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants have a checked literature base and a research question it supports.",
+    "items": [
+     {
+      "id": "3.1",
+      "type": "Lab",
+      "title": "Map the literature",
+      "goal": "Find the important work on a topic quickly and traceably.",
+      "material": "Semantic Scholar, one AI research engine and a citation map tool.",
+      "steps": "1) Write the search question and string. 2) Run it in two engines. 3) Follow citations forward and back. 4) Log every search. 5) Set an alert.",
+      "result": "A first set of papers and a search log."
+     },
+     {
+      "id": "3.2",
+      "type": "Lab",
+      "title": "A notes vault",
+      "goal": "Turn PDFs into reusable, sourced notes.",
+      "material": "Zotero, NotebookLM; ten papers from 3.1; a note template.",
+      "steps": "1) Import the papers into Zotero. 2) Load them in a notebook. 3) Write three paper notes with page links. 4) Write two concept notes. 5) Check five claims against the PDF.",
+      "result": "A reference library and a sourced notes vault."
+     },
+     {
+      "id": "3.3",
+      "type": "Lab",
+      "title": "Screen with a second reader",
+      "goal": "Screen fast without losing rigour.",
+      "material": "A set of 60 records; a screening and extraction template.",
+      "steps": "1) Write the criteria. 2) Screen 20 records yourself. 3) Let the AI screen all 60. 4) Measure agreement and resolve conflicts. 5) Extract data from five included papers.",
+      "result": "A screening log, a PRISMA count and an extraction table."
+     },
+     {
+      "id": "3.4",
+      "type": "Lab",
+      "title": "Find the gap",
+      "goal": "Move from what is known to what to ask.",
+      "material": "The notes vault and the extraction table.",
+      "steps": "1) Group the findings. 2) Build a concept map or knowledge graph. 3) List contradictions and gaps. 4) Draft three questions. 5) Ask the AI to attack each, then choose one.",
+      "result": "A synthesis table and a research question with its contribution."
+     }
+    ],
+    "validation": "A reference library, reading notes, a screening log and a research question."
+   }
+  },
+  {
+   "name": "Experiments & Data",
+   "hours": 3.0,
+   "focus": "Study design, notebook, analysis, figures",
+   "intro": "The question becomes a study, the study becomes data, and the data becomes checked results.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Study Design & Lab Notebook",
+     "content": "Hypothesis, variables, sample, controls and threats to validity, or interview and corpus design. A dated lab notebook, a status for each entry, raw data kept untouched and traceable, a data management plan.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Analysis & Figures, Quantitative or Qualitative",
+     "content": "Online notebooks for statistics and plots, choosing and checking a test, assumptions, effect sizes. Qualitative coding of interviews or texts with AI and a human check. Reproducible figures and tables rebuilt from raw data.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants have a study plan, a working notebook and one reproducible result.",
+    "items": [
+     {
+      "id": "4.1",
+      "type": "Lab",
+      "title": "Plan and record",
+      "goal": "Design a sound study and record it so others can trust it.",
+      "material": "The research question; protocol and notebook templates.",
+      "steps": "1) Draft the protocol. 2) Ask the AI for threats to validity. 3) Revise. 4) Write two notebook entries. 5) Store sample raw data read-only with a checksum.",
+      "result": "A protocol and a traceable notebook."
+     },
+     {
+      "id": "4.2",
+      "type": "Lab",
+      "title": "From raw data to a figure",
+      "goal": "Produce one result anyone can rebuild.",
+      "material": "An online notebook; the trainer’s sample dataset or the participant’s own.",
+      "steps": "1) Describe the data to the AI. 2) Choose and justify the analysis. 3) Run it in the notebook. 4) Check the assumptions. 5) Rebuild the figure from raw data.",
+      "result": "A checked analysis and a reproducible figure."
+     }
+    ],
+    "validation": "A study protocol, notebook entries and a figure rebuilt from raw data."
+   }
+  },
+  {
+   "name": "Writing & Review",
+   "hours": 6.0,
+   "focus": "Drafting, checks, proposals, referee review",
+   "intro": "From notes to text that survives checks, editors and referees.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Drafting from Notes, in Your Own Voice",
+     "content": "Structure of papers and thesis chapters, drafting from the notes vault rather than from memory, keeping the author’s voice and argument, marking which parts the AI drafted, revising.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "Checks: Citations & Prose",
+     "content": "Citation audit: each reference exists, says what is claimed and is not retracted. Prose check: overclaiming, hedge stacking, filler and typical AI phrasing. Running both as automatic checks before calling a section done.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Proposals & Submission",
+     "content": "Funding and thesis proposals: aims, methods, impact, work plan, budget logic. Choosing a journal or conference, cover letter, AI disclosure, formatting and the submission checklist.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.4",
+     "title": "Referee Before the Referee",
+     "content": "A critical review by AI in a fresh session given only the manuscript, a ruling on each point, answering real reviewers point by point. Refereeing ethically: never uploading a manuscript you review.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants have a checked section, a proposal outline and a review they answered.",
+    "items": [
+     {
+      "id": "5.1",
+      "type": "Lab",
+      "title": "Draft a section",
+      "goal": "Write a section grounded in your sources.",
+      "material": "The notes vault, the result from 4.2 and a section template.",
+      "steps": "1) Outline the section. 2) Draft it from the notes. 3) Mark AI-drafted spans. 4) Rewrite them in your voice. 5) Link every claim to a note.",
+      "result": "A drafted section with every claim sourced."
+     },
+     {
+      "id": "5.2",
+      "type": "Lab",
+      "title": "Pass the checks",
+      "goal": "Remove every unsupported claim and inflated sentence.",
+      "material": "The drafted section; citation verification tools; the prose checklist.",
+      "steps": "1) Audit every reference. 2) Fix or remove the failures. 3) Run the prose check. 4) Remove overclaiming. 5) Re-run until both pass.",
+      "result": "A section that passes the citation and prose checks."
+     },
+     {
+      "id": "5.3",
+      "type": "Lab",
+      "title": "Prepare to ask and to submit",
+      "goal": "Turn the research into a proposal and a submission.",
+      "material": "A call for proposals and a target journal’s guide.",
+      "steps": "1) Outline the proposal against the call. 2) Draft the aims. 3) Shortlist three journals with reasons. 4) Draft the cover letter. 5) Fill the submission checklist.",
+      "result": "A proposal outline and a submission pack."
+     },
+     {
+      "id": "5.4",
+      "type": "Lab",
+      "title": "Survive review",
+      "goal": "Find the weak points before a referee does.",
+      "material": "The checked section; a review template; a sample review letter.",
+      "steps": "1) Open a fresh session with the manuscript only. 2) Ask for a referee report. 3) Rule on each point. 4) Revise. 5) Answer the sample review letter.",
+      "result": "A pre-review with rulings and a response to reviewers."
+     }
+    ],
+    "validation": "A paper or thesis section that passes every check, a proposal outline and a response to review."
+   }
+  },
+  {
+   "name": "Communicate",
+   "hours": 3.0,
+   "focus": "Talks, posters, reports, explainers",
+   "intro": "The research reaches committees, conferences and the public.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Talks, Posters, Reports & Defence",
+     "content": "Conference talks, posters, progress reports for a thesis committee, defence preparation: structure, one message per slide, figures, speaker notes, likely questions.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "6.2",
+     "title": "Explainer Videos, Podcasts & Plain-Language Summaries",
+     "content": "Scripts, audio and video overviews, narration, subtitles, plain-language and graphical abstracts, social posts. Accuracy and what must not be simplified away.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants have a talk and an explainer for their research.",
+    "items": [
+     {
+      "id": "6.1",
+      "type": "Lab",
+      "title": "Present the work",
+      "goal": "Explain the research clearly in a few minutes.",
+      "material": "The figure and section; a deck and a poster template.",
+      "steps": "1) Write the one-sentence message. 2) Outline the talk. 3) Generate and edit the deck. 4) Write the speaker notes. 5) List ten likely questions and answers.",
+      "result": "A five-minute deck and a question sheet."
+     },
+     {
+      "id": "6.2",
+      "type": "Lab",
+      "title": "Explain it to anyone",
+      "goal": "Make the research understandable outside the field.",
+      "material": "The section; NotebookLM; a narration tool.",
+      "steps": "1) Write a plain-language summary. 2) Script a two-minute explainer. 3) Produce the audio or video. 4) Check it for accuracy. 5) Draft a graphical abstract.",
+      "result": "A plain-language summary and an explainer."
+     }
+    ],
+    "validation": "A short deck and one explainer."
+   }
+  },
+  {
+   "name": "Project",
+   "hours": 3.0,
+   "focus": "A research pack, reviewed and defended",
+   "intro": "Each participant reviews and defends the research pack built through the phases.",
+   "chapters": [
+    {
+     "id": "7.1",
+     "title": "Fresh-Session Review",
+     "content": "An independent review of the whole pack by a session that did not write it: checks first, then a critical reading against the research question. Fixing the gaps.",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "7.2",
+     "title": "Talk & Defence",
+     "content": "A five-minute talk on the research, then questions on the method, the checks and the use of AI.",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants prove they can run their research with AI and show it was checked.",
+    "items": [
+     {
+      "id": "7.1",
+      "type": "Project",
+      "title": "Cold read",
+      "goal": "Audit your own pack as an outsider would.",
+      "material": "The participant’s research pack; the review checklist.",
+      "steps": "1) Run every check. 2) Open a fresh session with the pack only. 3) Ask for a critical read. 4) Fix the gaps. 5) Update the progress and decision logs.",
+      "result": "A reviewed research pack."
+     },
+     {
+      "id": "7.2",
+      "type": "Project",
+      "title": "Show and defend",
+      "goal": "Present the research and explain how AI was used.",
+      "material": "The pack from 7.1.",
+      "steps": "1) Present in five minutes. 2) Show one check that caught an error. 3) Explain one AI output you rejected. 4) Answer questions. 5) Collect peer feedback.",
+      "result": "A talk given and a pack defended."
+     }
+    ],
+    "validation": "Research pack reviewed and defended live. With the phase practices, this earns the certificate of completion."
+   },
+   "project": {
+    "title": "My research pack",
+    "brief": "The participant’s own research taken from literature to communication, checked and defended.",
+    "stack": "Claude, ChatGPT or Gemini, NotebookLM, Zotero, research search engines, an online notebook",
+    "deliverable": "Literature base, research question, protocol, a figure, a checked section, a proposal outline, a deck and an explainer"
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "The research pack is real work on the participant’s own project, and the system keeps working after the course.",
+  "rows": [
+   {
+    "name": "Prompt library",
+    "shows": "Tested prompts and a tool choice card",
+    "phase": "1",
+    "build": "1.2"
+   },
+   {
+    "name": "Research workspace",
+    "shows": "Start-here, logs, skills, checks and rules",
+    "phase": "2",
+    "build": "2.2"
+   },
+   {
+    "name": "Literature base",
+    "shows": "Library, sourced notes and screening log",
+    "phase": "3",
+    "build": "3.3"
+   },
+   {
+    "name": "Research question",
+    "shows": "Synthesis, gaps and contribution",
+    "phase": "3",
+    "build": "3.4"
+   },
+   {
+    "name": "Study & result",
+    "shows": "Protocol, notebook and a reproducible figure",
+    "phase": "4",
+    "build": "4.2"
+   },
+   {
+    "name": "Checked section",
+    "shows": "Sourced draft that passes every check",
+    "phase": "5",
+    "build": "5.2"
+   },
+   {
+    "name": "Proposal & submission",
+    "shows": "Proposal outline and submission pack",
+    "phase": "5",
+    "build": "5.3"
+   },
+   {
+    "name": "Talk & explainer",
+    "shows": "Deck, questions and a public explainer",
+    "phase": "6",
+    "build": "6.2"
+   },
+   {
+    "name": "Research pack",
+    "shows": "All of it reviewed and defended live",
+    "phase": "7",
+    "build": "7.2"
+   }
+  ]
+ },
+ "notes": [
+  "Credit: the curriculum draws on the free Anthropic Academy courses, AI Fluency included, publisher and funder AI policies and the official help of each tool. The method, exercises and teaching material are the trainer’s own.",
+  "This is an independent training, not affiliated with, sponsored or endorsed by Anthropic, OpenAI, Google or the other tool makers. Product names belong to their respective owners.",
+  "AI and research tools change often: they are checked before each delivery. Labs use Claude first and show the same step in other tools where it exists. Only online tools are used.",
+  "Participants use their own research or the trainer’s samples. No confidential, unpublished third-party or participant data is uploaded. Paid plans beyond the free tiers are not included."
+ ]
+}

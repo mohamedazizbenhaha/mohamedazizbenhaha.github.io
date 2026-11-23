@@ -1,0 +1,501 @@
+{
+ "slug": "genai-for-trainers",
+ "file": "GenAI-for-Trainers-and-Teachers-30h.docx",
+ "title": "Generative AI for Trainers and Teachers",
+ "subtitle": "Research, design and produce a complete course with AI: deck, media, labs and assessment",
+ "audience_line": "Trainers and teachers who want to prepare better courses in less time, with Claude, ChatGPT or Gemini",
+ "certifications": [],
+ "buffer": 3,
+ "buffer_fixed": true,
+ "labels": {
+  "portfolio_kicker": "What each participant leaves with",
+  "portfolio": "Your course pack and system",
+  "portfolio_cols": [
+   "#",
+   "Component",
+   "What it does",
+   "Phase",
+   "Built in"
+  ]
+ },
+ "overview": "This programme takes trainers and teachers from what an LLM can and cannot do to a complete course pack produced with AI. Each participant works on a real course of their own from the first day. They build a teaching system: a course workspace, reusable skills and templates, and clear rules on data, copyright and integrity. With it they research and check sources, design the syllabus, write the lessons, produce the deck, infographics, explainer videos and demos, then labs, quizzes and assessments fit for the AI era. They finish by reviewing the pack and teaching a sample live.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Independent trainers, training centre staff, university and college teachers, secondary teachers"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Comfortable computer use and basic written English. A course they teach or will teach. No AI background needed"
+  },
+  {
+   "label": "Duration",
+   "value": "30 h: 27 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "About one third explanation, two thirds practice on the participant’s own course, ending with a review and a live sample lesson"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant; a paid Claude plan (Pro minimum), free ChatGPT, Gemini and NotebookLM accounts; free tiers of the media tools used; a sample course pack and templates from the trainer"
+  },
+  {
+   "label": "Official resources",
+   "value": "Anthropic Academy free courses, AI Fluency included, and the official help of each tool"
+  },
+  {
+   "label": "Assessment",
+   "value": "A validated practice in each phase and a course pack presented with a live sample lesson; certificate of completion"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants produce a checked, ready-to-teach course with AI and keep a system that makes the next one faster"
+  }
+ ],
+ "phases": [
+  {
+   "name": "First Steps",
+   "hours": 3.0,
+   "focus": "LLMs, limits, prompting, tokens",
+   "intro": "What an LLM is, what it can and cannot do, and how a teacher should work with it.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "LLMs: What They Can & Cannot Do",
+     "content": "How an LLM is trained and writes token by token. Strengths and limits: invented facts and references, knowledge cutoff, limited context, flattery, bias, and what search and tools add. How to work with one: what to delegate, how to describe it, how to check it, why the teacher stays responsible.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Prompting, Context & Tokens",
+     "content": "Claude, ChatGPT, Gemini and NotebookLM: which one for which job. Privacy settings and student data. Prompting: role, goal, audience level, example, constraints, format; letting the AI interview you. Tokens, plan limits, model choice and economical habits.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants know when to trust an AI, how to brief it and what uses up their plan.",
+    "items": [
+     {
+      "id": "1.1",
+      "type": "Lab",
+      "title": "Find the limits",
+      "goal": "See for yourself when to trust an LLM and when to check.",
+      "material": "Claude and ChatGPT; eight test questions from the trainer, from the participants’ subjects.",
+      "steps": "1) Predict where the AI will fail. 2) Test facts, references, recent events and a calculation. 3) Name the cause of each failure. 4) Retry with a source or a tool. 5) Sort ten teaching tasks.",
+      "result": "A trust map: delegate, check or keep."
+     },
+     {
+      "id": "1.2",
+      "type": "Lab",
+      "title": "Clear prompts, fewer tokens",
+      "goal": "Get a better answer for less usage.",
+      "material": "Claude, ChatGPT; three weak teaching prompts.",
+      "steps": "1) Set privacy in each tool. 2) Rewrite the three prompts. 3) Run one task in two tools and on two models. 4) Compare quality and usage.",
+      "result": "A prompt library and a \"which tool, which model\" card."
+     }
+    ],
+    "validation": "A trust map and three improved prompts."
+   }
+  },
+  {
+   "name": "Basics & System",
+   "hours": 3.0,
+   "focus": "Workspace, skills, templates, rules",
+   "intro": "A teaching system set up on the participant’s own course, then extended in every later phase.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "A Course Workspace",
+     "content": "Projects in Claude and ChatGPT, Gems in Gemini, notebooks in NotebookLM. Instructions, uploaded files, memory and connectors (Drive, mail, calendar). What to put in, what to keep out, how to restart a session from a short brief.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Reusable Parts & Rules",
+     "content": "Skills, custom GPTs and Gems: write once, reuse for every course. A style guide and templates. Rules: student data protection, copyright and licences of generated material, disclosing AI use, accessibility.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, each participant has a course workspace and the rules that frame its use.",
+    "items": [
+     {
+      "id": "2.1",
+      "type": "Lab",
+      "title": "Set up my course",
+      "goal": "Give the AI the context of a real course once.",
+      "material": "The participant’s course material; Claude, ChatGPT and NotebookLM.",
+      "steps": "1) Gather the course files. 2) Write the course brief: audience, level, hours, tone. 3) Create the project and the notebook. 4) Test with five questions. 5) Shorten the brief until it still works.",
+      "result": "A course workspace tested in a fresh session."
+     },
+     {
+      "id": "2.2",
+      "type": "Lab",
+      "title": "Build your toolkit",
+      "goal": "Turn repeated work into reusable parts within clear rules.",
+      "material": "A skill template, a style guide template and a rules checklist from the trainer.",
+      "steps": "1) Write a style guide for the course. 2) Turn it into a skill or a custom GPT. 3) Test it on one lesson. 4) Fill the rules checklist. 5) Reject one use that breaks a rule.",
+      "result": "A first skill, a style guide and a rules sheet."
+     }
+    ],
+    "validation": "A configured course workspace and a signed-off rules sheet."
+   }
+  },
+  {
+   "name": "Research & Design",
+   "hours": 6.0,
+   "focus": "Sources, checking, syllabus, lessons",
+   "intro": "From a topic to a checked, aligned course plan and its lesson notes.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Research with AI",
+     "content": "Web search and deep research modes, scholarly search tools, NotebookLM grounded on chosen documents. Writing a research question, keeping track of what was searched, recent developments in a field.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Checking & Citing Sources",
+     "content": "Invented and distorted references, real references with wrong content, outdated facts, retracted papers. Checking a claim against its source, citation styles and reference managers. Teaching students the same checks.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Objectives, Syllabus & Hours",
+     "content": "Learning objectives by level, constructive alignment between objectives, activities and assessment, prerequisites, sequencing and hours. Adapting a syllabus to a training centre format or a university course sheet.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Lesson Content at the Right Level",
+     "content": "Lesson notes, explanations at several levels, examples and analogies from the learners’ context, worked examples, glossary, speaker notes. Keeping the teacher’s voice and checking every fact.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants have a syllabus built on checked sources and the notes for their lessons.",
+    "items": [
+     {
+      "id": "3.1",
+      "type": "Lab",
+      "title": "Map the field",
+      "goal": "Collect the best material on a course topic quickly.",
+      "material": "Claude with research, NotebookLM and one scholarly search tool.",
+      "steps": "1) Write three research questions. 2) Run a deep research. 3) Load the best sources in a notebook. 4) Ask for a map of the topic. 5) List what is missing.",
+      "result": "A topic map and a list of selected sources."
+     },
+     {
+      "id": "3.2",
+      "type": "Lab",
+      "title": "Trust, but check",
+      "goal": "Remove every unsupported claim before it reaches students.",
+      "material": "The output of 3.1; a list of planted false references.",
+      "steps": "1) Check each reference exists. 2) Check it says what is claimed. 3) Flag outdated facts. 4) Format the citations. 5) Write a checking card for students.",
+      "result": "A checked source file and a checking card."
+     },
+     {
+      "id": "3.3",
+      "type": "Lab",
+      "title": "Design the course",
+      "goal": "Turn a topic into an aligned, timed plan.",
+      "material": "The source file and the participant’s course brief; a syllabus template.",
+      "steps": "1) Write measurable objectives. 2) Link each to an activity and an assessment. 3) Sequence the sessions. 4) Assign hours. 5) Ask the AI to criticise the plan, then decide.",
+      "result": "An aligned syllabus, approved by the trainer."
+     },
+     {
+      "id": "3.4",
+      "type": "Lab",
+      "title": "Write two lessons",
+      "goal": "Produce clear lesson notes for the planned audience.",
+      "material": "The syllabus and the course workspace.",
+      "steps": "1) Draft lesson one. 2) Rewrite one part for a weaker and a stronger group. 3) Add examples from the learners’ field. 4) Check the facts. 5) Draft lesson two with the skill.",
+      "result": "Two lessons, checked and in the teacher’s style."
+     }
+    ],
+    "validation": "A source file, an approved syllabus and two lessons written."
+   }
+  },
+  {
+   "name": "Decks & Support Materials",
+   "hours": 6.0,
+   "focus": "Slides, visuals, video, demos",
+   "intro": "The lesson notes become the materials students see, hear and use.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Slide Decks",
+     "content": "From lesson notes to a deck: structure, one idea per slide, visual hierarchy, speaker notes. Generating PowerPoint and Google Slides files, deck tools, applying an institution template, editing by hand.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Infographics, Diagrams & Images",
+     "content": "Infographics, process and concept diagrams, timelines, charts from data, image generation and editing. Accuracy of visuals, licences and alt text.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Explainer Videos & Audio",
+     "content": "Scripts and storyboards, AI narration, audio and video overviews, screen recordings, subtitles and translation. Length, pace and what students actually watch.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.4",
+     "title": "Live Demos & Interactive Simulations",
+     "content": "Interactive pages built by AI: simulations, calculators, step-by-step visualisations, small games. Sharing them with students, testing on a phone, keeping a copy.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants have the deck and support materials for their lessons.",
+    "items": [
+     {
+      "id": "4.1",
+      "type": "Lab",
+      "title": "Build the deck",
+      "goal": "Produce a clear deck from a written lesson.",
+      "material": "Lesson one; an institution slide template.",
+      "steps": "1) Outline the slides. 2) Generate the deck. 3) Apply the template. 4) Cut text, add visuals. 5) Write the speaker notes.",
+      "result": "A deck ready to teach."
+     },
+     {
+      "id": "4.2",
+      "type": "Lab",
+      "title": "Show, not tell",
+      "goal": "Explain one hard idea with a visual.",
+      "material": "Claude artifacts, a diagram tool and an image tool.",
+      "steps": "1) Pick the hardest idea of the lesson. 2) Draft an infographic. 3) Draw one diagram. 4) Generate or edit one image. 5) Check accuracy and add alt text.",
+      "result": "An infographic, a diagram and an image, checked."
+     },
+     {
+      "id": "4.3",
+      "type": "Lab",
+      "title": "A three-minute explainer",
+      "goal": "Turn a key idea into a short video.",
+      "material": "The deck; NotebookLM; a screen recorder and a narration tool.",
+      "steps": "1) Write a three-minute script. 2) Storyboard it on the deck. 3) Record or generate the narration. 4) Assemble and subtitle. 5) Make an audio overview of the lesson.",
+      "result": "A short explainer video and an audio summary."
+     },
+     {
+      "id": "4.4",
+      "type": "Lab",
+      "title": "Make it interactive",
+      "goal": "Let students try the idea themselves.",
+      "material": "Claude artifacts; one concept from the lesson.",
+      "steps": "1) Choose a concept students must manipulate. 2) Describe the simulation. 3) Build and test it. 4) Fix it on phone width. 5) Write the class activity around it.",
+      "result": "A working simulation and its activity sheet."
+     }
+    ],
+    "validation": "A deck, an infographic, a short explainer video and a live demo."
+   }
+  },
+  {
+   "name": "Practice & Assessment",
+   "hours": 6.0,
+   "focus": "Labs, quizzes, AI-era assessment, grading",
+   "intro": "Students practise and are assessed in a world where they also use AI.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Labs & Exercises with Answer Keys",
+     "content": "Exercises by level, case studies, lab sheets, datasets and starter files, answer keys and hints. Varying exercises so each student gets a different version.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "Quizzes, Exams & Learning Platforms",
+     "content": "Question types, good distractors, difficulty, question banks. Export to Moodle and other learning platforms (GIFT, Aiken, QTI, spreadsheets), forms and interactive quizzes.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Assessment in the AI Era",
+     "content": "What AI can do for a student, and assessments it cannot: process evidence, oral defence, personal context, in-class work, drafts with history. Why AI detectors fail. A clear AI use policy for students.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.4",
+     "title": "Rubrics, Grading & Feedback",
+     "content": "Rubrics linked to objectives, consistent marking, feedback that helps, AI-assisted feedback on anonymised work, what must never be uploaded, keeping the final decision human.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants have practice and assessment material they can defend.",
+    "items": [
+     {
+      "id": "5.1",
+      "type": "Lab",
+      "title": "Design a lab",
+      "goal": "Give students practice that matches the objectives.",
+      "material": "The syllabus objectives; a lab sheet template.",
+      "steps": "1) Pick two objectives. 2) Draft the lab. 3) Generate the answer key and hints. 4) Solve it yourself. 5) Create three variants.",
+      "result": "A lab sheet, its key and three variants."
+     },
+     {
+      "id": "5.2",
+      "type": "Lab",
+      "title": "Build a quiz bank",
+      "goal": "Produce checked questions ready to import.",
+      "material": "Lesson notes; a learning platform test course.",
+      "steps": "1) Generate twenty questions. 2) Check answers and distractors. 3) Tag by objective and difficulty. 4) Export and import them. 5) Run the quiz as a student.",
+      "result": "A quiz bank imported into a learning platform."
+     },
+     {
+      "id": "5.3",
+      "type": "Lab",
+      "title": "AI-proof my assessment",
+      "goal": "Keep assessment meaningful when students use AI.",
+      "material": "An existing assignment from the participant; a policy template.",
+      "steps": "1) Ask the AI to complete the assignment. 2) Mark what it got right. 3) Redesign the task. 4) Test again. 5) Write the student AI policy.",
+      "result": "A redesigned assessment and a student AI policy."
+     },
+     {
+      "id": "5.4",
+      "type": "Lab",
+      "title": "Fair and fast feedback",
+      "goal": "Grade consistently and give useful feedback.",
+      "material": "The redesigned assessment; three anonymised sample answers.",
+      "steps": "1) Write the rubric. 2) Mark the samples yourself. 3) Ask the AI for feedback with the rubric. 4) Compare and correct. 5) Write a feedback template.",
+      "result": "A rubric, three marked samples and a feedback template."
+     }
+    ],
+    "validation": "A lab with its key, a quiz bank, an assessment plan with an AI policy, and a rubric."
+   }
+  },
+  {
+   "name": "Project",
+   "hours": 3.0,
+   "focus": "A complete course pack, taught live",
+   "intro": "Each participant finishes, reviews and presents the course built through the phases.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Review & Finish",
+     "content": "Review of the whole pack: accuracy, level, alignment, accessibility, consistency of style and licences. Filling the gaps with the system built in the course.",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "6.2",
+     "title": "Teach & Present",
+     "content": "A ten-minute sample lesson with the materials, then a presentation of the pack, the system and the choices made.",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants prove they can produce a ready-to-teach course with AI without guidance.",
+    "items": [
+     {
+      "id": "6.1",
+      "type": "Project",
+      "title": "Ready to teach",
+      "goal": "Check the whole course as a quality reviewer would.",
+      "material": "The participant’s course pack; a review checklist.",
+      "steps": "1) Review each item with the checklist. 2) Ask the AI to act as a critical student. 3) Fix the gaps. 4) Check licences and alt text. 5) Package the pack.",
+      "result": "A reviewed course pack."
+     },
+     {
+      "id": "6.2",
+      "type": "Project",
+      "title": "Show and defend",
+      "goal": "Teach with the pack and explain how it was made.",
+      "material": "The pack from 6.1.",
+      "steps": "1) Teach ten minutes to the group. 2) Use one demo or video. 3) Present the pack. 4) Explain one AI output you rejected. 5) Collect peer feedback.",
+      "result": "A sample lesson taught and a pack defended."
+     }
+    ],
+    "validation": "Course pack reviewed and a sample lesson taught live. With the phase practices, this earns the certificate of completion."
+   },
+   "project": {
+    "title": "My course pack",
+    "brief": "A complete course of the participant’s own, from sources to assessment, reviewed and taught live.",
+    "stack": "Claude, ChatGPT or Gemini, NotebookLM, the participant’s system, media tools",
+    "deliverable": "Syllabus, lessons, deck, media, lab, quiz bank, assessment and a ten-minute sample lesson"
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "The course built in class is ready to teach, and the system makes the next one faster.",
+  "rows": [
+   {
+    "name": "Prompt library",
+    "shows": "Tested prompts and a tool choice card",
+    "phase": "1",
+    "build": "1.2"
+   },
+   {
+    "name": "Course workspace",
+    "shows": "Brief, files, skill, style guide and rules",
+    "phase": "2",
+    "build": "2.2"
+   },
+   {
+    "name": "Source file",
+    "shows": "Selected and checked sources, cited",
+    "phase": "3",
+    "build": "3.2"
+   },
+   {
+    "name": "Syllabus & lessons",
+    "shows": "Aligned plan and lesson notes",
+    "phase": "3",
+    "build": "3.4"
+   },
+   {
+    "name": "Deck",
+    "shows": "Slides with speaker notes in the template",
+    "phase": "4",
+    "build": "4.1"
+   },
+   {
+    "name": "Media kit",
+    "shows": "Infographic, video, audio and a simulation",
+    "phase": "4",
+    "build": "4.4"
+   },
+   {
+    "name": "Practice bank",
+    "shows": "Lab with key and a quiz bank",
+    "phase": "5",
+    "build": "5.2"
+   },
+   {
+    "name": "Assessment kit",
+    "shows": "AI-era assessment, policy, rubric, feedback",
+    "phase": "5",
+    "build": "5.4"
+   },
+   {
+    "name": "Course pack",
+    "shows": "The whole course reviewed and taught live",
+    "phase": "6",
+    "build": "6.2"
+   }
+  ]
+ },
+ "notes": [
+  "Credit: the curriculum draws on the free Anthropic Academy courses, AI Fluency included, and the official help of each tool. The exercises and teaching material are the trainer’s own.",
+  "This is an independent training, not affiliated with, sponsored or endorsed by Anthropic, OpenAI or Google. Claude, ChatGPT, Gemini and NotebookLM are products of their respective owners.",
+  "AI tools change often: features and tools are checked before each delivery. Labs use Claude first and show the same step in other tools where it exists.",
+  "Labs use the participant’s own course or a sample course, never real student data. Paid plans of media tools beyond their free tiers are not included."
+ ]
+}

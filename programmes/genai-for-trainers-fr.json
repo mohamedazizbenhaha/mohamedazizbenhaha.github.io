@@ -1,0 +1,502 @@
+{
+ "slug": "genai-for-trainers-fr",
+ "file": "IA-generative-pour-formateurs-et-enseignants-30h.docx",
+ "title": "L’IA générative pour formateurs et enseignants",
+ "subtitle": "Rechercher, concevoir et produire un cours complet avec l’IA : supports, médias, TP et évaluation",
+ "audience_line": "Formateurs et enseignants qui veulent préparer de meilleurs cours en moins de temps, avec Claude, ChatGPT ou Gemini",
+ "certifications": [],
+ "buffer": 3,
+ "buffer_fixed": true,
+ "labels": {
+  "portfolio_kicker": "Ce que chaque participant emporte",
+  "portfolio": "Votre cours et votre système",
+  "portfolio_cols": [
+   "#",
+   "Composant",
+   "Rôle",
+   "Phase",
+   "TP"
+  ]
+ },
+ "overview": "Ce programme mène formateurs et enseignants des capacités et limites des LLM à un cours complet produit avec l’IA. Chaque participant travaille dès le premier jour sur un vrai cours. Il construit son système : espace de cours, skills et modèles réutilisables, règles claires sur les données, le droit d’auteur et l’intégrité. Avec lui, il recherche et vérifie les sources, conçoit le plan, rédige les leçons, produit supports, infographies, vidéos explicatives et démonstrations, puis TP, quiz et évaluations adaptés à l’ère de l’IA. Il termine par la revue du cours et une leçon test en direct.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Formateurs indépendants, équipes de centres de formation, enseignants du supérieur, du lycée et du collège"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aisance avec l’ordinateur et anglais écrit simple. Un cours enseigné ou à enseigner. Aucune base en IA"
+  },
+  {
+   "label": "Durée",
+   "value": "30 h : 27 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Un tiers d’explications, deux tiers de pratique sur le cours du participant, avec une revue finale et une leçon test en direct"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant ; une offre Claude payante (Pro au minimum), des comptes gratuits ChatGPT, Gemini et NotebookLM ; les offres gratuites des outils médias ; un cours exemple et des modèles fournis par le formateur"
+  },
+  {
+   "label": "Ressources officielles",
+   "value": "Cours gratuits d’Anthropic Academy, AI Fluency inclus, et aide officielle de chaque outil"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase et un cours complet présenté avec une leçon test en direct ; attestation de formation"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants produisent avec l’IA un cours vérifié et prêt à enseigner, et gardent un système qui accélère le suivant"
+  }
+ ],
+ "phases": [
+  {
+   "name": "Premiers pas",
+   "hours": 3.0,
+   "focus": "LLM, limites, prompts, tokens",
+   "intro": "Comprendre ce qu’est un LLM, ce qu’il peut et ne peut pas faire, et comment un enseignant doit travailler avec lui.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Les LLM : capacités et limites",
+     "content": "Entraînement et écriture token par token. Forces et limites : faits et références inventés, date de coupure, contexte limité, complaisance, biais, apport de la recherche et des outils. Bien travailler avec un LLM : déléguer, décrire, vérifier, l’enseignant reste responsable.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Prompts, contexte et tokens",
+     "content": "Claude, ChatGPT, Gemini et NotebookLM : quel outil pour quelle tâche. Confidentialité et données des élèves. Prompts : rôle, objectif, niveau du public, exemple, contraintes, format ; se faire interviewer par l’IA. Tokens, limites du forfait, choix du modèle, habitudes économes.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Savoir quand faire confiance à une IA, comment la briefer et ce qui consomme son forfait.",
+    "items": [
+     {
+      "id": "1.1",
+      "type": "TP",
+      "title": "Trouver les limites",
+      "goal": "Voir par soi-même quand faire confiance et quand vérifier.",
+      "material": "Claude et ChatGPT ; huit questions test du formateur, tirées des disciplines des participants.",
+      "steps": "1) Prédire où l’IA échouera. 2) Tester faits, références, actualité et calcul. 3) Nommer la cause de chaque échec. 4) Réessayer avec une source ou un outil. 5) Classer dix tâches d’enseignant.",
+      "result": "Une carte de confiance : déléguer, vérifier ou garder."
+     },
+     {
+      "id": "1.2",
+      "type": "TP",
+      "title": "Prompts clairs, moins de tokens",
+      "goal": "Obtenir une meilleure réponse en consommant moins.",
+      "material": "Claude, ChatGPT ; trois prompts d’enseignant faibles.",
+      "steps": "1) Régler la confidentialité de chaque outil. 2) Réécrire les trois prompts. 3) Lancer une tâche dans deux outils et sur deux modèles. 4) Comparer qualité et consommation.",
+      "result": "Une bibliothèque de prompts et une fiche « quel outil, quel modèle »."
+     }
+    ],
+    "validation": "Une carte de confiance et trois prompts améliorés."
+   }
+  },
+  {
+   "name": "Bases et système",
+   "hours": 3.0,
+   "focus": "Espace de cours, skills, modèles, règles",
+   "intro": "Un système d’enseignement installé sur le cours du participant, puis enrichi à chaque phase.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Un espace de cours",
+     "content": "Projets dans Claude et ChatGPT, Gems dans Gemini, carnets dans NotebookLM. Instructions, fichiers, mémoire et connecteurs (Drive, mail, agenda). Quoi y mettre, quoi garder hors, comment reprendre une session à partir d’un court brief.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Éléments réutilisables et règles",
+     "content": "Skills, GPT personnalisés et Gems : écrire une fois, réutiliser pour chaque cours. Guide de style et modèles. Règles : protection des données des élèves, droits sur les contenus générés, transparence sur l’usage de l’IA, accessibilité.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Chaque participant dispose d’un espace de cours et des règles qui encadrent son usage.",
+    "items": [
+     {
+      "id": "2.1",
+      "type": "TP",
+      "title": "Installer mon cours",
+      "goal": "Donner une fois à l’IA le contexte d’un vrai cours.",
+      "material": "Les supports du participant ; Claude, ChatGPT et NotebookLM.",
+      "steps": "1) Rassembler les fichiers du cours. 2) Rédiger le brief : public, niveau, heures, ton. 3) Créer le projet et le carnet. 4) Tester avec cinq questions. 5) Raccourcir le brief tant qu’il fonctionne.",
+      "result": "Un espace de cours testé dans une nouvelle session."
+     },
+     {
+      "id": "2.2",
+      "type": "TP",
+      "title": "Construire sa boîte à outils",
+      "goal": "Transformer le travail répété en éléments réutilisables, dans un cadre clair.",
+      "material": "Un modèle de skill, un modèle de guide de style et une liste de règles fournis par le formateur.",
+      "steps": "1) Rédiger le guide de style du cours. 2) En faire un skill ou un GPT. 3) Le tester sur une leçon. 4) Remplir la liste de règles. 5) Refuser un usage qui enfreint une règle.",
+      "result": "Un premier skill, un guide de style et une fiche de règles."
+     }
+    ],
+    "validation": "Un espace de cours configuré et une fiche de règles validée."
+   }
+  },
+  {
+   "name": "Recherche et conception",
+   "hours": 6.0,
+   "focus": "Sources, vérification, plan, leçons",
+   "intro": "D’un sujet à un plan de cours vérifié et aligné, avec ses notes de leçon.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Rechercher avec l’IA",
+     "content": "Recherche web et recherche approfondie, outils de recherche scientifique, NotebookLM fondé sur des documents choisis. Formuler une question de recherche, garder trace des recherches, suivre l’actualité d’un domaine.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Vérifier et citer les sources",
+     "content": "Références inventées ou déformées, vraies références au contenu faux, faits dépassés, articles rétractés. Vérifier une affirmation dans sa source, styles de citation, gestionnaires de références. Apprendre les mêmes contrôles aux élèves.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Objectifs, plan et heures",
+     "content": "Objectifs d’apprentissage par niveau, alignement entre objectifs, activités et évaluation, prérequis, progression et volume horaire. Adapter un plan au format d’un centre de formation ou à une fiche de cours universitaire.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Contenu des leçons au bon niveau",
+     "content": "Notes de leçon, explications à plusieurs niveaux, exemples et analogies tirés du contexte des apprenants, exemples résolus, glossaire, notes de l’orateur. Garder la voix de l’enseignant et vérifier chaque fait.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Disposer d’un plan de cours fondé sur des sources vérifiées et des notes de leçon.",
+    "items": [
+     {
+      "id": "3.1",
+      "type": "TP",
+      "title": "Cartographier le domaine",
+      "goal": "Réunir vite le meilleur matériel sur un sujet de cours.",
+      "material": "Claude avec recherche, NotebookLM et un outil de recherche scientifique.",
+      "steps": "1) Formuler trois questions. 2) Lancer une recherche approfondie. 3) Charger les meilleures sources dans un carnet. 4) Demander une carte du sujet. 5) Lister ce qui manque.",
+      "result": "Une carte du sujet et une liste de sources retenues."
+     },
+     {
+      "id": "3.2",
+      "type": "TP",
+      "title": "Faire confiance, mais vérifier",
+      "goal": "Retirer toute affirmation non fondée avant qu’elle n’atteigne les élèves.",
+      "material": "Le résultat du TP 3.1 ; une liste de fausses références glissées.",
+      "steps": "1) Vérifier que chaque référence existe. 2) Vérifier qu’elle dit ce qu’on lui prête. 3) Signaler les faits dépassés. 4) Mettre en forme les citations. 5) Rédiger une fiche de vérification pour les élèves.",
+      "result": "Un dossier de sources vérifié et une fiche de vérification."
+     },
+     {
+      "id": "3.3",
+      "type": "TP",
+      "title": "Concevoir le cours",
+      "goal": "Transformer un sujet en plan aligné et minuté.",
+      "material": "Le dossier de sources et le brief du cours ; un modèle de plan.",
+      "steps": "1) Écrire des objectifs mesurables. 2) Relier chacun à une activité et une évaluation. 3) Ordonner les séances. 4) Répartir les heures. 5) Faire critiquer le plan par l’IA, puis trancher.",
+      "result": "Un plan aligné, validé par le formateur."
+     },
+     {
+      "id": "3.4",
+      "type": "TP",
+      "title": "Rédiger deux leçons",
+      "goal": "Produire des notes claires pour le public visé.",
+      "material": "Le plan et l’espace de cours.",
+      "steps": "1) Rédiger la leçon un. 2) Réécrire une partie pour un groupe plus faible et un plus fort. 3) Ajouter des exemples du domaine. 4) Vérifier les faits. 5) Rédiger la leçon deux avec le skill.",
+      "result": "Deux leçons vérifiées, dans le style de l’enseignant."
+     }
+    ],
+    "validation": "Un dossier de sources, un plan validé et deux leçons rédigées."
+   }
+  },
+  {
+   "name": "Supports et médias",
+   "hours": 6.0,
+   "focus": "Diapositives, visuels, vidéo, démos",
+   "intro": "Les notes de leçon deviennent ce que les élèves voient, entendent et utilisent.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Diaporamas",
+     "content": "Des notes au diaporama : structure, une idée par diapositive, hiérarchie visuelle, notes de l’orateur. Générer des fichiers PowerPoint et Google Slides, outils de présentation, appliquer le modèle de l’établissement, retoucher à la main.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Infographies, schémas et images",
+     "content": "Infographies, schémas de processus et de concepts, frises, graphiques à partir de données, génération et retouche d’images. Exactitude des visuels, licences et texte alternatif.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Vidéos explicatives et audio",
+     "content": "Script et storyboard, narration par IA, résumés audio et vidéo, captures d’écran, sous-titres et traduction. Durée, rythme et ce que les élèves regardent vraiment.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.4",
+     "title": "Démonstrations et simulations interactives",
+     "content": "Pages interactives créées par l’IA : simulations, calculateurs, visualisations pas à pas, petits jeux. Les partager avec les élèves, les tester sur téléphone, en garder une copie.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Disposer des diapositives et des supports de ses leçons.",
+    "items": [
+     {
+      "id": "4.1",
+      "type": "TP",
+      "title": "Construire le diaporama",
+      "goal": "Produire un diaporama clair à partir d’une leçon rédigée.",
+      "material": "La leçon un ; un modèle de diapositives de l’établissement.",
+      "steps": "1) Esquisser les diapositives. 2) Générer le diaporama. 3) Appliquer le modèle. 4) Couper le texte, ajouter des visuels. 5) Rédiger les notes de l’orateur.",
+      "result": "Un diaporama prêt à l’emploi."
+     },
+     {
+      "id": "4.2",
+      "type": "TP",
+      "title": "Montrer plutôt que dire",
+      "goal": "Expliquer une idée difficile par un visuel.",
+      "material": "Artifacts de Claude, un outil de schémas et un outil d’images.",
+      "steps": "1) Choisir l’idée la plus difficile de la leçon. 2) Esquisser une infographie. 3) Dessiner un schéma. 4) Générer ou retoucher une image. 5) Vérifier l’exactitude et ajouter le texte alternatif.",
+      "result": "Une infographie, un schéma et une image vérifiés."
+     },
+     {
+      "id": "4.3",
+      "type": "TP",
+      "title": "Une vidéo de trois minutes",
+      "goal": "Transformer une idée clé en courte vidéo.",
+      "material": "Le diaporama ; NotebookLM ; un enregistreur d’écran et un outil de narration.",
+      "steps": "1) Écrire un script de trois minutes. 2) Le découper sur le diaporama. 3) Enregistrer ou générer la narration. 4) Monter et sous-titrer. 5) Produire un résumé audio de la leçon.",
+      "result": "Une courte vidéo explicative et un résumé audio."
+     },
+     {
+      "id": "4.4",
+      "type": "TP",
+      "title": "Rendre interactif",
+      "goal": "Laisser les élèves manipuler l’idée eux-mêmes.",
+      "material": "Artifacts de Claude ; un concept de la leçon.",
+      "steps": "1) Choisir un concept à manipuler. 2) Décrire la simulation. 3) La construire et la tester. 4) La corriger sur téléphone. 5) Rédiger l’activité de classe autour.",
+      "result": "Une simulation fonctionnelle et sa fiche d’activité."
+     }
+    ],
+    "validation": "Un diaporama, une infographie, une courte vidéo explicative et une démonstration."
+   }
+  },
+  {
+   "name": "Pratique et évaluation",
+   "hours": 6.0,
+   "focus": "TP, quiz, évaluation à l’ère de l’IA, notation",
+   "intro": "Les élèves s’exercent et sont évalués dans un monde où ils utilisent aussi l’IA.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "TP et exercices avec corrigés",
+     "content": "Exercices par niveau, études de cas, fiches de TP, jeux de données et fichiers de départ, corrigés et indices. Varier les exercices pour donner une version différente à chaque élève.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "Quiz, examens et plateformes",
+     "content": "Types de questions, bons distracteurs, difficulté, banques de questions. Export vers Moodle et d’autres plateformes (GIFT, Aiken, QTI, tableurs), formulaires et quiz interactifs.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "L’évaluation à l’ère de l’IA",
+     "content": "Ce que l’IA peut faire pour un élève, et les évaluations qu’elle ne peut pas faire : traces du travail, soutenance orale, contexte personnel, travail en classe, brouillons avec historique. Pourquoi les détecteurs d’IA échouent. Une charte claire d’usage de l’IA pour les élèves.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.4",
+     "title": "Grilles, notation et retours",
+     "content": "Grilles liées aux objectifs, notation cohérente, retours utiles, retours assistés par IA sur des copies anonymisées, ce qu’il ne faut jamais téléverser, décision finale humaine.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Disposer de supports de pratique et d’évaluation que l’on peut défendre.",
+    "items": [
+     {
+      "id": "5.1",
+      "type": "TP",
+      "title": "Concevoir un TP",
+      "goal": "Donner aux élèves une pratique alignée sur les objectifs.",
+      "material": "Les objectifs du plan ; un modèle de fiche de TP.",
+      "steps": "1) Choisir deux objectifs. 2) Rédiger le TP. 3) Générer le corrigé et les indices. 4) Le résoudre soi-même. 5) Créer trois variantes.",
+      "result": "Une fiche de TP, son corrigé et trois variantes."
+     },
+     {
+      "id": "5.2",
+      "type": "TP",
+      "title": "Construire une banque de quiz",
+      "goal": "Produire des questions vérifiées, prêtes à importer.",
+      "material": "Les notes de leçon ; un cours test sur une plateforme.",
+      "steps": "1) Générer vingt questions. 2) Vérifier réponses et distracteurs. 3) Classer par objectif et difficulté. 4) Exporter et importer. 5) Passer le quiz en élève.",
+      "result": "Une banque de quiz importée sur une plateforme."
+     },
+     {
+      "id": "5.3",
+      "type": "TP",
+      "title": "Une évaluation à l’épreuve de l’IA",
+      "goal": "Garder une évaluation qui a du sens quand les élèves utilisent l’IA.",
+      "material": "Un devoir existant du participant ; un modèle de charte.",
+      "steps": "1) Faire réaliser le devoir par l’IA. 2) Noter ce qu’elle a réussi. 3) Repenser la tâche. 4) Retester. 5) Rédiger la charte IA des élèves.",
+      "result": "Une évaluation repensée et une charte IA pour les élèves."
+     },
+     {
+      "id": "5.4",
+      "type": "TP",
+      "title": "Des retours justes et rapides",
+      "goal": "Noter de façon cohérente et donner des retours utiles.",
+      "material": "L’évaluation repensée ; trois copies exemples anonymisées.",
+      "steps": "1) Rédiger la grille. 2) Noter soi-même les copies. 3) Demander des retours à l’IA avec la grille. 4) Comparer et corriger. 5) Rédiger un modèle de retour.",
+      "result": "Une grille, trois copies notées et un modèle de retour."
+     }
+    ],
+    "validation": "Un TP et son corrigé, une banque de quiz, une évaluation avec charte IA et une grille."
+   }
+  },
+  {
+   "name": "Projet",
+   "hours": 3.0,
+   "focus": "Un cours complet, enseigné en direct",
+   "intro": "Chaque participant termine, révise et présente le cours construit au fil des phases.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Revue et finition",
+     "content": "Revue de tout le cours : exactitude, niveau, alignement, accessibilité, cohérence du style et licences. Combler les manques avec le système construit pendant la formation.",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "6.2",
+     "title": "Enseigner et présenter",
+     "content": "Une leçon test de dix minutes avec les supports, puis la présentation du cours, du système et des choix faits.",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Prouver que l’on sait produire seul, avec l’IA, un cours prêt à enseigner.",
+    "items": [
+     {
+      "id": "6.1",
+      "type": "Projet",
+      "title": "Prêt à enseigner",
+      "goal": "Contrôler tout le cours comme un relecteur qualité.",
+      "material": "Le cours du participant ; une liste de contrôle de revue.",
+      "steps": "1) Revoir chaque élément avec la liste. 2) Faire jouer à l’IA un élève critique. 3) Combler les manques. 4) Vérifier licences et textes alternatifs. 5) Assembler le cours.",
+      "result": "Un cours complet révisé."
+     },
+     {
+      "id": "6.2",
+      "type": "Projet",
+      "title": "Montrer et défendre",
+      "goal": "Enseigner avec le cours et expliquer comment il a été fait.",
+      "material": "Le cours du TP 6.1.",
+      "steps": "1) Enseigner dix minutes au groupe. 2) Utiliser une démonstration ou une vidéo. 3) Présenter le cours. 4) Expliquer une proposition de l’IA refusée. 5) Recueillir l’avis des pairs.",
+      "result": "Une leçon test donnée et un cours défendu."
+     }
+    ],
+    "validation": "Cours révisé et leçon test en direct. Avec les TP des phases, cela donne droit à l’attestation de formation."
+   },
+   "project": {
+    "title": "Mon cours complet",
+    "brief": "Un cours complet du participant, des sources à l’évaluation, révisé et enseigné en direct.",
+    "stack": "Claude, ChatGPT ou Gemini, NotebookLM, système du participant, outils médias",
+    "deliverable": "Plan, leçons, diaporama, médias, TP, banque de quiz, évaluation et une leçon test de dix minutes"
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "Le cours construit en formation est prêt à enseigner, et le système accélère le suivant.",
+  "rows": [
+   {
+    "name": "Bibliothèque de prompts",
+    "shows": "Prompts testés et fiche de choix d’outil",
+    "phase": "1",
+    "build": "1.2"
+   },
+   {
+    "name": "Espace de cours",
+    "shows": "Brief, fichiers, skill, guide de style, règles",
+    "phase": "2",
+    "build": "2.2"
+   },
+   {
+    "name": "Dossier de sources",
+    "shows": "Sources choisies, vérifiées et citées",
+    "phase": "3",
+    "build": "3.2"
+   },
+   {
+    "name": "Plan et leçons",
+    "shows": "Plan aligné et notes de leçon",
+    "phase": "3",
+    "build": "3.4"
+   },
+   {
+    "name": "Diaporama",
+    "shows": "Diapositives et notes dans le modèle",
+    "phase": "4",
+    "build": "4.1"
+   },
+   {
+    "name": "Kit médias",
+    "shows": "Infographie, vidéo, audio, simulation",
+    "phase": "4",
+    "build": "4.4"
+   },
+   {
+    "name": "Banque d’exercices",
+    "shows": "TP avec corrigé et banque de quiz",
+    "phase": "5",
+    "build": "5.2"
+   },
+   {
+    "name": "Kit d’évaluation",
+    "shows": "Évaluation, charte IA, grille, retours",
+    "phase": "5",
+    "build": "5.4"
+   },
+   {
+    "name": "Cours complet",
+    "shows": "Tout le cours révisé et enseigné en direct",
+    "phase": "6",
+    "build": "6.2"
+   }
+  ]
+ },
+ "notes": [
+  "Crédit : le programme s’inspire des cours gratuits d’Anthropic Academy, AI Fluency inclus, et de l’aide officielle de chaque outil. Les exercices et les supports sont ceux du formateur.",
+  "Cette formation est indépendante. Elle n’est ni affiliée à Anthropic, OpenAI ou Google, ni parrainée, ni approuvée par eux. Claude, ChatGPT, Gemini et NotebookLM sont des produits de leurs propriétaires respectifs.",
+  "Les outils d’IA évoluent souvent : fonctions et outils sont vérifiés avant chaque réalisation. Les TP utilisent d’abord Claude et montrent la même étape dans les autres outils quand elle existe.",
+  "Les TP utilisent le cours du participant ou un cours exemple, jamais de vraies données d’élèves. Les offres payantes des outils médias au-delà des offres gratuites ne sont pas incluses."
+ ],
+ "lang": "fr"
+}

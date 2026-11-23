@@ -1,0 +1,516 @@
+{
+ "slug": "claude-for-developers-fr",
+ "file": "Claude-pour-les-developpeurs-30h.docx",
+ "title": "Claude pour les développeurs",
+ "subtitle": "Du client à l’application : spécifier, concevoir, coder, déployer et livrer",
+ "audience_line": "Toute personne qui veut créer des applications avec Claude, bases du code incluses",
+ "certifications": [],
+ "buffer": 3,
+ "buffer_fixed": true,
+ "labels": {
+  "portfolio_kicker": "Ce que chaque participant emporte",
+  "portfolio": "Votre système de développement",
+  "portfolio_cols": [
+   "#",
+   "Composant",
+   "Rôle",
+   "Phase",
+   "TP"
+  ]
+ },
+ "overview": "Ce programme mène des capacités et limites des LLM à une application livrée à un client. Les participants apprennent les bases du code et construisent leur système Claude : mémoire, skills, outils connectés, garde-fous, économie de tokens. Avec lui, ils suivent tout le parcours : client, cahier des charges, structure, plan, UI/UX, code, tests, déploiement, évolution et livraison, puis réalisent leur propre projet.",
+ "facts": [
+  {
+   "label": "Public",
+   "value": "Développeurs débutants et juniors, étudiants, freelances, entrepreneurs, profils techniques"
+  },
+  {
+   "label": "Prérequis",
+   "value": "Aisance avec l’ordinateur et anglais écrit simple. Aucune base en code ni en IA"
+  },
+  {
+   "label": "Durée",
+   "value": "30 h : 27 h de chapitres + 3 h de réserve"
+  },
+  {
+   "label": "Format",
+   "value": "Un tiers d’explications, deux tiers de pratique sur une application client guidée, puis un projet individuel"
+  },
+  {
+   "label": "Environnement de TP",
+   "value": "Un portable par participant avec VS Code, Git, Node et Claude Code ; une offre Claude payante (Pro au minimum) ; GitHub et hébergement gratuits ; un dépôt de départ avec connexion et base de données"
+  },
+  {
+   "label": "Ressources officielles",
+   "value": "Cours gratuits de Claude Academy et documentation officielle de Claude Code"
+  },
+  {
+   "label": "Évaluation",
+   "value": "Un TP validé par phase et un projet individuel présenté en direct ; attestation de formation"
+  },
+  {
+   "label": "Résultat",
+   "value": "Les participants savent transformer un besoin client en application spécifiée, conçue, testée et déployée, et expliquer ce que Claude a produit"
+  }
+ ],
+ "phases": [
+  {
+   "name": "Premiers pas",
+   "hours": 3.0,
+   "focus": "LLM, limites, prompts, tokens",
+   "intro": "Comprendre ce qu’est un LLM, ce qu’il peut et ne peut pas faire, et comment travailler avec lui.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Les LLM : capacités et limites",
+     "content": "Entraînement et écriture token par token. Forces et limites : faits et bibliothèques inventés, date de coupure, contexte limité, complaisance, biais, apport des outils. Bien travailler avec un LLM : déléguer, décrire, vérifier, rester responsable.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Prompts, contexte et tokens",
+     "content": "Chat, Cowork ou Code selon la tâche. Confidentialité du code. Prompting : objectif, contexte, exemple, contraintes, critère de fin ; se faire interviewer. Tokens, limites du forfait, /model, effort et bonnes habitudes.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Savoir quand faire confiance, comment briefer Claude et ce qui consomme son forfait.",
+    "items": [
+     {
+      "id": "1.1",
+      "type": "TP",
+      "title": "Trouver les limites",
+      "goal": "Savoir quand faire confiance et quand vérifier.",
+      "material": "Claude ; huit questions tests du formateur, dont du code.",
+      "steps": "1) Prédire les échecs. 2) Tester faits, bibliothèques récentes, comptage, bug. 3) Nommer chaque cause. 4) Réessayer avec contexte ou outil. 5) Classer dix tâches de développement.",
+      "result": "Une carte de confiance : déléguer, vérifier ou garder."
+     },
+     {
+      "id": "1.2",
+      "type": "TP",
+      "title": "Prompts clairs, moins de tokens",
+      "goal": "Obtenir mieux en consommant moins.",
+      "material": "Claude ; écran de consommation ; trois prompts faibles.",
+      "steps": "1) Régler la confidentialité. 2) Réécrire les trois prompts. 3) Tester deux modèles, avec contexte complet puis réduit. 4) Comparer qualité et consommation.",
+      "result": "Une bibliothèque de prompts et une fiche « quel modèle, quel effort »."
+     }
+    ],
+    "validation": "Une carte de confiance et trois prompts améliorés."
+   }
+  },
+  {
+   "name": "Bases et système",
+   "hours": 6.0,
+   "focus": "Code, Git, mémoire, tokens, skills, MCP",
+   "intro": "Assez de code pour lire et juger celui de Claude, puis un système utilisé dans toutes les phases suivantes.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Bases du code",
+     "content": "Fonctionnement d’une application : frontend, backend, base de données, API. Lire du code : variables, types, conditions, boucles, fonctions. Fichiers, paquets et messages d’erreur.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Claude Code et Git",
+     "content": "Terminal et éditeur. Git : commit, branche, annulation, GitHub. Boucle de l’agent, mode plan (Plan mode), Auto mode et autres autorisations, /rewind et /resume.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Cerveau du projet et optimisation des tokens",
+     "content": "/init et CLAUDE.md court. Règles (Rules) par chemin, Auto memory, fichiers de reprise et de passation. /context, /usage, /clear, /compact, lectures ciblées, sorties courtes. Output styles et Status line.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Skills, MCP et plugins",
+     "content": "Fonctionnement et écriture des Skills. Les nombreux skills existants par tâche : cahier des charges, design, code, tests, sécurité, déploiement. MCP, Plugins et Plugin marketplace. Six contrôles : besoin, source, maintenance, autorisations, coût en tokens, doublons.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Savoir expliquer un code simple et disposer d’un système Claude opérationnel.",
+    "items": [
+     {
+      "id": "2.1",
+      "type": "TP",
+      "title": "Lire avant de déléguer",
+      "goal": "Comprendre un petit programme.",
+      "material": "Un programme de 50 lignes avec un bug.",
+      "steps": "1) Prédire le résultat. 2) Exécuter. 3) Corriger le bug sans IA. 4) Changer une règle. 5) Expliquer chaque bloc, puis se faire interroger par Claude.",
+      "result": "Un programme corrigé et expliqué."
+     },
+     {
+      "id": "2.2",
+      "type": "TP",
+      "title": "Construire, casser, réparer",
+      "goal": "Garder le contrôle d’un agent de code.",
+      "material": "Claude Code, Git, un dossier vide.",
+      "steps": "1) Planifier une petite fonction. 2) La créer, faire un commit. 3) Demander un mauvais changement. 4) Annuler avec /rewind puis Git. 5) Fermer, puis /resume.",
+      "result": "Une fonction versionnée et une fiche d’annulation."
+     },
+     {
+      "id": "2.3",
+      "type": "TP",
+      "title": "Expliquer une seule fois",
+      "goal": "Garder le savoir sans gaspiller le contexte.",
+      "material": "Le projet du TP 2.2.",
+      "steps": "1) Lancer /init et raccourcir. 2) Ajouter une règle. 3) Régler style et barre d’état. 4) Mesurer et réduire le contexte. 5) Reprendre depuis une note de passation.",
+      "result": "Un cerveau de projet léger, testé en nouvelle session."
+     },
+     {
+      "id": "2.4",
+      "type": "TP",
+      "title": "Composer sa boîte à outils",
+      "goal": "Choisir ses extensions sur preuves.",
+      "material": "Une grille et une sélection de dépôts connus.",
+      "steps": "1) Écrire un skill de cahier des charges et tester son déclenchement. 2) Noter quatre dépôts. 3) En installer un. 4) Connecter un serveur MCP. 5) Mesurer, retirer l’inutile.",
+      "result": "Un skill personnel et des outils justifiés."
+     }
+    ],
+    "validation": "Un programme expliqué sans IA et un projet configuré et versionné."
+   }
+  },
+  {
+   "name": "Du client au plan",
+   "hours": 6.0,
+   "focus": "Client, offre, cahier des charges, plan",
+   "intro": "Pas de code avant que le besoin soit compris, écrit, validé et planifié.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Client et offre",
+     "content": "Préparer et mener le premier rendez-vous. Utilisateurs, vrai problème, contraintes, priorités, MVP. Estimation, coûts d’hébergement et d’IA, calendrier, révisions, offre.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Cahier des charges",
+     "content": "Périmètre, rôles, user stories, règles métier, cas limites, sécurité, données personnelles, langues, performance. Critères d’acceptation testables. Du document client à SPEC.md ; kits de méthode comparés.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.3",
+     "title": "Structure",
+     "content": "Architecture et choix techniques, composants, modèle de données, rôles, contrat d’API, dossiers, environnements, secrets. Décisions écrites.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "3.4",
+     "title": "Plan",
+     "content": "Jalons, petites tâches ordonnées, contrôle pour chacune, dépendances, risques, suivi. Relire un plan produit par Claude.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Transformer un échange avec un client en documents à partir desquels Claude peut construire.",
+    "items": [
+     {
+      "id": "3.1",
+      "type": "TP",
+      "title": "Le premier rendez-vous",
+      "goal": "S’accorder sur ce qui sera construit ou non.",
+      "material": "Un client joué par le formateur ; Claude en assistant.",
+      "steps": "1) Préparer les questions. 2) Interroger le client. 3) Résumer le besoin. 4) Le réduire à un MVP. 5) Présenter une offre chiffrée.",
+      "result": "Un compte rendu et une offre acceptée."
+     },
+     {
+      "id": "3.2",
+      "type": "TP",
+      "title": "Écrire ce qui sera construit",
+      "goal": "Produire une spécification claire pour le client et pour Claude.",
+      "material": "Le compte rendu et le skill du TP 2.4.",
+      "steps": "1) Se faire interviewer par Claude. 2) Générer le document avec le skill. 3) Retirer l’inventé. 4) Ajouter les critères. 5) Faire signer, puis créer SPEC.md.",
+      "result": "Un cahier des charges signé et SPEC.md."
+     },
+     {
+      "id": "3.3",
+      "type": "TP",
+      "title": "Donner forme à l’application",
+      "goal": "Décider de la structure avant le code.",
+      "material": "SPEC.md et le dépôt de départ.",
+      "steps": "1) Comparer deux architectures. 2) Dessiner la retenue. 3) Définir tables et endpoints. 4) Adapter dossiers et CLAUDE.md. 5) Noter trois décisions.",
+      "result": "Un dossier de conception et un squelette de dépôt."
+     },
+     {
+      "id": "3.4",
+      "type": "TP",
+      "title": "De la spécification au backlog",
+      "goal": "Découper assez finement pour vérifier.",
+      "material": "SPEC.md et le dossier de conception.",
+      "steps": "1) Générer le plan. 2) Découper les grosses tâches. 3) Donner un contrôle à chacune. 4) Relier chaque exigence à une tâche. 5) Valider avec le client.",
+      "result": "Un backlog validé."
+     }
+    ],
+    "validation": "Cahier des charges, structure et backlog validés par le client."
+   }
+  },
+  {
+   "name": "Code et UI/UX",
+   "hours": 3.0,
+   "focus": "UI/UX, frontend, backend, base de données",
+   "intro": "L’application est conçue et codée tâche par tâche sur le dépôt de départ, avec un contrôle à chaque étape.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "UI/UX et frontend",
+     "content": "Parcours utilisateur, maquettes, petit design system et skills de design. Composants, écrans, formulaires, états de chargement, vide et erreur, responsive, accessibilité.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Backend et base de données",
+     "content": "Tables, migrations, endpoints, validation, connexion et rôles, secrets, liaison avec les écrans. Son propre serveur MCP : quand il est utile, avec très peu de code.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Faire fonctionner le parcours principal, de l’écran à la base de données.",
+    "items": [
+     {
+      "id": "4.1",
+      "type": "TP",
+      "title": "Concevoir puis créer les écrans",
+      "goal": "Transformer le parcours en écrans utilisables.",
+      "material": "Le dépôt de départ, le backlog et un skill de design.",
+      "steps": "1) Dessiner parcours et maquettes. 2) Choisir couleurs, typographie, composants. 3) Créer les écrans. 4) Tester sur mobile. 5) Corriger après revue client.",
+      "result": "Les écrans principaux validés par le client."
+     },
+     {
+      "id": "4.2",
+      "type": "TP",
+      "title": "Faire fonctionner le tout",
+      "goal": "Relier écrans, règles et données.",
+      "material": "Base et connexion de départ ; un modèle de serveur MCP.",
+      "steps": "1) Ajouter les tables. 2) Créer les endpoints. 3) Appliquer les rôles. 4) Relier les écrans. 5) Exposer une fonction à Claude avec le modèle MCP.",
+      "result": "Un parcours complet et un serveur MCP à un outil."
+     }
+    ],
+    "validation": "Parcours principal démontré et expliqué par le participant."
+   }
+  },
+  {
+   "name": "Contrôle et mise en ligne",
+   "hours": 3.0,
+   "focus": "Tests, revue, sécurité, déploiement",
+   "intro": "Passer de « ça semble fini » à « c’est prouvé et en ligne ».",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Tests, revue et sécurité",
+     "content": "Tests unitaires et de bout en bout, débogage par la cause, revue face au cahier des charges, revue de sécurité. Hooks, hook PreToolUse, interdictions, injection de prompt, Sandboxing (macOS, Linux, WSL2).",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "Déploiement et automatisation",
+     "content": "Hébergement, environnements, secrets, migrations, sauvegarde, retour arrière, supervision. Claude dans GitHub Actions, mode non interactif. Démonstrations courtes : Bare mode, Agent SDK, équipes d’agents, workflows dynamiques, Channels.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Prouver que l’application fonctionne et la mettre en ligne en sécurité.",
+    "items": [
+     {
+      "id": "5.1",
+      "type": "TP",
+      "title": "Prouver puis protéger",
+      "goal": "Trouver les défauts avant le client.",
+      "material": "L’application, SPEC.md et un bug caché.",
+      "steps": "1) Tester les critères. 2) Reproduire et corriger le bug. 3) Relire face à SPEC.md. 4) Faire une revue de sécurité. 5) Bloquer l’accès aux secrets par un hook.",
+      "result": "Des tests verts, une revue et un hook testé."
+     },
+     {
+      "id": "5.2",
+      "type": "TP",
+      "title": "Mettre en ligne",
+      "goal": "Livrer avec contrôle et retour possible.",
+      "material": "GitHub, un hébergement gratuit et un modèle de pipeline.",
+      "steps": "1) Régler les secrets. 2) Déployer en préproduction. 3) Lancer les contrôles du pipeline. 4) Valider la production. 5) Revenir en arrière une fois. 6) Lancer un contrôle avec claude -p.",
+      "result": "Une application en ligne et un retour arrière testé."
+     }
+    ],
+    "validation": "Contrôles réussis et URL en ligne."
+   }
+  },
+  {
+   "name": "Évolution client, livraison et démo",
+   "hours": 3.0,
+   "focus": "Demande de changement, version 2, recette",
+   "intro": "Le client change d’avis, puis reçoit une application qu’il peut utiliser et maintenir.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Évolution client livrée",
+     "content": "Impact et estimation d’un changement. Spécification et plan d’abord. Développement en Worktrees, revue par sous-agents (Subagents), tests et mise en ligne.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    },
+    {
+     "id": "6.2",
+     "title": "Livraison et démonstration",
+     "content": "Guide utilisateur, documentation technique, procédures, transfert des accès, formation du client, recette, maintenance et facturation.",
+     "format": "Cours + TP",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Livrer un changement en sécurité et clôturer une mission client.",
+    "items": [
+     {
+      "id": "6.1",
+      "type": "TP",
+      "title": "Version 2",
+      "goal": "Changer l’application sans la casser.",
+      "material": "Une demande de changement du client.",
+      "steps": "1) Estimer l’impact. 2) Mettre à jour SPEC.md et le backlog. 3) Développer dans un worktree. 4) Faire relire par un sous-agent en lecture seule. 5) Tester et déployer.",
+      "result": "La version 2 en ligne."
+     },
+     {
+      "id": "6.2",
+      "type": "TP",
+      "title": "Livrer au client",
+      "goal": "Permettre au client de prendre la main.",
+      "material": "L’application en ligne et les critères d’acceptation.",
+      "steps": "1) Générer et vérifier la documentation. 2) Démontrer chaque critère. 3) Lister les accès à transférer. 4) Former le client sur une tâche. 5) Signer la recette.",
+      "result": "Un dossier de livraison et une recette signée."
+     }
+    ],
+    "validation": "Version 2 en ligne et acceptée par le client."
+   }
+  },
+  {
+   "name": "Projet",
+   "hours": 3.0,
+   "focus": "Sa propre application, présentée en direct",
+   "intro": "Chaque participant refait le parcours seul, sur un petit besoin de son choix.",
+   "chapters": [
+    {
+     "id": "7.1",
+     "title": "Brief et réalisation",
+     "content": "Un vrai besoin, une courte spécification, un plan et une première version construite avec son système.",
+     "format": "Projet",
+     "hours": 1.5
+    },
+    {
+     "id": "7.2",
+     "title": "Finition et présentation",
+     "content": "Contrôles, déploiement, présentation en direct, questions sur le code, les choix et les tokens.",
+     "format": "Projet",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "Prouver que l’on sait livrer une application avec Claude en autonomie.",
+    "items": [
+     {
+      "id": "7.1",
+      "type": "Projet",
+      "title": "Mon application",
+      "goal": "Aller seul du besoin à la version fonctionnelle.",
+      "material": "Le dépôt de départ et son système Claude.",
+      "steps": "1) Écrire le besoin et trois critères. 2) Planifier. 3) Concevoir l’écran principal. 4) Créer le parcours principal. 5) Faire un commit.",
+      "result": "Une première version fonctionnelle."
+     },
+     {
+      "id": "7.2",
+      "type": "Projet",
+      "title": "Montrer et défendre",
+      "goal": "Livrer et expliquer le résultat.",
+      "material": "L’application du TP 7.1.",
+      "steps": "1) Tester les critères. 2) Déployer. 3) Présenter en cinq minutes. 4) Expliquer un code et une proposition refusée. 5) Montrer sa consommation.",
+      "result": "Une application en ligne et une soutenance."
+     }
+    ],
+    "validation": "Projet en ligne, présenté et expliqué ; attestation avec les TP validés."
+   },
+   "project": {
+    "title": "Mon application",
+    "brief": "Une petite application pour un besoin choisi par le participant, de la spécification au déploiement.",
+    "stack": "Claude Code, système du participant, dépôt de départ, Git, hébergement gratuit",
+    "deliverable": "Le dépôt, SPEC.md, l’URL et une démonstration de cinq minutes"
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "L’application guidée et le projet laissent une méthode et un système réutilisables avec un vrai client.",
+  "rows": [
+   {
+    "name": "Bibliothèque de prompts",
+    "shows": "Prompts testés et fiche de choix du modèle",
+    "phase": "1",
+    "build": "1.2"
+   },
+   {
+    "name": "Cerveau du projet",
+    "shows": "CLAUDE.md, règles, mémoire, passation",
+    "phase": "2",
+    "build": "2.3"
+   },
+   {
+    "name": "Boîte à outils",
+    "shows": "Skill personnel, extensions choisies, connexion",
+    "phase": "2",
+    "build": "2.4"
+   },
+   {
+    "name": "Dossier client",
+    "shows": "Offre, cahier des charges, structure, plan",
+    "phase": "3",
+    "build": "3.4"
+   },
+   {
+    "name": "Application client",
+    "shows": "Écrans, backend et base de données",
+    "phase": "4",
+    "build": "4.2"
+   },
+   {
+    "name": "Filet de sécurité",
+    "shows": "Tests, revue de sécurité, hook",
+    "phase": "5",
+    "build": "5.1"
+   },
+   {
+    "name": "Chaîne de livraison",
+    "shows": "Déploiement avec contrôles et retour arrière",
+    "phase": "5",
+    "build": "5.2"
+   },
+   {
+    "name": "Dossier de livraison",
+    "shows": "Documentation, recette, maintenance",
+    "phase": "6",
+    "build": "6.2"
+   },
+   {
+    "name": "Projet personnel",
+    "shows": "Une application réalisée et présentée seul",
+    "phase": "7",
+    "build": "7.2"
+   }
+  ]
+ },
+ "notes": [
+  "Crédit : le programme s’inspire des cours gratuits de Claude Academy et de la documentation officielle. Les exercices et les supports sont ceux du formateur.",
+  "Cette formation est indépendante. Elle n’est ni affiliée à Anthropic, ni parrainée, ni approuvée par Anthropic. Claude et Claude Code sont des produits d’Anthropic PBC.",
+  "Claude évolue souvent : fonctions, skills et dépôts sont vérifiés avant chaque réalisation. Les fonctions avec clé API, en préversion ou expérimentales sont montrées par le formateur.",
+  "Les deux applications sont petites et utilisent des données de test. Nom de domaine, hébergement payant et usage de l’API hors TP ne sont pas inclus."
+ ],
+ "lang": "fr"
+}

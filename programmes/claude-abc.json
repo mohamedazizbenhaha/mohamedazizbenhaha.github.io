@@ -1,0 +1,501 @@
+{
+ "slug": "claude-abc",
+ "file": "Claude-ABC-30h.docx",
+ "title": "Claude ABC",
+ "subtitle": "Ask, Build, Customise: Claude for everyday life and work",
+ "audience_line": "Anyone with a Claude subscription who wants to use it fully",
+ "certifications": [],
+ "buffer": 3,
+ "buffer_fixed": true,
+ "labels": {
+  "portfolio_kicker": "What each participant leaves with",
+  "portfolio": "Your personal Claude system",
+  "portfolio_cols": [
+   "#",
+   "Component",
+   "What it does",
+   "Phase",
+   "Built in"
+  ]
+ },
+ "overview": "Many people pay for Claude and use it as a search box. This programme takes them from what an LLM can and cannot do to a personal system that handles email, routines, documents, spreadsheets, presentations, images, video and small applications. It follows three steps. Ask: brief Claude well and spend tokens wisely. Build: create real deliverables, including code, without being a developer. Customise: choose skills, plugins, connections and automations, and know what not to install. Every chapter has a practice; the most advanced features are introduced at a basic level.",
+ "facts": [
+  {
+   "label": "Audience",
+   "value": "Adults from any background: employees, freelancers, business owners, teachers, students, job seekers"
+  },
+  {
+   "label": "Prerequisites",
+   "value": "Everyday computer use and reading basic English on screen. No programming or AI background"
+  },
+  {
+   "label": "Duration",
+   "value": "30 h: 27 h of chapters + 3 h buffer"
+  },
+  {
+   "label": "Format",
+   "value": "About one third explanation and demonstration, two thirds guided practice on the participants’ own tasks"
+  },
+  {
+   "label": "Lab environment",
+   "value": "One laptop per participant (Windows or macOS) with the Claude desktop app, Claude Code and Git; a personal paid Claude plan (Pro minimum); free tools or free tiers for the rest. Demo accounts and files provided"
+  },
+  {
+   "label": "Official resources",
+   "value": "Claude Academy free courses, the official documentation and selected YouTube playlists"
+  },
+  {
+   "label": "Assessment",
+   "value": "A validated practice in each phase and a final project demonstrated live; certificate of completion"
+  },
+  {
+   "label": "Outcome",
+   "value": "Participants prompt well, control their usage, delegate daily tasks, create documents and media, build a small app and install extensions safely"
+  }
+ ],
+ "phases": [
+  {
+   "name": "First Steps: Understand, Ask, Spend Less",
+   "hours": 3.0,
+   "focus": "LLMs, limits, prompting, tokens",
+   "intro": "What an LLM is, what it can and cannot do and how to work with it, then how to brief Claude and get more from the same subscription.",
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "LLMs: What They Can & Cannot Do",
+     "content": "How an LLM is trained and writes token by token. Strengths and limits: invented facts, knowledge cutoff, limited context, flattery, bias, and what tools add. How to work with one: what to delegate, how to describe it, how to check it, who stays responsible.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "1.2",
+     "title": "Prompting, Context & Tokens",
+     "content": "Chat, Cowork or Code: which one for which job. Privacy. Prompting: goal, context, example, format, limits; letting Claude interview you. Tokens and plan limits, choosing model and effort, projects and memory, one task per chat, and what costs most.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants know when to trust Claude, get a usable answer in one or two tries and know what uses up their plan.",
+    "items": [
+     {
+      "id": "1.1",
+      "type": "Lab",
+      "title": "Find the limits",
+      "goal": "See for yourself when to trust an LLM and when to check.",
+      "material": "Claude; eight test questions from the trainer.",
+      "steps": "1) Predict where Claude will fail. 2) Test facts, sources, recent events, counting and a question about you. 3) Name the cause of each failure. 4) Retry with context or a tool. 5) Sort ten of your tasks.",
+      "result": "A trust map: delegate, check or keep."
+     },
+     {
+      "id": "1.2",
+      "type": "Lab",
+      "title": "Clear prompts, fewer tokens",
+      "goal": "Get a better answer for less usage.",
+      "material": "Claude; the usage screen; three weak prompts; a long document.",
+      "steps": "1) Set privacy. 2) Rewrite the three prompts with the five parts. 3) Run one task with the whole file on a strong model, then with an extract on a lighter one. 4) Compare quality and usage. 5) Create a project.",
+      "result": "A prompt library, a personal project and a \"which model, which effort\" card."
+     }
+    ],
+    "validation": "A trust map, three improved prompts, a configured project and a one-page usage routine."
+   }
+  },
+  {
+   "name": "Everyday Life & Work",
+   "hours": 6.0,
+   "focus": "Email, routines, reports, files, slides",
+   "intro": "The tasks that fill a normal day. Claude prepares; the participant checks and decides.",
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Email, Calendar & Daily Routines",
+     "content": "Connectors for mail, calendar and drive. Summarise, sort, find and draft replies in your own tone. Morning brief, meeting preparation, weekly review, scheduled tasks, use from the phone. Safety: approval before sending, and emails or web pages that try to give Claude orders.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.2",
+     "title": "Research, Reports & Files",
+     "content": "Web search and Research with sources. Reading and comparing PDFs, scans and photos of documents. Creating and correcting Word and PDF files. Delegating work on a folder: sort, rename, extract, summarise. Checking figures, quotes and links.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.3",
+     "title": "Spreadsheets & Personal Admin",
+     "content": "Excel files from plain words: formulas, cleaning, tables, charts, dashboards. Claude in Excel and Word. Budget, shopping, travel, forms and letters, study plans, CV and interview practice. When to seek a professional (health, law, money).",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "2.4",
+     "title": "Presentations",
+     "content": "Storyline before slides. Decks as PowerPoint files, in Claude’s slide and design tools or in Claude for PowerPoint. Templates, charts, diagrams, speaker notes, rehearsal with likely questions.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants hand their recurring digital chores to Claude and keep control of what is sent or shared.",
+    "items": [
+     {
+      "id": "2.1",
+      "type": "Lab",
+      "title": "My morning brief",
+      "goal": "Turn the inbox and calendar into five minutes of decisions.",
+      "material": "Own account or a demo inbox; mail and calendar connectors.",
+      "steps": "1) Connect, keeping \"ask before sending\". 2) Summarise unread mail as urgent, to answer, to read. 3) Draft three replies. 4) Add the day’s agenda. 5) Schedule the brief. 6) Test it on a booby-trapped email.",
+      "result": "A scheduled morning brief that never sends on its own."
+     },
+     {
+      "id": "2.2",
+      "type": "Lab",
+      "title": "From a messy folder to a report",
+      "goal": "Produce a document you would put your name on.",
+      "material": "A copy of a folder with 20 mixed files (invoices, notes, PDFs, photos).",
+      "steps": "1) Give access to that folder only. 2) Approve the sorting plan. 3) Extract the key facts with their source. 4) Research the missing context. 5) Generate a two-page Word report and its PDF. 6) Check five facts.",
+      "result": "An organised folder and a sourced report in Word and PDF."
+     },
+     {
+      "id": "2.3",
+      "type": "Lab",
+      "title": "Budget and admin kit",
+      "goal": "Use Claude for the paperwork of daily life.",
+      "material": "An anonymised bank export, an administrative letter, a job advert.",
+      "steps": "1) Clean and categorise the expenses. 2) Build a monthly budget with formulas and a chart. 3) Verify a total by hand. 4) Explain and answer the letter. 5) Adapt a CV to the advert without inventing anything.",
+      "result": "A budget workbook, a letter and a tailored CV."
+     },
+     {
+      "id": "2.4",
+      "type": "Lab",
+      "title": "Eight slides from a report",
+      "goal": "Turn a document into a presentation people follow.",
+      "material": "The report from 2.2 and a slide template.",
+      "steps": "1) Agree on the message and outline. 2) Generate eight slides in the template. 3) Add a chart and a diagram. 4) Fix overloaded slides. 5) Rehearse against Claude’s questions.",
+      "result": "An editable deck with speaker notes."
+     }
+    ],
+    "validation": "A morning brief, a checked report, a working spreadsheet and a presentation."
+   }
+  },
+  {
+   "name": "Create: Images & Video",
+   "hours": 3.0,
+   "focus": "Design, photo editing, video editing",
+   "intro": "Claude is not a photo or video generator: it designs, writes, and drives the tools that edit. Participants learn both the method and its limits, with free tools or free tiers.",
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Images & Design",
+     "content": "Analysing and critiquing images. Posters, logos, infographics and social posts with Claude Design, SVG and artifacts. Design connectors (Canva, Adobe). Batch photo editing through code: resize, crop, compress, watermark, convert. Writing prompts for image generators.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "3.2",
+     "title": "Video Editing",
+     "content": "Script, hook and storyboard. Editing by instruction with FFmpeg: trim, join, crop to vertical, add music, compress. Subtitles from a transcript or local transcription. Motion graphics from code (HyperFrames, Remotion). AI video connectors, their cost, and labelling AI content.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants produce a visual and a short edited video by describing what they want.",
+    "items": [
+     {
+      "id": "3.1",
+      "type": "Lab",
+      "title": "A visual campaign",
+      "goal": "Create and edit images without design software skills.",
+      "material": "Ten photos; a design connector with a free tier; the Claude desktop app.",
+      "steps": "1) Design a poster from a brief. 2) Ask for a critique, then improve it. 3) Make the square and story versions. 4) Let Claude batch-resize and watermark the photos. 5) Export everything.",
+      "result": "A poster in three formats and ten edited photos."
+     },
+     {
+      "id": "3.2",
+      "type": "Lab",
+      "title": "A 30-second captioned reel",
+      "goal": "Edit a real video by talking to Claude.",
+      "material": "Phone clips; FFmpeg and a transcription tool, installed beforehand.",
+      "steps": "1) Write the script and storyboard. 2) Let Claude inspect the clips and propose a cut. 3) Trim, join and crop to 9:16. 4) Add subtitles and a title. 5) Export and review on the phone.",
+      "result": "A vertical video with subtitles and a title."
+     }
+    ],
+    "validation": "One visual and one captioned video, reviewed by the group."
+   }
+  },
+  {
+   "name": "Build: Claude Code for Everyone",
+   "hours": 6.0,
+   "focus": "Vibe coding, commands, memory, control",
+   "intro": "Coding starts from zero. Claude writes the code; participants learn to describe, plan, test, undo and steer, in the desktop app first and the terminal when it helps.",
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "First Project",
+     "content": "Files, folders, HTML and scripts in ten minutes. Desktop app and terminal. The agent loop. /init and CLAUDE.md. Plan mode: explore, plan, build, check. /model and effort. Git as a save button.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.2",
+     "title": "Control: Context, Undo & Permissions",
+     "content": "/clear, /compact, /context and /usage. /rewind to go back, /resume to continue later. Permission modes: manual, accept edits, plan, Auto mode, and why never to bypass everything. The Status line to watch model and context.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.3",
+     "title": "Memory, Rules & Style",
+     "content": "What belongs where: CLAUDE.md (personal or project), Auto memory, Rules for some files only. Auditing memory. Output styles: concise, explanatory, or your own. A handoff note to restart cheaply.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "4.4",
+     "title": "Build & Debug a Useful App",
+     "content": "Writing a simple specification, building in small steps, testing as a user, giving Claude the error or a screenshot, asking for a review. No passwords or keys in code. Sharing as an artifact or a web page.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants build a small tool and control cost, context, permissions and memory.",
+    "items": [
+     {
+      "id": "4.1",
+      "type": "Lab",
+      "title": "My first web page",
+      "goal": "Go from an empty folder to a working page.",
+      "material": "Claude Code, Git, an empty folder.",
+      "steps": "1) Describe the page. 2) Refine the plan in Plan mode. 3) Build and open it. 4) Run /init and read CLAUDE.md. 5) Switch model for a small change. 6) Save a Git version.",
+      "result": "A personal web page and its first CLAUDE.md."
+     },
+     {
+      "id": "4.2",
+      "type": "Lab",
+      "title": "Break it and recover",
+      "goal": "Stay in control of a long piece of work.",
+      "material": "The project from 4.1.",
+      "steps": "1) Request a bad change, then /rewind. 2) Read /context and compact with a focus. 3) Clear, then resume. 4) Compare manual and Auto mode. 5) Set a status line. 6) Read /usage.",
+      "result": "A command card, tested line by line."
+     },
+     {
+      "id": "4.3",
+      "type": "Lab",
+      "title": "Teach it once",
+      "goal": "Make Claude remember preferences without wasting context.",
+      "material": "The project and the participant’s preferences.",
+      "steps": "1) Write a personal CLAUDE.md under 30 lines. 2) Add a rule for one file type. 3) Correct Claude and find what auto memory saved. 4) Try two output styles. 5) Restart from a handoff note.",
+      "result": "A lean instruction and memory setup, tested from a fresh start."
+     },
+     {
+      "id": "4.4",
+      "type": "Lab",
+      "title": "A tool I will really use",
+      "goal": "Build, fix and share a small application.",
+      "material": "An idea: habit tracker, quote maker, quiz, stock list or expense splitter.",
+      "steps": "1) Write five lines of requirements. 2) Plan, then build the first version. 3) Test three cases, one of them wrong input. 4) Fix from the error. 5) Ask for a security review. 6) Share it privately.",
+      "result": "A working, tested mini-app."
+     }
+    ],
+    "validation": "A working tool, its CLAUDE.md and a demonstration of undo, resume and compact."
+   }
+  },
+  {
+   "name": "Customise: Extend & Automate",
+   "hours": 6.0,
+   "focus": "Skills, MCP, plugins, repos, agents",
+   "intro": "How to choose what to install, build what is missing and automate safely. Advanced features are demonstrated so that participants know when they are worth it.",
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Skills",
+     "content": "What a skill is and when it loads. Built-in and official skills (documents, slides, spreadsheets, PDF). Finding them with /skills. Writing a SKILL.md with Claude, testing its trigger, sharing it. Skill, CLAUDE.md or simple prompt: which one.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.2",
+     "title": "MCP, Plugins & Famous Repositories",
+     "content": "MCP and connectors. Plugins and the Plugin marketplace. Official collections (anthropics/skills, claude-plugins-official, knowledge-work-plugins) and popular ones (superpowers, mattpocock/skills, context7, impeccable, humanizer, memory and token savers). Six checks: need, source, upkeep, permissions, token cost, overlap. Stars are not proof.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.3",
+     "title": "Automation & Guardrails",
+     "content": "Hooks, with a PreToolUse hook that blocks a dangerous action. Subagents for research and review. Worktrees for parallel work. Sandboxing (macOS, Linux, WSL2). Non-interactive mode (claude -p) for one-line automations.",
+     "format": "Lecture + Lab",
+     "hours": 1.5
+    },
+    {
+     "id": "5.4",
+     "title": "Advanced Tour",
+     "content": "What each does, what it costs, when to use it. Your own MCP server. Claude in GitHub Actions. Agent teams (experimental) and Dynamic workflows. Channels (preview): message a running Claude from Telegram or Discord. Bare mode and the Agent SDK, which use an API key billed apart from the subscription.",
+     "format": "Demo + Lab",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants have a small, justified toolkit and can judge any \"must-install\" repository.",
+    "items": [
+     {
+      "id": "5.1",
+      "type": "Lab",
+      "title": "My first skill",
+      "goal": "Package a task you repeat every week.",
+      "material": "A prompt from the library and one good example of its result.",
+      "steps": "1) Install one official skill. 2) Create a skill from the prompt. 3) Test three requests that should trigger it and two that should not. 4) Fix the description.",
+      "result": "A personal skill that triggers reliably."
+     },
+     {
+      "id": "5.2",
+      "type": "Lab",
+      "title": "Install, trial or skip",
+      "goal": "Choose tools on evidence instead of hype.",
+      "material": "A scorecard and five popular repositories chosen with the trainer.",
+      "steps": "1) Score each repository on the six checks. 2) Have Claude read one before any install. 3) Install one plugin. 4) Connect one MCP server. 5) Measure context before and after. 6) Remove what does not pay off.",
+      "result": "A five-line decision table and a toolkit of three additions at most."
+     },
+     {
+      "id": "5.3",
+      "type": "Lab",
+      "title": "A guard and a helper",
+      "goal": "Automate without losing control.",
+      "material": "The app from 4.4 in Git; a test folder.",
+      "steps": "1) Have Claude write a PreToolUse hook that protects a folder, then attack it. 2) Create a reviewer subagent. 3) Make a change in a worktree. 4) Summarise a file with claude -p. 5) See the sandbox block a command (trainer’s machine if needed).",
+      "result": "A tested hook, a reviewer and a one-line automation."
+     },
+     {
+      "id": "5.4",
+      "type": "Lab",
+      "title": "Your own MCP server, and a map of the rest",
+      "goal": "Recognise the advanced tools and try one.",
+      "material": "A starter server; the trainer’s repository and API key for demonstrations.",
+      "steps": "1) Ask Claude to add one tool to the starter server and connect it. 2) Follow the demonstrations of Actions, teams, workflows, channels, bare mode and the SDK. 3) Match six real needs to the simplest feature that solves each.",
+      "result": "A working one-tool server and a \"use it when\" card."
+     }
+    ],
+    "validation": "One own skill, one connection, one hook and a written install / skip decision for five repositories."
+   }
+  },
+  {
+   "name": "Final Project",
+   "hours": 3.0,
+   "focus": "One personal system, shown live",
+   "intro": "Each participant assembles what they built into a system for one real part of their life or work.",
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Brief & Build",
+     "content": "Choose a real need (freelance, study, family, shop, job search, content), plan it, then build it with a project, a skill, a connection or routine, and two deliverables.",
+     "format": "Project",
+     "hours": 1.5
+    },
+    {
+     "id": "6.2",
+     "title": "Demo & 30-Day Plan",
+     "content": "Live demonstration, peer review, token review, and a routine to keep up with new features without installing everything.",
+     "format": "Project",
+     "hours": 1.5
+    }
+   ],
+   "labs": {
+    "goal": "By the end of this phase, participants prove they can use Claude alone, economically and safely.",
+    "items": [
+     {
+      "id": "6.1",
+      "type": "Project",
+      "title": "My Claude system",
+      "goal": "Solve a real need from start to finish.",
+      "material": "Everything built in phases 1 to 5.",
+      "steps": "1) Write the need and the success test. 2) Plan with Claude. 3) Assemble the components. 4) Produce two deliverables of different types. 5) Check facts, permissions and usage.",
+      "result": "A working system and two deliverables."
+     },
+     {
+      "id": "6.2",
+      "type": "Project",
+      "title": "Show it, keep it",
+      "goal": "Defend the choices and make the habit last.",
+      "material": "The system from 6.1 and a plan template.",
+      "steps": "1) Demonstrate it in five minutes. 2) Explain one thing you chose not to install. 3) Show the usage and one saving. 4) Write three habits for the next 30 days.",
+      "result": "A demonstration and a 30-day plan."
+     }
+    ],
+    "validation": "System demonstrated, usage explained and 30-day plan handed in. With the phase practices, this earns the certificate of completion."
+   },
+   "project": {
+    "title": "My personal Claude system",
+    "brief": "One real need from the participant’s life or work, handled by Claude with standing context, a reusable skill and a safe routine.",
+    "stack": "Claude apps, connectors, Claude Code, skills",
+    "deliverable": "The system, two deliverables, a usage note and a five-minute demo"
+   }
+  }
+ ],
+ "portfolio": {
+  "intro": "Each phase adds a component. Together they form a system the participant keeps using after the training.",
+  "rows": [
+   {
+    "name": "Prompt library",
+    "shows": "Tested prompts for recurring tasks",
+    "phase": "1",
+    "build": "1.2"
+   },
+   {
+    "name": "Usage card",
+    "shows": "The right model, effort and context for each task",
+    "phase": "1",
+    "build": "1.2"
+   },
+   {
+    "name": "Morning brief",
+    "shows": "Mail and agenda summarised, nothing sent without approval",
+    "phase": "2",
+    "build": "2.1"
+   },
+   {
+    "name": "Document kit",
+    "shows": "Report, budget, letter, CV and slides",
+    "phase": "2",
+    "build": "2.4"
+   },
+   {
+    "name": "Media kit",
+    "shows": "Visuals, edited photos and a captioned video",
+    "phase": "3",
+    "build": "3.2"
+   },
+   {
+    "name": "Memory setup",
+    "shows": "Lean CLAUDE.md, rules and style",
+    "phase": "4",
+    "build": "4.3"
+   },
+   {
+    "name": "Mini-app",
+    "shows": "A small tool built and tested with Claude Code",
+    "phase": "4",
+    "build": "4.4"
+   },
+   {
+    "name": "Personal skill",
+    "shows": "A weekly task done the same way every time",
+    "phase": "5",
+    "build": "5.1"
+   },
+   {
+    "name": "Chosen toolkit",
+    "shows": "A few justified extensions and a safety hook",
+    "phase": "5",
+    "build": "5.3"
+   }
+  ]
+ },
+ "notes": [
+  "Credit: the curriculum draws on the free Claude Academy courses, the official documentation and public video courses. The exercises and teaching material are the trainer’s own.",
+  "This is an independent training, not affiliated with, sponsored or endorsed by Anthropic. Claude and Claude Code are products of Anthropic PBC.",
+  "Claude changes often: names, plans and features are checked before each delivery. Preview and experimental features may be replaced by a demonstration.",
+  "Practices use copies of files and no confidential data. Connected accounts can be disconnected at the end of the programme."
+ ]
+}
